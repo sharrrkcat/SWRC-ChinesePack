@@ -1,0 +1,24 @@
+# SWRC 简体中文汉化包 / Star Wars: Republic Commando Chinese Localization
+
+《星球大战：共和国突击队》（Steam 版）简体中文本地化项目——字幕、界面、菜单全汉化，语音保留英文原声。
+
+**状态**：CJK 渲染已打通（依赖 [CT-cjk-text](https://github.com/sharrrkcat/CT-cjk-text) 的 Mod.dll，计划提 PR 回上游 [SWRC-Modding/CT](https://github.com/SWRC-Modding/CT)）；字体包二进制格式（含 DXT5 贴图）已完全破解。当前阶段：中文字体生成器 → 译文生产。
+
+## 仓库结构
+
+| 路径 | 内容 |
+|---|---|
+| `docs/README-汉化技术文档.md` | **权威技术文档**：包格式逆向、实验记录、渲染方案、路线图 |
+| `tools/swrc_package.py` | Unreal 包（版本 159）解析器：导出表 / UFont / DXT5 贴图解码 |
+| `reference/export/` | 菜单类 .uc 源码（ucc batchexport 产物，PropertyOverrides 翻译底稿） |
+| `probe-backup/` | 渲染探针实验替换掉的原版 .int 备份（还原用） |
+
+## 依赖
+
+- [Republic Commando Fix](https://www.moddb.com/mods/republic-commando-fix) ≥ 2.13（含 CJK 渲染支持的版本）
+- 字体：思源黑体 Bold（SIL OFL，可再分发）
+
+## 相关链接
+
+- 引擎侧 CJK 渲染实现：https://github.com/sharrrkcat/CT-cjk-text （分支 `cjk-text`）
+- 社区 Wiki：https://wiki.swrc-modding.net

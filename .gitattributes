@@ -1,0 +1,5 @@
+# .int 是游戏 ANSI/GBK 编码文本，字节必须原样保留，禁止行尾/编码改写
+*.int -text
+*.uc -text
+*.utx binary
+*.dll binary
