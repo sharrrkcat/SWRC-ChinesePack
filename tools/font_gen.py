@@ -283,10 +283,18 @@ def build_package(ttf_path, chars, out_path):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('--font', required=True)
-    ap.add_argument('--charset', required=True)
+    ap.add_argument('--font', required=True, help='TTF/OTF 字体文件 (需含 GBK 覆盖的 CJK 字形)')
+    ap.add_argument('--charset', required=True, help='字符集文件 (UTF-8, make_charset.py 产出或译文扫描子集)')
     ap.add_argument('--out', default='orbitfonts.utx')
+    ap.add_argument('--cells', default=None,
+                    help='字号→行高覆盖, 如 "24=29,18=24,15=20,12=16,8=13" (默认=官方日版度量; '
+                         '行高越大字越大, 但注意 UI 布局按行高排版, 偏离过多会挤压/溢出)')
     a = ap.parse_args()
+    if a.cells:
+        for kv in a.cells.split(','):
+            k, v = kv.split('=')
+            assert int(k) in CELL_HEIGHTS, f'未知字号 {k} (必须是 8/12/15/18/24)'
+            CELL_HEIGHTS[int(k)] = int(v)
     chars = open(a.charset, encoding='utf-8').read()
     chars = ''.join(dict.fromkeys(c for c in chars if not c.isspace() or c == ' '))
     print(f'字符集: {len(chars)} 字符')

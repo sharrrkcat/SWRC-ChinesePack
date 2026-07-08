@@ -222,7 +222,7 @@ u8   mip 数（字体页均为 1）
 ## 7.5 后续路线
 
 1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）
-2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验并装入游戏；菜单+局内探针已换成 GBK"中文测试"。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。⏳ 待局内实测确认
+2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验并装入游戏；菜单+局内探针已换成 GBK"中文测试"。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
 3. 进入内容生产（§8，译文一律 GBK 编码 ANSI 文件,无 BOM）
 
 ## 8. 汉化实施路线图（渲染问题解决后）
@@ -247,6 +247,10 @@ u8   mip 数（字体页均为 1）
     reference\export\XInterfaceCTMenus\ ← 53 个菜单类 .uc 源码（ucc batchexport 产物）
     probe-backup\             ← 探针实验替换掉的原版 .int 备份
   JapanesePack\               ← 日版参照（System/Sounds/Textures；ModDB 下载物，不入库）
+  testpack\                   ← 玩家视角测试包（Mod.dll+中文字体+GBK 探针，配 README-测试说明.md；全新游戏本体覆盖安装用）
+  fonts\SourceHanSansCN-Bold.otf ← 思源黑体（OFL，字体生成器输入）
+  orbitfonts-cn.utx           ← 字体生成器产物（当前已装入游戏）
+  orbitfonts-jp.utx.bak       ← 日文版字体备份
   CT-headers\                 ← SWRC-Modding/CT 仓库克隆（引擎头文件+Fix源码，独立版本管理）
     Engine\Engine.c           ← Engine.dll 完整 Hex-Rays 反编译（管线逆向的核心参照）
     Mod\Src\CJKText.cpp       ← CJK 渲染钩子（本项目新增，构建进 Mod.dll）
