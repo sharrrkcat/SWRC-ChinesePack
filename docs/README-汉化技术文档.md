@@ -221,8 +221,9 @@ u8   mip 数（字体页均为 1）
 
 ## 7.5 后续路线
 
-1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）→ 字体生成器（Pillow 渲染思源黑体灰度字形 → RGB=A → 自实现 DXT5 编码 → 打包 .utx，CharRemap 用 **GBK 双字节键**、IsRemapped=1）
-2. 进入内容生产（§8，译文一律 GBK 编码 ANSI 文件,无 BOM）
+1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）
+2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验并装入游戏；菜单+局内探针已换成 GBK"中文测试"。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。⏳ 待局内实测确认
+3. 进入内容生产（§8，译文一律 GBK 编码 ANSI 文件,无 BOM）
 
 ## 8. 汉化实施路线图（渲染问题解决后）
 
@@ -252,10 +253,10 @@ u8   mip 数（字体页均为 1）
   GameData\System\Mod.dll     ← MSBuild 输出目录（构建产物先落这里）
   Mod.dll.official-2.13.bak   ← 官方 Fix 2.13 的 Mod.dll 备份
 .originalbackup\              ← 完整原版备份（还原点）
-GameData\Textures\orbitfonts.utx              ← 当前=日文版字体（原版在备份里）
+GameData\Textures\orbitfonts.utx              ← 当前=自制中文字体（日文版备份 .lang\orbitfonts-jp.utx.bak，原版在 .originalbackup）
 GameData\System\Mod.dll                       ← 当前=自编译版（含 CJKText 钩子）
 GameData\System\PropertyOverrides\
-  XInterfaceCTMenus.CTMenuMain.txt            ← 当前=SJIS 字节探针（ANSI 无 BOM；删除即恢复原版菜单文字）
+  XInterfaceCTMenus.CTMenuMain.txt            ← 当前=GBK 中文探针（ANSI 无 BOM；删除即恢复原版菜单文字）
 ```
 
 工具链：

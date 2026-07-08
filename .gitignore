@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 # 解码样张（可由 tools/swrc_package.py tex 重新生成）
 tools/*.png
+tools/charset.txt
