@@ -24,6 +24,8 @@ from pathlib import Path
 TRANSLATION_SCHEMA = 2
 CATALOG_SCHEMA = 1
 TOOL_NAME = "make_translation_json.py"
+SHARED_GROUP = "shared.enjp"
+SHARED_ID_START = 100001
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SCRIPT_DIR.parent
@@ -397,8 +399,9 @@ def run_ucc_batchexport(package_arg: str, class_name: str, ext: str, out_dir: Pa
     return output
 
 
-def ensure_class_exports(package_names: set[str], package_case: dict[str, Path], audit: dict) -> None:
+def ensure_class_exports(package_names: set[str], package_case: dict[str, Path], audit: dict) -> set[str]:
     exported = {}
+    exported_packages = set()
     temp_root = TEMP_EXPORT_ROOT / "uc"
     if temp_root.exists():
         shutil.rmtree(temp_root)
@@ -412,7 +415,10 @@ def ensure_class_exports(package_names: set[str], package_case: dict[str, Path],
         package_arg = package_arg_for_ucc(package_file)
         output = run_ucc_batchexport(package_arg, "Class", "uc", out_dir)
         target_dir = EXPORT_DIR / package_file.stem
+        if target_dir.exists():
+            shutil.rmtree(target_dir)
         count = copy_tree_files(out_dir, target_dir, "*.uc")
+        exported_packages.add(package_file.stem)
         exported[package_file.stem] = {
             "package": public_rel_path(package_file, GAME_DATA),
             "package_arg": package_arg,
@@ -420,6 +426,7 @@ def ensure_class_exports(package_names: set[str], package_case: dict[str, Path],
             "ucc_lines": len(output.splitlines()),
         }
     audit["class_exports"] = exported
+    return exported_packages
 
 
 def parse_uc_file(path: Path):
@@ -460,44 +467,94 @@ def parse_uc_file(path: Path):
     return class_name, parent, defaults
 
 
-def load_class_defaults():
+def load_class_defaults(package_stems: set[str], audit: dict):
     classes = {}
-    for uc_path in sorted(EXPORT_DIR.glob("*/*.uc"), key=lambda p: p.as_posix().casefold()):
-        class_name, parent, defaults = parse_uc_file(uc_path)
-        classes[class_name.casefold()] = {
-            "name": class_name,
-            "parent": parent,
-            "defaults": defaults,
-            "path": uc_path.relative_to(ROOT_DIR).as_posix(),
-        }
+    loaded_packages = []
+    for package_stem in sorted(package_stems, key=str.casefold):
+        package_dir = EXPORT_DIR / package_stem
+        if not package_dir.exists():
+            continue
+        loaded_packages.append(package_stem)
+        for uc_path in sorted(package_dir.glob("*.uc"), key=lambda p: p.as_posix().casefold()):
+            class_name, parent, defaults = parse_uc_file(uc_path)
+            classes[class_name.casefold()] = {
+                "name": class_name,
+                "parent": parent,
+                "defaults": defaults,
+                "path": uc_path.relative_to(ROOT_DIR).as_posix(),
+            }
+    audit["loaded_class_packages"] = loaded_packages
+    audit["loaded_class_count"] = len(classes)
     return classes
 
 
-def lookup_class_default(classes: dict, class_name: str, key: str, seen=None) -> SourceValue | None:
+def lookup_class_default_exact(classes: dict, class_name: str, key: str, seen=None) -> tuple[SourceValue | None, dict | None]:
     if seen is None:
         seen = set()
     class_key = class_name.casefold()
     if class_key in seen:
-        return None
+        return None, None
     seen.add(class_key)
     info = classes.get(class_key)
     if not info:
-        candidates = [
-            candidate
-            for candidate_key, candidate in classes.items()
-            if len(candidate_key) >= 4 and class_key.startswith(candidate_key)
-        ]
-        if candidates:
-            info = max(candidates, key=lambda item: len(item["name"]))
-    if not info:
-        return None
+        return None, None
     normalized_key = normalize_uc_path(key)
     if normalized_key in info["defaults"]:
-        return info["defaults"][normalized_key]
+        return info["defaults"][normalized_key], info
     parent = info.get("parent")
     if parent:
-        return lookup_class_default(classes, parent, normalized_key, seen)
-    return None
+        return lookup_class_default_exact(classes, parent, normalized_key, seen)
+    return None, None
+
+
+def lookup_class_default(
+    classes: dict,
+    class_name: str,
+    key: str,
+    audit: dict | None = None,
+    context: dict | None = None,
+    allow_prefix: bool = True,
+) -> SourceValue | None:
+    value, _matched_info = lookup_class_default_exact(classes, class_name, key)
+    if value is not None:
+        return value
+    if not allow_prefix:
+        return None
+
+    class_key = class_name.casefold()
+    normalized_key = normalize_uc_path(key)
+    candidates = []
+    for candidate_key, candidate in classes.items():
+        if len(candidate_key) < 4 or not class_key.startswith(candidate_key):
+            continue
+        candidate_value, resolved_info = lookup_class_default_exact(classes, candidate["name"], normalized_key)
+        if candidate_value is not None:
+            candidates.append((candidate, resolved_info, candidate_value))
+
+    if not candidates:
+        return None
+    if len(candidates) > 1:
+        fail(
+            f"ambiguous class default prefix fallback for {class_name}.{normalized_key}: "
+            + ", ".join(f"{candidate['name']}->{resolved['name'] if resolved else '?'}" for candidate, resolved, _value in candidates[:8])
+        )
+
+    candidate, resolved_info, candidate_value = candidates[0]
+    if audit is not None:
+        audit.setdefault("class_default_prefix_fallbacks", []).append(
+            OrderedDict(
+                [
+                    ("requested_class", class_name),
+                    ("matched_class", candidate["name"]),
+                    ("resolved_class", resolved_info["name"] if resolved_info else candidate["name"]),
+                    ("key", normalized_key),
+                    ("class_path", candidate.get("path", "")),
+                    ("resolved_class_path", resolved_info.get("path", "") if resolved_info else ""),
+                    ("context", context or OrderedDict()),
+                ]
+            )
+        )
+    return candidate_value
 
 
 def parse_t3d_file(path: Path):
@@ -663,6 +720,209 @@ def add_translation_entry(
     return f"{group}/{entry_id}"
 
 
+def iter_translation_entries(translation: OrderedDict):
+    for group, payload in translation.items():
+        if group == "schema":
+            continue
+        for entry_id, item in payload.items():
+            yield f"{group}/{entry_id}", group, entry_id, item
+
+
+def iter_catalog_entry_refs(catalog_files: OrderedDict):
+    for rows in catalog_files.values():
+        for row in rows:
+            row_type = row.get("type")
+            if row_type == "string":
+                yield row, "entry"
+            elif row_type == "tuple":
+                for item in row.get("items", []):
+                    yield item, "entry"
+            elif row_type == "template":
+                for part in row.get("parts", []):
+                    if isinstance(part, dict) and "entry" in part:
+                        yield part, "entry"
+
+
+def build_existing_shared_index(existing: dict | None) -> tuple[dict[tuple[str, str], tuple[str, dict]], set[str]]:
+    by_key = {}
+    reserved = set()
+    if not existing:
+        return by_key, reserved
+    payload = existing.get(SHARED_GROUP)
+    if not isinstance(payload, dict):
+        return by_key, reserved
+    for entry_id, item in payload.items():
+        entry_id = str(entry_id)
+        if not entry_id.isdigit() or not isinstance(item, dict):
+            continue
+        reserved.add(entry_id)
+        en = item.get("en", "")
+        jp = item.get("jp", "")
+        if isinstance(en, str) and isinstance(jp, str) and jp:
+            by_key.setdefault((en, jp), (entry_id, item))
+    return by_key, reserved
+
+
+def choose_shared_note(items: list[dict]) -> str:
+    counts = Counter()
+    first_seen = {}
+    for index, item in enumerate(items):
+        note = item.get("note", "")
+        if not isinstance(note, str):
+            note = ""
+        counts[note] += 1
+        first_seen.setdefault(note, index)
+    note = min(counts, key=lambda value: (-counts[value], first_seen[value]))
+    note = note or "merged"
+    return f"{note} / {len(items)} occurrences"
+
+
+def merge_shared_en_jp_entries(
+    translation: OrderedDict,
+    catalog_files: OrderedDict,
+    existing_translation: dict | None,
+    stats: Counter,
+    reset_translations: bool,
+    audit: dict,
+) -> OrderedDict:
+    entries = list(iter_translation_entries(translation))
+    clusters = OrderedDict()
+    for ref, _group, _entry_id, item in entries:
+        en = item.get("en", "")
+        jp = item.get("jp", "")
+        if isinstance(en, str) and isinstance(jp, str) and jp:
+            clusters.setdefault((en, jp), []).append((ref, item))
+    clusters = OrderedDict((key, value) for key, value in clusters.items() if len(value) > 1)
+
+    existing_shared, reserved_shared_ids = build_existing_shared_index(existing_translation)
+    used_shared_ids = set()
+    next_shared_id = SHARED_ID_START
+    if reserved_shared_ids:
+        next_shared_id = max(next_shared_id, max(int(value) for value in reserved_shared_ids) + 1)
+
+    def allocate_shared_id(key: tuple[str, str]) -> str:
+        nonlocal next_shared_id
+        existing = existing_shared.get(key)
+        if existing:
+            entry_id = existing[0]
+            if entry_id in used_shared_ids:
+                fail(f"duplicate existing shared id reused: {SHARED_GROUP}/{entry_id}")
+            used_shared_ids.add(entry_id)
+            return entry_id
+        while str(next_shared_id) in used_shared_ids or str(next_shared_id) in reserved_shared_ids:
+            next_shared_id += 1
+        entry_id = str(next_shared_id)
+        used_shared_ids.add(entry_id)
+        next_shared_id += 1
+        return entry_id
+
+    merged_ref_by_old_ref = {}
+    shared_payload = OrderedDict()
+    merge_samples = []
+    conflict_reports = []
+
+    for key, refs_and_items in clusters.items():
+        en, jp = key
+        shared_id = allocate_shared_id(key)
+        shared_ref = f"{SHARED_GROUP}/{shared_id}"
+        zh_sources = []
+        for ref, item in refs_and_items:
+            zh = item.get("zh_CN", "")
+            if isinstance(zh, str) and zh:
+                zh_sources.append((ref, zh))
+        old_shared = existing_shared.get(key)
+        if old_shared and not reset_translations:
+            old_zh = old_shared[1].get("zh_CN", "")
+            if isinstance(old_zh, str) and old_zh:
+                zh_sources.append((shared_ref, old_zh))
+        elif old_shared and reset_translations:
+            old_zh = old_shared[1].get("zh_CN", "")
+            if isinstance(old_zh, str) and old_zh:
+                stats["reset_zh_CN"] += 1
+
+        unique_zh = []
+        for _source_ref, zh in zh_sources:
+            if zh not in unique_zh:
+                unique_zh.append(zh)
+        if len(unique_zh) > 1:
+            conflict_reports.append(
+                OrderedDict(
+                    [
+                        ("entry", shared_ref),
+                        ("en", en),
+                        ("jp", jp),
+                        ("sources", [ref for ref, _zh in zh_sources[:8]]),
+                    ]
+                )
+            )
+            continue
+
+        zh_cn = unique_zh[0] if unique_zh else ""
+        if zh_cn and all(source_ref == shared_ref for source_ref, _zh in zh_sources):
+            stats["preserved_zh_CN"] += 1
+        note = choose_shared_note([item for _ref, item in refs_and_items])
+        shared_payload[shared_id] = OrderedDict(
+            [
+                ("note", note),
+                ("en", en),
+                ("jp", jp),
+                ("zh_CN", zh_cn),
+            ]
+        )
+        for ref, _item in refs_and_items:
+            merged_ref_by_old_ref[ref] = shared_ref
+        merge_samples.append(
+            OrderedDict(
+                [
+                    ("entry", shared_ref),
+                    ("count", len(refs_and_items)),
+                    ("sample_refs", [ref for ref, _item in refs_and_items[:3]]),
+                    ("note", note),
+                ]
+            )
+        )
+
+    if conflict_reports:
+        audit["merge_conflicts"] = conflict_reports
+        fail(
+            "conflicting zh_CN values while merging shared (en, jp) entries: "
+            + "; ".join(f"{item['entry']} sources={item['sources']}" for item in conflict_reports[:5])
+        )
+
+    for holder, key in iter_catalog_entry_refs(catalog_files):
+        old_ref = holder[key]
+        if old_ref in merged_ref_by_old_ref:
+            holder[key] = merged_ref_by_old_ref[old_ref]
+
+    new_translation = OrderedDict([("schema", TRANSLATION_SCHEMA)])
+    if shared_payload:
+        new_translation[SHARED_GROUP] = shared_payload
+    for ref, group, entry_id, item in entries:
+        if ref in merged_ref_by_old_ref:
+            continue
+        if group not in new_translation:
+            new_translation[group] = OrderedDict()
+        new_translation[group][entry_id] = item
+
+    merged_entries = sum(len(value) for value in clusters.values())
+    stats["merged_en_jp_groups"] += len(clusters)
+    stats["merged_translation_entries"] += merged_entries
+    stats["merge_saved_entries"] += sum(len(value) - 1 for value in clusters.values())
+    stats["shared_translation_entries"] += len(shared_payload)
+    stats["merge_conflicts"] += 0
+    audit["shared_en_jp_merge"] = OrderedDict(
+        [
+            ("group", SHARED_GROUP),
+            ("merged_groups", len(clusters)),
+            ("merged_entries", merged_entries),
+            ("saved_entries", sum(len(value) - 1 for value in clusters.values())),
+            ("shared_entries", len(shared_payload)),
+            ("sample_groups", merge_samples[:50]),
+        ]
+    )
+    return new_translation
+
+
 def get_group(file_stem: str, section: str) -> str:
     return f"{safe_group(file_stem)}.{safe_group(section)}"
 
@@ -822,6 +1082,7 @@ def source_from_map(
     row: IntRow,
     map_objects: dict,
     classes: dict,
+    audit: dict,
 ) -> SourceValue | None:
     obj = map_objects.get(row.section.casefold())
     if not obj:
@@ -839,11 +1100,39 @@ def source_from_map(
             objectives.sort()
             raw = "(" + ",".join(f"(Objective={quote_unreal_raw(text)})" for _idx, text in objectives) + ")"
             return SourceValue(kind="template", raw=raw, template_fields=extract_template_fields(raw))
-    return lookup_class_default(classes, obj["class"], normalized_key)
+    return lookup_class_default(
+        classes,
+        obj["class"],
+        normalized_key,
+        audit,
+        OrderedDict(
+            [
+                ("origin", "map_t3d_or_default"),
+                ("file", row.file_name),
+                ("section", row.section),
+                ("key", row.key),
+                ("object_class", obj["class"]),
+                ("object_name", obj["name"]),
+            ]
+        ),
+    )
 
 
-def source_from_package(row: IntRow, classes: dict) -> SourceValue | None:
-    return lookup_class_default(classes, row.section, row.key)
+def source_from_package(row: IntRow, classes: dict, audit: dict, origin: str) -> SourceValue | None:
+    return lookup_class_default(
+        classes,
+        row.section,
+        row.key,
+        audit,
+        OrderedDict(
+            [
+                ("origin", origin),
+                ("file", row.file_name),
+                ("section", row.section),
+                ("key", row.key),
+            ]
+        ),
+    )
 
 
 def subtitle_index_delta(en_index: str, jp_index: str) -> str:
@@ -1094,8 +1383,8 @@ def validate_generated(translation, catalog):
             translation_refs.add(ref)
             if not item.get("en"):
                 fail(f"{ref}: empty en")
-            if item.get("zh_CN", None) != "":
-                fail(f"{ref}: zh_CN must be empty in generated source JSON")
+            if not isinstance(item.get("zh_CN", ""), str):
+                fail(f"{ref}: zh_CN must be a string")
     missing = refs - translation_refs
     extra = translation_refs - refs
     if missing:
@@ -1195,8 +1484,8 @@ def main(argv=None):
     package_case = build_package_case()
     map_case = {p.stem.casefold(): p for p in MAPS_DIR.glob("*.ctm")}
     needed_packages = collect_needed_packages(jp_ints, en_ints, package_case)
-    ensure_class_exports(needed_packages, package_case, audit)
-    classes = load_class_defaults()
+    exported_packages = ensure_class_exports(needed_packages, package_case, audit)
+    classes = load_class_defaults(exported_packages, audit)
     audit["class_count"] = len(classes)
 
     existing_translation = load_existing_translation()
@@ -1256,19 +1545,33 @@ def main(argv=None):
             if source is None and map_file is not None:
                 if map_file.name not in t3d_cache:
                     t3d_cache[map_file.name] = export_level_t3d(map_file, t3d_temp, audit)
-                source = source_from_map(row, t3d_cache[map_file.name], classes)
+                source = source_from_map(row, t3d_cache[map_file.name], classes, audit)
                 source_origin = "map_t3d_or_default" if source else None
 
             if source is None and package_file is not None:
-                source = source_from_package(row, classes)
+                source = source_from_package(row, classes, audit, "class_default")
                 source_origin = "class_default" if source else None
 
             if source is None and row.section.casefold() == "levelsummary" and row.key == "Title":
-                source = lookup_class_default(classes, "LevelInfo", "Title")
+                source = lookup_class_default(
+                    classes,
+                    "LevelInfo",
+                    "Title",
+                    audit,
+                    OrderedDict(
+                        [
+                            ("origin", "levelinfo_default"),
+                            ("file", row.file_name),
+                            ("section", row.section),
+                            ("key", row.key),
+                        ]
+                    ),
+                    allow_prefix=False,
+                )
                 source_origin = "levelinfo_default" if source else None
 
             if source is None:
-                source = source_from_package(row, classes)
+                source = source_from_package(row, classes, audit, "class_default_by_section")
                 source_origin = "class_default_by_section" if source else None
 
             if source is None:
@@ -1317,6 +1620,15 @@ def main(argv=None):
                     }
                 )
                 stats["skipped_emit_error"] += 1
+
+    translation = merge_shared_en_jp_entries(
+        translation,
+        catalog_files,
+        existing_translation,
+        stats,
+        args.reset_translations,
+        audit,
+    )
 
     catalog = OrderedDict(
         [
