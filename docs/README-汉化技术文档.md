@@ -1,6 +1,6 @@
 # 星球大战：共和国突击队（SWRC）中文本地化 — 技术文档
 
-> 最后更新：2026-07-08（贴图格式解码完成） ｜ 状态：**CJK 渲染打通 + 包格式（含贴图 DXT5）全部破解**。代码在 fork `sharrrkcat/CT-cjk-text` 分支 `cjk-text`。下一步：中文字体生成器 → 内容生产（§7.5、§8）
+> 最后更新：2026-07-09（进入汉化实施阶段） ｜ 状态：**CJK 渲染、DXT5 贴图解码、中文字体生成器、中文字体局内实测均已完成**。代码在 fork `sharrrkcat/CT-cjk-text` 分支 `cjk-text`。当前重点：翻译 catalog 生成与正式译文生产（§7.5、§8）
 > 工作目录：`.lang\`；本文档在汉化包仓库 `.lang\SWRC-ChinesePack\docs\`（github.com/sharrrkcat/SWRC-ChinesePack）；游戏数据：`GameData\`；完整原版备份：`.originalbackup\`
 
 ---
@@ -10,11 +10,12 @@
 目标：为 Steam 版 SWRC（虚幻引擎 2.5 定制分支，包版本 159 / licensee 1）制作简体中文本地化，包括字幕、界面、菜单。语音保留英文原声。
 
 当前进度：
-- ✅ 文本存放位置、格式、注入机制全部查明并验证（菜单文字已成功改出 ASCII 内容）
-- ✅ 字体包二进制格式完全破解（可解析，具备写出能力）
+- ✅ 文本存放位置、格式、注入机制全部查明并验证（`.int` 可直接新增覆盖，菜单 `XinterfaceCtmenus.int` 已验证可生效）
+- ✅ 字体包二进制格式完全破解（UFont、CharRemap、DXT5 贴图页均可解析/写出）
 - ✅ 官方日文版的实现方式已解剖（作为参照系）
 - ✅ **CJK 渲染全线打通**（2026-07-07）：根因=引擎 ANSI 构建逐字节查表；解法=自编译 Mod.dll detour 四个文本函数做 DBCS 配对（§6、§7）。菜单 + 标题卡/加载画面/提示/简报字幕/局内字幕五处场景全部实证显示汉字。代码：fork `sharrrkcat/CT-cjk-text`,分支 `cjk-text`
-- ⏳ 下一步：贴图格式解码 → 中文字体生成器 → 译文生产（§7.5、§8）
+- ✅ **中文字体生成器完成并局内实测通过**（2026-07-08）：`tools\font_gen.py` 生成 `orbitfonts-cn.utx`，GB2312 全集测试包菜单/局内字幕无缺字错位
+- ⏳ 当前阶段：catalog 生成器与正式译文生产（§8）
 
 ## 2. 事实速查卡
 
@@ -22,9 +23,9 @@
 |---|---|
 | 引擎 | Unreal Engine 2.5 定制（"CT"分支），包版本 **159**，licensee 1 |
 | 主程序 | `GameData\System\SWRepublicCommando.exe`（唯一导入 `_ismbblead` 的模块） |
-| 文本语言机制 | `System.ini [Core.System] Language=int`；官方日版**不改语言代码，直接覆盖 .int** |
+| 文本语言机制 | `System.ini [Core.System] Language=int`；官方日版**不改语言代码，直接覆盖 .int**；Steam 缺失的 `.int` 可新增覆盖包内默认值 |
 | 字幕/UI 字体 | 仅 `GameData\Textures\orbitfonts.utx`（5 个字体对象：OrbitBold8/12/15/18/24）；`warfarefonts.utx` 与本地化无关 |
-| 必装 mod | Republic Commando Fix 2.13（SWRC-Modding/CT），提供 ModEd、UCC.exe、PropertyOverrides 机制 |
+| 必装 mod | Republic Commando Fix 2.13（SWRC-Modding/CT），提供 UCC.exe / ModEd.dll / PropertyOverrides；中文包需含 CJK 渲染支持的 Mod.dll |
 | 引擎头文件参考 | `.lang\CT-headers\`（github.com/SWRC-Modding/CT 的克隆） |
 | 日文参照包 | `.lang\JapanesePack\`（ModDB "Japanese Patch"，官方日版零售提取） |
 | 开发机注意 | 系统 ACP 必须为 936（GBK）。曾开启"Beta: UTF-8 全球语言支持"（ACP=65001），已关闭 |
@@ -35,22 +36,34 @@
 
 | 类别 | 文件 | 规模 | 注入方式 |
 |---|---|---|---|
-| 剧情字幕 | `System\subtitles_*.int`（25 个） | ~6,300 行 | 直接覆盖 .int |
-| 关卡目标/提示 | `GEO_/RAS_/YYY_/PRO/DM_/CTF_*.int`（40+ 个） | ~2,000 行 | 直接覆盖 .int |
+| 剧情字幕 | `System\subtitles_*.int`（25 个） | ~6,300 行 | 直接覆盖 .int；注意日文包编号可能与英文运行时 key 偏移 |
+| 关卡目标/提示 | `GEO_/RAS_/YYY_/PRO/DM_/CTF_*.int`（40+ 个） | ~2,000 行 | 直接覆盖 .int；Steam 缺失文件可新增 |
 | 加载画面 | `levelloadinginfo.int`、`hints.int` | ~140 行 | 直接覆盖 .int |
 | 游戏性文本 | `engine.int`、`ctgame.int`、`ctinventory.int`、`mpgame.int`、`gameplay.int`、`properties.int`、`voicepacks.int` 等 | ~900 行 | 直接覆盖 .int（Steam 版缺的文件可新建，.int 覆盖 .u 内默认值） |
-| **菜单文字** | 编译在 `xinterfacectmenus.u` 各菜单类 defaultproperties | ~200 条短语 | **PropertyOverrides**（见 3.2），无需改 .u |
+| **菜单文字** | `System\XinterfaceCtmenus.int`（官方日文包已提供） | ~500 条键值 | **直接覆盖 .int**（已实测可替代 PropertyOverrides），无需改 .u |
 | 过场视频 | `Movies\*.bik` | — | 可选：RAD Video Tools 压制内嵌字幕版 |
 
-菜单类文字量（源码已导出到仓库 `reference\export\XInterfaceCTMenus\*.uc`，53 个类）：
-`CTMenuMain`(10) `CTGameOptionsPCMenu`(16) `CTGraphicsOptionsPCMenu`(21) `CTSoundOptionsPCMenu`(15) `CTControlsOptionsPCMenu`(43) `CTPausePCMenu`+`CTPauseMenu`(22) 等。
-结构示例（`MenuOptions` 为结构体数组，文字在嵌套的 `Text`/`HelpText` 字段）：
+菜单类源码仍保留在仓库 `reference\export\XInterfaceCTMenus\*.uc`（53 个类），用于追溯英文 source、理解运行时结构和必要时生成 fallback。实际发布路线优先生成 `XinterfaceCtmenus.int`，例如：
 
-```
-MenuOptions(0)=(Blurred=(Text="NEW GAME",PosX=0.68375,PosY=0.48),BackgroundBlurred=(...),OnSelect="NewGameSelected",Style="ButtonTextStyle1")
+```ini
+[CTAcceptSettingsTimedMenu]
+Label.Text="Use these settings?"
+ALabel.Text="Yes :"
+
+[CTGraphicsOptionsPCMenu]
+Options[0].Items=("LOWEST","LOW","MEDIUM","HIGH","HIGHEST","CUSTOM")
 ```
 
-### 3.2 PropertyOverrides 注入机制（Fix 2.13 提供）
+### 3.2 菜单 `.int` 直出机制（当前主路线）
+
+关键新结论（2026-07-09）：官方日文包中的 `System\XinterfaceCtmenus.int` 已在 Steam 英文版 + Fix 环境中实测可生效，能够覆盖 `xinterfacectmenus.u` 各菜单类的 localized/default 字段。发布路线因此改为**统一生成 `System\*.int`**，不再把菜单主路径建立在 `PropertyOverrides` 的整结构体覆盖上。
+
+实施注意：
+- JSON/catalog 的 target key 必须以英文版运行时会读取的 `.int` 路径为准；日文包只作为官方覆盖索引和参考译文
+- `XinterfaceCtmenus.int` 中 `Options[n].Items=(...)` 等数组值应由生成工具负责转为 Unreal 元组语法，翻译 JSON 不应要求用户手写 UE 结构
+- 日文 `.int` 中以 `//` 开头的伪键属于导出残留注释，不作为可写翻译项；应进入 audit 报告
+
+### 3.3 PropertyOverrides 注入机制（已验证备用方案，Fix 2.13 提供）
 
 来源已核实（`CT-headers\Mod\Src\SWRCFix.cpp` → `ImportPropertyOverrides()`）：
 
@@ -59,7 +72,9 @@ MenuOptions(0)=(Blurred=(Text="NEW GAME",PosX=0.68375,PosY=0.48),BackgroundBlurr
 - 只能作用于类默认值，不能作用于任意实例；加载失败静默跳过（成功时日志出现 `Dynamic load 包名.类名`）
 - 文件读取用引擎 `appLoadFileToString` → **支持 UTF-16 LE with BOM**（已实测），无 BOM 则按"逐字节拉宽"读入（见 §5 R3）
 
-### 3.3 字体系统
+本机制仍有保留价值：可用于临时探针、非 localized 字段覆盖、字体对象切换等高级调试；但发布版菜单文字优先走 `XinterfaceCtmenus.int`，避免整结构体覆盖带来的字段补全和 UE 语法复杂度。
+
+### 3.4 字体系统
 
 - 菜单/字幕全部引用 `Font'OrbitFonts.OrbitBoldN'`（N=8/12/15/18/24，游戏内按分辨率/用途选字号）
 - **美版**：每字体 1 页贴图、256 个字形直查（`IsRemapped=0`，字符码即索引），对象恰好 4366 字节
@@ -198,7 +213,7 @@ u8   mip 数（字体页均为 1）
 | `UCanvas::ClippedStrLen` | 单行量宽（菜单 MaxSizeX/省略号布局依赖） | 随 ClippedPrint 生效 |
 | `FCanvasUtil::DrawString` | 工具路径（居中量宽、`&` 快捷键下划线） | 已挂钩，暂未观察到调用方 |
 
-**局内验证（2026-07-07，SJIS"日本語"探针，五处全部显示 ✅）**：开场标题卡（geo_titlecard.int）、加载画面标题+正文（LevelLoadingInfo.int）、加载提示（hints.int）、简报字幕（subtitles_geo_01briefing.int）、局内字幕（subtitles_geo_01.int）。**菜单+局内文字全线打通，C++ 侧封版**（`WrappedIconPrint`/`UHelmet::DrawTextInfo` 未挂钩也未表现出需要,遇到具体场景缺字再补）。探针原文件备份在仓库 `probe-backup\`,还原:`cp .lang/SWRC-ChinesePack/probe-backup/* GameData/System/`。
+**局内验证（2026-07-07，SJIS"日本語"探针，五处全部显示 ✅）**：开场标题卡（geo_titlecard.int）、加载画面标题+正文（LevelLoadingInfo.int）、加载提示（hints.int）、简报字幕（subtitles_geo_01briefing.int）、局内字幕（subtitles_geo_01.int）。**菜单+局内文字全线打通，C++ 侧封版**（`WrappedIconPrint`/`UHelmet::DrawTextInfo` 未挂钩也未表现出需要,遇到具体场景缺字再补）。历史探针备份仍存放于仓库 `probe-backup\`，仅用于追溯实验，不作为当前测试区还原说明。
 
 字形发射：WrappedPrint/ClippedPrint 经 **UCanvas vtable[32]（DrawTile 虚函数）**；DrawString 经导出的原版 `FCanvasUtil::DrawTile`。
 
@@ -216,26 +231,43 @@ u8   mip 数（字体页均为 1）
 
 **待办（渲染尾工）**：
 1. ~~字幕/HUD/加载画面路径实测~~ ✅ 已全部实证（见上）
-2. 发布前打磨：跟踪日志移除或改 ini 开关、`&` 字面量行为核对、可考虑加 `EnableCJKText` 配置项（与 Fix 风格一致,为提上游 PR 铺路）
-3. 版本控制：fork = `github.com/sharrrkcat/CT-cjk-text`,分支 `cjk-text`（VS2022 工程 + CJKText 两个 commit）;终局建议提 PR 回上游 SWRC-Modding/CT（日文社区同样受益）,汉化包只声明依赖"Fix ≥ 某版本"
+2. ~~`EnableCJKText` 配置开关~~ ✅ 已完成（`Mod.u` 需与新版 `Mod.dll` 配套重编；旧脚本类不含属性时会读不到 config）
+3. 发布前打磨：跟踪日志移除或降噪、`&` 字面量行为核对、构建产物版本号/说明整理
+4. 版本控制：fork = `github.com/sharrrkcat/CT-cjk-text`,分支 `cjk-text`;终局建议提 PR 回上游 SWRC-Modding/CT（日文社区同样受益）,汉化包只声明依赖"Fix ≥ 某版本"
 
-## 7.5 后续路线
+## 7.5 字体与文本生成工具状态
 
 1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）
-2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验并装入游戏；菜单+局内探针已换成 GBK"中文测试"。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
-3. 进入内容生产（§8，译文一律 GBK 编码 ANSI 文件,无 BOM）
+2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验；曾以 GBK"中文测试"探针完成菜单+局内验证。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
+3. ~~语言包生成工具~~ ✅ `tools\build_langpack.py` 已切到 catalog 驱动：读取用户翻译 JSON（schema 2）+ 机器 catalog（schema 1）→ `build\GameData\System\*.int` + manifest；菜单也输出 `XinterfaceCtmenus.int`，不生成 `PropertyOverrides`
+4. 进入汉化实施（§8）：译文输出一律 GBK 编码 ANSI 文件、无 BOM；翻译源数据采用 UTF-8 JSON
 
-## 8. 汉化实施路线图（渲染问题解决后）
+## 8. 汉化实施路线图（当前阶段）
 
-1. **字符集统计**：扫描全部译文，提取用字集合（预计 2,500–3,500 字），决定字体子集
-2. **字体包**：生成器产出 5 字号 `orbitfonts.utx`（保持包名/对象名不变）；字体建议思源黑体 Bold（可再分发；勿用微软雅黑）
-3. **文本**：
-   - `.int` 全部译文以**最终确定的编码**（UTF-16 或注入方案规定的编码）保存，直接覆盖原文件名
-   - 日文包各 .int 可作第二参考译文（`Shift-JIS` 解码）
-   - 校验脚本：键名/占位符（`%k %o %s` 等）与原文一致性
-4. **菜单**：为每个含文字的菜单类生成 `PropertyOverrides\XInterfaceCTMenus.类名.txt`，从仓库 `reference\export\` 的 .uc 提取完整结构体、仅改 Text/HelpText 字段
-5. **测试**：新战役全流程 + 各设置页 + 存读档界面；注意 Steam"验证完整性"会还原被覆盖的原版文件（发布说明中提醒用户）
-6. **打包发布**：安装器复制 `System\*.int + PropertyOverrides\*.txt + Textures\orbitfonts.utx`；标注依赖 Fix ≥2.13
+1. **翻译索引**：官方日文包 `JapanesePack\System\*.int` 作为覆盖索引；当前英文版 + Fix 的 `GameData` 作为英文 source 权威
+2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射等构建细节，用户 JSON 只保留分组、id、note、en、jp、zh_CN。用户 JSON 示例：
+
+```json
+{
+  "schema": 2,
+  "XinterfaceCtmenus.CTAcceptSettingsTimedMenu": {
+    "123": {
+      "note": "Label.Text",
+      "en": "Use these settings?",
+      "jp": "この設定を使用しますか?",
+      "zh_CN": ""
+    }
+  }
+}
+```
+
+3. **关键映射规则**：
+   - 输出 key 必须以英文运行时 key 为准；日文字幕 `.int` 的 `SubtitleText[n]` / `SubtitleSound[n]` 编号可能相对英文偏移，需按 sound id 对齐
+   - `SubtitleSound`、`CreditsLine` 控制行、`Object+=` / `Preferences+=` 等非翻译控制项由 catalog 锁定，不要求用户翻译
+   - `XinterfaceCtmenus.int` 是菜单主输出，不再生成菜单 `PropertyOverrides` 作为发布默认路径
+4. **生成工具**：`tools\build_langpack.py` 默认读取 `translation.json` 和 `reference\export\localization_catalog.json`；可用 `--json` / `--catalog` 指定临时输入。默认要求所有 `zh_CN` 非空，`--allow-untranslated` 只用于开发期抽样，空译文会回退英文。工具只输出 `build\GameData\System\*.int` 和 manifest，不直接写入游戏目录
+5. **字符集与字体**：正式译文完成后扫描 `zh_CN` 子集重新生成 `orbitfonts.utx`；开发期可继续使用 GB2312 全集字体
+6. **测试与发布**：至少覆盖新战役全流程、加载/标题卡/提示/字幕、全部菜单与设置页、存读档界面；发布包复制 `System\*.int + Textures\orbitfonts.utx + CJK Mod.dll/Mod.u`，标注 Fix / CJK 依赖
 
 ## 9. 文件与工具清单
 
@@ -244,38 +276,34 @@ u8   mip 数（字体页均为 1）
   SWRC-ChinesePack\           ← 汉化包仓库（github.com/sharrrkcat/SWRC-ChinesePack，最终发布物）
     docs\README-汉化技术文档.md ← 本文档
     tools\swrc_package.py     ← 包解析器（逆向成果的代码化：导出表/UFont/DXT5 贴图解码）
+    tools\font_gen.py         ← 中文字体包生成器（TTF/OTF → orbitfonts.utx，DXT5 字体页）
+    tools\make_charset.py     ← 开发期字符集生成器（ASCII + GB2312 全集）
+    tools\build_langpack.py   ← catalog 驱动语言包生成器（translation.json + localization_catalog.json → build\GameData\System\*.int）
     reference\export\XInterfaceCTMenus\ ← 53 个菜单类 .uc 源码（ucc batchexport 产物）
+    reference\export\         ← 后续 catalog、审计报告、必要源码导出的归档位置
     probe-backup\             ← 探针实验替换掉的原版 .int 备份
   JapanesePack\               ← 日版参照（System/Sounds/Textures；ModDB 下载物，不入库）
   testpack\                   ← 玩家视角测试包（Mod.dll+中文字体+GBK 探针，配 README-测试说明.md；全新游戏本体覆盖安装用）
   fonts\SourceHanSansCN-Bold.otf ← 思源黑体（OFL，字体生成器输入）
-  orbitfonts-cn.utx           ← 字体生成器产物（当前已装入游戏）
+  orbitfonts-cn.utx           ← 字体生成器产物（已实测可装入游戏）
   orbitfonts-jp.utx.bak       ← 日文版字体备份
   CT-headers\                 ← SWRC-Modding/CT 仓库克隆（引擎头文件+Fix源码，独立版本管理）
     Engine\Engine.c           ← Engine.dll 完整 Hex-Rays 反编译（管线逆向的核心参照）
     Mod\Src\CJKText.cpp       ← CJK 渲染钩子（本项目新增，构建进 Mod.dll）
   GameData\System\Mod.dll     ← MSBuild 输出目录（构建产物先落这里）
   Mod.dll.official-2.13.bak   ← 官方 Fix 2.13 的 Mod.dll 备份
-.originalbackup\              ← 完整原版备份（还原点）
-GameData\Textures\orbitfonts.utx              ← 当前=自制中文字体（日文版备份 .lang\orbitfonts-jp.utx.bak，原版在 .originalbackup）
-GameData\System\Mod.dll                       ← 当前=自编译版（含 CJKText 钩子）
-GameData\System\PropertyOverrides\
-  XInterfaceCTMenus.CTMenuMain.txt            ← 当前=GBK 中文探针（ANSI 无 BOM；删除即恢复原版菜单文字）
+.originalbackup\              ← 完整原版备份（还原点；当前实施以已清理的英文版+Fix 游戏目录为 source 权威）
+GameData\                      ← 当前英文版 + 官方 Fix 2.13 测试区；具体文件状态会随实验变化，不再在本文档硬编码探针状态
 ```
 
 工具链：
-- `UCC.exe`（Fix 附带）：`batchexport <pkg> Class uc <目录>` 导源码；`fontupdate` 可更新字体单页贴图；`make` 编译脚本包
+- `UCC.exe`（Fix 附带）：`batchexport <pkg> Class uc <目录>` 导源码；`batchexport <map.ctm> Object t3d <临时目录>` 可导出关卡对象属性用于 source 溯源；`fontupdate` 可更新字体单页贴图；`make` 编译脚本包
 - `ModEd.dll` + unrealed：修复版编辑器（本项目暂未用到 GUI）
 - Python 3.14（`py`）：所有解析/生成脚本；编码转换注意用 `-X utf8` 避免控制台 GBK 报错
 
-### 还原游戏到原版
+### 还原/清理原则
 
-```bash
-cp .originalbackup/GameData/Textures/orbitfonts.utx GameData/Textures/
-cp .lang/Mod.dll.official-2.13.bak GameData/System/Mod.dll
-rm GameData/System/PropertyOverrides/XInterfaceCTMenus.CTMenuMain.txt
-# （levelloadinginfo.int 已还原过；PropertyOverrides 目录其余 11 个 txt 是 Fix 自带，勿删）
-```
+当前用户已重新整理测试区为完整英文版 + 官方 Fix 2.13。后续发布工具默认只输出到仓库 `build\`，不直接写游戏目录。若需要还原用户安装环境，优先使用 Steam 验证完整性或发布包 manifest 精确清理；不要删除整个 `System\PropertyOverrides\` 目录，因为 Fix 自带文件也在其中。
 
 ## 10. 参考链接
 
