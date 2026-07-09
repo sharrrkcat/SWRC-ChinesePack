@@ -1,0 +1,740 @@
+{
+  "tool": "make_translation_json.py",
+  "generated_at": "2026-07-09T18:31:23.828879+00:00",
+  "input_roots": {
+    "english_system": "../../GameData/System",
+    "english_properties": "../../GameData/Properties",
+    "english_maps": "../../GameData/Maps",
+    "japanese_system": "../JapanesePack/System"
+  },
+  "stats": {
+    "emit_literal": 440,
+    "emit_string": 6375,
+    "emit_template": 110,
+    "emit_tuple": 77,
+    "literal_rows": 440,
+    "new_blank_zh_CN": 52,
+    "skipped_emit_error": 17,
+    "skipped_no_source": 1682,
+    "source_class_default": 2450,
+    "source_english_int": 2643,
+    "source_levelinfo_default": 56,
+    "source_map_t3d_or_default": 1853,
+    "string_entries": 6375,
+    "subtitle_pairs": 5975,
+    "template_entries": 270,
+    "tuple_entries": 370,
+    "jp_files": 147,
+    "en_files": 76,
+    "catalog_files": 146,
+    "translation_groups": 2843,
+    "translation_entries": 12990,
+    "skipped_entries": 1699,
+    "preserved_zh_CN": 0,
+    "reset_zh_CN": 0,
+    "preserved_translation_with_jp_change": 0,
+    "skipped_policy": "allow-skipped"
+  },
+  "pseudo_comment_keys": [
+    {
+      "file": "engine.int",
+      "line": 109,
+      "section": "GameInfo",
+      "key": "//bAlternateMode",
+      "value": "0"
+    },
+    {
+      "file": "engine.int",
+      "line": 111,
+      "section": "GameInfo",
+      "key": "//DefaultPlayerName",
+      "value": "Player"
+    },
+    {
+      "file": "engine.int",
+      "line": 118,
+      "section": "GameInfo",
+      "key": "//GameName",
+      "value": "\"Game\""
+    },
+    {
+      "file": "engine.int",
+      "line": 129,
+      "section": "Weapon",
+      "key": "//MessageNoAmmo",
+      "value": "\" has no ammo.\""
+    },
+    {
+      "file": "engine.int",
+      "line": 133,
+      "section": "Weapon",
+      "key": "//ItemName",
+      "value": "Weapon"
+    },
+    {
+      "file": "engine.int",
+      "line": 145,
+      "section": "Ammo",
+      "key": "//PickupMessage",
+      "value": "You picked up some ammo."
+    },
+    {
+      "file": "engine.int",
+      "line": 150,
+      "section": "Pickup",
+      "key": "//PickupMessage",
+      "value": "\"アイテム\""
+    },
+    {
+      "file": "engine.int",
+      "line": 583,
+      "section": "PlayerController",
+      "key": "//QuickSaveName",
+      "value": "\"0_QuickSave\""
+    },
+    {
+      "file": "engine.int",
+      "line": 584,
+      "section": "PlayerController",
+      "key": "//AutoSaveName",
+      "value": "\"0_AutoSave\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 1262,
+      "section": "Subtitles_",
+      "key": "//SubtitleSound[420]",
+      "value": "\"D07X4082\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 1263,
+      "section": "Subtitles_",
+      "key": "//SubtitleText[420]",
+      "value": "\"Delta 07: バクタはないのか。\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 6218,
+      "section": "Subtitles_",
+      "key": "//SubtitleSound[2072]",
+      "value": "\"D62MK588\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 6219,
+      "section": "Subtitles_",
+      "key": "//SubtitleText[2072]",
+      "value": "\"Delta 62: だめだ、できない。\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 6773,
+      "section": "Subtitles_",
+      "key": "//SubtitleSound[2257]",
+      "value": "\"D62X4763\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 6774,
+      "section": "Subtitles_",
+      "key": "//SubtitleText[2257]",
+      "value": "\"Delta 62: 言われるとは思いませんでした。\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 8003,
+      "section": "Subtitles_",
+      "key": "//SubtitleSound[2667]",
+      "value": "\"D62MK646\""
+    },
+    {
+      "file": "subtitles_.int",
+      "line": 8004,
+      "section": "Subtitles_",
+      "key": "//SubtitleText[2667]",
+      "value": "\"Delta 62: 言われるとは思いませんでしたよ。\""
+    },
+    {
+      "file": "subtitles_geo_04.int",
+      "line": 355,
+      "section": "Subtitles_GEO_04",
+      "key": "//SubtitleSound[3046]",
+      "value": "\"CA1G4527\""
+    },
+    {
+      "file": "subtitles_geo_04.int",
+      "line": 356,
+      "section": "Subtitles_GEO_04",
+      "key": "//SubtitleText[3046]",
+      "value": "\"Clone Advisor 1: デルタ、気をつけろ! それは一発だけだぞ! \""
+    },
+    {
+      "file": "Xinterfacecommon.int",
+      "line": 76,
+      "section": "MenuGameSettings",
+      "key": "//Options[8].Items",
+      "value": "(\"OFF\",\"ON\")"
+    },
+    {
+      "file": "XinterfaceCtmenus.int",
+      "line": 411,
+      "section": "CTSaveGameMenu",
+      "key": "//GEOCampaignName",
+      "value": "\"Geonosis\""
+    },
+    {
+      "file": "XinterfaceCtmenus.int",
+      "line": 412,
+      "section": "CTSaveGameMenu",
+      "key": "//RASCampaignName",
+      "value": "\"AssaultShip\""
+    },
+    {
+      "file": "XinterfaceCtmenus.int",
+      "line": 413,
+      "section": "CTSaveGameMenu",
+      "key": "//YYYCampaignName",
+      "value": "\"Kashyyyk\""
+    },
+    {
+      "file": "XinterfaceCtmenus.int",
+      "line": 414,
+      "section": "CTSaveGameMenu",
+      "key": "//UnknownCampaignName",
+      "value": "\"Unknown\""
+    },
+    {
+      "file": "XinterfaceCtmenus.int",
+      "line": 415,
+      "section": "CTSaveGameMenu",
+      "key": "//QuickSaveName",
+      "value": "\"QuickSave\""
+    },
+    {
+      "file": "XinterfaceCtmenus.int",
+      "line": 416,
+      "section": "CTSaveGameMenu",
+      "key": "//AutoSaveName",
+      "value": "\"AutoSave\""
+    }
+  ],
+  "malformed_jp_rows": [
+    {
+      "file": "ALAudio.int",
+      "line": 3,
+      "section": "Public",
+      "key": "(Caption",
+      "value": "\"オーディオ\",Parent=\"詳細オプション\",Class=DXAudio.DXAudioSubsystem,Immediate=True)",
+      "reason": "malformed key"
+    }
+  ],
+  "malformed_en_rows": [],
+  "class_exports": {
+    "core": {
+      "package": "System/core.u",
+      "package_arg": "core.u",
+      "classes": 39,
+      "ucc_lines": 44
+    },
+    "ctcharacters": {
+      "package": "System/ctcharacters.u",
+      "package_arg": "ctcharacters.u",
+      "classes": 96,
+      "ucc_lines": 101
+    },
+    "ctgame": {
+      "package": "System/ctgame.u",
+      "package_arg": "ctgame.u",
+      "classes": 211,
+      "ucc_lines": 216
+    },
+    "ctinventory": {
+      "package": "System/ctinventory.u",
+      "package_arg": "ctinventory.u",
+      "classes": 199,
+      "ucc_lines": 204
+    },
+    "editor": {
+      "package": "System/editor.u",
+      "package_arg": "editor.u",
+      "classes": 78,
+      "ucc_lines": 83
+    },
+    "engine": {
+      "package": "System/engine.u",
+      "package_arg": "engine.u",
+      "classes": 349,
+      "ucc_lines": 354
+    },
+    "gameplay": {
+      "package": "System/gameplay.u",
+      "package_arg": "gameplay.u",
+      "classes": 93,
+      "ucc_lines": 98
+    },
+    "ipdrv": {
+      "package": "System/ipdrv.u",
+      "package_arg": "ipdrv.u",
+      "classes": 17,
+      "ucc_lines": 22
+    },
+    "mpgame": {
+      "package": "System/mpgame.u",
+      "package_arg": "mpgame.u",
+      "classes": 56,
+      "ucc_lines": 61
+    },
+    "properties": {
+      "package": "Properties/properties.u",
+      "package_arg": "..\\Properties\\properties.u",
+      "classes": 522,
+      "ucc_lines": 527
+    },
+    "udebugmenu": {
+      "package": "System/udebugmenu.u",
+      "package_arg": "udebugmenu.u",
+      "classes": 40,
+      "ucc_lines": 45
+    },
+    "unrealed": {
+      "package": "System/unrealed.u",
+      "package_arg": "unrealed.u",
+      "classes": 7,
+      "ucc_lines": 12
+    },
+    "uwindow": {
+      "package": "System/uwindow.u",
+      "package_arg": "uwindow.u",
+      "classes": 78,
+      "ucc_lines": 83
+    },
+    "voicepacks": {
+      "package": "Properties/voicepacks.u",
+      "package_arg": "..\\Properties\\voicepacks.u",
+      "classes": 2,
+      "ucc_lines": 7
+    },
+    "xinterface": {
+      "package": "System/xinterface.u",
+      "package_arg": "xinterface.u",
+      "classes": 15,
+      "ucc_lines": 20
+    },
+    "xinterfacecommon": {
+      "package": "System/xinterfacecommon.u",
+      "package_arg": "xinterfacecommon.u",
+      "classes": 28,
+      "ucc_lines": 33
+    },
+    "xinterfacectmenus": {
+      "package": "System/xinterfacectmenus.u",
+      "package_arg": "xinterfacectmenus.u",
+      "classes": 53,
+      "ucc_lines": 58
+    },
+    "xinterfacegamespy": {
+      "package": "System/xinterfacegamespy.u",
+      "package_arg": "xinterfacegamespy.u",
+      "classes": 7,
+      "ucc_lines": 12
+    },
+    "xinterfacelive": {
+      "package": "System/xinterfacelive.u",
+      "package_arg": "xinterfacelive.u",
+      "classes": 36,
+      "ucc_lines": 41
+    },
+    "xinterfacemp": {
+      "package": "System/xinterfacemp.u",
+      "package_arg": "xinterfacemp.u",
+      "classes": 6,
+      "ucc_lines": 11
+    }
+  },
+  "class_count": 1931,
+  "map_exports": {
+    "epilogue.ctm": {
+      "t3d_bytes": 377865,
+      "ucc_lines": 6
+    },
+    "geo_01a.ctm": {
+      "t3d_bytes": 1201929,
+      "ucc_lines": 6
+    },
+    "geo_01b.ctm": {
+      "t3d_bytes": 1361104,
+      "ucc_lines": 6
+    },
+    "geo_01briefing.ctm": {
+      "t3d_bytes": 378668,
+      "ucc_lines": 11
+    },
+    "geo_01c.ctm": {
+      "t3d_bytes": 716765,
+      "ucc_lines": 6
+    },
+    "geo_03a.ctm": {
+      "t3d_bytes": 1122758,
+      "ucc_lines": 11
+    },
+    "geo_03c.ctm": {
+      "t3d_bytes": 668675,
+      "ucc_lines": 6
+    },
+    "geo_03d.ctm": {
+      "t3d_bytes": 1213744,
+      "ucc_lines": 6
+    },
+    "geo_04a.ctm": {
+      "t3d_bytes": 790173,
+      "ucc_lines": 11
+    },
+    "geo_04b.ctm": {
+      "t3d_bytes": 743427,
+      "ucc_lines": 11
+    },
+    "geo_04c.ctm": {
+      "t3d_bytes": 2440226,
+      "ucc_lines": 6
+    },
+    "geo_04d.ctm": {
+      "t3d_bytes": 1852868,
+      "ucc_lines": 11
+    },
+    "geo_05a.ctm": {
+      "t3d_bytes": 2344350,
+      "ucc_lines": 6
+    },
+    "geo_05b.ctm": {
+      "t3d_bytes": 2296208,
+      "ucc_lines": 6
+    },
+    "geo_05c.ctm": {
+      "t3d_bytes": 1972102,
+      "ucc_lines": 6
+    },
+    "pro.ctm": {
+      "t3d_bytes": 709137,
+      "ucc_lines": 6
+    },
+    "ras_01a.ctm": {
+      "t3d_bytes": 1406477,
+      "ucc_lines": 6
+    },
+    "ras_01b.ctm": {
+      "t3d_bytes": 1523263,
+      "ucc_lines": 6
+    },
+    "ras_01briefing.ctm": {
+      "t3d_bytes": 581086,
+      "ucc_lines": 6
+    },
+    "ras_01c.ctm": {
+      "t3d_bytes": 1114779,
+      "ucc_lines": 6
+    },
+    "ras_02a.ctm": {
+      "t3d_bytes": 752153,
+      "ucc_lines": 6
+    },
+    "ras_02b.ctm": {
+      "t3d_bytes": 1598081,
+      "ucc_lines": 6
+    },
+    "ras_02c.ctm": {
+      "t3d_bytes": 1344195,
+      "ucc_lines": 6
+    },
+    "ras_02d.ctm": {
+      "t3d_bytes": 1412321,
+      "ucc_lines": 6
+    },
+    "ras_02e.ctm": {
+      "t3d_bytes": 1332531,
+      "ucc_lines": 6
+    },
+    "ras_03a.ctm": {
+      "t3d_bytes": 1387104,
+      "ucc_lines": 6
+    },
+    "ras_03b.ctm": {
+      "t3d_bytes": 1617402,
+      "ucc_lines": 6
+    },
+    "ras_03c.ctm": {
+      "t3d_bytes": 1449486,
+      "ucc_lines": 6
+    },
+    "ras_04a.ctm": {
+      "t3d_bytes": 1436568,
+      "ucc_lines": 6
+    },
+    "ras_04b.ctm": {
+      "t3d_bytes": 1044131,
+      "ucc_lines": 6
+    },
+    "ras_04c.ctm": {
+      "t3d_bytes": 1398160,
+      "ucc_lines": 6
+    },
+    "ras_04d.ctm": {
+      "t3d_bytes": 1406733,
+      "ucc_lines": 6
+    },
+    "yyy07briefing.ctm": {
+      "t3d_bytes": 212418,
+      "ucc_lines": 6
+    },
+    "yyy_01b.ctm": {
+      "t3d_bytes": 687784,
+      "ucc_lines": 11
+    },
+    "yyy_01briefing.ctm": {
+      "t3d_bytes": 282855,
+      "ucc_lines": 6
+    },
+    "yyy_01c.ctm": {
+      "t3d_bytes": 850953,
+      "ucc_lines": 6
+    },
+    "yyy_01d.ctm": {
+      "t3d_bytes": 938138,
+      "ucc_lines": 6
+    },
+    "yyy_01e.ctm": {
+      "t3d_bytes": 1334516,
+      "ucc_lines": 6
+    },
+    "yyy_04a.ctm": {
+      "t3d_bytes": 723501,
+      "ucc_lines": 6
+    },
+    "yyy_04b.ctm": {
+      "t3d_bytes": 786250,
+      "ucc_lines": 6
+    },
+    "yyy_04c.ctm": {
+      "t3d_bytes": 696368,
+      "ucc_lines": 6
+    },
+    "yyy_04e.ctm": {
+      "t3d_bytes": 962062,
+      "ucc_lines": 6
+    },
+    "yyy_04f.ctm": {
+      "t3d_bytes": 757764,
+      "ucc_lines": 6
+    },
+    "yyy_05a.ctm": {
+      "t3d_bytes": 955835,
+      "ucc_lines": 6
+    },
+    "yyy_05b.ctm": {
+      "t3d_bytes": 1199123,
+      "ucc_lines": 6
+    },
+    "yyy_05c.ctm": {
+      "t3d_bytes": 1449082,
+      "ucc_lines": 6
+    },
+    "yyy_05d.ctm": {
+      "t3d_bytes": 1102297,
+      "ucc_lines": 6
+    },
+    "yyy_05e.ctm": {
+      "t3d_bytes": 682295,
+      "ucc_lines": 6
+    },
+    "yyy_05f.ctm": {
+      "t3d_bytes": 896734,
+      "ucc_lines": 6
+    },
+    "yyy_06a.ctm": {
+      "t3d_bytes": 1067259,
+      "ucc_lines": 6
+    },
+    "yyy_06b.ctm": {
+      "t3d_bytes": 1569032,
+      "ucc_lines": 6
+    },
+    "yyy_06c.ctm": {
+      "t3d_bytes": 1643517,
+      "ucc_lines": 6
+    },
+    "yyy_06d.ctm": {
+      "t3d_bytes": 1974935,
+      "ucc_lines": 6
+    },
+    "yyy_35a.ctm": {
+      "t3d_bytes": 813340,
+      "ucc_lines": 11
+    },
+    "yyy_35b.ctm": {
+      "t3d_bytes": 913264,
+      "ucc_lines": 11
+    },
+    "yyy_35c.ctm": {
+      "t3d_bytes": 616405,
+      "ucc_lines": 11
+    }
+  },
+  "subtitle_remap_summary": {
+    "subtitle_files": 24,
+    "files_with_remaps": 22,
+    "total_remaps": 2996,
+    "index_delta_counts": {
+      "+1": 2996
+    },
+    "files": {
+      "subtitles_.int": {
+        "remap_count": 0,
+        "index_delta_counts": {}
+      },
+      "subtitles_all_mp.int": {
+        "remap_count": 393,
+        "index_delta_counts": {
+          "+1": 393
+        }
+      },
+      "subtitles_epilogue.int": {
+        "remap_count": 20,
+        "index_delta_counts": {
+          "+1": 20
+        }
+      },
+      "subtitles_geo_01.int": {
+        "remap_count": 333,
+        "index_delta_counts": {
+          "+1": 333
+        }
+      },
+      "subtitles_geo_01_hangar.int": {
+        "remap_count": 1,
+        "index_delta_counts": {
+          "+1": 1
+        }
+      },
+      "subtitles_geo_01Briefing.int": {
+        "remap_count": 25,
+        "index_delta_counts": {
+          "+1": 25
+        }
+      },
+      "subtitles_geo_03.int": {
+        "remap_count": 230,
+        "index_delta_counts": {
+          "+1": 230
+        }
+      },
+      "subtitles_geo_04.int": {
+        "remap_count": 190,
+        "index_delta_counts": {
+          "+1": 190
+        }
+      },
+      "subtitles_geo_04Briefing.int": {
+        "remap_count": 14,
+        "index_delta_counts": {
+          "+1": 14
+        }
+      },
+      "subtitles_geo_05.int": {
+        "remap_count": 136,
+        "index_delta_counts": {
+          "+1": 136
+        }
+      },
+      "subtitles_pro.int": {
+        "remap_count": 0,
+        "index_delta_counts": {}
+      },
+      "subtitles_ras_01.int": {
+        "remap_count": 151,
+        "index_delta_counts": {
+          "+1": 151
+        }
+      },
+      "subtitles_ras_01Briefing.int": {
+        "remap_count": 26,
+        "index_delta_counts": {
+          "+1": 26
+        }
+      },
+      "subtitles_ras_02.int": {
+        "remap_count": 157,
+        "index_delta_counts": {
+          "+1": 157
+        }
+      },
+      "subtitles_ras_03.int": {
+        "remap_count": 154,
+        "index_delta_counts": {
+          "+1": 154
+        }
+      },
+      "subtitles_ras_04.int": {
+        "remap_count": 195,
+        "index_delta_counts": {
+          "+1": 195
+        }
+      },
+      "subtitles_yyy_01.int": {
+        "remap_count": 261,
+        "index_delta_counts": {
+          "+1": 261
+        }
+      },
+      "subtitles_yyy_01Briefing.int": {
+        "remap_count": 18,
+        "index_delta_counts": {
+          "+1": 18
+        }
+      },
+      "subtitles_yyy_03.int": {
+        "remap_count": 99,
+        "index_delta_counts": {
+          "+1": 99
+        }
+      },
+      "subtitles_yyy_03Briefing.int": {
+        "remap_count": 8,
+        "index_delta_counts": {
+          "+1": 8
+        }
+      },
+      "subtitles_yyy_04.int": {
+        "remap_count": 248,
+        "index_delta_counts": {
+          "+1": 248
+        }
+      },
+      "subtitles_yyy_04Briefing.int": {
+        "remap_count": 21,
+        "index_delta_counts": {
+          "+1": 21
+        }
+      },
+      "subtitles_yyy_05.int": {
+        "remap_count": 130,
+        "index_delta_counts": {
+          "+1": 130
+        }
+      },
+      "subtitles_yyy_06.int": {
+        "remap_count": 186,
+        "index_delta_counts": {
+          "+1": 186
+        }
+      }
+    }
+  },
+  "build_validation": {
+    "ok": true,
+    "generated_files": 146,
+    "total_entries": 18952,
+    "total_bytes": 592309,
+    "untranslated_fallbacks": 0,
+    "stdout_lines": 147
+  }
+}

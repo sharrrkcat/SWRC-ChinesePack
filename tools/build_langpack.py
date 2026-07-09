@@ -36,6 +36,11 @@ PRINTF_RE = re.compile(
     r"%(?!%)(?:\d+\$)?[-+#0]*(?:\*|\d+)?(?:\.(?:\*|\d+))?"
     r"(?:hh|h|ll|l|L)?([A-Za-z])"
 )
+FALLBACK_REPLACEMENTS = {
+    "\u00a0": " ",
+    "©": "(C)",
+    "É": "E",
+}
 
 
 class BuildError(Exception):
@@ -91,8 +96,32 @@ def quote_tuple(values):
     return "(" + ",".join(quote_unreal(value) for value in values) + ")"
 
 
+def format_text_value(value, style, label):
+    if style in (None, "quoted"):
+        return quote_unreal(value)
+    if style == "bare":
+        if "\r" in value or "\n" in value or "\0" in value:
+            fail(f"{label}: bare 文本含非法控制字符")
+        if "=" in value:
+            fail(f"{label}: bare 文本含 '='，请改用 quoted 或 template")
+        return value
+    fail(f"{label}: 未支持的文本输出样式 {style!r}")
+
+
+def format_translation_value(value, style, fallback, label):
+    if fallback and style == "bare" and "=" in value:
+        style = "quoted"
+    return format_text_value(value, style, label)
+
+
 def printf_types(value):
     return PRINTF_RE.findall(value)
+
+
+def normalize_untranslated_fallback(value):
+    for old, new in FALLBACK_REPLACEMENTS.items():
+        value = value.replace(old, new)
+    return value
 
 
 def load_json_file(path, label):
@@ -206,7 +235,7 @@ def resolve_translation(ref, expected_printf, translations, used_refs, allow_unt
     if text == "":
         if not allow_untranslated:
             fail(f"{ref}: zh_CN 不能为空")
-        text = item["en"]
+        text = normalize_untranslated_fallback(item["en"])
         fallback = True
 
     actual_printf = printf_types(text)
@@ -222,14 +251,41 @@ def resolve_translation(ref, expected_printf, translations, used_refs, allow_unt
     return text, fallback
 
 
-def add_output_line(file_state, section, key, value):
+def add_output_line(file_state, section, key, value, allow_duplicate=False):
     seen_key = (section, key)
-    if seen_key in file_state["seen_keys"]:
+    if seen_key in file_state["seen_keys"] and not (allow_duplicate or key.endswith("+")):
         fail(f"{file_state['path']}: 重复输出键 [{section}] {key}")
     file_state["seen_keys"].add(seen_key)
     section_lines = file_state["sections"].setdefault(section, [])
     section_lines.append((key, value))
     file_state["row_count"] += 1
+
+
+def render_template_parts(parts, translations, used_refs, allow_untranslated, label):
+    if not isinstance(parts, list) or not parts:
+        fail(f"{label}: template 行缺少非空 parts")
+    rendered = []
+    fallback_count = 0
+    for part_index, part in enumerate(parts):
+        part_label = f"{label}.parts[{part_index}]"
+        if isinstance(part, str):
+            rendered.append(ensure_text(part_label, part, allow_empty=True, allow_newlines=True))
+            continue
+        if not isinstance(part, dict):
+            fail(f"{part_label}: template part 必须是字符串或对象")
+        if "literal" in part:
+            rendered.append(ensure_text(f"{part_label}.literal", part["literal"], allow_empty=True, allow_newlines=True))
+            continue
+        ref = part.get("entry")
+        parse_entry_ref(ref, part_label)
+        expected_printf = validate_printf_spec(part.get("printf", []), part_label)
+        text, fallback = resolve_translation(
+            ref, expected_printf, translations, used_refs, allow_untranslated, part_label
+        )
+        rendered.append(format_translation_value(text, part.get("style", "quoted"), fallback, part_label))
+        if fallback:
+            fallback_count += 1
+    return "".join(rendered), fallback_count
 
 
 def collect_outputs(catalog_files, translations, allow_untranslated):
@@ -266,11 +322,11 @@ def collect_outputs(catalog_files, translations, allow_untranslated):
                 text, fallback = resolve_translation(
                     ref, expected_printf, translations, used_refs, allow_untranslated, row_label
                 )
-                value = quote_unreal(text)
+                value = format_translation_value(text, row.get("style", "quoted"), fallback, row_label)
                 if fallback:
                     file_state["fallback_count"] += 1
                     total_fallbacks += 1
-                add_output_line(file_state, section, key, value)
+                add_output_line(file_state, section, key, value, bool(row.get("allow_duplicate", False)))
 
             elif row_type == "tuple":
                 items = row.get("items")
@@ -291,11 +347,20 @@ def collect_outputs(catalog_files, translations, allow_untranslated):
                     if fallback:
                         file_state["fallback_count"] += 1
                         total_fallbacks += 1
-                add_output_line(file_state, section, key, quote_tuple(values))
+                add_output_line(file_state, section, key, quote_tuple(values), bool(row.get("allow_duplicate", False)))
 
             elif row_type == "literal":
                 value = ensure_text(f"{row_label}: value", row.get("value"), allow_empty=True)
-                add_output_line(file_state, section, key, value)
+                add_output_line(file_state, section, key, value, bool(row.get("allow_duplicate", False)))
+
+            elif row_type == "template":
+                value, fallback_count = render_template_parts(
+                    row.get("parts"), translations, used_refs, allow_untranslated, row_label
+                )
+                if fallback_count:
+                    file_state["fallback_count"] += fallback_count
+                    total_fallbacks += fallback_count
+                add_output_line(file_state, section, key, value, bool(row.get("allow_duplicate", False)))
 
             else:
                 fail(f"{row_label}: 未支持的 catalog 行类型 {row_type!r}")
