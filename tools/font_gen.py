@@ -229,16 +229,25 @@ def load_latin_source(path):
         result[size] = glyphs
     return result
 
-def _render_cjk_rgba(font, ch, cell_h, baseline):
+def _render_cjk_rgba(font, ch, cell_h, baseline, target_h=None):
     gray = Image.new('L', (cell_h, cell_h), 0)
     ImageDraw.Draw(gray).text((0, baseline), ch, font=font, fill=255, anchor='ls')
     g = np.asarray(gray, np.uint8)
-    return np.repeat(g[:, :, None], 4, axis=2)
+    glyph = np.repeat(g[:, :, None], 4, axis=2)
+    target_h = target_h or cell_h
+    if target_h <= cell_h:
+        return glyph
+    out = np.zeros((target_h, cell_h, 4), np.uint8)
+    y = max(0, (target_h - cell_h) // 2)
+    out[y:y + cell_h, :, :] = glyph
+    return out
 
 def render_size_mixed(ttf_path, chars, cell_h, latin_glyphs):
     """混合模式: ASCII 复用英文版 RGBA glyph, 其他字符由 TTF 渲染为 RGBA。"""
     font = ImageFont.truetype(ttf_path, cell_h)
     baseline = round(cell_h * 0.88)
+    latin_line_h = max(g.shape[0] for g in latin_glyphs.values())
+    mixed_line_h = max(cell_h, latin_line_h)
 
     pages, glyphs = [], []
     img = np.zeros((PAGE_H_MAX, PAGE_W, 4), np.uint8)
@@ -269,15 +278,15 @@ def render_size_mixed(ttf_path, chars, cell_h, latin_glyphs):
         return pos
 
     w0 = max(2, cell_h // 3)
-    gx, gy = alloc(w0, cell_h)
-    glyphs.append((gx, gy, w0, cell_h, len(pages)))
+    gx, gy = alloc(w0, mixed_line_h)
+    glyphs.append((gx, gy, w0, mixed_line_h, len(pages)))
 
     for ch in chars:
         cp = ord(ch)
         if cp in LATIN_RANGE:
             glyph = latin_glyphs[cp]
         else:
-            glyph = _render_cjk_rgba(font, ch, cell_h, baseline)
+            glyph = _render_cjk_rgba(font, ch, cell_h, baseline, mixed_line_h)
         gh, gw = glyph.shape[:2]
         gx, gy = alloc(gw, gh)
         img[gy:gy + gh, gx:gx + gw, :] = glyph

@@ -82,6 +82,15 @@ class LocalizationToolTests(unittest.TestCase):
         mip = mips[0]
         return np.array(Image.frombytes("RGBA", (mip["usize"], mip["vsize"]), mip["data"], "bcn", 3), np.uint8)[:, :, 3]
 
+    def glyph_alpha_bbox(self, pkg, font, glyph):
+        u, v, w, h, tp = glyph
+        alpha = self.decoded_page_alpha(pkg, font["pages"][tp])
+        rect = alpha[v:v + h, u:u + w]
+        ys, xs = np.where(rect > 8)
+        if len(ys) == 0:
+            return None
+        return (int(xs.min()), int(ys.min()), int(xs.max() + 1), int(ys.max() + 1))
+
     def test_font_gen_default_keeps_ttf_ascii_metrics(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             pkg = self.build_test_font(Path(temp_dir), " S,中")
@@ -89,7 +98,7 @@ class LocalizationToolTests(unittest.TestCase):
             self.assertEqual(font["characters"][font["remap"][ord("S")]][3], fg.CELL_HEIGHTS[15])
             self.assertEqual(font["characters"][font["remap"][0xD6D0]][3], fg.CELL_HEIGHTS[15])
 
-    def test_font_gen_latin_source_reuses_ascii_metrics_and_keeps_cjk_metrics(self):
+    def test_font_gen_latin_source_reuses_ascii_metrics_and_aligns_cjk_to_latin_line_height(self):
         _font_path, latin_source = self.font_fixture_paths()
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_root = Path(temp_dir)
@@ -103,10 +112,13 @@ class LocalizationToolTests(unittest.TestCase):
                 source_glyph = source_font["characters"][ord(ch)]
                 self.assertEqual(mixed_glyph[2:4], source_glyph[2:4])
 
+            latin_line_h = max(source_font["characters"][cp][3] for cp in fg.LATIN_RANGE)
             cjk_key = int.from_bytes("中".encode("gbk"), "big")
-            self.assertEqual(mixed_font["characters"][mixed_font["remap"][cjk_key]][3], fg.CELL_HEIGHTS[15])
+            cjk_glyph = mixed_font["characters"][mixed_font["remap"][cjk_key]]
+            self.assertEqual(cjk_glyph[3], latin_line_h)
             self.assertEqual(mixed_font["is_remapped"], 1)
             self.assertIn(cjk_key, mixed_font["remap"])
+            self.assertGreater(self.glyph_alpha_bbox(mixed_pkg, mixed_font, cjk_glyph)[1], 0)
 
             s_glyph = mixed_font["characters"][mixed_font["remap"][ord("S")]]
             alpha = self.decoded_page_alpha(mixed_pkg, mixed_font["pages"][s_glyph[4]])
