@@ -27,7 +27,8 @@ def read_ci(buf, p):
 class Package:
     def __init__(self, path):
         self.path = path
-        self.d = open(path, 'rb').read()
+        with open(path, 'rb') as f:
+            self.d = f.read()
         d = self.d
         sig, self.ver, self.lic = struct.unpack_from('<IHH', d, 0)
         assert sig == SIG, f'非 Unreal 包: {hex(sig)}'

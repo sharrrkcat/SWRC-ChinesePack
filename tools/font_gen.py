@@ -4,6 +4,7 @@
 
 管线: Pillow 渲染灰度字形 → 打包贴图页 (512 宽) → DXT5 编码 (RGB=A=灰度)
      → 写 .utx (5 字号 UFont + 贴图页, CharRemap 键=GBK 双字节码, IsRemapped=1)
+可选: --latin-source 从英文版 orbitfonts.utx 复用 0x20-0x7E ASCII glyph。
 
 格式依据: docs/README-汉化技术文档.md §4 (导出表 RC 布局 / UFont / 贴图对象 DXT5)。
 字号→行高映射取自官方日文版实测 (局内验证过的度量)。
@@ -12,7 +13,8 @@
     py -X utf8 font_gen.py --font ../fonts/SourceHanSansCN-Bold.otf \
         --charset charset.txt --out orbitfonts.utx
 """
-import argparse, struct, sys
+import argparse, importlib.util, struct, sys
+from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
@@ -24,6 +26,7 @@ PAGE_H_MAX = 512
 PAD = 1                              # 字形间距, 防 DXT 块内串色
 NAME_FLAGS = 0x4070490               # 美版名称表旗标实测值
 GUID = bytes.fromhex('11c5a2e5a0b34f748b15dd940c135d2b')
+LATIN_RANGE = range(0x20, 0x7F)
 
 # ---------------- DXT5 编码 (numpy 向量化) ----------------
 
@@ -70,6 +73,71 @@ def dxt5_encode_gray(gray):
     for i in range(4):
         color_blk[:, 4 + i] = (cbits >> np.uint64(8 * i)).astype(np.uint8)
 
+    return np.concatenate([alpha_blk, color_blk], 1).tobytes()
+
+def _pack_alpha_blocks(alpha):
+    b = alpha.reshape(alpha.shape[0] // 4, 4, alpha.shape[1] // 4, 4).transpose(0, 2, 1, 3).reshape(-1, 16).astype(np.int32)
+    amax, amin = b.max(1), b.min(1)
+    flat = amax == amin
+    wts = np.array([[7, 0], [0, 7], [6, 1], [5, 2], [4, 3], [3, 4], [2, 5], [1, 6]])
+    pal = (amax[:, None] * wts[:, 0] + amin[:, None] * wts[:, 1] + 3) // 7
+    idx = np.abs(b[:, :, None] - pal[:, None, :]).argmin(2)
+    idx[flat] = 0
+    shifts = np.arange(16, dtype=np.uint64) * 3
+    bits = (idx.astype(np.uint64) << shifts).sum(1, dtype=np.uint64)
+    out = np.zeros((b.shape[0], 8), np.uint8)
+    out[:, 0] = amax
+    out[:, 1] = amin
+    for i in range(6):
+        out[:, 2 + i] = (bits >> np.uint64(8 * i)).astype(np.uint8)
+    return out
+
+def _rgb_to_565(rgb):
+    r = rgb[..., 0].astype(np.int32)
+    g = rgb[..., 1].astype(np.int32)
+    b = rgb[..., 2].astype(np.int32)
+    return ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3)
+
+def _rgb_from_565(c):
+    c = c.astype(np.int32)
+    return np.stack([
+        ((c >> 11) & 0x1F) * 255 // 31,
+        ((c >> 5) & 0x3F) * 255 // 63,
+        (c & 0x1F) * 255 // 31,
+    ], axis=-1).astype(np.int32)
+
+def _pack_color_blocks(rgb):
+    blocks = rgb.reshape(rgb.shape[0] // 4, 4, rgb.shape[1] // 4, 4, 3).transpose(0, 2, 1, 3, 4).reshape(-1, 16, 3).astype(np.int32)
+    lum = (blocks[:, :, 0] * 77 + blocks[:, :, 1] * 150 + blocks[:, :, 2] * 29) // 256
+    imax = lum.argmax(1)
+    imin = lum.argmin(1)
+    row = np.arange(blocks.shape[0])
+    c0 = _rgb_to_565(blocks[row, imax])
+    c1 = _rgb_to_565(blocks[row, imin])
+    swap = c0 <= c1
+    c0, c1 = np.where(swap, c1, c0), np.where(swap, c0, c1)
+    p0 = _rgb_from_565(c0)
+    p1 = _rgb_from_565(c1)
+    pal = np.stack([p0, p1, (2 * p0 + p1) // 3, (p0 + 2 * p1) // 3], axis=1)
+    dist = ((blocks[:, :, None, :] - pal[:, None, :, :]) ** 2).sum(3)
+    idx = dist.argmin(2).astype(np.uint64)
+    shifts = np.arange(16, dtype=np.uint64) * 2
+    bits = (idx << shifts).sum(1, dtype=np.uint64)
+    out = np.zeros((blocks.shape[0], 8), np.uint8)
+    out[:, 0] = c0 & 0xFF
+    out[:, 1] = c0 >> 8
+    out[:, 2] = c1 & 0xFF
+    out[:, 3] = c1 >> 8
+    for i in range(4):
+        out[:, 4 + i] = (bits >> np.uint64(8 * i)).astype(np.uint8)
+    return out
+
+def dxt5_encode_rgba(rgba):
+    """RGBA 页 → DXT5 字节串。用于混合模式保留英文原版 RGB/Alpha 关系。"""
+    h, w, c = rgba.shape
+    assert c == 4 and h % 4 == 0 and w % 4 == 0
+    alpha_blk = _pack_alpha_blocks(rgba[:, :, 3])
+    color_blk = _pack_color_blocks(rgba[:, :, :3])
     return np.concatenate([alpha_blk, color_blk], 1).tobytes()
 
 # ---------------- 字形渲染与打包 ----------------
@@ -119,6 +187,101 @@ def render_size(ttf_path, chars, cell_h):
         gx, gy = alloc(w)
         draw.text((gx, gy + baseline), ch, font=font, fill=255, anchor='ls')
         glyphs.append((gx, gy, w, cell_h, len(pages)))
+    flush()
+    assert len(pages) <= 256, 'TextureIndex 为 u8, 页数超限'
+    return pages, glyphs
+
+def _load_swrc_package_module():
+    path = Path(__file__).with_name('swrc_package.py')
+    spec = importlib.util.spec_from_file_location('swrc_package_for_font_gen', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+def load_latin_source(path):
+    """读取英文版 orbitfonts.utx 的 0x20-0x7E glyph。返回 size -> codepoint -> RGBA ndarray。"""
+    swrc_package = _load_swrc_package_module()
+    pkg = swrc_package.Package(path)
+    result = {}
+    for size in FONT_ORDER:
+        font_name = f'OrbitBold{size}'
+        font = pkg.decode_font(font_name)
+        if font['is_remapped'] != 0:
+            raise SystemExit(f'{path}: {font_name} 必须是英文版直查字体 (IsRemapped=0)')
+        if len(font['characters']) < 0x80:
+            raise SystemExit(f'{path}: {font_name} 字形数不足, 无法读取 ASCII')
+        page_images = []
+        for page_name in font['pages']:
+            _props, mips = pkg.decode_texture(page_name)
+            mip = mips[0]
+            page_images.append(np.array(Image.frombytes('RGBA', (mip['usize'], mip['vsize']), mip['data'], 'bcn', 3), np.uint8))
+        glyphs = {}
+        for cp in LATIN_RANGE:
+            u, v, gw, gh, tp = font['characters'][cp]
+            if gw <= 0 or gh <= 0:
+                raise SystemExit(f'{path}: {font_name} ASCII 0x{cp:02X} glyph 尺寸无效: {gw}x{gh}')
+            if tp >= len(page_images):
+                raise SystemExit(f'{path}: {font_name} ASCII 0x{cp:02X} TextureIndex 越界: {tp}')
+            page = page_images[tp]
+            if u < 0 or v < 0 or u + gw > page.shape[1] or v + gh > page.shape[0]:
+                raise SystemExit(f'{path}: {font_name} ASCII 0x{cp:02X} glyph 越出贴图页')
+            glyphs[cp] = page[v:v + gh, u:u + gw, :].copy()
+        result[size] = glyphs
+    return result
+
+def _render_cjk_rgba(font, ch, cell_h, baseline):
+    gray = Image.new('L', (cell_h, cell_h), 0)
+    ImageDraw.Draw(gray).text((0, baseline), ch, font=font, fill=255, anchor='ls')
+    g = np.asarray(gray, np.uint8)
+    return np.repeat(g[:, :, None], 4, axis=2)
+
+def render_size_mixed(ttf_path, chars, cell_h, latin_glyphs):
+    """混合模式: ASCII 复用英文版 RGBA glyph, 其他字符由 TTF 渲染为 RGBA。"""
+    font = ImageFont.truetype(ttf_path, cell_h)
+    baseline = round(cell_h * 0.88)
+
+    pages, glyphs = [], []
+    img = np.zeros((PAGE_H_MAX, PAGE_W, 4), np.uint8)
+    x = y = row_h = used_h = 0
+
+    def flush():
+        nonlocal img, x, y, row_h, used_h
+        vh = 16
+        while vh < used_h: vh *= 2
+        pages.append(img[:min(vh, PAGE_H_MAX), :, :].copy())
+        img = np.zeros((PAGE_H_MAX, PAGE_W, 4), np.uint8)
+        x = y = row_h = used_h = 0
+
+    def alloc(w, h):
+        nonlocal x, y, row_h, used_h
+        if w > PAGE_W:
+            raise SystemExit(f'字形宽度 {w}px 超过贴图页宽度 {PAGE_W}px')
+        if x + w > PAGE_W:
+            x = 0
+            y += row_h + PAD
+            row_h = 0
+        if y + h > PAGE_H_MAX:
+            flush()
+        pos = (x, y)
+        x += w + PAD
+        row_h = max(row_h, h)
+        used_h = max(used_h, y + h)
+        return pos
+
+    w0 = max(2, cell_h // 3)
+    gx, gy = alloc(w0, cell_h)
+    glyphs.append((gx, gy, w0, cell_h, len(pages)))
+
+    for ch in chars:
+        cp = ord(ch)
+        if cp in LATIN_RANGE:
+            glyph = latin_glyphs[cp]
+        else:
+            glyph = _render_cjk_rgba(font, ch, cell_h, baseline)
+        gh, gw = glyph.shape[:2]
+        gx, gy = alloc(gw, gh)
+        img[gy:gy + gh, gx:gx + gw, :] = glyph
+        glyphs.append((gx, gy, gw, gh, len(pages)))
     flush()
     assert len(pages) <= 256, 'TextureIndex 为 u8, 页数超限'
     return pages, glyphs
@@ -181,7 +344,7 @@ class Writer:
                 out += b'\x22' + struct.pack('<i', v)
         return out + ci(self.name('None'))
 
-def build_package(ttf_path, chars, out_path):
+def build_package(ttf_path, chars, out_path, latin_source=None):
     w = Writer()
     # 名称表顺序模仿美版: None 与属性名在前
     for n in ['None', 'Core', 'Engine', 'Package', 'Class', 'Texture',
@@ -190,25 +353,29 @@ def build_package(ttf_path, chars, out_path):
         w.name(n)
 
     remap = build_remap(chars)
+    latin_sets = load_latin_source(latin_source) if latin_source else None
 
     # 逐字号渲染并组装导出项 (页贴图在前, Font 对象在后, 与美版一致)
     exports = []       # dict: cls(-3 Tex/-4 Font), outer, x, name, flags, data(bytes 占位)
     for size in FONT_ORDER:
         cell = CELL_HEIGHTS[size]
-        pages, glyphs = render_size(ttf_path, chars, cell)
+        if latin_sets:
+            pages, glyphs = render_size_mixed(ttf_path, chars, cell, latin_sets[size])
+        else:
+            pages, glyphs = render_size(ttf_path, chars, cell)
         print(f'OrbitBold{size}: 行高 {cell}px, 字形 {len(glyphs)}, 页数 {len(pages)}')
         font_exp_idx = len(exports) + 1 + len(pages)     # 1 基
         first_page_idx = len(exports) + 1
         page_refs = []
         for pi, pg in enumerate(pages):
-            ph, pw = pg.shape
+            ph, pw = pg.shape[:2]
             props = w.prop_bytes([
                 ('bAlphaTexture', 'bool', 0), ('bNoRawData', 'bool', 0),
                 ('LODSet', 'byte', 0), ('Format', 'byte', 8),          # 8 = TEXF_DXT5
                 ('UBits', 'byte', pw.bit_length() - 1), ('VBits', 'byte', ph.bit_length() - 1),
                 ('USize', 'int', pw), ('VSize', 'int', ph),
                 ('UClamp', 'int', pw), ('VClamp', 'int', ph)])
-            dxt = dxt5_encode_gray(pg)
+            dxt = dxt5_encode_rgba(pg) if pg.ndim == 3 else dxt5_encode_gray(pg)
             # u8 mip数 | u32 数据尾绝对偏移(后补) | CI 大小 | 数据 | i32 US/VS | u8 UB/VB
             native = (b'\x01', dxt,                                    # posafter 写出时回填
                       struct.pack('<ii', pw, ph) + bytes([pw.bit_length() - 1, ph.bit_length() - 1]))
@@ -278,7 +445,8 @@ def build_package(ttf_path, chars, out_path):
     header += GUID + struct.pack('<III', 1, len(exports), len(w.names))
     assert len(header) == 64
     out = header + names_blob + imports_blob + table_blob + data_blob
-    open(out_path, 'wb').write(out)
+    with open(out_path, 'wb') as f:
+        f.write(out)
     print(f'{out_path}: {len(out)} 字节, 名称 {len(w.names)}, 导出 {len(exports)}')
 
 if __name__ == '__main__':
@@ -289,6 +457,8 @@ if __name__ == '__main__':
     ap.add_argument('--cells', default=None,
                     help='字号→行高覆盖, 如 "24=29,18=24,15=20,12=16,8=13" (默认=官方日版度量; '
                          '行高越大字越大, 但注意 UI 布局按行高排版, 偏离过多会挤压/溢出)')
+    ap.add_argument('--latin-source', default=None,
+                    help='可选: 从英文版 orbitfonts.utx 复用 ASCII 0x20-0x7E glyph, 中文仍由 --font 渲染')
     a = ap.parse_args()
     if a.cells:
         for kv in a.cells.split(','):
@@ -298,4 +468,4 @@ if __name__ == '__main__':
     chars = open(a.charset, encoding='utf-8').read()
     chars = ''.join(dict.fromkeys(c for c in chars if not c.isspace() or c == ' '))
     print(f'字符集: {len(chars)} 字符')
-    build_package(a.font, chars, a.out)
+    build_package(a.font, chars, a.out, a.latin_source)

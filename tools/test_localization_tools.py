@@ -11,6 +11,9 @@ import unittest
 from collections import Counter, OrderedDict
 from pathlib import Path
 
+import numpy as np
+from PIL import Image
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 TOOLS_DIR = ROOT_DIR / "tools"
@@ -27,6 +30,8 @@ def load_tool(name):
 
 mtj = load_tool("make_translation_json")
 blp = load_tool("build_langpack")
+fg = load_tool("font_gen")
+swrc = load_tool("swrc_package")
 
 
 def parse_int_semantics(path, encoding):
@@ -59,6 +64,55 @@ def canonical_value(value):
 
 
 class LocalizationToolTests(unittest.TestCase):
+    def font_fixture_paths(self):
+        font_path = ROOT_DIR.parent / "fonts" / "SourceHanSansCN-Bold.otf"
+        latin_source = ROOT_DIR.parent.parent / ".originalbackup" / "GameData" / "Textures" / "orbitfonts.utx"
+        if not font_path.exists() or not latin_source.exists():
+            self.skipTest("font generation fixtures are missing")
+        return font_path, latin_source
+
+    def build_test_font(self, temp_root, chars, latin_source=None):
+        font_path, _default_latin_source = self.font_fixture_paths()
+        out_path = temp_root / "orbitfonts-test.utx"
+        fg.build_package(str(font_path), chars, str(out_path), str(latin_source) if latin_source else None)
+        return swrc.Package(str(out_path))
+
+    def decoded_page_alpha(self, pkg, page_name):
+        _props, mips = pkg.decode_texture(page_name)
+        mip = mips[0]
+        return np.array(Image.frombytes("RGBA", (mip["usize"], mip["vsize"]), mip["data"], "bcn", 3), np.uint8)[:, :, 3]
+
+    def test_font_gen_default_keeps_ttf_ascii_metrics(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            pkg = self.build_test_font(Path(temp_dir), " S,中")
+            font = pkg.decode_font("OrbitBold15")
+            self.assertEqual(font["characters"][font["remap"][ord("S")]][3], fg.CELL_HEIGHTS[15])
+            self.assertEqual(font["characters"][font["remap"][0xD6D0]][3], fg.CELL_HEIGHTS[15])
+
+    def test_font_gen_latin_source_reuses_ascii_metrics_and_keeps_cjk_metrics(self):
+        _font_path, latin_source = self.font_fixture_paths()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            mixed_pkg = self.build_test_font(temp_root, " S,g中", latin_source)
+            source_pkg = swrc.Package(str(latin_source))
+            mixed_font = mixed_pkg.decode_font("OrbitBold15")
+            source_font = source_pkg.decode_font("OrbitBold15")
+
+            for ch in "S,g":
+                mixed_glyph = mixed_font["characters"][mixed_font["remap"][ord(ch)]]
+                source_glyph = source_font["characters"][ord(ch)]
+                self.assertEqual(mixed_glyph[2:4], source_glyph[2:4])
+
+            cjk_key = int.from_bytes("中".encode("gbk"), "big")
+            self.assertEqual(mixed_font["characters"][mixed_font["remap"][cjk_key]][3], fg.CELL_HEIGHTS[15])
+            self.assertEqual(mixed_font["is_remapped"], 1)
+            self.assertIn(cjk_key, mixed_font["remap"])
+
+            s_glyph = mixed_font["characters"][mixed_font["remap"][ord("S")]]
+            alpha = self.decoded_page_alpha(mixed_pkg, mixed_font["pages"][s_glyph[4]])
+            u, v, w, _h, _tp = s_glyph
+            self.assertFalse((alpha[v:v + 3, u:u + w] > 8).any())
+
     def test_unreal_string_parser_preserves_official_forms(self):
         self.assertEqual(
             mtj.parse_quoted_tuple('("プレイしない","プレイ可能\\","---")'),
