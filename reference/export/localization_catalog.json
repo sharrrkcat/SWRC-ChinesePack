@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "generated_by": "make_translation_json.py",
-  "generated_at": "2026-07-09T19:54:01.511296+00:00",
+  "generated_at": "2026-07-10T06:44:08.903906+00:00",
   "files": {
     "GameData/System/alaudio.int": [
       {
@@ -17,6 +17,12 @@
         "type": "string",
         "entry": "alaudio.DXAudioSubsystem/1",
         "printf": []
+      },
+      {
+        "section": "Public",
+        "key": "Preferences+",
+        "type": "literal",
+        "value": "(Caption=\"Audio\",Parent=\"Advanced Options\",Class=DXAudio.DXAudioSubsystem,Immediate=True)"
       }
     ],
     "GameData/System/core.int": [
@@ -784,9 +790,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[1]",
-        "type": "string",
-        "entry": "credits.Credits/1",
-        "printf": []
+        "type": "literal",
+        "value": "\"GAME DESIGN\""
       },
       {
         "section": "Credits",
@@ -797,9 +802,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[3]",
-        "type": "string",
-        "entry": "credits.Credits/3",
-        "printf": []
+        "type": "literal",
+        "value": "\"THE REPUBLIC COMMANDO TEAM\""
       },
       {
         "section": "Credits",
@@ -816,9 +820,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[6]",
-        "type": "string",
-        "entry": "credits.Credits/6",
-        "printf": []
+        "type": "literal",
+        "value": "\"EXECUTIVE PRODUCER\""
       },
       {
         "section": "Credits",
@@ -829,9 +832,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[8]",
-        "type": "string",
-        "entry": "credits.Credits/8",
-        "printf": []
+        "type": "literal",
+        "value": "\"DARON STINNETT\""
       },
       {
         "section": "Credits",
@@ -848,9 +850,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[11]",
-        "type": "string",
-        "entry": "credits.Credits/11",
-        "printf": []
+        "type": "literal",
+        "value": "\"DIRECTOR\""
       },
       {
         "section": "Credits",
@@ -861,9 +862,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[13]",
-        "type": "string",
-        "entry": "credits.Credits/13",
-        "printf": []
+        "type": "literal",
+        "value": "\"TIM LONGO\""
       },
       {
         "section": "Credits",
@@ -880,9 +880,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[16]",
-        "type": "string",
-        "entry": "credits.Credits/16",
-        "printf": []
+        "type": "literal",
+        "value": "\"PRODUCERS\""
       },
       {
         "section": "Credits",
@@ -893,16 +892,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[18]",
-        "type": "string",
-        "entry": "credits.Credits/18",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS WILLIAMS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[19]",
-        "type": "string",
-        "entry": "credits.Credits/19",
-        "printf": []
+        "type": "literal",
+        "value": "\"STEVE MATULAC\""
       },
       {
         "section": "Credits",
@@ -919,9 +916,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[22]",
-        "type": "string",
-        "entry": "credits.Credits/22",
-        "printf": []
+        "type": "literal",
+        "value": "\"ASSOCIATE PRODUCER\""
       },
       {
         "section": "Credits",
@@ -932,9 +928,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[24]",
-        "type": "string",
-        "entry": "credits.Credits/24",
-        "printf": []
+        "type": "literal",
+        "value": "\"MATT FILLBRANDT\""
       },
       {
         "section": "Credits",
@@ -951,9 +946,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[27]",
-        "type": "string",
-        "entry": "credits.Credits/27",
-        "printf": []
+        "type": "literal",
+        "value": "\"PRODUCTION ASSISTANTS\""
       },
       {
         "section": "Credits",
@@ -964,16 +958,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[29]",
-        "type": "string",
-        "entry": "credits.Credits/29",
-        "printf": []
+        "type": "literal",
+        "value": "\"ALISON GAISER\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[30]",
-        "type": "string",
-        "entry": "credits.Credits/30",
-        "printf": []
+        "type": "literal",
+        "value": "\"MOIRA KNOWLAN\""
       },
       {
         "section": "Credits",
@@ -990,9 +982,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[33]",
-        "type": "string",
-        "entry": "credits.Credits/33",
-        "printf": []
+        "type": "literal",
+        "value": "\"ENGINEERING\""
       },
       {
         "section": "Credits",
@@ -1003,86 +994,74 @@
       {
         "section": "Credits",
         "key": "CreditsLine[35]",
-        "type": "string",
-        "entry": "credits.Credits/35",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRETT J. DOUVILLE, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[36]",
-        "type": "string",
-        "entry": "credits.Credits/36",
-        "printf": []
+        "type": "literal",
+        "value": "\"SCOTT PETER, ENGINE LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[37]",
-        "type": "string",
-        "entry": "credits.Credits/37",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRISTIAN LASSONDE, MULTIPLAYER LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[38]",
-        "type": "string",
-        "entry": "credits.Credits/38",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS GRIPEOS, ENGINE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[39]",
-        "type": "string",
-        "entry": "credits.Credits/39",
-        "printf": []
+        "type": "literal",
+        "value": "\"GEORGE RUOF\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[40]",
-        "type": "string",
-        "entry": "credits.Credits/40",
-        "printf": []
+        "type": "literal",
+        "value": "\"JENNY HUANG, WEAPONS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[41]",
-        "type": "string",
-        "entry": "credits.Credits/41",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN A. HANCOCK, CORE AI & SQUAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[42]",
-        "type": "string",
-        "entry": "credits.Credits/42",
-        "printf": []
+        "type": "literal",
+        "value": "\"MICHELLE HINNERS, SENIOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[43]",
-        "type": "string",
-        "entry": "credits.Credits/43",
-        "printf": []
+        "type": "literal",
+        "value": "\"NATHAN MARTZ, PHYSICS & ENEMY AI\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[44]",
-        "type": "string",
-        "entry": "credits.Credits/44",
-        "printf": []
+        "type": "literal",
+        "value": "\"RICHARD SUN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[45]",
-        "type": "string",
-        "entry": "credits.Credits/45",
-        "printf": []
+        "type": "literal",
+        "value": "\"STEVE DYKES\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[46]",
-        "type": "string",
-        "entry": "credits.Credits/46",
-        "printf": []
+        "type": "literal",
+        "value": "\"TIM RAMSAY, SENIOR/GRAPHICS\""
       },
       {
         "section": "Credits",
@@ -1099,9 +1078,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[49]",
-        "type": "string",
-        "entry": "credits.Credits/49",
-        "printf": []
+        "type": "literal",
+        "value": "\"LEVEL DESIGN\""
       },
       {
         "section": "Credits",
@@ -1112,72 +1090,62 @@
       {
         "section": "Credits",
         "key": "CreditsLine[51]",
-        "type": "string",
-        "entry": "credits.Credits/51",
-        "printf": []
+        "type": "literal",
+        "value": "\"KEVIN SCHMITT, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[52]",
-        "type": "string",
-        "entry": "credits.Credits/52",
-        "printf": []
+        "type": "literal",
+        "value": "\"GREG LAND, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[53]",
-        "type": "string",
-        "entry": "credits.Credits/53",
-        "printf": []
+        "type": "literal",
+        "value": "\"GREG SARJEANT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[54]",
-        "type": "string",
-        "entry": "credits.Credits/54",
-        "printf": []
+        "type": "literal",
+        "value": "\"HARLEY BALDWIN, SENIOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[55]",
-        "type": "string",
-        "entry": "credits.Credits/55",
-        "printf": []
+        "type": "literal",
+        "value": "\"JEFFREY SONDIN-KUNG, BALANCING\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[56]",
-        "type": "string",
-        "entry": "credits.Credits/56",
-        "printf": []
+        "type": "literal",
+        "value": "\"JESSE MOORE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[57]",
-        "type": "string",
-        "entry": "credits.Credits/57",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN DRAKE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[58]",
-        "type": "string",
-        "entry": "credits.Credits/58",
-        "printf": []
+        "type": "literal",
+        "value": "\"JUNE PARK\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[59]",
-        "type": "string",
-        "entry": "credits.Credits/59",
-        "printf": []
+        "type": "literal",
+        "value": "\"REED KNIGHT, SENIOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[60]",
-        "type": "string",
-        "entry": "credits.Credits/60",
-        "printf": []
+        "type": "literal",
+        "value": "\"TROY MASHBURN, SENIOR\""
       },
       {
         "section": "Credits",
@@ -1194,9 +1162,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[63]",
-        "type": "string",
-        "entry": "credits.Credits/63",
-        "printf": []
+        "type": "literal",
+        "value": "\"MULTIPLAYER LEVEL TEAM\""
       },
       {
         "section": "Credits",
@@ -1207,23 +1174,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[65]",
-        "type": "string",
-        "entry": "credits.Credits/65",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRENTON CORNS, ART\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[66]",
-        "type": "string",
-        "entry": "credits.Credits/66",
-        "printf": []
+        "type": "literal",
+        "value": "\"MATT MCMANUS, DESIGN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[67]",
-        "type": "string",
-        "entry": "credits.Credits/67",
-        "printf": []
+        "type": "literal",
+        "value": "\"SHAWN SCHMITT, ART\""
       },
       {
         "section": "Credits",
@@ -1240,9 +1204,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[70]",
-        "type": "string",
-        "entry": "credits.Credits/70",
-        "printf": []
+        "type": "literal",
+        "value": "\"ART\""
       },
       {
         "section": "Credits",
@@ -1253,58 +1216,50 @@
       {
         "section": "Credits",
         "key": "CreditsLine[72]",
-        "type": "string",
-        "entry": "credits.Credits/72",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS WILLIAMS, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[73]",
-        "type": "string",
-        "entry": "credits.Credits/73",
-        "printf": []
+        "type": "literal",
+        "value": "\"FRANCIS HSU\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[74]",
-        "type": "string",
-        "entry": "credits.Credits/74",
-        "printf": []
+        "type": "literal",
+        "value": "\"GREG KNIGHT, SENIOR CONCEPT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[75]",
-        "type": "string",
-        "entry": "credits.Credits/75",
-        "printf": []
+        "type": "literal",
+        "value": "\"JAMES ZHANG, CONCEPT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[76]",
-        "type": "string",
-        "entry": "credits.Credits/76",
-        "printf": []
+        "type": "literal",
+        "value": "\"MICHAEL \"MOOSE\" MUSSELLAM, FX\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[77]",
-        "type": "string",
-        "entry": "credits.Credits/77",
-        "printf": []
+        "type": "literal",
+        "value": "\"PAUL MURPHY, SENIOR CHARACTER\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[78]",
-        "type": "string",
-        "entry": "credits.Credits/78",
-        "printf": []
+        "type": "literal",
+        "value": "\"PAUL PIERCE, SENIOR UI\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[79]",
-        "type": "string",
-        "entry": "credits.Credits/79",
-        "printf": []
+        "type": "literal",
+        "value": "\"THITIKUN \"EDDY\" VORACHART\""
       },
       {
         "section": "Credits",
@@ -1321,9 +1276,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[82]",
-        "type": "string",
-        "entry": "credits.Credits/82",
-        "printf": []
+        "type": "literal",
+        "value": "\"TECHNICAL ART\""
       },
       {
         "section": "Credits",
@@ -1334,23 +1288,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[84]",
-        "type": "string",
-        "entry": "credits.Credits/84",
-        "printf": []
+        "type": "literal",
+        "value": "\"JEREMIE TALBOT, CHARACTER LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[85]",
-        "type": "string",
-        "entry": "credits.Credits/85",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADAM PIPER, TECHNICAL DIRECTOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[86]",
-        "type": "string",
-        "entry": "credits.Credits/86",
-        "printf": []
+        "type": "literal",
+        "value": "\"NICHOLAS HARTER\""
       },
       {
         "section": "Credits",
@@ -1367,9 +1318,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[89]",
-        "type": "string",
-        "entry": "credits.Credits/89",
-        "printf": []
+        "type": "literal",
+        "value": "\"ANIMATION\""
       },
       {
         "section": "Credits",
@@ -1380,37 +1330,32 @@
       {
         "section": "Credits",
         "key": "CreditsLine[91]",
-        "type": "string",
-        "entry": "credits.Credits/91",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID BOGAN, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[92]",
-        "type": "string",
-        "entry": "credits.Credits/92",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRETT SCHULZ\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[93]",
-        "type": "string",
-        "entry": "shared.enjp/100008",
-        "printf": []
+        "type": "literal",
+        "value": "\"LOREN COX\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[94]",
-        "type": "string",
-        "entry": "credits.Credits/94",
-        "printf": []
+        "type": "literal",
+        "value": "\"REBECCA PEREZ\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[95]",
-        "type": "string",
-        "entry": "credits.Credits/95",
-        "printf": []
+        "type": "literal",
+        "value": "\"RYAN HOOD, SENIOR\""
       },
       {
         "section": "Credits",
@@ -1427,9 +1372,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[98]",
-        "type": "string",
-        "entry": "credits.Credits/98",
-        "printf": []
+        "type": "literal",
+        "value": "\"ENVIRONMENT ART\""
       },
       {
         "section": "Credits",
@@ -1440,51 +1384,44 @@
       {
         "section": "Credits",
         "key": "CreditsLine[100]",
-        "type": "string",
-        "entry": "credits.Credits/100",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID DAWSON, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[101]",
-        "type": "string",
-        "entry": "credits.Credits/101",
-        "printf": []
+        "type": "literal",
+        "value": "\"CARL WATTENBERG\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[102]",
-        "type": "string",
-        "entry": "credits.Credits/102",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAN COLON\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[103]",
-        "type": "string",
-        "entry": "credits.Credits/103",
-        "printf": []
+        "type": "literal",
+        "value": "\"JASON ETHINGTON\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[104]",
-        "type": "string",
-        "entry": "credits.Credits/104",
-        "printf": []
+        "type": "literal",
+        "value": "\"MORGAN HASTINGS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[105]",
-        "type": "string",
-        "entry": "credits.Credits/105",
-        "printf": []
+        "type": "literal",
+        "value": "\"PATRICK SIRK, SENIOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[106]",
-        "type": "string",
-        "entry": "credits.Credits/106",
-        "printf": []
+        "type": "literal",
+        "value": "\"THAO LE\""
       },
       {
         "section": "Credits",
@@ -1501,9 +1438,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[109]",
-        "type": "string",
-        "entry": "credits.Credits/109",
-        "printf": []
+        "type": "literal",
+        "value": "\"IN-GAME BRIEFINGS\""
       },
       {
         "section": "Credits",
@@ -1514,30 +1450,26 @@
       {
         "section": "Credits",
         "key": "CreditsLine[111]",
-        "type": "string",
-        "entry": "credits.Credits/111",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADAM PIPER\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[112]",
-        "type": "string",
-        "entry": "shared.enjp/100008",
-        "printf": []
+        "type": "literal",
+        "value": "\"LOREN COX\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[113]",
-        "type": "string",
-        "entry": "credits.Credits/113",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS VOY\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[114]",
-        "type": "string",
-        "entry": "credits.Credits/114",
-        "printf": []
+        "type": "literal",
+        "value": "\"RIC LIU\""
       },
       {
         "section": "Credits",
@@ -1554,9 +1486,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[117]",
-        "type": "string",
-        "entry": "credits.Credits/117",
-        "printf": []
+        "type": "literal",
+        "value": "\"SOUND DESIGN\""
       },
       {
         "section": "Credits",
@@ -1567,23 +1498,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[119]",
-        "type": "string",
-        "entry": "credits.Credits/119",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID W. COLLINS, LEAD/AUDIO LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[120]",
-        "type": "string",
-        "entry": "credits.Credits/120",
-        "printf": []
+        "type": "literal",
+        "value": "\"ANDREW CHENEY\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[121]",
-        "type": "string",
-        "entry": "credits.Credits/121",
-        "printf": []
+        "type": "literal",
+        "value": "\"JULIAN KWASNESKI\""
       },
       {
         "section": "Credits",
@@ -1600,9 +1528,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[124]",
-        "type": "string",
-        "entry": "credits.Credits/124",
-        "printf": []
+        "type": "literal",
+        "value": "\"ORIGINAL STAR WARS SOUND EFFECTS\""
       },
       {
         "section": "Credits",
@@ -1613,9 +1540,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[126]",
-        "type": "string",
-        "entry": "credits.Credits/126",
-        "printf": []
+        "type": "literal",
+        "value": "\"BEN BURTT\""
       },
       {
         "section": "Credits",
@@ -1632,16 +1558,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[129]",
-        "type": "string",
-        "entry": "credits.Credits/129",
-        "printf": []
+        "type": "literal",
+        "value": "\"MUSIC COMPOSITION/DESIGN/CHORAL\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[130]",
-        "type": "string",
-        "entry": "credits.Credits/130",
-        "printf": []
+        "type": "literal",
+        "value": "\"TEXT\""
       },
       {
         "section": "Credits",
@@ -1652,9 +1576,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[132]",
-        "type": "string",
-        "entry": "credits.Credits/132",
-        "printf": []
+        "type": "literal",
+        "value": "\"JESSE HARLIN\""
       },
       {
         "section": "Credits",
@@ -1671,9 +1594,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[135]",
-        "type": "string",
-        "entry": "credits.Credits/135",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADDITIONAL MUSIC EDITING\""
       },
       {
         "section": "Credits",
@@ -1684,30 +1606,26 @@
       {
         "section": "Credits",
         "key": "CreditsLine[137]",
-        "type": "string",
-        "entry": "credits.Credits/137",
-        "printf": []
+        "type": "literal",
+        "value": "\"JIM DIAZ\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[138]",
-        "type": "string",
-        "entry": "credits.Credits/138",
-        "printf": []
+        "type": "literal",
+        "value": "\"JARED EMERSON-JOHNSON\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[139]",
-        "type": "string",
-        "entry": "credits.Credits/139",
-        "printf": []
+        "type": "literal",
+        "value": "\"STAR WARS MUSIC COMPOSED BY\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[140]",
-        "type": "string",
-        "entry": "credits.Credits/140",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN WILLIAMS.\""
       },
       {
         "section": "Credits",
@@ -1719,58 +1637,50 @@
       {
         "section": "Credits",
         "key": "CreditsLine[142]",
-        "type": "string",
-        "entry": "credits.Credits/142",
-        "printf": []
+        "type": "literal",
+        "value": "\"ALL RIGHTS RESERVED.\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[143]",
-        "type": "string",
-        "entry": "credits.Credits/143",
-        "printf": []
+        "type": "literal",
+        "value": "\"USED UNDER AUTHORIZATION.\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[144]",
-        "type": "string",
-        "entry": "credits.Credits/144",
-        "printf": []
+        "type": "literal",
+        "value": "\"WITH  PUBLISHED BY BANTHA MUSIC\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[145]",
-        "type": "string",
-        "entry": "credits.Credits/145",
-        "printf": []
+        "type": "literal",
+        "value": "\"(BMI).  ADMINISTERED AND/OR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[146]",
-        "type": "string",
-        "entry": "credits.Credits/146",
-        "printf": []
+        "type": "literal",
+        "value": "\"CO-PUBLISHED WITH WARNER-TAMERLANE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[147]",
-        "type": "string",
-        "entry": "credits.Credits/147",
-        "printf": []
+        "type": "literal",
+        "value": "\"MUSIC PUBLISHING CORP.\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[148]",
-        "type": "string",
-        "entry": "credits.Credits/148",
-        "printf": []
+        "type": "literal",
+        "value": "\"FOLEY RECORDED AT SKYWALKER SOUND,\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[149]",
-        "type": "string",
-        "entry": "credits.Credits/149",
-        "printf": []
+        "type": "literal",
+        "value": "\"MARIN COUNTY, CA\""
       },
       {
         "section": "Credits",
@@ -1787,9 +1697,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[152]",
-        "type": "string",
-        "entry": "credits.Credits/152",
-        "printf": []
+        "type": "literal",
+        "value": "\"FOLEY MIXER\""
       },
       {
         "section": "Credits",
@@ -1800,9 +1709,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[154]",
-        "type": "string",
-        "entry": "credits.Credits/154",
-        "printf": []
+        "type": "literal",
+        "value": "\"FRANK RINELLA\""
       },
       {
         "section": "Credits",
@@ -1819,9 +1727,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[157]",
-        "type": "string",
-        "entry": "credits.Credits/157",
-        "printf": []
+        "type": "literal",
+        "value": "\"FOLEY RECORDIST\""
       },
       {
         "section": "Credits",
@@ -1832,9 +1739,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[159]",
-        "type": "string",
-        "entry": "credits.Credits/159",
-        "printf": []
+        "type": "literal",
+        "value": "\"GEORGE PETERSON\""
       },
       {
         "section": "Credits",
@@ -1851,9 +1757,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[162]",
-        "type": "string",
-        "entry": "credits.Credits/162",
-        "printf": []
+        "type": "literal",
+        "value": "\"FOLEY ARTISTS\""
       },
       {
         "section": "Credits",
@@ -1864,16 +1769,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[164]",
-        "type": "string",
-        "entry": "credits.Credits/164",
-        "printf": []
+        "type": "literal",
+        "value": "\"JANA VANCE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[165]",
-        "type": "string",
-        "entry": "credits.Credits/165",
-        "printf": []
+        "type": "literal",
+        "value": "\"DHARMA CLEMENT\""
       },
       {
         "section": "Credits",
@@ -1890,9 +1793,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[168]",
-        "type": "string",
-        "entry": "credits.Credits/168",
-        "printf": []
+        "type": "literal",
+        "value": "\"AUDIO DEPARTMENT MANAGERS\""
       },
       {
         "section": "Credits",
@@ -1903,16 +1805,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[170]",
-        "type": "string",
-        "entry": "credits.Credits/170",
-        "printf": []
+        "type": "literal",
+        "value": "\"DARRAGH O'FARRELL\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[171]",
-        "type": "string",
-        "entry": "credits.Credits/171",
-        "printf": []
+        "type": "literal",
+        "value": "\"JEFF KLIMENT\""
       },
       {
         "section": "Credits",
@@ -1929,9 +1829,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[174]",
-        "type": "string",
-        "entry": "credits.Credits/174",
-        "printf": []
+        "type": "literal",
+        "value": "\"VOICE AND INTERNATIONAL COORDINATOR\""
       },
       {
         "section": "Credits",
@@ -1942,9 +1841,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[176]",
-        "type": "string",
-        "entry": "credits.Credits/176",
-        "printf": []
+        "type": "literal",
+        "value": "\"JENNIFER SLOAN\""
       },
       {
         "section": "Credits",
@@ -1961,9 +1859,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[179]",
-        "type": "string",
-        "entry": "credits.Credits/179",
-        "printf": []
+        "type": "literal",
+        "value": "\"VOICE DIRECTOR\""
       },
       {
         "section": "Credits",
@@ -1974,9 +1871,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[181]",
-        "type": "string",
-        "entry": "shared.enjp/100009",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID W. COLLINS\""
       },
       {
         "section": "Credits",
@@ -1993,9 +1889,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[184]",
-        "type": "string",
-        "entry": "credits.Credits/184",
-        "printf": []
+        "type": "literal",
+        "value": "\"VOICE EDITING\""
       },
       {
         "section": "Credits",
@@ -2006,23 +1901,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[186]",
-        "type": "string",
-        "entry": "credits.Credits/186",
-        "printf": []
+        "type": "literal",
+        "value": "\"HARRISON DEUTSCH, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[187]",
-        "type": "string",
-        "entry": "credits.Credits/187",
-        "printf": []
+        "type": "literal",
+        "value": "\"CINDY WONG\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[188]",
-        "type": "string",
-        "entry": "credits.Credits/188",
-        "printf": []
+        "type": "literal",
+        "value": "\"G.W. CHILDS\""
       },
       {
         "section": "Credits",
@@ -2039,9 +1931,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[191]",
-        "type": "string",
-        "entry": "credits.Credits/191",
-        "printf": []
+        "type": "literal",
+        "value": "\"CAST\""
       },
       {
         "section": "Credits",
@@ -2052,16 +1943,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[193]",
-        "type": "string",
-        "entry": "credits.Credits/193",
-        "printf": []
+        "type": "literal",
+        "value": "\"TEMUERA MORRISON\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[194]",
-        "type": "string",
-        "entry": "credits.Credits/194",
-        "printf": []
+        "type": "literal",
+        "value": "\"DELTA 38\""
       },
       {
         "section": "Credits",
@@ -2072,23 +1961,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[196]",
-        "type": "string",
-        "entry": "credits.Credits/196",
-        "printf": []
+        "type": "literal",
+        "value": "\"ANDREW CHAIKIN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[197]",
-        "type": "string",
-        "entry": "credits.Credits/197",
-        "printf": []
+        "type": "literal",
+        "value": "\"CLONE ADVISOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[198]",
-        "type": "string",
-        "entry": "credits.Credits/198",
-        "printf": []
+        "type": "literal",
+        "value": "\"DELTA 40\""
       },
       {
         "section": "Credits",
@@ -2099,16 +1985,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[200]",
-        "type": "string",
-        "entry": "credits.Credits/200",
-        "printf": []
+        "type": "literal",
+        "value": "\"RAPHAEL SBARGE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[201]",
-        "type": "string",
-        "entry": "credits.Credits/201",
-        "printf": []
+        "type": "literal",
+        "value": "\"DELTA 62\""
       },
       {
         "section": "Credits",
@@ -2119,16 +2003,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[203]",
-        "type": "string",
-        "entry": "credits.Credits/203",
-        "printf": []
+        "type": "literal",
+        "value": "\"JONATHAN DAVID COOK\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[204]",
-        "type": "string",
-        "entry": "credits.Credits/204",
-        "printf": []
+        "type": "literal",
+        "value": "\"DELTA 07\""
       },
       {
         "section": "Credits",
@@ -2139,23 +2021,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[206]",
-        "type": "string",
-        "entry": "credits.Credits/206",
-        "printf": []
+        "type": "literal",
+        "value": "\"RENA OWEN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[207]",
-        "type": "string",
-        "entry": "shared.enjp/100010",
-        "printf": []
+        "type": "literal",
+        "value": "\"TAUN WE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[208]",
-        "type": "string",
-        "entry": "credits.Credits/208",
-        "printf": []
+        "type": "literal",
+        "value": "\"RAS SHIP COMPUTER\""
       },
       {
         "section": "Credits",
@@ -2166,44 +2045,38 @@
       {
         "section": "Credits",
         "key": "CreditsLine[210]",
-        "type": "string",
-        "entry": "shared.enjp/100009",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID W. COLLINS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[211]",
-        "type": "string",
-        "entry": "credits.Credits/211",
-        "printf": []
+        "type": "literal",
+        "value": "\"TRANDOSHANS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[212]",
-        "type": "string",
-        "entry": "credits.Credits/212",
-        "printf": []
+        "type": "literal",
+        "value": "\"TRANDO MULTI-PLAYER ANNOUNCER\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[213]",
-        "type": "string",
-        "entry": "credits.Credits/213",
-        "printf": []
+        "type": "literal",
+        "value": "\"CLONE TROOPER SERGEANT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[214]",
-        "type": "string",
-        "entry": "credits.Credits/214",
-        "printf": []
+        "type": "literal",
+        "value": "\"REPUBLIC VOICES\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[215]",
-        "type": "string",
-        "entry": "credits.Credits/215",
-        "printf": []
+        "type": "literal",
+        "value": "\"RADIO CHATTER\""
       },
       {
         "section": "Credits",
@@ -2214,37 +2087,32 @@
       {
         "section": "Credits",
         "key": "CreditsLine[217]",
-        "type": "string",
-        "entry": "credits.Credits/217",
-        "printf": []
+        "type": "literal",
+        "value": "\"ROGER JACKSON\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[218]",
-        "type": "string",
-        "entry": "credits.Credits/218",
-        "printf": []
+        "type": "literal",
+        "value": "\"AUTOMATED SHIP VOICE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[219]",
-        "type": "string",
-        "entry": "credits.Credits/219",
-        "printf": []
+        "type": "literal",
+        "value": "\"CLONE TROOPERS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[220]",
-        "type": "string",
-        "entry": "credits.Credits/220",
-        "printf": []
+        "type": "literal",
+        "value": "\"CLONE TROOPER LIEUTENANT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[221]",
-        "type": "string",
-        "entry": "credits.Credits/221",
-        "printf": []
+        "type": "literal",
+        "value": "\"GUNSHIP PILOT\""
       },
       {
         "section": "Credits",
@@ -2255,30 +2123,26 @@
       {
         "section": "Credits",
         "key": "CreditsLine[223]",
-        "type": "string",
-        "entry": "credits.Credits/223",
-        "printf": []
+        "type": "literal",
+        "value": "\"TOM KANE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[224]",
-        "type": "string",
-        "entry": "credits.Credits/224",
-        "printf": []
+        "type": "literal",
+        "value": "\"YODA\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[225]",
-        "type": "string",
-        "entry": "credits.Credits/225",
-        "printf": []
+        "type": "literal",
+        "value": "\"CAPTAIN TALBOT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[226]",
-        "type": "string",
-        "entry": "credits.Credits/226",
-        "printf": []
+        "type": "literal",
+        "value": "\"TRANDOSHAN SLAVER #2\""
       },
       {
         "section": "Credits",
@@ -2289,23 +2153,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[228]",
-        "type": "string",
-        "entry": "credits.Credits/228",
-        "printf": []
+        "type": "literal",
+        "value": "\"CLINT YOUNG\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[229]",
-        "type": "string",
-        "entry": "credits.Credits/229",
-        "printf": []
+        "type": "literal",
+        "value": "\"BATTLE DROID\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[230]",
-        "type": "string",
-        "entry": "credits.Credits/230",
-        "printf": []
+        "type": "literal",
+        "value": "\"SUPER BATTLE DROID\""
       },
       {
         "section": "Credits",
@@ -2328,9 +2189,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[234]",
-        "type": "string",
-        "entry": "credits.Credits/234",
-        "printf": []
+        "type": "literal",
+        "value": "\"WRITERS\""
       },
       {
         "section": "Credits",
@@ -2341,30 +2201,26 @@
       {
         "section": "Credits",
         "key": "CreditsLine[236]",
-        "type": "string",
-        "entry": "credits.Credits/236",
-        "printf": []
+        "type": "literal",
+        "value": "\"RYAN KAUFMAN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[237]",
-        "type": "string",
-        "entry": "credits.Credits/237",
-        "printf": []
+        "type": "literal",
+        "value": "\"MICHAEL STEMMLE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[238]",
-        "type": "string",
-        "entry": "credits.Credits/238",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN A. HANCOCK\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[239]",
-        "type": "string",
-        "entry": "credits.Credits/239",
-        "printf": []
+        "type": "literal",
+        "value": "\"JUSTIN LAMBROS\""
       },
       {
         "section": "Credits",
@@ -2381,9 +2237,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[242]",
-        "type": "string",
-        "entry": "credits.Credits/242",
-        "printf": []
+        "type": "literal",
+        "value": "\"BUILD MASTER\""
       },
       {
         "section": "Credits",
@@ -2394,9 +2249,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[244]",
-        "type": "string",
-        "entry": "credits.Credits/244",
-        "printf": []
+        "type": "literal",
+        "value": "\"ORION TILLER\""
       },
       {
         "section": "Credits",
@@ -2413,9 +2267,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[247]",
-        "type": "string",
-        "entry": "credits.Credits/247",
-        "printf": []
+        "type": "literal",
+        "value": "\"ENGINEERING TECHNICAL DIRECTORS\""
       },
       {
         "section": "Credits",
@@ -2426,16 +2279,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[249]",
-        "type": "string",
-        "entry": "credits.Credits/249",
-        "printf": []
+        "type": "literal",
+        "value": "\"MIKE LAMPELL\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[250]",
-        "type": "string",
-        "entry": "credits.Credits/250",
-        "printf": []
+        "type": "literal",
+        "value": "\"NICK PAVIS\""
       },
       {
         "section": "Credits",
@@ -2452,9 +2303,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[253]",
-        "type": "string",
-        "entry": "credits.Credits/253",
-        "printf": []
+        "type": "literal",
+        "value": "\"LAUNCHER/INSTALLER ENGINEERING\""
       },
       {
         "section": "Credits",
@@ -2465,23 +2315,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[255]",
-        "type": "string",
-        "entry": "credits.Credits/255",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHARLIE W. SMITH\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[256]",
-        "type": "string",
-        "entry": "credits.Credits/256",
-        "printf": []
+        "type": "literal",
+        "value": "\"DENNIS CROWLEY\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[257]",
-        "type": "string",
-        "entry": "credits.Credits/257",
-        "printf": []
+        "type": "literal",
+        "value": "\"JONATHAN WILLIAMS\""
       },
       {
         "section": "Credits",
@@ -2498,9 +2345,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[260]",
-        "type": "string",
-        "entry": "credits.Credits/260",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADDITIONAL ENGINEERING\""
       },
       {
         "section": "Credits",
@@ -2511,16 +2357,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[262]",
-        "type": "string",
-        "entry": "credits.Credits/262",
-        "printf": []
+        "type": "literal",
+        "value": "\"RICHARD WEEKS, SENIOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[263]",
-        "type": "string",
-        "entry": "credits.Credits/263",
-        "printf": []
+        "type": "literal",
+        "value": "\"MIKE MALAKHOV\""
       },
       {
         "section": "Credits",
@@ -2537,9 +2381,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[266]",
-        "type": "string",
-        "entry": "credits.Credits/266",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADDITIONAL LEVEL DESIGN\""
       },
       {
         "section": "Credits",
@@ -2550,23 +2393,20 @@
       {
         "section": "Credits",
         "key": "CreditsLine[268]",
-        "type": "string",
-        "entry": "credits.Credits/268",
-        "printf": []
+        "type": "literal",
+        "value": "\"GEOFF JONES\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[269]",
-        "type": "string",
-        "entry": "credits.Credits/269",
-        "printf": []
+        "type": "literal",
+        "value": "\"JEREMY WAR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[270]",
-        "type": "string",
-        "entry": "credits.Credits/270",
-        "printf": []
+        "type": "literal",
+        "value": "\"MICHAEL LICHT\""
       },
       {
         "section": "Credits",
@@ -2583,9 +2423,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[273]",
-        "type": "string",
-        "entry": "credits.Credits/273",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADDITIONAL ART\""
       },
       {
         "section": "Credits",
@@ -2596,44 +2435,38 @@
       {
         "section": "Credits",
         "key": "CreditsLine[275]",
-        "type": "string",
-        "entry": "credits.Credits/275",
-        "printf": []
+        "type": "literal",
+        "value": "\"JIM RICE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[276]",
-        "type": "string",
-        "entry": "credits.Credits/276",
-        "printf": []
+        "type": "literal",
+        "value": "\"KEVIN EVANS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[277]",
-        "type": "string",
-        "entry": "credits.Credits/277",
-        "printf": []
+        "type": "literal",
+        "value": "\"MARCIA THOMAS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[278]",
-        "type": "string",
-        "entry": "credits.Credits/278",
-        "printf": []
+        "type": "literal",
+        "value": "\"MICHAEL COTTAM\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[279]",
-        "type": "string",
-        "entry": "credits.Credits/279",
-        "printf": []
+        "type": "literal",
+        "value": "\"RYAN WIEBER\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[280]",
-        "type": "string",
-        "entry": "credits.Credits/280",
-        "printf": []
+        "type": "literal",
+        "value": "\"YURIK RIEGEL\""
       },
       {
         "section": "Credits",
@@ -2650,9 +2483,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[283]",
-        "type": "string",
-        "entry": "credits.Credits/283",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADDITIONAL VOICE EDITING\""
       },
       {
         "section": "Credits",
@@ -2663,16 +2495,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[285]",
-        "type": "string",
-        "entry": "credits.Credits/285",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRIAN CHUMNEY\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[286]",
-        "type": "string",
-        "entry": "credits.Credits/286",
-        "printf": []
+        "type": "literal",
+        "value": "\"MAC SMITH\""
       },
       {
         "section": "Credits",
@@ -2689,9 +2519,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[289]",
-        "type": "string",
-        "entry": "credits.Credits/289",
-        "printf": []
+        "type": "literal",
+        "value": "\"QA TESTERS\""
       },
       {
         "section": "Credits",
@@ -2702,156 +2531,134 @@
       {
         "section": "Credits",
         "key": "CreditsLine[291]",
-        "type": "string",
-        "entry": "credits.Credits/291",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHNNY SZARY, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[292]",
-        "type": "string",
-        "entry": "credits.Credits/292",
-        "printf": []
+        "type": "literal",
+        "value": "\"MARK \"MANDARK\" MONTUYA, PC ASSISTANT LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[293]",
-        "type": "string",
-        "entry": "credits.Credits/293",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRANDON \"JABBA\" HUTT, XBOX ASSISTANT LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[294]",
-        "type": "string",
-        "entry": "credits.Credits/294",
-        "printf": []
+        "type": "literal",
+        "value": "\"BERTRAND ESTRELLADO\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[295]",
-        "type": "string",
-        "entry": "credits.Credits/295",
-        "printf": []
+        "type": "literal",
+        "value": "\"CATHERINE SHEU\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[296]",
-        "type": "string",
-        "entry": "credits.Credits/296",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS \"SYBIN\" THOMAS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[297]",
-        "type": "string",
-        "entry": "credits.Credits/297",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS CHAN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[298]",
-        "type": "string",
-        "entry": "credits.Credits/298",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID ONG\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[299]",
-        "type": "string",
-        "entry": "credits.Credits/299",
-        "printf": []
+        "type": "literal",
+        "value": "\"DIARMUID \"D-MAN\" BOSSE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[300]",
-        "type": "string",
-        "entry": "credits.Credits/300",
-        "printf": []
+        "type": "literal",
+        "value": "\"ERIC \"RAMMAGE\" BRUMMEL\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[301]",
-        "type": "string",
-        "entry": "credits.Credits/301",
-        "printf": []
+        "type": "literal",
+        "value": "\"JEFF SANDERS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[302]",
-        "type": "string",
-        "entry": "credits.Credits/302",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN \"SIX-TOUHY\" TUOHY\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[303]",
-        "type": "string",
-        "entry": "credits.Credits/303",
-        "printf": []
+        "type": "literal",
+        "value": "\"JONNY \"DUMPTRUCK\" RICE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[304]",
-        "type": "string",
-        "entry": "credits.Credits/304",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOSH CABARRUS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[305]",
-        "type": "string",
-        "entry": "credits.Credits/305",
-        "printf": []
+        "type": "literal",
+        "value": "\"JULI \"AGENT STEPCHILD\" LOGEMANN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[306]",
-        "type": "string",
-        "entry": "credits.Credits/306",
-        "printf": []
+        "type": "literal",
+        "value": "\"MICHELLE MARTINEZ\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[307]",
-        "type": "string",
-        "entry": "credits.Credits/307",
-        "printf": []
+        "type": "literal",
+        "value": "\"MIKE \"EMDUB\" WARD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[308]",
-        "type": "string",
-        "entry": "credits.Credits/308",
-        "printf": []
+        "type": "literal",
+        "value": "\"ORION \"MR. SALTY\" TILLER\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[309]",
-        "type": "string",
-        "entry": "credits.Credits/309",
-        "printf": []
+        "type": "literal",
+        "value": "\"RAY VASQUEZ\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[310]",
-        "type": "string",
-        "entry": "credits.Credits/310",
-        "printf": []
+        "type": "literal",
+        "value": "\"ROGER \"MORGOR\" ROMERO\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[311]",
-        "type": "string",
-        "entry": "credits.Credits/311",
-        "printf": []
+        "type": "literal",
+        "value": "\"RYAN ADZA\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[312]",
-        "type": "string",
-        "entry": "credits.Credits/312",
-        "printf": []
+        "type": "literal",
+        "value": "\"SERGE \"SIBERIAN\" TCHERNIAVSKII\""
       },
       {
         "section": "Credits",
@@ -2868,16 +2675,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[315]",
-        "type": "string",
-        "entry": "credits.Credits/315",
-        "printf": []
+        "type": "literal",
+        "value": "\"QA COMPATIBILITY SUPERVISOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[316]",
-        "type": "string",
-        "entry": "credits.Credits/316",
-        "printf": []
+        "type": "literal",
+        "value": "\"AND LEAD TECHNICAL WRITER\""
       },
       {
         "section": "Credits",
@@ -2888,9 +2693,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[318]",
-        "type": "string",
-        "entry": "credits.Credits/318",
-        "printf": []
+        "type": "literal",
+        "value": "\"LYNN TAYLOR\""
       },
       {
         "section": "Credits",
@@ -2907,9 +2711,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[321]",
-        "type": "string",
-        "entry": "credits.Credits/321",
-        "printf": []
+        "type": "literal",
+        "value": "\"QA NETWORK COMPATIBILITY\""
       },
       {
         "section": "Credits",
@@ -2920,16 +2723,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[323]",
-        "type": "string",
-        "entry": "credits.Credits/323",
-        "printf": []
+        "type": "literal",
+        "value": "\"DARRYL \"BAREN\" COBB, QA LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[324]",
-        "type": "string",
-        "entry": "credits.Credits/324",
-        "printf": []
+        "type": "literal",
+        "value": "\"ISAIAH \"FLY-ZAYAH\" WEBB, QA ASSISTANT LEAD\""
       },
       {
         "section": "Credits",
@@ -2946,9 +2747,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[327]",
-        "type": "string",
-        "entry": "credits.Credits/327",
-        "printf": []
+        "type": "literal",
+        "value": "\"QA COMPATIBILITY TECHNICIANS\""
       },
       {
         "section": "Credits",
@@ -2959,79 +2759,68 @@
       {
         "section": "Credits",
         "key": "CreditsLine[329]",
-        "type": "string",
-        "entry": "credits.Credits/329",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAN MARTINEZ, SENIOR\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[330]",
-        "type": "string",
-        "entry": "credits.Credits/330",
-        "printf": []
+        "type": "literal",
+        "value": "\"BEN ESTABROOK\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[331]",
-        "type": "string",
-        "entry": "credits.Credits/331",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRAY COLEMAN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[332]",
-        "type": "string",
-        "entry": "credits.Credits/332",
-        "printf": []
+        "type": "literal",
+        "value": "\"BRIAN G. DEKSNYS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[333]",
-        "type": "string",
-        "entry": "credits.Credits/333",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVID FLEMING\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[334]",
-        "type": "string",
-        "entry": "credits.Credits/334",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN SHIELDS\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[335]",
-        "type": "string",
-        "entry": "credits.Credits/335",
-        "printf": []
+        "type": "literal",
+        "value": "\"KIM JARDIN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[336]",
-        "type": "string",
-        "entry": "credits.Credits/336",
-        "printf": []
+        "type": "literal",
+        "value": "\"KOUROSH SHOKOUHI-RAZI\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[337]",
-        "type": "string",
-        "entry": "credits.Credits/337",
-        "printf": []
+        "type": "literal",
+        "value": "\"KRISTIE LAUBOROUGH\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[338]",
-        "type": "string",
-        "entry": "credits.Credits/338",
-        "printf": []
+        "type": "literal",
+        "value": "\"LESTER SIAT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[339]",
-        "type": "string",
-        "entry": "credits.Credits/339",
-        "printf": []
+        "type": "literal",
+        "value": "\"THAD YOUNGQUIST\""
       },
       {
         "section": "Credits",
@@ -3048,9 +2837,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[342]",
-        "type": "string",
-        "entry": "credits.Credits/342",
-        "printf": []
+        "type": "literal",
+        "value": "\"ADDITIONAL QA COMPATIBILITY TESTING\""
       },
       {
         "section": "Credits",
@@ -3061,30 +2849,26 @@
       {
         "section": "Credits",
         "key": "CreditsLine[344]",
-        "type": "string",
-        "entry": "credits.Credits/344",
-        "printf": []
+        "type": "literal",
+        "value": "\"ERIC KNUDSON\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[345]",
-        "type": "string",
-        "entry": "credits.Credits/345",
-        "printf": []
+        "type": "literal",
+        "value": "\"JASON LEE\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[346]",
-        "type": "string",
-        "entry": "credits.Credits/346",
-        "printf": []
+        "type": "literal",
+        "value": "\"JASON SMITH\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[347]",
-        "type": "string",
-        "entry": "credits.Credits/347",
-        "printf": []
+        "type": "literal",
+        "value": "\"SCOTT TAYLOR\""
       },
       {
         "section": "Credits",
@@ -3101,9 +2885,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[350]",
-        "type": "string",
-        "entry": "credits.Credits/350",
-        "printf": []
+        "type": "literal",
+        "value": "\"QS COMPUTER SPECIALIST\""
       },
       {
         "section": "Credits",
@@ -3114,9 +2897,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[352]",
-        "type": "string",
-        "entry": "credits.Credits/352",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN CARSEY\""
       },
       {
         "section": "Credits",
@@ -3133,9 +2915,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[355]",
-        "type": "string",
-        "entry": "credits.Credits/355",
-        "printf": []
+        "type": "literal",
+        "value": "\"COMPLIANCE\""
       },
       {
         "section": "Credits",
@@ -3146,65 +2927,56 @@
       {
         "section": "Credits",
         "key": "CreditsLine[357]",
-        "type": "string",
-        "entry": "credits.Credits/357",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVE CHAPMAN, LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[358]",
-        "type": "string",
-        "entry": "credits.Credits/358",
-        "printf": []
+        "type": "literal",
+        "value": "\"IAN WOLFARD, ASSISTANT LEAD\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[359]",
-        "type": "string",
-        "entry": "credits.Credits/359",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHRIS NAVARRO\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[360]",
-        "type": "string",
-        "entry": "credits.Credits/360",
-        "printf": []
+        "type": "literal",
+        "value": "\"DAVEY LEI\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[361]",
-        "type": "string",
-        "entry": "credits.Credits/361",
-        "printf": []
+        "type": "literal",
+        "value": "\"JOHN LOWENTHAL\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[362]",
-        "type": "string",
-        "entry": "credits.Credits/362",
-        "printf": []
+        "type": "literal",
+        "value": "\"NICK SINNOTT\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[363]",
-        "type": "string",
-        "entry": "credits.Credits/363",
-        "printf": []
+        "type": "literal",
+        "value": "\"SARAH CHERLIN\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[364]",
-        "type": "string",
-        "entry": "credits.Credits/364",
-        "printf": []
+        "type": "literal",
+        "value": "\"SHINICHIRO OHYAMA\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[365]",
-        "type": "string",
-        "entry": "credits.Credits/365",
-        "printf": []
+        "type": "literal",
+        "value": "\"ZAK HUNTWORK\""
       },
       {
         "section": "Credits",
@@ -3221,9 +2993,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[368]",
-        "type": "string",
-        "entry": "credits.Credits/368",
-        "printf": []
+        "type": "literal",
+        "value": "\"QS MANAGER\""
       },
       {
         "section": "Credits",
@@ -3234,9 +3005,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[370]",
-        "type": "string",
-        "entry": "credits.Credits/370",
-        "printf": []
+        "type": "literal",
+        "value": "\"PAUL PURDY\""
       },
       {
         "section": "Credits",
@@ -3253,9 +3023,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[373]",
-        "type": "string",
-        "entry": "credits.Credits/373",
-        "printf": []
+        "type": "literal",
+        "value": "\"QA SUPERVISOR\""
       },
       {
         "section": "Credits",
@@ -3266,9 +3035,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[375]",
-        "type": "string",
-        "entry": "credits.Credits/375",
-        "printf": []
+        "type": "literal",
+        "value": "\"CHUCK MCFADDEN\""
       },
       {
         "section": "Credits",
@@ -3285,9 +3053,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[378]",
-        "type": "string",
-        "entry": "credits.Credits/378",
-        "printf": []
+        "type": "literal",
+        "value": "\"PRODUCT SUPPORT SUPERVISOR\""
       },
       {
         "section": "Credits",
@@ -3298,9 +3065,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[380]",
-        "type": "string",
-        "entry": "credits.Credits/380",
-        "printf": []
+        "type": "literal",
+        "value": "\"JAY GERACI\""
       },
       {
         "section": "Credits",
@@ -3317,9 +3083,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[383]",
-        "type": "string",
-        "entry": "credits.Credits/383",
-        "printf": []
+        "type": "literal",
+        "value": "\"HINT SPECIALIST\""
       },
       {
         "section": "Credits",
@@ -3330,9 +3095,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[385]",
-        "type": "string",
-        "entry": "credits.Credits/385",
-        "printf": []
+        "type": "literal",
+        "value": "\"TABITHA TOSTI\""
       },
       {
         "section": "Credits",
@@ -3349,9 +3113,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[388]",
-        "type": "string",
-        "entry": "credits.Credits/388",
-        "printf": []
+        "type": "literal",
+        "value": "\"MASTERING LAB SPECIALIST\""
       },
       {
         "section": "Credits",
@@ -3362,9 +3125,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[390]",
-        "type": "string",
-        "entry": "credits.Credits/390",
-        "printf": []
+        "type": "literal",
+        "value": "\"WENDY KAPLAN\""
       },
       {
         "section": "Credits",
@@ -3381,9 +3143,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[393]",
-        "type": "string",
-        "entry": "credits.Credits/393",
-        "printf": []
+        "type": "literal",
+        "value": "\"MASTERING TECHNICIANS\""
       },
       {
         "section": "Credits",
@@ -3394,16 +3155,14 @@
       {
         "section": "Credits",
         "key": "CreditsLine[395]",
-        "type": "string",
-        "entry": "credits.Credits/395",
-        "printf": []
+        "type": "literal",
+        "value": "\"ERIC RAUCH\""
       },
       {
         "section": "Credits",
         "key": "CreditsLine[396]",
-        "type": "string",
-        "entry": "credits.Credits/396",
-        "printf": []
+        "type": "literal",
+        "value": "\"JAY TYE\""
       },
       {
         "section": "Credits",
@@ -3420,9 +3179,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[399]",
-        "type": "string",
-        "entry": "credits.Credits/399",
-        "printf": []
+        "type": "literal",
+        "value": "\"QS COORDINATOR (AKA DEN MOTHER)\""
       },
       {
         "section": "Credits",
@@ -3433,9 +3191,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[401]",
-        "type": "string",
-        "entry": "credits.Credits/401",
-        "printf": []
+        "type": "literal",
+        "value": "\"KELLIE WALKER\""
       },
       {
         "section": "Credits",
@@ -3465,9 +3222,8 @@
       {
         "section": "Credits",
         "key": "CreditsLine[406]",
-        "type": "string",
-        "entry": "credits.Credits/406",
-        "printf": []
+        "type": "literal",
+        "value": "\"KEN ROGERS\""
       },
       {
         "section": "Credits",
@@ -5178,6 +4934,282 @@
         "key": "CreditsLine[673]",
         "type": "literal",
         "value": "\" \""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine[590]",
+        "type": "literal",
+        "value": "\"CAMELA MCLANAHAN\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_Xbox[595]",
+        "type": "literal",
+        "value": "\"CURRIN CYR\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine[596]",
+        "type": "literal",
+        "value": "\"DARYLL JACOBSON\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_Xbox[601]",
+        "type": "literal",
+        "value": "\"JAMES MILLER\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine[614]",
+        "type": "literal",
+        "value": "\"KYLE RUDDICK\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_Xbox[619]",
+        "type": "literal",
+        "value": "\"MARK SOBOTNIK\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[660]",
+        "type": "literal",
+        "value": "\"THIS PRODUCT CONTAINS SOFTWARE\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[661]",
+        "type": "literal",
+        "value": "\"TECHNOLOGY LICENSED FROM GAMESPY\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[662]",
+        "type": "literal",
+        "value": "\"INDUSTRIES, INC.  (C) 1999-2004\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[663]",
+        "type": "literal",
+        "value": "\"GAMESPY INDUSTRIES, INC. GAMESPY\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[664]",
+        "type": "literal",
+        "value": "\"AND THE \"POWERED BY GAMESPY\"\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[665]",
+        "type": "literal",
+        "value": "\"DESIGN ARE TRADEMARKS OF GAMESPY\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[666]",
+        "type": "literal",
+        "value": "\"INDUSTRIES, INC. ALL RIGHTS RESERVED.\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[667]",
+        "type": "literal",
+        "value": "\" \""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[674]",
+        "type": "literal",
+        "value": "\"LIBPNG VERSIONS 1.0.7, JULY 1, 2000,\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[675]",
+        "type": "literal",
+        "value": "\"THROUGH 1.2.5, OCTOBER 3, 2002,\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[676]",
+        "type": "literal",
+        "value": "\"(C) 2000-2002 GLENN RANDERS-PEHRSON\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[677]",
+        "type": "literal",
+        "value": "\" \""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[678]",
+        "type": "literal",
+        "value": "\"EXPAT (XML PARSER TOOLKIT) COPYRIGHT\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[679]",
+        "type": "literal",
+        "value": "\"(C) 1998, 1999, 2000 THAI OPEN SOURCE\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[680]",
+        "type": "literal",
+        "value": "\"SOFTWARE CENTER LTD.  PERMISSION IS\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[681]",
+        "type": "literal",
+        "value": "\"HEREBY GRANTED, FREE OF CHARGE, TO\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[682]",
+        "type": "literal",
+        "value": "\"ANY PERSON OBTAINING A COPY OF\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[683]",
+        "type": "literal",
+        "value": "\"EXPAT (XML PARSER TOOLKIT), AND\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[684]",
+        "type": "literal",
+        "value": "\"ASSOCIATED DOCUMENTATION FILES\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[685]",
+        "type": "literal",
+        "value": "\"(EXCLUSIVE OF ANY DOCUMENTATION\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[686]",
+        "type": "literal",
+        "value": "\"FILES OR COPIES OF EXPAT [XML\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[687]",
+        "type": "literal",
+        "value": "\"PARSER TOOLKIT] THAT MAY BE\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[688]",
+        "type": "literal",
+        "value": "\"ASSOCIATED WITH OR PART OF STAR\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[689]",
+        "type": "literal",
+        "value": "\"WARS REPUBLIC COMMANDO) TO DEAL\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[690]",
+        "type": "literal",
+        "value": "\"IN THE EXPAT (XML PARSER TOOLKIT)\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[691]",
+        "type": "literal",
+        "value": "\"WITHOUT RESTRICTION, INCLUDING\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[692]",
+        "type": "literal",
+        "value": "\"WITHOUT LIMITATION THE RIGHTS TO\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[693]",
+        "type": "literal",
+        "value": "\"USE, COPY, MODIFY, MERGE, PUBLISH,\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[694]",
+        "type": "literal",
+        "value": "\"DISTRIBUTE, SUBLICENSE, AND/OR SELL\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[695]",
+        "type": "literal",
+        "value": "\"COPIES OF THE EXPAT (XML PARSER\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[696]",
+        "type": "literal",
+        "value": "\"TOOLKIT) AND TO PERMIT PERSONS TO\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[697]",
+        "type": "literal",
+        "value": "\"WHOM THE EXPAT (XML PARSER TOOLKIT)\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[698]",
+        "type": "literal",
+        "value": "\"IS FURNISHED TO DO SO, SUBJECT TO\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[699]",
+        "type": "literal",
+        "value": "\"THE FOLLOWING CONDITIONS: THE ABOVE\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[700]",
+        "type": "literal",
+        "value": "\"COPYRIGHT NOTICE AND PERMISSION\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[701]",
+        "type": "literal",
+        "value": "\"NOTICE LOCATED AT THE WEBSITE\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[702]",
+        "type": "literal",
+        "value": "\"WWW.JCLARK.COM/XML/COPYING.TXT\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[703]",
+        "type": "literal",
+        "value": "\"SHALL BE INCLUDED IN ALL COPIES\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[704]",
+        "type": "literal",
+        "value": "\"OR SUBSTANTIAL PORTIONS OF THE EXPAT\""
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[705]",
+        "type": "literal",
+        "value": "\"(XML PARSER TOOLKIT).\""
       }
     ],
     "GameData/System/ct.int": [
@@ -8278,6 +8310,12 @@
       },
       {
         "section": "FlashBang",
+        "key": "MessageNoAmmo",
+        "type": "literal",
+        "value": "\"\""
+      },
+      {
+        "section": "FlashBang",
         "key": "ItemName",
         "type": "string",
         "entry": "ctinventory.FlashBang/1",
@@ -8621,6 +8659,12 @@
       },
       {
         "section": "ThermalDetonator",
+        "key": "MessageNoAmmo",
+        "type": "literal",
+        "value": "\"\""
+      },
+      {
+        "section": "ThermalDetonator",
         "key": "ItemName",
         "type": "string",
         "entry": "ctinventory.ThermalDetonator/1",
@@ -8761,6 +8805,12 @@
         "entry": "d3ddrv.D3DRenderDevice/2",
         "printf": [],
         "style": "bare"
+      },
+      {
+        "section": "D3DRenderDevice",
+        "key": "AskUse",
+        "type": "literal",
+        "value": ""
       }
     ],
     "GameData/System/dm_canyon.int": [
@@ -12923,6 +12973,18 @@
       },
       {
         "section": "Menu",
+        "key": "HelpMessage",
+        "type": "literal",
+        "value": ""
+      },
+      {
+        "section": "Menu",
+        "key": "MenuList",
+        "type": "literal",
+        "value": ""
+      },
+      {
+        "section": "Menu",
         "key": "LeftString",
         "type": "string",
         "entry": "engine.Menu/1",
@@ -13020,6 +13082,12 @@
         "entry": "engine.Inventory/5",
         "printf": [],
         "style": "bare"
+      },
+      {
+        "section": "WarpZoneInfo",
+        "key": "OtherSideURL",
+        "type": "literal",
+        "value": ""
       },
       {
         "section": "GameInfo",
@@ -13230,6 +13298,18 @@
         "entry": "engine.Ammo/1",
         "printf": [],
         "style": "bare"
+      },
+      {
+        "section": "Pickup",
+        "key": "ExpireMessage",
+        "type": "literal",
+        "value": ""
+      },
+      {
+        "section": "SpecialEvent",
+        "key": "DamageString",
+        "type": "literal",
+        "value": ""
       },
       {
         "section": "DamageType",
@@ -32356,6 +32436,18 @@
         "type": "string",
         "entry": "setup.IDDIALOG_AutopatchPageGo/9",
         "printf": []
+      },
+      {
+        "section": "General",
+        "key": "InstallQFE",
+        "type": "literal",
+        "value": "\"Unreal Tournament 2003 Setup needs to install an update to DirectX 8.1.  Please follow the instructions in the following dialog box.\""
+      },
+      {
+        "section": "IDDIALOG_FilerPageWelcome",
+        "key": "IDC_WelcomePromptUpdate",
+        "type": "literal",
+        "value": "\"This program will update your copy of %s to version %s.\\n\\nClick 'Next' to begin Setup, or click 'Cancel' at any time to exit.\\n\\nThe information in the box below contains Web links you can click on to obtain more information.\""
       }
     ],
     "GameData/System/setupwarfare-ihv.int": [
@@ -33229,6 +33321,12 @@
       },
       {
         "section": "IDDIALOG_ConfigPageDetail",
+        "key": "IDC_ConfigPageDetail",
+        "type": "literal",
+        "value": ""
+      },
+      {
+        "section": "IDDIALOG_ConfigPageDetail",
         "key": "IDC_DetailPrompt",
         "type": "string",
         "entry": "startup.IDDIALOG_ConfigPageDetail/1",
@@ -33245,11 +33343,23 @@
       },
       {
         "section": "IDDIALOG_ConfigPageFirstTime",
+        "key": "IDC_ConfigPageFirstTime",
+        "type": "literal",
+        "value": ""
+      },
+      {
+        "section": "IDDIALOG_ConfigPageFirstTime",
         "key": "IDC_Prompt",
         "type": "string",
         "entry": "startup.IDDIALOG_ConfigPageFirstTime/1",
         "printf": [],
         "style": "bare"
+      },
+      {
+        "section": "IDDIALOG_ConfigPageSafeMode",
+        "key": "IDC_ConfigPageSafeMode",
+        "type": "literal",
+        "value": ""
       },
       {
         "section": "IDDIALOG_ConfigPageSafeMode",
@@ -33290,6 +33400,12 @@
         "entry": "startup.IDDIALOG_ConfigPageSafeMode/5",
         "printf": [],
         "style": "bare"
+      },
+      {
+        "section": "IDDIALOG_ConfigPageSafeOptions",
+        "key": "IDC_ConfigPageSafeOptions",
+        "type": "literal",
+        "value": ""
       },
       {
         "section": "IDDIALOG_ConfigPageSafeOptions",
@@ -123694,6 +123810,63 @@
       },
       {
         "section": "MenuSplitscreenPlayers",
+        "key": "Options[0].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100691",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100692",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100693",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "MenuSplitscreenPlayers",
+        "key": "Options[1].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100691",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100692",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100693",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "MenuSplitscreenPlayers",
+        "key": "Options[2].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100691",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100692",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100693",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "MenuSplitscreenPlayers",
         "key": "Options[3].Items",
         "type": "tuple",
         "items": [
@@ -123706,7 +123879,7 @@
             "printf": []
           },
           {
-            "entry": "XinterfaceMP.MenuSplitscreenPlayers/6",
+            "entry": "shared.enjp/100693",
             "printf": []
           }
         ]
@@ -124008,6 +124181,20 @@
           },
           ",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames=\"CTF,AS\",bSplitScreenOK=0,bNetworkOK=1)"
         ],
+        "allow_duplicate": true
+      },
+      {
+        "section": "Public",
+        "key": "Map+",
+        "type": "literal",
+        "value": "(FileName=\"DM_Hangar\",LongName=\"Hangar\",Screenshot=\"MapThumbnails.RAS_Hangar\",Text=\"Xmaps.RAS_Hangar\",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames=\"DM,TD\",bSplitScreenOK=0,bNetworkOK=1)",
+        "allow_duplicate": true
+      },
+      {
+        "section": "Public",
+        "key": "Map+",
+        "type": "literal",
+        "value": "(FileName=\"CTF_Hangar\",LongName=\"Hangar\",Screenshot=\"MapThumbnails.RAS_Hangar\",Text=\"Xmaps.RAS_Hangar\",IdealPlayerCountMin=8,IdealPlayerCountMax=16,GoalScore=30,TimeLimit=10,FragLimit=10,SupportedGames=\"CTF,AS\",bSplitScreenOK=0,bNetworkOK=1)",
         "allow_duplicate": true
       }
     ],

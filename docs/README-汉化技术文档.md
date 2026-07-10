@@ -246,7 +246,7 @@ u8   mip 数（字体页均为 1）
 ## 8. 汉化实施路线图（当前阶段）
 
 1. **翻译索引**：官方日文包 `JapanesePack\System\*.int` 作为覆盖索引；当前英文版 + Fix 的 `GameData` 作为英文 source 权威。`voicepacks.int` 是真实缺失项，英文默认值来自 Steam `GameData\Properties\voicepacks.u` 的 `GenericClone` class default，发布时生成到 `GameData\System\voicepacks.int`；`Winddrv.int` 与已映射的 `WinDrv/windrv.int` 重复，不作为当前补入目标
-2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射等构建细节，用户 JSON 只保留分组、id、note、en、jp、zh_CN。当前审查版约 12,990 个翻译条目、146 个 catalog 输出文件；剩余 skipped 约 1,699 条，记录在 `reference\export\localization_jp_only_skipped.json`。用户 JSON 示例：
+2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射、EN-only passthrough 等构建细节，用户 JSON 只保留分组、id、note、en、jp、zh_CN。当前审查版约 8,934 个翻译条目、146 个 catalog 输出文件；剩余 skipped 约 1,684 条，记录在 `reference\export\localization_jp_only_skipped.json`。用户 JSON 示例：
 
 ```json
 {
@@ -264,10 +264,11 @@ u8   mip 数（字体页均为 1）
 
 3. **关键映射规则**：
    - 输出 key 必须以英文运行时 key 为准；日文字幕 `.int` 的 `SubtitleText[n]` / `SubtitleSound[n]` 编号可能相对英文偏移，需按 sound id 对齐
-   - `SubtitleSound`、`CreditsLine` 控制行、`Object+=` / `Preferences+=` 等非翻译控制项由 catalog 锁定，不要求用户翻译
+   - `SubtitleSound`、`CreditsLine` 控制行、`Object+=` / `Preferences+=`、EN-only passthrough 等非翻译控制项由 catalog 锁定，不要求用户翻译；`CreditsLine*` 中 `jp == en` 的人名/署名也按 literal 保留
+   - `shared.enjp` 是按 `(en, jp)` 合并的共享译文组，同组只能有一个中文译文；后续若条目离开 shared，生成器会按 `(en, jp)` 回填旧译文
    - `XinterfaceCtmenus.int` 是菜单主输出，不再生成菜单 `PropertyOverrides` 作为发布默认路径
-4. **索引生成工具**：`tools\make_translation_json.py` 默认读取既有 `translation.json` 并保留同签名条目的 `zh_CN`，因此正式翻译开始后可重复跑生成器做 source 修正；若旧条目匹配但 `jp` 发生变化，保留 `zh_CN` 并在 audit 记录 `preserved_translation_with_jp_change`。默认 skipped 严格失败，防止漏项静默进入正式翻译；审查期需要保留当前漏项时显式加 `--allow-skipped`，从零重建才加 `--reset-translations`
-5. **语言包生成工具**：`tools\build_langpack.py` 默认读取 `translation.json` 和 `reference\export\localization_catalog.json`；可用 `--json` / `--catalog` 指定临时输入。默认要求所有 `zh_CN` 非空，且输出必须 GBK 可编码；`--allow-untranslated` 只用于开发期抽样，空译文会回退英文，并仅对 fallback 英文中的少量非 GBK 字符做兼容替换。工具只输出 `build\GameData\System\*.int` 和 manifest，不直接写入游戏目录
+4. **索引生成工具**：`tools\make_translation_json.py` 默认读取既有 `translation.json` 并保留同签名条目的 `zh_CN`，因此正式翻译开始后可重复跑生成器做 source 修正；若旧条目匹配但 `jp` 发生变化，保留 `zh_CN` 并在 audit 记录 `preserved_translation_with_jp_change`。默认 skipped 严格失败，防止漏项静默进入正式翻译；审查期需要保留当前漏项时显式加 `--allow-skipped`，从零重建才加 `--reset-translations`。默认构建验证写入临时目录，不会清理真实 `build\`
+5. **语言包生成工具**：`tools\build_langpack.py` 默认读取 `translation.json` 和 `reference\export\localization_catalog.json`；可用 `--json` / `--catalog` / `--out` 指定临时输入输出。默认要求所有 `zh_CN` 非空，且输出必须 GBK 可编码；`--allow-untranslated` 只用于开发期抽样，空译文会回退英文，并仅对 fallback 英文中的少量非 GBK 字符做兼容替换。JSON 重复 key 会直接报错；bare 样式遇到 `=`、引号、首尾空白、`(` 或 `"` 开头会自动升级 quoted 并写入 manifest 计数。工具只输出 `build\GameData\System\*.int` 和 manifest，不直接写入游戏目录
 6. **字符集与字体**：正式译文完成后扫描 `zh_CN` 子集重新生成 `orbitfonts.utx`；开发期可继续使用 GB2312 全集字体
 7. **测试与发布**：至少覆盖新战役全流程、加载/标题卡/提示/字幕、全部菜单与设置页、存读档界面；发布包复制 `System\*.int + Textures\orbitfonts.utx + CJK Mod.dll/Mod.u`，标注 Fix / CJK 依赖
 

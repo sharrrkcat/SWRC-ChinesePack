@@ -28,6 +28,8 @@ SHARED_GROUP = "shared.enjp"
 SHARED_ID_START = 100001
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 ROOT_DIR = SCRIPT_DIR.parent
 LANG_DIR = ROOT_DIR.parent
 GAME_ROOT = LANG_DIR.parent
@@ -55,6 +57,7 @@ UC_ARRAY_RE = re.compile(r"([A-Za-z_][A-Za-z0-9_]*)\((\d+)\)")
 BEGIN_OBJECT_RE = re.compile(r"^Begin\s+(?:Actor|Object)\s+.*?\bClass=([^\s]+)\s+.*?\bName=([^\s]+)", re.IGNORECASE)
 CLASS_RE = re.compile(r"^\s*class\s+([A-Za-z_][A-Za-z0-9_]*)\s+extends\s+([A-Za-z_][A-Za-z0-9_]*)", re.IGNORECASE)
 STRUCT_TEXT_FIELDS = {"Caption", "Parent", "Text", "HelpText", "Objective"}
+from localization_common import FALLBACK_REPLACEMENTS, normalize_fallback_text
 
 
 class GenerateError(Exception):
@@ -101,12 +104,28 @@ def write_json(path: Path, payload) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def reject_duplicate_json_keys(pairs):
+    result = OrderedDict()
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON key: {key!r}")
+        result[key] = value
+    return result
+
+
+def load_json_text(text: str):
+    return json.loads(text, object_pairs_hook=reject_duplicate_json_keys)
+
+
 def read_text(path: Path, encoding: str) -> str:
     return path.read_text(encoding=encoding, errors="strict")
 
 
 def public_rel_path(path: Path, start: Path = ROOT_DIR) -> str:
-    return Path(os.path.relpath(path, start)).as_posix()
+    try:
+        return Path(os.path.relpath(path, start)).as_posix()
+    except ValueError:
+        return path.resolve().as_posix()
 
 
 def safe_group(value: str) -> str:
@@ -132,9 +151,10 @@ def unquote_unreal(value: str) -> str:
             nxt = inner[i + 1]
             if nxt == "n":
                 out.append("\n")
+                i += 2
             else:
-                out.append(nxt)
-            i += 2
+                out.append(ch)
+                i += 1
             continue
         out.append(ch)
         i += 1
@@ -143,8 +163,47 @@ def unquote_unreal(value: str) -> str:
 
 def quote_unreal_raw(value: str) -> str:
     value = value.replace("\r\n", "\n").replace("\r", "\n").replace("\n", r"\n")
-    value = value.replace('"', r"\"")
     return f'"{value}"'
+
+
+def normalize_passthrough_literal(value: str, label: str, stats: Counter) -> str:
+    normalized = normalize_fallback_text(value)
+    if normalized != value:
+        stats["passthrough_literal_normalized"] += 1
+    try:
+        normalized.encode("gbk")
+    except UnicodeEncodeError as exc:
+        bad = exc.object[exc.start : exc.end]
+        fail(f"{label}: passthrough literal contains non-GBK text {bad!r}")
+    return normalized
+
+
+def make_literal_row(
+    section: str,
+    key: str,
+    value: str,
+    label: str,
+    stats: Counter,
+    allow_duplicate: bool = False,
+) -> OrderedDict:
+    row = OrderedDict(
+        [
+            ("section", section),
+            ("key", key),
+            ("type", "literal"),
+            ("value", normalize_passthrough_literal(value, label, stats)),
+        ]
+    )
+    if allow_duplicate:
+        row["allow_duplicate"] = True
+    return row
+
+
+def is_closing_quote(text: str, index: int, terminators: set[str]) -> bool:
+    cursor = index + 1
+    while cursor < len(text) and text[cursor].isspace():
+        cursor += 1
+    return cursor == len(text) or text[cursor] in terminators
 
 
 def split_top_level(text: str, sep: str = ",") -> list[str]:
@@ -152,14 +211,9 @@ def split_top_level(text: str, sep: str = ",") -> list[str]:
     start = 0
     depth = 0
     in_quote = False
-    escape = False
     for index, ch in enumerate(text):
         if in_quote:
-            if escape:
-                escape = False
-            elif ch == "\\":
-                escape = True
-            elif ch == '"':
+            if ch == '"' and is_closing_quote(text, index, {sep, ")"}):
                 in_quote = False
             continue
         if ch == '"':
@@ -178,14 +232,9 @@ def split_top_level(text: str, sep: str = ",") -> list[str]:
 def split_assignment(text: str) -> tuple[str, str] | None:
     depth = 0
     in_quote = False
-    escape = False
     for index, ch in enumerate(text):
         if in_quote:
-            if escape:
-                escape = False
-            elif ch == "\\":
-                escape = True
-            elif ch == '"':
+            if ch == '"' and is_closing_quote(text, index, {",", ")"}):
                 in_quote = False
             continue
         if ch == '"':
@@ -242,7 +291,6 @@ def flatten_value(prefix: str, value: str, out: dict[str, SourceValue]) -> None:
 def extract_template_fields(value: str) -> list[tuple[str, str, str, str]]:
     fields = []
     in_quote = False
-    escape = False
     field_start = None
     value_start = None
     current_field = None
@@ -250,11 +298,7 @@ def extract_template_fields(value: str) -> list[tuple[str, str, str, str]]:
     while index < len(value):
         ch = value[index]
         if in_quote:
-            if escape:
-                escape = False
-            elif ch == "\\":
-                escape = True
-            elif ch == '"':
+            if ch == '"' and is_closing_quote(value, index, {",", ")"}):
                 raw = value[value_start : index + 1]
                 text = unquote_unreal(raw)
                 if current_field in STRUCT_TEXT_FIELDS and text != "":
@@ -599,6 +643,7 @@ def export_level_t3d(map_file: Path, temp_root: Path, audit: dict):
 class EntryAllocator:
     def __init__(self, existing: dict | None = None):
         self.existing_by_sig = defaultdict(list)
+        self.existing_shared_by_en_jp = {}
         self.reserved = defaultdict(set)
         self.used = defaultdict(set)
         self.next_id = defaultdict(lambda: 1)
@@ -611,6 +656,11 @@ class EntryAllocator:
                         continue
                     sig = (group, item.get("note", ""), item.get("en", ""))
                     self.existing_by_sig[sig].append({"id": str(entry_id), "item": item})
+                    if group == SHARED_GROUP:
+                        en = item.get("en", "")
+                        jp = item.get("jp", "")
+                        if isinstance(en, str) and isinstance(jp, str) and jp:
+                            self.existing_shared_by_en_jp.setdefault((en, jp), item)
                     if str(entry_id).isdigit():
                         self.reserved[group].add(str(entry_id))
                         self.next_id[group] = max(self.next_id[group], int(entry_id) + 1)
@@ -656,12 +706,36 @@ def load_existing_translation():
     if not TRANSLATION_JSON.exists():
         return None
     try:
-        payload = json.loads(TRANSLATION_JSON.read_text(encoding="utf-8-sig"))
-    except json.JSONDecodeError:
-        return None
+        payload = load_json_text(TRANSLATION_JSON.read_text(encoding="utf-8-sig"))
+    except UnicodeDecodeError as exc:
+        fail(f"{public_rel_path(TRANSLATION_JSON)}: must be saved as UTF-8: {exc}")
+    except json.JSONDecodeError as exc:
+        fail(f"{public_rel_path(TRANSLATION_JSON)}: JSON parse failed: {exc}")
+    except ValueError as exc:
+        fail(f"{public_rel_path(TRANSLATION_JSON)}: JSON parse failed: {exc}")
+    if not isinstance(payload, dict):
+        fail(f"{public_rel_path(TRANSLATION_JSON)}: top-level JSON value must be an object")
     if payload.get("schema") != TRANSLATION_SCHEMA:
-        return None
+        fail(
+            f"{public_rel_path(TRANSLATION_JSON)}: unsupported schema "
+            f"{payload.get('schema')!r}, expected {TRANSLATION_SCHEMA}"
+        )
     return payload
+
+
+def backup_existing_translation_json() -> None:
+    if not TRANSLATION_JSON.exists():
+        return
+    backup_path = TRANSLATION_JSON.with_name(f"{TRANSLATION_JSON.name}.bak")
+    try:
+        shutil.copy2(TRANSLATION_JSON, backup_path)
+    except OSError as exc:
+        fail(f"{public_rel_path(backup_path)}: failed to back up existing translation.json: {exc}")
+
+
+def write_translation_json(payload) -> None:
+    backup_existing_translation_json()
+    write_json(TRANSLATION_JSON, payload)
 
 
 def add_translation_entry(
@@ -691,7 +765,15 @@ def add_translation_entry(
     previous = allocation.previous if isinstance(allocation.previous, dict) else None
     zh_cn = ""
     if previous is None:
-        stats["new_blank_zh_CN"] += 1
+        old_shared = allocator.existing_shared_by_en_jp.get((en, jp))
+        old_zh = old_shared.get("zh_CN", "") if isinstance(old_shared, dict) else ""
+        if not reset_translations and isinstance(old_zh, str) and old_zh:
+            zh_cn = old_zh
+            stats["restored_from_shared"] += 1
+        else:
+            stats["new_blank_zh_CN"] += 1
+            if reset_translations and isinstance(old_zh, str) and old_zh:
+                stats["reset_zh_CN"] += 1
     else:
         old_zh = previous.get("zh_CN", "")
         old_jp = previous.get("jp", "")
@@ -884,6 +966,7 @@ def merge_shared_en_jp_entries(
 
     if conflict_reports:
         audit["merge_conflicts"] = conflict_reports
+        write_json(AUDIT_JSON, audit)
         fail(
             "conflicting zh_CN values while merging shared (en, jp) entries: "
             + "; ".join(f"{item['entry']} sources={item['sources']}" for item in conflict_reports[:5])
@@ -963,6 +1046,30 @@ def emit_from_source(
 
     if source.kind == "string":
         jp_text = unquote_unreal(jp_value) if jp_value.startswith('"') and jp_value.endswith('"') else jp_value
+        if source.text == "":
+            row = make_literal_row(
+                section,
+                key,
+                source.raw,
+                f"{output_path} [{section}] {key}",
+                stats,
+                allow_duplicate,
+            )
+            rows.append(row)
+            stats["empty_english_literal_rows"] += 1
+            return "literal"
+        if key.startswith("CreditsLine") and jp_text == source.text:
+            row = make_literal_row(
+                section,
+                key,
+                source.raw,
+                f"{output_path} [{section}] {key}",
+                stats,
+                allow_duplicate,
+            )
+            rows.append(row)
+            stats["credits_jp_en_literal_rows"] += 1
+            return "literal"
         ref = add_translation_entry(
             translation,
             allocator,
@@ -1196,6 +1303,7 @@ def process_subtitle_file(
         pending_sound = defaultdict(list)
         pairs = []
         text_by_index = {}
+        text_without_sound = []
         for row in rows:
             m = ARRAY_KEY_RE.match(row.key)
             if not m:
@@ -1208,14 +1316,27 @@ def process_subtitle_file(
                 if pending_sound[index]:
                     sound_row = pending_sound[index].pop(0)
                     pairs.append((index, sound_row, row))
-        return pairs, text_by_index
+                else:
+                    text_without_sound.append(row)
+        sound_without_text = [row for pending in pending_sound.values() for row in pending]
+        return pairs, text_by_index, sound_without_text, text_without_sound
 
-    jp_pairs, jp_text_by_index = subtitle_pairs(jp_rows)
+    jp_pairs, jp_text_by_index, jp_sound_without_text, jp_text_without_sound = subtitle_pairs(jp_rows)
     jp_by_sound = defaultdict(list)
     for jp_index, sound_row, text_row in jp_pairs:
-        jp_by_sound[unquote_unreal(sound_row.value)].append((jp_index, unquote_unreal(text_row.value)))
+        jp_by_sound[unquote_unreal(sound_row.value)].append((jp_index, unquote_unreal(text_row.value), sound_row))
 
-    en_pairs, _en_text_by_index = subtitle_pairs(en_rows)
+    en_pairs, _en_text_by_index, en_sound_without_text, en_text_without_sound = subtitle_pairs(en_rows)
+    audit.setdefault("subtitle_pairing", OrderedDict())[jp_info["path"].name] = OrderedDict(
+        [
+            ("en_sound_without_text", len(en_sound_without_text)),
+            ("en_text_without_sound", len(en_text_without_sound)),
+            ("jp_sound_without_text", len(jp_sound_without_text)),
+            ("jp_text_without_sound", len(jp_text_without_sound)),
+        ]
+    )
+    if en_text_without_sound:
+        fail(f"{jp_info['path'].name}: {len(en_text_without_sound)} EN SubtitleText rows have no preceding matching SubtitleSound")
     duplicate_counts = Counter((row.section, row.key) for _index, sound_row, text_row in en_pairs for row in (sound_row, text_row))
 
     remap_count = 0
@@ -1227,32 +1348,65 @@ def process_subtitle_file(
         sound = unquote_unreal(sound_row.value)
         jp_index = None
         jp_text = ""
-        for candidate_ordinal, (candidate_index, candidate_text) in enumerate(jp_by_sound.get(sound, [])):
+        for candidate_ordinal, (candidate_index, candidate_text, _candidate_sound_row) in enumerate(jp_by_sound.get(sound, [])):
             pair_key = (sound, candidate_ordinal)
             if pair_key not in used_jp_pairs:
                 jp_index = candidate_index
                 jp_text = candidate_text
                 used_jp_pairs.add(pair_key)
                 break
-        rows = catalog_files.setdefault(output_path, [])
-        sound_catalog_row = OrderedDict([("section", sound_row.section), ("key", sound_row.key), ("type", "literal"), ("value", sound_row.value)])
-        if duplicate_counts[(sound_row.section, sound_row.key)] > 1:
-            sound_catalog_row["allow_duplicate"] = True
-        rows.append(sound_catalog_row)
-        source = source_from_int_row(text_row)
-        ref = add_translation_entry(
-            translation,
-            allocator,
-            get_group(file_stem, section),
-            text_row.key,
-            source.text or "",
-            jp_text,
-            index,
-            "SubtitleText",
+        sound_catalog_row = make_literal_row(
+            sound_row.section,
+            sound_row.key,
+            sound_row.value,
+            f"{output_path} [{sound_row.section}] {sound_row.key}",
             stats,
-            reset_translations,
+            duplicate_counts[(sound_row.section, sound_row.key)] > 1,
         )
-        rows.append(
+        source = source_from_int_row(text_row)
+        try:
+            ref = add_translation_entry(
+                translation,
+                allocator,
+                get_group(file_stem, section),
+                text_row.key,
+                source.text or "",
+                jp_text,
+                index,
+                "SubtitleText",
+                stats,
+                reset_translations,
+            )
+        except GenerateError as exc:
+            skipped.append(
+                {
+                    "reason_code": emit_error_reason_code(str(exc)),
+                    "file": en_info["path"].name,
+                    "line": text_row.line_no,
+                    "section": text_row.section,
+                    "key": text_row.key,
+                    "jp_value": jp_text,
+                    "reason": str(exc),
+                }
+            )
+            stats["skipped_emit_error"] += 1
+            rows = catalog_files.setdefault(output_path, [])
+            rows.append(sound_catalog_row)
+            rows.append(
+                make_literal_row(
+                    section,
+                    text_row.key,
+                    text_row.value,
+                    f"{output_path} [{section}] {text_row.key}",
+                    stats,
+                    duplicate_counts[(section, text_row.key)] > 1,
+                )
+            )
+            stats["subtitle_passthrough_literal_rows"] += 2
+            continue
+        rows = catalog_files.setdefault(output_path, [])
+        rows.append(sound_catalog_row)
+        text_catalog_row = (
             OrderedDict(
                 [
                     ("section", section),
@@ -1264,7 +1418,8 @@ def process_subtitle_file(
             )
         )
         if duplicate_counts[(section, text_row.key)] > 1:
-            rows[-1]["allow_duplicate"] = True
+            text_catalog_row["allow_duplicate"] = True
+        rows.append(text_catalog_row)
         stats["subtitle_pairs"] += 1
         if jp_index is not None and jp_index != index:
             remap_count += 1
@@ -1273,13 +1428,14 @@ def process_subtitle_file(
     for sound, pairs in jp_by_sound.items():
         if sound == "":
             continue
-        for candidate_ordinal, (jp_index, _jp_text) in enumerate(pairs):
+        for candidate_ordinal, (jp_index, _jp_text, jp_sound_row) in enumerate(pairs):
             if (sound, candidate_ordinal) not in used_jp_pairs:
                 skipped.append(
                     {
                         "reason_code": "jp_subtitle_sound_missing",
                         "file": jp_info["path"].name,
-                        "section": jp_rows[0].section if jp_rows else "",
+                        "line": jp_sound_row.line_no,
+                        "section": jp_sound_row.section,
                         "key": f"SubtitleSound[{jp_index}]",
                         "jp_value": sound,
                         "reason": "JP subtitle sound not present in EN runtime file",
@@ -1313,6 +1469,89 @@ def duplicate_keys_by_file(jp_ints):
         counts = Counter((row.section.casefold(), row.key) for row in info["rows"])
         result[name] = {key for key, count in counts.items() if count > 1}
     return result
+
+
+def catalog_row_counts(rows: list[dict]) -> Counter:
+    return Counter((row.get("section", "").casefold(), row.get("key", "")) for row in rows)
+
+
+def append_en_passthrough_rows(
+    output_path: str,
+    en_rows: list[IntRow],
+    catalog_files: OrderedDict,
+    stats: Counter,
+    audit: dict,
+) -> None:
+    rows = catalog_files.setdefault(output_path, [])
+    remaining_output = catalog_row_counts(rows)
+    en_counts = Counter((row.section.casefold(), row.key) for row in en_rows)
+    added = []
+    for en_row in en_rows:
+        key_pair = (en_row.section.casefold(), en_row.key)
+        if remaining_output[key_pair] > 0:
+            remaining_output[key_pair] -= 1
+            continue
+        row = make_literal_row(
+            en_row.section,
+            en_row.key,
+            en_row.value,
+            f"{output_path} [{en_row.section}] {en_row.key}",
+            stats,
+            en_counts[key_pair] > 1 or catalog_row_counts(rows)[key_pair] > 0,
+        )
+        rows.append(row)
+        added.append(
+            OrderedDict(
+                [
+                    ("section", en_row.section),
+                    ("key", en_row.key),
+                    ("line", en_row.line_no),
+                ]
+            )
+        )
+        stats["en_passthrough_literal_rows"] += 1
+    if added:
+        audit.setdefault("en_passthrough_literals", OrderedDict())[output_path] = added
+
+
+def validate_catalog_covers_en_runtime(catalog_files: OrderedDict, en_outputs: dict[str, list[IntRow]], audit: dict) -> None:
+    coverage = OrderedDict()
+    missing_total = 0
+    for output_path, en_rows in sorted(en_outputs.items()):
+        expected = Counter((row.section.casefold(), row.key) for row in en_rows)
+        actual = catalog_row_counts(catalog_files.get(output_path, []))
+        missing = []
+        for key_pair, count in sorted(expected.items()):
+            gap = count - actual.get(key_pair, 0)
+            if gap > 0:
+                missing_total += gap
+                section_key = next((row for row in en_rows if (row.section.casefold(), row.key) == key_pair), None)
+                missing.append(
+                    OrderedDict(
+                        [
+                            ("section", section_key.section if section_key else key_pair[0]),
+                            ("key", section_key.key if section_key else key_pair[1]),
+                            ("missing_occurrences", gap),
+                        ]
+                    )
+                )
+        coverage[output_path] = OrderedDict(
+            [
+                ("en_rows", sum(expected.values())),
+                ("catalog_rows", sum(actual.values())),
+                ("missing_rows", sum(item["missing_occurrences"] for item in missing)),
+                ("missing", missing[:50]),
+            ]
+        )
+    audit["catalog_en_runtime_coverage"] = OrderedDict(
+        [
+            ("files", len(coverage)),
+            ("missing_rows", missing_total),
+            ("by_file", coverage),
+        ]
+    )
+    if missing_total:
+        fail(f"catalog output misses {missing_total} EN runtime row occurrences; see catalog_en_runtime_coverage")
 
 
 def emit_error_reason_code(message: str) -> str:
@@ -1405,8 +1644,22 @@ def make_validation_translation(translation):
 
 
 def run_build_validation(temp_json: Path, temp_catalog: Path):
+    validation_out = TEMP_EXPORT_ROOT / "build_validation"
+    if validation_out.exists():
+        shutil.rmtree(validation_out)
     proc = subprocess.run(
-        [sys.executable, "-X", "utf8", str(ROOT_DIR / "tools" / "build_langpack.py"), "--json", str(temp_json), "--catalog", str(temp_catalog)],
+        [
+            sys.executable,
+            "-X",
+            "utf8",
+            str(ROOT_DIR / "tools" / "build_langpack.py"),
+            "--json",
+            str(temp_json),
+            "--catalog",
+            str(temp_catalog),
+            "--out",
+            str(validation_out),
+        ],
         cwd=ROOT_DIR,
         text=True,
         encoding="utf-8",
@@ -1416,11 +1669,10 @@ def run_build_validation(temp_json: Path, temp_catalog: Path):
     )
     if proc.returncode != 0:
         fail(f"build_langpack.py validation failed:\n{proc.stdout[-4000:]}")
-    build_dir = ROOT_DIR / "build"
-    manifest_path = build_dir / "manifest.json"
+    manifest_path = validation_out / "manifest.json"
     if not manifest_path.exists():
-        fail("build_langpack.py validation did not produce build/manifest.json")
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        fail("build_langpack.py validation did not produce validation manifest.json")
+    manifest = load_json_text(manifest_path.read_text(encoding="utf-8"))
     files = manifest.get("files", [])
     summary = OrderedDict(
         [
@@ -1429,11 +1681,12 @@ def run_build_validation(temp_json: Path, temp_catalog: Path):
             ("total_entries", sum(int(item.get("entries", 0)) for item in files)),
             ("total_bytes", sum(int(item.get("bytes", 0)) for item in files)),
             ("untranslated_fallbacks", int(manifest.get("untranslated_fallbacks", 0))),
+            ("bare_upgraded_to_quoted", int(manifest.get("bare_upgraded_to_quoted", 0))),
             ("stdout_lines", len(proc.stdout.splitlines())),
         ]
     )
-    if build_dir.exists():
-        shutil.rmtree(build_dir)
+    if validation_out.exists():
+        shutil.rmtree(validation_out)
     return summary
 
 
@@ -1492,6 +1745,7 @@ def main(argv=None):
     allocator = EntryAllocator(existing_translation)
     translation = OrderedDict([("schema", TRANSLATION_SCHEMA)])
     catalog_files = OrderedDict()
+    en_outputs = OrderedDict()
     t3d_cache = {}
     t3d_temp = TEMP_EXPORT_ROOT / "t3d"
     if t3d_temp.exists():
@@ -1504,6 +1758,8 @@ def main(argv=None):
         output_file_name = en_info["path"].name if en_info else jp_path.name
         output_path = f"GameData/System/{output_file_name}"
         file_stem = Path(output_file_name).stem
+        if en_info:
+            en_outputs[output_path] = en_info["rows"]
 
         if name.startswith("subtitles_") and en_info:
             process_subtitle_file(
@@ -1621,6 +1877,9 @@ def main(argv=None):
                 )
                 stats["skipped_emit_error"] += 1
 
+        if en_info:
+            append_en_passthrough_rows(output_path, en_info["rows"], catalog_files, stats, audit)
+
     translation = merge_shared_en_jp_entries(
         translation,
         catalog_files,
@@ -1629,6 +1888,7 @@ def main(argv=None):
         args.reset_translations,
         audit,
     )
+    validate_catalog_covers_en_runtime(catalog_files, en_outputs, audit)
 
     catalog = OrderedDict(
         [
@@ -1645,7 +1905,18 @@ def main(argv=None):
     audit["stats"]["translation_groups"] = len(translation) - 1
     audit["stats"]["translation_entries"] = sum(len(v) for k, v in translation.items() if k != "schema")
     audit["stats"]["skipped_entries"] = len(skipped)
-    for stat_key in ("preserved_zh_CN", "new_blank_zh_CN", "reset_zh_CN", "preserved_translation_with_jp_change"):
+    for stat_key in (
+        "preserved_zh_CN",
+        "new_blank_zh_CN",
+        "reset_zh_CN",
+        "preserved_translation_with_jp_change",
+        "restored_from_shared",
+        "en_passthrough_literal_rows",
+        "passthrough_literal_normalized",
+        "empty_english_literal_rows",
+        "credits_jp_en_literal_rows",
+        "subtitle_passthrough_literal_rows",
+    ):
         audit["stats"].setdefault(stat_key, 0)
     audit["stats"]["skipped_policy"] = "allow-skipped" if args.allow_skipped else "strict"
     normalize_subtitle_remap_summary(audit)
@@ -1656,7 +1927,7 @@ def main(argv=None):
     validate_generated(translation, catalog)
 
     EXPORT_DIR.mkdir(parents=True, exist_ok=True)
-    write_json(TRANSLATION_JSON, translation)
+    write_translation_json(translation)
     write_json(CATALOG_JSON, catalog)
     write_json(
         JP_ONLY_SKIPPED_JSON,

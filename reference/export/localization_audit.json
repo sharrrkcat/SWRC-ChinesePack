@@ -1,6 +1,6 @@
 {
   "tool": "make_translation_json.py",
-  "generated_at": "2026-07-09T19:51:02.315171+00:00",
+  "generated_at": "2026-07-10T06:41:06.619711+00:00",
   "input_roots": {
     "english_system": "../../GameData/System",
     "english_properties": "../../GameData/Properties",
@@ -8,36 +8,42 @@
     "japanese_system": "../JapanesePack/System"
   },
   "stats": {
-    "emit_literal": 440,
-    "emit_string": 6375,
+    "credits_jp_en_literal_rows": 250,
+    "emit_literal": 702,
+    "emit_string": 6125,
     "emit_template": 110,
-    "emit_tuple": 77,
+    "emit_tuple": 80,
+    "empty_english_literal_rows": 12,
+    "en_passthrough_literal_rows": 51,
     "literal_rows": 440,
     "merge_conflicts": 0,
-    "merge_saved_entries": 3811,
-    "merged_en_jp_groups": 690,
-    "merged_translation_entries": 4501,
-    "new_blank_zh_CN": 4501,
-    "shared_translation_entries": 690,
-    "skipped_emit_error": 17,
+    "merge_saved_entries": 3815,
+    "merged_en_jp_groups": 691,
+    "merged_translation_entries": 4506,
+    "new_blank_zh_CN": 4506,
+    "passthrough_literal_normalized": 2,
+    "shared_translation_entries": 691,
+    "skipped_emit_error": 2,
     "skipped_no_source": 1682,
-    "source_class_default": 2450,
-    "source_english_int": 2643,
+    "source_class_default": 2455,
+    "source_english_int": 2653,
     "source_levelinfo_default": 56,
     "source_map_t3d_or_default": 1853,
-    "string_entries": 6375,
+    "string_entries": 6125,
     "subtitle_pairs": 5975,
     "template_entries": 270,
-    "tuple_entries": 370,
+    "tuple_entries": 379,
     "jp_files": 147,
     "en_files": 76,
     "catalog_files": 146,
     "translation_groups": 635,
-    "translation_entries": 9179,
-    "skipped_entries": 1699,
+    "translation_entries": 8934,
+    "skipped_entries": 1684,
     "preserved_zh_CN": 0,
     "reset_zh_CN": 0,
     "preserved_translation_with_jp_change": 0,
+    "restored_from_shared": 0,
+    "subtitle_passthrough_literal_rows": 0,
     "skipped_policy": "allow-skipped"
   },
   "pseudo_comment_keys": [
@@ -381,6 +387,271 @@
   ],
   "loaded_class_count": 1931,
   "class_count": 1931,
+  "en_passthrough_literals": {
+    "GameData/System/alaudio.int": [
+      {
+        "section": "Public",
+        "key": "Preferences+",
+        "line": 3
+      }
+    ],
+    "GameData/System/credits.int": [
+      {
+        "section": "Credits",
+        "key": "CreditsLine[590]",
+        "line": 660
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_Xbox[595]",
+        "line": 665
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine[596]",
+        "line": 666
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_Xbox[601]",
+        "line": 671
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine[614]",
+        "line": 684
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_Xbox[619]",
+        "line": 689
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[660]",
+        "line": 732
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[661]",
+        "line": 733
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[662]",
+        "line": 734
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[663]",
+        "line": 735
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[664]",
+        "line": 736
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[665]",
+        "line": 737
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[666]",
+        "line": 738
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[667]",
+        "line": 739
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[674]",
+        "line": 748
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[675]",
+        "line": 749
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[676]",
+        "line": 750
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[677]",
+        "line": 751
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[678]",
+        "line": 753
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[679]",
+        "line": 754
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[680]",
+        "line": 755
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[681]",
+        "line": 756
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[682]",
+        "line": 757
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[683]",
+        "line": 758
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[684]",
+        "line": 759
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[685]",
+        "line": 760
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[686]",
+        "line": 761
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[687]",
+        "line": 762
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[688]",
+        "line": 763
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[689]",
+        "line": 764
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[690]",
+        "line": 765
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[691]",
+        "line": 766
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[692]",
+        "line": 767
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[693]",
+        "line": 768
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[694]",
+        "line": 769
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[695]",
+        "line": 770
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[696]",
+        "line": 771
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[697]",
+        "line": 772
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[698]",
+        "line": 773
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[699]",
+        "line": 774
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[700]",
+        "line": 775
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[701]",
+        "line": 776
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[702]",
+        "line": 777
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[703]",
+        "line": 778
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[704]",
+        "line": 779
+      },
+      {
+        "section": "Credits",
+        "key": "CreditsLine_PC[705]",
+        "line": 780
+      }
+    ],
+    "GameData/System/setup.int": [
+      {
+        "section": "General",
+        "key": "InstallQFE",
+        "line": 50
+      },
+      {
+        "section": "IDDIALOG_FilerPageWelcome",
+        "key": "IDC_WelcomePromptUpdate",
+        "line": 63
+      }
+    ],
+    "GameData/System/xmaplist.int": [
+      {
+        "section": "Public",
+        "key": "Map+",
+        "line": 38
+      },
+      {
+        "section": "Public",
+        "key": "Map+",
+        "line": 40
+      }
+    ]
+  },
   "map_exports": {
     "epilogue.ctm": {
       "t3d_bytes": 377865,
@@ -7057,6 +7328,152 @@
       }
     }
   ],
+  "subtitle_pairing": {
+    "subtitles_.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_all_mp.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_epilogue.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_01.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_01_hangar.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_01Briefing.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_03.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_04.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_04Briefing.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_geo_05.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_pro.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_ras_01.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_ras_01Briefing.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_ras_02.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_ras_03.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_ras_04.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_01.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_01Briefing.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_03.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_03Briefing.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_04.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_04Briefing.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_05.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    },
+    "subtitles_yyy_06.int": {
+      "en_sound_without_text": 0,
+      "en_text_without_sound": 0,
+      "jp_sound_without_text": 0,
+      "jp_text_without_sound": 0
+    }
+  },
   "subtitle_remap_summary": {
     "subtitle_files": 24,
     "files_with_remaps": 22,
@@ -7209,10 +7626,10 @@
   },
   "shared_en_jp_merge": {
     "group": "shared.enjp",
-    "merged_groups": 690,
-    "merged_entries": 4501,
-    "saved_entries": 3811,
-    "shared_entries": 690,
+    "merged_groups": 691,
+    "merged_entries": 4506,
+    "saved_entries": 3815,
+    "shared_entries": 691,
     "sample_groups": [
       {
         "entry": "shared.enjp/100001",
@@ -7281,34 +7698,6 @@
           "XinterfaceGamespy.GameSpyFilters/16"
         ],
         "note": "No / 6 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100008",
-        "count": 2,
-        "sample_refs": [
-          "credits.Credits/93",
-          "credits.Credits/112"
-        ],
-        "note": "CreditsLine[93] / 2 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100009",
-        "count": 2,
-        "sample_refs": [
-          "credits.Credits/181",
-          "credits.Credits/210"
-        ],
-        "note": "CreditsLine[181] / 2 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100010",
-        "count": 9,
-        "sample_refs": [
-          "credits.Credits/207",
-          "hints.Hints/32",
-          "hints.Hints/33"
-        ],
-        "note": "CreditsLine[207] / 9 occurrences"
       },
       {
         "entry": "shared.enjp/100011",
@@ -7703,15 +8092,501 @@
           "GEO_01C.BreachDoorGeo17/1"
         ],
         "note": "ActivatePromptText / 69 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100051",
+        "count": 2,
+        "sample_refs": [
+          "ctgame.CTDamageBallistic/1",
+          "properties.CTDamageBallisticDC17SniperCommando/1"
+        ],
+        "note": "DeathString / 2 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100052",
+        "count": 3,
+        "sample_refs": [
+          "ctgame.CTDamageElectricity/1",
+          "ctgame.CTDamageExplosion/1",
+          "ctgame.CTDamageStun/3"
+        ],
+        "note": "DeathString / 3 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100053",
+        "count": 35,
+        "sample_refs": [
+          "ctgame.HackTerminal/1",
+          "GEO_03D.HackTerminalGeo4/1",
+          "GEO_03D.HackTerminalGeo5/1"
+        ],
+        "note": "ActivatePromptText / 35 occurrences"
       }
     ]
+  },
+  "catalog_en_runtime_coverage": {
+    "files": 75,
+    "missing_rows": 0,
+    "by_file": {
+      "GameData/System/alaudio.int": {
+        "en_rows": 3,
+        "catalog_rows": 3,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/core.int": {
+        "en_rows": 77,
+        "catalog_rows": 77,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/credits.int": {
+        "en_rows": 706,
+        "catalog_rows": 706,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ct.int": {
+        "en_rows": 4,
+        "catalog_rows": 4,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_detention.int": {
+        "en_rows": 37,
+        "catalog_rows": 37,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_engine.int": {
+        "en_rows": 38,
+        "catalog_rows": 38,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_hangar.int": {
+        "en_rows": 35,
+        "catalog_rows": 35,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_hanginggarden.int": {
+        "en_rows": 46,
+        "catalog_rows": 46,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_pow.int": {
+        "en_rows": 42,
+        "catalog_rows": 42,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_siege.int": {
+        "en_rows": 31,
+        "catalog_rows": 31,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_trando.int": {
+        "en_rows": 43,
+        "catalog_rows": 43,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_underpass.int": {
+        "en_rows": 33,
+        "catalog_rows": 33,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctf_zerog.int": {
+        "en_rows": 38,
+        "catalog_rows": 38,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/d3ddrv.int": {
+        "en_rows": 6,
+        "catalog_rows": 6,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_canyon.int": {
+        "en_rows": 18,
+        "catalog_rows": 18,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_detention.int": {
+        "en_rows": 31,
+        "catalog_rows": 31,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_engine.int": {
+        "en_rows": 32,
+        "catalog_rows": 32,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_hangar.int": {
+        "en_rows": 29,
+        "catalog_rows": 29,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_hanginggarden.int": {
+        "en_rows": 40,
+        "catalog_rows": 40,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_pow.int": {
+        "en_rows": 36,
+        "catalog_rows": 36,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_powsmall.int": {
+        "en_rows": 16,
+        "catalog_rows": 16,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_siege.int": {
+        "en_rows": 25,
+        "catalog_rows": 25,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_trando.int": {
+        "en_rows": 37,
+        "catalog_rows": 37,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_underpass.int": {
+        "en_rows": 27,
+        "catalog_rows": 27,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/dm_zerog.int": {
+        "en_rows": 32,
+        "catalog_rows": 32,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/editor.int": {
+        "en_rows": 140,
+        "catalog_rows": 140,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/engine.int": {
+        "en_rows": 134,
+        "catalog_rows": 511,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/geo_titlecard.int": {
+        "en_rows": 21,
+        "catalog_rows": 21,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/hints.int": {
+        "en_rows": 150,
+        "catalog_rows": 150,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ipdrv.int": {
+        "en_rows": 31,
+        "catalog_rows": 31,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/levelloadinginfo.int": {
+        "en_rows": 340,
+        "catalog_rows": 340,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ras_titlecard.int": {
+        "en_rows": 26,
+        "catalog_rows": 26,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setup.int": {
+        "en_rows": 110,
+        "catalog_rows": 110,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setupwarfare-ihv.int": {
+        "en_rows": 19,
+        "catalog_rows": 19,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setupwarfare.int": {
+        "en_rows": 38,
+        "catalog_rows": 38,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setupwarfarecodedrop.int": {
+        "en_rows": 38,
+        "catalog_rows": 38,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setupwarfareumod.int": {
+        "en_rows": 2,
+        "catalog_rows": 2,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setupwarfarexbox.int": {
+        "en_rows": 2,
+        "catalog_rows": 2,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/setupwarfarexboxship.int": {
+        "en_rows": 2,
+        "catalog_rows": 2,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/startup.int": {
+        "en_rows": 24,
+        "catalog_rows": 24,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_.int": {
+        "en_rows": 5856,
+        "catalog_rows": 5856,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_all_mp.int": {
+        "en_rows": 786,
+        "catalog_rows": 786,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_epilogue.int": {
+        "en_rows": 40,
+        "catalog_rows": 40,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_01.int": {
+        "en_rows": 666,
+        "catalog_rows": 666,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_01_hangar.int": {
+        "en_rows": 2,
+        "catalog_rows": 2,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_01briefing.int": {
+        "en_rows": 50,
+        "catalog_rows": 50,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_03.int": {
+        "en_rows": 460,
+        "catalog_rows": 460,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_04.int": {
+        "en_rows": 382,
+        "catalog_rows": 382,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_04briefing.int": {
+        "en_rows": 28,
+        "catalog_rows": 28,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_geo_05.int": {
+        "en_rows": 272,
+        "catalog_rows": 272,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_pro.int": {
+        "en_rows": 78,
+        "catalog_rows": 78,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_ras_01.int": {
+        "en_rows": 302,
+        "catalog_rows": 302,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_ras_01briefing.int": {
+        "en_rows": 52,
+        "catalog_rows": 52,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_ras_02.int": {
+        "en_rows": 336,
+        "catalog_rows": 336,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_ras_03.int": {
+        "en_rows": 308,
+        "catalog_rows": 308,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_ras_04.int": {
+        "en_rows": 390,
+        "catalog_rows": 390,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_01.int": {
+        "en_rows": 522,
+        "catalog_rows": 522,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_01briefing.int": {
+        "en_rows": 36,
+        "catalog_rows": 36,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_03.int": {
+        "en_rows": 198,
+        "catalog_rows": 198,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_03briefing.int": {
+        "en_rows": 16,
+        "catalog_rows": 16,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_04.int": {
+        "en_rows": 496,
+        "catalog_rows": 496,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_04briefing.int": {
+        "en_rows": 42,
+        "catalog_rows": 42,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_05.int": {
+        "en_rows": 260,
+        "catalog_rows": 260,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/subtitles_yyy_06.int": {
+        "en_rows": 372,
+        "catalog_rows": 372,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/swrepubliccommando.int": {
+        "en_rows": 4,
+        "catalog_rows": 4,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/unrealed.int": {
+        "en_rows": 1,
+        "catalog_rows": 1,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/uweb.int": {
+        "en_rows": 2,
+        "catalog_rows": 2,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/window.int": {
+        "en_rows": 57,
+        "catalog_rows": 57,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/windrv.int": {
+        "en_rows": 14,
+        "catalog_rows": 14,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/xgamelist.int": {
+        "en_rows": 4,
+        "catalog_rows": 4,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/xgames.int": {
+        "en_rows": 5,
+        "catalog_rows": 5,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/xmaplist.int": {
+        "en_rows": 20,
+        "catalog_rows": 20,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/xmaplist_patched.int": {
+        "en_rows": 20,
+        "catalog_rows": 20,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/xmaps.int": {
+        "en_rows": 12,
+        "catalog_rows": 12,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/yyy_titlecard.int": {
+        "en_rows": 26,
+        "catalog_rows": 26,
+        "missing_rows": 0,
+        "missing": []
+      }
+    }
   },
   "build_validation": {
     "ok": true,
     "generated_files": 146,
-    "total_entries": 18952,
-    "total_bytes": 592309,
+    "total_entries": 19018,
+    "total_bytes": 599277,
     "untranslated_fallbacks": 0,
+    "bare_upgraded_to_quoted": 0,
     "stdout_lines": 147
   }
 }

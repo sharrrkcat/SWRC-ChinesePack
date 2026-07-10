@@ -6,6 +6,7 @@
 输出到 build/：
     py -X utf8 tools/build_langpack.py
     py -X utf8 tools/build_langpack.py --json translation.json --catalog reference/export/localization_catalog.json
+    py -X utf8 tools/build_langpack.py --out D:/tmp/swrc-build
 
 本工具只生成文件，不写入游戏目录，不做还原。
 """
@@ -24,8 +25,10 @@ TOOL_NAME = "build_langpack.py"
 TRANSLATION_SCHEMA = 2
 CATALOG_SCHEMA = 1
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 ROOT_DIR = SCRIPT_DIR.parent
-BUILD_DIR = ROOT_DIR / "build"
+DEFAULT_BUILD_DIR = ROOT_DIR / "build"
 DEFAULT_JSON = "translation.json"
 DEFAULT_CATALOG = "reference/export/localization_catalog.json"
 
@@ -36,11 +39,7 @@ PRINTF_RE = re.compile(
     r"%(?!%)(?:\d+\$)?[-+#0]*(?:\*|\d+)?(?:\.(?:\*|\d+))?"
     r"(?:hh|h|ll|l|L)?([A-Za-z])"
 )
-FALLBACK_REPLACEMENTS = {
-    "\u00a0": " ",
-    "©": "(C)",
-    "É": "E",
-}
+from localization_common import FALLBACK_REPLACEMENTS, normalize_fallback_text
 
 
 class BuildError(Exception):
@@ -62,17 +61,18 @@ def repo_relative(path):
         return str(path)
 
 
-def safe_build_path(rel_path):
+def safe_build_path(output_root, rel_path):
     rel = Path(rel_path)
     if rel.is_absolute():
         fail(f"拒绝绝对输出路径: {rel_path}")
     if any(part in ("", ".", "..") for part in rel.parts):
         fail(f"拒绝不安全输出路径: {rel_path}")
-    out = (BUILD_DIR / rel).resolve()
+    output_root = output_root.resolve()
+    out = (output_root / rel).resolve()
     try:
-        out.relative_to(BUILD_DIR.resolve())
+        out.relative_to(output_root)
     except ValueError:
-        fail(f"输出路径逃逸 build 目录: {rel_path}")
+        fail(f"输出路径逃逸输出目录: {rel_path}")
     return out
 
 
@@ -88,7 +88,6 @@ def ensure_text(label, value, allow_empty=True, allow_newlines=False):
 
 def quote_unreal(value):
     value = value.replace("\r\n", "\n").replace("\r", "\n").replace("\n", r"\n")
-    value = value.replace('"', r"\"")
     return f'"{value}"'
 
 
@@ -108,10 +107,22 @@ def format_text_value(value, style, label):
     fail(f"{label}: 未支持的文本输出样式 {style!r}")
 
 
-def format_translation_value(value, style, fallback, label):
-    if fallback and style == "bare" and "=" in value:
+def bare_needs_quoted(value):
+    return (
+        "=" in value
+        or '"' in value
+        or value != value.strip()
+        or value.startswith("(")
+        or value.startswith('"')
+    )
+
+
+def format_translation_value(value, style, label):
+    upgraded = False
+    if style == "bare" and bare_needs_quoted(value):
         style = "quoted"
-    return format_text_value(value, style, label)
+        upgraded = True
+    return format_text_value(value, style, label), upgraded
 
 
 def printf_types(value):
@@ -119,19 +130,28 @@ def printf_types(value):
 
 
 def normalize_untranslated_fallback(value):
-    for old, new in FALLBACK_REPLACEMENTS.items():
-        value = value.replace(old, new)
-    return value
+    return normalize_fallback_text(value)
 
 
 def load_json_file(path, label):
     try:
         text = path.read_text(encoding="utf-8-sig")
-        return json.loads(text)
+        return json.loads(text, object_pairs_hook=reject_duplicate_json_keys)
     except FileNotFoundError:
         fail(f"找不到{label}: {repo_relative(path)}")
     except json.JSONDecodeError as e:
         fail(f"{repo_relative(path)}: JSON 解析失败: {e}")
+    except ValueError as e:
+        fail(f"{repo_relative(path)}: JSON 解析失败: {e}")
+
+
+def reject_duplicate_json_keys(pairs):
+    result = OrderedDict()
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"重复 JSON key: {key!r}")
+        result[key] = value
+    return result
 
 
 def parse_entry_ref(ref, label):
@@ -266,6 +286,7 @@ def render_template_parts(parts, translations, used_refs, allow_untranslated, la
         fail(f"{label}: template 行缺少非空 parts")
     rendered = []
     fallback_count = 0
+    bare_upgrade_count = 0
     for part_index, part in enumerate(parts):
         part_label = f"{label}.parts[{part_index}]"
         if isinstance(part, str):
@@ -282,16 +303,20 @@ def render_template_parts(parts, translations, used_refs, allow_untranslated, la
         text, fallback = resolve_translation(
             ref, expected_printf, translations, used_refs, allow_untranslated, part_label
         )
-        rendered.append(format_translation_value(text, part.get("style", "quoted"), fallback, part_label))
+        rendered_value, upgraded = format_translation_value(text, part.get("style", "quoted"), part_label)
+        rendered.append(rendered_value)
         if fallback:
             fallback_count += 1
-    return "".join(rendered), fallback_count
+        if upgraded:
+            bare_upgrade_count += 1
+    return "".join(rendered), fallback_count, bare_upgrade_count
 
 
 def collect_outputs(catalog_files, translations, allow_untranslated):
     files = OrderedDict()
     used_refs = set()
     total_fallbacks = 0
+    total_bare_upgrades = 0
 
     for raw_path, rows in catalog_files.items():
         rel_path = validate_output_path(raw_path)
@@ -305,6 +330,7 @@ def collect_outputs(catalog_files, translations, allow_untranslated):
                 "seen_keys": set(),
                 "row_count": 0,
                 "fallback_count": 0,
+                "bare_upgrade_count": 0,
             },
         )
 
@@ -322,10 +348,13 @@ def collect_outputs(catalog_files, translations, allow_untranslated):
                 text, fallback = resolve_translation(
                     ref, expected_printf, translations, used_refs, allow_untranslated, row_label
                 )
-                value = format_translation_value(text, row.get("style", "quoted"), fallback, row_label)
+                value, upgraded = format_translation_value(text, row.get("style", "quoted"), row_label)
                 if fallback:
                     file_state["fallback_count"] += 1
                     total_fallbacks += 1
+                if upgraded:
+                    file_state["bare_upgrade_count"] += 1
+                    total_bare_upgrades += 1
                 add_output_line(file_state, section, key, value, bool(row.get("allow_duplicate", False)))
 
             elif row_type == "tuple":
@@ -354,12 +383,15 @@ def collect_outputs(catalog_files, translations, allow_untranslated):
                 add_output_line(file_state, section, key, value, bool(row.get("allow_duplicate", False)))
 
             elif row_type == "template":
-                value, fallback_count = render_template_parts(
+                value, fallback_count, bare_upgrade_count = render_template_parts(
                     row.get("parts"), translations, used_refs, allow_untranslated, row_label
                 )
                 if fallback_count:
                     file_state["fallback_count"] += fallback_count
                     total_fallbacks += fallback_count
+                if bare_upgrade_count:
+                    file_state["bare_upgrade_count"] += bare_upgrade_count
+                    total_bare_upgrades += bare_upgrade_count
                 add_output_line(file_state, section, key, value, bool(row.get("allow_duplicate", False)))
 
             else:
@@ -392,20 +424,21 @@ def collect_outputs(catalog_files, translations, allow_untranslated):
                 "data": data,
                 "entry_count": state["row_count"],
                 "untranslated_fallbacks": state["fallback_count"],
+                "bare_upgraded_to_quoted": state["bare_upgrade_count"],
             }
         )
 
-    return outputs, total_fallbacks
+    return outputs, total_fallbacks, total_bare_upgrades
 
 
-def build_dir_has_content():
-    return BUILD_DIR.exists() and any(BUILD_DIR.iterdir())
+def build_dir_has_content(output_root):
+    return output_root.exists() and any(output_root.iterdir())
 
 
-def prune_empty_dirs():
-    if not BUILD_DIR.exists():
+def prune_empty_dirs(output_root):
+    if not output_root.exists():
         return
-    dirs = [p for p in BUILD_DIR.rglob("*") if p.is_dir()]
+    dirs = [p for p in output_root.rglob("*") if p.is_dir()]
     for path in sorted(dirs, key=lambda p: len(p.parts), reverse=True):
         try:
             path.rmdir()
@@ -413,19 +446,19 @@ def prune_empty_dirs():
             pass
 
 
-def prepare_build_dir():
-    if not BUILD_DIR.exists():
-        BUILD_DIR.mkdir(parents=True)
+def prepare_build_dir(output_root):
+    if not output_root.exists():
+        output_root.mkdir(parents=True)
         return
-    manifest_path = BUILD_DIR / "manifest.json"
+    manifest_path = output_root / "manifest.json"
     if not manifest_path.exists():
-        if build_dir_has_content():
-            fail(f"{repo_relative(BUILD_DIR)} 已存在且没有 manifest.json，拒绝覆盖")
+        if build_dir_has_content(output_root):
+            fail(f"{repo_relative(output_root)} 已存在且没有 manifest.json，拒绝覆盖")
         return
 
     try:
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as e:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"), object_pairs_hook=reject_duplicate_json_keys)
+    except (json.JSONDecodeError, ValueError) as e:
         fail(f"{repo_relative(manifest_path)} 解析失败，拒绝清理: {e}")
     files = manifest.get("files")
     if not isinstance(files, list):
@@ -433,19 +466,19 @@ def prepare_build_dir():
     for item in files:
         if not isinstance(item, dict) or "path" not in item:
             fail(f"{repo_relative(manifest_path)} 含非法文件记录，拒绝清理")
-        path = safe_build_path(item["path"])
+        path = safe_build_path(output_root, item["path"])
         if path.exists():
             if not path.is_file():
                 fail(f"manifest 记录不是文件，拒绝删除: {repo_relative(path)}")
             path.unlink()
     manifest_path.unlink()
-    prune_empty_dirs()
+    prune_empty_dirs(output_root)
 
 
-def write_outputs(outputs, json_path, catalog_path, allow_untranslated, total_fallbacks):
+def write_outputs(outputs, json_path, catalog_path, output_root, allow_untranslated, total_fallbacks, total_bare_upgrades):
     manifest_files = []
     for output in outputs:
-        out_path = safe_build_path(output["rel_path"])
+        out_path = safe_build_path(output_root, output["rel_path"])
         if out_path.exists():
             fail(f"输出文件已存在且不在旧 manifest 清理范围内: {repo_relative(out_path)}")
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -459,6 +492,7 @@ def write_outputs(outputs, json_path, catalog_path, allow_untranslated, total_fa
                 "sha256": sha256_bytes(data),
                 "entries": output["entry_count"],
                 "untranslated_fallbacks": output["untranslated_fallbacks"],
+                "bare_upgraded_to_quoted": output["bare_upgraded_to_quoted"],
             }
         )
 
@@ -484,8 +518,9 @@ def write_outputs(outputs, json_path, catalog_path, allow_untranslated, total_fa
         },
         "files": manifest_files,
         "untranslated_fallbacks": total_fallbacks,
+        "bare_upgraded_to_quoted": total_bare_upgrades,
     }
-    manifest_path = BUILD_DIR / "manifest.json"
+    manifest_path = output_root / "manifest.json"
     manifest_path.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -497,6 +532,7 @@ def parse_args(argv):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--json", default=DEFAULT_JSON, help=f"翻译 JSON，默认 {DEFAULT_JSON}")
     ap.add_argument("--catalog", default=DEFAULT_CATALOG, help=f"机器 catalog，默认 {DEFAULT_CATALOG}")
+    ap.add_argument("--out", default="build", help="输出目录，默认 build")
     ap.add_argument(
         "--allow-untranslated",
         action="store_true",
@@ -512,22 +548,41 @@ def resolve_input_path(path_text):
     return path.resolve()
 
 
+def resolve_output_path(path_text):
+    path = Path(path_text)
+    if not path.is_absolute():
+        path = ROOT_DIR / path
+    return path.resolve()
+
+
 def main(argv=None):
     args = parse_args(sys.argv[1:] if argv is None else argv)
     json_path = resolve_input_path(args.json)
     catalog_path = resolve_input_path(args.catalog)
+    output_root = resolve_output_path(args.out)
 
     _, translations = load_translation(json_path)
     _, catalog_files = load_catalog(catalog_path)
-    outputs, total_fallbacks = collect_outputs(catalog_files, translations, args.allow_untranslated)
+    outputs, total_fallbacks, total_bare_upgrades = collect_outputs(catalog_files, translations, args.allow_untranslated)
     if not outputs:
         fail("catalog 没有可生成的输出")
-    prepare_build_dir()
-    manifest = write_outputs(outputs, json_path, catalog_path, args.allow_untranslated, total_fallbacks)
-    print(f"已生成 {len(manifest['files'])} 个文件到 {repo_relative(BUILD_DIR)}")
+    prepare_build_dir(output_root)
+    manifest = write_outputs(
+        outputs,
+        json_path,
+        catalog_path,
+        output_root,
+        args.allow_untranslated,
+        total_fallbacks,
+        total_bare_upgrades,
+    )
+    print(f"已生成 {len(manifest['files'])} 个文件到 {repo_relative(output_root)}")
     for item in manifest["files"]:
         fallback = item.get("untranslated_fallbacks", 0)
+        bare_upgrades = item.get("bare_upgraded_to_quoted", 0)
         suffix = f", {fallback} 条回退英文" if fallback else ""
+        if bare_upgrades:
+            suffix += f", {bare_upgrades} 条 bare 自动加引号"
         print(f"  {item['path']} ({item['entries']} 行, {item['bytes']} 字节{suffix})")
 
 

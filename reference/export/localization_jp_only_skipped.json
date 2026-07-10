@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-07-09T19:54:01.578294+00:00",
+  "generated_at": "2026-07-10T06:44:08.974212+00:00",
   "summary": {
-    "total": 1699,
+    "total": 1684,
     "by_reason_code": {
-      "empty_english_source": 12,
-      "jp_tuple_item_count_mismatch": 5,
+      "jp_tuple_item_count_mismatch": 2,
       "no_english_runtime_source": 1682
     },
     "by_file": {
       "Credits.int": 150,
-      "D3DDrv.int": 1,
       "GEO_01A.int": 3,
       "GEO_01B.int": 13,
       "GEO_01C.int": 4,
@@ -38,12 +36,11 @@
       "RAS_04B.int": 69,
       "RAS_04C.int": 98,
       "RAS_04D.int": 16,
-      "Startup.int": 4,
       "Winddrv.int": 14,
       "Xinterface.int": 4,
       "XinterfaceCtmenus.int": 14,
       "XinterfaceLive.int": 2,
-      "XinterfaceMP.int": 6,
+      "XinterfaceMP.int": 3,
       "Xinterfacecommon.int": 3,
       "YYY_01B.int": 19,
       "YYY_01C.int": 16,
@@ -67,8 +64,7 @@
       "YYY_35A.int": 17,
       "YYY_35B.int": 58,
       "YYY_35C.int": 23,
-      "ctinventory.int": 2,
-      "engine.int": 6,
+      "engine.int": 1,
       "mpgame.int": 15
     }
   },
@@ -1422,78 +1418,6 @@
       "key": "CreditsLine_PC[809]",
       "jp_value": "\"(XML PARSER TOOLKIT).\"",
       "reason": "no English runtime source found"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "ctinventory.int",
-      "line": 141,
-      "section": "FlashBang",
-      "key": "MessageNoAmmo",
-      "jp_value": "\" チャージなし\"",
-      "reason": "ctinventory.FlashBang/MessageNoAmmo: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "ctinventory.int",
-      "line": 281,
-      "section": "ThermalDetonator",
-      "key": "MessageNoAmmo",
-      "jp_value": "\" チャージなし\"",
-      "reason": "ctinventory.ThermalDetonator/MessageNoAmmo: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "D3DDrv.int",
-      "line": 9,
-      "section": "D3DRenderDevice",
-      "key": "AskUse",
-      "jp_value": "",
-      "reason": "d3ddrv.D3DRenderDevice/AskUse: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "engine.int",
-      "line": 87,
-      "section": "Menu",
-      "key": "HelpMessage",
-      "jp_value": "",
-      "reason": "engine.Menu/HelpMessage: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "engine.int",
-      "line": 88,
-      "section": "Menu",
-      "key": "MenuList",
-      "jp_value": "",
-      "reason": "engine.Menu/MenuList: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "engine.int",
-      "line": 106,
-      "section": "WarpZoneInfo",
-      "key": "OtherSideURL",
-      "jp_value": "",
-      "reason": "engine.WarpZoneInfo/OtherSideURL: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "engine.int",
-      "line": 149,
-      "section": "Pickup",
-      "key": "ExpireMessage",
-      "jp_value": "",
-      "reason": "engine.Pickup/ExpireMessage: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "engine.int",
-      "line": 153,
-      "section": "SpecialEvent",
-      "key": "DamageString",
-      "jp_value": "",
-      "reason": "engine.SpecialEvent/DamageString: English source is empty"
     },
     {
       "reason_code": "no_english_runtime_source",
@@ -8255,42 +8179,6 @@
       "reason": "no English runtime source found"
     },
     {
-      "reason_code": "empty_english_source",
-      "file": "Startup.int",
-      "line": 10,
-      "section": "IDDIALOG_ConfigPageDetail",
-      "key": "IDC_ConfigPageDetail",
-      "jp_value": "",
-      "reason": "startup.IDDIALOG_ConfigPageDetail/IDC_ConfigPageDetail: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "Startup.int",
-      "line": 15,
-      "section": "IDDIALOG_ConfigPageFirstTime",
-      "key": "IDC_ConfigPageFirstTime",
-      "jp_value": "",
-      "reason": "startup.IDDIALOG_ConfigPageFirstTime/IDC_ConfigPageFirstTime: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "Startup.int",
-      "line": 19,
-      "section": "IDDIALOG_ConfigPageSafeMode",
-      "key": "IDC_ConfigPageSafeMode",
-      "jp_value": "",
-      "reason": "startup.IDDIALOG_ConfigPageSafeMode/IDC_ConfigPageSafeMode: English source is empty"
-    },
-    {
-      "reason_code": "empty_english_source",
-      "file": "Startup.int",
-      "line": 27,
-      "section": "IDDIALOG_ConfigPageSafeOptions",
-      "key": "IDC_ConfigPageSafeOptions",
-      "jp_value": "",
-      "reason": "startup.IDDIALOG_ConfigPageSafeOptions/IDC_ConfigPageSafeOptions: English source is empty"
-    },
-    {
       "reason_code": "no_english_runtime_source",
       "file": "Winddrv.int",
       "line": 2,
@@ -8649,33 +8537,6 @@
       "key": "Done.Blurred.Text",
       "jp_value": "\"完了\"",
       "reason": "no English runtime source found"
-    },
-    {
-      "reason_code": "jp_tuple_item_count_mismatch",
-      "file": "XinterfaceMP.int",
-      "line": 57,
-      "section": "MenuSplitscreenPlayers",
-      "key": "Options[0].Items",
-      "jp_value": "(\"プレイしない\",\"プレイ可能\\\",\"---\")",
-      "reason": "GameData/System/XinterfaceMP.int [MenuSplitscreenPlayers] Options[0].Items: JP tuple item count mismatch"
-    },
-    {
-      "reason_code": "jp_tuple_item_count_mismatch",
-      "file": "XinterfaceMP.int",
-      "line": 58,
-      "section": "MenuSplitscreenPlayers",
-      "key": "Options[1].Items",
-      "jp_value": "(\"プレイしない\",\"プレイ可能\\\",\"---\")",
-      "reason": "GameData/System/XinterfaceMP.int [MenuSplitscreenPlayers] Options[1].Items: JP tuple item count mismatch"
-    },
-    {
-      "reason_code": "jp_tuple_item_count_mismatch",
-      "file": "XinterfaceMP.int",
-      "line": 59,
-      "section": "MenuSplitscreenPlayers",
-      "key": "Options[2].Items",
-      "jp_value": "(\"プレイしない\",\"プレイ可能\\\",\"---\")",
-      "reason": "GameData/System/XinterfaceMP.int [MenuSplitscreenPlayers] Options[2].Items: JP tuple item count mismatch"
     },
     {
       "reason_code": "no_english_runtime_source",
