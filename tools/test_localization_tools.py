@@ -346,6 +346,7 @@ class LocalizationToolTests(unittest.TestCase):
         mtj.process_subtitle_file(
             jp_info,
             en_info,
+            {},
             "GameData/System/subtitles_test.int",
             catalog_files,
             translation,
@@ -373,6 +374,7 @@ class LocalizationToolTests(unittest.TestCase):
             "CreditsLine[0]",
             mtj.SourceValue(kind="string", raw='"© É"', text="© É", style="quoted"),
             '"© É"',
+            "",
             "credits",
             stats,
             False,
@@ -391,6 +393,7 @@ class LocalizationToolTests(unittest.TestCase):
                 "Empty",
                 mtj.SourceValue(kind="string", raw='"😀"', text="", style="quoted"),
                 '"JP"',
+                "",
                 "sample",
                 Counter(),
                 False,
@@ -410,9 +413,9 @@ class LocalizationToolTests(unittest.TestCase):
         allocator = mtj.EntryAllocator(existing)
         translation = OrderedDict([("schema", 2)])
         stats = Counter()
-        ref1 = mtj.add_translation_entry(translation, allocator, "g", "Normal", "Hello", "JP", None, None, stats, False)
-        ref2 = mtj.add_translation_entry(translation, allocator, "g", "Natural", "Door", "Door", "9", "Door", stats, False)
-        ref3 = mtj.add_translation_entry(translation, allocator, "other", "Split", "Shared", "共有", None, None, stats, False)
+        ref1 = mtj.add_translation_entry(translation, allocator, "g", "Normal", "Hello", "JP", "", None, None, stats, False)
+        ref2 = mtj.add_translation_entry(translation, allocator, "g", "Natural", "Door", "Door", "", "9", "Door", stats, False)
+        ref3 = mtj.add_translation_entry(translation, allocator, "other", "Split", "Shared", "共有", "", None, None, stats, False)
         self.assertEqual(ref1, "g/7")
         self.assertEqual(ref2, "g/9")
         self.assertEqual(translation["g"]["7"]["zh_CN"], "你好")

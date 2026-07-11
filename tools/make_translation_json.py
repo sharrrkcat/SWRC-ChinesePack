@@ -45,6 +45,25 @@ CATALOG_JSON = EXPORT_DIR / "localization_catalog.json"
 AUDIT_JSON = EXPORT_DIR / "localization_audit.json"
 JP_ONLY_SKIPPED_JSON = EXPORT_DIR / "localization_jp_only_skipped.json"
 
+SUPPLEMENTARY_EN_DIR = LANG_DIR / "TranslationPackFormOnline" / "English Files"
+DE_SYSTEM_DIR = LANG_DIR / "TranslationPackFormOnline" / "German Files"
+
+SUPPLEMENTARY_MENU_SECTIONS = {
+    "CTControllerOptionsPSMenu",
+    "CTControllerOptionsRemapPSMenu",
+    "CTGameOptionsPSMenu",
+    "CTHUDOptionsPSMenu",
+    "CTIncapLoadConfirmMenu",
+    "CTMissingContentMenu",
+    "CTOptionsPSMenu",
+    "CTPauseHintText",
+    "CTPausePSMenu",
+    "CTSoundGraphicsOptionsPSMenu",
+    "CTStartPCMenu",
+    "CTStartPSMenu",
+    "CT_PCDemo_Splash",
+}
+
 TEMP_EXPORT_ROOT = Path(os.environ.get("SWRC_EXPORT_TMP", "D:/swrc_localization_export_tmp"))
 
 PRINTF_RE = re.compile(
@@ -643,7 +662,7 @@ def export_level_t3d(map_file: Path, temp_root: Path, audit: dict):
 class EntryAllocator:
     def __init__(self, existing: dict | None = None):
         self.existing_by_sig = defaultdict(list)
-        self.existing_shared_by_en_jp = {}
+        self.existing_shared_by_ref_langs = {}
         self.reserved = defaultdict(set)
         self.used = defaultdict(set)
         self.next_id = defaultdict(lambda: 1)
@@ -659,8 +678,9 @@ class EntryAllocator:
                     if group == SHARED_GROUP:
                         en = item.get("en", "")
                         jp = item.get("jp", "")
-                        if isinstance(en, str) and isinstance(jp, str) and jp:
-                            self.existing_shared_by_en_jp.setdefault((en, jp), item)
+                        de = item.get("de", "")
+                        if isinstance(en, str) and (jp or de):
+                            self.existing_shared_by_ref_langs.setdefault((en, jp, de), item)
                     if str(entry_id).isdigit():
                         self.reserved[group].add(str(entry_id))
                         self.next_id[group] = max(self.next_id[group], int(entry_id) + 1)
@@ -745,6 +765,7 @@ def add_translation_entry(
     note: str,
     en: str,
     jp: str,
+    de: str,
     natural: str | None,
     natural_base: str | None,
     stats: Counter,
@@ -765,7 +786,7 @@ def add_translation_entry(
     previous = allocation.previous if isinstance(allocation.previous, dict) else None
     zh_cn = ""
     if previous is None:
-        old_shared = allocator.existing_shared_by_en_jp.get((en, jp))
+        old_shared = allocator.existing_shared_by_ref_langs.get((en, jp, de))
         old_zh = old_shared.get("zh_CN", "") if isinstance(old_shared, dict) else ""
         if not reset_translations and isinstance(old_zh, str) and old_zh:
             zh_cn = old_zh
@@ -796,6 +817,7 @@ def add_translation_entry(
             ("note", note),
             ("en", en),
             ("jp", jp),
+            ("de", de),
             ("zh_CN", zh_cn),
         ]
     )
@@ -825,7 +847,7 @@ def iter_catalog_entry_refs(catalog_files: OrderedDict):
                         yield part, "entry"
 
 
-def build_existing_shared_index(existing: dict | None) -> tuple[dict[tuple[str, str], tuple[str, dict]], set[str]]:
+def build_existing_shared_index(existing: dict | None) -> tuple[dict[tuple[str, str, str], tuple[str, dict]], set[str]]:
     by_key = {}
     reserved = set()
     if not existing:
@@ -840,8 +862,9 @@ def build_existing_shared_index(existing: dict | None) -> tuple[dict[tuple[str, 
         reserved.add(entry_id)
         en = item.get("en", "")
         jp = item.get("jp", "")
-        if isinstance(en, str) and isinstance(jp, str) and jp:
-            by_key.setdefault((en, jp), (entry_id, item))
+        de = item.get("de", "")
+        if isinstance(en, str) and (jp or de):
+            by_key.setdefault((en, jp, de), (entry_id, item))
     return by_key, reserved
 
 
@@ -872,8 +895,9 @@ def merge_shared_en_jp_entries(
     for ref, _group, _entry_id, item in entries:
         en = item.get("en", "")
         jp = item.get("jp", "")
-        if isinstance(en, str) and isinstance(jp, str) and jp:
-            clusters.setdefault((en, jp), []).append((ref, item))
+        de = item.get("de", "")
+        if isinstance(en, str) and (jp or de):
+            clusters.setdefault((en, jp, de), []).append((ref, item))
     clusters = OrderedDict((key, value) for key, value in clusters.items() if len(value) > 1)
 
     existing_shared, reserved_shared_ids = build_existing_shared_index(existing_translation)
@@ -882,7 +906,7 @@ def merge_shared_en_jp_entries(
     if reserved_shared_ids:
         next_shared_id = max(next_shared_id, max(int(value) for value in reserved_shared_ids) + 1)
 
-    def allocate_shared_id(key: tuple[str, str]) -> str:
+    def allocate_shared_id(key: tuple[str, str, str]) -> str:
         nonlocal next_shared_id
         existing = existing_shared.get(key)
         if existing:
@@ -904,7 +928,7 @@ def merge_shared_en_jp_entries(
     conflict_reports = []
 
     for key, refs_and_items in clusters.items():
-        en, jp = key
+        en, jp, de = key
         shared_id = allocate_shared_id(key)
         shared_ref = f"{SHARED_GROUP}/{shared_id}"
         zh_sources = []
@@ -948,6 +972,7 @@ def merge_shared_en_jp_entries(
                 ("note", note),
                 ("en", en),
                 ("jp", jp),
+                ("de", de),
                 ("zh_CN", zh_cn),
             ]
         )
@@ -1026,6 +1051,7 @@ def emit_from_source(
     key: str,
     source: SourceValue,
     jp_value: str,
+    de_value: str,
     file_stem: str,
     stats: Counter,
     reset_translations: bool,
@@ -1046,6 +1072,7 @@ def emit_from_source(
 
     if source.kind == "string":
         jp_text = unquote_unreal(jp_value) if jp_value.startswith('"') and jp_value.endswith('"') else jp_value
+        de_text = unquote_unreal(de_value) if de_value.startswith('"') and de_value.endswith('"') else de_value
         if source.text == "":
             row = make_literal_row(
                 section,
@@ -1077,6 +1104,7 @@ def emit_from_source(
             key,
             source.text or "",
             jp_text,
+            de_text,
             natural,
             natural_base,
             stats,
@@ -1101,6 +1129,7 @@ def emit_from_source(
 
     if source.kind == "tuple":
         jp_items = parse_quoted_tuple(jp_value) or []
+        de_items = parse_quoted_tuple(de_value) or []
         if source.items is None:
             fail(f"{output_path} [{section}] {key}: tuple source missing items")
         if jp_items and len(jp_items) != len(source.items):
@@ -1109,6 +1138,7 @@ def emit_from_source(
         for index, en_item in enumerate(source.items):
             note = f"{key}[{index}]"
             jp_item = jp_items[index] if index < len(jp_items) else ""
+            de_item = de_items[index] if index < len(de_items) else ""
             ref = add_translation_entry(
                 translation,
                 allocator,
@@ -1116,6 +1146,7 @@ def emit_from_source(
                 note,
                 en_item,
                 jp_item,
+                de_item,
                 None,
                 None,
                 stats,
@@ -1133,6 +1164,7 @@ def emit_from_source(
         if not source.template_fields:
             fail(f"{output_path} [{section}] {key}: template source missing fields")
         jp_fields = parse_template_texts(jp_value)
+        de_fields = parse_template_texts(de_value)
         source_field_counts = Counter(field for field, _start, _end, _text in source.template_fields)
         source_field_seen = Counter()
         parts = []
@@ -1146,6 +1178,8 @@ def emit_from_source(
                 note = f"{note}[{field_index}]"
             jp_values = jp_fields.get(field, [])
             jp_text = jp_values[field_index] if field_index < len(jp_values) else ""
+            de_values = de_fields.get(field, [])
+            de_text_val = de_values[field_index] if field_index < len(de_values) else ""
             ref = add_translation_entry(
                 translation,
                 allocator,
@@ -1153,6 +1187,7 @@ def emit_from_source(
                 note,
                 en_text,
                 jp_text,
+                de_text_val,
                 None,
                 None,
                 stats,
@@ -1287,6 +1322,7 @@ def normalize_subtitle_remap_summary(audit: dict) -> None:
 def process_subtitle_file(
     jp_info,
     en_info,
+    de_index: dict,
     output_path: str,
     catalog_files: OrderedDict,
     translation: OrderedDict,
@@ -1364,6 +1400,8 @@ def process_subtitle_file(
             duplicate_counts[(sound_row.section, sound_row.key)] > 1,
         )
         source = source_from_int_row(text_row)
+        de_sub_value = de_index.get((file_stem.casefold(), text_row.section.casefold(), text_row.key), "")
+        de_text = unquote_unreal(de_sub_value) if de_sub_value.startswith('"') and de_sub_value.endswith('"') else de_sub_value
         try:
             ref = add_translation_entry(
                 translation,
@@ -1372,6 +1410,7 @@ def process_subtitle_file(
                 text_row.key,
                 source.text or "",
                 jp_text,
+                de_text,
                 index,
                 "SubtitleText",
                 stats,
@@ -1695,6 +1734,108 @@ def cleanup_temp_root() -> None:
         shutil.rmtree(TEMP_EXPORT_ROOT)
 
 
+def process_supplementary_sources(
+    catalog_files,
+    translation,
+    allocator,
+    en_outputs,
+    de_index,
+    stats,
+    reset_translations,
+    audit,
+):
+    """Add supplementary EN sources beyond the JP index (forum language packs)."""
+    if not SUPPLEMENTARY_EN_DIR.exists():
+        return
+
+    def parse_supplementary_int(path):
+        try:
+            return parse_int_file(path, "utf-8")
+        except UnicodeDecodeError:
+            return parse_int_file(path, "cp1252")
+
+    supp_stats = OrderedDict()
+
+    # 1. ctmarkers.int — new file (Marker/Charge prompt texts)
+    ctmarkers_path = SUPPLEMENTARY_EN_DIR / "ctmarkers.int"
+    if ctmarkers_path.exists():
+        rows, _, _ = parse_supplementary_int(ctmarkers_path)
+        output_path = "GameData/System/ctmarkers.int"
+        file_stem = "ctmarkers"
+        count = 0
+        for row in rows:
+            source = source_from_int_row(row)
+            de_val = de_index.get((file_stem.casefold(), row.section.casefold(), row.key), "")
+            emit_from_source(
+                catalog_files, translation, allocator,
+                output_path, row.section, row.key, source,
+                "", de_val, file_stem, stats, reset_translations,
+            )
+            count += 1
+        en_outputs[output_path] = rows
+        supp_stats["ctmarkers"] = count
+
+    # 2. credits.int — extra CreditsLine entries beyond JP/Steam coverage
+    credits_path = SUPPLEMENTARY_EN_DIR / "credits.int"
+    credits_output = "GameData/System/credits.int"
+    if credits_path.exists() and credits_output in catalog_files:
+        existing_keys = {
+            (row.get("section", ""), row.get("key", ""))
+            for row in catalog_files[credits_output]
+        }
+        supp_rows, _, _ = parse_supplementary_int(credits_path)
+        count = 0
+        for row in supp_rows:
+            if not row.key.startswith("CreditsLine"):
+                continue
+            if (row.section, row.key) in existing_keys:
+                continue
+            catalog_files[credits_output].append(
+                make_literal_row(
+                    row.section, row.key, row.value,
+                    f"{credits_output} [{row.section}] {row.key}",
+                    stats,
+                )
+            )
+            existing_keys.add((row.section, row.key))
+            count += 1
+        if credits_output in en_outputs:
+            en_existing = {(r.section, r.key) for r in en_outputs[credits_output]}
+            en_outputs[credits_output].extend(
+                r for r in supp_rows
+                if r.key.startswith("CreditsLine") and (r.section, r.key) not in en_existing
+            )
+        supp_stats["credits_extra_lines"] = count
+
+    # 3. xinterfacectmenus.int — PS/Demo/PC sections not in JP index
+    menus_path = SUPPLEMENTARY_EN_DIR / "xinterfacectmenus.int"
+    menus_output = "GameData/System/XinterfaceCtmenus.int"
+    if menus_path.exists():
+        supp_rows, _, _ = parse_supplementary_int(menus_path)
+        file_stem = "XinterfaceCtmenus"
+        count = 0
+        extra_en = []
+        for row in supp_rows:
+            if row.section not in SUPPLEMENTARY_MENU_SECTIONS:
+                continue
+            source = source_from_int_row(row)
+            de_val = de_index.get(("xinterfacectmenus", row.section.casefold(), row.key), "")
+            emit_from_source(
+                catalog_files, translation, allocator,
+                menus_output, row.section, row.key, source,
+                "", de_val, file_stem, stats, reset_translations,
+            )
+            extra_en.append(row)
+            count += 1
+        if menus_output in en_outputs:
+            en_outputs[menus_output].extend(extra_en)
+        else:
+            en_outputs[menus_output] = extra_en
+        supp_stats["menu_ps_demo"] = count
+
+    audit["supplementary_sources"] = supp_stats
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skip-build-validation", action="store_true", help="只生成 JSON，不运行 build_langpack.py 临时校验")
@@ -1729,6 +1870,18 @@ def main(argv=None):
 
     jp_ints, pseudo_comments, malformed_jp = parse_all_ints(JP_SYSTEM_DIR, "cp932")
     en_ints, _en_pseudo, malformed_en = parse_all_ints(SYSTEM_DIR, "cp1252")
+    de_index = {}
+    if DE_SYSTEM_DIR.exists():
+        for det_path in sorted(DE_SYSTEM_DIR.glob("*.det"), key=lambda p: p.name.casefold()):
+            try:
+                rows, _, _ = parse_int_file(det_path, "utf-8")
+            except UnicodeDecodeError:
+                rows, _, _ = parse_int_file(det_path, "cp1252")
+            stem = det_path.stem.casefold()
+            for row in rows:
+                de_index[(stem, row.section.casefold(), row.key)] = row.value
+        stats["de_files"] = len(set(k[0] for k in de_index))
+        stats["de_entries"] = len(de_index)
     duplicate_keys = duplicate_keys_by_file(jp_ints)
     audit["pseudo_comment_keys"] = pseudo_comments
     audit["malformed_jp_rows"] = malformed_jp
@@ -1765,6 +1918,7 @@ def main(argv=None):
             process_subtitle_file(
                 jp_info,
                 en_info,
+                de_index,
                 output_path,
                 catalog_files,
                 translation,
@@ -1846,6 +2000,7 @@ def main(argv=None):
                 continue
 
             try:
+                de_val = de_index.get((file_stem.casefold(), source_section.casefold(), source_key), "")
                 emitted = emit_from_source(
                     catalog_files,
                     translation,
@@ -1855,6 +2010,7 @@ def main(argv=None):
                     source_key,
                     source,
                     row.value,
+                    de_val,
                     file_stem,
                     stats,
                     args.reset_translations,
@@ -1879,6 +2035,11 @@ def main(argv=None):
 
         if en_info:
             append_en_passthrough_rows(output_path, en_info["rows"], catalog_files, stats, audit)
+
+    process_supplementary_sources(
+        catalog_files, translation, allocator, en_outputs,
+        de_index, stats, args.reset_translations, audit,
+    )
 
     translation = merge_shared_en_jp_entries(
         translation,

@@ -1,6 +1,6 @@
 {
   "tool": "make_translation_json.py",
-  "generated_at": "2026-07-10T06:41:06.619711+00:00",
+  "generated_at": "2026-07-11T05:19:53.336933+00:00",
   "input_roots": {
     "english_system": "../../GameData/System",
     "english_properties": "../../GameData/Properties",
@@ -9,6 +9,8 @@
   },
   "stats": {
     "credits_jp_en_literal_rows": 250,
+    "de_entries": 16763,
+    "de_files": 103,
     "emit_literal": 702,
     "emit_string": 6125,
     "emit_template": 110,
@@ -17,27 +19,27 @@
     "en_passthrough_literal_rows": 51,
     "literal_rows": 440,
     "merge_conflicts": 0,
-    "merge_saved_entries": 3815,
-    "merged_en_jp_groups": 691,
-    "merged_translation_entries": 4506,
+    "merge_saved_entries": 3713,
+    "merged_en_jp_groups": 685,
+    "merged_translation_entries": 4398,
     "new_blank_zh_CN": 4506,
-    "passthrough_literal_normalized": 2,
-    "shared_translation_entries": 691,
+    "passthrough_literal_normalized": 7,
+    "shared_translation_entries": 685,
     "skipped_emit_error": 2,
     "skipped_no_source": 1682,
     "source_class_default": 2455,
     "source_english_int": 2653,
     "source_levelinfo_default": 56,
     "source_map_t3d_or_default": 1853,
-    "string_entries": 6125,
+    "string_entries": 6248,
     "subtitle_pairs": 5975,
     "template_entries": 270,
-    "tuple_entries": 379,
+    "tuple_entries": 464,
     "jp_files": 147,
     "en_files": 76,
-    "catalog_files": 146,
-    "translation_groups": 635,
-    "translation_entries": 8934,
+    "catalog_files": 147,
+    "translation_groups": 691,
+    "translation_entries": 9244,
     "skipped_entries": 1684,
     "preserved_zh_CN": 0,
     "reset_zh_CN": 0,
@@ -7624,12 +7626,17 @@
       }
     }
   },
+  "supplementary_sources": {
+    "ctmarkers": 18,
+    "credits_extra_lines": 435,
+    "menu_ps_demo": 120
+  },
   "shared_en_jp_merge": {
     "group": "shared.enjp",
-    "merged_groups": 691,
-    "merged_entries": 4506,
-    "saved_entries": 3815,
-    "shared_entries": 691,
+    "merged_groups": 685,
+    "merged_entries": 4398,
+    "saved_entries": 3713,
+    "shared_entries": 685,
     "sample_groups": [
       {
         "entry": "shared.enjp/100001",
@@ -7680,27 +7687,7 @@
         "note": "LocalProduct / 6 occurrences"
       },
       {
-        "entry": "shared.enjp/100006",
-        "count": 6,
-        "sample_refs": [
-          "core.General/6",
-          "Uwindow.UWindowMessageBoxCW/1",
-          "XinterfaceGamespy.GameSpyFilters/17"
-        ],
-        "note": "Yes / 6 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100007",
-        "count": 6,
-        "sample_refs": [
-          "core.General/7",
-          "Uwindow.UWindowMessageBoxCW/2",
-          "XinterfaceGamespy.GameSpyFilters/16"
-        ],
-        "note": "No / 6 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100011",
+        "entry": "shared.enjp/100694",
         "count": 2,
         "sample_refs": [
           "ct.General/1",
@@ -7709,7 +7696,7 @@
         "note": "Start / 2 occurrences"
       },
       {
-        "entry": "shared.enjp/100012",
+        "entry": "shared.enjp/100695",
         "count": 2,
         "sample_refs": [
           "ct.General/2",
@@ -7718,7 +7705,7 @@
         "note": "Exit / 2 occurrences"
       },
       {
-        "entry": "shared.enjp/100013",
+        "entry": "shared.enjp/100696",
         "count": 2,
         "sample_refs": [
           "ct.General/3",
@@ -7727,22 +7714,13 @@
         "note": "Run / 2 occurrences"
       },
       {
-        "entry": "shared.enjp/100014",
+        "entry": "shared.enjp/100697",
         "count": 2,
         "sample_refs": [
           "ct.General/4",
           "swrepubliccommando.General/4"
         ],
         "note": "Product / 2 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100015",
-        "count": 2,
-        "sample_refs": [
-          "ctcharacters.CTTeamTrandoshan/1",
-          "XinterfaceMP.MenuCustomizeCharacter/66"
-        ],
-        "note": "TeamName / 2 occurrences"
       },
       {
         "entry": "shared.enjp/100016",
@@ -7805,23 +7783,23 @@
       },
       {
         "entry": "shared.enjp/100022",
-        "count": 30,
+        "count": 29,
         "sample_refs": [
           "ctf_detention.DC17mAntiArmorWeaponPickupMP0/1",
           "ctf_engine.DC17mAntiArmorWeaponPickupMP0/1",
           "ctf_hangar.DC17mAntiArmorWeaponPickupMP0/1"
         ],
-        "note": "PickupMessage / 30 occurrences"
+        "note": "PickupMessage / 29 occurrences"
       },
       {
         "entry": "shared.enjp/100023",
-        "count": 23,
+        "count": 20,
         "sample_refs": [
           "ctf_detention.DC17mBlasterWeaponPickupMP2/1",
           "ctf_engine.DC17mBlasterWeaponPickupMP0/1",
           "ctf_hangar.DC17mBlasterWeaponPickupMP0/1"
         ],
-        "note": "PickupMessage / 23 occurrences"
+        "note": "PickupMessage / 20 occurrences"
       },
       {
         "entry": "shared.enjp/100024",
@@ -7845,33 +7823,33 @@
       },
       {
         "entry": "shared.enjp/100026",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_detention.LevelInfo0/1",
           "ctf_detention.LevelSummary/1",
           "dm_detention.LevelInfo0/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100027",
-        "count": 177,
+        "count": 176,
         "sample_refs": [
           "ctf_detention.PickupHealth0/1",
           "ctf_detention.PickupHealth1/1",
           "ctf_detention.PickupHealth10/1"
         ],
-        "note": "PickupMessage / 177 occurrences"
+        "note": "PickupMessage / 176 occurrences"
       },
       {
         "entry": "shared.enjp/100028",
-        "count": 21,
+        "count": 20,
         "sample_refs": [
           "ctf_detention.SMGPickupMP2/1",
           "ctf_engine.SMGPickupMP2/1",
           "ctf_hangar.SMGPickupMP0/1"
         ],
-        "note": "PickupMessage / 21 occurrences"
+        "note": "PickupMessage / 20 occurrences"
       },
       {
         "entry": "shared.enjp/100029",
@@ -7885,23 +7863,23 @@
       },
       {
         "entry": "shared.enjp/100030",
-        "count": 117,
+        "count": 54,
         "sample_refs": [
           "ctf_detention.ThermalDetonatorMultiPlay0/1",
           "ctf_engine.ThermalDetonatorMultiPlay2/1",
           "ctf_engine.ThermalDetonatorMultiPlay3/1"
         ],
-        "note": "PickupMessage / 117 occurrences"
+        "note": "PickupMessage / 54 occurrences"
       },
       {
         "entry": "shared.enjp/100031",
-        "count": 17,
+        "count": 16,
         "sample_refs": [
           "ctf_detention.TrandoshanRifleMPPickup0/1",
           "ctf_hangar.TrandoshanRifleMPPickup2/1",
           "ctf_hanginggarden.TrandoshanRifleMPPickup2/1"
         ],
-        "note": "PickupMessage / 17 occurrences"
+        "note": "PickupMessage / 16 occurrences"
       },
       {
         "entry": "shared.enjp/100032",
@@ -7925,23 +7903,23 @@
       },
       {
         "entry": "shared.enjp/100034",
-        "count": 57,
+        "count": 42,
         "sample_refs": [
           "ctf_engine.BowcasterPickupMP0/1",
           "ctf_engine.BowcasterPickupMP1/1",
           "ctf_hangar.BowcasterPickupMP0/1"
         ],
-        "note": "PickupMessage / 57 occurrences"
+        "note": "PickupMessage / 42 occurrences"
       },
       {
         "entry": "shared.enjp/100035",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_engine.LevelInfo0/1",
           "ctf_engine.LevelSummary/1",
           "dm_engine.LevelInfo0/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100036",
@@ -7975,63 +7953,63 @@
       },
       {
         "entry": "shared.enjp/100039",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_hangar.LevelInfo8/1",
           "ctf_hangar.LevelSummary/1",
           "dm_hangar.LevelInfo8/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100040",
-        "count": 28,
+        "count": 10,
         "sample_refs": [
           "ctf_hangar.SonicDetonatorMultiPlay0/1",
           "ctf_pow.SonicDetonatorMultiPlay0/1",
           "ctf_pow.SonicDetonatorMultiPlay1/1"
         ],
-        "note": "PickupMessage / 28 occurrences"
+        "note": "PickupMessage / 10 occurrences"
       },
       {
         "entry": "shared.enjp/100041",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_hanginggarden.LevelInfo0/1",
           "ctf_hanginggarden.LevelSummary/1",
           "dm_hanginggarden.LevelInfo0/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100042",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_pow.LevelInfo5/1",
           "ctf_pow.LevelSummary/1",
           "dm_pow.LevelInfo5/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100043",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_siege.LevelInfo0/1",
           "ctf_siege.LevelSummary/1",
           "dm_siege.LevelInfo0/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100044",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_trando.LevelInfo0/1",
           "ctf_trando.LevelSummary/1",
           "dm_trando.LevelInfo0/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100045",
@@ -8045,13 +8023,13 @@
       },
       {
         "entry": "shared.enjp/100046",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_underpass.LevelInfo0/1",
           "ctf_underpass.LevelSummary/1",
           "dm_underpass.LevelInfo0/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
         "entry": "shared.enjp/100047",
@@ -8065,16 +8043,16 @@
       },
       {
         "entry": "shared.enjp/100048",
-        "count": 6,
+        "count": 4,
         "sample_refs": [
           "ctf_zerog.LevelInfo6/1",
           "ctf_zerog.LevelSummary/1",
           "dm_zerog.LevelInfo6/1"
         ],
-        "note": "Title / 6 occurrences"
+        "note": "Title / 4 occurrences"
       },
       {
-        "entry": "shared.enjp/100049",
+        "entry": "shared.enjp/100698",
         "count": 241,
         "sample_refs": [
           "ctgame.BactaDispenser/1",
@@ -8084,7 +8062,7 @@
         "note": "ActivatePromptText / 241 occurrences"
       },
       {
-        "entry": "shared.enjp/100050",
+        "entry": "shared.enjp/100699",
         "count": 69,
         "sample_refs": [
           "ctgame.BreachDoor/1",
@@ -8094,26 +8072,16 @@
         "note": "ActivatePromptText / 69 occurrences"
       },
       {
-        "entry": "shared.enjp/100051",
+        "entry": "shared.enjp/100700",
         "count": 2,
         "sample_refs": [
-          "ctgame.CTDamageBallistic/1",
-          "properties.CTDamageBallisticDC17SniperCommando/1"
+          "ctgame.CTDamageElectricity/1",
+          "ctgame.CTDamageStun/3"
         ],
         "note": "DeathString / 2 occurrences"
       },
       {
-        "entry": "shared.enjp/100052",
-        "count": 3,
-        "sample_refs": [
-          "ctgame.CTDamageElectricity/1",
-          "ctgame.CTDamageExplosion/1",
-          "ctgame.CTDamageStun/3"
-        ],
-        "note": "DeathString / 3 occurrences"
-      },
-      {
-        "entry": "shared.enjp/100053",
+        "entry": "shared.enjp/100701",
         "count": 35,
         "sample_refs": [
           "ctgame.HackTerminal/1",
@@ -8121,13 +8089,59 @@
           "GEO_03D.HackTerminalGeo5/1"
         ],
         "note": "ActivatePromptText / 35 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100702",
+        "count": 11,
+        "sample_refs": [
+          "ctinventory.Bowcaster/3",
+          "ctinventory.ConcussionRifle/1",
+          "ctinventory.DC17mBlaster/3"
+        ],
+        "note": "MessageNoAmmo / 11 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100703",
+        "count": 15,
+        "sample_refs": [
+          "ctinventory.BowcasterPickup/1",
+          "YYY_01D.BowcasterPickup0/1",
+          "YYY_01E.BowcasterPickup0/1"
+        ],
+        "note": "PickupMessage / 15 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100704",
+        "count": 4,
+        "sample_refs": [
+          "ctinventory.ConcussionRiflePickup/1",
+          "RAS_04A.ConcussionRiflePickup1/1",
+          "RAS_04B.ConcussionRiflePickup0/1"
+        ],
+        "note": "PickupMessage / 4 occurrences"
+      },
+      {
+        "entry": "shared.enjp/100705",
+        "count": 3,
+        "sample_refs": [
+          "ctinventory.DC17mAntiArmor/1",
+          "ctinventory.EMPGrenade/3",
+          "ctinventory.SonicDetonator/3"
+        ],
+        "note": "MessageNoAmmo / 3 occurrences"
       }
     ]
   },
   "catalog_en_runtime_coverage": {
-    "files": 75,
+    "files": 77,
     "missing_rows": 0,
     "by_file": {
+      "GameData/System/XinterfaceCtmenus.int": {
+        "en_rows": 120,
+        "catalog_rows": 596,
+        "missing_rows": 0,
+        "missing": []
+      },
       "GameData/System/alaudio.int": {
         "en_rows": 3,
         "catalog_rows": 3,
@@ -8141,8 +8155,8 @@
         "missing": []
       },
       "GameData/System/credits.int": {
-        "en_rows": 706,
-        "catalog_rows": 706,
+        "en_rows": 1141,
+        "catalog_rows": 1141,
         "missing_rows": 0,
         "missing": []
       },
@@ -8203,6 +8217,12 @@
       "GameData/System/ctf_zerog.int": {
         "en_rows": 38,
         "catalog_rows": 38,
+        "missing_rows": 0,
+        "missing": []
+      },
+      "GameData/System/ctmarkers.int": {
+        "en_rows": 18,
+        "catalog_rows": 18,
         "missing_rows": 0,
         "missing": []
       },
@@ -8582,11 +8602,11 @@
   },
   "build_validation": {
     "ok": true,
-    "generated_files": 146,
-    "total_entries": 19018,
-    "total_bytes": 599277,
+    "generated_files": 147,
+    "total_entries": 19591,
+    "total_bytes": 621655,
     "untranslated_fallbacks": 0,
     "bare_upgraded_to_quoted": 0,
-    "stdout_lines": 147
+    "stdout_lines": 148
   }
 }
