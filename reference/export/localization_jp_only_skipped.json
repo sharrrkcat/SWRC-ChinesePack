@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T05:22:48.549139+00:00",
+  "generated_at": "2026-07-11T05:34:16.015246+00:00",
   "summary": {
     "total": 1684,
     "by_reason_code": {
@@ -8500,7 +8500,7 @@
       "section": "MenuMatchMakingOptiMatchOptions",
       "key": "Options[0].Items",
       "jp_value": "(\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\",\"11\",\"12\",\"13\",\"14\",\"15\",\"16\")",
-      "reason": "GameData/System/XinterfaceLive.int [MenuMatchMakingOptiMatchOptions] Options[0].Items: JP tuple item count mismatch"
+      "reason": "GameData/System/XinterfaceLive.cht [MenuMatchMakingOptiMatchOptions] Options[0].Items: JP tuple item count mismatch"
     },
     {
       "reason_code": "jp_tuple_item_count_mismatch",
@@ -8509,7 +8509,7 @@
       "section": "MenuMatchMakingOptiMatchOptions",
       "key": "Options[1].Items",
       "jp_value": "(\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\",\"11\",\"12\",\"13\",\"14\",\"15\",\"16\")",
-      "reason": "GameData/System/XinterfaceLive.int [MenuMatchMakingOptiMatchOptions] Options[1].Items: JP tuple item count mismatch"
+      "reason": "GameData/System/XinterfaceLive.cht [MenuMatchMakingOptiMatchOptions] Options[1].Items: JP tuple item count mismatch"
     },
     {
       "reason_code": "no_english_runtime_source",

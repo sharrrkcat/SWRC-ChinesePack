@@ -252,7 +252,7 @@ class LocalizationToolTests(unittest.TestCase):
                 catalog = OrderedDict(
                     [
                         ("schema", 1),
-                        ("files", OrderedDict([("GameData/System/sample.int", [OrderedDict([("section", "S"), ("key", "Greeting"), ("type", "string"), ("entry", "sample.Group/1"), ("printf", [])])])])),
+                        ("files", OrderedDict([("GameData/System/sample.cht", [OrderedDict([("section", "S"), ("key", "Greeting"), ("type", "string"), ("entry", "sample.Group/1"), ("printf", [])])])])),
                     ]
                 )
                 json_path = temp_root / "translation.json"
@@ -296,7 +296,7 @@ class LocalizationToolTests(unittest.TestCase):
         catalog = OrderedDict(
             [
                 (
-                    "GameData/System/bare.int",
+                    "GameData/System/bare.cht",
                     [
                         OrderedDict([("section", "S"), ("key", f"K{i}"), ("type", "string"), ("entry", f"g/{i}"), ("style", "bare"), ("printf", [])])
                         for i in range(1, 5)
@@ -310,33 +310,33 @@ class LocalizationToolTests(unittest.TestCase):
         self.assertIn('K2="A"B"', outputs[0]["text"])
 
     def test_passthrough_literal_normalizes_and_covers_en_only_rows(self):
-        catalog_files = OrderedDict([("GameData/System/sample.int", [])])
+        catalog_files = OrderedDict([("GameData/System/sample.cht", [])])
         stats = Counter()
         audit = {}
         rows = [
-            mtj.IntRow("sample.int", 1, "S", "Copyright", '"© LUCAS"', 'Copyright="© LUCAS"'),
-            mtj.IntRow("sample.int", 2, "S", "Plain", '"Plain"', 'Plain="Plain"'),
+            mtj.IntRow("sample.cht", 1, "S", "Copyright", '"© LUCAS"', 'Copyright="© LUCAS"'),
+            mtj.IntRow("sample.cht", 2, "S", "Plain", '"Plain"', 'Plain="Plain"'),
         ]
-        mtj.append_en_passthrough_rows("GameData/System/sample.int", rows, catalog_files, stats, audit)
+        mtj.append_en_passthrough_rows("GameData/System/sample.cht", rows, catalog_files, stats, audit)
         self.assertEqual(stats["en_passthrough_literal_rows"], 2)
         self.assertEqual(stats["passthrough_literal_normalized"], 1)
-        self.assertEqual(catalog_files["GameData/System/sample.int"][0]["value"], '"(C) LUCAS"')
-        mtj.validate_catalog_covers_en_runtime(catalog_files, {"GameData/System/sample.int": rows}, audit)
+        self.assertEqual(catalog_files["GameData/System/sample.cht"][0]["value"], '"(C) LUCAS"')
+        mtj.validate_catalog_covers_en_runtime(catalog_files, {"GameData/System/sample.cht": rows}, audit)
         self.assertEqual(audit["catalog_en_runtime_coverage"]["missing_rows"], 0)
 
     def test_subtitle_empty_english_source_becomes_skipped(self):
         jp_info = {
-            "path": Path("subtitles_test.int"),
+            "path": Path("subtitles_test.cht"),
             "rows": [
-                mtj.IntRow("subtitles_test.int", 1, "Subtitles", "SubtitleSound[0]", '"snd"', ""),
-                mtj.IntRow("subtitles_test.int", 2, "Subtitles", "SubtitleText[0]", '"JP"', ""),
+                mtj.IntRow("subtitles_test.cht", 1, "Subtitles", "SubtitleSound[0]", '"snd"', ""),
+                mtj.IntRow("subtitles_test.cht", 2, "Subtitles", "SubtitleText[0]", '"JP"', ""),
             ],
         }
         en_info = {
-            "path": Path("subtitles_test.int"),
+            "path": Path("subtitles_test.cht"),
             "rows": [
-                mtj.IntRow("subtitles_test.int", 1, "Subtitles", "SubtitleSound[0]", '"snd"', ""),
-                mtj.IntRow("subtitles_test.int", 2, "Subtitles", "SubtitleText[0]", '""', ""),
+                mtj.IntRow("subtitles_test.cht", 1, "Subtitles", "SubtitleSound[0]", '"snd"', ""),
+                mtj.IntRow("subtitles_test.cht", 2, "Subtitles", "SubtitleText[0]", '""', ""),
             ],
         }
         catalog_files = OrderedDict()
@@ -347,7 +347,7 @@ class LocalizationToolTests(unittest.TestCase):
             jp_info,
             en_info,
             {},
-            "GameData/System/subtitles_test.int",
+            "GameData/System/subtitles_test.cht",
             catalog_files,
             translation,
             mtj.EntryAllocator(None),
@@ -357,10 +357,10 @@ class LocalizationToolTests(unittest.TestCase):
             False,
         )
         self.assertEqual(skipped[0]["reason_code"], "empty_english_source")
-        rows = catalog_files["GameData/System/subtitles_test.int"]
+        rows = catalog_files["GameData/System/subtitles_test.cht"]
         self.assertEqual([row["type"] for row in rows], ["literal", "literal"])
         self.assertEqual(stats["subtitle_passthrough_literal_rows"], 2)
-        mtj.validate_catalog_covers_en_runtime(catalog_files, {"GameData/System/subtitles_test.int": en_info["rows"]}, {})
+        mtj.validate_catalog_covers_en_runtime(catalog_files, {"GameData/System/subtitles_test.cht": en_info["rows"]}, {})
 
     def test_credits_and_empty_english_literals_are_normalized(self):
         catalog_files = OrderedDict()
@@ -369,7 +369,7 @@ class LocalizationToolTests(unittest.TestCase):
             catalog_files,
             OrderedDict([("schema", 2)]),
             mtj.EntryAllocator(None),
-            "GameData/System/credits.int",
+            "GameData/System/credits.cht",
             "Credits",
             "CreditsLine[0]",
             mtj.SourceValue(kind="string", raw='"© É"', text="© É", style="quoted"),
@@ -380,7 +380,7 @@ class LocalizationToolTests(unittest.TestCase):
             False,
         )
         self.assertEqual(emitted, "literal")
-        self.assertEqual(catalog_files["GameData/System/credits.int"][0]["value"], '"(C) E"')
+        self.assertEqual(catalog_files["GameData/System/credits.cht"][0]["value"], '"(C) E"')
         self.assertEqual(stats["passthrough_literal_normalized"], 1)
 
         with self.assertRaisesRegex(mtj.GenerateError, "passthrough literal contains non-GBK text"):
@@ -388,7 +388,7 @@ class LocalizationToolTests(unittest.TestCase):
                 OrderedDict(),
                 OrderedDict([("schema", 2)]),
                 mtj.EntryAllocator(None),
-                "GameData/System/sample.int",
+                "GameData/System/sample.cht",
                 "S",
                 "Empty",
                 mtj.SourceValue(kind="string", raw='"😀"', text="", style="quoted"),
@@ -465,8 +465,8 @@ class LocalizationToolTests(unittest.TestCase):
             game_system = ROOT_DIR.parent.parent / "GameData" / "System"
             generated_system = out_dir / "GameData" / "System"
             compared = 0
-            for generated_path in generated_system.glob("*.int"):
-                en_path = game_system / generated_path.name
+            for generated_path in generated_system.glob("*.cht"):
+                en_path = game_system / (generated_path.stem + ".int")
                 if not en_path.exists():
                     continue
                 en_rows = parse_int_semantics(en_path, "cp1252")

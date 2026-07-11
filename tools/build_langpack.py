@@ -34,7 +34,7 @@ DEFAULT_CATALOG = "reference/export/localization_catalog.json"
 
 SAFE_GROUP_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
 SAFE_ID_RE = re.compile(r"^[0-9]+$")
-SAFE_INT_FILE_RE = re.compile(r"^[A-Za-z0-9_.-]+\.int$", re.IGNORECASE)
+SAFE_INT_FILE_RE = re.compile(r"^[A-Za-z0-9_.-]+\.cht$", re.IGNORECASE)
 PRINTF_RE = re.compile(
     r"%(?!%)(?:\d+\$)?[-+#0]*(?:\*|\d+)?(?:\.(?:\*|\d+))?"
     r"(?:hh|h|ll|l|L)?([A-Za-z])"
@@ -224,7 +224,7 @@ def validate_output_path(path_text):
     if len(parts) != 3 or parts[0].casefold() != "gamedata" or parts[1].casefold() != "system":
         fail(f"catalog 输出路径必须位于 GameData/System: {path_text}")
     if not SAFE_INT_FILE_RE.fullmatch(parts[2]):
-        fail(f"catalog 输出路径必须是安全 .int 文件名: {path_text}")
+        fail(f"catalog 输出路径必须是安全 .cht 文件名: {path_text}")
     return "/".join(parts)
 
 

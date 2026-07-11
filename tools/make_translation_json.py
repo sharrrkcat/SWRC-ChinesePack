@@ -26,6 +26,7 @@ CATALOG_SCHEMA = 1
 TOOL_NAME = "make_translation_json.py"
 SHARED_GROUP = "shared.enjp"
 SHARED_ID_START = 100001
+OUTPUT_EXT = ".cht"
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
@@ -1760,7 +1761,7 @@ def process_supplementary_sources(
     ctmarkers_path = SUPPLEMENTARY_EN_DIR / "ctmarkers.int"
     if ctmarkers_path.exists():
         rows, _, _ = parse_supplementary_int(ctmarkers_path)
-        output_path = "GameData/System/ctmarkers.int"
+        output_path = f"GameData/System/ctmarkers{OUTPUT_EXT}"
         file_stem = "ctmarkers"
         count = 0
         for row in rows:
@@ -1777,7 +1778,7 @@ def process_supplementary_sources(
 
     # 2. credits.int — extra CreditsLine entries beyond JP/Steam coverage
     credits_path = SUPPLEMENTARY_EN_DIR / "credits.int"
-    credits_output = "GameData/System/credits.int"
+    credits_output = f"GameData/System/credits{OUTPUT_EXT}"
     if credits_path.exists() and credits_output in catalog_files:
         existing_keys = {
             (row.get("section", ""), row.get("key", ""))
@@ -1809,7 +1810,7 @@ def process_supplementary_sources(
 
     # 3. xinterfacectmenus.int — PS/Demo/PC sections not in JP index
     menus_path = SUPPLEMENTARY_EN_DIR / "xinterfacectmenus.int"
-    menus_output = "GameData/System/XinterfaceCtmenus.int"
+    menus_output = f"GameData/System/XinterfaceCtmenus{OUTPUT_EXT}"
     if menus_path.exists():
         supp_rows, _, _ = parse_supplementary_int(menus_path)
         file_stem = "XinterfaceCtmenus"
@@ -1909,8 +1910,9 @@ def main(argv=None):
         jp_path = jp_info["path"]
         en_info = en_ints.get(name)
         output_file_name = en_info["path"].name if en_info else jp_path.name
-        output_path = f"GameData/System/{output_file_name}"
-        file_stem = Path(output_file_name).stem
+        output_stem = Path(output_file_name).stem
+        output_path = f"GameData/System/{output_stem}{OUTPUT_EXT}"
+        file_stem = output_stem
         if en_info:
             en_outputs[output_path] = en_info["rows"]
 

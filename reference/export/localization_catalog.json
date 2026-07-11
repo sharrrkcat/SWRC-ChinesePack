@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "generated_by": "make_translation_json.py",
-  "generated_at": "2026-07-11T05:22:48.477514+00:00",
+  "generated_at": "2026-07-11T05:34:15.944060+00:00",
   "files": {
-    "GameData/System/alaudio.int": [
+    "GameData/System/alaudio.cht": [
       {
         "section": "Public",
         "key": "Object+",
@@ -25,7 +25,7 @@
         "value": "(Caption=\"Audio\",Parent=\"Advanced Options\",Class=DXAudio.DXAudioSubsystem,Immediate=True)"
       }
     ],
-    "GameData/System/core.int": [
+    "GameData/System/core.cht": [
       {
         "section": "Language",
         "key": "Language",
@@ -780,7 +780,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/credits.int": [
+    "GameData/System/credits.cht": [
       {
         "section": "Credits",
         "key": "CreditsLine[0]",
@@ -7822,7 +7822,7 @@
         "value": "\" \""
       }
     ],
-    "GameData/System/ct.int": [
+    "GameData/System/ct.cht": [
       {
         "section": "General",
         "key": "Start",
@@ -7856,7 +7856,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/ctcharacters.int": [
+    "GameData/System/ctcharacters.cht": [
       {
         "section": "CTTeamClone",
         "key": "TeamName",
@@ -7872,7 +7872,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_detention.int": [
+    "GameData/System/ctf_detention.cht": [
       {
         "section": "ACTION_ShowPrompt0",
         "key": "PromptText",
@@ -8133,7 +8133,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_engine.int": [
+    "GameData/System/ctf_engine.cht": [
       {
         "section": "ACTION_ShowPrompt0",
         "key": "PromptText",
@@ -8401,7 +8401,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_hangar.int": [
+    "GameData/System/ctf_hangar.cht": [
       {
         "section": "ACTION_ShowPrompt5",
         "key": "PromptText",
@@ -8648,7 +8648,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_hanginggarden.int": [
+    "GameData/System/ctf_hanginggarden.cht": [
       {
         "section": "BowcasterPickupMP4",
         "key": "PickupMessage",
@@ -8972,7 +8972,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_pow.int": [
+    "GameData/System/ctf_pow.cht": [
       {
         "section": "BowcasterPickupMP0",
         "key": "PickupMessage",
@@ -9268,7 +9268,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_siege.int": [
+    "GameData/System/ctf_siege.cht": [
       {
         "section": "BowcasterPickupMP2",
         "key": "PickupMessage",
@@ -9487,7 +9487,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_trando.int": [
+    "GameData/System/ctf_trando.cht": [
       {
         "section": "ACTION_ShowPrompt0",
         "key": "PromptText",
@@ -9790,7 +9790,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_underpass.int": [
+    "GameData/System/ctf_underpass.cht": [
       {
         "section": "BowcasterPickupMP0",
         "key": "PickupMessage",
@@ -10023,7 +10023,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctf_zerog.int": [
+    "GameData/System/ctf_zerog.cht": [
       {
         "section": "ACTION_ShowPrompt4",
         "key": "PromptText",
@@ -10291,7 +10291,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctgame.int": [
+    "GameData/System/ctgame.cht": [
       {
         "section": "BactaDispenser",
         "key": "ActivatePromptText",
@@ -10554,7 +10554,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctinventory.int": [
+    "GameData/System/ctinventory.cht": [
       {
         "section": "ATTEWalkerAmmo",
         "key": "ItemName",
@@ -11351,7 +11351,7 @@
         "printf": []
       }
     ],
-    "GameData/System/d3ddrv.int": [
+    "GameData/System/d3ddrv.cht": [
       {
         "section": "Public",
         "key": "Object+",
@@ -11423,7 +11423,7 @@
         "value": ""
       }
     ],
-    "GameData/System/dm_canyon.int": [
+    "GameData/System/dm_canyon.cht": [
       {
         "section": "BowcasterPickupMP0",
         "key": "PickupMessage",
@@ -11551,7 +11551,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_detention.int": [
+    "GameData/System/dm_detention.cht": [
       {
         "section": "ACTION_ShowPrompt0",
         "key": "PromptText",
@@ -11770,7 +11770,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_engine.int": [
+    "GameData/System/dm_engine.cht": [
       {
         "section": "ACTION_ShowPrompt0",
         "key": "PromptText",
@@ -11996,7 +11996,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_hangar.int": [
+    "GameData/System/dm_hangar.cht": [
       {
         "section": "ACTION_ShowPrompt5",
         "key": "PromptText",
@@ -12201,7 +12201,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_hanginggarden.int": [
+    "GameData/System/dm_hanginggarden.cht": [
       {
         "section": "BowcasterPickupMP4",
         "key": "PickupMessage",
@@ -12483,7 +12483,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_pow.int": [
+    "GameData/System/dm_pow.cht": [
       {
         "section": "BowcasterPickupMP0",
         "key": "PickupMessage",
@@ -12737,7 +12737,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_powsmall.int": [
+    "GameData/System/dm_powsmall.cht": [
       {
         "section": "BowcasterPickupMP1",
         "key": "PickupMessage",
@@ -12851,7 +12851,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_siege.int": [
+    "GameData/System/dm_siege.cht": [
       {
         "section": "BowcasterPickupMP2",
         "key": "PickupMessage",
@@ -13028,7 +13028,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_trando.int": [
+    "GameData/System/dm_trando.cht": [
       {
         "section": "ACTION_ShowPrompt0",
         "key": "PromptText",
@@ -13289,7 +13289,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_underpass.int": [
+    "GameData/System/dm_underpass.cht": [
       {
         "section": "BowcasterPickupMP0",
         "key": "PickupMessage",
@@ -13480,7 +13480,7 @@
         "printf": []
       }
     ],
-    "GameData/System/dm_zerog.int": [
+    "GameData/System/dm_zerog.cht": [
       {
         "section": "ACTION_ShowPrompt4",
         "key": "PromptText",
@@ -13706,7 +13706,7 @@
         "printf": []
       }
     ],
-    "GameData/System/editor.int": [
+    "GameData/System/editor.cht": [
       {
         "section": "Public",
         "key": "Object+",
@@ -14864,7 +14864,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/engine.int": [
+    "GameData/System/engine.cht": [
       {
         "section": "Public",
         "key": ";Object+",
@@ -18725,7 +18725,7 @@
         "printf": []
       }
     ],
-    "GameData/System/EPILOGUE.int": [
+    "GameData/System/EPILOGUE.cht": [
       {
         "section": "Commando40Delta1",
         "key": "HUDDescription",
@@ -18769,7 +18769,7 @@
         "printf": []
       }
     ],
-    "GameData/System/gameplay.int": [
+    "GameData/System/gameplay.cht": [
       {
         "section": "Counter",
         "key": "CountMessage",
@@ -18801,7 +18801,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_01A.int": [
+    "GameData/System/GEO_01A.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen0",
         "key": "Text",
@@ -19268,7 +19268,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_01B.int": [
+    "GameData/System/GEO_01B.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen0",
         "key": "Text",
@@ -19678,7 +19678,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_01Briefing.int": [
+    "GameData/System/GEO_01Briefing.cht": [
       {
         "section": "LevelInfo29",
         "key": "Title",
@@ -19694,7 +19694,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_01C.int": [
+    "GameData/System/GEO_01C.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen0",
         "key": "Text",
@@ -20033,7 +20033,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_03A.int": [
+    "GameData/System/GEO_03A.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen0",
         "key": "Text",
@@ -20313,7 +20313,7 @@
         ]
       }
     ],
-    "GameData/System/GEO_03C.int": [
+    "GameData/System/GEO_03C.cht": [
       {
         "section": "BactaDispenserGEO2",
         "key": "ActivatePromptText",
@@ -20482,7 +20482,7 @@
         ]
       }
     ],
-    "GameData/System/GEO_03D.int": [
+    "GameData/System/GEO_03D.cht": [
       {
         "section": "BactaDispenserGEO0",
         "key": "ActivatePromptText",
@@ -20792,7 +20792,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_04A.int": [
+    "GameData/System/GEO_04A.cht": [
       {
         "section": "BactaDispenserGEO1",
         "key": "ActivatePromptText",
@@ -21062,7 +21062,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_04B.int": [
+    "GameData/System/GEO_04B.cht": [
       {
         "section": "BactaDispenserGEO2",
         "key": "ActivatePromptText",
@@ -21316,7 +21316,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_04C.int": [
+    "GameData/System/GEO_04C.cht": [
       {
         "section": "BactaDispenserCORE0",
         "key": "ActivatePromptText",
@@ -21963,7 +21963,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_04D.int": [
+    "GameData/System/GEO_04D.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen1",
         "key": "Text",
@@ -22416,7 +22416,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_05A.int": [
+    "GameData/System/GEO_05A.cht": [
       {
         "section": "BactaDispenserCORE0",
         "key": "ActivatePromptText",
@@ -22636,7 +22636,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_05B.int": [
+    "GameData/System/GEO_05B.cht": [
       {
         "section": "BactaDispenserCORE0",
         "key": "ActivatePromptText",
@@ -23154,7 +23154,7 @@
         "printf": []
       }
     ],
-    "GameData/System/GEO_05C.int": [
+    "GameData/System/GEO_05C.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen0",
         "key": "Title",
@@ -23505,7 +23505,7 @@
         "printf": []
       }
     ],
-    "GameData/System/geo_titlecard.int": [
+    "GameData/System/geo_titlecard.cht": [
       {
         "section": "TitleCard",
         "key": "BackgroundMusic",
@@ -23638,7 +23638,7 @@
         "printf": []
       }
     ],
-    "GameData/System/hints.int": [
+    "GameData/System/hints.cht": [
       {
         "section": "Hints",
         "key": "HintPicIndex[0]",
@@ -24640,7 +24640,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ipdrv.int": [
+    "GameData/System/ipdrv.cht": [
       {
         "section": "Public",
         "key": "Object+",
@@ -24921,7 +24921,7 @@
         "printf": []
       }
     ],
-    "GameData/System/levelloadinginfo.int": [
+    "GameData/System/levelloadinginfo.cht": [
       {
         "section": "LevelLoadingInfo",
         "key": "MapName[0]",
@@ -27226,7 +27226,7 @@
         "value": "0"
       }
     ],
-    "GameData/System/mpgame.int": [
+    "GameData/System/mpgame.cht": [
       {
         "section": "ASGame",
         "key": "GameName",
@@ -30084,7 +30084,7 @@
         "printf": []
       }
     ],
-    "GameData/System/PRO.int": [
+    "GameData/System/PRO.cht": [
       {
         "section": "Commando07Delta0",
         "key": "HUDDescription",
@@ -30226,7 +30226,7 @@
         "printf": []
       }
     ],
-    "GameData/System/properties.int": [
+    "GameData/System/properties.cht": [
       {
         "section": "BowcasterMP",
         "key": "MessageNoAmmo",
@@ -30520,7 +30520,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_01A.int": [
+    "GameData/System/RAS_01A.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -30678,7 +30678,7 @@
         ]
       }
     ],
-    "GameData/System/RAS_01B.int": [
+    "GameData/System/RAS_01B.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -30886,7 +30886,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_01Briefing.int": [
+    "GameData/System/RAS_01Briefing.cht": [
       {
         "section": "Commando07Delta1",
         "key": "HUDDescription",
@@ -30944,7 +30944,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_01C.int": [
+    "GameData/System/RAS_01C.cht": [
       {
         "section": "ACTION_ShowPrompt11",
         "key": "PromptText",
@@ -31207,7 +31207,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_02A.int": [
+    "GameData/System/RAS_02A.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -31251,7 +31251,7 @@
         ]
       }
     ],
-    "GameData/System/RAS_02B.int": [
+    "GameData/System/RAS_02B.cht": [
       {
         "section": "BactaDispenserRAS1",
         "key": "ActivatePromptText",
@@ -31418,7 +31418,7 @@
         ]
       }
     ],
-    "GameData/System/RAS_02C.int": [
+    "GameData/System/RAS_02C.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -31576,7 +31576,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_02D.int": [
+    "GameData/System/RAS_02D.cht": [
       {
         "section": "BactaDispenserRAS1",
         "key": "ActivatePromptText",
@@ -31777,7 +31777,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_02E.int": [
+    "GameData/System/RAS_02E.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -32122,7 +32122,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_03A.int": [
+    "GameData/System/RAS_03A.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -32446,7 +32446,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_03B.int": [
+    "GameData/System/RAS_03B.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -32769,7 +32769,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_03C.int": [
+    "GameData/System/RAS_03C.cht": [
       {
         "section": "BactaDispenserRAS2",
         "key": "ActivatePromptText",
@@ -32980,7 +32980,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_04A.int": [
+    "GameData/System/RAS_04A.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -33187,7 +33187,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_04B.int": [
+    "GameData/System/RAS_04B.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -33390,7 +33390,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_04C.int": [
+    "GameData/System/RAS_04C.cht": [
       {
         "section": "BactaDispenserRAS0",
         "key": "ActivatePromptText",
@@ -33713,7 +33713,7 @@
         "printf": []
       }
     ],
-    "GameData/System/RAS_04D.int": [
+    "GameData/System/RAS_04D.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen1",
         "key": "Title",
@@ -34057,7 +34057,7 @@
         ]
       }
     ],
-    "GameData/System/ras_titlecard.int": [
+    "GameData/System/ras_titlecard.cht": [
       {
         "section": "TitleCard",
         "key": "BackgroundMusic",
@@ -34221,7 +34221,7 @@
         "printf": []
       }
     ],
-    "GameData/System/setup.int": [
+    "GameData/System/setup.cht": [
       {
         "section": "Errors",
         "key": "MissingProductTitle",
@@ -35060,7 +35060,7 @@
         "value": "\"This program will update your copy of %s to version %s.\\n\\nClick 'Next' to begin Setup, or click 'Cancel' at any time to exit.\\n\\nThe information in the box below contains Web links you can click on to obtain more information.\""
       }
     ],
-    "GameData/System/setupwarfare-ihv.int": [
+    "GameData/System/setupwarfare-ihv.cht": [
       {
         "section": "Setup",
         "key": "LocalProduct",
@@ -35214,7 +35214,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/setupwarfare.int": [
+    "GameData/System/setupwarfare.cht": [
       {
         "section": "Setup",
         "key": "LocalProduct",
@@ -35520,7 +35520,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/setupwarfarecodedrop.int": [
+    "GameData/System/setupwarfarecodedrop.cht": [
       {
         "section": "Setup",
         "key": "LocalProduct",
@@ -35826,7 +35826,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/setupwarfareumod.int": [
+    "GameData/System/setupwarfareumod.cht": [
       {
         "section": "Setup",
         "key": "LocalProduct",
@@ -35844,7 +35844,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/setupwarfarexbox.int": [
+    "GameData/System/setupwarfarexbox.cht": [
       {
         "section": "Setup",
         "key": "LocalProduct",
@@ -35862,7 +35862,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/setupwarfarexboxship.int": [
+    "GameData/System/setupwarfarexboxship.cht": [
       {
         "section": "Setup",
         "key": "LocalProduct",
@@ -35880,7 +35880,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/startup.int": [
+    "GameData/System/startup.cht": [
       {
         "section": "General",
         "key": "Run",
@@ -36066,7 +36066,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/subtitles_.int": [
+    "GameData/System/subtitles_.cht": [
       {
         "section": "Subtitles_",
         "key": "SubtitleSound[0]",
@@ -74132,7 +74132,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_all_mp.int": [
+    "GameData/System/subtitles_all_mp.cht": [
       {
         "section": "Subtitles_ALL_MP",
         "key": "SubtitleSound[2928]",
@@ -79243,7 +79243,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_epilogue.int": [
+    "GameData/System/subtitles_epilogue.cht": [
       {
         "section": "Subtitles_Epilogue",
         "key": "SubtitleSound[2928]",
@@ -79505,7 +79505,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_01.int": [
+    "GameData/System/subtitles_geo_01.cht": [
       {
         "section": "Subtitles_GEO_01",
         "key": "SubtitleSound[2928]",
@@ -83836,7 +83836,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_01_hangar.int": [
+    "GameData/System/subtitles_geo_01_hangar.cht": [
       {
         "section": "Subtitles_GEO_01_Hangar",
         "key": "SubtitleSound[2928]",
@@ -83851,7 +83851,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_01briefing.int": [
+    "GameData/System/subtitles_geo_01briefing.cht": [
       {
         "section": "Subtitles_GEO_01Briefing",
         "key": "SubtitleSound[2928]",
@@ -84178,7 +84178,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_03.int": [
+    "GameData/System/subtitles_geo_03.cht": [
       {
         "section": "Subtitles_GEO_03",
         "key": "SubtitleSound[2928]",
@@ -87170,7 +87170,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_04.int": [
+    "GameData/System/subtitles_geo_04.cht": [
       {
         "section": "Subtitles_GEO_04",
         "key": "SubtitleSound[2928]",
@@ -89655,7 +89655,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_04briefing.int": [
+    "GameData/System/subtitles_geo_04briefing.cht": [
       {
         "section": "Subtitles_GEO_04Briefing",
         "key": "SubtitleSound[2928]",
@@ -89839,7 +89839,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_geo_05.int": [
+    "GameData/System/subtitles_geo_05.cht": [
       {
         "section": "Subtitles_GEO_05",
         "key": "SubtitleSound[2928]",
@@ -91609,7 +91609,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_pro.int": [
+    "GameData/System/subtitles_pro.cht": [
       {
         "section": "Subtitles_PRO",
         "key": "SubtitleSound[2928]",
@@ -92118,7 +92118,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_ras_01.int": [
+    "GameData/System/subtitles_ras_01.cht": [
       {
         "section": "Subtitles_RAS_01",
         "key": "SubtitleSound[2928]",
@@ -94083,7 +94083,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_ras_01briefing.int": [
+    "GameData/System/subtitles_ras_01briefing.cht": [
       {
         "section": "Subtitles_RAS_01Briefing",
         "key": "SubtitleSound[2928]",
@@ -94423,7 +94423,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_ras_02.int": [
+    "GameData/System/subtitles_ras_02.cht": [
       {
         "section": "Subtitles_RAS_02",
         "key": "SubtitleSound[2928]",
@@ -96617,7 +96617,7 @@
         "allow_duplicate": true
       }
     ],
-    "GameData/System/subtitles_ras_03.int": [
+    "GameData/System/subtitles_ras_03.cht": [
       {
         "section": "Subtitles_RAS_03",
         "key": "SubtitleSound[2928]",
@@ -98621,7 +98621,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_ras_04.int": [
+    "GameData/System/subtitles_ras_04.cht": [
       {
         "section": "Subtitles_RAS_04",
         "key": "SubtitleSound[2928]",
@@ -101158,7 +101158,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_01.int": [
+    "GameData/System/subtitles_yyy_01.cht": [
       {
         "section": "Subtitles_YYY_01",
         "key": "SubtitleSound[2928]",
@@ -104553,7 +104553,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_01briefing.int": [
+    "GameData/System/subtitles_yyy_01briefing.cht": [
       {
         "section": "Subtitles_YYY_01Briefing",
         "key": "SubtitleSound[2928]",
@@ -104789,7 +104789,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_03.int": [
+    "GameData/System/subtitles_yyy_03.cht": [
       {
         "section": "Subtitles_YYY_03",
         "key": "SubtitleSound[2928]",
@@ -106078,7 +106078,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_03briefing.int": [
+    "GameData/System/subtitles_yyy_03briefing.cht": [
       {
         "section": "Subtitles_YYY_03Briefing",
         "key": "SubtitleSound[2928]",
@@ -106184,7 +106184,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_04.int": [
+    "GameData/System/subtitles_yyy_04.cht": [
       {
         "section": "Subtitles_YYY_04",
         "key": "SubtitleSound[2928]",
@@ -109410,7 +109410,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_04briefing.int": [
+    "GameData/System/subtitles_yyy_04briefing.cht": [
       {
         "section": "Subtitles_YYY_04Briefing",
         "key": "SubtitleSound[2928]",
@@ -109685,7 +109685,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_05.int": [
+    "GameData/System/subtitles_yyy_05.cht": [
       {
         "section": "Subtitles_YYY_05",
         "key": "SubtitleSound[2928]",
@@ -111377,7 +111377,7 @@
         "printf": []
       }
     ],
-    "GameData/System/subtitles_yyy_06.int": [
+    "GameData/System/subtitles_yyy_06.cht": [
       {
         "section": "Subtitles_YYY_06",
         "key": "SubtitleSound[2928]",
@@ -113797,7 +113797,7 @@
         "printf": []
       }
     ],
-    "GameData/System/swrepubliccommando.int": [
+    "GameData/System/swrepubliccommando.cht": [
       {
         "section": "General",
         "key": "Start",
@@ -113831,7 +113831,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/udebugmenu.int": [
+    "GameData/System/udebugmenu.cht": [
       {
         "section": "UDebugGraphWindow",
         "key": "WindowTitle",
@@ -116129,7 +116129,7 @@
         "printf": []
       }
     ],
-    "GameData/System/unrealed.int": [
+    "GameData/System/unrealed.cht": [
       {
         "section": "General",
         "key": "FrameWindow",
@@ -116139,7 +116139,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/uweb.int": [
+    "GameData/System/uweb.cht": [
       {
         "section": "Public",
         "key": "Preferences+",
@@ -116169,7 +116169,7 @@
         "printf": []
       }
     ],
-    "GameData/System/Uwindow.int": [
+    "GameData/System/Uwindow.cht": [
       {
         "section": "UWindowConsoleWindow",
         "key": "WindowTitle",
@@ -116227,7 +116227,7 @@
         "printf": []
       }
     ],
-    "GameData/System/voicepacks.int": [
+    "GameData/System/voicepacks.cht": [
       {
         "section": "GenericClone",
         "key": "AckString[0]",
@@ -116460,7 +116460,7 @@
         "printf": []
       }
     ],
-    "GameData/System/window.int": [
+    "GameData/System/window.cht": [
       {
         "section": "Errors",
         "key": "Critical",
@@ -116931,7 +116931,7 @@
         "style": "bare"
       }
     ],
-    "GameData/System/windrv.int": [
+    "GameData/System/windrv.cht": [
       {
         "section": "Public",
         "key": "Class",
@@ -117068,7 +117068,7 @@
         "printf": []
       }
     ],
-    "GameData/System/xgamelist.int": [
+    "GameData/System/xgamelist.cht": [
       {
         "section": "Public",
         "key": "GameType",
@@ -117097,7 +117097,7 @@
         "allow_duplicate": true
       }
     ],
-    "GameData/System/xgames.int": [
+    "GameData/System/xgames.cht": [
       {
         "section": "DecoText",
         "key": "AllGameTypes",
@@ -117134,7 +117134,7 @@
         "printf": []
       }
     ],
-    "GameData/System/Xinterface.int": [
+    "GameData/System/Xinterface.cht": [
       {
         "section": "MenuBase",
         "key": "StringYes",
@@ -117630,7 +117630,7 @@
         "printf": []
       }
     ],
-    "GameData/System/Xinterfacecommon.int": [
+    "GameData/System/Xinterfacecommon.cht": [
       {
         "section": "MenuCheats",
         "key": "Options[0].Blurred.Text",
@@ -119380,7 +119380,7 @@
         "printf": []
       }
     ],
-    "GameData/System/XinterfaceCtmenus.int": [
+    "GameData/System/XinterfaceCtmenus.cht": [
       {
         "section": "CTAcceptSettingsTimedMenu",
         "key": "Label.Text",
@@ -120585,7 +120585,7 @@
         "section": "CTGameOptionsXboxMenu",
         "key": "OptionLabels[5].Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTGameOptionsXboxMenu.OptionLabels/5",
+        "entry": "XinterfaceCtmenus.CTGameOptionsXboxMenu/5",
         "printf": []
       },
       {
@@ -123678,7 +123678,7 @@
         "section": "CTControllerOptionsPSMenu",
         "key": "Options[1].Blurred.Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTControllerOptionsPSMenu.Options/1",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsPSMenu/1",
         "printf": []
       },
       {
@@ -123727,7 +123727,7 @@
         "section": "CTGameOptionsPSMenu",
         "key": "OptionLabels[1].Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTGameOptionsPSMenu.OptionLabels/1",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPSMenu/1",
         "printf": []
       },
       {
@@ -123959,7 +123959,7 @@
         "section": "CTHUDOptionsPSMenu",
         "key": "OptionLabels[1].Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTHUDOptionsPSMenu.OptionLabels/1",
+        "entry": "XinterfaceCtmenus.CTHUDOptionsPSMenu/1",
         "printf": []
       },
       {
@@ -124682,7 +124682,7 @@
         "printf": []
       }
     ],
-    "GameData/System/XinterfaceGamespy.int": [
+    "GameData/System/XinterfaceGamespy.cht": [
       {
         "section": "GameSpyCreateJoinInternet",
         "key": "Create.Blurred.Text",
@@ -124981,7 +124981,7 @@
         "printf": []
       }
     ],
-    "GameData/System/XinterfaceLive.int": [
+    "GameData/System/XinterfaceLive.cht": [
       {
         "section": "MenuAcceptCrossTitleInvite",
         "key": "InviteTitle",
@@ -127045,7 +127045,7 @@
         "printf": []
       }
     ],
-    "GameData/System/XinterfaceMP.int": [
+    "GameData/System/XinterfaceMP.cht": [
       {
         "section": "MenuCustomizeCharacter",
         "key": "cCloneName",
@@ -127705,7 +127705,7 @@
         "printf": []
       }
     ],
-    "GameData/System/xmaplist.int": [
+    "GameData/System/xmaplist.cht": [
       {
         "section": "Public",
         "key": "Map",
@@ -127990,7 +127990,7 @@
         "allow_duplicate": true
       }
     ],
-    "GameData/System/xmaplist_patched.int": [
+    "GameData/System/xmaplist_patched.cht": [
       {
         "section": "Public",
         "key": "Map",
@@ -128291,7 +128291,7 @@
         "allow_duplicate": true
       }
     ],
-    "GameData/System/xmaps.int": [
+    "GameData/System/xmaps.cht": [
       {
         "section": "DecoText",
         "key": "Default",
@@ -128377,7 +128377,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY07Briefing.int": [
+    "GameData/System/YYY07Briefing.cht": [
       {
         "section": "Commando07Delta0",
         "key": "HUDDescription",
@@ -128435,7 +128435,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_01B.int": [
+    "GameData/System/YYY_01B.cht": [
       {
         "section": "BactaDispenserTRN0",
         "key": "ActivatePromptText",
@@ -128606,7 +128606,7 @@
         ]
       }
     ],
-    "GameData/System/YYY_01Briefing.int": [
+    "GameData/System/YYY_01Briefing.cht": [
       {
         "section": "Commando07Delta1",
         "key": "HUDDescription",
@@ -128664,7 +128664,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_01C.int": [
+    "GameData/System/YYY_01C.cht": [
       {
         "section": "BactaDispenserTRN0",
         "key": "ActivatePromptText",
@@ -128826,7 +128826,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_01D.int": [
+    "GameData/System/YYY_01D.cht": [
       {
         "section": "BactaDispenserTRN0",
         "key": "ActivatePromptText",
@@ -129019,7 +129019,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_01E.int": [
+    "GameData/System/YYY_01E.cht": [
       {
         "section": "BactaDispenserTRN1",
         "key": "ActivatePromptText",
@@ -129384,7 +129384,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_04A.int": [
+    "GameData/System/YYY_04A.cht": [
       {
         "section": "BowcasterPickup0",
         "key": "PickupMessage",
@@ -129514,7 +129514,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_04B.int": [
+    "GameData/System/YYY_04B.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -129774,7 +129774,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_04C.int": [
+    "GameData/System/YYY_04C.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -130044,7 +130044,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_04E.int": [
+    "GameData/System/YYY_04E.cht": [
       {
         "section": "BactaDispenserYYY1",
         "key": "ActivatePromptText",
@@ -130318,7 +130318,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_04F.int": [
+    "GameData/System/YYY_04F.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -130587,7 +130587,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_05A.int": [
+    "GameData/System/YYY_05A.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -130723,7 +130723,7 @@
         ]
       }
     ],
-    "GameData/System/YYY_05B.int": [
+    "GameData/System/YYY_05B.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -130997,7 +130997,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_05C.int": [
+    "GameData/System/YYY_05C.cht": [
       {
         "section": "BactaDispenserYYY1",
         "key": "ActivatePromptText",
@@ -131316,7 +131316,7 @@
         ]
       }
     ],
-    "GameData/System/YYY_05D.int": [
+    "GameData/System/YYY_05D.cht": [
       {
         "section": "BactaDispenserYYY10",
         "key": "ActivatePromptText",
@@ -131682,7 +131682,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_05E.int": [
+    "GameData/System/YYY_05E.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -132052,7 +132052,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_05F.int": [
+    "GameData/System/YYY_05F.cht": [
       {
         "section": "BactaDispenserYYY14",
         "key": "ActivatePromptText",
@@ -132304,7 +132304,7 @@
         ]
       }
     ],
-    "GameData/System/YYY_06A.int": [
+    "GameData/System/YYY_06A.cht": [
       {
         "section": "BactaDispenserYYY1",
         "key": "ActivatePromptText",
@@ -132677,7 +132677,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_06B.int": [
+    "GameData/System/YYY_06B.cht": [
       {
         "section": "BactaDispenserYYY0",
         "key": "ActivatePromptText",
@@ -133075,7 +133075,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_06C.int": [
+    "GameData/System/YYY_06C.cht": [
       {
         "section": "ACTION_ObjectiveUpdate0",
         "key": "DisplayText",
@@ -133715,7 +133715,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_06D.int": [
+    "GameData/System/YYY_06D.cht": [
       {
         "section": "ACTION_ShowDebriefingScreen0",
         "key": "Title",
@@ -134355,7 +134355,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_35A.int": [
+    "GameData/System/YYY_35A.cht": [
       {
         "section": "BactaDispenserTRN0",
         "key": "ActivatePromptText",
@@ -134556,7 +134556,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_35B.int": [
+    "GameData/System/YYY_35B.cht": [
       {
         "section": "BactaDispenserTRN0",
         "key": "ActivatePromptText",
@@ -134841,7 +134841,7 @@
         "printf": []
       }
     ],
-    "GameData/System/YYY_35C.int": [
+    "GameData/System/YYY_35C.cht": [
       {
         "section": "BactaDispenserTRN0",
         "key": "ActivatePromptText",
@@ -135010,7 +135010,7 @@
         ]
       }
     ],
-    "GameData/System/yyy_titlecard.int": [
+    "GameData/System/yyy_titlecard.cht": [
       {
         "section": "TitleCard",
         "key": "BackgroundMusic",
@@ -135174,7 +135174,7 @@
         "printf": []
       }
     ],
-    "GameData/System/ctmarkers.int": [
+    "GameData/System/ctmarkers.cht": [
       {
         "section": "MarkerWeapon",
         "key": "ActivatePromptText",

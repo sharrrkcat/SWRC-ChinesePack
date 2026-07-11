@@ -1,6 +1,6 @@
 {
   "tool": "make_translation_json.py",
-  "generated_at": "2026-07-11T05:19:53.336933+00:00",
+  "generated_at": "2026-07-11T05:31:22.269508+00:00",
   "input_roots": {
     "english_system": "../../GameData/System",
     "english_properties": "../../GameData/Properties",
@@ -22,7 +22,7 @@
     "merge_saved_entries": 3713,
     "merged_en_jp_groups": 685,
     "merged_translation_entries": 4398,
-    "new_blank_zh_CN": 4506,
+    "new_blank_zh_CN": 4402,
     "passthrough_literal_normalized": 7,
     "shared_translation_entries": 685,
     "skipped_emit_error": 2,
@@ -38,7 +38,7 @@
     "jp_files": 147,
     "en_files": 76,
     "catalog_files": 147,
-    "translation_groups": 691,
+    "translation_groups": 687,
     "translation_entries": 9244,
     "skipped_entries": 1684,
     "preserved_zh_CN": 0,
@@ -390,14 +390,14 @@
   "loaded_class_count": 1931,
   "class_count": 1931,
   "en_passthrough_literals": {
-    "GameData/System/alaudio.int": [
+    "GameData/System/alaudio.cht": [
       {
         "section": "Public",
         "key": "Preferences+",
         "line": 3
       }
     ],
-    "GameData/System/credits.int": [
+    "GameData/System/credits.cht": [
       {
         "section": "Credits",
         "key": "CreditsLine[590]",
@@ -629,7 +629,7 @@
         "line": 780
       }
     ],
-    "GameData/System/setup.int": [
+    "GameData/System/setup.cht": [
       {
         "section": "General",
         "key": "InstallQFE",
@@ -641,7 +641,7 @@
         "line": 63
       }
     ],
-    "GameData/System/xmaplist.int": [
+    "GameData/System/xmaplist.cht": [
       {
         "section": "Public",
         "key": "Map+",
@@ -7680,7 +7680,7 @@
         "entry": "shared.enjp/100005",
         "count": 6,
         "sample_refs": [
-          "core.General/5",
+          "core.General/8",
           "setupwarfare.Setup/1",
           "setupwarfarecodedrop.Setup/1"
         ],
@@ -8095,7 +8095,7 @@
         "count": 11,
         "sample_refs": [
           "ctinventory.Bowcaster/3",
-          "ctinventory.ConcussionRifle/1",
+          "ctinventory.ConcussionRifle/3",
           "ctinventory.DC17mBlaster/3"
         ],
         "note": "MessageNoAmmo / 11 occurrences"
@@ -8124,7 +8124,7 @@
         "entry": "shared.enjp/100705",
         "count": 3,
         "sample_refs": [
-          "ctinventory.DC17mAntiArmor/1",
+          "ctinventory.DC17mAntiArmor/3",
           "ctinventory.EMPGrenade/3",
           "ctinventory.SonicDetonator/3"
         ],
@@ -8136,463 +8136,463 @@
     "files": 77,
     "missing_rows": 0,
     "by_file": {
-      "GameData/System/XinterfaceCtmenus.int": {
+      "GameData/System/XinterfaceCtmenus.cht": {
         "en_rows": 120,
         "catalog_rows": 596,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/alaudio.int": {
+      "GameData/System/alaudio.cht": {
         "en_rows": 3,
         "catalog_rows": 3,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/core.int": {
+      "GameData/System/core.cht": {
         "en_rows": 77,
         "catalog_rows": 77,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/credits.int": {
+      "GameData/System/credits.cht": {
         "en_rows": 1141,
         "catalog_rows": 1141,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ct.int": {
+      "GameData/System/ct.cht": {
         "en_rows": 4,
         "catalog_rows": 4,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_detention.int": {
+      "GameData/System/ctf_detention.cht": {
         "en_rows": 37,
         "catalog_rows": 37,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_engine.int": {
+      "GameData/System/ctf_engine.cht": {
         "en_rows": 38,
         "catalog_rows": 38,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_hangar.int": {
+      "GameData/System/ctf_hangar.cht": {
         "en_rows": 35,
         "catalog_rows": 35,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_hanginggarden.int": {
+      "GameData/System/ctf_hanginggarden.cht": {
         "en_rows": 46,
         "catalog_rows": 46,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_pow.int": {
+      "GameData/System/ctf_pow.cht": {
         "en_rows": 42,
         "catalog_rows": 42,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_siege.int": {
+      "GameData/System/ctf_siege.cht": {
         "en_rows": 31,
         "catalog_rows": 31,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_trando.int": {
+      "GameData/System/ctf_trando.cht": {
         "en_rows": 43,
         "catalog_rows": 43,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_underpass.int": {
+      "GameData/System/ctf_underpass.cht": {
         "en_rows": 33,
         "catalog_rows": 33,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctf_zerog.int": {
+      "GameData/System/ctf_zerog.cht": {
         "en_rows": 38,
         "catalog_rows": 38,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ctmarkers.int": {
+      "GameData/System/ctmarkers.cht": {
         "en_rows": 18,
         "catalog_rows": 18,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/d3ddrv.int": {
+      "GameData/System/d3ddrv.cht": {
         "en_rows": 6,
         "catalog_rows": 6,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_canyon.int": {
+      "GameData/System/dm_canyon.cht": {
         "en_rows": 18,
         "catalog_rows": 18,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_detention.int": {
+      "GameData/System/dm_detention.cht": {
         "en_rows": 31,
         "catalog_rows": 31,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_engine.int": {
+      "GameData/System/dm_engine.cht": {
         "en_rows": 32,
         "catalog_rows": 32,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_hangar.int": {
+      "GameData/System/dm_hangar.cht": {
         "en_rows": 29,
         "catalog_rows": 29,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_hanginggarden.int": {
+      "GameData/System/dm_hanginggarden.cht": {
         "en_rows": 40,
         "catalog_rows": 40,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_pow.int": {
+      "GameData/System/dm_pow.cht": {
         "en_rows": 36,
         "catalog_rows": 36,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_powsmall.int": {
+      "GameData/System/dm_powsmall.cht": {
         "en_rows": 16,
         "catalog_rows": 16,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_siege.int": {
+      "GameData/System/dm_siege.cht": {
         "en_rows": 25,
         "catalog_rows": 25,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_trando.int": {
+      "GameData/System/dm_trando.cht": {
         "en_rows": 37,
         "catalog_rows": 37,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_underpass.int": {
+      "GameData/System/dm_underpass.cht": {
         "en_rows": 27,
         "catalog_rows": 27,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/dm_zerog.int": {
+      "GameData/System/dm_zerog.cht": {
         "en_rows": 32,
         "catalog_rows": 32,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/editor.int": {
+      "GameData/System/editor.cht": {
         "en_rows": 140,
         "catalog_rows": 140,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/engine.int": {
+      "GameData/System/engine.cht": {
         "en_rows": 134,
         "catalog_rows": 511,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/geo_titlecard.int": {
+      "GameData/System/geo_titlecard.cht": {
         "en_rows": 21,
         "catalog_rows": 21,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/hints.int": {
+      "GameData/System/hints.cht": {
         "en_rows": 150,
         "catalog_rows": 150,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ipdrv.int": {
+      "GameData/System/ipdrv.cht": {
         "en_rows": 31,
         "catalog_rows": 31,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/levelloadinginfo.int": {
+      "GameData/System/levelloadinginfo.cht": {
         "en_rows": 340,
         "catalog_rows": 340,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/ras_titlecard.int": {
+      "GameData/System/ras_titlecard.cht": {
         "en_rows": 26,
         "catalog_rows": 26,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setup.int": {
+      "GameData/System/setup.cht": {
         "en_rows": 110,
         "catalog_rows": 110,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setupwarfare-ihv.int": {
+      "GameData/System/setupwarfare-ihv.cht": {
         "en_rows": 19,
         "catalog_rows": 19,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setupwarfare.int": {
+      "GameData/System/setupwarfare.cht": {
         "en_rows": 38,
         "catalog_rows": 38,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setupwarfarecodedrop.int": {
+      "GameData/System/setupwarfarecodedrop.cht": {
         "en_rows": 38,
         "catalog_rows": 38,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setupwarfareumod.int": {
+      "GameData/System/setupwarfareumod.cht": {
         "en_rows": 2,
         "catalog_rows": 2,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setupwarfarexbox.int": {
+      "GameData/System/setupwarfarexbox.cht": {
         "en_rows": 2,
         "catalog_rows": 2,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/setupwarfarexboxship.int": {
+      "GameData/System/setupwarfarexboxship.cht": {
         "en_rows": 2,
         "catalog_rows": 2,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/startup.int": {
+      "GameData/System/startup.cht": {
         "en_rows": 24,
         "catalog_rows": 24,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_.int": {
+      "GameData/System/subtitles_.cht": {
         "en_rows": 5856,
         "catalog_rows": 5856,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_all_mp.int": {
+      "GameData/System/subtitles_all_mp.cht": {
         "en_rows": 786,
         "catalog_rows": 786,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_epilogue.int": {
+      "GameData/System/subtitles_epilogue.cht": {
         "en_rows": 40,
         "catalog_rows": 40,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_01.int": {
+      "GameData/System/subtitles_geo_01.cht": {
         "en_rows": 666,
         "catalog_rows": 666,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_01_hangar.int": {
+      "GameData/System/subtitles_geo_01_hangar.cht": {
         "en_rows": 2,
         "catalog_rows": 2,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_01briefing.int": {
+      "GameData/System/subtitles_geo_01briefing.cht": {
         "en_rows": 50,
         "catalog_rows": 50,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_03.int": {
+      "GameData/System/subtitles_geo_03.cht": {
         "en_rows": 460,
         "catalog_rows": 460,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_04.int": {
+      "GameData/System/subtitles_geo_04.cht": {
         "en_rows": 382,
         "catalog_rows": 382,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_04briefing.int": {
+      "GameData/System/subtitles_geo_04briefing.cht": {
         "en_rows": 28,
         "catalog_rows": 28,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_geo_05.int": {
+      "GameData/System/subtitles_geo_05.cht": {
         "en_rows": 272,
         "catalog_rows": 272,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_pro.int": {
+      "GameData/System/subtitles_pro.cht": {
         "en_rows": 78,
         "catalog_rows": 78,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_ras_01.int": {
+      "GameData/System/subtitles_ras_01.cht": {
         "en_rows": 302,
         "catalog_rows": 302,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_ras_01briefing.int": {
+      "GameData/System/subtitles_ras_01briefing.cht": {
         "en_rows": 52,
         "catalog_rows": 52,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_ras_02.int": {
+      "GameData/System/subtitles_ras_02.cht": {
         "en_rows": 336,
         "catalog_rows": 336,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_ras_03.int": {
+      "GameData/System/subtitles_ras_03.cht": {
         "en_rows": 308,
         "catalog_rows": 308,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_ras_04.int": {
+      "GameData/System/subtitles_ras_04.cht": {
         "en_rows": 390,
         "catalog_rows": 390,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_01.int": {
+      "GameData/System/subtitles_yyy_01.cht": {
         "en_rows": 522,
         "catalog_rows": 522,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_01briefing.int": {
+      "GameData/System/subtitles_yyy_01briefing.cht": {
         "en_rows": 36,
         "catalog_rows": 36,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_03.int": {
+      "GameData/System/subtitles_yyy_03.cht": {
         "en_rows": 198,
         "catalog_rows": 198,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_03briefing.int": {
+      "GameData/System/subtitles_yyy_03briefing.cht": {
         "en_rows": 16,
         "catalog_rows": 16,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_04.int": {
+      "GameData/System/subtitles_yyy_04.cht": {
         "en_rows": 496,
         "catalog_rows": 496,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_04briefing.int": {
+      "GameData/System/subtitles_yyy_04briefing.cht": {
         "en_rows": 42,
         "catalog_rows": 42,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_05.int": {
+      "GameData/System/subtitles_yyy_05.cht": {
         "en_rows": 260,
         "catalog_rows": 260,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/subtitles_yyy_06.int": {
+      "GameData/System/subtitles_yyy_06.cht": {
         "en_rows": 372,
         "catalog_rows": 372,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/swrepubliccommando.int": {
+      "GameData/System/swrepubliccommando.cht": {
         "en_rows": 4,
         "catalog_rows": 4,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/unrealed.int": {
+      "GameData/System/unrealed.cht": {
         "en_rows": 1,
         "catalog_rows": 1,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/uweb.int": {
+      "GameData/System/uweb.cht": {
         "en_rows": 2,
         "catalog_rows": 2,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/window.int": {
+      "GameData/System/window.cht": {
         "en_rows": 57,
         "catalog_rows": 57,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/windrv.int": {
+      "GameData/System/windrv.cht": {
         "en_rows": 14,
         "catalog_rows": 14,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/xgamelist.int": {
+      "GameData/System/xgamelist.cht": {
         "en_rows": 4,
         "catalog_rows": 4,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/xgames.int": {
+      "GameData/System/xgames.cht": {
         "en_rows": 5,
         "catalog_rows": 5,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/xmaplist.int": {
+      "GameData/System/xmaplist.cht": {
         "en_rows": 20,
         "catalog_rows": 20,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/xmaplist_patched.int": {
+      "GameData/System/xmaplist_patched.cht": {
         "en_rows": 20,
         "catalog_rows": 20,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/xmaps.int": {
+      "GameData/System/xmaps.cht": {
         "en_rows": 12,
         "catalog_rows": 12,
         "missing_rows": 0,
         "missing": []
       },
-      "GameData/System/yyy_titlecard.int": {
+      "GameData/System/yyy_titlecard.cht": {
         "en_rows": 26,
         "catalog_rows": 26,
         "missing_rows": 0,

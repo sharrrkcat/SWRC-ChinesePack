@@ -611,7 +611,7 @@
       "zh_CN": ""
     },
     "100732": {
-      "note": "FontArrayNames[5] / 2 occurrences",
+      "note": "FontArrayNames[6] / 2 occurrences",
       "en": "OrbitFonts.OrbitBold12",
       "jp": "OrbitFonts.OrbitBold12",
       "de": "OrbitFonts.OrbitBold12",
@@ -61456,6 +61456,13 @@
       "de": "",
       "zh_CN": ""
     },
+    "5": {
+      "note": "OptionLabels[5].Text",
+      "en": "DIFFICULTY",
+      "jp": "難易度",
+      "de": "",
+      "zh_CN": ""
+    },
     "6": {
       "note": "OptionLabels[6].Text",
       "en": "AUTO PULL MANEUVERS",
@@ -61481,15 +61488,6 @@
       "note": "Options[5].Items[2]",
       "en": "HARD",
       "jp": "ハード",
-      "de": "",
-      "zh_CN": ""
-    }
-  },
-  "XinterfaceCtmenus.CTGameOptionsXboxMenu.OptionLabels": {
-    "5": {
-      "note": "OptionLabels[5].Text",
-      "en": "DIFFICULTY",
-      "jp": "難易度",
       "de": "",
       "zh_CN": ""
     }
@@ -65683,6 +65681,13 @@
       "de": "STANDARD CONTROLLER-KONFIGURATION",
       "zh_CN": ""
     },
+    "1": {
+      "note": "Options[1].Blurred.Text",
+      "en": "USE CONTROLLER CONFIGURATION 1",
+      "jp": "",
+      "de": "CONTROLLER-KONFIGURATION 1",
+      "zh_CN": ""
+    },
     "2": {
       "note": "Options[2].Blurred.Text",
       "en": "USE CONTROLLER CONFIGURATION 2",
@@ -65712,21 +65717,19 @@
       "zh_CN": ""
     }
   },
-  "XinterfaceCtmenus.CTControllerOptionsPSMenu.Options": {
-    "1": {
-      "note": "Options[1].Blurred.Text",
-      "en": "USE CONTROLLER CONFIGURATION 1",
-      "jp": "",
-      "de": "CONTROLLER-KONFIGURATION 1",
-      "zh_CN": ""
-    }
-  },
   "XinterfaceCtmenus.CTGameOptionsPSMenu": {
     "0": {
       "note": "OptionLabels[0].Text",
       "en": "INVERT Y AXIS",
       "jp": "",
       "de": "Y-ACHSE UMKEHREN",
+      "zh_CN": ""
+    },
+    "1": {
+      "note": "OptionLabels[1].Text",
+      "en": "LOOK SENSITIVITY",
+      "jp": "",
+      "de": "KAMERAGESCHWINDIGKEIT",
       "zh_CN": ""
     },
     "2": {
@@ -65786,21 +65789,19 @@
       "zh_CN": ""
     }
   },
-  "XinterfaceCtmenus.CTGameOptionsPSMenu.OptionLabels": {
-    "1": {
-      "note": "OptionLabels[1].Text",
-      "en": "LOOK SENSITIVITY",
-      "jp": "",
-      "de": "KAMERAGESCHWINDIGKEIT",
-      "zh_CN": ""
-    }
-  },
   "XinterfaceCtmenus.CTHUDOptionsPSMenu": {
     "0": {
       "note": "OptionLabels[0].Text",
       "en": "HELMET",
       "jp": "",
       "de": "HELM",
+      "zh_CN": ""
+    },
+    "1": {
+      "note": "OptionLabels[1].Text",
+      "en": "PROMPT TEXT",
+      "jp": "",
+      "de": "TEXTANZEIGE",
       "zh_CN": ""
     },
     "2": {
@@ -65822,15 +65823,6 @@
       "en": "CYCLE",
       "jp": "",
       "de": "WECHSELN",
-      "zh_CN": ""
-    }
-  },
-  "XinterfaceCtmenus.CTHUDOptionsPSMenu.OptionLabels": {
-    "1": {
-      "note": "OptionLabels[1].Text",
-      "en": "PROMPT TEXT",
-      "jp": "",
-      "de": "TEXTANZEIGE",
       "zh_CN": ""
     }
   },
