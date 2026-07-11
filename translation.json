@@ -3473,6 +3473,13 @@
       "de": "WARNUNG",
       "zh_CN": ""
     },
+    "101075": {
+      "note": "ContinueText / 2 occurrences",
+      "en": "CONTINUE :",
+      "jp": "",
+      "de": "FORTSETZEN :",
+      "zh_CN": ""
+    },
     "100940": {
       "note": "ALabel.Text / 2 occurrences",
       "en": "OK :",
@@ -3809,6 +3816,27 @@
       "de": "SPIEL LADEN",
       "zh_CN": ""
     },
+    "101171": {
+      "note": "AutoSaveName / 2 occurrences",
+      "en": "AutoSave",
+      "jp": "",
+      "de": "Autospeichern",
+      "zh_CN": ""
+    },
+    "101172": {
+      "note": "DamagedSave / 2 occurrences",
+      "en": " APPEARS TO BE DAMAGED AND CANNOT BE USED.",
+      "jp": "",
+      "de": " KANN NICHT GELADEN WERDEN.",
+      "zh_CN": ""
+    },
+    "101174": {
+      "note": "QuickSaveName / 2 occurrences",
+      "en": "QuickSave",
+      "jp": "",
+      "de": "Schnellspeichern",
+      "zh_CN": ""
+    },
     "100967": {
       "note": "Label.Text / 3 occurrences",
       "en": "MAIN MENU",
@@ -3914,6 +3942,13 @@
       "de": "SPIEL BEENDEN",
       "zh_CN": ""
     },
+    "101193": {
+      "note": "MenuOptions[4].Blurred.Text / 2 occurrences",
+      "en": "FRIENDS LIST",
+      "jp": "",
+      "de": "FREUNDESLISTE",
+      "zh_CN": ""
+    },
     "100982": {
       "note": "LoadMap.Blurred.Text / 2 occurrences",
       "en": "LOAD MAP",
@@ -3968,6 +4003,20 @@
       "en": "SAVE GAME",
       "jp": "セーブゲーム",
       "de": "SPIEL SPEICHERN",
+      "zh_CN": ""
+    },
+    "101202": {
+      "note": "EndMissionDemoConfirm / 2 occurrences",
+      "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "MÖCHTEN SIE DIE MISSION WIRKLICH BEENDEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
+      "zh_CN": ""
+    },
+    "101206": {
+      "note": "RestartMissionDemoConfirm / 2 occurrences",
+      "en": "ARE YOU SURE YOU WANT TO RESTART THE LEVEL?  ANY PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "MÖCHTEN SIE DEN LEVEL WIRKLICH NEU STARTEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": ""
     },
     "100606": {
@@ -11764,6 +11813,48 @@
       "jp": "指示中止",
       "de": "MANÖVER ABBRECHEN",
       "zh_CN": ""
+    },
+    "25": {
+      "note": "FullHealthText",
+      "en": "YOU ARE AT FULL HEALTH",
+      "jp": "",
+      "de": "GESUNDHEIT MAXIMAL",
+      "zh_CN": ""
+    },
+    "31": {
+      "note": "LowLightVisionModeText",
+      "en": "LOW LIGHT MODE",
+      "jp": "",
+      "de": "RESTLICHTMODUS",
+      "zh_CN": ""
+    },
+    "36": {
+      "note": "RemoveScavPromptText",
+      "en": "PRESS @ TO REMOVE SCAVENGER DROID",
+      "jp": "",
+      "de": "@ DRÜCKEN, UM SAMMLERDROIDEN ZU ENTFERNEN",
+      "zh_CN": ""
+    },
+    "37": {
+      "note": "SquadUnavailableText",
+      "en": "- SQUAD UNAVAILABLE -",
+      "jp": "",
+      "de": "- TEAM NICHT VERFÜGBAR -",
+      "zh_CN": ""
+    },
+    "38": {
+      "note": "TacticalVisionModeText",
+      "en": "TACTICAL MODE",
+      "jp": "",
+      "de": "TAKTISCHER MODUS",
+      "zh_CN": ""
+    },
+    "67": {
+      "note": "XboxCheckpointAddition",
+      "en": "PLEASE DON'T TURN OFF YOUR XBOX CONSOLE",
+      "jp": "",
+      "de": "SCHNELLSPEICHERUNG ABGESCHLOSSEN",
+      "zh_CN": ""
     }
   },
   "engine.MatSubAction": {
@@ -11818,6 +11909,20 @@
       "en": "THERE IS NO QUICKSAVE OR AUTOSAVE TO LOAD.",
       "jp": "ロードできるクイックセーブ/オートセーブがありません。",
       "de": "ES GIBT KEINEN SCHNELL- ODER AUTOSPEICHER-SPIELSTAND.",
+      "zh_CN": ""
+    },
+    "5": {
+      "note": "AutoSaveName",
+      "en": "AutoSave",
+      "jp": "",
+      "de": "ASV",
+      "zh_CN": ""
+    },
+    "9": {
+      "note": "QuickSaveName",
+      "en": "QuickSave",
+      "jp": "",
+      "de": "QSV",
       "zh_CN": ""
     }
   },
@@ -14506,6 +14611,20 @@
       "jp": "基地を守った!",
       "de": "",
       "zh_CN": ""
+    },
+    "6": {
+      "note": "AttackingText",
+      "en": "Attacking",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "7": {
+      "note": "DefendingText",
+      "en": "Defending",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "mpgame.ASMessage": {
@@ -14773,6 +14892,13 @@
       "note": "YouveWonTheMatch",
       "en": "You've won the match",
       "jp": "対戦に勝ちました",
+      "de": "",
+      "zh_CN": ""
+    },
+    "33": {
+      "note": "SpeedText",
+      "en": "SPEED:",
+      "jp": "",
       "de": "",
       "zh_CN": ""
     }
@@ -15893,6 +16019,13 @@
       "jp": "DC-17mブラスター・ライフル",
       "de": "DC-17m Blastergewehr",
       "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "properties.DC17mSniperMP": {
@@ -15911,6 +16044,13 @@
       "jp": "EMPグレネード",
       "de": "EL-Detonator",
       "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "properties.SMGPickupMP": {
@@ -15928,6 +16068,13 @@
       "en": "Heavy Machine Gun",
       "jp": "ヘビーマシンガン",
       "de": "Schweres Maschinengwehr",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
       "zh_CN": ""
     }
   },
@@ -59869,6 +60016,13 @@
       "jp": "ホストから切断されました",
       "de": "HOSTVERBINDUNG UNTERBROCHEN",
       "zh_CN": ""
+    },
+    "8": {
+      "note": "CDKeyMessage.Text",
+      "en": "YOUR CD KEY IS INVALID OR IN USE BY ANOTHER PLAYER.",
+      "jp": "",
+      "de": "IHR CD-KEY IST UNGÜLTIG ODER WIRD VON EINEM ANDEREN SPIELER VERWENDET.",
+      "zh_CN": ""
     }
   },
   "Xinterfacecommon.MenuCorruptContent": {
@@ -60183,6 +60337,48 @@
       "jp": "ゲームセッティング",
       "de": "SPIELEINSTELLUNGEN",
       "zh_CN": ""
+    },
+    "177": {
+      "note": "AButton.Blurred.Text",
+      "en": "DONE",
+      "jp": "",
+      "de": "FERTIG",
+      "zh_CN": ""
+    },
+    "178": {
+      "note": "ALabel.Text",
+      "en": "DONE :",
+      "jp": "",
+      "de": "FERTIG :",
+      "zh_CN": ""
+    },
+    "179": {
+      "note": "BButton.Blurred.Text",
+      "en": "CANCEL",
+      "jp": "",
+      "de": "ABBRUCH",
+      "zh_CN": ""
+    },
+    "180": {
+      "note": "BLabel.Text",
+      "en": ": CANCEL",
+      "jp": "",
+      "de": ": ABBRECHEN",
+      "zh_CN": ""
+    },
+    "181": {
+      "note": "XButton.Blurred.Text",
+      "en": "RESTORE INITIAL",
+      "jp": "",
+      "de": "STANDARD",
+      "zh_CN": ""
+    },
+    "182": {
+      "note": "XLabel.Text",
+      "en": ": RESTORE INITIAL",
+      "jp": "",
+      "de": ": STANDARD",
+      "zh_CN": ""
     }
   },
   "Xinterfacecommon.MenuLoading": {
@@ -60246,6 +60442,13 @@
       "en": "WARNING: LOW STORAGE",
       "jp": "警告: 空きブロックがありません",
       "de": "WARNUNG: WENIG SPEICHERPLATZ",
+      "zh_CN": ""
+    },
+    "8": {
+      "note": "DashboardConfirm",
+      "en": "ARE YOU SURE YOU WANT TO GO TO THE XBOX DASHBOARD TO FREE MORE BLOCKS?  ANY UNSAVED PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "MÖCHTEN SIE WIRKLICH AUF DIE XBOX-STEUERUNG ZUGREIFEN, UM FÜR WEITERE FREIE BLÖCKE ZU SORGEN? ALLE UNGESPEICHERTEN FORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": ""
     }
   },
@@ -60836,6 +61039,22 @@
       "zh_CN": ""
     }
   },
+  "XinterfaceCtmenus.CTControlConfigMenu": {
+    "13": {
+      "note": "back.Blurred.Text",
+      "en": "BACK",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "14": {
+      "note": "back.HelpText",
+      "en": "Back",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
   "XinterfaceCtmenus.CTControllerDisconnect": {
     "1": {
       "note": "Label.Text",
@@ -60922,6 +61141,34 @@
       "jp": "次の設定",
       "de": "",
       "zh_CN": ""
+    },
+    "13": {
+      "note": "ClickLeftStickText",
+      "en": "CLICK LEFT THUMBSTICK",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "14": {
+      "note": "ClickRightStickText",
+      "en": "CLICK RIGHT THUMBSTICK",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "15": {
+      "note": "LeftStickText",
+      "en": "LEFT THUMBSTICK",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "16": {
+      "note": "RightStickText",
+      "en": "RIGHT THUMBSTICK",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu.OptionSet0Labels": {
@@ -60952,6 +61199,20 @@
       "note": "OptionSet1Labels[2].Text",
       "en": "CROUCH",
       "jp": "しゃがむ",
+      "de": "",
+      "zh_CN": ""
+    },
+    "3": {
+      "note": "OptionSet1Labels[3].Text",
+      "en": "MP SCORES",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "4": {
+      "note": "OptionSet1Labels[4].Text",
+      "en": "PAUSE",
+      "jp": "",
       "de": "",
       "zh_CN": ""
     }
@@ -61227,6 +61488,20 @@
       "en": "CHAT",
       "jp": "チャット",
       "de": "CHAT",
+      "zh_CN": ""
+    },
+    "4": {
+      "note": "OptionSet2Labels[4].Text",
+      "en": "TEAM CHAT",
+      "jp": "",
+      "de": "TEAM-CHAT",
+      "zh_CN": ""
+    },
+    "5": {
+      "note": "OptionSet2Labels[5].Text",
+      "en": "SPEECH MENU",
+      "jp": "",
+      "de": "SPRACHMENÜ",
       "zh_CN": ""
     }
   },
@@ -61678,6 +61953,20 @@
       "jp": "プロンプトテキスト",
       "de": "",
       "zh_CN": ""
+    },
+    "2": {
+      "note": "OptionLabels[2].Text",
+      "en": "TACTICAL VISOR MODE",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "3": {
+      "note": "OptionLabels[3].Text",
+      "en": "TACTICAL MODE INTENSITY",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "XinterfaceCtmenus.CTInfoBase": {
@@ -61709,6 +61998,13 @@
       "en": " ?",
       "jp": " を削除しますか?",
       "de": " ?",
+      "zh_CN": ""
+    },
+    "9": {
+      "note": "LoadConfirm",
+      "en": "ARE YOU SURE YOU WANT TO LOAD THIS SAVE GAME?  ANY UNSAVED PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "MÖCHTEN SIE WIRKLICH DIESEN SPIELSTAND LADEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": ""
     }
   },
@@ -61784,6 +62080,27 @@
       "jp": "適用",
       "de": "ANNEHMEN",
       "zh_CN": ""
+    },
+    "13": {
+      "note": "ClickLeftStickText",
+      "en": "CLICK LEFT THUMBSTICK",
+      "jp": "",
+      "de": "L3-TASTE",
+      "zh_CN": ""
+    },
+    "14": {
+      "note": "ClickRightStickText",
+      "en": "CLICK RIGHT THUMBSTICK",
+      "jp": "",
+      "de": "R3-TASTE",
+      "zh_CN": ""
+    },
+    "15": {
+      "note": "LabelNoPCSpecial.Text",
+      "en": "ESC, PAUSE AND TAB FUNCTIONS CANNOT BE REASSIGNED",
+      "jp": "",
+      "de": "ESC, PAUSE UND TAB KÖNNEN NICHT NEU BELEGT WERDEN",
+      "zh_CN": ""
     }
   },
   "XinterfaceCtmenus.CTMenuMain": {
@@ -61849,6 +62166,13 @@
       "jp": ": 選択",
       "de": ": AUSWAHL",
       "zh_CN": ""
+    },
+    "11": {
+      "note": "QuitXBoxGameConfirm",
+      "en": "ARE YOU SURE YOU WANT TO QUIT?",
+      "jp": "",
+      "de": "MÖCHTEN SIE DAS SPIEL WIRKLICH BEENDEN?",
+      "zh_CN": ""
     }
   },
   "XinterfaceCtmenus.CTMultiplayerPCMenu": {
@@ -61901,6 +62225,20 @@
       "en": "ARE YOU SURE YOU WANT TO SWITCH TEAMS?",
       "jp": "チームを入れ替えますか?",
       "de": "MÖCHTEN SIE DAS TEAM WIRKLICH WECHSELN?",
+      "zh_CN": ""
+    },
+    "4": {
+      "note": "MenuOptions[4].Blurred.Text",
+      "en": "END GAME",
+      "jp": "",
+      "de": "SPIEL BEENDEN",
+      "zh_CN": ""
+    },
+    "20": {
+      "note": "QuitGameConfirm",
+      "en": "ARE YOU SURE YOU WANT TO QUIT TO WINDOWS?  ANY UNSAVED PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "MÖCHTEN SIE WIRKLICH ZU WINDOWS ZURÜCKKEHREN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": ""
     }
   },
@@ -62166,6 +62504,48 @@
       "jp": "オンライン",
       "de": "",
       "zh_CN": ""
+    },
+    "10": {
+      "note": "DamagedSave",
+      "en": " APPEARS TO BE DAMAGED AND CANNOT BE USED.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "11": {
+      "note": "EndMissionConfirm",
+      "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY UNSAVED PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "12": {
+      "note": "EndMissionDemoConfirm",
+      "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "13": {
+      "note": "LoadLastConfirm",
+      "en": "ARE YOU SURE YOU WANT TO LOAD THE LAST SAVE GAME?  ANY UNSAVED PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "7": {
+      "note": "MenuOptions[7].Blurred.Text",
+      "en": "OPTIONS",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "14": {
+      "note": "RestartMissionDemoConfirm",
+      "en": "ARE YOU SURE YOU WANT TO RESTART THE LEVEL?  ANY PROGRESS WILL BE LOST.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "XinterfaceCtmenus.CTSaveGameMenu": {
@@ -62223,6 +62603,41 @@
       "en": "OVERWRITE",
       "jp": "上書き",
       "de": "ÜBERSCHR.",
+      "zh_CN": ""
+    },
+    "16": {
+      "note": "GEOCampaignName",
+      "en": "Geonosis",
+      "jp": "",
+      "de": "Geonosis",
+      "zh_CN": ""
+    },
+    "18": {
+      "note": "RASCampaignName",
+      "en": "AssaultShip",
+      "jp": "",
+      "de": "Angriffsschiff",
+      "zh_CN": ""
+    },
+    "19": {
+      "note": "UnknownCampaignName",
+      "en": "Unknown",
+      "jp": "",
+      "de": "Unbekannt",
+      "zh_CN": ""
+    },
+    "20": {
+      "note": "YYYCampaignName",
+      "en": "Kashyyyk",
+      "jp": "",
+      "de": "Kashyyyk",
+      "zh_CN": ""
+    },
+    "21": {
+      "note": "Ybutton.Blurred.Text",
+      "en": "NEW",
+      "jp": "",
+      "de": "",
       "zh_CN": ""
     }
   },
@@ -62284,6 +62699,13 @@
       "note": "XLabel.Text",
       "en": ": RESTORE DEFAULTS",
       "jp": ": デフォルト",
+      "de": "",
+      "zh_CN": ""
+    },
+    "96": {
+      "note": "ApplySettingsConfirm",
+      "en": "APPLY SETTINGS?",
+      "jp": "",
       "de": "",
       "zh_CN": ""
     }
@@ -62359,6 +62781,13 @@
       "en": "32",
       "jp": "32",
       "de": "32",
+      "zh_CN": ""
+    },
+    "93": {
+      "note": "RestartRequired.Text",
+      "en": "YOU HAVE CHANGED AN OPTION THAT REQUIRES THE GAME BE RESTARTED TO TAKE EFFECT.",
+      "jp": "",
+      "de": "DAS SPIEL MUSS NEU GESTARTET WERDEN, DAMIT DIE ÄNDERUNGEN  ÜBERNOMMEN WERDEN KÖNNEN.",
       "zh_CN": ""
     }
   },
@@ -62885,6 +63314,20 @@
       "note": "MenuTitle.Text",
       "en": "DEDICATED SERVER",
       "jp": "デディケーテッドサーバー",
+      "de": "",
+      "zh_CN": ""
+    },
+    "6": {
+      "note": "AButton.Blurred.Text",
+      "en": "OPTIONS",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "7": {
+      "note": "ALabel.Text",
+      "en": "OPTIONS :",
+      "jp": "",
       "de": "",
       "zh_CN": ""
     }
@@ -64586,6 +65029,20 @@
       "jp": "奴隷商人 2",
       "de": "",
       "zh_CN": ""
+    },
+    "83": {
+      "note": "AButton.Blurred.Text",
+      "en": "APPLY",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "84": {
+      "note": "ALabel.Text",
+      "en": "APPLY :",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
     }
   },
   "XinterfaceMP.MenuCustomizeCharacter.OptionLabels": {
@@ -65584,14 +66041,14 @@
       "de": "FEUERN",
       "zh_CN": ""
     },
-    "9": {
+    "18": {
       "note": "PrevSet.Blurred.Text",
       "en": "PREVIOUS SET",
       "jp": "",
       "de": "ZURÜCK",
       "zh_CN": ""
     },
-    "10": {
+    "19": {
       "note": "NextSet.Blurred.Text",
       "en": "NEXT SET",
       "jp": "",
@@ -65864,13 +66321,6 @@
       "de": "DIE SERVERDATEN '%s' BEFINDEN SICH NICHT AUF DEM LOKALEN SYSTEM.",
       "zh_CN": ""
     },
-    "2": {
-      "note": "ALabel.Text",
-      "en": "CONTINUE :",
-      "jp": "",
-      "de": "FORTSETZEN :",
-      "zh_CN": ""
-    },
     "4": {
       "note": "MenuTitle.Text",
       "en": "ERROR",
@@ -65924,13 +66374,6 @@
       "de": "SPIEL LADEN",
       "zh_CN": ""
     },
-    "5": {
-      "note": "MenuOptions[5].Blurred.Text",
-      "en": "FRIENDS LIST",
-      "jp": "",
-      "de": "FREUNDESLISTE",
-      "zh_CN": ""
-    },
     "8": {
       "note": "MenuOptions[8].Blurred.Text",
       "en": "ENABLE HINTS",
@@ -65945,7 +66388,7 @@
       "de": "MISSION BEENDEN",
       "zh_CN": ""
     },
-    "6": {
+    "17": {
       "note": "EndMissionConfirm",
       "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "",
@@ -65959,46 +66402,25 @@
       "de": "MÖCHTEN SIE DEN LEVEL WIRKLICH NEU STARTEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": ""
     },
-    "11": {
+    "18": {
       "note": "LoadLastConfirm",
       "en": "ARE YOU SURE YOU WANT TO LOAD THE LAST SAVE GAME?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "",
       "de": "WIRKLICH DEN LETZTEN SPIELSTAND LADEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": ""
     },
-    "12": {
-      "note": "EndMissionDemoConfirm",
-      "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY PROGRESS WILL BE LOST.",
-      "jp": "",
-      "de": "MÖCHTEN SIE DIE MISSION WIRKLICH BEENDEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": ""
-    },
-    "13": {
-      "note": "RestartMissionDemoConfirm",
-      "en": "ARE YOU SURE YOU WANT TO RESTART THE LEVEL?  ANY PROGRESS WILL BE LOST.",
-      "jp": "",
-      "de": "MÖCHTEN SIE DEN LEVEL WIRKLICH NEU STARTEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": ""
-    },
-    "14": {
+    "15": {
       "note": "StringCloakToggleOn",
       "en": "APPEAR OFFLINE",
       "jp": "",
       "de": "OFFLINE ERSCHEINEN",
       "zh_CN": ""
     },
-    "15": {
+    "16": {
       "note": "StringCloakToggleOff",
       "en": "APPEAR ONLINE",
       "jp": "",
       "de": "ONLINE ERSCHEINEN",
-      "zh_CN": ""
-    },
-    "16": {
-      "note": "DamagedSave",
-      "en": " APPEARS TO BE DAMAGED AND CANNOT BE USED.",
-      "jp": "",
-      "de": " KANN NICHT GELADEN WERDEN.",
       "zh_CN": ""
     }
   },
@@ -66079,6 +66501,773 @@
       "en": "MAIN MENU",
       "jp": "",
       "de": "HAUPTMENÜ",
+      "zh_CN": ""
+    }
+  },
+  "ctgame.CTDamageSpiderBump": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k crushed %o.",
+      "jp": "",
+      "de": "%k zerdrückte %o.",
+      "zh_CN": ""
+    }
+  },
+  "ctgame.DisarmTrap": {
+    "2": {
+      "note": "ActivatePromptText",
+      "en": "PRESS AND HOLD @ TO DISARM",
+      "jp": "",
+      "de": "@ ZUM ENTSCHÄRFEN DRÜCKEN UND HALTEN",
+      "zh_CN": ""
+    }
+  },
+  "ctinventory.DC17mBlasterAmmo": {
+    "1": {
+      "note": "ItemName",
+      "en": "DC17m Blaster Rifle Cell",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "engine.Pickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "Item",
+      "jp": "",
+      "de": "Objekt",
+      "zh_CN": ""
+    }
+  },
+  "properties.Bowcaster": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ConcussionRifleAmmo": {
+    "1": {
+      "note": "ItemName",
+      "en": "LJ-50 Concussion Rifle Cell",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ConcussionRifle": {
+    "1": {
+      "note": "ItemName",
+      "en": "LJ-50 Concussion Rifle",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ConcussionRiflePickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "LJ-50 Concussion Rifle",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ConcussionRiflePickupMP": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "LJ-50 Concussion Rifle",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.CTDamageEMPPulse": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k electrocuted %o with an EPB.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.CTDamageMeleeBerserker": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k beat %o to death.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.CTDamageMelee": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k beat %o to death.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.CTDamageMeleeHAM": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k beat %o to death.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.CTDamageMeleeWarrior": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k beat %o to death.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.CTDamageSonic": {
+    "1": {
+      "note": "DeathString",
+      "en": "%k rocked %o with a Sonic Detonator.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC15Pickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC15s Side Arm Blaster",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC15PickupMP": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC15s Side Arm Blaster",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mAntiArmorBox": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Anti-Armor Charge Packs",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mAntiArmorCommando": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mAntiArmor": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mAntiArmorWeaponPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Anti-Armor Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mAntiArmorWeaponPickupMP": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Anti-Armor Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mBlasterBox": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Blaster Clips",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mBlasterBriefing": {
+    "1": {
+      "note": "ItemName",
+      "en": "DC17m Blaster Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mBlaster": {
+    "1": {
+      "note": "ItemName",
+      "en": "DC17m Blaster Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mBlasterMP": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mBlasterWeaponPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Blaster Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mSniperBox": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Sniper Rounds",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mSniperCommando": {
+    "1": {
+      "note": "ItemName",
+      "en": "DC17m Sniper Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mSniper": {
+    "1": {
+      "note": "ItemName",
+      "en": "DC17m Sniper Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mSniperWeaponPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Sniper Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.DC17mSniperWeaponPickupMP": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "DC-17m Sniper Attachment",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EliteBeam": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of biofluidized fuel.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EliteBeamEnemy": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of biofluidized fuel.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EMPGrenadeBox": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "EC Detonators",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EMPGrenade": {
+    "1": {
+      "note": "ItemName",
+      "en": "EC Detonator",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EMPGrenadeMultiPlay": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "EC Detonators",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EWebTurretAmmo": {
+    "1": {
+      "note": "ItemName",
+      "en": "EWHB-12 Mounted Turret Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.EWebTurret": {
+    "1": {
+      "note": "ItemName",
+      "en": "EWHB-12 Mounted Turret",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.FlashBang": {
+    "1": {
+      "note": "ItemName",
+      "en": "Flash Detonator",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.RocketLauncher": {
+    "1": {
+      "note": "ItemName",
+      "en": "Wookiee Homing Rocket Launcher",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of Homing Rocket shells.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.RocketLauncherMP": {
+    "1": {
+      "note": "ItemName",
+      "en": "Wookiee Homing Rocket Launcher",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of Homing Rocket shells.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.RocketLauncherPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "Wookiee Homing Rocket Launcher",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.RocketLauncherPickupMP": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "Wookiee Homing Rocket Launcher",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ShotgunAmmo": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Array Gun Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ShotgunAmmoMP": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Array Gun Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.Shotgun": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Array Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of cartridges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ShotgunMP": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Array Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of cartridges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ShotgunPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "ACP Array Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ShotgunPickupMP": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "ACP Array Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ShotgunSlaver": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Array Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of cartridges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SMGAmmo": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Repeater Gun Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SMGAmmoMP": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Repeater Gun Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SMG": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SMGMP": {
+    "1": {
+      "note": "ItemName",
+      "en": "ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SMGPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SonicDetonator": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.SonicDetonatorMP": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ThermalDetonator": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ThermalDetonatorEnemy": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.ThermalDetonatorMP": {
+    "1": {
+      "note": "MessageNoAmmo",
+      "en": " out of charges.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.TrandoshanRifleAmmo": {
+    "1": {
+      "note": "ItemName",
+      "en": "LS-150 Heavy ACP Repeater Gun Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.TrandoshanRifleAmmoTrando": {
+    "1": {
+      "note": "ItemName",
+      "en": "LS-150 Heavy ACP Repeater Gun Ammo",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.TrandoshanRifle": {
+    "1": {
+      "note": "ItemName",
+      "en": "LS-150 Heavy ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.TrandoshanRifleEnemy": {
+    "1": {
+      "note": "ItemName",
+      "en": "LS-150 Heavy ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "2": {
+      "note": "MessageNoAmmo",
+      "en": " out of ammo.",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.TrandoshanRifleMPPickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "LS-150 Heavy ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "properties.TrandoshanRiflePickup": {
+    "1": {
+      "note": "PickupMessage",
+      "en": "LS-150 Heavy ACP Repeater Gun",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "Xinterfacecommon.MenuProgress": {
+    "1": {
+      "note": "ConnectingText",
+      "en": "CONNECTING",
+      "jp": "",
+      "de": "VERBINDEN ...",
+      "zh_CN": ""
+    }
+  },
+  "XinterfaceCtmenus.CTMultiplayerPausePCMenu.MenuOptions": {
+    "5": {
+      "note": "MenuOptions[5].Blurred.Text",
+      "en": "QUIT PROGRAM",
+      "jp": "",
+      "de": "PROGRAMM BEENDEN",
+      "zh_CN": ""
+    }
+  },
+  "XinterfaceCtmenus.CTMultiplayerPauseXboxMenu.MenuOptions": {
+    "7": {
+      "note": "MenuOptions[7].Blurred.Text",
+      "en": "LEAVE GAME",
+      "jp": "",
+      "de": "SPIEL VERLASSEN",
+      "zh_CN": ""
+    }
+  },
+  "XinterfaceCtmenus.CTPauseXBoxMenu.MenuOptions": {
+    "8": {
+      "note": "MenuOptions[8].Blurred.Text",
+      "en": "ENABLE HINTS",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    },
+    "9": {
+      "note": "MenuOptions[9].Blurred.Text",
+      "en": "END MISSION",
+      "jp": "",
+      "de": "",
+      "zh_CN": ""
+    }
+  },
+  "XinterfaceCtmenus.CTStartXboxMenu": {
+    "1": {
+      "note": "Start.Blurred.Text",
+      "en": "PRESS START",
+      "jp": "",
+      "de": "",
       "zh_CN": ""
     }
   }

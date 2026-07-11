@@ -77,6 +77,27 @@ UC_ARRAY_RE = re.compile(r"([A-Za-z_][A-Za-z0-9_]*)\((\d+)\)")
 BEGIN_OBJECT_RE = re.compile(r"^Begin\s+(?:Actor|Object)\s+.*?\bClass=([^\s]+)\s+.*?\bName=([^\s]+)", re.IGNORECASE)
 CLASS_RE = re.compile(r"^\s*class\s+([A-Za-z_][A-Za-z0-9_]*)\s+extends\s+([A-Za-z_][A-Za-z0-9_]*)", re.IGNORECASE)
 STRUCT_TEXT_FIELDS = {"Caption", "Parent", "Text", "HelpText", "Objective"}
+LOCALIZABLE_INVENTORY_KEYS = {"ItemName", "MessageNoAmmo", "PickupMessage", "DeathString"}
+LOCALIZABLE_KEY_EXACT = {
+    "ItemName", "PickupMessage", "MessageNoAmmo", "DeathString", "DamagedSave",
+}
+LOCALIZABLE_KEY_SUFFIXES = (
+    "Text", "Confirm", "Prompt", "Addition", "CampaignName", "SaveName",
+)
+NON_RETAIL_CLASS_PREFIXES = (
+    "CT_Comicon_", "CT_dev_", "CT_DVDDemo_", "CT_Focus_", "CT_MSEval_",
+    "CT_PCDemo_", "CT_Tokyo_", "CT_E3_", "CT_Xbox",
+)
+
+
+def _is_localizable_default_key(key: str) -> bool:
+    """Check whether a defaultproperties key name looks translatable."""
+    leaf = re.sub(r"\[\d+\]", "", key).rsplit(".", 1)[-1]
+    if leaf in LOCALIZABLE_KEY_EXACT:
+        return True
+    return leaf.endswith(LOCALIZABLE_KEY_SUFFIXES)
+
+
 from localization_common import FALLBACK_REPLACEMENTS, normalize_fallback_text
 
 
@@ -1837,6 +1858,123 @@ def process_supplementary_sources(
     audit["supplementary_sources"] = supp_stats
 
 
+def discover_package_orphan_entries(
+    catalog_files,
+    translation,
+    allocator,
+    classes,
+    de_index,
+    package_case,
+    jp_ints,
+    stats,
+    reset_translations,
+    audit,
+):
+    """Discover localizable defaults in exported .u packages not covered by JP .int files.
+
+    Some .u packages contain classes with localized text in defaultproperties
+    that are not referenced by any JP .int file.  This function scans every
+    exported class for each package that has a corresponding JP .int, and adds
+    catalog/translation entries for localizable fields that the main JP-indexed
+    loop did not cover.
+
+    ``*Defaults`` classes (e.g. ``ShotgunSlaverDefaults``) are property-override
+    containers — the game looks up localisation by the base class name
+    (``ShotgunSlaver``), not the Defaults class.  When a Defaults class carries
+    localizable text and the base class is not yet in the catalog, we emit the
+    entry under the base class name.
+    """
+    results = OrderedDict()
+
+    for jp_name in jp_ints:
+        stem = Path(jp_name).stem.casefold()
+        package_file = package_case.get(stem)
+        if package_file is None:
+            continue
+
+        package_stem = package_file.stem
+        package_prefix = f"reference/export/{package_stem}/"
+
+        # Reuse the output path already established by the main JP loop so that
+        # the casing is consistent (JP/EN .int stem may differ from .u stem).
+        candidate = f"GameData/System/{package_stem}{OUTPUT_EXT}"
+        output_path = None
+        for existing_path in catalog_files:
+            if existing_path.casefold() == candidate.casefold():
+                output_path = existing_path
+                break
+        if output_path is None:
+            output_path = candidate
+        file_stem = Path(output_path).stem
+
+        covered = set()
+        for row in catalog_files.get(output_path, []):
+            covered.add((row["section"], row["key"]))
+
+        added = []
+        for class_key, info in sorted(classes.items()):
+            class_path = info.get("path", "")
+            if not class_path.startswith(package_prefix):
+                continue
+
+            class_name = info["name"]
+            defaults = info["defaults"]
+
+            if class_name.endswith("Defaults"):
+                section_name = class_name[: -len("Defaults")]
+            else:
+                section_name = class_name
+
+            if section_name.startswith(NON_RETAIL_CLASS_PREFIXES):
+                continue
+
+            for field_key in sorted(defaults):
+                if (section_name, field_key) in covered:
+                    continue
+                if not _is_localizable_default_key(field_key):
+                    continue
+                sv = defaults[field_key]
+                if sv.kind != "string" or not sv.text:
+                    continue
+
+                de_val = de_index.get(
+                    (file_stem.casefold(), section_name.casefold(), field_key), ""
+                )
+
+                try:
+                    emit_from_source(
+                        catalog_files,
+                        translation,
+                        allocator,
+                        output_path,
+                        section_name,
+                        field_key,
+                        sv,
+                        "",
+                        de_val,
+                        file_stem,
+                        stats,
+                        reset_translations,
+                    )
+                    covered.add((section_name, field_key))
+                    added.append(f"{section_name}.{field_key}")
+                    stats["package_orphan_entries"] += 1
+                except GenerateError:
+                    pass
+
+        if added:
+            results[package_stem] = added
+
+    if results:
+        total = sum(len(v) for v in results.values())
+        audit["package_orphan_entries"] = OrderedDict(
+            [
+                ("total", total),
+                ("by_package", results),
+            ]
+        )
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skip-build-validation", action="store_true", help="只生成 JSON，不运行 build_langpack.py 临时校验")
@@ -2041,6 +2179,12 @@ def main(argv=None):
     process_supplementary_sources(
         catalog_files, translation, allocator, en_outputs,
         de_index, stats, args.reset_translations, audit,
+    )
+
+    discover_package_orphan_entries(
+        catalog_files, translation, allocator, classes,
+        de_index, package_case, jp_ints,
+        stats, args.reset_translations, audit,
     )
 
     translation = merge_shared_en_jp_entries(

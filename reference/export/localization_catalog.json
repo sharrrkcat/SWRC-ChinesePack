@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "generated_by": "make_translation_json.py",
-  "generated_at": "2026-07-11T05:34:15.944060+00:00",
+  "generated_at": "2026-07-11T09:49:22.887263+00:00",
   "files": {
     "GameData/System/alaudio.cht": [
       {
@@ -10552,6 +10552,23 @@
         "type": "string",
         "entry": "ctgame.TeamWookiee/1",
         "printf": []
+      },
+      {
+        "section": "CTDamageSpiderBump",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "ctgame.CTDamageSpiderBump/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "DisarmTrap",
+        "key": "ActivatePromptText",
+        "type": "string",
+        "entry": "ctgame.DisarmTrap/2",
+        "printf": []
       }
     ],
     "GameData/System/ctinventory.cht": [
@@ -11348,6 +11365,13 @@
         "key": "ItemName",
         "type": "string",
         "entry": "ctinventory.YodaStaff/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterAmmo",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "ctinventory.DC17mBlasterAmmo/1",
         "printf": []
       }
     ],
@@ -18722,6 +18746,69 @@
         "key": "ColorNames[1]",
         "type": "string",
         "entry": "shared.enjp/100736",
+        "printf": []
+      },
+      {
+        "section": "Helmet",
+        "key": "FullHealthText",
+        "type": "string",
+        "entry": "engine.Helmet/25",
+        "printf": []
+      },
+      {
+        "section": "Helmet",
+        "key": "LowLightVisionModeText",
+        "type": "string",
+        "entry": "engine.Helmet/31",
+        "printf": []
+      },
+      {
+        "section": "Helmet",
+        "key": "RemoveScavPromptText",
+        "type": "string",
+        "entry": "engine.Helmet/36",
+        "printf": []
+      },
+      {
+        "section": "Helmet",
+        "key": "SquadUnavailableText",
+        "type": "string",
+        "entry": "engine.Helmet/37",
+        "printf": []
+      },
+      {
+        "section": "Helmet",
+        "key": "TacticalVisionModeText",
+        "type": "string",
+        "entry": "engine.Helmet/38",
+        "printf": []
+      },
+      {
+        "section": "Helmet",
+        "key": "XboxCheckpointAddition",
+        "type": "string",
+        "entry": "engine.Helmet/67",
+        "printf": []
+      },
+      {
+        "section": "Pickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "engine.Pickup/1",
+        "printf": []
+      },
+      {
+        "section": "PlayerController",
+        "key": "AutoSaveName",
+        "type": "string",
+        "entry": "engine.PlayerController/5",
+        "printf": []
+      },
+      {
+        "section": "PlayerController",
+        "key": "QuickSaveName",
+        "type": "string",
+        "entry": "engine.PlayerController/9",
         "printf": []
       }
     ],
@@ -30082,6 +30169,27 @@
         "type": "string",
         "entry": "mpgame.VictimMessage/2",
         "printf": []
+      },
+      {
+        "section": "ASHUD",
+        "key": "AttackingText",
+        "type": "string",
+        "entry": "mpgame.ASHUD/6",
+        "printf": []
+      },
+      {
+        "section": "ASHUD",
+        "key": "DefendingText",
+        "type": "string",
+        "entry": "mpgame.ASHUD/7",
+        "printf": []
+      },
+      {
+        "section": "DMScoreboard",
+        "key": "SpeedText",
+        "type": "string",
+        "entry": "mpgame.DMScoreboard/33",
+        "printf": []
       }
     ],
     "GameData/System/PRO.cht": [
@@ -30517,6 +30625,598 @@
         "key": "ItemName",
         "type": "string",
         "entry": "properties.TrandoshanRifleMPAmmo/2",
+        "printf": []
+      },
+      {
+        "section": "Bowcaster",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.Bowcaster/1",
+        "printf": []
+      },
+      {
+        "section": "ConcussionRifleAmmo",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.ConcussionRifleAmmo/1",
+        "printf": []
+      },
+      {
+        "section": "ConcussionRifle",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.ConcussionRifle/1",
+        "printf": []
+      },
+      {
+        "section": "ConcussionRifle",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.ConcussionRifle/2",
+        "printf": []
+      },
+      {
+        "section": "ConcussionRiflePickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.ConcussionRiflePickup/1",
+        "printf": []
+      },
+      {
+        "section": "ConcussionRiflePickupMP",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.ConcussionRiflePickupMP/1",
+        "printf": []
+      },
+      {
+        "section": "CTDamageEMPPulse",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "properties.CTDamageEMPPulse/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "CTDamageMeleeBerserker",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "properties.CTDamageMeleeBerserker/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "CTDamageMelee",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "properties.CTDamageMelee/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "CTDamageMeleeHAM",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "properties.CTDamageMeleeHAM/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "CTDamageMeleeWarrior",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "properties.CTDamageMeleeWarrior/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "CTDamageSonic",
+        "key": "DeathString",
+        "type": "string",
+        "entry": "properties.CTDamageSonic/1",
+        "printf": [
+          "k",
+          "o"
+        ]
+      },
+      {
+        "section": "DC15Pickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC15Pickup/1",
+        "printf": []
+      },
+      {
+        "section": "DC15PickupMP",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC15PickupMP/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mAntiArmorBox",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mAntiArmorBox/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mAntiArmorCommando",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mAntiArmorCommando/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mAntiArmor",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mAntiArmor/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mAntiArmorWeaponPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mAntiArmorWeaponPickup/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mAntiArmorWeaponPickupMP",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mAntiArmorWeaponPickupMP/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterBox",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mBlasterBox/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterBriefing",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.DC17mBlasterBriefing/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterBriefing",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mBlasterBriefing/2",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterCommando",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mBlasterCommando/2",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlaster",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.DC17mBlaster/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlaster",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mBlaster/2",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mBlasterMP/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mBlasterWeaponPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mBlasterWeaponPickup/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniperBox",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mSniperBox/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniperCommando",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.DC17mSniperCommando/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniperCommando",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mSniperCommando/2",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniper",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.DC17mSniper/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniper",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.DC17mSniper/2",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniperWeaponPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mSniperWeaponPickup/1",
+        "printf": []
+      },
+      {
+        "section": "DC17mSniperWeaponPickupMP",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.DC17mSniperWeaponPickupMP/1",
+        "printf": []
+      },
+      {
+        "section": "EliteBeam",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.EliteBeam/1",
+        "printf": []
+      },
+      {
+        "section": "EliteBeamEnemy",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.EliteBeamEnemy/1",
+        "printf": []
+      },
+      {
+        "section": "EMPGrenadeBox",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.EMPGrenadeBox/1",
+        "printf": []
+      },
+      {
+        "section": "EMPGrenade",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.EMPGrenade/1",
+        "printf": []
+      },
+      {
+        "section": "EMPGrenade",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.EMPGrenade/2",
+        "printf": []
+      },
+      {
+        "section": "EMPGrenadeMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.EMPGrenadeMP/2",
+        "printf": []
+      },
+      {
+        "section": "EMPGrenadeMultiPlay",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.EMPGrenadeMultiPlay/1",
+        "printf": []
+      },
+      {
+        "section": "EWebTurretAmmo",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.EWebTurretAmmo/1",
+        "printf": []
+      },
+      {
+        "section": "EWebTurret",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.EWebTurret/1",
+        "printf": []
+      },
+      {
+        "section": "FlashBang",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.FlashBang/1",
+        "printf": []
+      },
+      {
+        "section": "FlashBang",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.FlashBang/2",
+        "printf": []
+      },
+      {
+        "section": "RocketLauncher",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.RocketLauncher/1",
+        "printf": []
+      },
+      {
+        "section": "RocketLauncher",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.RocketLauncher/2",
+        "printf": []
+      },
+      {
+        "section": "RocketLauncherMP",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.RocketLauncherMP/1",
+        "printf": []
+      },
+      {
+        "section": "RocketLauncherMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.RocketLauncherMP/2",
+        "printf": []
+      },
+      {
+        "section": "RocketLauncherPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.RocketLauncherPickup/1",
+        "printf": []
+      },
+      {
+        "section": "RocketLauncherPickupMP",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.RocketLauncherPickupMP/1",
+        "printf": []
+      },
+      {
+        "section": "ShotgunAmmo",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.ShotgunAmmo/1",
+        "printf": []
+      },
+      {
+        "section": "ShotgunAmmoMP",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.ShotgunAmmoMP/1",
+        "printf": []
+      },
+      {
+        "section": "Shotgun",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.Shotgun/1",
+        "printf": []
+      },
+      {
+        "section": "Shotgun",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.Shotgun/2",
+        "printf": []
+      },
+      {
+        "section": "ShotgunMP",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.ShotgunMP/1",
+        "printf": []
+      },
+      {
+        "section": "ShotgunMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.ShotgunMP/2",
+        "printf": []
+      },
+      {
+        "section": "ShotgunPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.ShotgunPickup/1",
+        "printf": []
+      },
+      {
+        "section": "ShotgunPickupMP",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.ShotgunPickupMP/1",
+        "printf": []
+      },
+      {
+        "section": "ShotgunSlaver",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.ShotgunSlaver/1",
+        "printf": []
+      },
+      {
+        "section": "ShotgunSlaver",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.ShotgunSlaver/2",
+        "printf": []
+      },
+      {
+        "section": "SMGAmmo",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.SMGAmmo/1",
+        "printf": []
+      },
+      {
+        "section": "SMGAmmoMP",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.SMGAmmoMP/1",
+        "printf": []
+      },
+      {
+        "section": "SMG",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.SMG/1",
+        "printf": []
+      },
+      {
+        "section": "SMG",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.SMG/2",
+        "printf": []
+      },
+      {
+        "section": "SMGMP",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.SMGMP/1",
+        "printf": []
+      },
+      {
+        "section": "SMGMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.SMGMP/2",
+        "printf": []
+      },
+      {
+        "section": "SMGPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.SMGPickup/1",
+        "printf": []
+      },
+      {
+        "section": "SonicDetonator",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.SonicDetonator/1",
+        "printf": []
+      },
+      {
+        "section": "SonicDetonatorMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.SonicDetonatorMP/1",
+        "printf": []
+      },
+      {
+        "section": "ThermalDetonator",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.ThermalDetonator/1",
+        "printf": []
+      },
+      {
+        "section": "ThermalDetonatorEnemy",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.ThermalDetonatorEnemy/1",
+        "printf": []
+      },
+      {
+        "section": "ThermalDetonatorMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.ThermalDetonatorMP/1",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifleAmmo",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.TrandoshanRifleAmmo/1",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifleAmmoTrando",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.TrandoshanRifleAmmoTrando/1",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifle",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.TrandoshanRifle/1",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifle",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.TrandoshanRifle/2",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifleEnemy",
+        "key": "ItemName",
+        "type": "string",
+        "entry": "properties.TrandoshanRifleEnemy/1",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifleEnemy",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.TrandoshanRifleEnemy/2",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifleMP",
+        "key": "MessageNoAmmo",
+        "type": "string",
+        "entry": "properties.TrandoshanRifleMP/2",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRifleMPPickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.TrandoshanRifleMPPickup/1",
+        "printf": []
+      },
+      {
+        "section": "TrandoshanRiflePickup",
+        "key": "PickupMessage",
+        "type": "string",
+        "entry": "properties.TrandoshanRiflePickup/1",
         "printf": []
       }
     ],
@@ -119378,6 +120078,76 @@
         "type": "string",
         "entry": "shared.enjp/100925",
         "printf": []
+      },
+      {
+        "section": "MenuConnectionFailed",
+        "key": "CDKeyMessage.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuConnectionFailed/8",
+        "printf": []
+      },
+      {
+        "section": "MenuGameSettings",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuGameSettings/177",
+        "printf": []
+      },
+      {
+        "section": "MenuGameSettings",
+        "key": "ALabel.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuGameSettings/178",
+        "printf": []
+      },
+      {
+        "section": "MenuGameSettings",
+        "key": "BButton.Blurred.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuGameSettings/179",
+        "printf": []
+      },
+      {
+        "section": "MenuGameSettings",
+        "key": "BLabel.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuGameSettings/180",
+        "printf": []
+      },
+      {
+        "section": "MenuGameSettings",
+        "key": "XButton.Blurred.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuGameSettings/181",
+        "printf": []
+      },
+      {
+        "section": "MenuGameSettings",
+        "key": "XLabel.Text",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuGameSettings/182",
+        "printf": []
+      },
+      {
+        "section": "MenuLostLink",
+        "key": "ContinueText",
+        "type": "string",
+        "entry": "shared.enjp/101075",
+        "printf": []
+      },
+      {
+        "section": "MenuLowStorage",
+        "key": "DashboardConfirm",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuLowStorage/8",
+        "printf": []
+      },
+      {
+        "section": "MenuProgress",
+        "key": "ConnectingText",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuProgress/1",
+        "printf": []
       }
     ],
     "GameData/System/XinterfaceCtmenus.cht": [
@@ -123601,14 +124371,14 @@
         "section": "CTControllerOptionsRemapPSMenu",
         "key": "PrevSet.Blurred.Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapPSMenu/9",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapPSMenu/18",
         "printf": []
       },
       {
         "section": "CTControllerOptionsRemapPSMenu",
         "key": "NextSet.Blurred.Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapPSMenu/10",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapPSMenu/19",
         "printf": []
       },
       {
@@ -124166,7 +124936,7 @@
         "section": "CTMissingContentMenu",
         "key": "ALabel.Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTMissingContentMenu/2",
+        "entry": "shared.enjp/101075",
         "printf": []
       },
       {
@@ -124285,7 +125055,7 @@
         "section": "CTPausePSMenu",
         "key": "MenuOptions[5].Blurred.Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/5",
+        "entry": "shared.enjp/101193",
         "printf": []
       },
       {
@@ -124313,7 +125083,7 @@
         "section": "CTPausePSMenu",
         "key": "EndMissionConfirm",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/6",
+        "entry": "XinterfaceCtmenus.CTPausePSMenu/17",
         "printf": []
       },
       {
@@ -124327,42 +125097,42 @@
         "section": "CTPausePSMenu",
         "key": "LoadLastConfirm",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/11",
+        "entry": "XinterfaceCtmenus.CTPausePSMenu/18",
         "printf": []
       },
       {
         "section": "CTPausePSMenu",
         "key": "EndMissionDemoConfirm",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/12",
+        "entry": "shared.enjp/101202",
         "printf": []
       },
       {
         "section": "CTPausePSMenu",
         "key": "RestartMissionDemoConfirm",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/13",
+        "entry": "shared.enjp/101206",
         "printf": []
       },
       {
         "section": "CTPausePSMenu",
         "key": "StringCloakToggleOn",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/14",
+        "entry": "XinterfaceCtmenus.CTPausePSMenu/15",
         "printf": []
       },
       {
         "section": "CTPausePSMenu",
         "key": "StringCloakToggleOff",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/15",
+        "entry": "XinterfaceCtmenus.CTPausePSMenu/16",
         "printf": []
       },
       {
         "section": "CTPausePSMenu",
         "key": "DamagedSave",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPausePSMenu/16",
+        "entry": "shared.enjp/101172",
         "printf": []
       },
       {
@@ -124679,6 +125449,321 @@
         "key": "Continue.Blurred.Text",
         "type": "string",
         "entry": "XinterfaceCtmenus.CT_PCDemo_Splash/1",
+        "printf": []
+      },
+      {
+        "section": "CTControlConfigMenu",
+        "key": "back.Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControlConfigMenu/13",
+        "printf": []
+      },
+      {
+        "section": "CTControlConfigMenu",
+        "key": "back.HelpText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControlConfigMenu/14",
+        "printf": []
+      },
+      {
+        "section": "CTControllerOptionsRemapXboxMenu",
+        "key": "ClickLeftStickText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu/13",
+        "printf": []
+      },
+      {
+        "section": "CTControllerOptionsRemapXboxMenu",
+        "key": "ClickRightStickText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu/14",
+        "printf": []
+      },
+      {
+        "section": "CTControllerOptionsRemapXboxMenu",
+        "key": "LeftStickText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu/15",
+        "printf": []
+      },
+      {
+        "section": "CTControllerOptionsRemapXboxMenu",
+        "key": "OptionSet1Labels[3].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu.OptionSet1Labels/3",
+        "printf": []
+      },
+      {
+        "section": "CTControllerOptionsRemapXboxMenu",
+        "key": "OptionSet1Labels[4].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu.OptionSet1Labels/4",
+        "printf": []
+      },
+      {
+        "section": "CTControllerOptionsRemapXboxMenu",
+        "key": "RightStickText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu/16",
+        "printf": []
+      },
+      {
+        "section": "CTControlsOptionsPCMenu",
+        "key": "OptionSet2Labels[4].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControlsOptionsPCMenu.OptionSet2Labels/4",
+        "printf": []
+      },
+      {
+        "section": "CTControlsOptionsPCMenu",
+        "key": "OptionSet2Labels[5].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTControlsOptionsPCMenu.OptionSet2Labels/5",
+        "printf": []
+      },
+      {
+        "section": "CTHUDOptionsXboxMenu",
+        "key": "OptionLabels[2].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTHUDOptionsXboxMenu.OptionLabels/2",
+        "printf": []
+      },
+      {
+        "section": "CTHUDOptionsXboxMenu",
+        "key": "OptionLabels[3].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTHUDOptionsXboxMenu.OptionLabels/3",
+        "printf": []
+      },
+      {
+        "section": "CTLoadGameMenu",
+        "key": "AutoSaveName",
+        "type": "string",
+        "entry": "shared.enjp/101171",
+        "printf": []
+      },
+      {
+        "section": "CTLoadGameMenu",
+        "key": "DamagedSave",
+        "type": "string",
+        "entry": "shared.enjp/101172",
+        "printf": []
+      },
+      {
+        "section": "CTLoadGameMenu",
+        "key": "LoadConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTLoadGameMenu/9",
+        "printf": []
+      },
+      {
+        "section": "CTLoadGameMenu",
+        "key": "QuickSaveName",
+        "type": "string",
+        "entry": "shared.enjp/101174",
+        "printf": []
+      },
+      {
+        "section": "CTMapKeyMenu",
+        "key": "ClickLeftStickText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMapKeyMenu/13",
+        "printf": []
+      },
+      {
+        "section": "CTMapKeyMenu",
+        "key": "ClickRightStickText",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMapKeyMenu/14",
+        "printf": []
+      },
+      {
+        "section": "CTMapKeyMenu",
+        "key": "LabelNoPCSpecial.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMapKeyMenu/15",
+        "printf": []
+      },
+      {
+        "section": "CTMenuMain",
+        "key": "QuitXBoxGameConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMenuMain/11",
+        "printf": []
+      },
+      {
+        "section": "CTMultiplayerPausePCMenu",
+        "key": "MenuOptions[4].Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMultiplayerPausePCMenu/4",
+        "printf": []
+      },
+      {
+        "section": "CTMultiplayerPausePCMenu",
+        "key": "MenuOptions[5].Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMultiplayerPausePCMenu.MenuOptions/5",
+        "printf": []
+      },
+      {
+        "section": "CTMultiplayerPausePCMenu",
+        "key": "QuitGameConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMultiplayerPausePCMenu/20",
+        "printf": []
+      },
+      {
+        "section": "CTMultiplayerPauseXboxMenu",
+        "key": "MenuOptions[4].Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/101193",
+        "printf": []
+      },
+      {
+        "section": "CTMultiplayerPauseXboxMenu",
+        "key": "MenuOptions[7].Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMultiplayerPauseXboxMenu.MenuOptions/7",
+        "printf": []
+      },
+      {
+        "section": "CTPausePCMenu",
+        "key": "EndMissionDemoConfirm",
+        "type": "string",
+        "entry": "shared.enjp/101202",
+        "printf": []
+      },
+      {
+        "section": "CTPausePCMenu",
+        "key": "RestartMissionDemoConfirm",
+        "type": "string",
+        "entry": "shared.enjp/101206",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "DamagedSave",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/10",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "EndMissionConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/11",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "EndMissionDemoConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/12",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "LoadLastConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/13",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "MenuOptions[7].Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/7",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "MenuOptions[8].Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu.MenuOptions/8",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "MenuOptions[9].Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu.MenuOptions/9",
+        "printf": []
+      },
+      {
+        "section": "CTPauseXBoxMenu",
+        "key": "RestartMissionDemoConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/14",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "AutoSaveName",
+        "type": "string",
+        "entry": "shared.enjp/101171",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "GEOCampaignName",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSaveGameMenu/16",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "QuickSaveName",
+        "type": "string",
+        "entry": "shared.enjp/101174",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "RASCampaignName",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSaveGameMenu/18",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "UnknownCampaignName",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSaveGameMenu/19",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "YYYCampaignName",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSaveGameMenu/20",
+        "printf": []
+      },
+      {
+        "section": "CTSaveGameMenu",
+        "key": "Ybutton.Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSaveGameMenu/21",
+        "printf": []
+      },
+      {
+        "section": "CTSoundGraphicsOptionsXboxMenu",
+        "key": "ApplySettingsConfirm",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSoundGraphicsOptionsXboxMenu/96",
+        "printf": []
+      },
+      {
+        "section": "CTSoundOptionsPCMenu",
+        "key": "RestartRequired.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTSoundOptionsPCMenu/93",
+        "printf": []
+      },
+      {
+        "section": "CTStartXboxMenu",
+        "key": "Start.Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTStartXboxMenu/1",
         "printf": []
       }
     ],
@@ -127043,6 +128128,20 @@
         "type": "string",
         "entry": "XinterfaceLive.MenuWritingStats/2",
         "printf": []
+      },
+      {
+        "section": "MenuDedicatedServer",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceLive.MenuDedicatedServer/6",
+        "printf": []
+      },
+      {
+        "section": "MenuDedicatedServer",
+        "key": "ALabel.Text",
+        "type": "string",
+        "entry": "XinterfaceLive.MenuDedicatedServer/7",
+        "printf": []
       }
     ],
     "GameData/System/XinterfaceMP.cht": [
@@ -127702,6 +128801,20 @@
         "key": "MenuTitle.Text",
         "type": "string",
         "entry": "XinterfaceMP.MenuSplitscreenPlayers/10",
+        "printf": []
+      },
+      {
+        "section": "MenuCustomizeCharacter",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "XinterfaceMP.MenuCustomizeCharacter/83",
+        "printf": []
+      },
+      {
+        "section": "MenuCustomizeCharacter",
+        "key": "ALabel.Text",
+        "type": "string",
+        "entry": "XinterfaceMP.MenuCustomizeCharacter/84",
         "printf": []
       }
     ],
