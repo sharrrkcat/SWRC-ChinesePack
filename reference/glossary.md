@@ -93,7 +93,7 @@
 | AT-TE / ATTE | AT-TE | 仅型号；统一规范为 `AT-TE` |
 | AT-TE Walker / ATTE Walker / ATTEWalker | AT-TE步行机 | 型号保留，类别翻译 |
 | bacta | 巴克塔 | 物质名 |
-| Bacta Dispenser / Bacta dispenser / bacta dispenser / Bacta Station / bacta station | 巴克塔站 | 本作中指同类治疗设施 |
+| Bacta Dispenser / Bacta dispenser / bacta dispenser / Bacta Station / bacta station | 巴克塔分发器/巴克塔分发站 | 本作中指同类治疗设施 |
 | Bacta Tank / Bacta tank / bacta tank | 巴克塔治疗舱 | 治疗设备 |
 | DC-15s / DC15s | DC-15s | 仅型号；统一规范为 `DC-15s` |
 | DC15s Pistol | DC-15s手枪 | 型号保留，类别翻译 |
@@ -247,6 +247,7 @@
 - 小队指令使用短、明确、适合 UI 按钮和字幕提示的译名。
 - 指令名出现在章节标题或普通任务描述中时，可保留同一核心译法，但句式可按中文自然表达调整。
 - `Recall` 在本作中用于取消当前行动并让队员回到玩家身边，译为"召回"。
+- `Revive` 需要根据最终成品决定是复活还是救起
 
 | 原文变体 | 译文 | 说明 |
 | --- | --- | --- |
