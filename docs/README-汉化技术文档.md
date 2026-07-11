@@ -1,6 +1,6 @@
 # 星球大战：共和国突击队（SWRC）中文本地化 — 技术文档
 
-> 最后更新：2026-07-10（catalog 生成器审查后） ｜ 状态：**CJK 渲染、DXT5 贴图解码、中文字体生成器、中文字体局内实测均已完成**。代码在 fork `sharrrkcat/CT-cjk-text` 分支 `cjk-text`。当前重点：基于已生成的翻译 JSON/catalog 进入正式译文生产（§7.5、§8）
+> 最后更新：2026-07-11（文档审查后） ｜ 状态：**CJK 渲染、DXT5 贴图解码、中文字体生成器、中文字体局内实测均已完成**。代码在 fork `sharrrkcat/CT-cjk-text` 分支 `cjk-text`。当前重点：基于已生成的翻译 JSON/catalog 进入正式译文生产（§7.5、§8）
 > 工作目录：`.lang\`；本文档在汉化包仓库 `.lang\SWRC-ChinesePack\docs\`（github.com/sharrrkcat/SWRC-ChinesePack）；游戏数据：`GameData\`；完整原版备份：`.originalbackup\`
 
 ---
@@ -239,14 +239,14 @@ u8   mip 数（字体页均为 1）
 
 1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）
 2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验；曾以 GBK"中文测试"探针完成菜单+局内验证。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。2026-07-10 增加可选 `--latin-source <英文版 orbitfonts.utx>` 混合模式：仅复用英文版 `0x20-0x7E` ASCII glyph 的原始宽高和 RGBA 像素，中文/GBK 字符仍由 `--font` 渲染；未传该参数时默认纯 TTF/OTF 管线不变。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
-3. ~~翻译索引/catalog 生成工具~~ ✅ `tools\make_translation_json.py` 已建立当前翻译源：从日文 `JapanesePack\System\*.int` 取得覆盖索引，从英文运行时 `GameData\System\*.int`、`GameData\System\*.u`、`GameData\Properties\*.u`、`GameData\Maps\*.ctm` 追溯英文 source；输出 `translation.json`（schema 2）+ `reference\export\localization_catalog.json`（schema 1）+ audit/skipped 报告。重新生成默认按 `(group, note, en)` 保留已有 `zh_CN`，只有显式 `--reset-translations` 才清空译文；默认 strict skipped，若仍有 skipped 会失败，审查期才使用 `--allow-skipped`
+3. ~~翻译索引/catalog 生成工具~~ ✅ `tools\make_translation_json.py` 已建立当前翻译源：从日文 `JapanesePack\System\*.int` 取得覆盖索引，从英文运行时 `GameData\System\*.int`、`GameData\System\*.u`、`GameData\Properties\*.u`、`GameData\Maps\*.ctm` 追溯英文 source，可选读入 `TranslationPackFormOnline\German Files\*.det` 作为德语参照；输出 `translation.json`（schema 2）+ `reference\export\localization_catalog.json`（schema 1）+ audit/skipped 报告。重新生成默认按 `(group, note, en)` 保留已有 `zh_CN`，只有显式 `--reset-translations` 才清空译文；默认 strict skipped，若仍有 skipped 会失败，审查期才使用 `--allow-skipped`
 4. ~~语言包生成工具~~ ✅ `tools\build_langpack.py` 已切到 catalog 驱动：读取用户翻译 JSON（schema 2）+ 机器 catalog（schema 1）→ `build\GameData\System\*.int` + manifest；菜单也输出 `XinterfaceCtmenus.int`，不生成 `PropertyOverrides`。默认要求所有 `zh_CN` 非空且 GBK 可编码；`--allow-untranslated` 仅作开发期英文 fallback，并只对 fallback 英文做最小 GBK 兼容规范化
 5. 进入汉化实施（§8）：译文输出一律 GBK 编码 ANSI 文件、无 BOM；翻译源数据采用 UTF-8 JSON
 
 ## 8. 汉化实施路线图（当前阶段）
 
-1. **翻译索引**：官方日文包 `JapanesePack\System\*.int` 作为覆盖索引；当前英文版 + Fix 的 `GameData` 作为英文 source 权威。`voicepacks.int` 是真实缺失项，英文默认值来自 Steam `GameData\Properties\voicepacks.u` 的 `GenericClone` class default，发布时生成到 `GameData\System\voicepacks.int`；`Winddrv.int` 与已映射的 `WinDrv/windrv.int` 重复，不作为当前补入目标
-2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射、EN-only passthrough 等构建细节，用户 JSON 只保留分组、id、note、en、jp、zh_CN。当前审查版约 8,934 个翻译条目、146 个 catalog 输出文件；剩余 skipped 约 1,684 条，记录在 `reference\export\localization_jp_only_skipped.json`。用户 JSON 示例：
+1. **翻译索引**：官方日文包 `JapanesePack\System\*.int` 作为覆盖索引；当前英文版 + Fix 的 `GameData` 作为英文 source 权威；可选的 `TranslationPackFormOnline\German Files\*.det` 提供德语参照（`de` 字段）。`voicepacks.int` 是真实缺失项，英文默认值来自 Steam `GameData\Properties\voicepacks.u` 的 `GenericClone` class default，发布时生成到 `GameData\System\voicepacks.int`；`Winddrv.int` 与已映射的 `WinDrv/windrv.int` 重复，不作为当前补入目标
+2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射、EN-only passthrough 等构建细节，用户 JSON 只保留分组、id、note、en、jp、de、zh_CN。当前审查版约 9,393 个翻译条目、147 个 catalog 输出文件；剩余 skipped 约 1,684 条，记录在 `reference\export\localization_jp_only_skipped.json`。用户 JSON 示例：
 
 ```json
 {
@@ -256,6 +256,7 @@ u8   mip 数（字体页均为 1）
       "note": "Label.Text",
       "en": "Use these settings?",
       "jp": "この設定を使用しますか?",
+      "de": "",
       "zh_CN": ""
     }
   }
@@ -265,7 +266,7 @@ u8   mip 数（字体页均为 1）
 3. **关键映射规则**：
    - 输出 key 必须以英文运行时 key 为准；日文字幕 `.int` 的 `SubtitleText[n]` / `SubtitleSound[n]` 编号可能相对英文偏移，需按 sound id 对齐
    - `SubtitleSound`、`CreditsLine` 控制行、`Object+=` / `Preferences+=`、EN-only passthrough 等非翻译控制项由 catalog 锁定，不要求用户翻译；`CreditsLine*` 中 `jp == en` 的人名/署名也按 literal 保留
-   - `shared.enjp` 是按 `(en, jp)` 合并的共享译文组，同组只能有一个中文译文；后续若条目离开 shared，生成器会按 `(en, jp)` 回填旧译文
+   - `shared.enjp` 是按 `(en, jp, de)` 合并的共享译文组，同组只能有一个中文译文；后续若条目离开 shared，生成器会按 `(en, jp, de)` 回填旧译文
    - `XinterfaceCtmenus.int` 是菜单主输出，不再生成菜单 `PropertyOverrides` 作为发布默认路径
 4. **索引生成工具**：`tools\make_translation_json.py` 默认读取既有 `translation.json` 并保留同签名条目的 `zh_CN`，因此正式翻译开始后可重复跑生成器做 source 修正；若旧条目匹配但 `jp` 发生变化，保留 `zh_CN` 并在 audit 记录 `preserved_translation_with_jp_change`。默认 skipped 严格失败，防止漏项静默进入正式翻译；审查期需要保留当前漏项时显式加 `--allow-skipped`，从零重建才加 `--reset-translations`。默认构建验证写入临时目录，不会清理真实 `build\`
 5. **语言包生成工具**：`tools\build_langpack.py` 默认读取 `translation.json` 和 `reference\export\localization_catalog.json`；可用 `--json` / `--catalog` / `--out` 指定临时输入输出。默认要求所有 `zh_CN` 非空，且输出必须 GBK 可编码；`--allow-untranslated` 只用于开发期抽样，空译文会回退英文，并仅对 fallback 英文中的少量非 GBK 字符做兼容替换。JSON 重复 key 会直接报错；bare 样式遇到 `=`、引号、首尾空白、`(` 或 `"` 开头会自动升级 quoted 并写入 manifest 计数。工具只输出 `build\GameData\System\*.int` 和 manifest，不直接写入游戏目录
@@ -283,6 +284,8 @@ u8   mip 数（字体页均为 1）
     tools\make_charset.py     ← 开发期字符集生成器（ASCII + GB2312 全集）
     tools\make_translation_json.py ← 翻译索引/catalog 生成器（JP .int + 英文 GameData source → translation.json + localization_catalog/audit/skipped）
     tools\build_langpack.py   ← catalog 驱动语言包生成器（translation.json + localization_catalog.json → build\GameData\System\*.int）
+    tools\localization_common.py ← 共享模块（FALLBACK_REPLACEMENTS / normalize_fallback_text，被 make_translation_json 和 build_langpack 导入）
+    tools\test_localization_tools.py ← unittest 测试套件（字体/翻译 JSON/构建管线往返校验）
     translation.json           ← 用户翻译表（UTF-8 JSON；正式译文写入 zh_CN）
     reference\export\XInterfaceCTMenus\ ← 53 个菜单类 .uc 源码（ucc batchexport 产物）
     reference\export\localization_catalog.json ← 机器 catalog（输出路径、键、类型、模板、控制行）
@@ -291,14 +294,13 @@ u8   mip 数（字体页均为 1）
     reference\export\         ← catalog、审计报告、必要源码导出的归档位置；除已保留的菜单参照源外，后续批量导出的 `*.uc` 中间文件已按 gitignore 过滤噪音
     probe-backup\             ← 探针实验替换掉的原版 .int 备份
   JapanesePack\               ← 日版参照（System/Sounds/Textures；ModDB 下载物，不入库）
-  testpack\                   ← 玩家视角测试包（Mod.dll+中文字体+GBK 探针，配 README-测试说明.md；全新游戏本体覆盖安装用）
   fonts\SourceHanSansCN-Bold.otf ← 思源黑体（OFL，字体生成器输入）
   orbitfonts-cn.utx           ← 字体生成器产物（已实测可装入游戏）
   orbitfonts-jp.utx.bak       ← 日文版字体备份
   CT-headers\                 ← SWRC-Modding/CT 仓库克隆（引擎头文件+Fix源码，独立版本管理）
     Engine\Engine.c           ← Engine.dll 完整 Hex-Rays 反编译（管线逆向的核心参照）
     Mod\Src\CJKText.cpp       ← CJK 渲染钩子（本项目新增，构建进 Mod.dll）
-  GameData\System\Mod.dll     ← MSBuild 输出目录（构建产物先落这里）
+  GameData\System\Mod.dll     ← MSBuild 输出（构建时创建；目录可能不存在）
   Mod.dll.official-2.13.bak   ← 官方 Fix 2.13 的 Mod.dll 备份
 .originalbackup\              ← 完整原版备份（还原点；当前实施以已清理的英文版+Fix 游戏目录为 source 权威）
 GameData\                      ← 当前英文版 + 官方 Fix 2.13 测试区；具体文件状态会随实验变化，不再在本文档硬编码探针状态
