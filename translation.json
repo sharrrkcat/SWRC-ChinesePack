@@ -69424,14 +69424,14 @@
       "en": "<INVITED> HAS A PENDING GAME INVITATION FROM <INVITER>. ACCEPT INVITATION?",
       "jp": "<INVITED> への <INVITER> からの招待が保留中です。招待を受けますか?",
       "de": "",
-      "zh_CN": "<INVITED> 收到来自 <INVITER> 的游戏邀请。接受邀请吗？"
+      "zh_CN": "<INVITED> 收到来自 <INVITER> 的游戏邀请。接受邀请？"
     },
     "4": {
       "note": "JoinQuestion",
       "en": "<INVITED> WANTS TO JOIN <INVITER>'S GAME. JOIN SESSION?",
       "jp": "<INVITED> が <INVITER> のゲームに参加を希望しています。セッションに参加しますか?",
       "de": "",
-      "zh_CN": "<INVITED> 想要加入 <INVITER> 的游戏。加入该场次吗？"
+      "zh_CN": "<INVITED> 想要加入 <INVITER> 的游戏。加入会话？"
     }
   },
   "XinterfaceLive.MenuDHMStats": {
@@ -69440,63 +69440,63 @@
       "en": "AVERAGE PLAYERS:",
       "jp": "平均プレイヤー数:",
       "de": "",
-      "zh_CN": "平均玩家数:"
+      "zh_CN": "平均玩家数："
     },
     "2": {
       "note": "Label[2].Text",
       "en": "UP TIME:",
       "jp": "アップタイム:",
       "de": "",
-      "zh_CN": "运行时间:"
+      "zh_CN": "运行时间："
     },
     "3": {
       "note": "Label[3].Text",
       "en": "TOTAL SESSIONS:",
       "jp": "セッション合計:",
       "de": "",
-      "zh_CN": "总场次:"
+      "zh_CN": "总场次："
     },
     "4": {
       "note": "Label[4].Text",
       "en": "DM SESSIONS:",
       "jp": "DM セッション:",
       "de": "",
-      "zh_CN": "死亡竞赛场次:"
+      "zh_CN": "死亡竞赛场次："
     },
     "5": {
       "note": "Label[5].Text",
       "en": "CTF SESSIONS:",
       "jp": "CTF セッション:",
       "de": "",
-      "zh_CN": "夺旗场次:"
+      "zh_CN": "夺旗场次："
     },
     "6": {
       "note": "Label[6].Text",
       "en": "BR SESSIONS:",
       "jp": "BR セッション:",
       "de": "",
-      "zh_CN": "BR场次:"
+      "zh_CN": "BR场次："
     },
     "7": {
       "note": "Label[7].Text",
       "en": "DD SESSIONS:",
       "jp": "DD セッション:",
       "de": "",
-      "zh_CN": "DD场次:"
+      "zh_CN": "DD场次："
     },
     "8": {
       "note": "Label[8].Text",
       "en": "TDM SESSIONS:",
       "jp": "TDM セッション:",
       "de": "",
-      "zh_CN": "团队死亡竞赛场次:"
+      "zh_CN": "团队死亡竞赛场次："
     },
     "9": {
       "note": "Label[9].Text",
       "en": "SURVIVAL SESSIONS:",
       "jp": "サバイバル セッション:",
       "de": "",
-      "zh_CN": "生存场次:"
+      "zh_CN": "生存场次："
     },
     "20": {
       "note": "MenuTitle.Text",
@@ -69512,77 +69512,77 @@
       "en": "You are about to leave Star Wars: Republic Commando to load the Xbox Dashboard main menu.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXBOXダッシュボードのメインメニューを読み込みます。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以加载Xbox仪表盘主菜单。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以加载Xbox仪表盘主菜单。"
     },
     "2": {
       "note": "StringDashError",
       "en": "You are about to leave Star Wars: Republic Commando to load the Xbox Dashboard diagnostic tool.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXBOXダッシュボードの診断ツールを読み込みます。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以加载Xbox仪表盘诊断工具。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以加载Xbox仪表盘诊断工具。"
     },
     "3": {
       "note": "StringDashMemory",
       "en": "You are about to leave Star Wars: Republic Commando.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了します。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》。"
     },
     "4": {
       "note": "StringDashSettings",
       "en": "You are about to leave Star Wars: Republic Commando to load the Xbox Dashboard settings.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXBOXダッシュボード設定を読み込みます。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以加载Xbox仪表盘设置。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以加载Xbox仪表盘设置。"
     },
     "5": {
       "note": "StringDashMusic",
       "en": "You are about to leave Star Wars: Republic Commando to load the Xbox Dashboard music manager.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXBOXダッシュボードのミュージックマネージャを読み込みます。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以加载Xbox仪表盘音乐管理器。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以加载Xbox仪表盘音乐管理器。"
     },
     "6": {
       "note": "StringDashNetwork",
       "en": "You are about to leave Star Wars: Republic Commando to load the Xbox Network troubleshooter.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXboxのネットワークの問題解決プログラムを読み込みます。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以加载Xbox网络故障排除工具。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以加载Xbox网络故障排除工具。"
     },
     "7": {
       "note": "StringDashNewAccount",
       "en": "You are about to leave Star Wars: Republic Commando to create a new Xbox Live account.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了して新しいXBOX Live IDを作成します。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以创建新的Xbox Live账户。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以创建新的Xbox Live账户。"
     },
     "8": {
       "note": "StringDashManageAccount",
       "en": "You are about to leave Star Wars: Republic Commando to manage your Xbox Live account.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXBOX Live IDの管理を行います。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以管理您的Xbox Live账户。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以管理你的Xbox Live账户。"
     },
     "9": {
       "note": "StringDashOnlineMenu",
       "en": "You are about to leave Star Wars: Republic Commando to load the Xbox Live online menu.",
       "jp": "スター・ウォーズ リパブリックコマンドを終了してXBOX Liveオンラインメニューを読み込みます。",
       "de": "",
-      "zh_CN": "您即将退出《星球大战：共和国突击队》以加载Xbox Live在线菜单。"
+      "zh_CN": "你即将退出《星球大战：共和国突击队》以加载Xbox Live在线菜单。"
     },
     "11": {
       "note": "ALabel.Text",
       "en": "YES :",
       "jp": "YES :",
       "de": "",
-      "zh_CN": "是 :"
+      "zh_CN": "是 ："
     },
     "13": {
       "note": "BLabel.Text",
       "en": ": NO",
       "jp": ": NO",
       "de": "",
-      "zh_CN": ": 否"
+      "zh_CN": "： 否"
     }
   },
   "XinterfaceLive.MenuDedicatedServer": {
@@ -69633,7 +69633,7 @@
       "en": "OPTIONS :",
       "jp": "",
       "de": "",
-      "zh_CN": "选项 :"
+      "zh_CN": "选项 ："
     }
   },
   "XinterfaceLive.MenuEndDedicatedServer": {
@@ -69658,7 +69658,7 @@
       "en": "YOUR FRIENDS LIST IS EMPTY.",
       "jp": "フレンドリストが空です。",
       "de": "",
-      "zh_CN": "您的好友列表为空。"
+      "zh_CN": "你的好友列表为空。"
     }
   },
   "XinterfaceLive.MenuGamerDetails": {
@@ -69807,7 +69807,7 @@
       "en": "<GAMER> IS PLAYING:",
       "jp": "<GAMER> はプレイ中 :",
       "de": "",
-      "zh_CN": "<GAMER> 正在游戏中:"
+      "zh_CN": "<GAMER> 正在游戏中："
     }
   },
   "XinterfaceLive.MenuGamerDetails.StringCancelFriendRequest": {
@@ -69816,7 +69816,7 @@
       "en": "CANCEL THE FRIEND REQUEST YOU SENT",
       "jp": "送ったフレンド・リクエストをキャンセルしますか?",
       "de": "",
-      "zh_CN": "取消您发送给"
+      "zh_CN": "确定取消你发送给"
     },
     "1": {
       "note": "StringCancelFriendRequest[1]",
@@ -69855,7 +69855,7 @@
       "en": "FROM YOUR FRIENDS LIST?",
       "jp": "削除しますか?",
       "de": "",
-      "zh_CN": "从好友列表中移除吗？"
+      "zh_CN": "从好友列表中移除？"
     }
   },
   "XinterfaceLive.MenuGamerDetails.StringCancelInvite": {
@@ -69871,7 +69871,7 @@
       "en": "TO <GAMER>?",
       "jp": "送信先 <GAMER>",
       "de": "",
-      "zh_CN": "<GAMER> 的邀请吗？"
+      "zh_CN": "<GAMER> 的邀请？"
     }
   },
   "XinterfaceLive.MenuGamerList": {
@@ -69894,21 +69894,21 @@
       "en": "ONLINE.",
       "jp": "オンライン",
       "de": "",
-      "zh_CN": "在线"
+      "zh_CN": "在线。"
     },
     "4": {
       "note": "TextFriend",
       "en": "FRIEND.",
       "jp": "フレンド",
       "de": "",
-      "zh_CN": "好友"
+      "zh_CN": "好友。"
     },
     "5": {
       "note": "TextOffline",
       "en": "OFFLINE.",
       "jp": "オフライン",
       "de": "",
-      "zh_CN": "离线"
+      "zh_CN": "离线。"
     },
     "6": {
       "note": "TextSentInvite",
@@ -69929,28 +69929,28 @@
       "en": "VOICE ON.",
       "jp": "音声ON",
       "de": "",
-      "zh_CN": "语音开启"
+      "zh_CN": "语音开启。"
     },
     "9": {
       "note": "TextVoiceOff",
       "en": "VOICE OFF.",
       "jp": "音声OFF",
       "de": "",
-      "zh_CN": "语音关闭"
+      "zh_CN": "语音关闭。"
     },
     "10": {
       "note": "TextVoiceTV",
       "en": "VOICE THROUGH TV.",
       "jp": "TV音声",
       "de": "",
-      "zh_CN": "通过电视输出语音"
+      "zh_CN": "通过电视输出语音。"
     },
     "11": {
       "note": "TextVoiceMuted",
       "en": "VOICE MUTED.",
       "jp": "音声ミュート",
       "de": "",
-      "zh_CN": "语音已静音"
+      "zh_CN": "语音已静音。"
     },
     "12": {
       "note": "TextInviteAccepted",
@@ -69971,7 +69971,7 @@
       "en": "PLAYING.",
       "jp": "プレイ中",
       "de": "",
-      "zh_CN": "游戏中"
+      "zh_CN": "游戏中。"
     }
   },
   "XinterfaceLive.MenuInsertDisc": {
@@ -69980,14 +69980,14 @@
       "en": "INSERT GAME DISC FOR",
       "jp": "ゲーム・ディスクを挿入",
       "de": "",
-      "zh_CN": "请插入游戏光盘"
+      "zh_CN": "请插入以下游戏的光盘："
     },
     "4": {
       "note": "BLabel.Text",
       "en": ": CANCEL",
       "jp": ": キャンセル",
       "de": "",
-      "zh_CN": ": 取消"
+      "zh_CN": "： 取消"
     },
     "3": {
       "note": "MenuTitle.Text",
@@ -70063,7 +70063,7 @@
       "en": "You cannot connect to Xbox Live until the update is installed.",
       "jp": "更新のインストールが終了するまでXBOX Liveに接続できません。",
       "de": "",
-      "zh_CN": "在安装更新之前，您无法连接到Xbox Live。"
+      "zh_CN": "在安装更新之前，你无法连接到Xbox Live。"
     },
     "3": {
       "note": "AutoUpdateFailedText",
@@ -70079,7 +70079,7 @@
       "en": "Content download allows you to get",
       "jp": "コンテンツをダウンロードすることにより",
       "de": "",
-      "zh_CN": "通过下载内容，您可以获得"
+      "zh_CN": "通过下载内容，你可以获得"
     },
     "1": {
       "note": "ConfirmContentDownloadText[1]",
@@ -70100,7 +70100,7 @@
       "en": "The new content is downloaded to",
       "jp": "これらの新しいコンテンツは、Xboxの",
       "de": "",
-      "zh_CN": "新内容将下载到您的"
+      "zh_CN": "新内容将下载到你的"
     },
     "4": {
       "note": "ConfirmContentDownloadText[4]",
@@ -70144,21 +70144,21 @@
       "en": "SERVICE NUMBER:",
       "jp": "サービスナンバー:",
       "de": "",
-      "zh_CN": "服务编号:"
+      "zh_CN": "服务编号："
     },
     "2": {
       "note": "ErrorNumber.Text",
       "en": "ERROR NUMBER:",
       "jp": "エラーナンバー:",
       "de": "",
-      "zh_CN": "错误编号:"
+      "zh_CN": "错误编号："
     },
     "3": {
       "note": "VoiceBanString",
       "en": "You have been voice banned.  You will not be able to use the voice communicator until this status has been cleared",
       "jp": "音声が停止されています。クリアされるまで、ボイス・コミュニケータは使用できません。",
       "de": "",
-      "zh_CN": "您的语音功能已被禁止。在此状态解除之前，您将无法使用语音通讯器。"
+      "zh_CN": "你的语音功能已被禁止。在此状态解除之前，你将无法使用语音通讯器。"
     },
     "4": {
       "note": "StringDashMain",
@@ -70242,7 +70242,7 @@
       "en": ": CONTINUE",
       "jp": ": 続ける",
       "de": "",
-      "zh_CN": ": 继续"
+      "zh_CN": "： 继续"
     }
   },
   "XinterfaceLive.MenuLiveMain": {
@@ -70300,7 +70300,7 @@
       "en": "Sign out of Xbox Live?",
       "jp": "XBOX LIVEからサインアウトしますか?",
       "de": "",
-      "zh_CN": "退出Xbox Live登录？"
+      "zh_CN": "确定退出Xbox Live登录？"
     }
   },
   "XinterfaceLive.MenuLiveMain.Options": {
@@ -70325,7 +70325,7 @@
       "en": "ENTER THE PASSCODE FOR <GAMERTAG>:",
       "jp": "パスコード入力 <GAMERTAG>:",
       "de": "",
-      "zh_CN": "请输入 <GAMERTAG> 的密码:"
+      "zh_CN": "请输入 <GAMERTAG> 的密码："
     },
     "0": {
       "note": "Input[0].Text",
@@ -70339,7 +70339,7 @@
       "en": "AUTHENTICATING...",
       "jp": "認証中...",
       "de": "",
-      "zh_CN": "验证中..."
+      "zh_CN": "正在验证..."
     },
     "3": {
       "note": "MenuTitle.Text",
@@ -70401,7 +70401,7 @@
       "en": "READ NOW :",
       "jp": "今すぐ読む :",
       "de": "",
-      "zh_CN": "立即阅读 :"
+      "zh_CN": "立即阅读 ："
     },
     "2": {
       "note": "AButton.Blurred.Text",
@@ -70415,7 +70415,7 @@
       "en": ": READ LATER",
       "jp": ": 後で読む",
       "de": "",
-      "zh_CN": ": 稍后阅读"
+      "zh_CN": "： 稍后阅读"
     },
     "4": {
       "note": "BButton.Blurred.Text",
@@ -70445,7 +70445,7 @@
       "en": ": REFRESH",
       "jp": ": リフレッシュ",
       "de": "",
-      "zh_CN": ": 刷新"
+      "zh_CN": "： 刷新"
     },
     "6": {
       "note": "XButton.Blurred.Text",
@@ -70498,42 +70498,42 @@
       "en": "HOST NAME:",
       "jp": "ホスト名:",
       "de": "",
-      "zh_CN": "主机名:"
+      "zh_CN": "主机名："
     },
     "1": {
       "note": "Labels[1].Text",
       "en": "MAP:",
       "jp": "マップ:",
       "de": "",
-      "zh_CN": "地图:"
+      "zh_CN": "地图："
     },
     "2": {
       "note": "Labels[2].Text",
       "en": "GAME TYPE:",
       "jp": "ゲームタイプ:",
       "de": "",
-      "zh_CN": "游戏类型:"
+      "zh_CN": "游戏类型："
     },
     "3": {
       "note": "Labels[3].Text",
       "en": "PLAYERS:",
       "jp": "プレイヤー:",
       "de": "",
-      "zh_CN": "玩家:"
+      "zh_CN": "玩家："
     },
     "4": {
       "note": "Labels[4].Text",
       "en": "DEDICATED SERVER:",
       "jp": "デディケーテッドサーバー:",
       "de": "",
-      "zh_CN": "专用服务器:"
+      "zh_CN": "专用服务器："
     },
     "5": {
       "note": "Labels[5].Text",
       "en": "SPEED:",
       "jp": "スピード:",
       "de": "",
-      "zh_CN": "速度:"
+      "zh_CN": "速度："
     },
     "10": {
       "note": "StringNone",
@@ -70547,7 +70547,7 @@
       "en": ": FIND ANOTHER",
       "jp": ": 他を探す",
       "de": "",
-      "zh_CN": ": 查找其他"
+      "zh_CN": "： 查找其他"
     },
     "12": {
       "note": "XButton.Blurred.Text",
@@ -70660,7 +70660,7 @@
       "en": ": CANCEL",
       "jp": ":キャンセル",
       "de": "",
-      "zh_CN": ": 取消"
+      "zh_CN": "： 取消"
     },
     "4": {
       "note": "MenuTitle.Text",
@@ -70676,7 +70676,7 @@
       "en": "SCREAMING",
       "jp": "うるさかった",
       "de": "",
-      "zh_CN": "大声尖叫"
+      "zh_CN": "喧哗"
     },
     "3": {
       "note": "ComplaintOptions[3].Blurred.Text",
@@ -70754,28 +70754,28 @@
       "en": "COMPLAINT:",
       "jp": "悪い評価:",
       "de": "",
-      "zh_CN": "投诉:"
+      "zh_CN": "投诉："
     },
     "3": {
       "note": "Body[3].Text",
       "en": "Voice Banning, Lockout, and Account",
       "jp": "ID停止の処置がとられる場合があります。",
       "de": "",
-      "zh_CN": "可能会导致语音禁止、锁定和"
+      "zh_CN": "语音禁止、锁定乃至"
     },
     "4": {
       "note": "Body[4].Text",
       "en": "Termination.",
       "jp": "ご了承ください。",
       "de": "",
-      "zh_CN": "账户终止。"
+      "zh_CN": "账户封禁的处罚。"
     },
     "6": {
       "note": "Confirm.Text",
       "en": "DO YOU WISH TO PROCEED WITH YOUR COMPLAINT?",
       "jp": "悪い評価を送りますか?",
       "de": "",
-      "zh_CN": "是否要提交您的投诉？"
+      "zh_CN": "是否要提交你的投诉？"
     },
     "11": {
       "note": "MenuTitle.Text",
@@ -70805,7 +70805,7 @@
       "en": "users about this Gamer can lead to",
       "jp": "評価も考慮して、音声の停止、ロックアウト、",
       "de": "",
-      "zh_CN": "可能导致该玩家被"
+      "zh_CN": "可能导致该玩家受到"
     }
   },
   "XinterfaceLive.MenuPlayerFeedbackDone": {
@@ -70814,7 +70814,7 @@
       "en": "Your feedback has been sent. Thank you for your time.",
       "jp": "評価が送信されました。ご協力ありがとうございます。",
       "de": "",
-      "zh_CN": "您的反馈已发送。感谢您的配合。"
+      "zh_CN": "你的反馈已发送。感谢你的配合。"
     },
     "4": {
       "note": "MenuTitle.Text",
@@ -70830,7 +70830,7 @@
       "en": "NOBODY HAS PLAYED WITH YOU YET.",
       "jp": "まだ誰とも対戦していません。",
       "de": "",
-      "zh_CN": "还没有人和您一起游戏过。"
+      "zh_CN": "还没有人和你一起游戏过。"
     },
     "2": {
       "note": "MenuTitle.Text",
@@ -70846,42 +70846,42 @@
       "en": "POINTS:",
       "jp": "ポイント:",
       "de": "",
-      "zh_CN": "得分:"
+      "zh_CN": "得分："
     },
     "2": {
       "note": "Label[2].Text",
       "en": "KILLS:",
       "jp": "殺傷数:",
       "de": "",
-      "zh_CN": "击杀数:"
+      "zh_CN": "击杀数："
     },
     "3": {
       "note": "Label[3].Text",
       "en": "DEATHS:",
       "jp": "死亡数:",
       "de": "",
-      "zh_CN": "死亡数:"
+      "zh_CN": "死亡数："
     },
     "4": {
       "note": "Label[4].Text",
       "en": "GAMES PLAYED:",
       "jp": "ゲームプレイ:",
       "de": "",
-      "zh_CN": "已玩场次:"
+      "zh_CN": "已玩场次："
     },
     "5": {
       "note": "Label[5].Text",
       "en": "SPECIALS:",
       "jp": "スペシャル:",
       "de": "",
-      "zh_CN": "特殊:"
+      "zh_CN": "特殊："
     },
     "6": {
       "note": "Label[6].Text",
       "en": "EFFICIENCY:",
       "jp": "有効:",
       "de": "",
-      "zh_CN": "效率:"
+      "zh_CN": "效率："
     },
     "10": {
       "note": "Deaths.Text",
@@ -70927,7 +70927,7 @@
       "en": "Are you sure that you want to leave your current game?",
       "jp": "現在のゲームを終了しますか？",
       "de": "",
-      "zh_CN": "您确定要离开当前游戏吗？"
+      "zh_CN": "确定离开当前游戏？"
     }
   },
   "XinterfaceLive.MenuVoiceAttachment": {
