@@ -67336,7 +67336,7 @@
       "en": "RELOAD",
       "jp": "リロード",
       "de": "",
-      "zh_CN": "装弹"
+      "zh_CN": "装填"
     },
     "3": {
       "note": "OptionSet0Labels[3].Text",
@@ -67364,14 +67364,14 @@
       "en": "CYCLE DETONATORS",
       "jp": "デトネーター切替",
       "de": "",
-      "zh_CN": "切换雷管"
+      "zh_CN": "轮替雷管"
     },
     "7": {
       "note": "OptionSet0Labels[7].Text",
       "en": "CYCLE VISOR MODE",
       "jp": "バイザーモード切替",
       "de": "",
-      "zh_CN": "切换面罩模式"
+      "zh_CN": "轮替面罩模式"
     },
     "8": {
       "note": "OptionSet0Labels[8].Text",
@@ -67385,14 +67385,14 @@
       "en": "PREVIOUS SET",
       "jp": "前の設定",
       "de": "",
-      "zh_CN": "上一组"
+      "zh_CN": "上一个"
     },
     "10": {
       "note": "NextSet.Blurred.Text",
       "en": "NEXT SET",
       "jp": "次の設定",
       "de": "",
-      "zh_CN": "下一组"
+      "zh_CN": "下一个"
     },
     "13": {
       "note": "ClickLeftStickText",
@@ -67429,7 +67429,7 @@
       "en": "LOOK",
       "jp": "照準",
       "de": "",
-      "zh_CN": "瞄准"
+      "zh_CN": "观察"
     }
   },
   "XinterfaceCtmenus.CTControllerOptionsRemapXboxMenu.OptionSet1Labels": {
@@ -67452,7 +67452,7 @@
       "en": "CROUCH",
       "jp": "しゃがむ",
       "de": "",
-      "zh_CN": "蹲下"
+      "zh_CN": "蹲伏"
     },
     "3": {
       "note": "OptionSet1Labels[3].Text",
@@ -67510,7 +67510,7 @@
       "en": "REMAP XBOX CONTROLLER BUTTONS",
       "jp": "ボタンを再配置する",
       "de": "",
-      "zh_CN": "重新映射控制器按键"
+      "zh_CN": "重新配置控制器按钮"
     }
   },
   "XinterfaceCtmenus.CTControlsOptionsPCMenu": {
@@ -67575,7 +67575,7 @@
       "en": "CROUCH",
       "jp": "しゃがむ",
       "de": "DUCKEN",
-      "zh_CN": "蹲下"
+      "zh_CN": "蹲伏"
     },
     "9": {
       "note": "OptionSet0Labels[9].Text",
@@ -67610,21 +67610,21 @@
       "en": "CYCLE VISOR MODE",
       "jp": "バイザーモード切り替え",
       "de": "VISORMODUS WECHSELN",
-      "zh_CN": "切换面罩模式"
+      "zh_CN": "轮替面罩模式"
     },
     "21": {
       "note": "PrevSet.Blurred.Text",
       "en": "PREVIOUS SET",
       "jp": "前の設定",
       "de": "ZURÜCK",
-      "zh_CN": "上一组"
+      "zh_CN": "上一个"
     },
     "22": {
       "note": "NextSet.Blurred.Text",
       "en": "NEXT SET",
       "jp": "次の設定",
       "de": "WEITER",
-      "zh_CN": "下一组"
+      "zh_CN": "下一个"
     }
   },
   "XinterfaceCtmenus.CTControlsOptionsPCMenu.OptionSet1Labels": {
@@ -67647,7 +67647,7 @@
       "en": "RELOAD",
       "jp": "リロード",
       "de": "NACHLADEN",
-      "zh_CN": "装弹"
+      "zh_CN": "装填"
     },
     "3": {
       "note": "OptionSet1Labels[3].Text",
@@ -67689,7 +67689,7 @@
       "en": "CYCLE DETONATOR",
       "jp": "デトネーター切り替え",
       "de": "DETONATOR WECHSELN",
-      "zh_CN": "切换雷管"
+      "zh_CN": "轮替雷管"
     },
     "9": {
       "note": "OptionSet1Labels[9].Text",
@@ -67911,11 +67911,11 @@
       "zh_CN": "难度"
     },
     "6": {
-      "note": "OptionLabels[6].Text",
+      "note": "OptionLabels[6].Text；译法与PS4官方不同：官方译文仅\"自动\"疑似截断，本项目译为\"自动撤回行动\"",
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
       "de": "AUTO-MANÖVER",
-      "zh_CN": "自动行动撤回"
+      "zh_CN": "自动撤回行动"
     },
     "7": {
       "note": "OptionLabels[7].Text",
@@ -67943,7 +67943,7 @@
       "en": "MEDIUM",
       "jp": "ノーマル",
       "de": "MITTEL",
-      "zh_CN": "普通"
+      "zh_CN": "中等"
     },
     "56": {
       "note": "Options[5].Items[2]",
@@ -67957,7 +67957,7 @@
       "en": "CYCLE",
       "jp": "繰り返し",
       "de": "WECHSELN",
-      "zh_CN": "循环"
+      "zh_CN": "轮替"
     }
   },
   "XinterfaceCtmenus.CTGameOptionsXboxMenu": {
@@ -67966,14 +67966,14 @@
       "en": "INVERT Y AXIS",
       "jp": "上下反転",
       "de": "",
-      "zh_CN": "Y轴反转"
+      "zh_CN": "反向Y轴"
     },
     "1": {
       "note": "OptionLabels[1].Text",
       "en": "LOOK SENSITIVITY",
       "jp": "視野感度",
       "de": "",
-      "zh_CN": "视野灵敏度"
+      "zh_CN": "镜头灵敏度"
     },
     "2": {
       "note": "OptionLabels[2].Text",
@@ -67987,7 +67987,7 @@
       "en": "VIBRATION",
       "jp": "振動",
       "de": "",
-      "zh_CN": "振动"
+      "zh_CN": "震动"
     },
     "4": {
       "note": "OptionLabels[4].Text",
@@ -68004,11 +68004,11 @@
       "zh_CN": "难度"
     },
     "6": {
-      "note": "OptionLabels[6].Text",
+      "note": "OptionLabels[6].Text；译法与PS4官方不同：官方译文仅\"自动\"疑似截断，本项目译为\"自动撤回行动\"",
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
       "de": "",
-      "zh_CN": "自动行动撤回"
+      "zh_CN": "自动撤回行动"
     },
     "25": {
       "note": "Options[5].Items[0]",
@@ -68022,7 +68022,7 @@
       "en": "MEDIUM",
       "jp": "ノーマル",
       "de": "",
-      "zh_CN": "普通"
+      "zh_CN": "中等"
     },
     "27": {
       "note": "Options[5].Items[2]",
@@ -68038,7 +68038,7 @@
       "en": "GRAPHICS QUALITY",
       "jp": "グラフィック クオリティ",
       "de": "GRAFIKQUALITÄT",
-      "zh_CN": "图形质量"
+      "zh_CN": "图像质量"
     },
     "1": {
       "note": "OptionLabels[1].Text",
@@ -68178,7 +68178,7 @@
       "en": "YOU HAVE CHANGED AN OPTION THAT REQUIRES THE GAME BE RESTARTED TO TAKE EFFECT.",
       "jp": "変更を有効にするにはゲームの再起動が必要です。",
       "de": "FÜR DIESE  ÄNDERUNG MUSST DAS SPIEL NEU GESTARTET WERDEN.",
-      "zh_CN": "你更改了一个选项，需要重启游戏才能生效。"
+      "zh_CN": "更改的选项需要重启游戏后才能生效。"
     },
     "65": {
       "note": "Apply.Blurred.Text",
@@ -68380,7 +68380,7 @@
       "en": "ESC, PAUSE AND TAB FUNCTIONS CANNOT BE REASSIGNED",
       "jp": "",
       "de": "ESC, PAUSE UND TAB KÖNNEN NICHT NEU BELEGT WERDEN",
-      "zh_CN": "ESC、PAUSE和TAB功能无法重新分配"
+      "zh_CN": "无法重新分配ESC、PAUSE和TAB键功能。"
     }
   },
   "XinterfaceCtmenus.CTMenuMain": {
@@ -68485,35 +68485,35 @@
       "en": "ARE YOU SURE YOU WANT TO FORFEIT?",
       "jp": "没収していいですか?",
       "de": "MÖCHTEN SIE WIRKLICH AUFGEBEN?",
-      "zh_CN": "你确定要弃权吗？"
+      "zh_CN": "确定弃权？"
     },
     "8": {
       "note": "StringReallyDisconnect",
       "en": "ARE YOU SURE YOU WANT TO DISCONNECT?",
       "jp": "切断していいですか?",
       "de": "MÖCHTEN SIE DIE VERBINDUNG WIRKLICH TRENNEN?",
-      "zh_CN": "你确定要断开连接吗？"
+      "zh_CN": "确定断开连接？"
     },
     "9": {
       "note": "StringReallyEndMatch",
       "en": "ARE YOU SURE YOU WANT TO END THE MATCH?",
       "jp": "対戦を終えますか?",
       "de": "MÖCHTEN SIE DIESES SPIEL WIRKLICH BEENDEN?",
-      "zh_CN": "你确定要结束比赛吗？"
+      "zh_CN": "确定结束比赛？"
     },
     "15": {
       "note": "StringReallyLeaveMatch",
       "en": "ARE YOU SURE YOU WANT TO LEAVE THE MATCH?",
       "jp": "対戦を離れますか?",
       "de": "MÖCHTEN SIE DIESES SPIEL WIRKLICH VERLASSEN?",
-      "zh_CN": "你确定要离开比赛吗？"
+      "zh_CN": "确定离开比赛？"
     },
     "11": {
       "note": "StringReallySwitchTeams",
       "en": "ARE YOU SURE YOU WANT TO SWITCH TEAMS?",
       "jp": "チームを入れ替えますか?",
       "de": "MÖCHTEN SIE DAS TEAM WIRKLICH WECHSELN?",
-      "zh_CN": "你确定要切换队伍吗？"
+      "zh_CN": "确定切换队伍？"
     },
     "4": {
       "note": "MenuOptions[4].Blurred.Text",
@@ -68527,7 +68527,7 @@
       "en": "ARE YOU SURE YOU WANT TO QUIT TO WINDOWS?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "",
       "de": "MÖCHTEN SIE WIRKLICH ZU WINDOWS ZURÜCKKEHREN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": "你确定要退出到Windows吗？未保存的进度将会丢失。"
+      "zh_CN": "确定退出至WINDOWS桌面？任何未保存的进度都将丢失。"
     }
   },
   "XinterfaceCtmenus.CTMultiplayerPauseXboxMenu": {
@@ -68557,35 +68557,35 @@
       "en": "ARE YOU SURE YOU WANT TO FORFEIT?",
       "jp": "ゲームを没収していいですか?",
       "de": "MÖCHTEN SIE WIRKLICH AUFGEBEN?",
-      "zh_CN": "你确定要弃权吗？"
+      "zh_CN": "确定弃权？"
     },
     "11": {
       "note": "StringReallyDisconnect",
       "en": "ARE YOU SURE YOU WANT TO LEAVE THE GAME?",
       "jp": "ゲームを離れますか?",
       "de": "MÖCHTEN SIE DIESES SPIEL WIRKLICH VERLASSEN?",
-      "zh_CN": "你确定要离开游戏吗？"
+      "zh_CN": "确定离开游戏？"
     },
     "12": {
       "note": "StringReallyEndMatch",
       "en": "LEAVING THE GAME NOW WILL END THIS SESSION.  ARE YOU SURE YOU WANT TO LEAVE?",
       "jp": "ゲームを離れると、このセッションは終了します。本当に離れますか?",
       "de": "DURCH DAS BEENDEN WIRD DIE SITZUNG BEENDET. MÖCHTEN SIE DAS SPIEL WIRKLICH VERLASSEN?",
-      "zh_CN": "离开游戏将结束此会话。你确定要离开吗？"
+      "zh_CN": "现在离开游戏将结束此会话。确定离开？"
     },
     "20": {
       "note": "StringReallyLeaveMatch",
       "en": "ARE YOU SURE YOU WANT TO LEAVE THE MATCH?",
       "jp": "対戦を離れますか?",
       "de": "MÖCHTEN SIE DIESE PARTIE WIRKLICH VERLASSEN?",
-      "zh_CN": "你确定要离开比赛吗？"
+      "zh_CN": "确定离开比赛？"
     },
     "14": {
       "note": "StringReallySwitchTeams",
       "en": "ARE YOU SURE YOU WANT TO SWITCH TEAMS?",
       "jp": "チームを変更しますか?",
       "de": "MÖCHTEN SIE DAS TEAM WIRKLICH WECHSELN?",
-      "zh_CN": "你确定要切换队伍吗？"
+      "zh_CN": "确定切换队伍？"
     }
   },
   "XinterfaceCtmenus.CTMultiplayerXBoxMenu": {
@@ -68631,7 +68631,7 @@
       "en": "SOUND / GRAPHICS OPTIONS",
       "jp": "サウンド/グラフィックオプション",
       "de": "",
-      "zh_CN": "声音/图形选项"
+      "zh_CN": "声音/图像选项"
     }
   },
   "XinterfaceCtmenus.CTPauseMenu": {
@@ -68648,35 +68648,35 @@
       "en": "REALLY FORFEIT?",
       "jp": "ゲームを没収してよいですか?",
       "de": "WIRKLICH AUFGEBEN?",
-      "zh_CN": "确定要弃权吗？"
+      "zh_CN": "确定弃权？"
     },
     "29": {
       "note": "StringReallyDisconnect",
       "en": "REALLY DISCONNECT?",
       "jp": "ゲームを切断してよいですか?",
       "de": "VERBINDUNG WIRKLICH TRENNEN?",
-      "zh_CN": "确定要断开连接吗？"
+      "zh_CN": "确定断开连接？"
     },
     "30": {
       "note": "StringReallyEndMatch",
       "en": "REALLY END THE MATCH?",
       "jp": "対戦を終了しますか?",
       "de": "SPIEL WIRKLICH BEENDEN?",
-      "zh_CN": "确定要结束比赛吗？"
+      "zh_CN": "确定结束比赛？"
     },
     "31": {
       "note": "StringReallyLeaveMatch",
       "en": "REALLY LEAVE THE MATCH?",
       "jp": "ゲームを離れますか?",
       "de": "SPIEL WIRKLICH VERLASSEN?",
-      "zh_CN": "确定要离开比赛吗？"
+      "zh_CN": "确定离开比赛？"
     },
     "32": {
       "note": "StringReallySwitchTeams",
       "en": "REALLY SWITCH TEAMS?",
       "jp": "チームを変更しますか?",
       "de": "TEAMS WIRKLICH WECHSELN?",
-      "zh_CN": "确定要切换队伍吗？"
+      "zh_CN": "确定切换队伍？"
     }
   },
   "XinterfaceCtmenus.CTPausePCMenu": {
@@ -68685,7 +68685,7 @@
       "en": "LOAD LAST SAVE",
       "jp": "直前のセーブデータをロード",
       "de": "LETZTER SPIELSTAND",
-      "zh_CN": "读取上次存档"
+      "zh_CN": "载入最新存档"
     },
     "3": {
       "note": "MenuOptions[3].Blurred.Text",
@@ -68720,28 +68720,28 @@
       "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "ミッションを終了しますか? 現在のゲームは失われます。",
       "de": "MÖCHTEN SIE DIE MISSION WIRKLICH BEENDEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": "你确定要结束当前任务吗？未保存的进度将会丢失。"
+      "zh_CN": "确定结束当前任务？任何未保存的进度都将丢失。"
     },
     "12": {
       "note": "QuitGameConfirm",
       "en": "ARE YOU SURE YOU WANT TO QUIT TO WINDOWS?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "WINDOWSに戻りますか? 現在のゲームは失われます。",
       "de": "MÖCHTEN SIE WIRKLICH ZU WINDOWS ZURÜCKKEHREN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": "你确定要退出到Windows吗？未保存的进度将会丢失。"
+      "zh_CN": "确定退出至WINDOWS桌面？任何未保存的进度都将丢失。"
     },
     "13": {
       "note": "RestartMissionConfirm",
       "en": "ARE YOU SURE YOU WANT TO RESTART THE MISSION?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "レベルをやり直しますか? 現在のゲームは失われます。",
       "de": "MÖCHTEN SIE DEN LEVEL WIRKLICH NEU STARTEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": "你确定要重新开始任务吗？未保存的进度将会丢失。"
+      "zh_CN": "确定重新开始任务？任何未保存的进度都将丢失。"
     },
     "14": {
       "note": "LoadLastConfirm",
       "en": "ARE YOU SURE YOU WANT TO LOAD THE LAST SAVE GAME?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "直前のセーブデータをロードしますか? 現在のゲームは失われます。",
       "de": "WIRKLICH DEN LETZTEN SPIELSTAND LADEN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
-      "zh_CN": "你确定要读取上次存档吗？未保存的进度将会丢失。"
+      "zh_CN": "确定读取最新存档？任何未保存的进度都将丢失。"
     }
   },
   "XinterfaceCtmenus.CTPauseXBoxMenu": {
@@ -68750,7 +68750,7 @@
       "en": "LOAD LAST SAVE",
       "jp": "最新セーブからロード",
       "de": "",
-      "zh_CN": "读取上次存档"
+      "zh_CN": "载入最新存档"
     },
     "1": {
       "note": "MenuOptions[1].Blurred.Text",
@@ -68778,21 +68778,21 @@
       "en": "LOAD GAME",
       "jp": "ロードゲーム",
       "de": "",
-      "zh_CN": "读取游戏"
+      "zh_CN": "载入游戏"
     },
     "6": {
       "note": "RestartMissionConfirm",
       "en": "ARE YOU SURE YOU WANT TO RESTART THE LEVEL?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "ミッションを再スタートしますか?",
       "de": "",
-      "zh_CN": "你确定要重新开始关卡吗？未保存的进度将会丢失。"
+      "zh_CN": "确定重新开始本关卡？任何未保存的进度都将丢失。"
     },
     "8": {
       "note": "StringCloakToggleOff",
       "en": "APPEAR ONLINE",
       "jp": "オンライン",
       "de": "",
-      "zh_CN": "显示为在线"
+      "zh_CN": "当前在线"
     },
     "10": {
       "note": "DamagedSave",
@@ -68806,21 +68806,21 @@
       "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "",
       "de": "",
-      "zh_CN": "你确定要结束当前任务吗？未保存的进度将会丢失。"
+      "zh_CN": "确定结束当前任务？任何未保存的进度都将丢失。"
     },
     "12": {
       "note": "EndMissionDemoConfirm",
       "en": "ARE YOU SURE YOU WANT TO END THE CURRENT MISSION?  ANY PROGRESS WILL BE LOST.",
       "jp": "",
       "de": "",
-      "zh_CN": "你确定要结束当前任务吗？所有进度将会丢失。"
+      "zh_CN": "确定结束当前任务？所有进度都将丢失。"
     },
     "13": {
       "note": "LoadLastConfirm",
       "en": "ARE YOU SURE YOU WANT TO LOAD THE LAST SAVE GAME?  ANY UNSAVED PROGRESS WILL BE LOST.",
       "jp": "",
       "de": "",
-      "zh_CN": "你确定要读取上次存档吗？未保存的进度将会丢失。"
+      "zh_CN": "确定读取最新存档？任何未保存的进度都将丢失。"
     },
     "7": {
       "note": "MenuOptions[7].Blurred.Text",
@@ -68834,7 +68834,7 @@
       "en": "ARE YOU SURE YOU WANT TO RESTART THE LEVEL?  ANY PROGRESS WILL BE LOST.",
       "jp": "",
       "de": "",
-      "zh_CN": "你确定要重新开始关卡吗？所有进度将会丢失。"
+      "zh_CN": "确定重新开始本关卡？所有进度都将丢失。"
     }
   },
   "XinterfaceCtmenus.CTSaveGameMenu": {
@@ -68983,7 +68983,7 @@
       "en": "GRAPHICS OPTIONS",
       "jp": "グラフィックオプション",
       "de": "",
-      "zh_CN": "图形选项"
+      "zh_CN": "图像选项"
     },
     "0": {
       "note": "OptionLabels[0].Text",
@@ -69004,7 +69004,7 @@
       "en": ": RESTORE DEFAULTS",
       "jp": ": デフォルト",
       "de": "",
-      "zh_CN": "：恢复默认"
+      "zh_CN": "： 恢复默认"
     },
     "96": {
       "note": "ApplySettingsConfirm",
@@ -69020,7 +69020,7 @@
       "en": "SOUND FX VOLUME",
       "jp": "効果音ボリューム",
       "de": "",
-      "zh_CN": "音效音量"
+      "zh_CN": "声效音量"
     },
     "2": {
       "note": "OptionLabels[2].Text",
@@ -69043,7 +69043,7 @@
       "en": "SOUND FX VOLUME",
       "jp": "効果音ボリューム",
       "de": "EFFEKTLAUTSTÄRKE",
-      "zh_CN": "音效音量"
+      "zh_CN": "声效音量"
     },
     "2": {
       "note": "OptionLabels[2].Text",
@@ -69078,7 +69078,7 @@
       "en": "AUDIO CHANNELS",
       "jp": "チャンネル",
       "de": "SOUNDKANÄLE",
-      "zh_CN": "音频通道"
+      "zh_CN": "音频声道"
     },
     "46": {
       "note": "Options[6].Items[1]",
@@ -69092,7 +69092,7 @@
       "en": "YOU HAVE CHANGED AN OPTION THAT REQUIRES THE GAME BE RESTARTED TO TAKE EFFECT.",
       "jp": "",
       "de": "DAS SPIEL MUSS NEU GESTARTET WERDEN, DAMIT DIE ÄNDERUNGEN  ÜBERNOMMEN WERDEN KÖNNEN.",
-      "zh_CN": "你更改了一个选项，需要重启游戏才能生效。"
+      "zh_CN": "更改的选项需要重启游戏后才能生效。"
     }
   },
   "XinterfaceCtmenus.CT_Focus_LoadGameMenu": {
@@ -69115,7 +69115,7 @@
       "en": "01 - INFILTRATE ENEMY CAPITAL SHIP (GEO_05_B)",
       "jp": "01 - 敵主力艦に潜入 (GEO_05_B)",
       "de": "01 - FEINDLICHES ANGRIFFSSCHIFF INFILTRIEREN (GEO_05_B)",
-      "zh_CN": "01 - 渗入敌方主力舰 (GEO_05_B)"
+      "zh_CN": "01 - 潜入敌方主力舰 (GEO_05_B)"
     },
     "4": {
       "note": "GEO_05_B.HelpText",
@@ -69182,7 +69182,7 @@
       "en": "Invert Look",
       "jp": "反転表示",
       "de": "Sicht umkehren",
-      "zh_CN": "反转视角"
+      "zh_CN": "反向视角"
     },
     "14": {
       "note": "ReturnToGame.HelpText",
@@ -72931,7 +72931,7 @@
       "en": "LucasArts, the LucasArts logo, STAR WARS, and related properties are trademarks in the United States and/or in other countries of Lucasfilm Ltd. and/or its affiliates.  STAR WARS Republic Commando is a trademark of Lucasfilm Entertainment Company Ltd. and/or its affiliates.  © 2005 Lucasfilm Entertainment Company Ltd. or Lucasfilm Ltd.  All rights reserved.",
       "jp": "",
       "de": "LucasArts, das LucasArts-Logo, STAR WARS und alle zugehörigen Marken sind Warenzeichen von Lucasfilm Ltd. und/oder den zugehörigen Unternehmen in den USA und/oder anderen Ländern. STAR WARS Republic Commando ist ein Warenzeichen von Lucasfilm Entertainment Company Ltd. und/oder den zugehörigen Unternehmen. © 2005, 2021 Lucasfilm Entertainment Company Ltd. oder Lucasfilm Ltd. Alle Rechte vorbehalten.",
-      "zh_CN": "LucasArts, the LucasArts logo, STAR WARS, and related properties are trademarks in the United States and/or in other countries of Lucasfilm Ltd. and/or its affiliates.  STAR WARS Republic Commando is a trademark of Lucasfilm Entertainment Company Ltd. and/or its affiliates.  © 2005 Lucasfilm Entertainment Company Ltd. or Lucasfilm Ltd.  All rights reserved."
+      "zh_CN": "LucasArts、LucasArts徽标、STAR WARS及相关财产是Lucasfilm Ltd.和/或其关联机构在美国和/或其他国家/地区的商标。STAR WARS Republic Commando是Lucasfilm Entertainment Company Ltd.和/或其关联机构的商标。(C) 2005 Lucasfilm Entertainment Company Ltd.或Lucasfilm Ltd.版权所有。"
     }
   },
   "XinterfaceCtmenus.CTStartPSMenu": {
