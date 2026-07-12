@@ -104,7 +104,7 @@
 | DC17m Blaster Rifle | DC-17m爆能步枪 | 型号保留，类别翻译 |
 | DC-17m Blaster Attachment | DC-17m爆能枪附件 | 型号保留，类别翻译 |
 | DC-17m Sniper / DC17mSniper / DC-17m Sniper Attachment / DC17m Sniper Attachment | DC-17m狙击附件 | 按武器附件处理 |
-| demolition charge / demolition charges / demo charge | 爆破炸药 | 普通装备名 |
+| demolition charge / demolition charges / demo charge | 炸药 | 普通装备名 |
 | EC Detonator / EC Detonators | EC雷管 | 复数不在中文中体现 |
 | ECD | ECD | 对话中对 EC 雷管的简称，保留 |
 | EMP Grenade / EMP Grenades | EMP手榴弹 | 复数不在中文中体现 |
@@ -132,7 +132,7 @@
 | turret / turrets | 炮塔 | 普通装备名 |
 | vibroblade / vibroblades | 超振动刃 | 复数不在中文中体现 |
 | visor / visors | 面罩 | 头盔/显示语境 |
-| Wookiee Bowcaster / Wookie Bowcaster / Bowcaster / bowcaster / bowcasters | 伍基弩枪 | 种族名使用译名；单独出现可省为"弩枪" |
+| Wookiee Bowcaster / Wookie Bowcaster / Bowcaster / bowcaster / bowcasters | 伍基人弩枪 | 种族名使用译名；单独出现可省为"弩枪" |
 | Wookiee Homing Rocket Launcher / Wookiee Rocket Launcher / Wookie Rocket Launcher / RocketLauncher | 伍基人制导导弹发射器 | 种族名使用译名 |
 
 ## 世界观、地点、组织
@@ -141,15 +141,15 @@
 
 - 星球、地点、组织、世界观术语使用官方或通用中文译名。
 - 舰名、行动名、战役名可保留识别码，名称语义部分翻译，并按中文习惯加"号"、"战役"、"行动"等。
-- `Confederacy` 与 `Separatists` 相关但不等同：前者译为 `独立星系邦联`，后者译为 `分离主义者` 或 `分离主义势力`。
+- `Confederacy` 与 `Separatists` 相关但不等同：前者译为 `邦联`，后者译为 `分离主义者` 或 `分离主义势力`。`Trade Federation` 译为 `贸易联盟`，其口语缩写 `Trade Fed` / `Fed` 译为 `贸易联盟` / `联盟`。
 - `Republic` 单独出现时译为 `共和国`；明确指政权全称时可译为 `银河共和国`。
 
 | 原文变体 | 译文 | 说明 |
 | --- | --- | --- |
 | Assault Ship Campaign | 突击舰战役 | 战役/章节名 |
-| Chaykin Cluster | 查伊金星团 | 地点名 |
+| Chaykin Cluster | 柴金星系 | 地点名 |
 | Core Ship / Core ship / Coreship / coreship | 核心飞船 | 贸易联盟/邦联飞船类型 |
-| Corellia Sector | 科雷利亚星区 | 星区名 |
+| Corellia Sector | 科雷利亚地区 | 星区名 |
 | Droid Foundry / Droid foundry / droid foundry | 机器人铸造厂 | 地点/设施名 |
 | Geonosis | 吉奥诺西斯 | 星球名 |
 | Geonosis Campaign | 吉奥诺西斯战役 | 战役/章节名 |
@@ -162,19 +162,34 @@
 | RAS Cruiser Arrestor / Arrestor | "逮捕者"号巡洋舰 | 舰名 |
 | RAS Prosecutor / the Prosecutor / Prosecutor | "检察官"号 | 舰名；普通 `prosecutor` 不适用 |
 | Republic Assault Ship / Republic assault ship | 共和国突击舰 | 舰种名 |
-| Wroshyr Garden / Wroshyr garden | 沃希尔花园 | 地点名 |
+| Wroshyr Garden / Wroshyr garden | 罗希尔花园 | 地点名 |
 | Clone Wars / THE CLONE WARS | 克隆人战争 | 世界观事件 |
 | Kaminoan / Kaminoans | 卡米诺人 | 种族/世界观条目 |
 | T'doshok | 特多肖克 | Trandoshan 自称/语言专名 |
-| Wroshyr tree / wroshyr tree / wroshyr trees | 沃希尔树 | 卡希克树种 |
-| Confederacy | 独立星系邦联 | 组织/政权；不要简化为"分离主义者" |
+| Wroshyr tree / wroshyr tree / wroshyr trees | 罗希尔树 | 卡希克树种 |
+| Confederacy | 邦联 | 组织/政权 |
 | Delta Squad / Delta squad / delta squad / DELTA SQUAD | 德尔塔小队 | 小队名 |
 | Jedi | 绝地 | 组织/身份称谓 |
 | Mandalorian Supercommandos | 曼达洛超级突击队 | 组织/部队名 |
 | RC Batch Delta / RC BATCH DELTA | 德尔塔批次 | 批次名 |
 | Republic / the Republic | 共和国 | 明确指政权全称时可译为"银河共和国" |
-| Separatists / Separatist | 分离主义者 | 指势力整体时可译为"分离主义势力" |
-| Trade Federation | 贸易联盟 | 组织名 |
+| Separatists / Separatist | 分离主义者 / 分裂势力 / 分裂份子 | 按语境分译，见下方规则 |
+| Trade Federation | 贸易联盟 | 组织名；口语缩写 `Trade Fed` / `Fed` 译为 `贸易联盟` / `联盟` |
+
+### Separatist 分译规则
+
+`Separatist` / `Separatists` 根据语境使用三种译名：
+
+| 译名 | 适用语境 | 判断标准 |
+| --- | --- | --- |
+| 分离主义者 | 政治背景、情报分析、历史叙述 | 讨论动机、政治关系、背景介绍；常见于任务简报开头 |
+| 分裂势力 | 军事实体、战术/战略描述 | 指代舰队、军队、部署、兵力、载具、阵地；常见于克隆顾问战术指令 |
+| 分裂份子 | 战斗口语、感叹、蔑称 | Delta 队员击杀报告、战场喊话、情绪化用语 |
+
+典型示例：
+- 分离主义者："与分离主义者没有任何已知联系"（情报分析）、"分离主义者可能正在幕后支持"（政治阴谋）
+- 分裂势力："分裂势力正在撤离"（战术通报）、"分裂势力主力部队的先遣队"（军事描述）
+- 分裂份子："分裂份子倒下了"（击杀报告）、"可恶的分裂份子技术！"（口语抱怨）
 
 ## 种族、阵营、单位
 
@@ -183,8 +198,8 @@
 - 种族、阵营、兵种、敌人单位全部使用中文译名。
 - 复数不在中文中体现。
 - `SBD` 在装备/内部名称中保留英文缩写；对话字幕中可按语境展开为"超级战斗机器人"。
-- `Trando` 是对 `Trandoshan` 的简称或贬称，中文译为 `蜥蜴`（取外貌特征做蔑称）。
-- `Geo` 是对 `Geonosian` 的简称或贬称，中文译为 `虫子`（取外貌特征做蔑称）。
+- `Trando` 是对 `Trandoshan` 的简称或贬称，中文译为 `特兰多人`（沿用种族名简写，不另造蔑称）。
+- `Geo` / `Geos` 是对 `Geonosian` 的简称或贬称，中文译为 `吉奥人`（沿用种族名简写，不另造蔑称）。
 
 | 原文变体 | 译文 | 说明 |
 | --- | --- | --- |
@@ -195,18 +210,18 @@
 | commando / commandos | 突击队员 | 泛称 |
 | Droideka / Droidekas | 毁灭者机器人 | 敌方单位 |
 | Geonosian / Geonosians | 吉奥诺西斯人 | 种族 |
-| Geo / Geos | 虫子 | `Geonosian` 的口语贬称；取昆虫外貌 |
+| Geo / Geos | 吉奥人 | `Geonosian` 的口语简称 |
 | Geonosian Elite / Geonosian Elites | 吉奥诺西斯精英 | 敌方单位 |
 | Geonosian Warrior / Geonosian Warriors | 吉奥诺西斯战士 | 敌方单位 |
 | Scavenger Droid / Scavenger Droids / Scav Droid / Scav Droids / scav droid / scavenger droid | 拾荒者机器人 | 敌方单位 |
 | Spider Droid / Spider Droids / spider droid / spider droids / DSD | 蜘蛛机器人 | 敌方单位 |
 | Super Battle Droid / Super Battle Droids / super battle droid / super battle droids / SBD / SBDs | 超级战斗机器人 | 敌方单位；装备名中保留 SBD 缩写 |
 | Trandoshan / Trandoshans | 特兰多沙人 | 种族 |
-| Trando / Trandos | 蜥蜴 | 对 `Trandoshan` 的贬称；取爬行动物外貌 |
+| Trando / Trandos | 特兰多人 | `Trandoshan` 的口语简称 |
 | Trandoshan Mercenary / Trandoshan Mercenaries | 特兰多沙雇佣兵 | 敌方单位 |
-| Trando Merc / Trando Mercs | 蜥蜴佣兵 | 带贬称色彩的简称 |
+| Trando Merc / Trando Mercs | 特兰多雇佣兵 | 简称 |
 | Trandoshan Slaver / Trandoshan Slavers | 特兰多沙奴隶贩子 | 敌方单位 |
-| Trando Slaver / Trando Slavers | 蜥蜴奴隶贩 | 带贬称色彩的简称 |
+| Trando Slaver / Trando Slavers | 特兰多奴隶贩子 | 简称 |
 | Wookiee / Wookiees / Wookie / Wookies | 伍基人 | 种族 |
 
 ## 玩法机制
@@ -229,7 +244,7 @@
 | Deathmatch / Death Match | 死亡竞赛 | 多人模式 |
 | Team Deathmatch / Team Death Match | 团队死亡竞赛 | 多人模式 |
 | demolition / demolitions / demo | 爆破 | 爆破行动或爆破专长；`demo` 表示演示版时不适用 |
-| Friendly Fire / friendly fire | 友军伤害 | 机制、选项、提示语境 |
+| Friendly Fire / friendly fire | 误伤 | 机制、选项、提示语境 |
 | heal / heals / healed / healing | 治疗 | 恢复生命值；区别于 `revive` |
 | incapacitated / incapacitation | 失去作战能力 | 倒地且无法行动的状态 |
 | maneuver / maneuvers | 行动 | 小队系统动作，如执行、取消、救援等 |
@@ -238,7 +253,7 @@
 | Squad Command / Squad Commands / squad command / squad commands | 小队命令 | 命令系统 |
 | Squad Leader / squad leader | 队长 | 职务称呼 |
 | Delta lead | 德尔塔队长 | 对德尔塔小队队长的称呼 |
-| squadmate / squadmates / squad mate / squad mates | 小队队友 | 队友称呼 |
+| squadmate / squadmates / squad mate / squad mates | 队友 | 队友称呼；部分语境也作"队员" |
 
 ## 小队指令
 
@@ -258,11 +273,11 @@
 | Demolitions Maneuver / demolitions maneuver / Demolition Maneuver / demolition maneuver | 爆破行动 | 小队爆破指令 |
 | Engage Maneuver / engage maneuver | 执行行动 | 执行当前小队行动 |
 | Form Up / Form-Up / Form up / form up | 列队 | 队员回到编队并跟随 |
-| Grenade Position / grenade position | 手榴弹位置 | 小队投掷/火力位置 |
+| Grenade Position / grenade position | 手榴弹阵地 | 小队投掷/火力位置 |
 | Recall | 召回 | 取消当前行动并回到玩家身边 |
-| Recall and Revive | 召回并复活 | 组合指令；用于复活失能玩家或队友 |
-| Search and Destroy | 搜索和摧毁 | 小队进攻性战术指令；也可作章节标题 |
+| Recall and Revive | 召回和复活 | 组合指令；用于复活失能玩家或队友 |
+| Search and Destroy | 搜索并摧毁 | 小队进攻性战术指令；也可作章节标题 |
 | Secure Area / Secure the Area | 占领区域 | 小队防守性战术指令；普通任务描述可译为"确保区域安全" |
 | Slice Console / slice console | 骇入控制台 | 小队骇入控制台指令 |
 | Snipe | 狙击 | 小队狙击指令 |
-| Sniper Position / sniper position | 狙击位置 | 小队狙击位置 |
+| Sniper Position / sniper position | 狙击手位置 | 小队狙击位置 |
