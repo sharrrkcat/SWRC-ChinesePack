@@ -9214,7 +9214,7 @@
       "en": "%s: %s (%i players)",
       "jp": "%s: %s (%i players)",
       "de": "",
-      "zh_CN": "%s：%s（%i 名玩家）"
+      "zh_CN": "%s：%s（%i名玩家）"
     },
     "3": {
       "note": "NetReceiving",
@@ -9249,7 +9249,7 @@
       "en": "Connecting...",
       "jp": "Connecting...",
       "de": "",
-      "zh_CN": "连接中..."
+      "zh_CN": "正在连接..."
     },
     "8": {
       "note": "Listening",
@@ -9263,21 +9263,21 @@
       "en": "Loading",
       "jp": "Loading",
       "de": "",
-      "zh_CN": "加载中"
+      "zh_CN": "正在读取"
     },
     "10": {
       "note": "Saving",
       "en": "Saving",
       "jp": "Saving",
       "de": "",
-      "zh_CN": "保存中"
+      "zh_CN": "正在保存"
     },
     "11": {
       "note": "Paused",
       "en": "Paused by %s",
       "jp": "Paused by %s",
       "de": "",
-      "zh_CN": "被 %s 暂停"
+      "zh_CN": "被%s暂停"
     },
     "12": {
       "note": "ReceiveFile",
@@ -9305,7 +9305,7 @@
       "en": "Connecting (F10 Cancels):",
       "jp": "Connecting (F10 Cancels):",
       "de": "",
-      "zh_CN": "连接中（按F10取消）："
+      "zh_CN": "正在连接（按F10取消）："
     },
     "16": {
       "note": "ConnectingURL",
@@ -9328,21 +9328,21 @@
       "en": "LOADING",
       "jp": "LOADING",
       "de": "",
-      "zh_CN": "加载中"
+      "zh_CN": "正在读取"
     },
     "3": {
       "note": "SavingMessage",
       "en": "SAVING",
       "jp": "SAVING",
       "de": "",
-      "zh_CN": "保存中"
+      "zh_CN": "正在保存"
     },
     "4": {
       "note": "ConnectingMessage",
       "en": "CONNECTING",
       "jp": "CONNECTING",
       "de": "",
-      "zh_CN": "连接中"
+      "zh_CN": "正在连接"
     },
     "5": {
       "note": "PausedMessage",
@@ -9356,7 +9356,7 @@
       "en": "PRECACHING",
       "jp": "PRECACHING",
       "de": "",
-      "zh_CN": "预缓存中"
+      "zh_CN": "正在预缓存"
     }
   },
   "engine.MasterMD5Commandlet": {
@@ -9615,7 +9615,7 @@
       "en": "Could not find starting spot (level might need a 'PlayerStart' actor)",
       "jp": "Could not find starting spot (level might need a 'PlayerStart' actor)",
       "de": "",
-      "zh_CN": "找不到起始点（关卡可能需要 'PlayerStart' 角色）"
+      "zh_CN": "找不到起始点（关卡可能缺少 'PlayerStart' Actor）"
     },
     "6": {
       "note": "NameChangedMessage",
@@ -9726,14 +9726,14 @@
       "en": "%o was killed by %k.",
       "jp": "%o が %k にやられた。",
       "de": "%o wurde ausgeschaltet von %k.",
-      "zh_CN": "%o 被 %k 击杀了。"
+      "zh_CN": "%o被%k击杀了。"
     },
     "4": {
       "note": "MaleSuicide",
       "en": "%o killed himself.",
       "jp": "%o が自害した。",
       "de": "%o hat sich selbst ausgeschaltet.",
-      "zh_CN": "%o 自杀了。"
+      "zh_CN": "%o自杀了。"
     }
   },
   "engine.PlayerPawn": {
@@ -9742,7 +9742,7 @@
       "en": "Quick Saving",
       "jp": "Quick Saving",
       "de": "",
-      "zh_CN": "快速保存"
+      "zh_CN": "正在快速保存"
     },
     "2": {
       "note": "NoPauseMessage",
@@ -9756,14 +9756,14 @@
       "en": "Now viewing from",
       "jp": "Now viewing from",
       "de": "",
-      "zh_CN": "正在观看来自"
+      "zh_CN": "当前视角："
     },
     "4": {
       "note": "OwnCamera",
       "en": "own camera",
       "jp": "own camera",
       "de": "",
-      "zh_CN": "自己的摄像机"
+      "zh_CN": "自身"
     },
     "5": {
       "note": "FailedView",
@@ -9777,7 +9777,7 @@
       "en": "You can't change your name during a global logged game.",
       "jp": "You can't change your name during a global logged game.",
       "de": "",
-      "zh_CN": "在全球记录游戏中你无法更改名称。"
+      "zh_CN": "在启用全球记录的游戏中无法更改名称。"
     }
   },
   "engine.Pawn": {
@@ -9893,7 +9893,7 @@
       "en": "%o was crushed by %k.",
       "jp": "%o が %k につぶされた。",
       "de": "%o wurde zerdrückt von %k.",
-      "zh_CN": "%o 被 %k 碾碎了。"
+      "zh_CN": "%o被%k碾碎了。"
     }
   },
   "engine.DamageBleedOut": {
@@ -9902,7 +9902,7 @@
       "en": "%o bled out",
       "jp": "%o が出血死だ。",
       "de": "%o kam um",
-      "zh_CN": "%o 失血过多而死"
+      "zh_CN": "%o失血过多而死"
     }
   },
   "engine.DamageFallToDeath": {
@@ -9911,7 +9911,7 @@
       "en": "%o fell to his death",
       "jp": "%o が死んだ。",
       "de": "%o stürzte zu Tode",
-      "zh_CN": "%o 坠落身亡"
+      "zh_CN": "%o坠落身亡"
     }
   },
   "engine.DamageThrown": {
@@ -9920,7 +9920,7 @@
       "en": "%o was thrown by %k.",
       "jp": "%o が %k に投げ飛ばされた。",
       "de": "%o wurde geworfen von %k.",
-      "zh_CN": "%o 被 %k 投掷致死。"
+      "zh_CN": "%o被%k投掷致死。"
     }
   },
   "engine.ExtendedConsole": {
@@ -10033,7 +10033,7 @@
       "en": "%o left a small crater",
       "jp": "%o が小クレーターを離れた。",
       "de": "%o hinterließ einen kleinen Krater",
-      "zh_CN": "%o 砸出了一个小坑"
+      "zh_CN": "%o砸出了一个小坑"
     }
   },
   "engine.GameEngine": {
@@ -11631,28 +11631,28 @@
       "en": "PAD UP",
       "jp": "PAD 上",
       "de": "RICHTUNGSTASTE OBEN",
-      "zh_CN": "方向键 上"
+      "zh_CN": "方向键上"
     },
     "241": {
       "note": "LocalizedKeyNames[241]",
       "en": "PAD DOWN",
       "jp": "PAD 下",
       "de": "RICHTUNGSTASTE UNTEN",
-      "zh_CN": "方向键 下"
+      "zh_CN": "方向键下"
     },
     "242": {
       "note": "LocalizedKeyNames[242]",
       "en": "PAD LEFT",
       "jp": "PAD 左",
       "de": "RICHTUNGSTASTE LINKS",
-      "zh_CN": "方向键 左"
+      "zh_CN": "方向键左"
     },
     "243": {
       "note": "LocalizedKeyNames[243]",
       "en": "PAD RIGHT",
       "jp": "PAD 右",
       "de": "RICHTUNGSTASTE RECHTS",
-      "zh_CN": "方向键 右"
+      "zh_CN": "方向键右"
     },
     "244": {
       "note": "LocalizedKeyNames[244]",
@@ -11917,7 +11917,7 @@
       "en": "Score tied at the end of regulation. Sudden Death Overtime!!!",
       "jp": "規定により引き分けました。 サドンデスに入ります!!!",
       "de": "Unentschieden am Ende der regelren Zeit. Sudden Death!!!",
-      "zh_CN": "常规赛结束时比分相同。加时赛突然死亡！！！"
+      "zh_CN": "常规时间结束时比分持平，进入突然死亡加时赛！！！"
     },
     "9": {
       "note": "GlobalNameChange",
@@ -12017,7 +12017,7 @@
       "en": "%o exploded in a shower of body parts",
       "jp": "%o が粉々に吹っ飛んだ。",
       "de": "%o ist explodiert",
-      "zh_CN": "%o 被炸成了碎片"
+      "zh_CN": "%o被炸成了碎片"
     }
   },
   "engine.HUD": {
@@ -12465,7 +12465,7 @@
       "en": "%o had an aneurysm.",
       "jp": "%o は動脈瘤だ。",
       "de": "%o hatte einen Infarkt.",
-      "zh_CN": "%o 暴毙了。"
+      "zh_CN": "%o暴毙了。"
     }
   },
   "gameplay.Counter": {
