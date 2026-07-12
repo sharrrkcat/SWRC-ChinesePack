@@ -5592,7 +5592,7 @@
       "en": "(P) & © LUCASFILM LTD. & TM.",
       "jp": "(P) & (C) LUCASFILM LTD. & TM.",
       "de": "",
-      "zh_CN": "(P) & © LUCASFILM LTD. & TM."
+      "zh_CN": "(P) & (C) LUCASFILM LTD. & TM."
     },
     "404": {
       "note": "CreditsLine[404]",
@@ -5634,7 +5634,7 @@
       "en": "PHILLIP BERRY, LEAD",
       "jp": "ERIK HEITMEYER",
       "de": "",
-      "zh_CN": "PHILLIP BERRY, 首席"
+      "zh_CN": "PHILLIP BERRY，负责人"
     },
     "418": {
       "note": "CreditsLine[418]",
@@ -6138,7 +6138,7 @@
       "en": "HERB AND PHIL BOSSÉ",
       "jp": "JEREMIE'S MOM",
       "de": "",
-      "zh_CN": "HERB AND PHIL BOSSÉ"
+      "zh_CN": "HERB AND PHIL BOSSE"
     },
     "532": {
       "note": "CreditsLine[532]",
@@ -6901,7 +6901,7 @@
       "en": "VERY SPECIAL THANKS",
       "jp": "PRODUCER",
       "de": "",
-      "zh_CN": "最特别鸣谢"
+      "zh_CN": "最诚挚的鸣谢"
     },
     "655": {
       "note": "CreditsLine[655]",
@@ -6936,7 +6936,7 @@
       "en": "COPYRIGHT ©1995-2003 JEAN-LOUP",
       "jp": " ",
       "de": "",
-      "zh_CN": "COPYRIGHT ©1995-2003 JEAN-LOUP"
+      "zh_CN": "COPYRIGHT (C)1995-2003 JEAN-LOUP"
     },
     "672": {
       "note": "CreditsLine[672]",
