@@ -65029,63 +65029,63 @@
       "en": "On my way",
       "jp": "向かっている。",
       "de": "",
-      "zh_CN": "On my way"
+      "zh_CN": "正在途中"
     },
     "1": {
       "note": "AckString[1]",
       "en": "Good to go, sir",
       "jp": "行きます。",
       "de": "",
-      "zh_CN": "Good to go, sir"
+      "zh_CN": "随时可以出动，长官"
     },
     "2": {
       "note": "AckString[2]",
       "en": "Ready to engage",
       "jp": "準備よし。",
       "de": "",
-      "zh_CN": "Ready to engage"
+      "zh_CN": "准备交战"
     },
     "3": {
       "note": "AckString[3]",
       "en": "All clear",
       "jp": "オールクリア！",
       "de": "",
-      "zh_CN": "All clear"
+      "zh_CN": "全部安全"
     },
     "4": {
       "note": "AckString[4]",
       "en": "Negative",
       "jp": "だめだ。",
       "de": "",
-      "zh_CN": "Negative"
+      "zh_CN": "否定"
     },
     "5": {
       "note": "AckString[5]",
       "en": "Thanks for the help, Delta",
       "jp": "感謝するぞ、デルタ。",
       "de": "",
-      "zh_CN": "Thanks for the help, Delta"
+      "zh_CN": "感谢帮助，德尔塔"
     },
     "6": {
       "note": "AckString[6]",
       "en": "Getting into position",
       "jp": "位置につくぞ！",
       "de": "",
-      "zh_CN": "Getting into position"
+      "zh_CN": "前往就位"
     },
     "7": {
       "note": "AckString[7]",
       "en": "Roger that",
       "jp": "了解した。",
       "de": "",
-      "zh_CN": "Roger that"
+      "zh_CN": "收到"
     },
     "8": {
       "note": "AckString[8]",
       "en": "Affirmative",
       "jp": "了解！",
       "de": "",
-      "zh_CN": "Affirmative"
+      "zh_CN": "明白"
     }
   },
   "voicepacks.GenericClone.FFireString": {
@@ -65094,56 +65094,56 @@
       "en": "Incoming!",
       "jp": "来るぞ！",
       "de": "",
-      "zh_CN": "Incoming!"
+      "zh_CN": "敌人来袭！"
     },
     "1": {
       "note": "FFireString[1]",
       "en": "Taking fire!",
       "jp": "撃たれた！",
       "de": "",
-      "zh_CN": "Taking fire!"
+      "zh_CN": "受到火力攻击！"
     },
     "2": {
       "note": "FFireString[2]",
       "en": "Fire in the hole!",
       "jp": "穴を狙え！",
       "de": "",
-      "zh_CN": "Fire in the hole!"
+      "zh_CN": "小心手雷！"
     },
     "3": {
       "note": "FFireString[3]",
       "en": "Man Down!",
       "jp": "やられた！",
       "de": "",
-      "zh_CN": "Man Down!"
+      "zh_CN": "有人倒下了！"
     },
     "4": {
       "note": "FFireString[4]",
       "en": "Check your aim!",
       "jp": "狙いを確認しろ！",
       "de": "",
-      "zh_CN": "Check your aim!"
+      "zh_CN": "注意瞄准！"
     },
     "5": {
       "note": "FFireString[5]",
       "en": "Cease and desist!",
       "jp": "止めろ！",
       "de": "",
-      "zh_CN": "Cease and desist!"
+      "zh_CN": "住手！"
     },
     "6": {
       "note": "FFireString[6]",
       "en": "Friendly fire!",
       "jp": "同士討ちだ！",
       "de": "",
-      "zh_CN": "Friendly fire!"
+      "zh_CN": "误伤！"
     },
     "7": {
       "note": "FFireString[7]",
       "en": "Need meds!",
       "jp": "手当てがいる！",
       "de": "",
-      "zh_CN": "Need meds!"
+      "zh_CN": "需要治疗！"
     }
   },
   "voicepacks.GenericClone.TauntString": {
@@ -65152,63 +65152,63 @@
       "en": "Hostile down!",
       "jp": "敵ダウン！",
       "de": "",
-      "zh_CN": "Hostile down!"
+      "zh_CN": "敌人倒下了！"
     },
     "1": {
       "note": "TauntString[1]",
       "en": "You are dead!",
       "jp": "やられたな！",
       "de": "",
-      "zh_CN": "You are dead!"
+      "zh_CN": "你死了！"
     },
     "2": {
       "note": "TauntString[2]",
       "en": "Bang and you're dead!",
       "jp": "一発でお終いさ！",
       "de": "",
-      "zh_CN": "Bang and you're dead!"
+      "zh_CN": "一枪毙命！"
     },
     "3": {
       "note": "TauntString[3]",
       "en": "Stay down!",
       "jp": "下がれ！",
       "de": "",
-      "zh_CN": "Stay down!"
+      "zh_CN": "趴着别动！"
     },
     "4": {
       "note": "TauntString[4]",
       "en": "What a waste!",
       "jp": "何て無駄な！",
       "de": "",
-      "zh_CN": "What a waste!"
+      "zh_CN": "真浪费！"
     },
     "5": {
       "note": "TauntString[5]",
       "en": "Another kill for the cause",
       "jp": "もう1つやってやれ。",
       "de": "",
-      "zh_CN": "Another kill for the cause"
+      "zh_CN": "为事业再添一个击杀"
     },
     "6": {
       "note": "TauntString[6]",
       "en": "Yeah, take that!",
       "jp": "ああ、どうだ！",
       "de": "",
-      "zh_CN": "Yeah, take that!"
+      "zh_CN": "没错，接招！"
     },
     "7": {
       "note": "TauntString[7]",
       "en": "Eat that!",
       "jp": "食らえ！",
       "de": "",
-      "zh_CN": "Eat that!"
+      "zh_CN": "吃我这招！"
     },
     "8": {
       "note": "TauntString[8]",
       "en": "Take that!",
       "jp": "どうだ！",
       "de": "",
-      "zh_CN": "Take that!"
+      "zh_CN": "接招！"
     }
   },
   "voicepacks.GenericClone.OrderString": {
@@ -65217,49 +65217,49 @@
       "en": "Follow me!",
       "jp": "着いてくるんだ！",
       "de": "",
-      "zh_CN": "Follow me!"
+      "zh_CN": "跟我来！"
     },
     "1": {
       "note": "OrderString[1]",
       "en": "Let's go",
       "jp": "さあ行こう。",
       "de": "",
-      "zh_CN": "Let's go"
+      "zh_CN": "出发"
     },
     "2": {
       "note": "OrderString[2]",
       "en": "Clear the path!",
       "jp": "通路をクリアしろ！",
       "de": "",
-      "zh_CN": "Clear the path!"
+      "zh_CN": "扫清道路！"
     },
     "3": {
       "note": "OrderString[3]",
       "en": "I need backup!",
       "jp": "援護してくれ！",
       "de": "",
-      "zh_CN": "I need backup!"
+      "zh_CN": "我需要援护！"
     },
     "4": {
       "note": "OrderString[4]",
       "en": "Cover me!",
       "jp": "援護を！",
       "de": "",
-      "zh_CN": "Cover me!"
+      "zh_CN": "掩护我！"
     },
     "5": {
       "note": "OrderString[5]",
       "en": "Hold your fire!",
       "jp": "撃ち方止め！",
       "de": "",
-      "zh_CN": "Hold your fire!"
+      "zh_CN": "停止开火！"
     },
     "6": {
       "note": "OrderString[6]",
       "en": "Regroup!",
       "jp": "集結！",
       "de": "",
-      "zh_CN": "Regroup!"
+      "zh_CN": "集结！"
     }
   },
   "window.Errors": {
