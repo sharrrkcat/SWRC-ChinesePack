@@ -1475,7 +1475,7 @@
       "en": "Bang and you're dead!",
       "jp": "一発でお終いさ!",
       "de": "",
-      "zh_CN": "砰的一声你就完蛋了！"
+      "zh_CN": "一枪毙命！"
     },
     "100212": {
       "note": "OrderString[2] / 3 occurrences",
@@ -40810,105 +40810,105 @@
       "en": "Delta 07: Follow me!",
       "jp": "Delta 07: 着いてくるんだ!",
       "de": "",
-      "zh_CN": "德尔塔07：跟我走！"
+      "zh_CN": "德尔塔07：跟我来！"
     },
     "2972": {
       "note": "SubtitleText[2972]",
       "en": "Delta 07: Fire in the Hole!",
       "jp": "Delta 07: 気をつけろ!",
       "de": "",
-      "zh_CN": "德尔塔07：小心爆炸！"
+      "zh_CN": "德尔塔07：小心手雷！"
     },
     "2978": {
       "note": "SubtitleText[2978]",
       "en": "Delta 07: Good to go, sir.",
       "jp": "Delta 07: 行きます。",
       "de": "",
-      "zh_CN": "德尔塔07：准备就绪，长官。"
+      "zh_CN": "德尔塔07：随时可以出动，长官。"
     },
     "2979": {
       "note": "SubtitleText[2979]",
       "en": "Delta 07: Ready to engage.",
       "jp": "Delta 07: 準備よし。",
       "de": "",
-      "zh_CN": "德尔塔07：准备接敌。"
+      "zh_CN": "德尔塔07：准备交战。"
     },
     "2981": {
       "note": "SubtitleText[2981]",
       "en": "Delta 07: Commando receiving assistance.",
       "jp": "Delta 07: コマンドーを支援する。",
       "de": "",
-      "zh_CN": "德尔塔07：突击队员接受支援。"
+      "zh_CN": "德尔塔07：突击队员正在接受援助。"
     },
     "2982": {
       "note": "SubtitleText[2982]",
       "en": "Delta 07: Thanks for the help, Delta.",
       "jp": "Delta 07: 感謝するぞ、デルタ。",
       "de": "",
-      "zh_CN": "德尔塔07：感谢支援，德尔塔。"
+      "zh_CN": "德尔塔07：感谢帮助，德尔塔。"
     },
     "2983": {
       "note": "SubtitleText[2983]",
       "en": "Delta 07: Getting into position!",
       "jp": "Delta 07: 位置につくぞ!",
       "de": "",
-      "zh_CN": "德尔塔07：进入位置！"
+      "zh_CN": "德尔塔07：前往就位！"
     },
     "2987": {
       "note": "SubtitleText[2987]",
       "en": "Delta 07: Lock and load, Deltas.",
       "jp": "Delta 07: 戦闘準備、デルタ。",
       "de": "",
-      "zh_CN": "德尔塔07：上膛装弹，德尔塔。"
+      "zh_CN": "德尔塔07：战斗准备，德尔塔。"
     },
     "2988": {
       "note": "SubtitleText[2988]",
       "en": "Delta 07: Go! Go! Go!",
       "jp": "Delta 07: 行け! 行け! 行け!",
       "de": "",
-      "zh_CN": "德尔塔07：冲！冲！冲！"
+      "zh_CN": "德尔塔07：上！上！上！"
     },
     "2989": {
       "note": "SubtitleText[2989]",
       "en": "Delta 07: Follow me!",
       "jp": "Delta 07: 着いてこい!",
       "de": "",
-      "zh_CN": "德尔塔07：跟我走！"
+      "zh_CN": "德尔塔07：跟我来！"
     },
     "2991": {
       "note": "SubtitleText[2991]",
       "en": "Delta 07: Assault their position!",
       "jp": "Delta 07: あの位置を攻撃だ!",
       "de": "",
-      "zh_CN": "德尔塔07：攻击他们的阵地！"
+      "zh_CN": "德尔塔07：突击他们的位置！"
     },
     "2992": {
       "note": "SubtitleText[2992]",
       "en": "Delta 07: Take up defensive position!",
       "jp": "Delta 07: 防御姿勢をとれ!",
       "de": "",
-      "zh_CN": "德尔塔07：进入防御位置！"
+      "zh_CN": "德尔塔07：占据防守位置！"
     },
     "2996": {
       "note": "SubtitleText[2996]",
       "en": "Delta 07: Hold your fire!",
       "jp": "Delta 07: 撃ち方止め!",
       "de": "",
-      "zh_CN": "德尔塔07：停止射击！"
+      "zh_CN": "德尔塔07：停止开火！"
     },
     "2997": {
       "note": "SubtitleText[2997]",
       "en": "Delta 07: Regroup, squad!",
       "jp": "Delta 07: 集結しろ!",
       "de": "",
-      "zh_CN": "德尔塔07：重新集结，小队！"
+      "zh_CN": "德尔塔07：集结，小队！"
     },
     "3000": {
       "note": "SubtitleText[3000]",
       "en": "Delta 07: Fire in the Hole!",
       "jp": "Delta 07: 注意しろ!",
       "de": "",
-      "zh_CN": "德尔塔07：小心爆炸！"
+      "zh_CN": "德尔塔07：小心手雷！"
     },
     "3001": {
       "note": "SubtitleText[3001]",
@@ -40922,7 +40922,7 @@
       "en": "Delta 07: Check your aim!",
       "jp": "Delta 07: 狙いを確認しろ!",
       "de": "",
-      "zh_CN": "德尔塔07：注意你的瞄准！"
+      "zh_CN": "德尔塔07：注意瞄准！"
     },
     "3003": {
       "note": "SubtitleText[3003]",
@@ -40950,7 +40950,7 @@
       "en": "Delta 07: I'm running low on life here!",
       "jp": "Delta 07: ライフが低下してきた!",
       "de": "",
-      "zh_CN": "德尔塔07：我快没血了！"
+      "zh_CN": "德尔塔07：我的生命值快耗尽了！"
     },
     "3007": {
       "note": "SubtitleText[3007]",
@@ -40964,7 +40964,7 @@
       "en": "Delta 07: Hostile down!",
       "jp": "Delta 07: 敵ダウン!",
       "de": "",
-      "zh_CN": "德尔塔07：敌人倒下！"
+      "zh_CN": "德尔塔07：敌人倒下了！"
     },
     "3009": {
       "note": "SubtitleText[3009]",
@@ -40985,49 +40985,49 @@
       "en": "Delta 07: Stay down!",
       "jp": "Delta 07: 下がれ!",
       "de": "",
-      "zh_CN": "德尔塔07：趴下！"
+      "zh_CN": "德尔塔07：趴着别动！"
     },
     "3012": {
       "note": "SubtitleText[3012]",
       "en": "Delta 07: What a waste.",
       "jp": "Delta 07: 何て無駄な。",
       "de": "",
-      "zh_CN": "德尔塔07：真是浪费。"
+      "zh_CN": "德尔塔07：真浪费。"
     },
     "3013": {
       "note": "SubtitleText[3013]",
       "en": "Delta 07: Another kill for the cause.",
       "jp": "Delta 07: もう1つやってやれ。",
       "de": "",
-      "zh_CN": "德尔塔07：为事业再添一杀。"
+      "zh_CN": "德尔塔07：为事业再添一个击杀。"
     },
     "3014": {
       "note": "SubtitleText[3014]",
       "en": "Delta 07: Trando neutralized",
       "jp": "Delta 07: トランド、制圧だ。",
       "de": "",
-      "zh_CN": "德尔塔07：特兰多人已制服"
+      "zh_CN": "德尔塔07：特兰多人已除掉"
     },
     "3015": {
       "note": "SubtitleText[3015]",
       "en": "Delta 07: Trando scum!",
       "jp": "Delta 07: トランドーシャンめ!",
       "de": "",
-      "zh_CN": "德尔塔07：特兰多人渣！"
+      "zh_CN": "德尔塔07：特兰多渣滓！"
     },
     "3016": {
       "note": "SubtitleText[3016]",
       "en": "Delta 07: Cold blooded scumbag.",
       "jp": "Delta 07: 冷血動物が。",
       "de": "",
-      "zh_CN": "德尔塔07：冷血的人渣。"
+      "zh_CN": "德尔塔07：冷血的卑鄙小人。"
     },
     "3017": {
       "note": "SubtitleText[3017]",
       "en": "Delta 07: I'll see you in hell, lizard!",
       "jp": "Delta 07: 地獄に行け!",
       "de": "",
-      "zh_CN": "德尔塔07：地狱见，蜥蜴！"
+      "zh_CN": "德尔塔07：下地狱去吧，蜥蜴！"
     },
     "3018": {
       "note": "SubtitleText[3018]",
@@ -41041,119 +41041,119 @@
       "en": "Delta 38: Follow me!",
       "jp": "Delta 38: 続け!",
       "de": "",
-      "zh_CN": "德尔塔38：跟我走！"
+      "zh_CN": "德尔塔38：跟我来！"
     },
     "3020": {
       "note": "SubtitleText[3020]",
       "en": "Delta 38: Let's go!",
       "jp": "Delta 38: 行くぞ!",
       "de": "",
-      "zh_CN": "德尔塔38：走吧！"
+      "zh_CN": "德尔塔38：出发！"
     },
     "3027": {
       "note": "SubtitleText[3027]",
       "en": "Delta 38: Fire in the Hole!",
       "jp": "Delta 38: 注意しろ。",
       "de": "",
-      "zh_CN": "德尔塔38：小心爆炸！"
+      "zh_CN": "德尔塔38：小心手雷！"
     },
     "3033": {
       "note": "SubtitleText[3033]",
       "en": "Delta 38: Good to go, sir.",
       "jp": "Delta 38: 行きます。",
       "de": "",
-      "zh_CN": "德尔塔38：准备就绪，长官。"
+      "zh_CN": "德尔塔38：随时可以出动，长官。"
     },
     "3034": {
       "note": "SubtitleText[3034]",
       "en": "Delta 38: Ready to engage.",
       "jp": "Delta 38: 準備よし。",
       "de": "",
-      "zh_CN": "德尔塔38：准备接敌。"
+      "zh_CN": "德尔塔38：准备交战。"
     },
     "3036": {
       "note": "SubtitleText[3036]",
       "en": "Delta 38: Commando receiving assistance.",
       "jp": "Delta 38: コマンドーを支援する。",
       "de": "",
-      "zh_CN": "德尔塔38：突击队员接受支援。"
+      "zh_CN": "德尔塔38：突击队员正在接受援助。"
     },
     "3037": {
       "note": "SubtitleText[3037]",
       "en": "Delta 38: Thanks for the help, Delta.",
       "jp": "Delta 38: 感謝するぞ、デルタ。",
       "de": "",
-      "zh_CN": "德尔塔38：感谢支援，德尔塔。"
+      "zh_CN": "德尔塔38：感谢帮助，德尔塔。"
     },
     "3038": {
       "note": "SubtitleText[3038]",
       "en": "Delta 38: Getting into position!",
       "jp": "Delta 38: 位置につくぞ!",
       "de": "",
-      "zh_CN": "德尔塔38：进入位置！"
+      "zh_CN": "德尔塔38：前往就位！"
     },
     "3042": {
       "note": "SubtitleText[3042]",
       "en": "Delta 38: Lock and load, Deltas.",
       "jp": "Delta 38: しかけるぞ、デルタ。",
       "de": "",
-      "zh_CN": "德尔塔38：上膛装弹，德尔塔。"
+      "zh_CN": "德尔塔38：战斗准备，德尔塔。"
     },
     "3043": {
       "note": "SubtitleText[3043]",
       "en": "Delta 38: Go! Go! Go!",
       "jp": "Delta 38: 行け! 行け! 行け!",
       "de": "",
-      "zh_CN": "德尔塔38：冲！冲！冲！"
+      "zh_CN": "德尔塔38：上！上！上！"
     },
     "3044": {
       "note": "SubtitleText[3044]",
       "en": "Delta 38: Follow me!",
       "jp": "Delta 38: 着いてくるんだ!",
       "de": "",
-      "zh_CN": "德尔塔38：跟我走！"
+      "zh_CN": "德尔塔38：跟我来！"
     },
     "3045": {
       "note": "SubtitleText[3045]",
       "en": "Delta 38: Let's go!",
       "jp": "Delta 38: さあ行こう!",
       "de": "",
-      "zh_CN": "德尔塔38：走吧！"
+      "zh_CN": "德尔塔38：出发！"
     },
     "3046": {
       "note": "SubtitleText[3046]",
       "en": "Delta 38: Assault their position!",
       "jp": "Delta 38: あの位置を攻撃だ!",
       "de": "",
-      "zh_CN": "德尔塔38：攻击他们的阵地！"
+      "zh_CN": "德尔塔38：突击他们的位置！"
     },
     "3047": {
       "note": "SubtitleText[3047]",
       "en": "Delta 38: Take up defensive position!",
       "jp": "Delta 38: 防御姿勢をとれ!",
       "de": "",
-      "zh_CN": "德尔塔38：进入防御位置！"
+      "zh_CN": "德尔塔38：占据防守位置！"
     },
     "3051": {
       "note": "SubtitleText[3051]",
       "en": "Delta 38: Hold your fire!",
       "jp": "Delta 38: 撃ち方止め!",
       "de": "",
-      "zh_CN": "德尔塔38：停止射击！"
+      "zh_CN": "德尔塔38：停止开火！"
     },
     "3052": {
       "note": "SubtitleText[3052]",
       "en": "Delta 38: Regroup, squad!",
       "jp": "Delta 38: 集結しろ!",
       "de": "",
-      "zh_CN": "德尔塔38：重新集结，小队！"
+      "zh_CN": "德尔塔38：集结，小队！"
     },
     "3055": {
       "note": "SubtitleText[3055]",
       "en": "Delta 38: Fire in the Hole!",
       "jp": "Delta 38: 気をつけろ。",
       "de": "",
-      "zh_CN": "德尔塔38：小心爆炸！"
+      "zh_CN": "德尔塔38：小心手雷！"
     },
     "3056": {
       "note": "SubtitleText[3056]",
@@ -41167,7 +41167,7 @@
       "en": "Delta 38: Check your aim!",
       "jp": "Delta 38: 狙いを確認しろ!",
       "de": "",
-      "zh_CN": "德尔塔38：注意你的瞄准！"
+      "zh_CN": "德尔塔38：注意瞄准！"
     },
     "3058": {
       "note": "SubtitleText[3058]",
@@ -41195,7 +41195,7 @@
       "en": "Delta 38: I'm running low on life here!",
       "jp": "Delta 38: ライフが低下してきた!",
       "de": "",
-      "zh_CN": "德尔塔38：我快没血了！"
+      "zh_CN": "德尔塔38：我的生命值快耗尽了！"
     },
     "3062": {
       "note": "SubtitleText[3062]",
@@ -41209,7 +41209,7 @@
       "en": "Delta 38: Hostile down!",
       "jp": "Delta 38: 敵ダウン!",
       "de": "",
-      "zh_CN": "德尔塔38：敌人倒下！"
+      "zh_CN": "德尔塔38：敌人倒下了！"
     },
     "3064": {
       "note": "SubtitleText[3064]",
@@ -41230,49 +41230,49 @@
       "en": "Delta 38: Stay down!",
       "jp": "Delta 38: 下がれ!",
       "de": "",
-      "zh_CN": "德尔塔38：趴下！"
+      "zh_CN": "德尔塔38：趴着别动！"
     },
     "3067": {
       "note": "SubtitleText[3067]",
       "en": "Delta 38: What a waste.",
       "jp": "Delta 38: 何て無駄な。",
       "de": "",
-      "zh_CN": "德尔塔38：真是浪费。"
+      "zh_CN": "德尔塔38：真浪费。"
     },
     "3068": {
       "note": "SubtitleText[3068]",
       "en": "Delta 38: Another kill for the cause.",
       "jp": "Delta 38: もう1つやってやれ。",
       "de": "",
-      "zh_CN": "德尔塔38：为事业再添一杀。"
+      "zh_CN": "德尔塔38：为事业再添一个击杀。"
     },
     "3069": {
       "note": "SubtitleText[3069]",
       "en": "Delta 38: Trando neutralized",
       "jp": "Delta 38: トランド、制圧。",
       "de": "",
-      "zh_CN": "德尔塔38：特兰多人已制服"
+      "zh_CN": "德尔塔38：特兰多人已除掉"
     },
     "3070": {
       "note": "SubtitleText[3070]",
       "en": "Delta 38: Trando scum!",
       "jp": "Delta 38: トランドーシャンめ!",
       "de": "",
-      "zh_CN": "德尔塔38：特兰多人渣！"
+      "zh_CN": "德尔塔38：特兰多渣滓！"
     },
     "3071": {
       "note": "SubtitleText[3071]",
       "en": "Delta 38: Cold blooded scumbag.",
       "jp": "Delta 38: 冷血動物が。",
       "de": "",
-      "zh_CN": "德尔塔38：冷血的人渣。"
+      "zh_CN": "德尔塔38：冷血的卑鄙小人。"
     },
     "3072": {
       "note": "SubtitleText[3072]",
       "en": "Delta 38: I'll see you in hell, lizard!",
       "jp": "Delta 38: 地獄に行け!",
       "de": "",
-      "zh_CN": "德尔塔38：地狱见，蜥蜴！"
+      "zh_CN": "德尔塔38：下地狱去吧，蜥蜴！"
     },
     "3073": {
       "note": "SubtitleText[3073]",
@@ -41286,119 +41286,119 @@
       "en": "Delta 40: Follow me!",
       "jp": "Delta 40: ついてくるんだ!",
       "de": "",
-      "zh_CN": "德尔塔40：跟我走！"
+      "zh_CN": "德尔塔40：跟我来！"
     },
     "3075": {
       "note": "SubtitleText[3075]",
       "en": "Delta 40: Let's go!",
       "jp": "Delta 40: さあ行こう!",
       "de": "",
-      "zh_CN": "德尔塔40：走吧！"
+      "zh_CN": "德尔塔40：出发！"
     },
     "3082": {
       "note": "SubtitleText[3082]",
       "en": "Delta 40: Fire in the Hole!",
       "jp": "Delta 40: 注意しろ!",
       "de": "",
-      "zh_CN": "德尔塔40：小心爆炸！"
+      "zh_CN": "德尔塔40：小心手雷！"
     },
     "3088": {
       "note": "SubtitleText[3088]",
       "en": "Delta 40: Good to go, sir.",
       "jp": "Delta 40: 行きます。",
       "de": "",
-      "zh_CN": "德尔塔40：准备就绪，长官。"
+      "zh_CN": "德尔塔40：随时可以出动，长官。"
     },
     "3089": {
       "note": "SubtitleText[3089]",
       "en": "Delta 40: Ready to engage.",
       "jp": "Delta 40: 準備よし。",
       "de": "",
-      "zh_CN": "德尔塔40：准备接敌。"
+      "zh_CN": "德尔塔40：准备交战。"
     },
     "3091": {
       "note": "SubtitleText[3091]",
       "en": "Delta 40: Commando receiving assistance.",
       "jp": "Delta 40: コマンドーを支援する。",
       "de": "",
-      "zh_CN": "德尔塔40：突击队员接受支援。"
+      "zh_CN": "德尔塔40：突击队员正在接受援助。"
     },
     "3092": {
       "note": "SubtitleText[3092]",
       "en": "Delta 40: Thanks for the help, Delta.",
       "jp": "Delta 40: 感謝するぞ、デルタ。",
       "de": "",
-      "zh_CN": "德尔塔40：感谢支援，德尔塔。"
+      "zh_CN": "德尔塔40：感谢帮助，德尔塔。"
     },
     "3093": {
       "note": "SubtitleText[3093]",
       "en": "Delta 40: Getting into position!",
       "jp": "Delta 40: 位置につくぞ!",
       "de": "",
-      "zh_CN": "德尔塔40：进入位置！"
+      "zh_CN": "德尔塔40：前往就位！"
     },
     "3097": {
       "note": "SubtitleText[3097]",
       "en": "Delta 40: Lock and load, Deltas.",
       "jp": "Delta 40: 戦闘準備、デルタ。",
       "de": "",
-      "zh_CN": "德尔塔40：上膛装弹，德尔塔。"
+      "zh_CN": "德尔塔40：战斗准备，德尔塔。"
     },
     "3098": {
       "note": "SubtitleText[3098]",
       "en": "Delta 40: Go! Go! Go!",
       "jp": "Delta 40: 行け! 行け! 行け!",
       "de": "",
-      "zh_CN": "德尔塔40：冲！冲！冲！"
+      "zh_CN": "德尔塔40：上！上！上！"
     },
     "3099": {
       "note": "SubtitleText[3099]",
       "en": "Delta 40: Follow me!",
       "jp": "Delta 40: 着いてこい!",
       "de": "",
-      "zh_CN": "德尔塔40：跟我走！"
+      "zh_CN": "德尔塔40：跟我来！"
     },
     "3100": {
       "note": "SubtitleText[3100]",
       "en": "Delta 40: Let's go!",
       "jp": "Delta 40: 行くぞ!",
       "de": "",
-      "zh_CN": "德尔塔40：走吧！"
+      "zh_CN": "德尔塔40：出发！"
     },
     "3101": {
       "note": "SubtitleText[3101]",
       "en": "Delta 40: Assault their position!",
       "jp": "Delta 40: あの位置を攻撃だ!",
       "de": "",
-      "zh_CN": "德尔塔40：攻击他们的阵地！"
+      "zh_CN": "德尔塔40：突击他们的位置！"
     },
     "3102": {
       "note": "SubtitleText[3102]",
       "en": "Delta 40: Take up defensive position!",
       "jp": "Delta 40: 防御体制をとれ!",
       "de": "",
-      "zh_CN": "德尔塔40：进入防御位置！"
+      "zh_CN": "德尔塔40：占据防守位置！"
     },
     "3106": {
       "note": "SubtitleText[3106]",
       "en": "Delta 40: Hold your fire!",
       "jp": "Delta 40: 撃ち方止め!",
       "de": "",
-      "zh_CN": "德尔塔40：停止射击！"
+      "zh_CN": "德尔塔40：停止开火！"
     },
     "3107": {
       "note": "SubtitleText[3107]",
       "en": "Delta 40: Regroup, squad!",
       "jp": "Delta 40: 集結しろ!",
       "de": "",
-      "zh_CN": "德尔塔40：重新集结，小队！"
+      "zh_CN": "德尔塔40：集结，小队！"
     },
     "3110": {
       "note": "SubtitleText[3110]",
       "en": "Delta 40: Fire in the Hole!",
       "jp": "Delta 40: 気をつけろ。",
       "de": "",
-      "zh_CN": "德尔塔40：小心爆炸！"
+      "zh_CN": "德尔塔40：小心手雷！"
     },
     "3111": {
       "note": "SubtitleText[3111]",
@@ -41412,7 +41412,7 @@
       "en": "Delta 40: Check your aim!",
       "jp": "Delta 40: 狙いを確認しろ!",
       "de": "",
-      "zh_CN": "德尔塔40：注意你的瞄准！"
+      "zh_CN": "德尔塔40：注意瞄准！"
     },
     "3113": {
       "note": "SubtitleText[3113]",
@@ -41440,7 +41440,7 @@
       "en": "Delta 40: I'm running low on life here!",
       "jp": "Delta 40: ライフが低下してきた!",
       "de": "",
-      "zh_CN": "德尔塔40：我快没血了！"
+      "zh_CN": "德尔塔40：我的生命值快耗尽了！"
     },
     "3117": {
       "note": "SubtitleText[3117]",
@@ -41454,7 +41454,7 @@
       "en": "Delta 40: Hostile down!",
       "jp": "Delta 40: 敵ダウン!",
       "de": "",
-      "zh_CN": "德尔塔40：敌人倒下！"
+      "zh_CN": "德尔塔40：敌人倒下了！"
     },
     "3119": {
       "note": "SubtitleText[3119]",
@@ -41475,49 +41475,49 @@
       "en": "Delta 40: Stay down!",
       "jp": "Delta 40: 下がれ!",
       "de": "",
-      "zh_CN": "德尔塔40：趴下！"
+      "zh_CN": "德尔塔40：趴着别动！"
     },
     "3122": {
       "note": "SubtitleText[3122]",
       "en": "Delta 40: What a waste.",
       "jp": "Delta 40: 何て無駄な。",
       "de": "",
-      "zh_CN": "德尔塔40：真是浪费。"
+      "zh_CN": "德尔塔40：真浪费。"
     },
     "3123": {
       "note": "SubtitleText[3123]",
       "en": "Delta 40: Another kill for the cause.",
       "jp": "Delta 40: もう1つやってやれ。",
       "de": "",
-      "zh_CN": "德尔塔40：为事业再添一杀。"
+      "zh_CN": "德尔塔40：为事业再添一个击杀。"
     },
     "3124": {
       "note": "SubtitleText[3124]",
       "en": "Delta 40: Trando neutralized",
       "jp": "Delta 40: トランドーシャン、制圧だ。",
       "de": "",
-      "zh_CN": "德尔塔40：特兰多人已制服"
+      "zh_CN": "德尔塔40：特兰多人已除掉"
     },
     "3125": {
       "note": "SubtitleText[3125]",
       "en": "Delta 40: Trando scum!",
       "jp": "Delta 40: トランドーシャンめ!",
       "de": "",
-      "zh_CN": "德尔塔40：特兰多人渣！"
+      "zh_CN": "德尔塔40：特兰多渣滓！"
     },
     "3126": {
       "note": "SubtitleText[3126]",
       "en": "Delta 40: Cold blooded scumbag.",
       "jp": "Delta 40: 冷血動物が。",
       "de": "",
-      "zh_CN": "德尔塔40：冷血的人渣。"
+      "zh_CN": "德尔塔40：冷血的卑鄙小人。"
     },
     "3127": {
       "note": "SubtitleText[3127]",
       "en": "Delta 40: I'll see you in hell, lizard!",
       "jp": "Delta 40: 地獄に行け!",
       "de": "",
-      "zh_CN": "德尔塔40：地狱见，蜥蜴！"
+      "zh_CN": "德尔塔40：下地狱去吧，蜥蜴！"
     },
     "3128": {
       "note": "SubtitleText[3128]",
@@ -41531,42 +41531,42 @@
       "en": "Delta 62: Follow me!",
       "jp": "Delta 62: 着いてこい!",
       "de": "",
-      "zh_CN": "德尔塔62：跟我走！"
+      "zh_CN": "德尔塔62：跟我来！"
     },
     "3130": {
       "note": "SubtitleText[3130]",
       "en": "Delta 62: Let's go!",
       "jp": "Delta 62: さあ行こう!",
       "de": "",
-      "zh_CN": "德尔塔62：走吧！"
+      "zh_CN": "德尔塔62：出发！"
     },
     "3131": {
       "note": "SubtitleText[3131]",
       "en": "Delta 62: On my way!",
       "jp": "Delta 62: 向かっている!",
       "de": "",
-      "zh_CN": "德尔塔62：我来了！"
+      "zh_CN": "德尔塔62：正在途中！"
     },
     "3132": {
       "note": "SubtitleText[3132]",
       "en": "Delta 62: Clear the path!",
       "jp": "Delta 62: 通路をクリアしろ!",
       "de": "",
-      "zh_CN": "德尔塔62：清除通路！"
+      "zh_CN": "德尔塔62：扫清道路！"
     },
     "3133": {
       "note": "SubtitleText[3133]",
       "en": "Delta 62: Taking fire!",
       "jp": "Delta 62: 撃たれた!",
       "de": "",
-      "zh_CN": "德尔塔62：遭到攻击！"
+      "zh_CN": "德尔塔62：受到火力攻击！"
     },
     "3134": {
       "note": "SubtitleText[3134]",
       "en": "Delta 62: I need backup!",
       "jp": "Delta 62: 援護してくれ!",
       "de": "",
-      "zh_CN": "德尔塔62：我需要支援！"
+      "zh_CN": "德尔塔62：我需要援护！"
     },
     "3135": {
       "note": "SubtitleText[3135]",
@@ -41580,21 +41580,21 @@
       "en": "Delta 62: Incoming!",
       "jp": "Delta 62: 来るぞ!",
       "de": "",
-      "zh_CN": "德尔塔62：敌人来了！"
+      "zh_CN": "德尔塔62：敌人来袭！"
     },
     "3137": {
       "note": "SubtitleText[3137]",
       "en": "Delta 62: Fire in the Hole!",
       "jp": "Delta 62: 注意しろ。",
       "de": "",
-      "zh_CN": "德尔塔62：小心爆炸！"
+      "zh_CN": "德尔塔62：小心手雷！"
     },
     "3138": {
       "note": "SubtitleText[3138]",
       "en": "Delta 62: All clear!",
       "jp": "Delta 62: オールクリア!",
       "de": "",
-      "zh_CN": "德尔塔62：全部清除！"
+      "zh_CN": "德尔塔62：全部安全！"
     },
     "3139": {
       "note": "SubtitleText[3139]",
@@ -41608,7 +41608,7 @@
       "en": "Delta 62: Affirmative.",
       "jp": "Delta 62: 了解。",
       "de": "",
-      "zh_CN": "德尔塔62：确认。"
+      "zh_CN": "德尔塔62：明白。"
     },
     "3141": {
       "note": "SubtitleText[3141]",
@@ -41741,7 +41741,7 @@
       "en": "Trando Merc: On my way!",
       "jp": "Trando Merc: 向かっている!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：我来了！"
+      "zh_CN": "特兰多雇佣兵：正在途中！"
     },
     "3160": {
       "note": "SubtitleText[3160]",
@@ -41755,21 +41755,21 @@
       "en": "Trando Merc: Ready to engage.",
       "jp": "Trando Merc: 準備よし。",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：准备接敌。"
+      "zh_CN": "特兰多雇佣兵：准备交战。"
     },
     "3162": {
       "note": "SubtitleText[3162]",
       "en": "Trando Merc: All clear!",
       "jp": "Trando Merc: オールクリア!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：全部清除！"
+      "zh_CN": "特兰多雇佣兵：全部安全！"
     },
     "3163": {
       "note": "SubtitleText[3163]",
       "en": "Trando Merc: Assisting comrade!",
       "jp": "Trando Merc: 仲間を助けるぞ。",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：支援战友！"
+      "zh_CN": "特兰多雇佣兵：协助战友！"
     },
     "3164": {
       "note": "SubtitleText[3164]",
@@ -41783,7 +41783,7 @@
       "en": "Trando Merc: Taking position!",
       "jp": "Trando Merc: 位置につけ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：进入位置！"
+      "zh_CN": "特兰多雇佣兵：前往就位！"
     },
     "3166": {
       "note": "SubtitleText[3166]",
@@ -41797,7 +41797,7 @@
       "en": "Trando Merc: Affirmative.",
       "jp": "Trando Merc: 了解。",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：确认。"
+      "zh_CN": "特兰多雇佣兵：明白。"
     },
     "3168": {
       "note": "SubtitleText[3168]",
@@ -41818,14 +41818,14 @@
       "en": "Trando Merc: Go! Go! Go!",
       "jp": "Trando Merc: 行け! 行け! 行け!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：冲！冲！冲！"
+      "zh_CN": "特兰多雇佣兵：上！上！上！"
     },
     "3171": {
       "note": "SubtitleText[3171]",
       "en": "Trando Merc: Follow me!",
       "jp": "Trando Merc: 着いてくるんだ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：跟我走！"
+      "zh_CN": "特兰多雇佣兵：跟我来！"
     },
     "3172": {
       "note": "SubtitleText[3172]",
@@ -41839,21 +41839,21 @@
       "en": "Trando Merc: Attack the weakings!",
       "jp": "Trando Merc: 攻撃しろ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：攻击那些弱鸡！"
+      "zh_CN": "特兰多雇佣兵：攻击那些弱者！"
     },
     "3174": {
       "note": "SubtitleText[3174]",
       "en": "Trando Merc: Go defensive!",
       "jp": "Trando Merc: 守るんだ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：转为防守！"
+      "zh_CN": "特兰多雇佣兵：转为防御！"
     },
     "3175": {
       "note": "SubtitleText[3175]",
       "en": "Trando Merc: Clear the path!",
       "jp": "Trando Merc: 通路を押さえろ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：清除通路！"
+      "zh_CN": "特兰多雇佣兵：扫清道路！"
     },
     "3176": {
       "note": "SubtitleText[3176]",
@@ -41888,14 +41888,14 @@
       "en": "Trando Merc: Incoming!",
       "jp": "Trando Merc: 来るぞ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：敌人来了！"
+      "zh_CN": "特兰多雇佣兵：敌人来袭！"
     },
     "3181": {
       "note": "SubtitleText[3181]",
       "en": "Trando Merc: Taking fire!",
       "jp": "Trando Merc: 撃たれた!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：遭到攻击！"
+      "zh_CN": "特兰多雇佣兵：受到火力攻击！"
     },
     "3182": {
       "note": "SubtitleText[3182]",
@@ -41916,7 +41916,7 @@
       "en": "Trando Merc: Watch your fire!",
       "jp": "Trando Merc: どこを撃ってる!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：注意射击方向！"
+      "zh_CN": "特兰多雇佣兵：注意射击！"
     },
     "3185": {
       "note": "SubtitleText[3185]",
@@ -41930,7 +41930,7 @@
       "en": "Trando Merc: Medicals needed!",
       "jp": "Trando Merc: 治療しろ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：需要治疗！"
+      "zh_CN": "特兰多雇佣兵：需要医疗！"
     },
     "3187": {
       "note": "SubtitleText[3187]",
@@ -41951,7 +41951,7 @@
       "en": "Trando Merc: Move! I need bacta!",
       "jp": "Trando Merc: 来い! バクタをくれ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：过来！我需要巴克塔！"
+      "zh_CN": "特兰多雇佣兵：快来！我需要巴克塔！"
     },
     "3190": {
       "note": "SubtitleText[3190]",
@@ -41972,14 +41972,14 @@
       "en": "Trando Merc: Your life. Taken!",
       "jp": "Trando Merc: 命は、もらった!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：你的命。拿走了！"
+      "zh_CN": "特兰多雇佣兵：你的命，拿来了！"
     },
     "3193": {
       "note": "SubtitleText[3193]",
       "en": "Trando Merc: Stay down!",
       "jp": "Trando Merc: 下がれ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：趴下！"
+      "zh_CN": "特兰多雇佣兵：趴着别动！"
     },
     "3194": {
       "note": "SubtitleText[3194]",
@@ -41993,21 +41993,21 @@
       "en": "Trando Merc: Glory to the many!",
       "jp": "Trando Merc: 栄光を!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：荣耀归于多数！"
+      "zh_CN": "特兰多雇佣兵：荣耀归于众人！"
     },
     "3196": {
       "note": "SubtitleText[3196]",
       "en": "Trando Merc: Shhh. Sleep now.",
       "jp": "Trando Merc: シー。おとなしくしろ。",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：嘘。睡吧。"
+      "zh_CN": "特兰多雇佣兵：嘘，睡吧。"
     },
     "3197": {
       "note": "SubtitleText[3197]",
       "en": "Trando Merc: Human weaklings!",
       "jp": "Trando Merc: 弱虫な人間め!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：弱小的人类！"
+      "zh_CN": "特兰多雇佣兵：人类弱者！"
     },
     "3198": {
       "note": "SubtitleText[3198]",
@@ -42021,7 +42021,7 @@
       "en": "Trando Merc: Your soul is mine!",
       "jp": "Trando Merc: こっちのものだぜ!",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：你的灵魂是我的！"
+      "zh_CN": "特兰多雇佣兵：你的灵魂归我了！"
     },
     "3200": {
       "note": "SubtitleText[3200]",
@@ -42287,7 +42287,7 @@
       "en": "Trando Slaver: On my way!",
       "jp": "Trando Slaver: 向かっている!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：我来了！"
+      "zh_CN": "特兰多奴隶贩子：正在途中！"
     },
     "3238": {
       "note": "SubtitleText[3238]",
@@ -42301,21 +42301,21 @@
       "en": "Trando Slaver: Ready to engage.",
       "jp": "Trando Slaver: 準備よし。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：准备接敌。"
+      "zh_CN": "特兰多奴隶贩子：准备交战。"
     },
     "3240": {
       "note": "SubtitleText[3240]",
       "en": "Trando Slaver: All clear!",
       "jp": "Trando Slaver: オールクリア!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：全部清除！"
+      "zh_CN": "特兰多奴隶贩子：全部安全！"
     },
     "3241": {
       "note": "SubtitleText[3241]",
       "en": "Trando Slaver: Assisting comrade!",
       "jp": "Trando Slaver: 仲間を助ける。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：支援战友！"
+      "zh_CN": "特兰多奴隶贩子：协助战友！"
     },
     "3242": {
       "note": "SubtitleText[3242]",
@@ -42329,7 +42329,7 @@
       "en": "Trando Slaver: Taking position!",
       "jp": "Trando Slaver: 位置につけ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：进入位置！"
+      "zh_CN": "特兰多奴隶贩子：前往就位！"
     },
     "3244": {
       "note": "SubtitleText[3244]",
@@ -42343,7 +42343,7 @@
       "en": "Trando Slaver: Affirmative.",
       "jp": "Trando Slaver: 了解。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：确认。"
+      "zh_CN": "特兰多奴隶贩子：明白。"
     },
     "3246": {
       "note": "SubtitleText[3246]",
@@ -42364,14 +42364,14 @@
       "en": "Trando Slaver: Go! Go! Go!",
       "jp": "Trando Slaver: 行け! 行け! 行け!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：冲！冲！冲！"
+      "zh_CN": "特兰多奴隶贩子：上！上！上！"
     },
     "3249": {
       "note": "SubtitleText[3249]",
       "en": "Trando Slaver: Follow me!",
       "jp": "Trando Slaver: 着いてくるんだ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：跟我走！"
+      "zh_CN": "特兰多奴隶贩子：跟我来！"
     },
     "3250": {
       "note": "SubtitleText[3250]",
@@ -42385,21 +42385,21 @@
       "en": "Trando Slaver: Attack the weakings!",
       "jp": "Trando Slaver: 攻撃しろ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：攻击那些弱鸡！"
+      "zh_CN": "特兰多奴隶贩子：攻击那些弱者！"
     },
     "3252": {
       "note": "SubtitleText[3252]",
       "en": "Trando Slaver: Go defensive!",
       "jp": "Trando Slaver: 守るんだ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：转为防守！"
+      "zh_CN": "特兰多奴隶贩子：转为防御！"
     },
     "3253": {
       "note": "SubtitleText[3253]",
       "en": "Trando Slaver: Clear the path!",
       "jp": "Trando Slaver: 通路をクリアしろ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：清除通路！"
+      "zh_CN": "特兰多奴隶贩子：扫清道路！"
     },
     "3254": {
       "note": "SubtitleText[3254]",
@@ -42434,14 +42434,14 @@
       "en": "Trando Slaver: Incoming!",
       "jp": "Trando Slaver: 来るぞ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：敌人来了！"
+      "zh_CN": "特兰多奴隶贩子：敌人来袭！"
     },
     "3259": {
       "note": "SubtitleText[3259]",
       "en": "Trando Slaver: Taking fire!",
       "jp": "Trando Slaver: 撃たれた!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：遭到攻击！"
+      "zh_CN": "特兰多奴隶贩子：受到火力攻击！"
     },
     "3260": {
       "note": "SubtitleText[3260]",
@@ -42462,7 +42462,7 @@
       "en": "Trando Slaver: Watch your fire!",
       "jp": "Trando Slaver: どこ撃ってる!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：注意射击方向！"
+      "zh_CN": "特兰多奴隶贩子：注意射击！"
     },
     "3263": {
       "note": "SubtitleText[3263]",
@@ -42476,7 +42476,7 @@
       "en": "Trando Slaver: Medicals needed!",
       "jp": "Trando Slaver: 治療しろ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：需要治疗！"
+      "zh_CN": "特兰多奴隶贩子：需要医疗！"
     },
     "3265": {
       "note": "SubtitleText[3265]",
@@ -42497,7 +42497,7 @@
       "en": "Trando Slaver: Move! I need bacta!",
       "jp": "Trando Slaver: 来い! バクタをくれ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：过来！我需要巴克塔！"
+      "zh_CN": "特兰多奴隶贩子：快来！我需要巴克塔！"
     },
     "3268": {
       "note": "SubtitleText[3268]",
@@ -42518,14 +42518,14 @@
       "en": "Trando Slaver: Your life. Taken!",
       "jp": "Trando Slaver: 命は、もらった!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：你的命。拿走了！"
+      "zh_CN": "特兰多奴隶贩子：你的命，拿来了！"
     },
     "3271": {
       "note": "SubtitleText[3271]",
       "en": "Trando Slaver: Stay down!",
       "jp": "Trando Slaver: 下がれ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：趴下！"
+      "zh_CN": "特兰多奴隶贩子：趴着别动！"
     },
     "3272": {
       "note": "SubtitleText[3272]",
@@ -42539,21 +42539,21 @@
       "en": "Trando Slaver: Glory to the many!",
       "jp": "Trando Slaver: 栄光を!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：荣耀归于多数！"
+      "zh_CN": "特兰多奴隶贩子：荣耀归于众人！"
     },
     "3274": {
       "note": "SubtitleText[3274]",
       "en": "Trando Slaver: Shhh. Sleep now.",
       "jp": "Trando Slaver: シー。おとなしくしろ。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：嘘。睡吧。"
+      "zh_CN": "特兰多奴隶贩子：嘘，睡吧。"
     },
     "3275": {
       "note": "SubtitleText[3275]",
       "en": "Trando Slaver: Human weaklings!",
       "jp": "Trando Slaver: 弱虫な人間め!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：弱小的人类！"
+      "zh_CN": "特兰多奴隶贩子：人类弱者！"
     },
     "3276": {
       "note": "SubtitleText[3276]",
@@ -42567,7 +42567,7 @@
       "en": "Trando Slaver: Your soul is mine!",
       "jp": "Trando Slaver: こっちのものだ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：你的灵魂是我的！"
+      "zh_CN": "特兰多奴隶贩子：你的灵魂归我了！"
     },
     "3278": {
       "note": "SubtitleText[3278]",
@@ -42581,7 +42581,7 @@
       "en": "Trando Slaver 2: On my way!",
       "jp": "Trando Slaver 2: 向かっている!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：我来了！"
+      "zh_CN": "特兰多奴隶贩子2：正在途中！"
     },
     "3280": {
       "note": "SubtitleText[3280]",
@@ -42595,21 +42595,21 @@
       "en": "Trando Slaver 2: Ready to engage.",
       "jp": "Trando Slaver 2: 準備よし。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：准备接敌。"
+      "zh_CN": "特兰多奴隶贩子2：准备交战。"
     },
     "3282": {
       "note": "SubtitleText[3282]",
       "en": "Trando Slaver 2: All clear!",
       "jp": "Trando Slaver 2: オールクリア!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：全部清除！"
+      "zh_CN": "特兰多奴隶贩子2：全部安全！"
     },
     "3283": {
       "note": "SubtitleText[3283]",
       "en": "Trando Slaver 2: Assisting comrade!",
       "jp": "Trando Slaver 2: 仲間を助けるぞ。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：支援战友！"
+      "zh_CN": "特兰多奴隶贩子2：协助战友！"
     },
     "3284": {
       "note": "SubtitleText[3284]",
@@ -42623,7 +42623,7 @@
       "en": "Trando Slaver 2: Taking position!",
       "jp": "Trando Slaver 2: 位置につけ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：进入位置！"
+      "zh_CN": "特兰多奴隶贩子2：前往就位！"
     },
     "3286": {
       "note": "SubtitleText[3286]",
@@ -42637,7 +42637,7 @@
       "en": "Trando Slaver 2: Affirmative.",
       "jp": "Trando Slaver 2: 了解。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：确认。"
+      "zh_CN": "特兰多奴隶贩子2：明白。"
     },
     "3288": {
       "note": "SubtitleText[3288]",
@@ -42658,14 +42658,14 @@
       "en": "Trando Slaver 2: Go! Go! Go!",
       "jp": "Trando Slaver 2: 行け! 行け! 行け!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：冲！冲！冲！"
+      "zh_CN": "特兰多奴隶贩子2：上！上！上！"
     },
     "3291": {
       "note": "SubtitleText[3291]",
       "en": "Trando Slaver 2: Follow me!",
       "jp": "Trando Slaver 2: ついて来い!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：跟我走！"
+      "zh_CN": "特兰多奴隶贩子2：跟我来！"
     },
     "3292": {
       "note": "SubtitleText[3292]",
@@ -42679,21 +42679,21 @@
       "en": "Trando Slaver 2: Attack the weakings!",
       "jp": "Trando Slaver 2: 攻撃しろ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：攻击那些弱鸡！"
+      "zh_CN": "特兰多奴隶贩子2：攻击那些弱者！"
     },
     "3294": {
       "note": "SubtitleText[3294]",
       "en": "Trando Slaver 2: Go defensive!",
       "jp": "Trando Slaver 2: 守るんだ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：转为防守！"
+      "zh_CN": "特兰多奴隶贩子2：转为防御！"
     },
     "3295": {
       "note": "SubtitleText[3295]",
       "en": "Trando Slaver 2: Clear the path!",
       "jp": "Trando Slaver 2: 通路をクリアしろ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：清除通路！"
+      "zh_CN": "特兰多奴隶贩子2：扫清道路！"
     },
     "3296": {
       "note": "SubtitleText[3296]",
@@ -42728,14 +42728,14 @@
       "en": "Trando Slaver 2: Incoming!",
       "jp": "Trando Slaver 2: 来るぞ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：敌人来了！"
+      "zh_CN": "特兰多奴隶贩子2：敌人来袭！"
     },
     "3301": {
       "note": "SubtitleText[3301]",
       "en": "Trando Slaver 2: Taking fire!",
       "jp": "Trando Slaver 2: 撃たれた!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：遭到攻击！"
+      "zh_CN": "特兰多奴隶贩子2：受到火力攻击！"
     },
     "3302": {
       "note": "SubtitleText[3302]",
@@ -42756,7 +42756,7 @@
       "en": "Trando Slaver 2: Watch your fire!",
       "jp": "Trando Slaver 2: どこ撃ってる!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：注意射击方向！"
+      "zh_CN": "特兰多奴隶贩子2：注意射击！"
     },
     "3305": {
       "note": "SubtitleText[3305]",
@@ -42770,7 +42770,7 @@
       "en": "Trando Slaver 2: Medicals needed!",
       "jp": "Trando Slaver 2: 治療しろ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：需要治疗！"
+      "zh_CN": "特兰多奴隶贩子2：需要医疗！"
     },
     "3307": {
       "note": "SubtitleText[3307]",
@@ -42791,7 +42791,7 @@
       "en": "Trando Slaver 2: Move! I need bacta!",
       "jp": "Trando Slaver 2: 来い! バクタをくれ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：过来！我需要巴克塔！"
+      "zh_CN": "特兰多奴隶贩子2：快来！我需要巴克塔！"
     },
     "3310": {
       "note": "SubtitleText[3310]",
@@ -42812,14 +42812,14 @@
       "en": "Trando Slaver 2: Your life. Taken!",
       "jp": "Trando Slaver 2: 命は、もらった!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：你的命。拿走了！"
+      "zh_CN": "特兰多奴隶贩子2：你的命，拿来了！"
     },
     "3313": {
       "note": "SubtitleText[3313]",
       "en": "Trando Slaver 2: Stay down!",
       "jp": "Trando Slaver 2: 下がれ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：趴下！"
+      "zh_CN": "特兰多奴隶贩子2：趴着别动！"
     },
     "3314": {
       "note": "SubtitleText[3314]",
@@ -42833,21 +42833,21 @@
       "en": "Trando Slaver 2: Glory to the many!",
       "jp": "Trando Slaver 2: 栄光を!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：荣耀归于多数！"
+      "zh_CN": "特兰多奴隶贩子2：荣耀归于众人！"
     },
     "3316": {
       "note": "SubtitleText[3316]",
       "en": "Trando Slaver 2: Shhh. Sleep now.",
       "jp": "Trando Slaver 2: シー。おとなしくしろ。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：嘘。睡吧。"
+      "zh_CN": "特兰多奴隶贩子2：嘘，睡吧。"
     },
     "3317": {
       "note": "SubtitleText[3317]",
       "en": "Trando Slaver 2: Human weaklings!",
       "jp": "Trando Slaver 2: 弱虫な人間め!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：弱小的人类！"
+      "zh_CN": "特兰多奴隶贩子2：人类弱者！"
     },
     "3318": {
       "note": "SubtitleText[3318]",
@@ -42861,7 +42861,7 @@
       "en": "Trando Slaver 2: Your soul is mine!",
       "jp": "Trando Slaver 2: こっちのものだぜ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：你的灵魂是我的！"
+      "zh_CN": "特兰多奴隶贩子2：你的灵魂归我了！"
     },
     "3320": {
       "note": "SubtitleText[3320]",
