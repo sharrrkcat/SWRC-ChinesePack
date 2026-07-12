@@ -1,6 +1,6 @@
 {
   "tool": "make_translation_json.py",
-  "generated_at": "2026-07-11T09:46:27.230964+00:00",
+  "generated_at": "2026-07-12T12:28:12.477434+00:00",
   "input_roots": {
     "english_system": "../../GameData/System",
     "english_properties": "../../GameData/Properties",
@@ -22,9 +22,10 @@
     "merge_saved_entries": 3720,
     "merged_en_jp_groups": 692,
     "merged_translation_entries": 4412,
-    "new_blank_zh_CN": 4496,
     "package_orphan_entries": 156,
     "passthrough_literal_normalized": 7,
+    "preserved_zh_CN": 8698,
+    "restored_from_shared": 4412,
     "shared_translation_entries": 692,
     "skipped_emit_error": 2,
     "skipped_no_source": 1682,
@@ -32,20 +33,19 @@
     "source_english_int": 2653,
     "source_levelinfo_default": 56,
     "source_map_t3d_or_default": 1853,
-    "string_entries": 6404,
+    "string_entries": 6408,
     "subtitle_pairs": 5975,
     "template_entries": 270,
-    "tuple_entries": 464,
+    "tuple_entries": 506,
     "jp_files": 147,
     "en_files": 76,
-    "catalog_files": 147,
-    "translation_groups": 760,
-    "translation_entries": 9393,
+    "catalog_files": 148,
+    "translation_groups": 761,
+    "translation_entries": 9439,
     "skipped_entries": 1684,
-    "preserved_zh_CN": 0,
+    "new_blank_zh_CN": 0,
     "reset_zh_CN": 0,
     "preserved_translation_with_jp_change": 0,
-    "restored_from_shared": 0,
     "subtitle_passthrough_literal_rows": 0,
     "skipped_policy": "allow-skipped"
   },
@@ -293,6 +293,12 @@
       "classes": 17,
       "ucc_lines": 22
     },
+    "Mod": {
+      "package": "System/Mod.u",
+      "package_arg": "Mod.u",
+      "classes": 5,
+      "ucc_lines": 10
+    },
     "mpgame": {
       "package": "System/mpgame.u",
       "package_arg": "mpgame.u",
@@ -375,6 +381,7 @@
     "engine",
     "gameplay",
     "ipdrv",
+    "Mod",
     "mpgame",
     "properties",
     "udebugmenu",
@@ -388,8 +395,8 @@
     "xinterfacelive",
     "xinterfacemp"
   ],
-  "loaded_class_count": 1931,
-  "class_count": 1931,
+  "loaded_class_count": 1936,
+  "class_count": 1936,
   "en_passthrough_literals": {
     "GameData/System/alaudio.cht": [
       {
@@ -7632,6 +7639,12 @@
     "credits_extra_lines": 435,
     "menu_ps_demo": 120
   },
+  "fix_class_replacements": {
+    "CTGameOptionsPCMenu->Mod.ModGameOptionsMenu": {
+      "cloned_rows": 25,
+      "new_entries": 8
+    }
+  },
   "package_orphan_entries": {
     "total": 156,
     "by_package": {
@@ -8779,14 +8792,5 @@
         "missing": []
       }
     }
-  },
-  "build_validation": {
-    "ok": true,
-    "generated_files": 147,
-    "total_entries": 19747,
-    "total_bytes": 626798,
-    "untranslated_fallbacks": 0,
-    "bare_upgraded_to_quoted": 0,
-    "stdout_lines": 148
   }
 }

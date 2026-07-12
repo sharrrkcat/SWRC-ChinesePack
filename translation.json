@@ -67910,7 +67910,7 @@
       "de": "SCHWIERIGKEIT",
       "zh_CN": "难度"
     },
-    "6": {
+    "58": {
       "note": "OptionLabels[6].Text；译法与PS4官方不同：官方译文仅\"自动\"疑似截断，本项目译为\"自动撤回行动\"",
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
@@ -68003,7 +68003,7 @@
       "de": "",
       "zh_CN": "难度"
     },
-    "6": {
+    "29": {
       "note": "OptionLabels[6].Text；译法与PS4官方不同：官方译文仅\"自动\"疑似截断，本项目译为\"自动撤回行动\"",
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
@@ -68405,7 +68405,7 @@
       "en": "MULTIPLAYER",
       "jp": "マルチプレイヤー",
       "de": "OPTIONEN",
-      "zh_CN": "选项",
+      "zh_CN": "多人游戏",
       "use_PS4_translation": true
     },
     "4": {
@@ -68413,7 +68413,7 @@
       "en": "OPTIONS",
       "jp": "オプション",
       "de": "EXTRAS",
-      "zh_CN": "额外内容",
+      "zh_CN": "设置",
       "use_PS4_translation": true
     },
     "5": {
@@ -68421,7 +68421,7 @@
       "en": "PROFILES",
       "jp": "プロファイル",
       "de": "REGISTRIERE",
-      "zh_CN": "注册",
+      "zh_CN": "配置文件",
       "use_PS4_translation": true
     },
     "6": {
@@ -68828,6 +68828,13 @@
       "jp": "",
       "de": "",
       "zh_CN": "选项"
+    },
+    "9": {
+      "note": "MenuOptions[9].Blurred.Text",
+      "en": "END MISSION",
+      "jp": "",
+      "de": "",
+      "zh_CN": "结束任务"
     },
     "14": {
       "note": "RestartMissionDemoConfirm",
@@ -72961,6 +72968,330 @@
       "zh_CN": "主菜单"
     }
   },
+  "Mod.ModGameOptionsMenu": {
+    "107": {
+      "note": "OptionLabels[9].Text",
+      "en": "FPS LIMIT",
+      "jp": "",
+      "de": "",
+      "zh_CN": "帧率限制"
+    },
+    "108": {
+      "note": "OptionLabels[10].Text",
+      "en": "FIELD OF VIEW",
+      "jp": "",
+      "de": "",
+      "zh_CN": "视野范围"
+    },
+    "109": {
+      "note": "OptionLabels[11].Text",
+      "en": "WEAPON FOV FACTOR",
+      "jp": "",
+      "de": "",
+      "zh_CN": "武器视野系数"
+    },
+    "110": {
+      "note": "OptionLabels[12].Text",
+      "en": "VIEW SHAKE",
+      "jp": "",
+      "de": "",
+      "zh_CN": "视角晃动"
+    },
+    "111": {
+      "note": "Options[9].Items[0]",
+      "en": "NONE",
+      "jp": "",
+      "de": "",
+      "zh_CN": "无限制"
+    },
+    "112": {
+      "note": "Options[9].Items[1]",
+      "en": "30",
+      "jp": "",
+      "de": "",
+      "zh_CN": "30"
+    },
+    "113": {
+      "note": "Options[9].Items[2]",
+      "en": "60",
+      "jp": "",
+      "de": "",
+      "zh_CN": "60"
+    },
+    "114": {
+      "note": "Options[9].Items[3]",
+      "en": "75",
+      "jp": "",
+      "de": "",
+      "zh_CN": "75"
+    },
+    "115": {
+      "note": "Options[9].Items[4]",
+      "en": "100",
+      "jp": "",
+      "de": "",
+      "zh_CN": "100"
+    },
+    "116": {
+      "note": "Options[9].Items[5]",
+      "en": "120",
+      "jp": "",
+      "de": "",
+      "zh_CN": "120"
+    },
+    "117": {
+      "note": "Options[9].Items[6]",
+      "en": "144",
+      "jp": "",
+      "de": "",
+      "zh_CN": "144"
+    },
+    "118": {
+      "note": "Options[9].Items[7]",
+      "en": "240",
+      "jp": "",
+      "de": "",
+      "zh_CN": "240"
+    },
+    "119": {
+      "note": "Options[9].Items[8]",
+      "en": "360",
+      "jp": "",
+      "de": "",
+      "zh_CN": "360"
+    },
+    "120": {
+      "note": "Options[10].Items[0]",
+      "en": "AUTO",
+      "jp": "",
+      "de": "",
+      "zh_CN": "自动"
+    },
+    "121": {
+      "note": "Options[10].Items[1]",
+      "en": "85",
+      "jp": "",
+      "de": "",
+      "zh_CN": "85"
+    },
+    "122": {
+      "note": "Options[10].Items[2]",
+      "en": "90",
+      "jp": "",
+      "de": "",
+      "zh_CN": "90"
+    },
+    "123": {
+      "note": "Options[10].Items[3]",
+      "en": "95",
+      "jp": "",
+      "de": "",
+      "zh_CN": "95"
+    },
+    "124": {
+      "note": "Options[10].Items[4]",
+      "en": "100",
+      "jp": "",
+      "de": "",
+      "zh_CN": "100"
+    },
+    "125": {
+      "note": "Options[10].Items[5]",
+      "en": "105",
+      "jp": "",
+      "de": "",
+      "zh_CN": "105"
+    },
+    "126": {
+      "note": "Options[10].Items[6]",
+      "en": "110",
+      "jp": "",
+      "de": "",
+      "zh_CN": "110"
+    },
+    "127": {
+      "note": "Options[10].Items[7]",
+      "en": "115",
+      "jp": "",
+      "de": "",
+      "zh_CN": "115"
+    },
+    "128": {
+      "note": "Options[10].Items[8]",
+      "en": "120",
+      "jp": "",
+      "de": "",
+      "zh_CN": "120"
+    },
+    "129": {
+      "note": "Options[10].Items[9]",
+      "en": "125",
+      "jp": "",
+      "de": "",
+      "zh_CN": "125"
+    },
+    "130": {
+      "note": "Options[10].Items[10]",
+      "en": "130",
+      "jp": "",
+      "de": "",
+      "zh_CN": "130"
+    },
+    "131": {
+      "note": "Options[11].Items[0]",
+      "en": "0.0",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.0"
+    },
+    "132": {
+      "note": "Options[11].Items[1]",
+      "en": "0.1",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.1"
+    },
+    "133": {
+      "note": "Options[11].Items[2]",
+      "en": "0.2",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.2"
+    },
+    "134": {
+      "note": "Options[11].Items[3]",
+      "en": "0.3",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.3"
+    },
+    "135": {
+      "note": "Options[11].Items[4]",
+      "en": "0.4",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.4"
+    },
+    "136": {
+      "note": "Options[11].Items[5]",
+      "en": "0.5",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.5"
+    },
+    "137": {
+      "note": "Options[11].Items[6]",
+      "en": "0.6",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.6"
+    },
+    "138": {
+      "note": "Options[11].Items[7]",
+      "en": "0.7",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.7"
+    },
+    "139": {
+      "note": "Options[11].Items[8]",
+      "en": "0.8",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.8"
+    },
+    "140": {
+      "note": "Options[11].Items[9]",
+      "en": "0.9",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.9"
+    },
+    "141": {
+      "note": "Options[11].Items[10]",
+      "en": "1.0",
+      "jp": "",
+      "de": "",
+      "zh_CN": "1.0"
+    },
+    "142": {
+      "note": "Options[12].Items[0]",
+      "en": "0.0",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.0"
+    },
+    "143": {
+      "note": "Options[12].Items[1]",
+      "en": "0.1",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.1"
+    },
+    "144": {
+      "note": "Options[12].Items[2]",
+      "en": "0.2",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.2"
+    },
+    "145": {
+      "note": "Options[12].Items[3]",
+      "en": "0.3",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.3"
+    },
+    "146": {
+      "note": "Options[12].Items[4]",
+      "en": "0.4",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.4"
+    },
+    "147": {
+      "note": "Options[12].Items[5]",
+      "en": "0.5",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.5"
+    },
+    "148": {
+      "note": "Options[12].Items[6]",
+      "en": "0.6",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.6"
+    },
+    "149": {
+      "note": "Options[12].Items[7]",
+      "en": "0.7",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.7"
+    },
+    "150": {
+      "note": "Options[12].Items[8]",
+      "en": "0.8",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.8"
+    },
+    "151": {
+      "note": "Options[12].Items[9]",
+      "en": "0.9",
+      "jp": "",
+      "de": "",
+      "zh_CN": "0.9"
+    },
+    "152": {
+      "note": "Options[12].Items[10]",
+      "en": "1.0",
+      "jp": "",
+      "de": "",
+      "zh_CN": "1.0"
+    }
+  },
   "ctgame.CTDamageSpiderBump": {
     "1": {
       "note": "DeathString",
@@ -73766,13 +74097,6 @@
       "jp": "",
       "de": "",
       "zh_CN": "启用提示"
-    },
-    "9": {
-      "note": "MenuOptions[9].Blurred.Text",
-      "en": "END MISSION",
-      "jp": "",
-      "de": "",
-      "zh_CN": "结束任务"
     }
   },
   "XinterfaceCtmenus.CTStartXboxMenu": {

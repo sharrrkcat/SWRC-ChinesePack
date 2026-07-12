@@ -89,6 +89,19 @@ NON_RETAIL_CLASS_PREFIXES = (
     "CT_PCDemo_", "CT_Tokyo_", "CT_E3_", "CT_Xbox",
 )
 
+FIX_CLASS_REPLACEMENTS = {
+    "CTGameOptionsPCMenu": {
+        "source_file": f"GameData/System/XinterfaceCtmenus{OUTPUT_EXT}",
+        "target_package": "Mod",
+        "target_class": "ModGameOptionsMenu",
+        "target_file": f"GameData/System/Mod{OUTPUT_EXT}",
+        "literal_overrides": {
+            "Options[0].Items": '("0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0",'
+                                '"1.1","1.2","1.3","1.4","1.5","1.6","1.7","1.8","1.9","2.0")',
+        },
+    },
+}
+
 
 def _is_localizable_default_key(key: str) -> bool:
     """Check whether a defaultproperties key name looks translatable."""
@@ -1507,6 +1520,8 @@ def process_subtitle_file(
 
 def collect_needed_packages(jp_ints, en_ints, package_case: dict[str, Path]):
     needed = {"Engine", "CTGame", "XInterfaceCTMenus"}
+    for repl in FIX_CLASS_REPLACEMENTS.values():
+        needed.add(repl["target_package"])
     for name in jp_ints:
         stem = Path(name).stem.casefold()
         if stem in package_case:
@@ -1858,6 +1873,81 @@ def process_supplementary_sources(
     audit["supplementary_sources"] = supp_stats
 
 
+def process_fix_class_replacements(
+    catalog_files,
+    translation,
+    allocator,
+    classes,
+    stats,
+    reset_translations,
+    audit,
+):
+    """Clone catalog entries for classes replaced by Fix 2.13.
+
+    Fix 2.13 replaces CTGameOptionsPCMenu with Mod.ModGameOptionsMenu (13 opts
+    vs original 9).  The engine reads localized properties from Mod.cht, not
+    XinterfaceCtmenus.cht.  This function clones the original catalog entries
+    into the new output file/section and adds Fix-specific entries discovered
+    from the replacement class's exported defaults.
+    """
+    fix_stats = OrderedDict()
+
+    for orig_section, repl in FIX_CLASS_REPLACEMENTS.items():
+        src_file = repl["source_file"]
+        tgt_file = repl["target_file"]
+        tgt_class = repl["target_class"]
+        tgt_pkg = repl["target_package"]
+        overrides = repl.get("literal_overrides", {})
+
+        src_rows = catalog_files.get(src_file, [])
+        orig_rows = [r for r in src_rows if r.get("section") == orig_section]
+        if not orig_rows:
+            continue
+
+        tgt_rows = catalog_files.setdefault(tgt_file, [])
+        cloned = 0
+        orig_keys = set()
+        for row in orig_rows:
+            key = row["key"]
+            orig_keys.add(key)
+            new_row = OrderedDict(row)
+            new_row["section"] = tgt_class
+            if key in overrides:
+                new_row = OrderedDict([
+                    ("section", tgt_class),
+                    ("key", key),
+                    ("type", "literal"),
+                    ("value", overrides[key]),
+                ])
+            tgt_rows.append(new_row)
+            cloned += 1
+
+        added = 0
+        cls_info = classes.get(tgt_class.casefold())
+        if cls_info:
+            for def_key, source in cls_info["defaults"].items():
+                if def_key in orig_keys:
+                    continue
+                if not (_is_localizable_default_key(def_key)
+                        or ARRAY_KEY_RE.match(def_key) and def_key.endswith(".Items")):
+                    continue
+                if source.kind not in ("string", "tuple"):
+                    continue
+                emit_from_source(
+                    catalog_files, translation, allocator,
+                    tgt_file, tgt_class, def_key, source,
+                    "", "", tgt_pkg, stats, reset_translations,
+                )
+                added += 1
+
+        fix_stats[f"{orig_section}->{tgt_pkg}.{tgt_class}"] = OrderedDict([
+            ("cloned_rows", cloned),
+            ("new_entries", added),
+        ])
+
+    audit["fix_class_replacements"] = fix_stats
+
+
 def discover_package_orphan_entries(
     catalog_files,
     translation,
@@ -2179,6 +2269,11 @@ def main(argv=None):
     process_supplementary_sources(
         catalog_files, translation, allocator, en_outputs,
         de_index, stats, args.reset_translations, audit,
+    )
+
+    process_fix_class_replacements(
+        catalog_files, translation, allocator, classes,
+        stats, args.reset_translations, audit,
     )
 
     discover_package_orphan_entries(

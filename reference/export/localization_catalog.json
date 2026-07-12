@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "generated_by": "make_translation_json.py",
-  "generated_at": "2026-07-11T09:49:22.887263+00:00",
+  "generated_at": "2026-07-12T12:31:07.406183+00:00",
   "files": {
     "GameData/System/alaudio.cht": [
       {
@@ -121039,7 +121039,7 @@
         "section": "CTGameOptionsPCMenu",
         "key": "OptionLabels[6].Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/6",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/58",
         "printf": []
       },
       {
@@ -121362,7 +121362,7 @@
         "section": "CTGameOptionsXboxMenu",
         "key": "OptionLabels[6].Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTGameOptionsXboxMenu/6",
+        "entry": "XinterfaceCtmenus.CTGameOptionsXboxMenu/29",
         "printf": []
       },
       {
@@ -125686,7 +125686,7 @@
         "section": "CTPauseXBoxMenu",
         "key": "MenuOptions[9].Blurred.Text",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu.MenuOptions/9",
+        "entry": "XinterfaceCtmenus.CTPauseXBoxMenu/9",
         "printf": []
       },
       {
@@ -136431,6 +136431,514 @@
         "entry": "ctmarkers.MarkerTurret/2",
         "printf": [],
         "style": "bare"
+      }
+    ],
+    "GameData/System/Mod.cht": [
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Label.Text",
+        "type": "string",
+        "entry": "shared.enjp/100909",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[0].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/0",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[1].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/1",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[2].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/2",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[3].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/3",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[4].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/4",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[5].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/5",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[6].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/58",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[7].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/7",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[8].Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/8",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[0].Items",
+        "type": "literal",
+        "value": "(\"0.1\",\"0.2\",\"0.3\",\"0.4\",\"0.5\",\"0.6\",\"0.7\",\"0.8\",\"0.9\",\"1.0\",\"1.1\",\"1.2\",\"1.3\",\"1.4\",\"1.5\",\"1.6\",\"1.7\",\"1.8\",\"1.9\",\"2.0\")"
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[1].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100959",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100960",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[2].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100900",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100901",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[3].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100900",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100901",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[4].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100900",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100901",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[5].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/54",
+            "printf": []
+          },
+          {
+            "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/55",
+            "printf": []
+          },
+          {
+            "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/56",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[6].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100959",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100960",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[7].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100900",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100901",
+            "printf": []
+          },
+          {
+            "entry": "XinterfaceCtmenus.CTGameOptionsPCMenu/34",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[8].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "shared.enjp/100718",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100719",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100720",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100721",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100722",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100723",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100724",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100725",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100726",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100727",
+            "printf": []
+          },
+          {
+            "entry": "shared.enjp/100928",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "GameLabel.Text",
+        "type": "string",
+        "entry": "shared.enjp/100952",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Sound.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100953",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Graphics.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100954",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Controls.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100951",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "RestoreToDefault.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100955",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Done.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100956",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[9].Text",
+        "type": "string",
+        "entry": "Mod.ModGameOptionsMenu/107",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[10].Text",
+        "type": "string",
+        "entry": "Mod.ModGameOptionsMenu/108",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[11].Text",
+        "type": "string",
+        "entry": "Mod.ModGameOptionsMenu/109",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "OptionLabels[12].Text",
+        "type": "string",
+        "entry": "Mod.ModGameOptionsMenu/110",
+        "printf": []
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[9].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "Mod.ModGameOptionsMenu/111",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/112",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/113",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/114",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/115",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/116",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/117",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/118",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/119",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[10].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "Mod.ModGameOptionsMenu/120",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/121",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/122",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/123",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/124",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/125",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/126",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/127",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/128",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/129",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/130",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[11].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "Mod.ModGameOptionsMenu/131",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/132",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/133",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/134",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/135",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/136",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/137",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/138",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/139",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/140",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/141",
+            "printf": []
+          }
+        ]
+      },
+      {
+        "section": "ModGameOptionsMenu",
+        "key": "Options[12].Items",
+        "type": "tuple",
+        "items": [
+          {
+            "entry": "Mod.ModGameOptionsMenu/142",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/143",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/144",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/145",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/146",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/147",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/148",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/149",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/150",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/151",
+            "printf": []
+          },
+          {
+            "entry": "Mod.ModGameOptionsMenu/152",
+            "printf": []
+          }
+        ]
       }
     ]
   }
