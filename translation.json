@@ -15409,7 +15409,7 @@
       "en": "Trandoshan Attack!",
       "jp": "攻撃:トランドーシャン",
       "de": "",
-      "zh_CN": "特兰多沙进攻！"
+      "zh_CN": "特兰多沙人进攻！"
     },
     "8": {
       "note": "NextRoundIn",
@@ -15550,7 +15550,7 @@
       "en": "NET",
       "jp": "NET",
       "de": "",
-      "zh_CN": "净值"
+      "zh_CN": "网络"
     },
     "9": {
       "note": "FooterText",
@@ -15613,7 +15613,7 @@
       "en": "OUT",
       "jp": "アウト",
       "de": "",
-      "zh_CN": "退出"
+      "zh_CN": "出局"
     },
     "20": {
       "note": "ReadyText",
@@ -15657,7 +15657,7 @@
       "en": "PERSONAL STATS FOR",
       "jp": "個人データ",
       "de": "",
-      "zh_CN": "个人统计"
+      "zh_CN": "个人统计："
     },
     "2": {
       "note": "AwardsString",
@@ -15790,14 +15790,14 @@
       "en": "Killed By",
       "jp": "死亡",
       "de": "",
-      "zh_CN": "被击杀"
+      "zh_CN": "被其击杀"
     },
     "20": {
       "note": "DeathsHolding",
       "en": "Deaths w/",
       "jp": "武器による死亡",
       "de": "",
-      "zh_CN": "死于"
+      "zh_CN": "持有时死亡"
     },
     "21": {
       "note": "EfficiencyString",
@@ -15928,7 +15928,7 @@
       "en": "'s reign of terror ended by",
       "jp": "の恐怖は終わりを告げた: ",
       "de": "",
-      "zh_CN": "的恐怖统治被终结了"
+      "zh_CN": "的恐怖统治被终结了，终结者："
     },
     "2": {
       "note": "EndSelfSpree",
@@ -16032,7 +16032,7 @@
       "en": "was killed by",
       "jp": "やられた",
       "de": "",
-      "zh_CN": "被击杀了"
+      "zh_CN": "死于"
     },
     "2": {
       "note": "SomeoneString",
@@ -16197,7 +16197,7 @@
       "en": "You were killed.  Press [Fire] to respawn in ",
       "jp": "死亡しました。復帰するには[武器発射]を押してください。 ",
       "de": "",
-      "zh_CN": "你被击杀了。按[开火]键在以下时间后重生："
+      "zh_CN": "你被击杀了。按[开火]键重生，倒计时："
     }
   },
   "mpgame.MPVoiceDelta07x.FFireString": {
@@ -16206,14 +16206,14 @@
       "en": "Fire in the Hole!",
       "jp": "注意しろ!",
       "de": "",
-      "zh_CN": "Fire in the Hole!"
+      "zh_CN": "小心手雷！"
     },
     "5": {
       "note": "FFireString[5]",
       "en": "Friendly fire! Friendly fire!",
       "jp": "同士討ちだ! 同士討ち!",
       "de": "",
-      "zh_CN": "Friendly fire! Friendly fire!"
+      "zh_CN": "误伤！误伤！"
     }
   },
   "mpgame.MPVoiceDelta07x.TauntString": {
@@ -16222,21 +16222,21 @@
       "en": "You are dead!",
       "jp": "やられたな!",
       "de": "",
-      "zh_CN": "You are dead!"
+      "zh_CN": "你死了！"
     },
     "2": {
       "note": "TauntString[2]",
       "en": "Bang and you're dead!",
       "jp": "一発でお終いさ!!",
       "de": "",
-      "zh_CN": "Bang and you're dead!"
+      "zh_CN": "一枪毙命！"
     },
     "6": {
       "note": "TauntString[6]",
       "en": "Trando neutralized.",
       "jp": "トランド、制圧だ。",
       "de": "",
-      "zh_CN": "Trando neutralized."
+      "zh_CN": "特兰多人已除掉。"
     }
   },
   "mpgame.MPVoiceDelta07x.OrderString": {
@@ -16245,7 +16245,7 @@
       "en": "Follow me!",
       "jp": "着いて来い!",
       "de": "",
-      "zh_CN": "Follow me!"
+      "zh_CN": "跟我来！"
     }
   },
   "mpgame.MPVoiceDelta38x.TauntString": {
@@ -16254,14 +16254,14 @@
       "en": "You are dead!",
       "jp": "くたばれ。",
       "de": "",
-      "zh_CN": "You are dead!"
+      "zh_CN": "你死了！"
     },
     "6": {
       "note": "TauntString[6]",
       "en": "Trando neutralized.",
       "jp": "トランド、制圧。",
       "de": "",
-      "zh_CN": "Trando neutralized."
+      "zh_CN": "特兰多人已除掉。"
     }
   },
   "mpgame.MPVoiceDelta38x.OrderString": {
@@ -16270,7 +16270,7 @@
       "en": "Lock and load, Deltas.",
       "jp": "しかけるぞ、デルタ。",
       "de": "",
-      "zh_CN": "Lock and load, Deltas."
+      "zh_CN": "战斗准备，德尔塔。"
     }
   },
   "mpgame.MPVoiceDelta40x.TauntString": {
@@ -16279,14 +16279,14 @@
       "en": "You are dead!",
       "jp": "くたばれ!",
       "de": "",
-      "zh_CN": "You are dead!"
+      "zh_CN": "你死了！"
     },
     "6": {
       "note": "TauntString[6]",
       "en": "Trando neutralized.",
       "jp": "トランドーシャン、制圧だ。",
       "de": "",
-      "zh_CN": "Trando neutralized."
+      "zh_CN": "特兰多人已除掉。"
     }
   },
   "mpgame.MPVoiceDelta40x.OrderString": {
@@ -16295,14 +16295,14 @@
       "en": "Let's go!",
       "jp": "行くぞ!",
       "de": "",
-      "zh_CN": "Let's go!"
+      "zh_CN": "出发！"
     },
     "5": {
       "note": "OrderString[5]",
       "en": "Take up defensive position!",
       "jp": "防御態勢をとれ!",
       "de": "",
-      "zh_CN": "Take up defensive position!"
+      "zh_CN": "占据防守位置！"
     }
   },
   "mpgame.MPVoiceTrandoMerc01x": {
@@ -16311,14 +16311,14 @@
       "en": "I am ready to kill!",
       "jp": "準備はいいぞ!!",
       "de": "",
-      "zh_CN": "I am ready to kill!"
+      "zh_CN": "我准备好杀戮了！"
     },
     "4": {
       "note": "AckString[4]",
       "en": "Assisting comrade!",
       "jp": "仲間を助けるぞ。",
       "de": "",
-      "zh_CN": "Assisting comrade!"
+      "zh_CN": "协助战友！"
     }
   },
   "mpgame.MPVoiceTrandoMerc01x.OrderString": {
@@ -16327,7 +16327,7 @@
       "en": "Clear the path!",
       "jp": "通路を押さえろ!",
       "de": "",
-      "zh_CN": "Clear the path!"
+      "zh_CN": "扫清道路！"
     }
   },
   "mpgame.MPVoiceTrandoSlaver01x.TauntString": {
@@ -16336,7 +16336,7 @@
       "en": "Your soul is mine!",
       "jp": "こっちのものだ!",
       "de": "",
-      "zh_CN": "Your soul is mine!"
+      "zh_CN": "你的灵魂归我了！"
     }
   },
   "mpgame.MPVoiceTrandoSlaver02x": {
@@ -16345,7 +16345,7 @@
       "en": "If not slavery. Death!",
       "jp": "奴隷か死だ!",
       "de": "",
-      "zh_CN": "If not slavery. Death!"
+      "zh_CN": "不做奴隶，就去死！"
     }
   },
   "mpgame.MPVoiceTrandoSlaver02x.FFireString": {
@@ -16354,7 +16354,7 @@
       "en": "Frag out!",
       "jp": "フラグアウト!!",
       "de": "",
-      "zh_CN": "Frag out!"
+      "zh_CN": "投弹！"
     }
   },
   "mpgame.MPVoiceTrandoSlaver02x.TauntString": {
@@ -16363,7 +16363,7 @@
       "en": "Death!",
       "jp": "やったぞ!",
       "de": "",
-      "zh_CN": "Death!"
+      "zh_CN": "去死！"
     }
   },
   "mpgame.MPVoiceTrandoSlaver02x.OrderString": {
@@ -16372,21 +16372,21 @@
       "en": "Move out!",
       "jp": "出ろ!",
       "de": "",
-      "zh_CN": "Move out!"
+      "zh_CN": "出发！"
     },
     "7": {
       "note": "OrderString[7]",
       "en": "Back me up!",
       "jp": "援護しろ!",
       "de": "",
-      "zh_CN": "Back me up!"
+      "zh_CN": "掩护我！"
     },
     "10": {
       "note": "OrderString[10]",
       "en": "Form up!",
       "jp": "フォーム・アップだ!",
       "de": "",
-      "zh_CN": "Form up!"
+      "zh_CN": "列队！"
     }
   },
   "mpgame.MultiKillMessage": {
@@ -16561,14 +16561,14 @@
       "en": "You were killed by",
       "jp": " ",
       "de": "",
-      "zh_CN": "你被击杀了，击杀者："
+      "zh_CN": "你被"
     },
     "2": {
       "note": "KilledByTrailer",
       "en": "!",
       "jp": " に倒された!",
       "de": "",
-      "zh_CN": "!"
+      "zh_CN": "击杀了！"
     }
   },
   "properties.CTDamageBallisticDC17MP": {
