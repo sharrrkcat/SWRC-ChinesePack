@@ -14,7 +14,7 @@
 - ✅ 字体包二进制格式完全破解（UFont、CharRemap、DXT5 贴图页均可解析/写出）
 - ✅ 官方日文版的实现方式已解剖（作为参照系）
 - ✅ **CJK 渲染全线打通**（2026-07-07）：根因=引擎 ANSI 构建逐字节查表；解法=自编译 Mod.dll detour 四个文本函数做 DBCS 配对（§6、§7）。菜单 + 标题卡/加载画面/提示/简报字幕/局内字幕五处场景全部实证显示汉字。代码：fork `sharrrkcat/CT-cjk-text`,分支 `cjk-text`
-- ✅ **中文字体生成器完成并局内实测通过**（2026-07-08）：`tools\font_gen.py` 生成 `orbitfonts-cn.utx`，GB2312 全集测试包菜单/局内字幕无缺字错位
+- ✅ **中文字体生成器完成并局内实测通过**（2026-07-08）：`tools\font_gen.py` 生成 `orbitfonts-cn.utx`，GB2312 全集测试包菜单/局内字幕无缺字错位。`make_charset.py` 支持 `--slim` 瘦身模式（一级字 ∪ 译文用字 ∪ 常用标点，约 3900 字 / 约 10MB，发布推荐）
 - ⏳ 当前阶段：catalog 已生成并经过多轮工具修正，下一步是正式译文生产（§8）；剩余 skipped 项需在正式发布前继续归因或明确白名单化
 
 ## 2. 事实速查卡
@@ -238,7 +238,7 @@ u8   mip 数（字体页均为 1）
 ## 7.5 字体与文本生成工具状态
 
 1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）
-2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（开发期=ASCII+GB2312 全集 7573 字，发布前换译文扫描子集）。生成的 `orbitfonts-cn.utx`（19.8MB，78 导出项）已通过解析器全量往返校验；曾以 GBK"中文测试"探针完成菜单+局内验证。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。2026-07-10 增加可选 `--latin-source <英文版 orbitfonts.utx>` 混合模式：仅复用英文版 `0x20-0x7E` ASCII glyph 的原始宽高和 RGBA 像素，中文/GBK 字符仍由 `--font` 渲染；未传该参数时默认纯 TTF/OTF 管线不变。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
+2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（默认=ASCII+GB2312 全集 7573 字；`--slim` 瘦身模式=GB2312 一级字 ∪ translation.json 用字 ∪ 常用标点，约 3900 字，发布推荐）。生成的 `orbitfonts-cn.utx`（全集约 19.8MB / 瘦身约 10MB）已通过解析器全量往返校验；曾以 GBK"中文测试"探针完成菜单+局内验证。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。2026-07-10 增加可选 `--latin-source <英文版 orbitfonts.utx>` 混合模式：仅复用英文版 `0x20-0x7E` ASCII glyph 的原始宽高和 RGBA 像素，中文/GBK 字符仍由 `--font` 渲染；未传该参数时默认纯 TTF/OTF 管线不变。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
 3. ~~翻译索引/catalog 生成工具~~ ✅ `tools\make_translation_json.py` 已建立当前翻译源：从日文 `JapanesePack\System\*.int` 取得覆盖索引，从英文运行时 `GameData\System\*.int`、`GameData\System\*.u`、`GameData\Properties\*.u`、`GameData\Maps\*.ctm` 追溯英文 source，可选读入 `TranslationPackFormOnline\German Files\*.det` 作为德语参照；输出 `translation.json`（schema 2）+ `reference\export\localization_catalog.json`（schema 1）+ audit/skipped 报告。重新生成默认按 `(group, note, en)` 保留已有 `zh_CN`，只有显式 `--reset-translations` 才清空译文；默认 strict skipped，若仍有 skipped 会失败，审查期才使用 `--allow-skipped`
 4. ~~语言包生成工具~~ ✅ `tools\build_langpack.py` 已切到 catalog 驱动：读取用户翻译 JSON（schema 2）+ 机器 catalog（schema 1）→ `build\GameData\System\*.int` + manifest；菜单也输出 `XinterfaceCtmenus.int`，不生成 `PropertyOverrides`。默认要求所有 `zh_CN` 非空且 GBK 可编码；`--allow-untranslated` 仅作开发期英文 fallback，并只对 fallback 英文做最小 GBK 兼容规范化
 5. 进入汉化实施（§8）：译文输出一律 GBK 编码 ANSI 文件、无 BOM；翻译源数据采用 UTF-8 JSON
@@ -270,7 +270,7 @@ u8   mip 数（字体页均为 1）
    - `XinterfaceCtmenus.int` 是菜单主输出，不再生成菜单 `PropertyOverrides` 作为发布默认路径
 4. **索引生成工具**：`tools\make_translation_json.py` 默认读取既有 `translation.json` 并保留同签名条目的 `zh_CN`，因此正式翻译开始后可重复跑生成器做 source 修正；若旧条目匹配但 `jp` 发生变化，保留 `zh_CN` 并在 audit 记录 `preserved_translation_with_jp_change`。默认 skipped 严格失败，防止漏项静默进入正式翻译；审查期需要保留当前漏项时显式加 `--allow-skipped`，从零重建才加 `--reset-translations`。默认构建验证写入临时目录，不会清理真实 `build\`
 5. **语言包生成工具**：`tools\build_langpack.py` 默认读取 `translation.json` 和 `reference\export\localization_catalog.json`；可用 `--json` / `--catalog` / `--out` 指定临时输入输出。默认要求所有 `zh_CN` 非空，且输出必须 GBK 可编码；`--allow-untranslated` 只用于开发期抽样，空译文会回退英文，并仅对 fallback 英文中的少量非 GBK 字符做兼容替换。JSON 重复 key 会直接报错；bare 样式遇到 `=`、引号、首尾空白、`(` 或 `"` 开头会自动升级 quoted 并写入 manifest 计数。工具只输出 `build\GameData\System\*.int` 和 manifest，不直接写入游戏目录
-6. **字符集与字体**：正式译文完成后扫描 `zh_CN` 子集重新生成 `orbitfonts.utx`；开发期可继续使用 GB2312 全集字体
+6. **字符集与字体**：发布版使用 `make_charset.py --slim` 生成瘦身字符集（GB2312 一级字 ∪ translation.json 用字 ∪ 常用标点，约 3900 字），再重新生成 `orbitfonts.utx`（约 10MB）；开发期可不带 `--slim` 使用 GB2312 全集（7573 字，约 19.8MB）
 7. **测试与发布**：至少覆盖新战役全流程、加载/标题卡/提示/字幕、全部菜单与设置页、存读档界面；发布包复制 `System\*.int + Textures\orbitfonts.utx + CJK Mod.dll/Mod.u`，标注 Fix / CJK 依赖
 
 ## 9. 文件与工具清单
@@ -281,7 +281,7 @@ u8   mip 数（字体页均为 1）
     docs\README-汉化技术文档.md ← 本文档
     tools\swrc_package.py     ← 包解析器（逆向成果的代码化：导出表/UFont/DXT5 贴图解码）
     tools\font_gen.py         ← 中文字体包生成器（TTF/OTF → orbitfonts.utx，DXT5 字体页）
-    tools\make_charset.py     ← 开发期字符集生成器（ASCII + GB2312 全集）
+    tools\make_charset.py     ← 字符集生成器（默认 GB2312 全集；--slim 瘦身=一级字 ∪ 译文用字 ∪ 常用标点）
     tools\make_translation_json.py ← 翻译索引/catalog 生成器（JP .int + 英文 GameData source → translation.json + localization_catalog/audit/skipped）
     tools\build_langpack.py   ← catalog 驱动语言包生成器（translation.json + localization_catalog.json → build\GameData\System\*.int）
     tools\localization_common.py ← 共享模块（FALLBACK_REPLACEMENTS / normalize_fallback_text，被 make_translation_json 和 build_langpack 导入）
