@@ -1737,7 +1737,7 @@
       "en": "PRESS AND HOLD @ TO DISARM",
       "jp": "@を押し続ける:解除する",
       "de": "@ ZUM ENTSCHÄRFEN GEDRÜCKT HALTEN",
-      "zh_CN": "按住@拆除"
+      "zh_CN": "按住@卸除"
     },
     "100803": {
       "note": "PickupMessage / 3 occurrences",
@@ -6986,7 +6986,7 @@
       "en": "%k punched a hole through %o.",
       "jp": "%k が %o をぶち抜いた。",
       "de": "%k schoss ein Loch durch %o.",
-      "zh_CN": "%k在%o身上打穿了一个洞。"
+      "zh_CN": "%k把%o打了个对穿。"
     }
   },
   "ctgame.CTDamageEMPPulse": {
@@ -7004,7 +7004,7 @@
       "en": "%k blasted %o.",
       "jp": "%k が %o を爆破した。",
       "de": "%k sprengte %o.",
-      "zh_CN": "%k炸飞了%o。"
+      "zh_CN": "%k轰杀了%o。"
     }
   },
   "ctgame.CTDamageExplosion": {
@@ -7031,7 +7031,7 @@
       "en": "%k incinerated %o.",
       "jp": "%k が %o を灰にした。",
       "de": "%k erledigte %o.",
-      "zh_CN": "%k焚化了%o。"
+      "zh_CN": "%k把%o烧成了灰。"
     }
   },
   "ctgame.CTDamageMelee": {
@@ -7058,7 +7058,7 @@
       "en": "%o killed himself.",
       "jp": "%o が気絶した。",
       "de": "%o hat sich selbst ausgeschaltet.",
-      "zh_CN": "%o自杀了。"
+      "zh_CN": "%o把自己击晕了。"
     }
   },
   "ctgame.CTDamageType": {
@@ -17127,7 +17127,7 @@
       "en": "FOV",
       "jp": "FOV",
       "de": "SICHTFELD",
-      "zh_CN": "FOV"
+      "zh_CN": "视场角"
     }
   },
   "RAS_02D.FlashBangBox1": {
@@ -65824,21 +65824,21 @@
       "en": "Like a cantina bar fight, it's every being for themselves in a chaotic battle to blast everything that moves.||",
       "jp": "混沌とした戦いで頼れるのは自分だけだ。動くものはすべて破壊しろ!||",
       "de": "",
-      "zh_CN": "如同酒吧斗殴一般，在混乱的战斗中各为其主，消灭一切移动的东西吧！||"
+      "zh_CN": "如同酒馆斗殴一般，人人各自为战，在混乱的战斗中轰掉一切会动的东西。||"
     },
     "3": {
       "note": "TeamGame",
       "en": "Test your skill as a squad with commando teammates, or gang up with your Trandoshan buddies in a ferocious battle for supremacy.  The team with the most kills wins; the other team is space dust.||",
       "jp": "コマンドーの一員としての腕を試すか、トランドーシャンに加わって、激しい戦いを勝ち抜け。多く殺したチームが勝者だ。敗者は宇宙に消える。||",
       "de": "",
-      "zh_CN": "与突击队员队友一起测试你的小队技巧，或与特兰多沙人同伴联手，在激烈的战斗中争夺霸权。击杀数最多的队伍获胜；输家化为宇宙尘埃。||"
+      "zh_CN": "与突击队员队友并肩考验你的小队实力，或与特兰多沙同伴结伙，在争夺霸权的激烈战斗中一决高下。击杀数最多的队伍获胜；败者化为太空尘埃。||"
     },
     "4": {
       "note": "CTFGame",
       "en": "Commandos and mercenaries fight to capture the other faction's flag in tense goal-oriented combat.  Should your team lose its own flag, shame and humiliation will make victory impossible until it is returned.  Defend or invade-- but show no mercy!||",
       "jp": "コマンドーと傭兵部隊、敵のフラグを手に入れながらゴールを目指して対戦だ。味方チームがフラグを失えば、取り戻さないと勝利は遠ざかる。殺るか殺られるか - 情けは無用だ!||",
       "de": "",
-      "zh_CN": "突击队员和雇佣兵在紧张的目标导向战斗中争夺对方阵营的旗帜。如果你的队伍丢失了自己的旗帜，耻辱将使胜利成为不可能，直到夺回旗帜为止。防守或进攻——绝不手软！||"
+      "zh_CN": "突击队员与雇佣兵在紧张的目标争夺战中夺取对方阵营的旗帜。一旦你的队伍丢失了自己的旗帜，在夺回之前，耻辱将使你们与胜利无缘。防守或进攻——但绝不留情！||"
     },
     "5": {
       "note": "ASGame",
@@ -71608,7 +71608,7 @@
       "en": "LOCATION: Republic Assault Ship||Deep in the engineering core of the RAS Prosecutor, use every available weapon, as well as catwalks and maintenance ducts, to dominate your enemies in an environment reminiscent of the classic trilogy.||",
       "jp": "位置:共和国アサルト・シップ||共和国艦プロセキューターのエンジニア・リングコア内。あらゆる兵器、キャットウォーク、メンテナンス・ダクトを利用して、敵を制圧しろ。これはまさに旧三部作。||",
       "de": "",
-      "zh_CN": "位置：共和国突击舰||在\"检察官\"号的工程核心深处，利用一切可用武器以及栈道和维修管道，在令人回想起经典三部曲的环境中制压敌人。||"
+      "zh_CN": "位置：共和国突击舰||在\"检察官\"号的工程核心深处，利用一切可用武器以及栈道和维修管道，在令人回想起经典三部曲的环境中压制敌人。||"
     },
     "4": {
       "note": "YYY_POW",
@@ -71650,7 +71650,7 @@
       "en": "LOCATION: Kashyyyk City||Endure the withering crossfire as you battle to take control of a Wookiee city.  A multi-level compound, with windows open to locations from Episode III.||",
       "jp": "位置:キャッシークの都市||敵の一斉攻撃に耐えて、ウーキーの都市を制圧しろ。いくつかのレベルに分かれた建物の窓から、エピソードIIIのロケーションに進める。||",
       "de": "",
-      "zh_CN": "位置：卡希克城市||在争夺伍基人城市控制权的战斗中承受猛烈的交叉火力。这是一座多层建筑群，窗户可以望见第三集的场景。||"
+      "zh_CN": "位置：卡希克城市||在争夺伍基人城市控制权的战斗中承受猛烈的交叉火力。这是一座多层建筑群，透过窗户可以望见电影第三部中的场景。||"
     },
     "10": {
       "note": "GEO_CanyonSmall",
@@ -71664,14 +71664,14 @@
       "en": "LOCATION: Kamino||All commando teams must undergo rigorous training exercises and a harsh elimination process before going into the field. Training Area A17, dubbed \"The Killing House\" by the troops, is the proving ground for Republic commandos, located in Tipoca City on Kamino.||",
       "jp": "位置:カミーノ||全コマンドー・チームは終結して演習訓練を行い、厳しい訓練通過の後、戦場へと向かう。カミーノのティポカ・シティにあるトレーニングエリアA17は「キリング・ハウス」と名づけられ、共和国コマンドーの拠点とされている。||",
       "de": "",
-      "zh_CN": "位置：卡米诺||所有突击队必须接受严格的训练演习和残酷的淘汰流程，然后才能上战场。训练区A17，被士兵们称为\"杀戮之屋\"，是共和国突击队员的训练场，位于卡米诺的提波卡城。||"
+      "zh_CN": "位置：卡米诺||所有突击队必须接受严格的训练演习和残酷的淘汰流程，然后才能上战场。训练区A17被士兵们称为\"杀戮之屋\"，是共和国突击队员的试炼场，位于卡米诺的提波卡城。||"
     },
     "12": {
       "note": "KAM_ZeroG",
       "en": "LOCATION: Kamino||Every commando team is trained to respond in a number of environmental conditions, including the zero gravity environment of space.  Transition back and forth between gravity and zero-g areas, as you wield the heaviest weapons in a chaotic free-for-all.||",
       "jp": "位置:カミーノ||全コマンドー・チームは、無重力の宇宙空間などさまざまな条件に対応すべく訓練を行う。最強の兵器を使いこなして、重力空間と重力空間を交互に進むのだ。",
       "de": "",
-      "zh_CN": "位置：卡米诺||每支突击队都需接受各种环境条件的训练，包括太空中的零重力环境。在重力区和零重力区之间来回穿梭，在混乱的混战中挥舞最重型的武器。||"
+      "zh_CN": "位置：卡米诺||每支突击队都需接受各种环境条件下的训练，包括太空中的零重力环境。手持最重型的武器，在重力区与零重力区之间来回穿梭，展开混乱的自由混战。||"
     }
   },
   "YYY_01B.MissionObjectives1": {
@@ -72160,7 +72160,7 @@
       "en": "PRESS AND HOLD @ TO DISARM",
       "jp": "@を押し続ける:解除する",
       "de": "@ ZUM AKTIVIEREN GEDRÜCKT HALTEN",
-      "zh_CN": "按住@解除"
+      "zh_CN": "按住@卸除"
     }
   },
   "YYY_35A.MissionObjectives2": {
