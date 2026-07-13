@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "generated_by": "make_translation_json.py",
-  "generated_at": "2026-07-13T02:37:20.369066+00:00",
+  "generated_at": "2026-07-13T08:24:54.452146+00:00",
   "files": {
     "GameData/System/alaudio.cht": [
       {
@@ -19856,6 +19856,13 @@
         "key": "PickupMessage",
         "type": "string",
         "entry": "shared.enjp/100714",
+        "printf": []
+      },
+      {
+        "section": "HackTerminalGeo0",
+        "key": "ActivatePromptText",
+        "type": "string",
+        "entry": "GEO_01B.HackTerminalGeo0/1",
         "printf": []
       }
     ],

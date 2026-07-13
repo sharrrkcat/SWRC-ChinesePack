@@ -1,0 +1,1090 @@
+{
+  "generated_at": "2026-07-13T08:27:18.936339+00:00",
+  "inputs": {
+    "original": "D:\\Program\\Software\\Steam\\steamapps\\common\\Star Wars Republic Commando\\.originalbackup",
+    "japanese_system": "D:\\Program\\Software\\Steam\\steamapps\\common\\Star Wars Republic Commando\\.lang\\JapanesePack\\System",
+    "class_exports": "D:\\swrc_original_coverage_export",
+    "t3d_exports": "D:\\swrc_map_diag_20260713",
+    "catalog": "reference\\export\\localization_catalog.json",
+    "translation": "translation.json",
+    "build": "build"
+  },
+  "class_exports": {
+    "packages": 36,
+    "classes": 3334
+  },
+  "map_packages": {
+    "steam_ctm": 79,
+    "with_japanese_index": 76,
+    "without_japanese_index": 3,
+    "no_japanese_index": [
+      "1138",
+      "entry",
+      "mpcustom"
+    ]
+  },
+  "steam_map_int_coverage": {
+    "totals": {
+      "files": 23,
+      "rows": 5263,
+      "missing_catalog": 0,
+      "missing_build": 0
+    },
+    "by_file": {
+      "geo_titlecard.int": {
+        "original_rows": 21,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "ras_titlecard.int": {
+        "original_rows": 26,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_01.int": {
+        "original_rows": 666,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_01_hangar.int": {
+        "original_rows": 2,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_01briefing.int": {
+        "original_rows": 50,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_03.int": {
+        "original_rows": 460,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_04.int": {
+        "original_rows": 382,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_04briefing.int": {
+        "original_rows": 28,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_geo_05.int": {
+        "original_rows": 272,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_ras_01.int": {
+        "original_rows": 302,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_ras_01briefing.int": {
+        "original_rows": 52,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_ras_02.int": {
+        "original_rows": 336,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_ras_03.int": {
+        "original_rows": 308,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_ras_04.int": {
+        "original_rows": 390,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_01.int": {
+        "original_rows": 522,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_01briefing.int": {
+        "original_rows": 36,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_03.int": {
+        "original_rows": 198,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_03briefing.int": {
+        "original_rows": 16,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_04.int": {
+        "original_rows": 496,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_04briefing.int": {
+        "original_rows": 42,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_05.int": {
+        "original_rows": 260,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "subtitles_yyy_06.int": {
+        "original_rows": 372,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      },
+      "yyy_titlecard.int": {
+        "original_rows": 26,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0,
+        "pseudo_comment_rows": 0,
+        "malformed_rows": 0
+      }
+    }
+  },
+  "japanese_map_index_coverage": {
+    "totals": {
+      "files": 76,
+      "rows": 4053,
+      "catalog_rows": 2576,
+      "missing_catalog": 1478,
+      "missing_build": 1478
+    },
+    "by_file": {
+      "CTF_Detention.int": {
+        "rows": 37,
+        "catalog_rows": 37,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_Engine.int": {
+        "rows": 38,
+        "catalog_rows": 38,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_Hangar.int": {
+        "rows": 35,
+        "catalog_rows": 35,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_HangingGarden.int": {
+        "rows": 46,
+        "catalog_rows": 46,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_POW.int": {
+        "rows": 42,
+        "catalog_rows": 42,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_Siege.int": {
+        "rows": 31,
+        "catalog_rows": 31,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_Trando.int": {
+        "rows": 43,
+        "catalog_rows": 43,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_Underpass.int": {
+        "rows": 33,
+        "catalog_rows": 33,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "CTF_ZeroG.int": {
+        "rows": 38,
+        "catalog_rows": 38,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Canyon.int": {
+        "rows": 18,
+        "catalog_rows": 18,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Detention.int": {
+        "rows": 31,
+        "catalog_rows": 31,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Engine.int": {
+        "rows": 32,
+        "catalog_rows": 32,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Hangar.int": {
+        "rows": 29,
+        "catalog_rows": 29,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_HangingGarden.int": {
+        "rows": 40,
+        "catalog_rows": 40,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_POW.int": {
+        "rows": 36,
+        "catalog_rows": 36,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_POWSmall.int": {
+        "rows": 16,
+        "catalog_rows": 16,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Siege.int": {
+        "rows": 25,
+        "catalog_rows": 25,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Trando.int": {
+        "rows": 37,
+        "catalog_rows": 37,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_Underpass.int": {
+        "rows": 27,
+        "catalog_rows": 27,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "DM_ZeroG.int": {
+        "rows": 32,
+        "catalog_rows": 32,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "EPILOGUE.int": {
+        "rows": 6,
+        "catalog_rows": 6,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "GEO_01A.int": {
+        "rows": 63,
+        "catalog_rows": 60,
+        "missing_from_catalog": 3,
+        "missing_from_build": 3
+      },
+      "GEO_01B.int": {
+        "rows": 64,
+        "catalog_rows": 52,
+        "missing_from_catalog": 13,
+        "missing_from_build": 13
+      },
+      "GEO_01Briefing.int": {
+        "rows": 2,
+        "catalog_rows": 2,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "GEO_01C.int": {
+        "rows": 46,
+        "catalog_rows": 42,
+        "missing_from_catalog": 4,
+        "missing_from_build": 4
+      },
+      "GEO_03A.int": {
+        "rows": 56,
+        "catalog_rows": 35,
+        "missing_from_catalog": 21,
+        "missing_from_build": 21
+      },
+      "GEO_03C.int": {
+        "rows": 47,
+        "catalog_rows": 20,
+        "missing_from_catalog": 27,
+        "missing_from_build": 27
+      },
+      "GEO_03D.int": {
+        "rows": 76,
+        "catalog_rows": 39,
+        "missing_from_catalog": 37,
+        "missing_from_build": 37
+      },
+      "GEO_04A.int": {
+        "rows": 47,
+        "catalog_rows": 33,
+        "missing_from_catalog": 14,
+        "missing_from_build": 14
+      },
+      "GEO_04B.int": {
+        "rows": 42,
+        "catalog_rows": 30,
+        "missing_from_catalog": 12,
+        "missing_from_build": 12
+      },
+      "GEO_04C.int": {
+        "rows": 109,
+        "catalog_rows": 82,
+        "missing_from_catalog": 27,
+        "missing_from_build": 27
+      },
+      "GEO_04D.int": {
+        "rows": 91,
+        "catalog_rows": 58,
+        "missing_from_catalog": 33,
+        "missing_from_build": 33
+      },
+      "GEO_05A.int": {
+        "rows": 35,
+        "catalog_rows": 27,
+        "missing_from_catalog": 8,
+        "missing_from_build": 8
+      },
+      "GEO_05B.int": {
+        "rows": 94,
+        "catalog_rows": 67,
+        "missing_from_catalog": 27,
+        "missing_from_build": 27
+      },
+      "GEO_05C.int": {
+        "rows": 84,
+        "catalog_rows": 46,
+        "missing_from_catalog": 38,
+        "missing_from_build": 38
+      },
+      "PRO.int": {
+        "rows": 20,
+        "catalog_rows": 20,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "RAS_01A.int": {
+        "rows": 23,
+        "catalog_rows": 19,
+        "missing_from_catalog": 4,
+        "missing_from_build": 4
+      },
+      "RAS_01B.int": {
+        "rows": 33,
+        "catalog_rows": 25,
+        "missing_from_catalog": 8,
+        "missing_from_build": 8
+      },
+      "RAS_01Briefing.int": {
+        "rows": 8,
+        "catalog_rows": 8,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "RAS_01C.int": {
+        "rows": 42,
+        "catalog_rows": 32,
+        "missing_from_catalog": 10,
+        "missing_from_build": 10
+      },
+      "RAS_02A.int": {
+        "rows": 8,
+        "catalog_rows": 5,
+        "missing_from_catalog": 3,
+        "missing_from_build": 3
+      },
+      "RAS_02B.int": {
+        "rows": 41,
+        "catalog_rows": 18,
+        "missing_from_catalog": 23,
+        "missing_from_build": 23
+      },
+      "RAS_02C.int": {
+        "rows": 34,
+        "catalog_rows": 21,
+        "missing_from_catalog": 13,
+        "missing_from_build": 13
+      },
+      "RAS_02D.int": {
+        "rows": 60,
+        "catalog_rows": 26,
+        "missing_from_catalog": 34,
+        "missing_from_build": 34
+      },
+      "RAS_02E.int": {
+        "rows": 86,
+        "catalog_rows": 44,
+        "missing_from_catalog": 42,
+        "missing_from_build": 42
+      },
+      "RAS_03A.int": {
+        "rows": 89,
+        "catalog_rows": 43,
+        "missing_from_catalog": 46,
+        "missing_from_build": 46
+      },
+      "RAS_03B.int": {
+        "rows": 59,
+        "catalog_rows": 40,
+        "missing_from_catalog": 19,
+        "missing_from_build": 19
+      },
+      "RAS_03C.int": {
+        "rows": 48,
+        "catalog_rows": 26,
+        "missing_from_catalog": 22,
+        "missing_from_build": 22
+      },
+      "RAS_04A.int": {
+        "rows": 88,
+        "catalog_rows": 24,
+        "missing_from_catalog": 64,
+        "missing_from_build": 64
+      },
+      "RAS_04B.int": {
+        "rows": 95,
+        "catalog_rows": 26,
+        "missing_from_catalog": 69,
+        "missing_from_build": 69
+      },
+      "RAS_04C.int": {
+        "rows": 138,
+        "catalog_rows": 40,
+        "missing_from_catalog": 98,
+        "missing_from_build": 98
+      },
+      "RAS_04D.int": {
+        "rows": 59,
+        "catalog_rows": 43,
+        "missing_from_catalog": 16,
+        "missing_from_build": 16
+      },
+      "YYY07Briefing.int": {
+        "rows": 8,
+        "catalog_rows": 8,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "YYY_01B.int": {
+        "rows": 39,
+        "catalog_rows": 20,
+        "missing_from_catalog": 19,
+        "missing_from_build": 19
+      },
+      "YYY_01Briefing.int": {
+        "rows": 8,
+        "catalog_rows": 8,
+        "missing_from_catalog": 0,
+        "missing_from_build": 0
+      },
+      "YYY_01C.int": {
+        "rows": 35,
+        "catalog_rows": 19,
+        "missing_from_catalog": 16,
+        "missing_from_build": 16
+      },
+      "YYY_01D.int": {
+        "rows": 42,
+        "catalog_rows": 24,
+        "missing_from_catalog": 18,
+        "missing_from_build": 18
+      },
+      "YYY_01E.int": {
+        "rows": 71,
+        "catalog_rows": 46,
+        "missing_from_catalog": 25,
+        "missing_from_build": 25
+      },
+      "YYY_04A.int": {
+        "rows": 19,
+        "catalog_rows": 17,
+        "missing_from_catalog": 2,
+        "missing_from_build": 2
+      },
+      "YYY_04B.int": {
+        "rows": 49,
+        "catalog_rows": 33,
+        "missing_from_catalog": 16,
+        "missing_from_build": 16
+      },
+      "YYY_04C.int": {
+        "rows": 66,
+        "catalog_rows": 37,
+        "missing_from_catalog": 29,
+        "missing_from_build": 29
+      },
+      "YYY_04E.int": {
+        "rows": 51,
+        "catalog_rows": 37,
+        "missing_from_catalog": 14,
+        "missing_from_build": 14
+      },
+      "YYY_04F.int": {
+        "rows": 57,
+        "catalog_rows": 34,
+        "missing_from_catalog": 23,
+        "missing_from_build": 23
+      },
+      "YYY_05A.int": {
+        "rows": 45,
+        "catalog_rows": 17,
+        "missing_from_catalog": 28,
+        "missing_from_build": 28
+      },
+      "YYY_05B.int": {
+        "rows": 64,
+        "catalog_rows": 35,
+        "missing_from_catalog": 29,
+        "missing_from_build": 29
+      },
+      "YYY_05C.int": {
+        "rows": 95,
+        "catalog_rows": 42,
+        "missing_from_catalog": 53,
+        "missing_from_build": 53
+      },
+      "YYY_05D.int": {
+        "rows": 112,
+        "catalog_rows": 43,
+        "missing_from_catalog": 69,
+        "missing_from_build": 69
+      },
+      "YYY_05E.int": {
+        "rows": 83,
+        "catalog_rows": 45,
+        "missing_from_catalog": 38,
+        "missing_from_build": 38
+      },
+      "YYY_05F.int": {
+        "rows": 55,
+        "catalog_rows": 31,
+        "missing_from_catalog": 24,
+        "missing_from_build": 24
+      },
+      "YYY_06A.int": {
+        "rows": 87,
+        "catalog_rows": 48,
+        "missing_from_catalog": 39,
+        "missing_from_build": 39
+      },
+      "YYY_06B.int": {
+        "rows": 111,
+        "catalog_rows": 51,
+        "missing_from_catalog": 60,
+        "missing_from_build": 60
+      },
+      "YYY_06C.int": {
+        "rows": 143,
+        "catalog_rows": 85,
+        "missing_from_catalog": 58,
+        "missing_from_build": 58
+      },
+      "YYY_06D.int": {
+        "rows": 174,
+        "catalog_rows": 89,
+        "missing_from_catalog": 85,
+        "missing_from_build": 85
+      },
+      "YYY_35A.int": {
+        "rows": 41,
+        "catalog_rows": 24,
+        "missing_from_catalog": 17,
+        "missing_from_build": 17
+      },
+      "YYY_35B.int": {
+        "rows": 96,
+        "catalog_rows": 38,
+        "missing_from_catalog": 58,
+        "missing_from_build": 58
+      },
+      "YYY_35C.int": {
+        "rows": 43,
+        "catalog_rows": 20,
+        "missing_from_catalog": 23,
+        "missing_from_build": 23
+      }
+    }
+  },
+  "map_catalog_build_consistency": {
+    "totals": {
+      "files": 99,
+      "catalog_rows": 7839,
+      "missing_build": 0
+    },
+    "by_file": {
+      "ctf_detention": {
+        "catalog_rows": 37,
+        "missing_from_build": 0
+      },
+      "ctf_engine": {
+        "catalog_rows": 38,
+        "missing_from_build": 0
+      },
+      "ctf_hangar": {
+        "catalog_rows": 35,
+        "missing_from_build": 0
+      },
+      "ctf_hanginggarden": {
+        "catalog_rows": 46,
+        "missing_from_build": 0
+      },
+      "ctf_pow": {
+        "catalog_rows": 42,
+        "missing_from_build": 0
+      },
+      "ctf_siege": {
+        "catalog_rows": 31,
+        "missing_from_build": 0
+      },
+      "ctf_trando": {
+        "catalog_rows": 43,
+        "missing_from_build": 0
+      },
+      "ctf_underpass": {
+        "catalog_rows": 33,
+        "missing_from_build": 0
+      },
+      "ctf_zerog": {
+        "catalog_rows": 38,
+        "missing_from_build": 0
+      },
+      "dm_canyon": {
+        "catalog_rows": 18,
+        "missing_from_build": 0
+      },
+      "dm_detention": {
+        "catalog_rows": 31,
+        "missing_from_build": 0
+      },
+      "dm_engine": {
+        "catalog_rows": 32,
+        "missing_from_build": 0
+      },
+      "dm_hangar": {
+        "catalog_rows": 29,
+        "missing_from_build": 0
+      },
+      "dm_hanginggarden": {
+        "catalog_rows": 40,
+        "missing_from_build": 0
+      },
+      "dm_pow": {
+        "catalog_rows": 36,
+        "missing_from_build": 0
+      },
+      "dm_powsmall": {
+        "catalog_rows": 16,
+        "missing_from_build": 0
+      },
+      "dm_siege": {
+        "catalog_rows": 25,
+        "missing_from_build": 0
+      },
+      "dm_trando": {
+        "catalog_rows": 37,
+        "missing_from_build": 0
+      },
+      "dm_underpass": {
+        "catalog_rows": 27,
+        "missing_from_build": 0
+      },
+      "dm_zerog": {
+        "catalog_rows": 32,
+        "missing_from_build": 0
+      },
+      "epilogue": {
+        "catalog_rows": 6,
+        "missing_from_build": 0
+      },
+      "geo_01a": {
+        "catalog_rows": 60,
+        "missing_from_build": 0
+      },
+      "geo_01b": {
+        "catalog_rows": 52,
+        "missing_from_build": 0
+      },
+      "geo_01briefing": {
+        "catalog_rows": 2,
+        "missing_from_build": 0
+      },
+      "geo_01c": {
+        "catalog_rows": 42,
+        "missing_from_build": 0
+      },
+      "geo_03a": {
+        "catalog_rows": 35,
+        "missing_from_build": 0
+      },
+      "geo_03c": {
+        "catalog_rows": 20,
+        "missing_from_build": 0
+      },
+      "geo_03d": {
+        "catalog_rows": 39,
+        "missing_from_build": 0
+      },
+      "geo_04a": {
+        "catalog_rows": 33,
+        "missing_from_build": 0
+      },
+      "geo_04b": {
+        "catalog_rows": 30,
+        "missing_from_build": 0
+      },
+      "geo_04c": {
+        "catalog_rows": 82,
+        "missing_from_build": 0
+      },
+      "geo_04d": {
+        "catalog_rows": 58,
+        "missing_from_build": 0
+      },
+      "geo_05a": {
+        "catalog_rows": 27,
+        "missing_from_build": 0
+      },
+      "geo_05b": {
+        "catalog_rows": 67,
+        "missing_from_build": 0
+      },
+      "geo_05c": {
+        "catalog_rows": 46,
+        "missing_from_build": 0
+      },
+      "geo_titlecard": {
+        "catalog_rows": 21,
+        "missing_from_build": 0
+      },
+      "pro": {
+        "catalog_rows": 20,
+        "missing_from_build": 0
+      },
+      "ras_01a": {
+        "catalog_rows": 19,
+        "missing_from_build": 0
+      },
+      "ras_01b": {
+        "catalog_rows": 25,
+        "missing_from_build": 0
+      },
+      "ras_01briefing": {
+        "catalog_rows": 8,
+        "missing_from_build": 0
+      },
+      "ras_01c": {
+        "catalog_rows": 32,
+        "missing_from_build": 0
+      },
+      "ras_02a": {
+        "catalog_rows": 5,
+        "missing_from_build": 0
+      },
+      "ras_02b": {
+        "catalog_rows": 18,
+        "missing_from_build": 0
+      },
+      "ras_02c": {
+        "catalog_rows": 21,
+        "missing_from_build": 0
+      },
+      "ras_02d": {
+        "catalog_rows": 26,
+        "missing_from_build": 0
+      },
+      "ras_02e": {
+        "catalog_rows": 44,
+        "missing_from_build": 0
+      },
+      "ras_03a": {
+        "catalog_rows": 43,
+        "missing_from_build": 0
+      },
+      "ras_03b": {
+        "catalog_rows": 40,
+        "missing_from_build": 0
+      },
+      "ras_03c": {
+        "catalog_rows": 26,
+        "missing_from_build": 0
+      },
+      "ras_04a": {
+        "catalog_rows": 24,
+        "missing_from_build": 0
+      },
+      "ras_04b": {
+        "catalog_rows": 26,
+        "missing_from_build": 0
+      },
+      "ras_04c": {
+        "catalog_rows": 40,
+        "missing_from_build": 0
+      },
+      "ras_04d": {
+        "catalog_rows": 43,
+        "missing_from_build": 0
+      },
+      "ras_titlecard": {
+        "catalog_rows": 26,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_01": {
+        "catalog_rows": 666,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_01_hangar": {
+        "catalog_rows": 2,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_01briefing": {
+        "catalog_rows": 50,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_03": {
+        "catalog_rows": 460,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_04": {
+        "catalog_rows": 382,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_04briefing": {
+        "catalog_rows": 28,
+        "missing_from_build": 0
+      },
+      "subtitles_geo_05": {
+        "catalog_rows": 272,
+        "missing_from_build": 0
+      },
+      "subtitles_ras_01": {
+        "catalog_rows": 302,
+        "missing_from_build": 0
+      },
+      "subtitles_ras_01briefing": {
+        "catalog_rows": 52,
+        "missing_from_build": 0
+      },
+      "subtitles_ras_02": {
+        "catalog_rows": 336,
+        "missing_from_build": 0
+      },
+      "subtitles_ras_03": {
+        "catalog_rows": 308,
+        "missing_from_build": 0
+      },
+      "subtitles_ras_04": {
+        "catalog_rows": 390,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_01": {
+        "catalog_rows": 522,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_01briefing": {
+        "catalog_rows": 36,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_03": {
+        "catalog_rows": 198,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_03briefing": {
+        "catalog_rows": 16,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_04": {
+        "catalog_rows": 496,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_04briefing": {
+        "catalog_rows": 42,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_05": {
+        "catalog_rows": 260,
+        "missing_from_build": 0
+      },
+      "subtitles_yyy_06": {
+        "catalog_rows": 372,
+        "missing_from_build": 0
+      },
+      "yyy07briefing": {
+        "catalog_rows": 8,
+        "missing_from_build": 0
+      },
+      "yyy_01b": {
+        "catalog_rows": 20,
+        "missing_from_build": 0
+      },
+      "yyy_01briefing": {
+        "catalog_rows": 8,
+        "missing_from_build": 0
+      },
+      "yyy_01c": {
+        "catalog_rows": 19,
+        "missing_from_build": 0
+      },
+      "yyy_01d": {
+        "catalog_rows": 24,
+        "missing_from_build": 0
+      },
+      "yyy_01e": {
+        "catalog_rows": 46,
+        "missing_from_build": 0
+      },
+      "yyy_04a": {
+        "catalog_rows": 17,
+        "missing_from_build": 0
+      },
+      "yyy_04b": {
+        "catalog_rows": 33,
+        "missing_from_build": 0
+      },
+      "yyy_04c": {
+        "catalog_rows": 37,
+        "missing_from_build": 0
+      },
+      "yyy_04e": {
+        "catalog_rows": 37,
+        "missing_from_build": 0
+      },
+      "yyy_04f": {
+        "catalog_rows": 34,
+        "missing_from_build": 0
+      },
+      "yyy_05a": {
+        "catalog_rows": 17,
+        "missing_from_build": 0
+      },
+      "yyy_05b": {
+        "catalog_rows": 35,
+        "missing_from_build": 0
+      },
+      "yyy_05c": {
+        "catalog_rows": 42,
+        "missing_from_build": 0
+      },
+      "yyy_05d": {
+        "catalog_rows": 43,
+        "missing_from_build": 0
+      },
+      "yyy_05e": {
+        "catalog_rows": 45,
+        "missing_from_build": 0
+      },
+      "yyy_05f": {
+        "catalog_rows": 31,
+        "missing_from_build": 0
+      },
+      "yyy_06a": {
+        "catalog_rows": 48,
+        "missing_from_build": 0
+      },
+      "yyy_06b": {
+        "catalog_rows": 51,
+        "missing_from_build": 0
+      },
+      "yyy_06c": {
+        "catalog_rows": 85,
+        "missing_from_build": 0
+      },
+      "yyy_06d": {
+        "catalog_rows": 89,
+        "missing_from_build": 0
+      },
+      "yyy_35a": {
+        "catalog_rows": 24,
+        "missing_from_build": 0
+      },
+      "yyy_35b": {
+        "catalog_rows": 38,
+        "missing_from_build": 0
+      },
+      "yyy_35c": {
+        "catalog_rows": 20,
+        "missing_from_build": 0
+      },
+      "yyy_titlecard": {
+        "catalog_rows": 26,
+        "missing_from_build": 0
+      }
+    }
+  },
+  "steam_ctm_object_coverage": {
+    "maps": 79,
+    "effective_localized_candidates": 3986,
+    "by_origin": {
+      "class_default": 3775,
+      "direct_instance": 160,
+      "direct_instance_array": 51
+    },
+    "by_coverage": {
+      "localized_class_default": 1486,
+      "map_instance": 2500
+    },
+    "explicit_instance_candidates": 211,
+    "explicit_instance_gaps": 0,
+    "inherited_map_rows_omitted_but_class_covered": 1486,
+    "true_runtime_gaps": 0,
+    "true_gaps": [],
+    "true_gaps_by_key": {},
+    "true_gaps_by_map": {},
+    "unknown_object_classes": {}
+  }
+}

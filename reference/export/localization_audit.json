@@ -1,6 +1,6 @@
 {
   "tool": "make_translation_json.py",
-  "generated_at": "2026-07-13T02:33:56.016402+00:00",
+  "generated_at": "2026-07-13T08:19:47.631764+00:00",
   "input_roots": {
     "english_system": "../../GameData/System",
     "english_properties": "../../GameData/Properties",
@@ -23,11 +23,10 @@
     "merge_saved_entries": 3721,
     "merged_en_jp_groups": 693,
     "merged_translation_entries": 4414,
-    "new_blank_zh_CN": 17,
     "package_orphan_entries": 182,
     "passthrough_literal_normalized": 7,
-    "preserved_zh_CN": 8747,
-    "restored_from_shared": 4412,
+    "preserved_zh_CN": 8763,
+    "restored_from_shared": 4414,
     "shared_translation_entries": 693,
     "skipped_emit_error": 2,
     "skipped_no_source": 1682,
@@ -36,19 +35,24 @@
     "source_levelinfo_default": 56,
     "source_map_t3d_or_default": 1853,
     "steam_locked_localized_literals": 9,
+    "steam_map_explicit_already_cataloged": 159,
+    "steam_map_explicit_empty_ignored": 2,
+    "steam_map_explicit_localized_candidates": 162,
+    "steam_map_explicit_non_string_ignored": 0,
+    "steam_map_instance_localized_entries": 1,
     "steam_runtime_localized_entries": 17,
-    "steam_translation_seeds": 17,
     "steam_xbox_excluded_localized": 10,
-    "string_entries": 6425,
+    "string_entries": 6426,
     "subtitle_pairs": 5975,
     "template_entries": 270,
     "tuple_entries": 506,
     "jp_files": 147,
     "en_files": 76,
     "catalog_files": 148,
-    "translation_groups": 765,
-    "translation_entries": 9455,
+    "translation_groups": 766,
+    "translation_entries": 9456,
     "skipped_entries": 1684,
+    "new_blank_zh_CN": 0,
     "reset_zh_CN": 0,
     "preserved_translation_with_jp_change": 0,
     "subtitle_passthrough_literal_rows": 0,
@@ -249,6 +253,15 @@
     }
   ],
   "malformed_en_rows": [],
+  "steam_map_scope": {
+    "source": ".originalbackup/GameData/Maps",
+    "active_maps": 80,
+    "steam_maps": 79,
+    "excluded_active_maps": [
+      "autoplay"
+    ],
+    "content_verification": "sha256 matched for 79 maps"
+  },
   "class_exports": {
     "core": {
       "package": "System/core.u",
@@ -274,6 +287,12 @@
       "classes": 199,
       "ucc_lines": 204
     },
+    "ctmarkers": {
+      "package": "System/ctmarkers.u",
+      "package_arg": "ctmarkers.u",
+      "classes": 25,
+      "ucc_lines": 30
+    },
     "editor": {
       "package": "System/editor.u",
       "package_arg": "editor.u",
@@ -297,6 +316,12 @@
       "package_arg": "ipdrv.u",
       "classes": 17,
       "ucc_lines": 22
+    },
+    "markerproperties": {
+      "package": "Properties/markerproperties.u",
+      "package_arg": "..\\Properties\\markerproperties.u",
+      "classes": 61,
+      "ucc_lines": 67
     },
     "Mod": {
       "package": "System/Mod.u",
@@ -382,10 +407,12 @@
     "ctcharacters",
     "ctgame",
     "ctinventory",
+    "ctmarkers",
     "editor",
     "engine",
     "gameplay",
     "ipdrv",
+    "markerproperties",
     "Mod",
     "mpgame",
     "properties",
@@ -400,8 +427,13 @@
     "xinterfacelive",
     "xinterfacemp"
   ],
-  "loaded_class_count": 1936,
+  "loaded_class_count": 2022,
   "class_count": 1936,
+  "map_discovery_class_count": 2022,
+  "map_discovery_only_packages": [
+    "ctmarkers",
+    "markerproperties"
+  ],
   "en_passthrough_literals": {
     "GameData/System/alaudio.cht": [
       {
@@ -933,6 +965,98 @@
     "yyy_35c.ctm": {
       "t3d_bytes": 616405,
       "ucc_lines": 11
+    },
+    "1138.ctm": {
+      "t3d_bytes": 220883,
+      "ucc_lines": 6
+    },
+    "ctf_detention.ctm": {
+      "t3d_bytes": 1643328,
+      "ucc_lines": 6
+    },
+    "ctf_engine.ctm": {
+      "t3d_bytes": 1785796,
+      "ucc_lines": 6
+    },
+    "ctf_hangar.ctm": {
+      "t3d_bytes": 874018,
+      "ucc_lines": 6
+    },
+    "ctf_hanginggarden.ctm": {
+      "t3d_bytes": 1265128,
+      "ucc_lines": 6
+    },
+    "ctf_pow.ctm": {
+      "t3d_bytes": 1641188,
+      "ucc_lines": 6
+    },
+    "ctf_siege.ctm": {
+      "t3d_bytes": 593416,
+      "ucc_lines": 6
+    },
+    "ctf_trando.ctm": {
+      "t3d_bytes": 1458312,
+      "ucc_lines": 6
+    },
+    "ctf_underpass.ctm": {
+      "t3d_bytes": 1263058,
+      "ucc_lines": 6
+    },
+    "ctf_zerog.ctm": {
+      "t3d_bytes": 347295,
+      "ucc_lines": 6
+    },
+    "dm_canyon.ctm": {
+      "t3d_bytes": 289301,
+      "ucc_lines": 11
+    },
+    "dm_detention.ctm": {
+      "t3d_bytes": 1644632,
+      "ucc_lines": 6
+    },
+    "dm_engine.ctm": {
+      "t3d_bytes": 1778239,
+      "ucc_lines": 6
+    },
+    "dm_hangar.ctm": {
+      "t3d_bytes": 871967,
+      "ucc_lines": 6
+    },
+    "dm_hanginggarden.ctm": {
+      "t3d_bytes": 1269002,
+      "ucc_lines": 6
+    },
+    "dm_pow.ctm": {
+      "t3d_bytes": 1642158,
+      "ucc_lines": 6
+    },
+    "dm_powsmall.ctm": {
+      "t3d_bytes": 343143,
+      "ucc_lines": 6
+    },
+    "dm_siege.ctm": {
+      "t3d_bytes": 594636,
+      "ucc_lines": 6
+    },
+    "dm_trando.ctm": {
+      "t3d_bytes": 1464365,
+      "ucc_lines": 6
+    },
+    "dm_underpass.ctm": {
+      "t3d_bytes": 1264177,
+      "ucc_lines": 6
+    },
+    "dm_zerog.ctm": {
+      "t3d_bytes": 344082,
+      "ucc_lines": 6
+    },
+    "entry.ctm": {
+      "t3d_bytes": 9623,
+      "ucc_lines": 6
+    },
+    "mpcustom.ctm": {
+      "t3d_bytes": 33176,
+      "ucc_lines": 6
     }
   },
   "class_default_prefix_fallbacks": [
@@ -7998,6 +8122,182 @@
       "properties.CTDamageStun.MaleSuicide"
     ]
   },
+  "steam_map_instance_localized_discovery": {
+    "maps_scanned": 79,
+    "objects_scanned": 104382,
+    "explicit_localized_candidates": 162,
+    "already_cataloged": 159,
+    "empty_ignored": 2,
+    "non_string_ignored": 0,
+    "added": 1,
+    "rows": [
+      {
+        "map": "geo_01b",
+        "section": "HackTerminalGeo0",
+        "object_class": "HackTerminalGeo",
+        "key": "ActivatePromptText",
+        "en": "PRESS AND HOLD @ TO SLICE SHIELD CONSOLE",
+        "entry": "GEO_01B.HackTerminalGeo0/1",
+        "seeded_zh_CN": true
+      }
+    ],
+    "unknown_object_classes": {
+      "AATurret": 1,
+      "AmmoLoader": 1,
+      "BlankSystem": 10,
+      "Blue_Sparks": 1,
+      "CloneCommandoHelmet": 1,
+      "Custom_GEO3A_Smoke_Jammer": 1,
+      "Custom_YYY04f_Explo_Bridge_Main": 1,
+      "DestTree": 1,
+      "Dispenser_Landing_Thruster": 53,
+      "DroneEgg": 40,
+      "DroneEggDrop": 37,
+      "Dust_Blowing": 2,
+      "EndLevelIconProp": 47,
+      "FactoryShield": 6,
+      "Falling_Embers": 2,
+      "Falling_Leaves": 5,
+      "Falling_Leaves_Epilogue": 1,
+      "Fire_Lrg": 36,
+      "Fire_Medium": 82,
+      "Fire_Medium_NoFire": 21,
+      "Fire_Smll": 32,
+      "Flak_Multi": 2,
+      "Flying_Bugs": 37,
+      "Flying_Bugs_around_lights": 4,
+      "Flying_GEOWarriors": 2,
+      "Fog_Floor": 61,
+      "Fog_Light": 4,
+      "GEO04_AmmoClip": 18,
+      "GEO04_WallConduit": 88,
+      "GEO05_Barrel": 66,
+      "GEO05_DockingRing": 1,
+      "GEO05_Generator": 83,
+      "GEO4_Console": 28,
+      "GEO4_Display": 13,
+      "GEO4_HoloMachine": 3,
+      "GEO4_RockCover00": 9,
+      "GEO4_RockCover01": 1,
+      "GEODestructableGrid": 2,
+      "Geo4MachinePart1": 1,
+      "Geo4MachinePart2": 2,
+      "Geo4MachinePart3": 3,
+      "GeoBarrel": 46,
+      "GeoShield": 5,
+      "Geo_04Component": 10,
+      "HoloProjector": 8,
+      "Holo_Advisor": 7,
+      "Holo_BattleDroid": 2,
+      "Holo_DC17m": 5,
+      "Holo_Flash": 3,
+      "Holo_GeoDrone": 2,
+      "Holo_GeoWarrior": 1,
+      "Holo_Glow_V1": 3,
+      "Holo_GunshipLow": 3,
+      "Holo_Slaver": 2,
+      "Holo_WHT": 5,
+      "JammingDevice": 2,
+      "K_GEO03ABridgeChunk1": 1,
+      "K_GEO03ABridgeChunk2": 1,
+      "K_GEO03ABridgeChunk3": 1,
+      "K_GEO03FallingRockPiece1": 1,
+      "K_GEO04_WallComponent": 89,
+      "K_GEO05DroidRack": 2,
+      "K_GEO4CrashDebris": 21,
+      "K_GEO4FighterDestroyed": 4,
+      "K_GEO4Rock1": 4,
+      "K_GEO4Rock2": 3,
+      "K_GEO4Rock3": 3,
+      "K_GEO4Rock4": 6,
+      "K_GEO4Rock5": 1,
+      "K_GEO4_FallingRock1": 16,
+      "K_GEO4_FallingRock2": 14,
+      "K_GEO4_FallingRock3": 16,
+      "K_GEO5_LightPanelA": 101,
+      "K_GEO5_WallPanelA": 36,
+      "K_GEOBriefingChunk": 1,
+      "K_GazeboWindow": 6,
+      "K_GeoBarrel": 29,
+      "K_Geo_04_Ammo": 1,
+      "K_POWSpotLight": 6,
+      "K_RASBarricadePiece1": 4,
+      "K_RASExplodingBarricade": 2,
+      "K_SwingingLight": 5,
+      "K_TRNCatwalkFall": 1,
+      "K_TrandoHeatLamp": 56,
+      "K_TrandoOilDrum": 15,
+      "K_TrandoScalyPlate": 15,
+      "K_YYYCrateB": 37,
+      "K_YYYCrateC": 1,
+      "K_YYY_hallcan": 368,
+      "Light_Burst4": 1,
+      "Light_Burst5": 1,
+      "MainTarget": 2,
+      "MoverGame": 2,
+      "MoverLightBeamTRN": 6,
+      "POW_WeakWall": 2,
+      "REP_Gunship_GroundDust": 3,
+      "RainWater_Drips": 34,
+      "RainWater_Pour_A": 1,
+      "Rain_Heavy": 41,
+      "Rain_Hits": 17,
+      "Rope": 47,
+      "SeperatistCruiser": 2,
+      "Shield_Generator_Core": 11,
+      "Shield_Generator_FX": 3,
+      "Smoke_Lrg_black": 6,
+      "Smoke_Medium": 7,
+      "Sparks_Blue": 2,
+      "Sparks_Looping": 37,
+      "Sparks_Lrge_Looping": 7,
+      "Sparks_Wielding": 1,
+      "SpireBigSmoke": 4,
+      "SpireSteam": 11,
+      "SteamHot_Side": 3,
+      "Steam_Around_Lights": 4,
+      "Steam_Jet": 5,
+      "Steam_Side": 66,
+      "Steam_Side_Blue": 27,
+      "Steam_Side_Green": 5,
+      "Steam_Side_Red": 2,
+      "Steam_Side_Simple": 7,
+      "Steam_Side_Slow": 1,
+      "Steam_SlowFromVent": 96,
+      "Steam_SlowFromVent_Red": 19,
+      "Watchtower_leg1": 2,
+      "Watchtower_leg2": 2,
+      "Watchtower_net": 1,
+      "Watchtower_top": 1,
+      "WhiteSmoke": 1,
+      "WindowShatter_ButtressRoom": 2,
+      "WindowShatter_Test": 6,
+      "WookieeBalloon": 10,
+      "YYY01_ConcGuyProp": 36,
+      "YYY_01BriefingMist": 7,
+      "YYY_035_Spot": 1,
+      "YYY_06Target": 7,
+      "YYY_DestTreeStatic": 1,
+      "YYY_DestTree_col": 2,
+      "YYY_Tank_Destructable": 20,
+      "cFX_GEO1briefing_DistantBattle": 4,
+      "cFX_GEO3_ConveyerShield": 11,
+      "cFX_GEOfighters": 4,
+      "cFX_Gunships": 19,
+      "cFX_PRO_REPCruiser_EngineGlow": 11,
+      "cFX_PRO_WalkingClones_Slow": 1,
+      "cFX_PowerSphere": 3,
+      "cFX_RAS4d_EnergyBeam": 4,
+      "cFX_RAS4d_EnergyBlast": 4,
+      "cFX_SepShip_Lasers_ver1": 13,
+      "cFX_ShootingLaserbolts_Wookiee": 15,
+      "cFX_ZeroG_Wall_B": 16,
+      "cRAS4_DroidShip_Explode": 1,
+      "cRAS4_Shield_Open": 5,
+      "cRAS4_Shield_functioning": 1
+    },
+    "suspicious_unknown_class_fields": []
+  },
   "inherited_localized_fanout": {
     "total": 7,
     "rows": [
@@ -9343,5 +9643,14 @@
         "missing": []
       }
     }
+  },
+  "build_validation": {
+    "ok": true,
+    "generated_files": 148,
+    "total_entries": 19822,
+    "total_bytes": 629635,
+    "untranslated_fallbacks": 0,
+    "bare_upgraded_to_quoted": 0,
+    "stdout_lines": 149
   }
 }

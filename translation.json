@@ -74227,5 +74227,14 @@
       "de": "Teambeschuss",
       "zh_CN": "友军伤害比例"
     }
+  },
+  "GEO_01B.HackTerminalGeo0": {
+    "1": {
+      "note": "ActivatePromptText",
+      "en": "PRESS AND HOLD @ TO SLICE SHIELD CONSOLE",
+      "jp": "",
+      "de": "@ DRÜCKEN UND HALTEN, UM SCHILDKONSOLE ZU HACKEN",
+      "zh_CN": "按住@骇入护盾控制台"
+    }
   }
 }

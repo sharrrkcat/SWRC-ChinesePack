@@ -9,6 +9,7 @@ every user-editable ``zh_CN`` field is left blank.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -38,6 +39,7 @@ GAME_DATA = GAME_ROOT / "GameData"
 SYSTEM_DIR = GAME_DATA / "System"
 PROPERTIES_DIR = GAME_DATA / "Properties"
 MAPS_DIR = GAME_DATA / "Maps"
+ORIGINAL_MAPS_DIR = GAME_ROOT / ".originalbackup" / "GameData" / "Maps"
 JP_SYSTEM_DIR = LANG_DIR / "JapanesePack" / "System"
 EXPORT_DIR = ROOT_DIR / "reference" / "export"
 
@@ -89,6 +91,13 @@ NON_RETAIL_CLASS_PREFIXES = (
     "CT_PCDemo_", "CT_Tokyo_", "CT_E3_", "CT_Xbox",
 )
 
+# Map instance localization lives on classes from these packages even though
+# the official Japanese map indexes do not have matching package-level .int
+# files.  Export them explicitly so reverse CTM discovery can follow the full
+# localized declaration chain instead of relying on key-name heuristics.
+MAP_LOCALIZATION_CLASS_PACKAGES = {"MarkerProperties", "CTMarkers"}
+NON_STEAM_MAP_STEMS = {"autoplay"}
+
 # Steam PC runtime fields which are localized in the original packages but are
 # absent from the official JP .int index.  Literal fields must remain byte-for-
 # byte compatible with commands/protocol labels; excluded fields are confirmed
@@ -135,6 +144,13 @@ STEAM_NEW_TRANSLATION_SEEDS = {
     ("xinterfacectmenus", "CTMultiplayerPausePCMenu", "StringExitSpectatorMode"): "退出观战模式",
     ("xinterfacegamespy", "GameSpyMenuTemplate", "DedicatedServerLabel"): "专用服务器",
     ("xinterfacegamespy", "GameSpyMenuTemplate", "FriendlyFirePctLabel"): "友军伤害比例",
+}
+
+# Known Steam map overrides which have no row in the official Japanese index.
+# Discovery remains data-driven; these seeds only keep a newly found entry
+# buildable until translators can edit it normally in translation.json.
+STEAM_MAP_TRANSLATION_SEEDS = {
+    ("geo_01b", "hackterminalgeo0", "activateprompttext"): "按住@骇入护盾控制台",
 }
 
 STEAM_ALREADY_COVERED_DEFAULT_FIELDS = {
@@ -527,6 +543,66 @@ def build_package_case() -> dict[str, Path]:
     package_case = {p.stem.casefold(): p for p in PROPERTIES_DIR.glob("*.u")}
     package_case.update({p.stem.casefold(): p for p in SYSTEM_DIR.glob("*.u")})
     return package_case
+
+
+def build_steam_map_case(
+    audit: dict,
+    active_maps_dir: Path = MAPS_DIR,
+    original_maps_dir: Path = ORIGINAL_MAPS_DIR,
+) -> dict[str, Path]:
+    """Return active map paths restricted to the Steam retail map set."""
+    active = {path.stem.casefold(): path for path in active_maps_dir.glob("*.ctm")}
+    if original_maps_dir.exists():
+        original = {
+            path.stem.casefold(): path for path in original_maps_dir.glob("*.ctm")
+        }
+        missing_active = sorted(set(original) - set(active))
+        if missing_active:
+            fail(
+                "Steam original maps missing from active GameData/Maps: "
+                + ", ".join(missing_active)
+            )
+        mismatched = []
+        for stem, original_path in sorted(original.items()):
+            active_path = active[stem]
+            if sha256_file(active_path) != sha256_file(original_path):
+                mismatched.append(active_path.name)
+        if mismatched:
+            fail(
+                "active maps differ from the Steam original backup: "
+                + ", ".join(mismatched)
+            )
+        selected = {stem: active[stem] for stem in original}
+        scope_source = public_rel_path(original_maps_dir, GAME_ROOT)
+        excluded = sorted(set(active) - set(original))
+        content_verification = f"sha256 matched for {len(selected)} maps"
+    else:
+        selected = {
+            stem: path for stem, path in active.items()
+            if stem not in NON_STEAM_MAP_STEMS
+        }
+        scope_source = "built-in Steam exclusion fallback"
+        excluded = sorted(set(active) - set(selected))
+        content_verification = "not available: .originalbackup is absent"
+
+    audit["steam_map_scope"] = OrderedDict(
+        [
+            ("source", scope_source),
+            ("active_maps", len(active)),
+            ("steam_maps", len(selected)),
+            ("excluded_active_maps", excluded),
+            ("content_verification", content_verification),
+        ]
+    )
+    return selected
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def package_arg_for_ucc(package_file: Path) -> str:
@@ -1424,6 +1500,169 @@ def source_from_map(
             ]
         ),
     )
+
+
+def discover_map_instance_localized_overrides(
+    catalog_files,
+    translation,
+    allocator,
+    classes,
+    map_case,
+    t3d_cache,
+    t3d_temp,
+    de_index,
+    stats,
+    reset_translations,
+    audit,
+) -> None:
+    """Add explicit localized CTM properties missing from the JP map index.
+
+    Only properties physically serialized on a map object are considered.
+    Class defaults are deliberately not enumerated here: an unserialized
+    localized default continues to be supplied by its package-level .cht, and
+    expanding it once per map object would only create redundant rows.
+    """
+    discovered = []
+    unknown_classes = Counter()
+    maps_scanned = 0
+    objects_scanned = 0
+    explicit_candidates = 0
+    already_cataloged = 0
+    empty_ignored = 0
+    non_string_ignored = 0
+    suspicious_unknown = []
+
+    for _map_key, map_file in sorted(map_case.items(), key=lambda item: item[1].name.casefold()):
+        maps_scanned += 1
+        if map_file.name not in t3d_cache:
+            t3d_cache[map_file.name] = export_level_t3d(map_file, t3d_temp, audit)
+        map_objects = t3d_cache[map_file.name]
+        objects_scanned += len(map_objects)
+
+        output_path = catalog_output_for_package(catalog_files, map_file.stem)
+        rows = catalog_files.get(output_path, [])
+        covered = {
+            (row.get("section", "").casefold(), row.get("key", "").casefold())
+            for row in rows
+        }
+        file_stem = Path(output_path).stem
+
+        for obj in sorted(map_objects.values(), key=lambda item: item["name"].casefold()):
+            class_key = obj["class"].casefold()
+            if class_key not in classes:
+                unknown_classes[obj["class"]] += 1
+                for key, source in sorted(obj["props"].items(), key=lambda item: item[0].casefold()):
+                    if (
+                        _is_localizable_default_key(key)
+                        and source.kind == "string"
+                        and source.text
+                    ):
+                        suspicious_unknown.append(
+                            OrderedDict(
+                                [
+                                    ("map", map_file.stem),
+                                    ("section", obj["name"]),
+                                    ("object_class", obj["class"]),
+                                    ("key", key),
+                                    ("en", source.text),
+                                ]
+                            )
+                        )
+                continue
+            localized_roots = inherited_localized_strings(classes, obj["class"])
+            if not localized_roots:
+                continue
+
+            for key, source in sorted(obj["props"].items(), key=lambda item: item[0].casefold()):
+                if default_property_root(key) not in localized_roots:
+                    continue
+                explicit_candidates += 1
+                if source.kind != "string":
+                    non_string_ignored += 1
+                    continue
+                if not source.text:
+                    empty_ignored += 1
+                    continue
+
+                identity = (obj["name"].casefold(), key.casefold())
+                if identity in covered:
+                    already_cataloged += 1
+                    continue
+
+                de_val = de_index.get(
+                    (map_file.stem.casefold(), obj["name"].casefold(), key), ""
+                )
+                emitted = emit_from_source(
+                    catalog_files,
+                    translation,
+                    allocator,
+                    output_path,
+                    obj["name"],
+                    key,
+                    source,
+                    "",
+                    de_val,
+                    file_stem,
+                    stats,
+                    reset_translations,
+                )
+                if emitted != "string":
+                    fail(
+                        f"{output_path} [{obj['name']}] {key}: "
+                        f"explicit localized map override emitted as {emitted}"
+                    )
+                row = catalog_files[output_path][-1]
+                seed = STEAM_MAP_TRANSLATION_SEEDS.get(
+                    (map_file.stem.casefold(), obj["name"].casefold(), key.casefold())
+                )
+                if seed:
+                    seed_generated_translation(translation, row["entry"], seed, stats)
+                covered.add(identity)
+                stats["steam_map_instance_localized_entries"] += 1
+                discovered.append(
+                    OrderedDict(
+                        [
+                            ("map", map_file.stem),
+                            ("section", obj["name"]),
+                            ("object_class", obj["class"]),
+                            ("key", key),
+                            ("en", source.text),
+                            ("entry", row["entry"]),
+                            ("seeded_zh_CN", bool(seed)),
+                        ]
+                    )
+                )
+
+    stats["steam_map_explicit_localized_candidates"] += explicit_candidates
+    stats["steam_map_explicit_already_cataloged"] += already_cataloged
+    stats["steam_map_explicit_empty_ignored"] += empty_ignored
+    stats["steam_map_explicit_non_string_ignored"] += non_string_ignored
+    audit["steam_map_instance_localized_discovery"] = OrderedDict(
+        [
+            ("maps_scanned", maps_scanned),
+            ("objects_scanned", objects_scanned),
+            ("explicit_localized_candidates", explicit_candidates),
+            ("already_cataloged", already_cataloged),
+            ("empty_ignored", empty_ignored),
+            ("non_string_ignored", non_string_ignored),
+            ("added", len(discovered)),
+            ("rows", discovered),
+            ("unknown_object_classes", OrderedDict(sorted(unknown_classes.items()))),
+            ("suspicious_unknown_class_fields", suspicious_unknown),
+        ]
+    )
+    if non_string_ignored:
+        fail(
+            "Steam map discovery found localized string declarations with "
+            f"{non_string_ignored} non-string serialized values"
+        )
+    if suspicious_unknown:
+        sample = suspicious_unknown[0]
+        fail(
+            "Steam map discovery found a potentially localized field on an "
+            f"unexported class: {sample['map']} [{sample['section']}] "
+            f"{sample['object_class']}.{sample['key']}"
+        )
 
 
 def source_from_package(row: IntRow, classes: dict, audit: dict, origin: str) -> SourceValue | None:
@@ -2338,7 +2577,7 @@ def expand_inherited_localized_overrides(catalog_files, classes, stats, audit) -
 
         target_package = info["package"]
         target_path = catalog_output_for_package(catalog_files, target_package)
-        target_rows = catalog_files.setdefault(target_path, [])
+        target_rows = catalog_files.get(target_path, [])
         covered = {
             row["key"].casefold()
             for row in target_rows
@@ -2359,6 +2598,8 @@ def expand_inherited_localized_overrides(catalog_files, classes, stats, audit) -
                     continue
                 cloned = OrderedDict(source_row)
                 cloned["section"] = class_name
+                if target_path not in catalog_files:
+                    target_rows = catalog_files.setdefault(target_path, [])
                 target_rows.append(cloned)
                 covered.add(key_folded)
                 expanded.append(
@@ -2415,6 +2656,19 @@ def refresh_inherited_fanout_audit_refs(catalog_files, audit) -> None:
                 break
 
 
+def refresh_map_discovery_audit_refs(catalog_files, audit) -> None:
+    discovery = audit.get("steam_map_instance_localized_discovery", {})
+    for item in discovery.get("rows", []):
+        output_path = catalog_output_for_package(catalog_files, item["map"])
+        for row in catalog_files.get(output_path, []):
+            if (
+                row.get("section", "").casefold() == item["section"].casefold()
+                and row.get("key", "").casefold() == item["key"].casefold()
+            ):
+                item["entry"] = row.get("entry", "")
+                break
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skip-build-validation", action="store_true", help="只生成 JSON，不运行 build_langpack.py 临时校验")
@@ -2467,11 +2721,25 @@ def main(argv=None):
     audit["malformed_en_rows"] = malformed_en
 
     package_case = build_package_case()
-    map_case = {p.stem.casefold(): p for p in MAPS_DIR.glob("*.ctm")}
+    map_case = build_steam_map_case(audit)
     needed_packages = collect_needed_packages(jp_ints, en_ints, package_case)
-    exported_packages = ensure_class_exports(needed_packages, package_case, audit)
-    classes = load_class_defaults(exported_packages, audit)
+    map_class_packages = {
+        package_case[name.casefold()].stem
+        for name in MAP_LOCALIZATION_CLASS_PACKAGES
+        if name.casefold() in package_case
+    }
+    exported_packages = ensure_class_exports(
+        needed_packages | map_class_packages, package_case, audit
+    )
+    map_classes = load_class_defaults(exported_packages, audit)
+    map_only_package_keys = {name.casefold() for name in map_class_packages}
+    classes = {
+        name: info for name, info in map_classes.items()
+        if info.get("package", "").casefold() not in map_only_package_keys
+    }
     audit["class_count"] = len(classes)
+    audit["map_discovery_class_count"] = len(map_classes)
+    audit["map_discovery_only_packages"] = sorted(map_class_packages, key=str.casefold)
 
     existing_translation = load_existing_translation()
     allocator = EntryAllocator(existing_translation)
@@ -2632,6 +2900,12 @@ def main(argv=None):
         stats, args.reset_translations, audit,
     )
 
+    discover_map_instance_localized_overrides(
+        catalog_files, translation, allocator, map_classes,
+        map_case, t3d_cache, t3d_temp, de_index,
+        stats, args.reset_translations, audit,
+    )
+
     expand_inherited_localized_overrides(catalog_files, classes, stats, audit)
 
     reconcile_all_english_runtime_ints(
@@ -2647,6 +2921,7 @@ def main(argv=None):
         audit,
     )
     refresh_inherited_fanout_audit_refs(catalog_files, audit)
+    refresh_map_discovery_audit_refs(catalog_files, audit)
     validate_catalog_covers_en_runtime(catalog_files, en_outputs, audit)
 
     catalog = OrderedDict(

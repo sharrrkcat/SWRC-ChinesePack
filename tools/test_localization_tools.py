@@ -219,6 +219,130 @@ defaultproperties
         self.assertEqual(child_row["entry"], "shared.enjp/1")
         self.assertEqual(explicit["entry"], "explicit/1")
 
+    def test_explicit_map_localized_override_without_jp_row_is_discovered(self):
+        map_path = Path("GEO_TEST.ctm")
+        map_objects = {
+            "terminal0": {
+                "name": "Terminal0",
+                "class": "DerivedTerminal",
+                "props": {
+                    "PromptText": mtj.SourceValue("string", '"SPECIAL"', "SPECIAL"),
+                },
+            },
+        }
+        classes = {
+            "baseterminal": {
+                "name": "BaseTerminal", "parent": None, "package": "basepkg",
+                "defaults": {
+                    "PromptText": mtj.SourceValue("string", '"DEFAULT"', "DEFAULT"),
+                    "CancelText": mtj.SourceValue("string", '"CANCEL"', "CANCEL"),
+                },
+                "localized_strings": {"PromptText", "CancelText"},
+            },
+            "derivedterminal": {
+                "name": "DerivedTerminal", "parent": "BaseTerminal", "package": "mappkg",
+                "defaults": {}, "localized_strings": set(),
+            },
+        }
+        catalog = OrderedDict()
+        translation = OrderedDict(schema=mtj.TRANSLATION_SCHEMA)
+        stats = Counter()
+        audit = {}
+        mtj.discover_map_instance_localized_overrides(
+            catalog,
+            translation,
+            mtj.EntryAllocator(),
+            classes,
+            {"geo_test": map_path},
+            {map_path.name: map_objects},
+            Path("unused"),
+            {},
+            stats,
+            False,
+            audit,
+        )
+        rows = catalog["GameData/System/GEO_TEST.cht"]
+        self.assertEqual([(row["section"], row["key"]) for row in rows], [("Terminal0", "PromptText")])
+        self.assertEqual(audit["steam_map_instance_localized_discovery"]["added"], 1)
+        self.assertEqual(stats["steam_map_instance_localized_entries"], 1)
+
+        # Re-running discovery must not duplicate an already cataloged map key.
+        mtj.discover_map_instance_localized_overrides(
+            catalog,
+            translation,
+            mtj.EntryAllocator(translation),
+            classes,
+            {"geo_test": map_path},
+            {map_path.name: map_objects},
+            Path("unused"),
+            {},
+            stats,
+            False,
+            audit,
+        )
+        self.assertEqual(len(catalog["GameData/System/GEO_TEST.cht"]), 1)
+        self.assertEqual(audit["steam_map_instance_localized_discovery"]["already_cataloged"], 1)
+
+    def test_map_discovery_omits_inherited_defaults_and_explicit_empty_values(self):
+        map_path = Path("GEO_TEST.ctm")
+        map_objects = {
+            "terminal0": {
+                "name": "Terminal0",
+                "class": "Terminal",
+                "props": {
+                    "PromptText": mtj.SourceValue("string", '""', ""),
+                },
+            },
+        }
+        classes = {
+            "terminal": {
+                "name": "Terminal", "parent": None, "package": "basepkg",
+                "defaults": {
+                    "PromptText": mtj.SourceValue("string", '"DEFAULT"', "DEFAULT"),
+                    "CancelText": mtj.SourceValue("string", '"CANCEL"', "CANCEL"),
+                },
+                "localized_strings": {"PromptText", "CancelText"},
+            },
+        }
+        catalog = OrderedDict()
+        translation = OrderedDict(schema=mtj.TRANSLATION_SCHEMA)
+        stats = Counter()
+        audit = {}
+        mtj.discover_map_instance_localized_overrides(
+            catalog,
+            translation,
+            mtj.EntryAllocator(),
+            classes,
+            {"geo_test": map_path},
+            {map_path.name: map_objects},
+            Path("unused"),
+            {},
+            stats,
+            False,
+            audit,
+        )
+        self.assertNotIn("GameData/System/GEO_TEST.cht", catalog)
+        discovery = audit["steam_map_instance_localized_discovery"]
+        self.assertEqual(discovery["added"], 0)
+        self.assertEqual(discovery["empty_ignored"], 1)
+        self.assertEqual(discovery["explicit_localized_candidates"], 1)
+
+    def test_steam_map_scope_excludes_active_fix_only_maps(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            active = root / "active"
+            original = root / "original"
+            active.mkdir()
+            original.mkdir()
+            (active / "GEO_01A.ctm").touch()
+            (active / "Autoplay.ctm").touch()
+            (original / "geo_01a.ctm").touch()
+            audit = {}
+            maps = mtj.build_steam_map_case(audit, active, original)
+            self.assertEqual(set(maps), {"geo_01a"})
+            self.assertEqual(audit["steam_map_scope"]["steam_maps"], 1)
+            self.assertEqual(audit["steam_map_scope"]["excluded_active_maps"], ["autoplay"])
+
     def test_global_english_reconciliation_preserves_mod_literals(self):
         catalog = OrderedDict(
             [("GameData/System/Mod.cht", [OrderedDict(section="Menu", key="Text", type="literal", value='"X"')])]
