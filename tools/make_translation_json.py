@@ -89,6 +89,60 @@ NON_RETAIL_CLASS_PREFIXES = (
     "CT_PCDemo_", "CT_Tokyo_", "CT_E3_", "CT_Xbox",
 )
 
+# Steam PC runtime fields which are localized in the original packages but are
+# absent from the official JP .int index.  Literal fields must remain byte-for-
+# byte compatible with commands/protocol labels; excluded fields are confirmed
+# Xbox-only paths and stay visible in the audit instead of entering translation.
+STEAM_LOCKED_LOCALIZED_FIELDS = {
+    ("ctcharacters", "Commando07Delta", "HUDDescription"),
+    ("ctcharacters", "Commando40Delta", "HUDDescription"),
+    ("ctcharacters", "Commando62Delta", "HUDDescription"),
+    ("engine", "Console", "cSay"),
+    ("engine", "Console", "cTeamSay"),
+    ("xinterfacegamespy", "GameSpyServerBrowserBase", "DeathmatchAbbreviation"),
+    ("xinterfacegamespy", "GameSpyServerBrowserBase", "TeamDeathmatchAbbreviation"),
+    ("xinterfacegamespy", "GameSpyServerBrowserBase", "CaptureTheFlagAbbreviation"),
+    ("xinterfacegamespy", "GameSpyServerBrowserBase", "AssaultAbbreviation"),
+}
+
+STEAM_XBOX_EXCLUDED_LOCALIZED_FIELDS = {
+    ("engine", "GameEngine", "DiscReadError"): "retail disc error; Steam does not use the Xbox disc path",
+    **{
+        ("mpgame", "DMScoreboard", f"PingFriendly[{index}]"): "IsOnConsole-only ping display"
+        for index in range(5)
+    },
+    ("xinterfacecommon", "MenuLowStorage", "XboxLiveMsg"): "Xbox Live storage path",
+    ("xinterfacecommon", "MenuSelectMaps", "DamagedContent"): "Xbox downloadable-content validation path",
+    ("xinterfacectmenus", "CTMultiplayerPauseXboxMenu", "StringEnterSpectatorMode"): "Xbox-only pause menu",
+    ("xinterfacectmenus", "CTMultiplayerPauseXboxMenu", "StringExitSpectatorMode"): "Xbox-only pause menu",
+}
+
+STEAM_NEW_TRANSLATION_SEEDS = {
+    ("ctcharacters", "Commando07Delta", "HUDNickname"): "SEV",
+    ("ctcharacters", "Commando40Delta", "HUDNickname"): "FIXER",
+    ("ctcharacters", "Commando62Delta", "HUDNickname"): "SCORCH",
+    ("engine", "GameEngine", "DeathMatchStr"): "死亡竞赛",
+    ("engine", "GameEngine", "TeamDeathMatchStr"): "团队死亡竞赛",
+    ("engine", "GameEngine", "CaptureTheFlagStr"): "夺旗",
+    ("engine", "GameEngine", "AssaultStr"): "突击",
+    ("engine", "GameMessage", "StrTooMangRep"): "共和国玩家过多。",
+    ("engine", "GameMessage", "StrTooMangTran"): "特兰多沙玩家过多。",
+    ("xinterfacecommon", "MenuConnectionFailed", "MissingContentStr"): "本地计算机上不存在服务器内容 '%s'。",
+    ("xinterfacecommon", "MenuCreateGame", "StringNoName"): "未指定服务器名称！",
+    ("xinterfacecommon", "MenuSelectProfile", "DamagedProfileStart"): "配置文件“",
+    ("xinterfacecommon", "MenuSelectProfile", "DamagedProfileEnd"): "”似乎已损坏，无法使用。",
+    ("xinterfacectmenus", "CTMultiplayerPausePCMenu", "StringEnterSpectatorMode"): "进入观战模式",
+    ("xinterfacectmenus", "CTMultiplayerPausePCMenu", "StringExitSpectatorMode"): "退出观战模式",
+    ("xinterfacegamespy", "GameSpyMenuTemplate", "DedicatedServerLabel"): "专用服务器",
+    ("xinterfacegamespy", "GameSpyMenuTemplate", "FriendlyFirePctLabel"): "友军伤害比例",
+}
+
+STEAM_ALREADY_COVERED_DEFAULT_FIELDS = {
+    # Properties.CTDamageStunDefaults overrides the concrete CTGame class; the
+    # same runtime key is already emitted in ctgame.cht.
+    ("properties", "CTDamageStun", "MaleSuicide"),
+}
+
 FIX_CLASS_REPLACEMENTS = {
     "CTGameOptionsPCMenu": {
         "source_file": f"GameData/System/XinterfaceCtmenus{OUTPUT_EXT}",
@@ -565,6 +619,48 @@ def parse_uc_file(path: Path):
     return class_name, parent, defaults
 
 
+def parse_top_level_localized_strings(path: Path) -> set[str]:
+    """Return class-level ``localized string`` property names from exported UC.
+
+    UCC exports comments containing the word ``nonlocalized`` and localized
+    members inside structs.  Only declarations at class scope are runtime
+    localization keys, so comments are stripped and brace depth is tracked.
+    """
+    try:
+        text = read_text(path, "utf-8")
+    except UnicodeDecodeError:
+        text = read_text(path, "cp1252")
+    text = text.split("defaultproperties", 1)[0]
+    text = re.sub(r"/\*.*?\*/", "", text, flags=re.DOTALL)
+    text = re.sub(r"//.*?$", "", text, flags=re.MULTILINE)
+
+    statements = []
+    pending = ""
+    depth = 0
+    for line in text.splitlines():
+        stripped = line.strip()
+        if depth == 0 and (pending or re.match(r"^var\b", stripped, re.IGNORECASE)):
+            pending = f"{pending} {stripped}".strip()
+            if ";" in pending:
+                statements.append(pending.split(";", 1)[0] + ";")
+                pending = ""
+        depth += line.count("{") - line.count("}")
+
+    names = set()
+    for statement in statements:
+        if not re.search(r"\blocalized\b", statement, re.IGNORECASE):
+            continue
+        match = re.search(r"\bstring\b\s+([^;]+);", statement, re.IGNORECASE | re.DOTALL)
+        if match is None:
+            continue
+        for raw_name in match.group(1).split(","):
+            name = raw_name.strip().split("=", 1)[0].strip()
+            name = re.sub(r"\s*\[[^]]*\]\s*$", "", name)
+            if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", name):
+                names.add(name)
+    return names
+
+
 def load_class_defaults(package_stems: set[str], audit: dict):
     classes = {}
     loaded_packages = []
@@ -579,6 +675,8 @@ def load_class_defaults(package_stems: set[str], audit: dict):
                 "name": class_name,
                 "parent": parent,
                 "defaults": defaults,
+                "localized_strings": parse_top_level_localized_strings(uc_path),
+                "package": package_stem,
                 "path": uc_path.relative_to(ROOT_DIR).as_posix(),
             }
     audit["loaded_class_packages"] = loaded_packages
@@ -697,6 +795,7 @@ def export_level_t3d(map_file: Path, temp_root: Path, audit: dict):
 class EntryAllocator:
     def __init__(self, existing: dict | None = None):
         self.existing_by_sig = defaultdict(list)
+        self.existing_by_group_ref_langs = defaultdict(list)
         self.existing_shared_by_ref_langs = {}
         self.reserved = defaultdict(set)
         self.used = defaultdict(set)
@@ -709,7 +808,11 @@ class EntryAllocator:
                     if not isinstance(item, dict):
                         continue
                     sig = (group, item.get("note", ""), item.get("en", ""))
-                    self.existing_by_sig[sig].append({"id": str(entry_id), "item": item})
+                    candidate = {"id": str(entry_id), "item": item}
+                    self.existing_by_sig[sig].append(candidate)
+                    self.existing_by_group_ref_langs[
+                        (group, item.get("en", ""), item.get("jp", ""), item.get("de", ""))
+                    ].append(candidate)
                     if group == SHARED_GROUP:
                         en = item.get("en", "")
                         jp = item.get("jp", "")
@@ -720,13 +823,22 @@ class EntryAllocator:
                         self.reserved[group].add(str(entry_id))
                         self.next_id[group] = max(self.next_id[group], int(entry_id) + 1)
 
-    def allocate(self, group: str, note: str, en: str, natural: str | None, base: str | None):
+    def allocate(
+        self, group: str, note: str, en: str, jp: str, de: str,
+        natural: str | None, base: str | None,
+    ):
         sig = (group, note, en)
         for previous in self.existing_by_sig.get(sig, []):
             entry_id = previous["id"]
             if entry_id not in self.used[group]:
                 self.used[group].add(entry_id)
                 return AllocationResult(group, entry_id, previous["item"])
+
+        fallback_candidates = self.existing_by_group_ref_langs.get((group, en, jp, de), [])
+        if len(fallback_candidates) == 1 and fallback_candidates[0]["id"] not in self.used[group]:
+            previous = fallback_candidates[0]
+            self.used[group].add(previous["id"])
+            return AllocationResult(group, previous["id"], previous["item"])
 
         target_group = group
         if natural and natural in self.used[target_group] and base:
@@ -808,7 +920,7 @@ def add_translation_entry(
 ):
     if en == "":
         fail(f"{base_group}/{note}: English source is empty")
-    allocation = allocator.allocate(base_group, note, en, natural, natural_base)
+    allocation = allocator.allocate(base_group, note, en, jp, de, natural, natural_base)
     group = allocation.group
     entry_id = allocation.entry_id
     if not SAFE_GROUP_RE.fullmatch(group):
@@ -847,16 +959,27 @@ def add_translation_entry(
                 if old_jp != jp:
                     stats["preserved_translation_with_jp_change"] += 1
 
-    translation[group][entry_id] = OrderedDict(
+    output_note = preserve_manual_note_suffix(note, previous.get("note", "") if previous else "")
+    generated_item = OrderedDict(
         [
-            ("note", note),
+            ("note", output_note),
             ("en", en),
             ("jp", jp),
             ("de", de),
             ("zh_CN", zh_cn),
         ]
     )
+    if previous and previous.get("use_PS4_translation") is True:
+        generated_item["use_PS4_translation"] = True
+    translation[group][entry_id] = generated_item
     return f"{group}/{entry_id}"
+
+
+def preserve_manual_note_suffix(generated: str, previous: str) -> str:
+    if not isinstance(previous, str) or "；" not in previous:
+        return generated
+    _prefix, suffix = previous.split("；", 1)
+    return f"{generated}；{suffix}" if suffix else generated
 
 
 def iter_translation_entries(translation: OrderedDict):
@@ -1002,7 +1125,9 @@ def merge_shared_en_jp_entries(
         if zh_cn and all(source_ref == shared_ref for source_ref, _zh in zh_sources):
             stats["preserved_zh_CN"] += 1
         note = choose_shared_note([item for _ref, item in refs_and_items])
-        shared_payload[shared_id] = OrderedDict(
+        if old_shared:
+            note = preserve_manual_note_suffix(note, old_shared[1].get("note", ""))
+        shared_item = OrderedDict(
             [
                 ("note", note),
                 ("en", en),
@@ -1011,6 +1136,12 @@ def merge_shared_en_jp_entries(
                 ("zh_CN", zh_cn),
             ]
         )
+        uses_ps4_translation = any(
+            item.get("use_PS4_translation") is True for _ref, item in refs_and_items
+        ) or bool(old_shared and old_shared[1].get("use_PS4_translation") is True)
+        if uses_ps4_translation:
+            shared_item["use_PS4_translation"] = True
+        shared_payload[shared_id] = shared_item
         for ref, _item in refs_and_items:
             merged_ref_by_old_ref[ref] = shared_ref
         merge_samples.append(
@@ -1573,7 +1704,7 @@ def append_en_passthrough_rows(
             en_row.value,
             f"{output_path} [{en_row.section}] {en_row.key}",
             stats,
-            en_counts[key_pair] > 1 or catalog_row_counts(rows)[key_pair] > 0,
+            en_row.key.endswith("+") or en_counts[key_pair] > 1 or catalog_row_counts(rows)[key_pair] > 0,
         )
         rows.append(row)
         added.append(
@@ -1948,6 +2079,48 @@ def process_fix_class_replacements(
     audit["fix_class_replacements"] = fix_stats
 
 
+def inherited_localized_strings(classes: dict, class_name: str, seen=None) -> set[str]:
+    if seen is None:
+        seen = set()
+    class_key = class_name.casefold()
+    if class_key in seen:
+        return set()
+    seen.add(class_key)
+    info = classes.get(class_key)
+    if info is None:
+        return set()
+    result = {name.casefold() for name in info.get("localized_strings", set())}
+    parent = info.get("parent")
+    if parent:
+        result.update(inherited_localized_strings(classes, parent, seen))
+    return result
+
+
+def default_property_root(key: str) -> str:
+    return re.sub(r"\[\d+\]", "", key.split(".", 1)[0]).casefold()
+
+
+def steam_localized_policy(package: str, section: str, key: str) -> tuple[str, str]:
+    policy_key = (package.casefold(), section, key)
+    excluded_reason = STEAM_XBOX_EXCLUDED_LOCALIZED_FIELDS.get(policy_key)
+    if excluded_reason:
+        return "excluded", excluded_reason
+    if policy_key in STEAM_LOCKED_LOCALIZED_FIELDS:
+        return "literal", "runtime control/symbol field"
+    return "translate", ""
+
+
+def seed_generated_translation(translation: OrderedDict, ref: str, zh_cn: str, stats: Counter) -> None:
+    group, entry_id = ref.split("/", 1)
+    item = translation[group][entry_id]
+    existing = item.get("zh_CN", "")
+    if existing and existing != zh_cn:
+        fail(f"translation seed conflicts with preserved translation {ref}: {existing!r} != {zh_cn!r}")
+    if not existing:
+        item["zh_CN"] = zh_cn
+        stats["steam_translation_seeds"] += 1
+
+
 def discover_package_orphan_entries(
     catalog_files,
     translation,
@@ -1975,6 +2148,10 @@ def discover_package_orphan_entries(
     entry under the base class name.
     """
     results = OrderedDict()
+    steam_added = []
+    steam_locked = []
+    steam_excluded = []
+    covered_elsewhere = []
 
     for jp_name in jp_ints:
         stem = Path(jp_name).stem.casefold()
@@ -1999,7 +2176,7 @@ def discover_package_orphan_entries(
 
         covered = set()
         for row in catalog_files.get(output_path, []):
-            covered.add((row["section"], row["key"]))
+            covered.add((row["section"].casefold(), row["key"].casefold()))
 
         added = []
         for class_key, info in sorted(classes.items()):
@@ -2009,6 +2186,7 @@ def discover_package_orphan_entries(
 
             class_name = info["name"]
             defaults = info["defaults"]
+            localized_roots = inherited_localized_strings(classes, class_name)
 
             if class_name.endswith("Defaults"):
                 section_name = class_name[: -len("Defaults")]
@@ -2019,12 +2197,35 @@ def discover_package_orphan_entries(
                 continue
 
             for field_key in sorted(defaults):
-                if (section_name, field_key) in covered:
+                covered_key = (section_name.casefold(), field_key.casefold())
+                if covered_key in covered:
                     continue
-                if not _is_localizable_default_key(field_key):
+                policy_key = (package_stem.casefold(), section_name, field_key)
+                if policy_key in STEAM_ALREADY_COVERED_DEFAULT_FIELDS:
+                    covered_elsewhere.append(f"{package_stem}.{section_name}.{field_key}")
+                    continue
+                heuristic_localizable = _is_localizable_default_key(field_key)
+                declared_localized = default_property_root(field_key) in localized_roots
+                newly_discovered_localized = declared_localized and not heuristic_localizable
+                if not (heuristic_localizable or declared_localized):
                     continue
                 sv = defaults[field_key]
                 if sv.kind != "string" or not sv.text:
+                    continue
+
+                policy, policy_reason = steam_localized_policy(package_stem, section_name, field_key)
+                if newly_discovered_localized and policy == "excluded":
+                    steam_excluded.append(
+                        OrderedDict(
+                            [
+                                ("package", package_stem),
+                                ("section", section_name),
+                                ("key", field_key),
+                                ("reason", policy_reason),
+                            ]
+                        )
+                    )
+                    stats["steam_xbox_excluded_localized"] += 1
                     continue
 
                 de_val = de_index.get(
@@ -2032,21 +2233,41 @@ def discover_package_orphan_entries(
                 )
 
                 try:
-                    emit_from_source(
-                        catalog_files,
-                        translation,
-                        allocator,
-                        output_path,
-                        section_name,
-                        field_key,
-                        sv,
-                        "",
-                        de_val,
-                        file_stem,
-                        stats,
-                        reset_translations,
-                    )
-                    covered.add((section_name, field_key))
+                    if newly_discovered_localized and policy == "literal":
+                        catalog_files.setdefault(output_path, []).append(
+                            make_literal_row(
+                                section_name,
+                                field_key,
+                                sv.raw,
+                                f"{output_path} [{section_name}] {field_key}",
+                                stats,
+                            )
+                        )
+                        steam_locked.append(f"{package_stem}.{section_name}.{field_key}")
+                        stats["steam_locked_localized_literals"] += 1
+                    else:
+                        emitted = emit_from_source(
+                            catalog_files,
+                            translation,
+                            allocator,
+                            output_path,
+                            section_name,
+                            field_key,
+                            sv,
+                            "",
+                            de_val,
+                            file_stem,
+                            stats,
+                            reset_translations,
+                        )
+                        if newly_discovered_localized:
+                            row = catalog_files[output_path][-1]
+                            seed = STEAM_NEW_TRANSLATION_SEEDS.get(policy_key)
+                            if emitted == "string" and seed:
+                                seed_generated_translation(translation, row["entry"], seed, stats)
+                            steam_added.append(f"{package_stem}.{section_name}.{field_key}")
+                            stats["steam_runtime_localized_entries"] += 1
+                    covered.add(covered_key)
                     added.append(f"{section_name}.{field_key}")
                     stats["package_orphan_entries"] += 1
                 except GenerateError:
@@ -2063,6 +2284,135 @@ def discover_package_orphan_entries(
                 ("by_package", results),
             ]
         )
+    audit["steam_runtime_localized_discovery"] = OrderedDict(
+        [
+            ("translatable", steam_added),
+            ("locked_literals", steam_locked),
+            ("xbox_excluded", steam_excluded),
+            ("covered_elsewhere", covered_elsewhere),
+        ]
+    )
+
+
+def catalog_output_for_package(catalog_files: OrderedDict, package_name: str) -> str:
+    candidate = f"GameData/System/{package_name}{OUTPUT_EXT}"
+    for existing in catalog_files:
+        if existing.casefold() == candidate.casefold():
+            return existing
+    return candidate
+
+
+def iter_class_ancestors(classes: dict, info: dict):
+    seen = set()
+    parent = info.get("parent")
+    while parent:
+        parent_key = parent.casefold()
+        if parent_key in seen:
+            return
+        seen.add(parent_key)
+        parent_info = classes.get(parent_key)
+        if parent_info is None:
+            return
+        yield parent_info
+        parent = parent_info.get("parent")
+
+
+def expand_inherited_localized_overrides(catalog_files, classes, stats, audit) -> None:
+    """Fan out localized leaves frozen by partial derived struct overrides."""
+    by_class = defaultdict(list)
+    for output_path, rows in catalog_files.items():
+        package = Path(output_path).stem.casefold()
+        for row in rows:
+            by_class[(package, row["section"].casefold())].append(row)
+
+    expanded = []
+    for _class_key, info in sorted(classes.items()):
+        class_name = info["name"]
+        if class_name.startswith(NON_RETAIL_CLASS_PREFIXES):
+            continue
+        direct_defaults = info["defaults"]
+        overridden_roots = {key.split(".", 1)[0].casefold() for key in direct_defaults}
+        direct_keys = {key.casefold() for key in direct_defaults}
+        if not overridden_roots:
+            continue
+
+        target_package = info["package"]
+        target_path = catalog_output_for_package(catalog_files, target_package)
+        target_rows = catalog_files.setdefault(target_path, [])
+        covered = {
+            row["key"].casefold()
+            for row in target_rows
+            if row["section"].casefold() == class_name.casefold()
+        }
+
+        for ancestor in iter_class_ancestors(classes, info):
+            ancestor_rows = by_class.get(
+                (ancestor["package"].casefold(), ancestor["name"].casefold()), []
+            )
+            for source_row in ancestor_rows:
+                key = source_row["key"]
+                key_folded = key.casefold()
+                root = key.split(".", 1)[0].casefold()
+                if root not in overridden_roots or key_folded in direct_keys or key_folded in covered:
+                    continue
+                if source_row.get("type") not in {"string", "tuple", "template"}:
+                    continue
+                cloned = OrderedDict(source_row)
+                cloned["section"] = class_name
+                target_rows.append(cloned)
+                covered.add(key_folded)
+                expanded.append(
+                    OrderedDict(
+                        [
+                            ("source_package", ancestor["package"]),
+                            ("source_class", ancestor["name"]),
+                            ("target_package", target_package),
+                            ("target_class", class_name),
+                            ("key", key),
+                            ("entry", source_row.get("entry", "")),
+                        ]
+                    )
+                )
+                stats["inherited_localized_fanout_rows"] += 1
+
+    audit["inherited_localized_fanout"] = OrderedDict(
+        [("total", len(expanded)), ("rows", expanded)]
+    )
+
+
+def reconcile_all_english_runtime_ints(
+    catalog_files, en_ints, en_outputs, stats, audit
+) -> None:
+    """Preserve every EN .int row for any file the catalog replaces."""
+    reconciled = OrderedDict()
+    for _name, info in en_ints.items():
+        output_path = catalog_output_for_package(catalog_files, info["path"].stem)
+        if output_path not in catalog_files:
+            continue
+        before = len(catalog_files[output_path])
+        append_en_passthrough_rows(output_path, info["rows"], catalog_files, stats, audit)
+        added = len(catalog_files[output_path]) - before
+        en_outputs[output_path] = info["rows"]
+        reconciled[output_path] = OrderedDict(
+            [("english_rows", len(info["rows"])), ("passthrough_added", added)]
+        )
+    audit["global_english_runtime_reconciliation"] = OrderedDict(
+        [
+            ("files", len(reconciled)),
+            ("passthrough_added", sum(item["passthrough_added"] for item in reconciled.values())),
+            ("by_file", reconciled),
+        ]
+    )
+
+
+def refresh_inherited_fanout_audit_refs(catalog_files, audit) -> None:
+    fanout = audit.get("inherited_localized_fanout", {})
+    for item in fanout.get("rows", []):
+        output_path = catalog_output_for_package(catalog_files, item["target_package"])
+        for row in catalog_files.get(output_path, []):
+            if row["section"] == item["target_class"] and row["key"] == item["key"]:
+                item["entry"] = row.get("entry", "")
+                break
 
 
 def main(argv=None):
@@ -2282,6 +2632,12 @@ def main(argv=None):
         stats, args.reset_translations, audit,
     )
 
+    expand_inherited_localized_overrides(catalog_files, classes, stats, audit)
+
+    reconcile_all_english_runtime_ints(
+        catalog_files, en_ints, en_outputs, stats, audit,
+    )
+
     translation = merge_shared_en_jp_entries(
         translation,
         catalog_files,
@@ -2290,6 +2646,7 @@ def main(argv=None):
         args.reset_translations,
         audit,
     )
+    refresh_inherited_fanout_audit_refs(catalog_files, audit)
     validate_catalog_covers_en_runtime(catalog_files, en_outputs, audit)
 
     catalog = OrderedDict(

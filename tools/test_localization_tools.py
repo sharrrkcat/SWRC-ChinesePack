@@ -135,6 +135,109 @@ class LocalizationToolTests(unittest.TestCase):
         self.assertEqual(mtj.unquote_unreal('"A\\qB"'), "A\\qB")
         self.assertEqual(blp.quote_unreal('MICHAEL "MOOSE" MUSSELLAM'), '"MICHAEL "MOOSE" MUSSELLAM"')
 
+    def test_uc_localized_parser_only_reads_class_scope(self):
+        source = """class Sample extends Parent;
+// localized string CommentOnly;
+var() /* nonlocalized */ MenuText Label;
+var localized string First, Second[3];
+struct Nested
+{
+    var localized string StructOnly;
+};
+defaultproperties
+{
+    First=\"ONE\"
+}
+"""
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "Sample.uc"
+            path.write_text(source, encoding="utf-8")
+            self.assertEqual(mtj.parse_top_level_localized_strings(path), {"First", "Second"})
+
+    def test_steam_localized_policy_separates_translate_literal_and_xbox(self):
+        self.assertEqual(
+            mtj.steam_localized_policy("engine", "GameEngine", "DeathMatchStr")[0],
+            "translate",
+        )
+        self.assertEqual(
+            mtj.steam_localized_policy("engine", "Console", "cSay")[0],
+            "literal",
+        )
+        self.assertEqual(
+            mtj.steam_localized_policy("mpgame", "DMScoreboard", "PingFriendly[0]")[0],
+            "excluded",
+        )
+
+    def test_inherited_struct_localization_is_fanned_out_once(self):
+        string_row = OrderedDict(
+            section="Base",
+            key="AButton.Blurred.Text",
+            type="string",
+            entry="shared.enjp/1",
+            printf=[],
+        )
+        explicit_row = OrderedDict(
+            section="ExplicitChild", key="AButton.Blurred.Text", type="string",
+            entry="explicit/1", printf=[],
+        )
+        catalog = OrderedDict(
+            [
+                ("GameData/System/basepkg.cht", [string_row]),
+                ("GameData/System/childpkg.cht", [explicit_row]),
+            ]
+        )
+        classes = {
+            "base": {
+                "name": "Base", "parent": None, "package": "basepkg", "defaults": {},
+            },
+            "middle": {
+                "name": "Middle", "parent": "Base", "package": "basepkg", "defaults": {},
+            },
+            "child": {
+                "name": "Child", "parent": "Middle", "package": "childpkg",
+                "defaults": {
+                    "AButton": mtj.SourceValue("template", "(OnSelect=\"Go\")"),
+                    "AButton.OnSelect": mtj.SourceValue("string", '"Go"', "Go"),
+                },
+            },
+            "explicitchild": {
+                "name": "ExplicitChild", "parent": "Middle", "package": "childpkg",
+                "defaults": {
+                    "AButton": mtj.SourceValue("template", "(OnSelect=\"Go\")"),
+                    "AButton.OnSelect": mtj.SourceValue("string", '"Go"', "Go"),
+                },
+            },
+        }
+        stats = Counter()
+        audit = {}
+        mtj.expand_inherited_localized_overrides(catalog, classes, stats, audit)
+        mtj.expand_inherited_localized_overrides(catalog, classes, stats, audit)
+        rows = catalog["GameData/System/childpkg.cht"]
+        self.assertEqual(len(rows), 2)
+        child_row = next(row for row in rows if row["section"] == "Child")
+        explicit = next(row for row in rows if row["section"] == "ExplicitChild")
+        self.assertEqual(child_row["entry"], "shared.enjp/1")
+        self.assertEqual(explicit["entry"], "explicit/1")
+
+    def test_global_english_reconciliation_preserves_mod_literals(self):
+        catalog = OrderedDict(
+            [("GameData/System/Mod.cht", [OrderedDict(section="Menu", key="Text", type="literal", value='"X"')])]
+        )
+        en_rows = [
+            mtj.IntRow("Mod.int", 1, "Public", "Object+", "(Name=Mod.Cmd)", ""),
+            mtj.IntRow("Mod.int", 2, "Cmd", "HelpCmd", "command", ""),
+        ]
+        en_ints = {"mod.int": {"path": Path("Mod.int"), "rows": en_rows}}
+        en_outputs = OrderedDict()
+        stats = Counter()
+        audit = {}
+        mtj.reconcile_all_english_runtime_ints(catalog, en_ints, en_outputs, stats, audit)
+        rows = catalog["GameData/System/Mod.cht"]
+        self.assertEqual(len(rows), 3)
+        self.assertTrue(rows[1]["allow_duplicate"])
+        self.assertEqual(rows[2]["value"], "command")
+        self.assertEqual(audit["global_english_runtime_reconciliation"]["passthrough_added"], 2)
+
     def test_duplicate_json_key_is_rejected(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             path = Path(temp_dir) / "dup.json"
@@ -405,6 +508,7 @@ class LocalizationToolTests(unittest.TestCase):
             "g": {
                 "7": {"note": "Normal", "en": "Hello", "jp": "JP", "zh_CN": "你好"},
                 "9": {"note": "Natural", "en": "Door", "jp": "Door", "zh_CN": "门"},
+                "58": {"note": "Human note；keep this", "en": "AUTO PULL MANEUVERS", "jp": "JP", "zh_CN": "自动撤回行动", "use_PS4_translation": True},
             },
             "shared.enjp": {
                 "100001": {"note": "Merged", "en": "Shared", "jp": "共有", "zh_CN": "共享"}
@@ -416,10 +520,18 @@ class LocalizationToolTests(unittest.TestCase):
         ref1 = mtj.add_translation_entry(translation, allocator, "g", "Normal", "Hello", "JP", "", None, None, stats, False)
         ref2 = mtj.add_translation_entry(translation, allocator, "g", "Natural", "Door", "Door", "", "9", "Door", stats, False)
         ref3 = mtj.add_translation_entry(translation, allocator, "other", "Split", "Shared", "共有", "", None, None, stats, False)
+        ref4 = mtj.add_translation_entry(
+            translation, allocator, "g", "OptionLabels[6].Text", "AUTO PULL MANEUVERS",
+            "JP", "", "6", "OptionLabels", stats, False,
+        )
         self.assertEqual(ref1, "g/7")
         self.assertEqual(ref2, "g/9")
         self.assertEqual(translation["g"]["7"]["zh_CN"], "你好")
         self.assertEqual(translation["other"]["1"]["zh_CN"], "共享")
+        self.assertEqual(ref4, "g/58")
+        self.assertEqual(translation["g"]["58"]["zh_CN"], "自动撤回行动")
+        self.assertTrue(translation["g"]["58"]["use_PS4_translation"])
+        self.assertEqual(translation["g"]["58"]["note"], "OptionLabels[6].Text；keep this")
         self.assertEqual(stats["restored_from_shared"], 1)
 
     def test_identity_golden_matches_english_runtime_semantics(self):

@@ -3445,6 +3445,13 @@
       "zh_CN": "继续 ：",
       "use_PS4_translation": true
     },
+    "101207": {
+      "note": "MissingContentStr / 2 occurrences",
+      "en": "SERVER CONTENT '%s' IS NOT PRESENT ON THE LOCAL MACHINE.",
+      "jp": "",
+      "de": "DIE SERVERDATEN '%s' BEFINDEN SICH NICHT AUF DEM LOKALEN SYSTEM.",
+      "zh_CN": "本地计算机上不存在服务器内容 '%s'。"
+    },
     "100911": {
       "note": "AButton.Blurred.Text / 7 occurrences",
       "en": "CONTINUE",
@@ -11738,6 +11745,34 @@
       "de": "KREUZ-TASTE",
       "zh_CN": "交叉键",
       "use_PS4_translation": true
+    },
+    "256": {
+      "note": "AssaultStr",
+      "en": "ASSAULT",
+      "jp": "",
+      "de": "ANGRIFF",
+      "zh_CN": "突击"
+    },
+    "257": {
+      "note": "CaptureTheFlagStr",
+      "en": "CAPTURE THE FLAG",
+      "jp": "",
+      "de": "CAPTURE THE FLAG",
+      "zh_CN": "夺旗"
+    },
+    "258": {
+      "note": "DeathMatchStr",
+      "en": "DEATHMATCH",
+      "jp": "",
+      "de": "DEATHMATCH",
+      "zh_CN": "死亡竞赛"
+    },
+    "259": {
+      "note": "TeamDeathMatchStr",
+      "en": "TEAM DEATHMATCH",
+      "jp": "",
+      "de": "TEAM-DEATHMATCH",
+      "zh_CN": "团队死亡竞赛"
     }
   },
   "engine.GameEngine.LocalizedXboxButtonNames": {
@@ -12009,6 +12044,20 @@
       "jp": " 観衆で参加",
       "de": " hat sich als Zuschauer angeschlossen.",
       "zh_CN": " 以观战者身份加入。"
+    },
+    "22": {
+      "note": "StrTooMangRep",
+      "en": "Too many Republic players.",
+      "jp": "",
+      "de": "Zu viele Republik-Spieler.",
+      "zh_CN": "共和国玩家过多。"
+    },
+    "23": {
+      "note": "StrTooMangTran",
+      "en": "Too many Trandoshan players.",
+      "jp": "",
+      "de": "Zu viele Trandoshaner-Spieler.",
+      "zh_CN": "特兰多沙玩家过多。"
     }
   },
   "engine.Gibbed": {
@@ -66284,6 +66333,13 @@
       "jp": "マップを選択",
       "de": "KARTEN WÄHLEN",
       "zh_CN": "选择地图"
+    },
+    "30": {
+      "note": "StringNoName",
+      "en": "NO SERVER NAME SPECIFIED!",
+      "jp": "",
+      "de": "KEIN SERVERNAME ANGEGEBEN!",
+      "zh_CN": "未指定服务器名称！"
     }
   },
   "Xinterfacecommon.MenuGameSettings": {
@@ -67158,6 +67214,20 @@
       "jp": "プロファイル選択",
       "de": "PROFIL WÄHLEN",
       "zh_CN": "选择配置文件"
+    },
+    "13": {
+      "note": "DamagedProfileEnd",
+      "en": " APPEARS TO BE DAMAGED AND CANNOT BE USED.",
+      "jp": "",
+      "de": " SCHEINT BESCHÄDIGT ZU SEIN UND KANN NICHT VERWENDET WERDEN.",
+      "zh_CN": "”似乎已损坏，无法使用。"
+    },
+    "14": {
+      "note": "DamagedProfileStart",
+      "en": "THE PROFILE ",
+      "jp": "",
+      "de": "DAS PROFIL",
+      "zh_CN": "配置文件“"
     }
   },
   "Xinterfacecommon.MenuSelectTeam": {
@@ -68528,6 +68598,20 @@
       "jp": "",
       "de": "MÖCHTEN SIE WIRKLICH ZU WINDOWS ZURÜCKKEHREN? UNGESPEICHERTE SPIELFORTSCHRITTE GEHEN VERLOREN.",
       "zh_CN": "确定退出至WINDOWS桌面？任何未保存的进度都将丢失。"
+    },
+    "25": {
+      "note": "StringEnterSpectatorMode",
+      "en": "ENTER SPECTATOR MODE",
+      "jp": "",
+      "de": "ZUSCHAUER-MODUS",
+      "zh_CN": "进入观战模式"
+    },
+    "26": {
+      "note": "StringExitSpectatorMode",
+      "en": "EXIT SPECTATOR MODE",
+      "jp": "",
+      "de": "ZUSCHAUER-MODUS VERL.",
+      "zh_CN": "退出观战模式"
     }
   },
   "XinterfaceCtmenus.CTMultiplayerPauseXboxMenu": {
@@ -72757,13 +72841,6 @@
     }
   },
   "XinterfaceCtmenus.CTMissingContentMenu": {
-    "1": {
-      "note": "MissingContentStr",
-      "en": "SERVER CONTENT '%s' IS NOT PRESENT ON THE LOCAL MACHINE.",
-      "jp": "",
-      "de": "DIE SERVERDATEN '%s' BEFINDEN SICH NICHT AUF DEM LOKALEN SYSTEM.",
-      "zh_CN": "本地计算机上不存在服务器内容 '%s'。"
-    },
     "4": {
       "note": "MenuTitle.Text",
       "en": "ERROR",
@@ -73290,6 +73367,33 @@
       "jp": "",
       "de": "",
       "zh_CN": "1.0"
+    }
+  },
+  "ctcharacters.Commando07Delta": {
+    "1": {
+      "note": "HUDNickname",
+      "en": "SEV",
+      "jp": "",
+      "de": "SIEBEN",
+      "zh_CN": "SEV"
+    }
+  },
+  "ctcharacters.Commando40Delta": {
+    "1": {
+      "note": "HUDNickname",
+      "en": "FIXER",
+      "jp": "",
+      "de": "FIXXER",
+      "zh_CN": "FIXER"
+    }
+  },
+  "ctcharacters.Commando62Delta": {
+    "1": {
+      "note": "HUDNickname",
+      "en": "SCORCH",
+      "jp": "",
+      "de": "SCORCH",
+      "zh_CN": "SCORCH"
     }
   },
   "ctgame.CTDamageSpiderBump": {
@@ -74106,6 +74210,22 @@
       "jp": "",
       "de": "",
       "zh_CN": "按START键"
+    }
+  },
+  "XinterfaceGamespy.GameSpyMenuTemplate": {
+    "1": {
+      "note": "DedicatedServerLabel",
+      "en": "Dedicated Server",
+      "jp": "",
+      "de": "Dedizierter Server",
+      "zh_CN": "专用服务器"
+    },
+    "2": {
+      "note": "FriendlyFirePctLabel",
+      "en": "Friendly Fire Pct",
+      "jp": "",
+      "de": "Teambeschuss",
+      "zh_CN": "友军伤害比例"
     }
   }
 }

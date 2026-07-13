@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "generated_by": "make_translation_json.py",
-  "generated_at": "2026-07-12T12:31:07.406183+00:00",
+  "generated_at": "2026-07-13T02:37:20.369066+00:00",
   "files": {
     "GameData/System/alaudio.cht": [
       {
@@ -22,7 +22,8 @@
         "section": "Public",
         "key": "Preferences+",
         "type": "literal",
-        "value": "(Caption=\"Audio\",Parent=\"Advanced Options\",Class=DXAudio.DXAudioSubsystem,Immediate=True)"
+        "value": "(Caption=\"Audio\",Parent=\"Advanced Options\",Class=DXAudio.DXAudioSubsystem,Immediate=True)",
+        "allow_duplicate": true
       }
     ],
     "GameData/System/core.cht": [
@@ -7869,6 +7870,45 @@
         "key": "TeamName",
         "type": "string",
         "entry": "ctcharacters.CTTeamTrandoshan/1",
+        "printf": []
+      },
+      {
+        "section": "Commando07Delta",
+        "key": "HUDDescription",
+        "type": "literal",
+        "value": "\"07\""
+      },
+      {
+        "section": "Commando07Delta",
+        "key": "HUDNickname",
+        "type": "string",
+        "entry": "ctcharacters.Commando07Delta/1",
+        "printf": []
+      },
+      {
+        "section": "Commando40Delta",
+        "key": "HUDDescription",
+        "type": "literal",
+        "value": "\"40\""
+      },
+      {
+        "section": "Commando40Delta",
+        "key": "HUDNickname",
+        "type": "string",
+        "entry": "ctcharacters.Commando40Delta/1",
+        "printf": []
+      },
+      {
+        "section": "Commando62Delta",
+        "key": "HUDDescription",
+        "type": "literal",
+        "value": "\"62\""
+      },
+      {
+        "section": "Commando62Delta",
+        "key": "HUDNickname",
+        "type": "string",
+        "entry": "ctcharacters.Commando62Delta/1",
         "printf": []
       }
     ],
@@ -18746,6 +18786,60 @@
         "key": "ColorNames[1]",
         "type": "string",
         "entry": "shared.enjp/100736",
+        "printf": []
+      },
+      {
+        "section": "Console",
+        "key": "cSay",
+        "type": "literal",
+        "value": "\"Say\""
+      },
+      {
+        "section": "Console",
+        "key": "cTeamSay",
+        "type": "literal",
+        "value": "\"TeamSay\""
+      },
+      {
+        "section": "GameEngine",
+        "key": "AssaultStr",
+        "type": "string",
+        "entry": "engine.GameEngine/256",
+        "printf": []
+      },
+      {
+        "section": "GameEngine",
+        "key": "CaptureTheFlagStr",
+        "type": "string",
+        "entry": "engine.GameEngine/257",
+        "printf": []
+      },
+      {
+        "section": "GameEngine",
+        "key": "DeathMatchStr",
+        "type": "string",
+        "entry": "engine.GameEngine/258",
+        "printf": []
+      },
+      {
+        "section": "GameEngine",
+        "key": "TeamDeathMatchStr",
+        "type": "string",
+        "entry": "engine.GameEngine/259",
+        "printf": []
+      },
+      {
+        "section": "GameMessage",
+        "key": "StrTooMangRep",
+        "type": "string",
+        "entry": "engine.GameMessage/22",
+        "printf": []
+      },
+      {
+        "section": "GameMessage",
+        "key": "StrTooMangTran",
+        "type": "string",
+        "entry": "engine.GameMessage/23",
         "printf": []
       },
       {
@@ -118328,6 +118422,13 @@
         "type": "string",
         "entry": "Xinterface.XBoxStandardMsgs/18",
         "printf": []
+      },
+      {
+        "section": "MenuQuestionYesNo",
+        "key": "XButton.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100909",
+        "printf": []
       }
     ],
     "GameData/System/Xinterfacecommon.cht": [
@@ -120087,6 +120188,22 @@
         "printf": []
       },
       {
+        "section": "MenuConnectionFailed",
+        "key": "MissingContentStr",
+        "type": "string",
+        "entry": "shared.enjp/101207",
+        "printf": [
+          "s"
+        ]
+      },
+      {
+        "section": "MenuCreateGame",
+        "key": "StringNoName",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuCreateGame/30",
+        "printf": []
+      },
+      {
         "section": "MenuGameSettings",
         "key": "AButton.Blurred.Text",
         "type": "string",
@@ -120147,6 +120264,27 @@
         "key": "ConnectingText",
         "type": "string",
         "entry": "Xinterfacecommon.MenuProgress/1",
+        "printf": []
+      },
+      {
+        "section": "MenuSelectProfile",
+        "key": "DamagedProfileEnd",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuSelectProfile/13",
+        "printf": []
+      },
+      {
+        "section": "MenuSelectProfile",
+        "key": "DamagedProfileStart",
+        "type": "string",
+        "entry": "Xinterfacecommon.MenuSelectProfile/14",
+        "printf": []
+      },
+      {
+        "section": "MenuSelectProfile",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100717",
         "printf": []
       }
     ],
@@ -124927,7 +125065,7 @@
         "section": "CTMissingContentMenu",
         "key": "MissingContentStr",
         "type": "string",
-        "entry": "XinterfaceCtmenus.CTMissingContentMenu/1",
+        "entry": "shared.enjp/101207",
         "printf": [
           "s"
         ]
@@ -125613,6 +125751,20 @@
         "printf": []
       },
       {
+        "section": "CTMultiplayerPausePCMenu",
+        "key": "StringEnterSpectatorMode",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMultiplayerPausePCMenu/25",
+        "printf": []
+      },
+      {
+        "section": "CTMultiplayerPausePCMenu",
+        "key": "StringExitSpectatorMode",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTMultiplayerPausePCMenu/26",
+        "printf": []
+      },
+      {
         "section": "CTMultiplayerPauseXboxMenu",
         "key": "MenuOptions[4].Blurred.Text",
         "type": "string",
@@ -125764,6 +125916,34 @@
         "key": "Start.Blurred.Text",
         "type": "string",
         "entry": "XinterfaceCtmenus.CTStartXboxMenu/1",
+        "printf": []
+      },
+      {
+        "section": "CTCampaignMenu",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100717",
+        "printf": []
+      },
+      {
+        "section": "CTLoadGameMenu",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100717",
+        "printf": []
+      },
+      {
+        "section": "CTMenuMain",
+        "key": "AButton.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100717",
+        "printf": []
+      },
+      {
+        "section": "CTPauseHintText",
+        "key": "InfoText.Text",
+        "type": "string",
+        "entry": "XinterfaceCtmenus.CTInfoBase/2",
         "printf": []
       }
     ],
@@ -126064,6 +126244,44 @@
         "type": "string",
         "entry": "XinterfaceGamespy.GameSpyServerBrowserBase.InfoListHeadings/1",
         "printf": []
+      },
+      {
+        "section": "GameSpyMenuTemplate",
+        "key": "DedicatedServerLabel",
+        "type": "string",
+        "entry": "XinterfaceGamespy.GameSpyMenuTemplate/1",
+        "printf": []
+      },
+      {
+        "section": "GameSpyMenuTemplate",
+        "key": "FriendlyFirePctLabel",
+        "type": "string",
+        "entry": "XinterfaceGamespy.GameSpyMenuTemplate/2",
+        "printf": []
+      },
+      {
+        "section": "GameSpyServerBrowserBase",
+        "key": "AssaultAbbreviation",
+        "type": "literal",
+        "value": "\"AS\""
+      },
+      {
+        "section": "GameSpyServerBrowserBase",
+        "key": "CaptureTheFlagAbbreviation",
+        "type": "literal",
+        "value": "\"CTF\""
+      },
+      {
+        "section": "GameSpyServerBrowserBase",
+        "key": "DeathmatchAbbreviation",
+        "type": "literal",
+        "value": "\"DM\""
+      },
+      {
+        "section": "GameSpyServerBrowserBase",
+        "key": "TeamDeathmatchAbbreviation",
+        "type": "literal",
+        "value": "\"TD\""
       }
     ],
     "GameData/System/XinterfaceLive.cht": [
@@ -128815,6 +129033,13 @@
         "key": "ALabel.Text",
         "type": "string",
         "entry": "XinterfaceMP.MenuCustomizeCharacter/84",
+        "printf": []
+      },
+      {
+        "section": "MenuCustomizeCharacter",
+        "key": "BButton.Blurred.Text",
+        "type": "string",
+        "entry": "shared.enjp/100907",
         "printf": []
       }
     ],
@@ -136939,6 +137164,55 @@
             "printf": []
           }
         ]
+      },
+      {
+        "section": "Public",
+        "key": "Object+",
+        "type": "literal",
+        "value": "(Name=Mod.ExportBumpMapsCommandlet,Class=Class,MetaClass=Core.Commandlet)",
+        "allow_duplicate": true
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpCmd",
+        "type": "literal",
+        "value": "exportbumpmaps"
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpOneLiner",
+        "type": "literal",
+        "value": "Export bumpmaps in tga format"
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpUsage",
+        "type": "literal",
+        "value": "exportbumpmaps package.ext"
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpParm[0]",
+        "type": "literal",
+        "value": "package.ext"
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpDesc[0]",
+        "type": "literal",
+        "value": "Package whose bump maps you wish to export"
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpParm[1]",
+        "type": "literal",
+        "value": "path"
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpDesc[1]",
+        "type": "literal",
+        "value": "Optional path to export files to. GameData\\Out by default"
       }
     ]
   }

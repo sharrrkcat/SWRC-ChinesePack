@@ -1,6 +1,6 @@
 {
   "tool": "make_translation_json.py",
-  "generated_at": "2026-07-12T12:28:12.477434+00:00",
+  "generated_at": "2026-07-13T02:33:56.016402+00:00",
   "input_roots": {
     "english_system": "../../GameData/System",
     "english_properties": "../../GameData/Properties",
@@ -16,34 +16,39 @@
     "emit_template": 110,
     "emit_tuple": 80,
     "empty_english_literal_rows": 12,
-    "en_passthrough_literal_rows": 51,
+    "en_passthrough_literal_rows": 59,
+    "inherited_localized_fanout_rows": 7,
     "literal_rows": 440,
     "merge_conflicts": 0,
-    "merge_saved_entries": 3720,
-    "merged_en_jp_groups": 692,
-    "merged_translation_entries": 4412,
-    "package_orphan_entries": 156,
+    "merge_saved_entries": 3721,
+    "merged_en_jp_groups": 693,
+    "merged_translation_entries": 4414,
+    "new_blank_zh_CN": 17,
+    "package_orphan_entries": 182,
     "passthrough_literal_normalized": 7,
-    "preserved_zh_CN": 8698,
+    "preserved_zh_CN": 8747,
     "restored_from_shared": 4412,
-    "shared_translation_entries": 692,
+    "shared_translation_entries": 693,
     "skipped_emit_error": 2,
     "skipped_no_source": 1682,
     "source_class_default": 2455,
     "source_english_int": 2653,
     "source_levelinfo_default": 56,
     "source_map_t3d_or_default": 1853,
-    "string_entries": 6408,
+    "steam_locked_localized_literals": 9,
+    "steam_runtime_localized_entries": 17,
+    "steam_translation_seeds": 17,
+    "steam_xbox_excluded_localized": 10,
+    "string_entries": 6425,
     "subtitle_pairs": 5975,
     "template_entries": 270,
     "tuple_entries": 506,
     "jp_files": 147,
     "en_files": 76,
     "catalog_files": 148,
-    "translation_groups": 761,
-    "translation_entries": 9439,
+    "translation_groups": 765,
+    "translation_entries": 9455,
     "skipped_entries": 1684,
-    "new_blank_zh_CN": 0,
     "reset_zh_CN": 0,
     "preserved_translation_with_jp_change": 0,
     "subtitle_passthrough_literal_rows": 0,
@@ -659,6 +664,48 @@
         "section": "Public",
         "key": "Map+",
         "line": 40
+      }
+    ],
+    "GameData/System/Mod.cht": [
+      {
+        "section": "Public",
+        "key": "Object+",
+        "line": 2
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpCmd",
+        "line": 5
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpOneLiner",
+        "line": 6
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpUsage",
+        "line": 7
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpParm[0]",
+        "line": 8
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpDesc[0]",
+        "line": 9
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpParm[1]",
+        "line": 10
+      },
+      {
+        "section": "ExportBumpMapsCommandlet",
+        "key": "HelpDesc[1]",
+        "line": 11
       }
     ]
   },
@@ -7646,8 +7693,16 @@
     }
   },
   "package_orphan_entries": {
-    "total": 156,
+    "total": 182,
     "by_package": {
+      "ctcharacters": [
+        "Commando07Delta.HUDDescription",
+        "Commando07Delta.HUDNickname",
+        "Commando40Delta.HUDDescription",
+        "Commando40Delta.HUDNickname",
+        "Commando62Delta.HUDDescription",
+        "Commando62Delta.HUDNickname"
+      ],
       "ctgame": [
         "CTDamageSpiderBump.DeathString",
         "DisarmTrap.ActivatePromptText"
@@ -7656,6 +7711,14 @@
         "DC17mBlasterAmmo.ItemName"
       ],
       "engine": [
+        "Console.cSay",
+        "Console.cTeamSay",
+        "GameEngine.AssaultStr",
+        "GameEngine.CaptureTheFlagStr",
+        "GameEngine.DeathMatchStr",
+        "GameEngine.TeamDeathMatchStr",
+        "GameMessage.StrTooMangRep",
+        "GameMessage.StrTooMangTran",
         "Helmet.FullHealthText",
         "Helmet.LowLightVisionModeText",
         "Helmet.RemoveScavPromptText",
@@ -7757,6 +7820,8 @@
       ],
       "xinterfacecommon": [
         "MenuConnectionFailed.CDKeyMessage.Text",
+        "MenuConnectionFailed.MissingContentStr",
+        "MenuCreateGame.StringNoName",
         "MenuGameSettings.AButton.Blurred.Text",
         "MenuGameSettings.ALabel.Text",
         "MenuGameSettings.BButton.Blurred.Text",
@@ -7765,7 +7830,9 @@
         "MenuGameSettings.XLabel.Text",
         "MenuLostLink.ContinueText",
         "MenuLowStorage.DashboardConfirm",
-        "MenuProgress.ConnectingText"
+        "MenuProgress.ConnectingText",
+        "MenuSelectProfile.DamagedProfileEnd",
+        "MenuSelectProfile.DamagedProfileStart"
       ],
       "xinterfacectmenus": [
         "CTControlConfigMenu.back.Blurred.Text",
@@ -7791,6 +7858,8 @@
         "CTMultiplayerPausePCMenu.MenuOptions[4].Blurred.Text",
         "CTMultiplayerPausePCMenu.MenuOptions[5].Blurred.Text",
         "CTMultiplayerPausePCMenu.QuitGameConfirm",
+        "CTMultiplayerPausePCMenu.StringEnterSpectatorMode",
+        "CTMultiplayerPausePCMenu.StringExitSpectatorMode",
         "CTMultiplayerPauseXboxMenu.MenuOptions[4].Blurred.Text",
         "CTMultiplayerPauseXboxMenu.MenuOptions[7].Blurred.Text",
         "CTPausePCMenu.EndMissionDemoConfirm",
@@ -7814,6 +7883,14 @@
         "CTSoundOptionsPCMenu.RestartRequired.Text",
         "CTStartXboxMenu.Start.Blurred.Text"
       ],
+      "xinterfacegamespy": [
+        "GameSpyMenuTemplate.DedicatedServerLabel",
+        "GameSpyMenuTemplate.FriendlyFirePctLabel",
+        "GameSpyServerBrowserBase.AssaultAbbreviation",
+        "GameSpyServerBrowserBase.CaptureTheFlagAbbreviation",
+        "GameSpyServerBrowserBase.DeathmatchAbbreviation",
+        "GameSpyServerBrowserBase.TeamDeathmatchAbbreviation"
+      ],
       "xinterfacelive": [
         "MenuDedicatedServer.AButton.Blurred.Text",
         "MenuDedicatedServer.ALabel.Text"
@@ -7824,12 +7901,480 @@
       ]
     }
   },
+  "steam_runtime_localized_discovery": {
+    "translatable": [
+      "ctcharacters.Commando07Delta.HUDNickname",
+      "ctcharacters.Commando40Delta.HUDNickname",
+      "ctcharacters.Commando62Delta.HUDNickname",
+      "engine.GameEngine.AssaultStr",
+      "engine.GameEngine.CaptureTheFlagStr",
+      "engine.GameEngine.DeathMatchStr",
+      "engine.GameEngine.TeamDeathMatchStr",
+      "engine.GameMessage.StrTooMangRep",
+      "engine.GameMessage.StrTooMangTran",
+      "xinterfacecommon.MenuConnectionFailed.MissingContentStr",
+      "xinterfacecommon.MenuCreateGame.StringNoName",
+      "xinterfacecommon.MenuSelectProfile.DamagedProfileEnd",
+      "xinterfacecommon.MenuSelectProfile.DamagedProfileStart",
+      "xinterfacectmenus.CTMultiplayerPausePCMenu.StringEnterSpectatorMode",
+      "xinterfacectmenus.CTMultiplayerPausePCMenu.StringExitSpectatorMode",
+      "xinterfacegamespy.GameSpyMenuTemplate.DedicatedServerLabel",
+      "xinterfacegamespy.GameSpyMenuTemplate.FriendlyFirePctLabel"
+    ],
+    "locked_literals": [
+      "ctcharacters.Commando07Delta.HUDDescription",
+      "ctcharacters.Commando40Delta.HUDDescription",
+      "ctcharacters.Commando62Delta.HUDDescription",
+      "engine.Console.cSay",
+      "engine.Console.cTeamSay",
+      "xinterfacegamespy.GameSpyServerBrowserBase.AssaultAbbreviation",
+      "xinterfacegamespy.GameSpyServerBrowserBase.CaptureTheFlagAbbreviation",
+      "xinterfacegamespy.GameSpyServerBrowserBase.DeathmatchAbbreviation",
+      "xinterfacegamespy.GameSpyServerBrowserBase.TeamDeathmatchAbbreviation"
+    ],
+    "xbox_excluded": [
+      {
+        "package": "engine",
+        "section": "GameEngine",
+        "key": "DiscReadError",
+        "reason": "retail disc error; Steam does not use the Xbox disc path"
+      },
+      {
+        "package": "mpgame",
+        "section": "DMScoreboard",
+        "key": "PingFriendly[0]",
+        "reason": "IsOnConsole-only ping display"
+      },
+      {
+        "package": "mpgame",
+        "section": "DMScoreboard",
+        "key": "PingFriendly[1]",
+        "reason": "IsOnConsole-only ping display"
+      },
+      {
+        "package": "mpgame",
+        "section": "DMScoreboard",
+        "key": "PingFriendly[2]",
+        "reason": "IsOnConsole-only ping display"
+      },
+      {
+        "package": "mpgame",
+        "section": "DMScoreboard",
+        "key": "PingFriendly[3]",
+        "reason": "IsOnConsole-only ping display"
+      },
+      {
+        "package": "mpgame",
+        "section": "DMScoreboard",
+        "key": "PingFriendly[4]",
+        "reason": "IsOnConsole-only ping display"
+      },
+      {
+        "package": "xinterfacecommon",
+        "section": "MenuLowStorage",
+        "key": "XboxLiveMsg",
+        "reason": "Xbox Live storage path"
+      },
+      {
+        "package": "xinterfacecommon",
+        "section": "MenuSelectMaps",
+        "key": "DamagedContent",
+        "reason": "Xbox downloadable-content validation path"
+      },
+      {
+        "package": "xinterfacectmenus",
+        "section": "CTMultiplayerPauseXboxMenu",
+        "key": "StringEnterSpectatorMode",
+        "reason": "Xbox-only pause menu"
+      },
+      {
+        "package": "xinterfacectmenus",
+        "section": "CTMultiplayerPauseXboxMenu",
+        "key": "StringExitSpectatorMode",
+        "reason": "Xbox-only pause menu"
+      }
+    ],
+    "covered_elsewhere": [
+      "properties.CTDamageStun.MaleSuicide"
+    ]
+  },
+  "inherited_localized_fanout": {
+    "total": 7,
+    "rows": [
+      {
+        "source_package": "xinterface",
+        "source_class": "MenuTemplateTitledBA",
+        "target_package": "xinterfacectmenus",
+        "target_class": "CTCampaignMenu",
+        "key": "AButton.Blurred.Text",
+        "entry": "shared.enjp/100717"
+      },
+      {
+        "source_package": "xinterface",
+        "source_class": "MenuTemplateTitledBA",
+        "target_package": "xinterfacectmenus",
+        "target_class": "CTLoadGameMenu",
+        "key": "AButton.Blurred.Text",
+        "entry": "shared.enjp/100717"
+      },
+      {
+        "source_package": "xinterface",
+        "source_class": "MenuTemplateTitledA",
+        "target_package": "xinterfacectmenus",
+        "target_class": "CTMenuMain",
+        "key": "AButton.Blurred.Text",
+        "entry": "shared.enjp/100717"
+      },
+      {
+        "source_package": "xinterfacectmenus",
+        "source_class": "CTInfoBase",
+        "target_package": "xinterfacectmenus",
+        "target_class": "CTPauseHintText",
+        "key": "InfoText.Text",
+        "entry": "XinterfaceCtmenus.CTInfoBase/2"
+      },
+      {
+        "source_package": "xinterface",
+        "source_class": "MenuTemplateTitledB",
+        "target_package": "xinterfacemp",
+        "target_class": "MenuCustomizeCharacter",
+        "key": "BButton.Blurred.Text",
+        "entry": "shared.enjp/100907"
+      },
+      {
+        "source_package": "xinterface",
+        "source_class": "MenuTemplateTitledBXA",
+        "target_package": "xinterface",
+        "target_class": "MenuQuestionYesNo",
+        "key": "XButton.Blurred.Text",
+        "entry": "shared.enjp/100909"
+      },
+      {
+        "source_package": "xinterface",
+        "source_class": "MenuTemplateTitledBA",
+        "target_package": "xinterfacecommon",
+        "target_class": "MenuSelectProfile",
+        "key": "AButton.Blurred.Text",
+        "entry": "shared.enjp/100717"
+      }
+    ]
+  },
+  "global_english_runtime_reconciliation": {
+    "files": 76,
+    "passthrough_added": 8,
+    "by_file": {
+      "GameData/System/alaudio.cht": {
+        "english_rows": 3,
+        "passthrough_added": 0
+      },
+      "GameData/System/core.cht": {
+        "english_rows": 77,
+        "passthrough_added": 0
+      },
+      "GameData/System/credits.cht": {
+        "english_rows": 1141,
+        "passthrough_added": 0
+      },
+      "GameData/System/ct.cht": {
+        "english_rows": 4,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_detention.cht": {
+        "english_rows": 37,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_engine.cht": {
+        "english_rows": 38,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_hangar.cht": {
+        "english_rows": 35,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_hanginggarden.cht": {
+        "english_rows": 46,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_pow.cht": {
+        "english_rows": 42,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_siege.cht": {
+        "english_rows": 31,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_trando.cht": {
+        "english_rows": 43,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_underpass.cht": {
+        "english_rows": 33,
+        "passthrough_added": 0
+      },
+      "GameData/System/ctf_zerog.cht": {
+        "english_rows": 38,
+        "passthrough_added": 0
+      },
+      "GameData/System/d3ddrv.cht": {
+        "english_rows": 6,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_canyon.cht": {
+        "english_rows": 18,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_detention.cht": {
+        "english_rows": 31,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_engine.cht": {
+        "english_rows": 32,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_hangar.cht": {
+        "english_rows": 29,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_hanginggarden.cht": {
+        "english_rows": 40,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_pow.cht": {
+        "english_rows": 36,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_powsmall.cht": {
+        "english_rows": 16,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_siege.cht": {
+        "english_rows": 25,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_trando.cht": {
+        "english_rows": 37,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_underpass.cht": {
+        "english_rows": 27,
+        "passthrough_added": 0
+      },
+      "GameData/System/dm_zerog.cht": {
+        "english_rows": 32,
+        "passthrough_added": 0
+      },
+      "GameData/System/editor.cht": {
+        "english_rows": 140,
+        "passthrough_added": 0
+      },
+      "GameData/System/engine.cht": {
+        "english_rows": 134,
+        "passthrough_added": 0
+      },
+      "GameData/System/geo_titlecard.cht": {
+        "english_rows": 21,
+        "passthrough_added": 0
+      },
+      "GameData/System/hints.cht": {
+        "english_rows": 150,
+        "passthrough_added": 0
+      },
+      "GameData/System/ipdrv.cht": {
+        "english_rows": 31,
+        "passthrough_added": 0
+      },
+      "GameData/System/levelloadinginfo.cht": {
+        "english_rows": 340,
+        "passthrough_added": 0
+      },
+      "GameData/System/Mod.cht": {
+        "english_rows": 8,
+        "passthrough_added": 8
+      },
+      "GameData/System/ras_titlecard.cht": {
+        "english_rows": 26,
+        "passthrough_added": 0
+      },
+      "GameData/System/setup.cht": {
+        "english_rows": 110,
+        "passthrough_added": 0
+      },
+      "GameData/System/setupwarfare-ihv.cht": {
+        "english_rows": 19,
+        "passthrough_added": 0
+      },
+      "GameData/System/setupwarfare.cht": {
+        "english_rows": 38,
+        "passthrough_added": 0
+      },
+      "GameData/System/setupwarfarecodedrop.cht": {
+        "english_rows": 38,
+        "passthrough_added": 0
+      },
+      "GameData/System/setupwarfareumod.cht": {
+        "english_rows": 2,
+        "passthrough_added": 0
+      },
+      "GameData/System/setupwarfarexbox.cht": {
+        "english_rows": 2,
+        "passthrough_added": 0
+      },
+      "GameData/System/setupwarfarexboxship.cht": {
+        "english_rows": 2,
+        "passthrough_added": 0
+      },
+      "GameData/System/startup.cht": {
+        "english_rows": 24,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_.cht": {
+        "english_rows": 5856,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_all_mp.cht": {
+        "english_rows": 786,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_epilogue.cht": {
+        "english_rows": 40,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_01.cht": {
+        "english_rows": 666,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_01_hangar.cht": {
+        "english_rows": 2,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_01briefing.cht": {
+        "english_rows": 50,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_03.cht": {
+        "english_rows": 460,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_04.cht": {
+        "english_rows": 382,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_04briefing.cht": {
+        "english_rows": 28,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_geo_05.cht": {
+        "english_rows": 272,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_pro.cht": {
+        "english_rows": 78,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_ras_01.cht": {
+        "english_rows": 302,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_ras_01briefing.cht": {
+        "english_rows": 52,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_ras_02.cht": {
+        "english_rows": 336,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_ras_03.cht": {
+        "english_rows": 308,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_ras_04.cht": {
+        "english_rows": 390,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_01.cht": {
+        "english_rows": 522,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_01briefing.cht": {
+        "english_rows": 36,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_03.cht": {
+        "english_rows": 198,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_03briefing.cht": {
+        "english_rows": 16,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_04.cht": {
+        "english_rows": 496,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_04briefing.cht": {
+        "english_rows": 42,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_05.cht": {
+        "english_rows": 260,
+        "passthrough_added": 0
+      },
+      "GameData/System/subtitles_yyy_06.cht": {
+        "english_rows": 372,
+        "passthrough_added": 0
+      },
+      "GameData/System/swrepubliccommando.cht": {
+        "english_rows": 4,
+        "passthrough_added": 0
+      },
+      "GameData/System/unrealed.cht": {
+        "english_rows": 1,
+        "passthrough_added": 0
+      },
+      "GameData/System/uweb.cht": {
+        "english_rows": 2,
+        "passthrough_added": 0
+      },
+      "GameData/System/window.cht": {
+        "english_rows": 57,
+        "passthrough_added": 0
+      },
+      "GameData/System/windrv.cht": {
+        "english_rows": 14,
+        "passthrough_added": 0
+      },
+      "GameData/System/xgamelist.cht": {
+        "english_rows": 4,
+        "passthrough_added": 0
+      },
+      "GameData/System/xgames.cht": {
+        "english_rows": 5,
+        "passthrough_added": 0
+      },
+      "GameData/System/xmaplist.cht": {
+        "english_rows": 20,
+        "passthrough_added": 0
+      },
+      "GameData/System/xmaplist_patched.cht": {
+        "english_rows": 20,
+        "passthrough_added": 0
+      },
+      "GameData/System/xmaps.cht": {
+        "english_rows": 12,
+        "passthrough_added": 0
+      },
+      "GameData/System/yyy_titlecard.cht": {
+        "english_rows": 26,
+        "passthrough_added": 0
+      }
+    }
+  },
   "shared_en_jp_merge": {
     "group": "shared.enjp",
-    "merged_groups": 692,
-    "merged_entries": 4412,
-    "saved_entries": 3720,
-    "shared_entries": 692,
+    "merged_groups": 693,
+    "merged_entries": 4414,
+    "saved_entries": 3721,
+    "shared_entries": 693,
     "sample_groups": [
       {
         "entry": "shared.enjp/100001",
@@ -8042,7 +8587,7 @@
           "ctf_engine.SMGPickupMP2/1",
           "ctf_hangar.SMGPickupMP0/1"
         ],
-        "note": "PickupMessage / 20 occurrences"
+        "note": "PickupMessage / 20 occurrences；与PS4官方不同：PS4将同名条目译为\"特兰多佣兵冲锋枪\"，本项目按术语表统一别名为\"ACP连发炮\""
       },
       {
         "entry": "shared.enjp/100029",
@@ -8326,12 +8871,18 @@
     ]
   },
   "catalog_en_runtime_coverage": {
-    "files": 77,
+    "files": 78,
     "missing_rows": 0,
     "by_file": {
+      "GameData/System/Mod.cht": {
+        "en_rows": 8,
+        "catalog_rows": 41,
+        "missing_rows": 0,
+        "missing": []
+      },
       "GameData/System/XinterfaceCtmenus.cht": {
         "en_rows": 120,
-        "catalog_rows": 641,
+        "catalog_rows": 647,
         "missing_rows": 0,
         "missing": []
       },
@@ -8499,7 +9050,7 @@
       },
       "GameData/System/engine.cht": {
         "en_rows": 134,
-        "catalog_rows": 520,
+        "catalog_rows": 528,
         "missing_rows": 0,
         "missing": []
       },
