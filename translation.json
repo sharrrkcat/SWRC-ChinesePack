@@ -520,7 +520,7 @@
       "en": "Profile",
       "jp": "Profile",
       "de": "Profil",
-      "zh_CN": "档案"
+      "zh_CN": "配置文件"
     },
     "100717": {
       "note": "AButton.Blurred.Text / 3 occurrences",
@@ -1717,11 +1717,11 @@
       "use_PS4_translation": true
     },
     "100800": {
-      "note": "Title / 4 occurrences",
+      "note": "Title / 4 occurrences; PS4原译为幽灵船，但en字面为Untitled",
       "en": "Untitled",
       "jp": "ゴーストシップ",
       "de": "Geisterschiff",
-      "zh_CN": "幽灵船",
+      "zh_CN": "无标题",
       "use_PS4_translation": true
     },
     "100801": {
@@ -4069,7 +4069,7 @@
       "en": "PROFILES",
       "jp": "プロファイル",
       "de": "PROFILE",
-      "zh_CN": "档案"
+      "zh_CN": "配置文件"
     },
     "100972": {
       "note": "MenuOptions[3].Blurred.Text / 2 occurrences",
@@ -16626,7 +16626,7 @@
       "en": "%k blasted %o with a DC17m Blaster.",
       "jp": "%k がDC17mブラスターで %o を破壊した。",
       "de": "%k hat %o mit einem DC-17m Blaster weggepustet.",
-      "zh_CN": "%k用DC-17m爆能枪击毁了%o。"
+      "zh_CN": "%k用DC-17m爆能枪轰杀了%o。"
     }
   },
   "properties.CTDamageBallisticDC17Sniper": {
@@ -16635,7 +16635,7 @@
       "en": "%k punched a hole through %o with a DC17m Sniper..",
       "jp": "%k がDC17mで狙撃して %o をぶち抜いた。",
       "de": "%k hat %o einen Durchschuss mit einem DC-17m Scharfschützengewehr verpasst.",
-      "zh_CN": "%k用DC-17m狙击附件打穿了%o。"
+      "zh_CN": "%k用DC-17m狙击附件把%o打了个对穿。"
     }
   },
   "properties.CTDamageBallisticDC17SniperCommando": {
@@ -16644,7 +16644,7 @@
       "en": "%k punched a hole through %o.",
       "jp": "%k が %o をぶち抜いた。",
       "de": "%k hat %o ein Loch verpasst.",
-      "zh_CN": "%k在%o身上打穿了一个洞。"
+      "zh_CN": "%k把%o打了个对穿。"
     }
   },
   "properties.CTDamageBallisticSMG": {
@@ -16653,7 +16653,7 @@
       "en": "%k punched several holes through %o with a repeater gun.",
       "jp": "%k がリピーター・ガンで %o を蜂の巣にした。",
       "de": "%k hat %o mehrere Löcher mit einem Repetiergewehr verpasst.",
-      "zh_CN": "%k用ACP连发炮在%o身上打穿了数个洞。"
+      "zh_CN": "%k用ACP连发炮把%o打成了筛子。"
     }
   },
   "properties.CTDamageBallisticShotgun": {
@@ -16671,7 +16671,7 @@
       "en": "%k blasted %o with an ATTE Cannon.",
       "jp": "%k がATTEキャノンで %o を爆破した。",
       "de": "%k hat %o mit einem ATTE-Geschütz erledigt.",
-      "zh_CN": "%k用AT-TE加农炮击毁了%o。"
+      "zh_CN": "%k用AT-TE加农炮轰杀了%o。"
     }
   },
   "properties.CTDamageEnergyBeam": {
@@ -16707,7 +16707,7 @@
       "en": "%k blasted %o with a DC15s Pistol.",
       "jp": "%k が %o にDC-15sピストルをぶっ放した。",
       "de": "%k hat %o mit einer DC15s Pistole erledigt.",
-      "zh_CN": "%k用DC-15s手枪击毁了%o。"
+      "zh_CN": "%k用DC-15s手枪轰杀了%o。"
     }
   },
   "properties.CTDamageEnergyDC17": {
@@ -16716,7 +16716,7 @@
       "en": "%k blasted %o with a DC17m Blaster.",
       "jp": "%k がDC-17mブラスターで %o を破壊した。",
       "de": "%k hat %o mit einem DC-17m Blaster ausgeschaltet.",
-      "zh_CN": "%k用DC-17m爆能枪击毁了%o。"
+      "zh_CN": "%k用DC-17m爆能枪轰杀了%o。"
     }
   },
   "properties.CTDamageEnergySMGMultiPlay": {
@@ -16725,7 +16725,7 @@
       "en": "%k blasted %o with an ACP Repeater.",
       "jp": "%k がACPリピーターで %o を破壊した。",
       "de": "%k hat %o mit einem ACP-Repetiergewehr erledigt.",
-      "zh_CN": "%k用ACP连发炮击毁了%o。"
+      "zh_CN": "%k用ACP连发炮轰杀了%o。"
     }
   },
   "properties.CTDamageExplosionDC17AA": {
@@ -16848,7 +16848,7 @@
       "en": " out of charges.",
       "jp": "",
       "de": "",
-      "zh_CN": " 能量耗尽。"
+      "zh_CN": " 炸药不足。"
     }
   },
   "properties.SMGPickupMP": {
@@ -16873,7 +16873,7 @@
       "en": " out of ammo.",
       "jp": "",
       "de": "",
-      "zh_CN": " 弹药耗尽。"
+      "zh_CN": " 弹药不足。"
     }
   },
   "properties.TrandoshanRifleMPAmmo": {
@@ -45008,7 +45008,7 @@
       "en": "Delta 38: Scorch, I need you to demo that bunker for me.",
       "jp": "Delta 38: スコーチ、あのバンカーを爆破してくれ。",
       "de": "Delta 38: Scorch, zerstören Sie den Bunker für mich.",
-      "zh_CN": "克隆顾问1：Scorch，我需要你替我炸毁那个地堡。",
+      "zh_CN": "德尔塔38：Scorch，我需要你替我炸毁那个地堡。",
       "use_PS4_translation": true
     },
     "3169": {
@@ -49370,7 +49370,7 @@
       "en": "Delta 07: We're not going to abort, are we?",
       "jp": "Delta 07: 止めるわけじゃあるまい?",
       "de": "Delta 07: Wir brechen doch nicht ab, oder?",
-      "zh_CN": "能德尔塔07：我们不会中止行动的，对吧？",
+      "zh_CN": "德尔塔07：我们不会中止行动的，对吧？",
       "use_PS4_translation": true
     },
     "2936": {
@@ -50550,7 +50550,7 @@
       "en": "Taun We: Welcome, little one.  This is your first day.  Your designation will be RC 01/138.",
       "jp": "Taun We: ようこそ。本日が初日です。指令はRP 01/138。",
       "de": "Taun We: Willkommen, Kleiner. Heute ist Ihr erster Tag. Ihr Rufname lautet RP 01/138",
-      "zh_CN": "汤·韦：欢迎你，小个子。今天是你头一天来到这里。你将命名为RC 01/138。",
+      "zh_CN": "汤·韦：欢迎来到这个世界，小家伙。你的编号将是RC 01/138。",
       "use_PS4_translation": true
     },
     "2937": {
@@ -50574,7 +50574,7 @@
       "en": "Taun We: …But, as often as not, it will be your inherent physical traits that win the day…",
       "jp": "Taun We: …しかしながら、成功に導くのはあなた達の身体特性です…",
       "de": "Taun We: ... Aber oft werden Sie nur durch Ihre angeborenen körperlichen Talente überleben ...",
-      "zh_CN": "汤·韦：……不过，成功多半取决于你与生俱来的身体特征……",
+      "zh_CN": "汤·韦：……不过，成功多半取决于你与生俱来的身体素质……",
       "use_PS4_translation": true
     },
     "2940": {
@@ -50590,7 +50590,7 @@
       "en": "Taun We: For you are a commando, an elite unit, something truly special.",
       "jp": "Taun We: あなた達はコマンドー、エリート部隊、特別な存在です。",
       "de": "Taun We: Sie sind ein Kommando, eine Eliteeinheit, etwas ganz Besonderes.",
-      "zh_CN": "汤·韦：因为你是一名突击队员，一个精英单位，真正特别的存在。",
+      "zh_CN": "汤·韦：因为你是一名突击队员，精锐中的精锐，真正特别的存在。",
       "use_PS4_translation": true
     },
     "2942": {
@@ -50598,7 +50598,7 @@
       "en": "Taun We: Your weapons, your armor, and most importantly, your brothers.",
       "jp": "Taun We: 与えられた武器、装備、そしてなにより兄弟たち。",
       "de": "Taun We: Ihre Waffen, Ihre Rüstung, und vor allem, Ihre Brüder.",
-      "zh_CN": "汤·韦：你的武器、你的战斗服，最重要的是，你的兄弟们。",
+      "zh_CN": "汤·韦：你的武器、你的战斗服，以及最重要的——你的兄弟们。",
       "use_PS4_translation": true
     },
     "2943": {
@@ -50606,7 +50606,7 @@
       "en": "Taun We: The aiwha of our world hunt in pods to bring down much larger prey.  So too shall you join with three brothers and become fierce hunters for the Republic.",
       "jp": "Taun We: ポッドの中のエイファーは、さらにわざわいをもたらす。あなたも3人の兄弟と合流し、共和国の恐るべき狩人となるのです。",
       "de": "Taun We: Die Aiwha unserer Welt jagen in Herden, um größere Beutetiere erlegen zu können. Auch Sie werden mit drei Brüdern zusammen zu Jägern im Dienst der Republik werden.",
-      "zh_CN": "汤·韦：在我们的世界，飞鲸以小群体形式展开狩猎，捕杀体型较之庞大得多的猎物。而你也将与三名兄弟一起，成为共和国的勇猛猎人。",
+      "zh_CN": "汤·韦：我们世界的飞鲸结群出击，猎杀远比自身庞大的猎物。而你也将与三名兄弟一起，成为共和国最凶猛的猎手。",
       "use_PS4_translation": true
     },
     "2944": {
@@ -50614,7 +50614,7 @@
       "en": "Taun We: …now, join your pod  and embrace your destiny as their leader. Join Delta Squad.",
       "jp": "Taun We: …さあ、ポッドに合流し、リーダーとしての使命をさずかりなさい。デルタ小隊と合流です。",
       "de": "Taun We: ... schließen Sie sich jetzt Ihrer Truppe an, nehmen Sie Ihr Schicksal als Ihr Anführer an ... als Delta-Leader.",
-      "zh_CN": "汤·韦：……现在，加入你的小群体，拥抱你身为队长的命运，加入德尔塔小队吧。",
+      "zh_CN": "汤·韦：……现在，加入你的小队，拥抱你身为队长的使命，加入德尔塔小队吧。",
       "use_PS4_translation": true
     },
     "2945": {
@@ -50622,7 +50622,7 @@
       "en": "Taun We: You each bring a unique specialty to your pod.",
       "jp": "Taun We: 各人がそれぞれに特技を持っています。",
       "de": "Taun We: Jeder von Ihnen verfügt über eine besondere Fähigkeit.",
-      "zh_CN": "汤·韦：你们每个人都会为小群体带来独特的专长。",
+      "zh_CN": "汤·韦：你们每个人都会为小队带来独特的专长。",
       "use_PS4_translation": true
     },
     "2946": {
@@ -50654,7 +50654,7 @@
       "en": "Taun We: You are each a piece of a whole person.  ",
       "jp": "Taun We: 皆が1人を構成する要素なのです。",
       "de": "Taun We: Sie alle sind Teil eines einzigen Wesens.",
-      "zh_CN": "汤·韦：你们每个人都是一个整体。  ",
+      "zh_CN": "汤·韦：你们每个人，都是一个完整之人的一部分。  ",
       "use_PS4_translation": true
     },
     "2950": {
@@ -50702,7 +50702,7 @@
       "en": "Taun We: …When the galaxy learns of your existence…",
       "jp": "Taun We: …あなたたちの存在が知るところとなる。",
       "de": "Taun We: ... die Galaxis wird von Ihrer Existenz erfahren ...",
-      "zh_CN": "汤·韦：……当整个星系得知你们的存在时……",
+      "zh_CN": "汤·韦：……当整个银河系得知你们的存在时……",
       "use_PS4_translation": true
     },
     "2956": {
@@ -50734,7 +50734,7 @@
       "en": "Delta 40: Sir!  We're going to split up for the drop, but we'll meet you at the RV on Geonosis!  See you planetside, sir!",
       "jp": "Delta 40: 隊長、ここで一旦お別れですが、ジオノーシスのRVでまたお会いしましょう! 健闘を祈ります。",
       "de": "Delta 40: Sir! Wir springen getrennt ab und stoßen am Treffpunkt auf Geonosis wieder zueinander. Bis bald, Sir!",
-      "zh_CN": "德尔塔40：长官！我们即将分头空降，不过我们会在吉奥诺西斯的会合点与你碰面！行星边际再见，长官！",
+      "zh_CN": "德尔塔40：长官！我们即将分头空降，不过我们会在吉奥诺西斯的会合点与你碰面！地面见，长官！",
       "use_PS4_translation": true
     },
     "2960": {
@@ -50790,7 +50790,7 @@
       "en": "Clone Trooper Sergeant: New gunship!  Okay, Group B, let's move it!",
       "jp": "Clone Trooper Sergeant: 新しいガンシップだ! よし、Bグループ行け!",
       "de": "Klontruppen-Sergeant: Neues Kampfschiff! Okay, Gruppe B, Bewegung!",
-      "zh_CN": "克隆中士：来一艘新炮艇！好的，B组，动作快点！",
+      "zh_CN": "克隆中士：新炮艇到了！B组，动作快点！",
       "use_PS4_translation": true
     }
   },
@@ -68483,7 +68483,7 @@
       "en": "OPTIONS",
       "jp": "オプション",
       "de": "EXTRAS",
-      "zh_CN": "设置",
+      "zh_CN": "选项",
       "use_PS4_translation": true
     },
     "5": {
@@ -71894,7 +71894,7 @@
       "en": "Advance To The Next Sector",
       "jp": "次のセクターへ向かえ",
       "de": "BEGEBEN SIE SICH ZUM NÄCHSTEN SEKTOR",
-      "zh_CN": "前往下一个下一个扇区",
+      "zh_CN": "前往下一个扇区",
       "use_PS4_translation": true
     },
     "4": {
@@ -72855,7 +72855,7 @@
       "en": "SOUND / GRAPHICS OPTIONS",
       "jp": "",
       "de": "SOUND-/GRAFIKOPTIONEN",
-      "zh_CN": "声音选项",
+      "zh_CN": "声音/图像选项",
       "use_PS4_translation": true
     }
   },
@@ -73665,7 +73665,7 @@
       "en": " out of ammo.",
       "jp": "",
       "de": "",
-      "zh_CN": " 弹药耗尽。"
+      "zh_CN": " 弹药不足。"
     }
   },
   "properties.DC17mBlasterWeaponPickup": {
@@ -73869,7 +73869,7 @@
       "en": " out of Homing Rocket shells.",
       "jp": "",
       "de": "",
-      "zh_CN": " 制导导弹耗尽。"
+      "zh_CN": " 制导导弹不足。"
     }
   },
   "properties.RocketLauncherPickup": {
@@ -73941,7 +73941,7 @@
       "en": " out of cartridges.",
       "jp": "",
       "de": "",
-      "zh_CN": " 弹夹耗尽。"
+      "zh_CN": " 弹夹不足。"
     }
   },
   "properties.ShotgunPickup": {
@@ -74031,7 +74031,7 @@
       "en": " out of ammo.",
       "jp": "",
       "de": "",
-      "zh_CN": " 弹药耗尽。"
+      "zh_CN": " 弹药不足。"
     }
   },
   "properties.SMGPickup": {
@@ -74060,7 +74060,7 @@
       "en": " out of charges.",
       "jp": "",
       "de": "",
-      "zh_CN": " 能量耗尽。"
+      "zh_CN": " 炸药不足。"
     }
   },
   "properties.ThermalDetonator": {
@@ -74089,7 +74089,7 @@
       "en": " out of charges.",
       "jp": "",
       "de": "",
-      "zh_CN": " 能量耗尽。"
+      "zh_CN": " 炸药不足。"
     }
   },
   "properties.TrandoshanRifleAmmo": {
