@@ -149,11 +149,11 @@
       "zh_CN": "巴克塔治疗舱"
     },
     "100028": {
-      "note": "PickupMessage / 20 occurrences；与PS4官方不同：PS4将同名条目译为\"特兰多佣兵冲锋枪\"，本项目按术语表统一别名为\"ACP连发炮\"",
+      "note": "PickupMessage / 20 occurrences",
       "en": "Trandoshan Mercenary SMG",
       "jp": "トランドーシャン傭兵SMG",
       "de": "",
-      "zh_CN": "ACP连发炮"
+      "zh_CN": "特兰多佣兵冲锋枪"
     },
     "100029": {
       "note": "PickupMessage / 18 occurrences",
@@ -1744,7 +1744,7 @@
       "en": "Shotgun",
       "jp": "ACPアレイ・ガン",
       "de": "ACP-Maschinengewehr",
-      "zh_CN": "ACP阵列炮",
+      "zh_CN": "霰弹枪",
       "use_PS4_translation": true
     },
     "100804": {
@@ -4253,7 +4253,7 @@
       "en": "SABOTAGE SEPARATIST CORESHIP",
       "jp": "分離主義者のコアシップを破壊",
       "de": "SEPARATISTEN-KERNSCHIFF SABOTIEREN",
-      "zh_CN": "破坏分裂势力核心飞船"
+      "zh_CN": "破坏分离势力核心飞船"
     },
     "100991": {
       "note": "Exit.Blurred.Text / 2 occurrences",
@@ -4456,7 +4456,7 @@
       "en": "Sabotage Separatist Coreship",
       "jp": "分離主義者のコアシップを破壊",
       "de": "Sabotieren Sie das Kernschiff der Separatisten",
-      "zh_CN": "破坏分裂势力核心飞船"
+      "zh_CN": "破坏分离势力核心飞船"
     },
     "101020": {
       "note": "YYY_35B.Blurred.Text / 2 occurrences",
@@ -4855,7 +4855,7 @@
       "en": "LOCATE SEPARATIST  CRUISER",
       "jp": "分離主義者のクルーザーを発見せよ",
       "de": "FINDEN SIE DEN KREUZER DER SEPARATISTEN",
-      "zh_CN": "找到分离主义者巡洋舰",
+      "zh_CN": "找到分离势力巡洋舰",
       "use_PS4_translation": true
     },
     "101032": {
@@ -4863,7 +4863,7 @@
       "en": "LOCATE SEPARATIST CRUISER",
       "jp": "分離主義者のクルーザーを発見せよ",
       "de": "FINDEN SIE DEN KREUZER DER SEPARATISTEN",
-      "zh_CN": "找到分离主义者巡洋舰",
+      "zh_CN": "找到分离势力巡洋舰",
       "use_PS4_translation": true
     },
     "101033": {
@@ -12157,7 +12157,7 @@
       "en": "MAINTAIN CURRENT ORDERS",
       "jp": "指令を続行",
       "de": "MOMENT. BEFEHLE BEIBEHALTEN",
-      "zh_CN": "保留当前顺序",
+      "zh_CN": "保持当前命令",
       "use_PS4_translation": true
     },
     "9": {
@@ -12189,7 +12189,7 @@
       "en": "SAVING CHECKPOINT",
       "jp": "オートセーブ",
       "de": "KONTROLLPUNKT WIRD GESPEICHERT",
-      "zh_CN": "存档检查点",
+      "zh_CN": "正在保存游戏进度",
       "use_PS4_translation": true
     },
     "13": {
@@ -12317,7 +12317,7 @@
       "en": "PLEASE DON'T TURN OFF YOUR XBOX CONSOLE",
       "jp": "",
       "de": "SCHNELLSPEICHERUNG ABGESCHLOSSEN",
-      "zh_CN": "快速存档完成",
+      "zh_CN": "请勿关闭你的XBOX主机",
       "use_PS4_translation": true
     }
   },
@@ -12464,7 +12464,7 @@
       "en": "Fade",
       "jp": "フェード",
       "de": "Ausblenden",
-      "zh_CN": "褪色",
+      "zh_CN": "淡出",
       "use_PS4_translation": true
     }
   },
@@ -12494,7 +12494,7 @@
       "en": "Scene Speed",
       "jp": "シーン・スピード",
       "de": "Szenengeschwindigkeit",
-      "zh_CN": "游场景度",
+      "zh_CN": "过场速度",
       "use_PS4_translation": true
     }
   },
@@ -13562,7 +13562,7 @@
       "en": "THE REPUBLIC’S SECRET WEAPON, A MASSIVE CLONE ARMY, IS DEPLOYED FOR THE FIRST TIME AGAINST THE SEPARATIST DROID FORCES.",
       "jp": "共和国の秘密兵器 クローン軍団が\n分離主義者のドロイド部隊に向け初めて展開された",
       "de": "DIE GEHEIMWAFFE DER REPUBLIK, EINE RIESIGE KLONARMEE, WIRD ZUM ERSTEN MAL EINGESETZT - GEGEN DIE SEPARATISTISCHEN DROIDENTRUPPEN.",
-      "zh_CN": "共和国的秘密武器：一支规模庞大的克隆人军队，首次接受部署，用于对抗分离主义者机器人大军。",
+      "zh_CN": "共和国的秘密武器：一支规模庞大的克隆人军队，首次接受部署，用于对抗分离势力机器人大军。",
       "use_PS4_translation": true
     }
   },
@@ -15262,7 +15262,7 @@
       "en": "THE SEPARATISTS HAVE HIDDEN THEIR FACTORIES DEEP WITHIN THE BOWELS OF THE PLANET.  DELTA SQUAD MUST PENETRATE THE INNER LAIR OF THE GEONOSIANS AND LOCATE THE MAIN DROID CONSTRUCTION FACILITY.",
       "jp": "分離主義者の工場が地中深くに姿を隠している。\nジオノージアンの懐に入り込み、ドロイド製造工場を突き止めよ。",
       "de": "DIE SEPARATISTEN HABEN IHRE DROIDENFABRIK TIEF IM HERZEN DES PLANETEN VERSTECKT. DAS DELTA-TEAM MUSS IN DAS INNERE VERSTECK DER GEONOSIANER VORDRINGEN UND DIE HAUPT-DROIDENFABRIKATIONSSTÄTTE FINDEN.",
-      "zh_CN": "分离主义者将工厂隐藏在这颗星球的内部深处。德尔塔小队必须渗透到吉奥诺西斯人的老巢之中，找到主要的机器人建造设施。",
+      "zh_CN": "分离势力将工厂隐藏在这颗星球的内部深处。德尔塔小队必须渗透到吉奥诺西斯人的老巢之中，找到主要的机器人建造设施。",
       "use_PS4_translation": true
     },
     "5": {
@@ -15278,7 +15278,7 @@
       "en": "NOW THAT THE FOUNDRIES ARE OFFLINE, DELTA SQUAD MUST PROCEED THROUGH HOSTILE TERRITORY AND GAIN ENTRY TO A NEARBY SEPARATIST VESSEL.  SOMEWHERE ABOARD ARE THE LAUNCH CODES FOR THE ENTIRE CORE SHIP FLEET.",
       "jp": "工場は機能を失った。敵地を進み、分離主義者の艦に潜り込め。\n艦内のどこかにコアシップ艦隊の発進コードがあるはずだ。\n激しい抵抗が予想される。十分に気をつけろ。",
       "de": "JETZT, DA DIE FABRIKEN OFFLINE SIND, MUSS DAS DELTA-TEAM DURCH FEINDLICHES GEBIET VORDRINGEN UND EIN NAHE GELEGENES SEPARATISTENSCHIFF ENTERN. IRGENDWO AN BORD BEFINDEN SICH DORT DIE STARTCODES FÜR DIE GESAMTE KERNSCHIFF-FLOTTE.",
-      "zh_CN": "铸造厂现已瘫痪，德尔塔小队必须继续穿越敌对领地，进入附近一艘分离主义者的舰艇中。整支核心舰队的启动代码就在这艘舰艇上的某个地方。",
+      "zh_CN": "铸造厂现已瘫痪，德尔塔小队必须继续穿越敌对领地，进入附近一艘分离势力的舰艇中。整支核心舰队的启动代码就在这艘舰艇上的某个地方。",
       "use_PS4_translation": true
     },
     "10": {
@@ -15318,7 +15318,7 @@
       "en": "THE BATTLE HAS WIDENED.  THE SEPARATISTS ARE COMING, INTENT ON CLAIMING THEIR PRIZE.  CAN FOUR COMMANDOS HOLD THE LINE AGAINST AN UNENDING FLEET OF WAR DROIDS?  THE REPUBLIC IS COUNTING ON DELTA SQUAD.",
       "jp": "戦線が拡大した。分離主義軍が強欲に攻め入って来た。\n4人のコマンドーはドロイド艦隊を食い止められるのか…。\n共和国の運命はデルタ小隊にかかっている。",
       "de": "DIE SCHLACHT IST ESKALIERT. DIE SEPARATISTEN RÜCKEN AN, UM IHRE TROPHÄE ZU HOLEN. KÖNNEN VIER KOMMANDOS DIE STELLUNG GEGEN EINE UNENDLICHE FLOTTE KRIEGSDROIDEN HALTEN? DIE REPUBLIK ZÄHLT AUF DAS DELTA-TEAM.",
-      "zh_CN": "战斗的规模扩大了。分离主义者即将到来，决心夺走战利品。四名突击队员在无尽的战争机器人舰队攻势之下，能否坚守阵线呢？共和国全指望德尔塔小队了。",
+      "zh_CN": "战斗的规模扩大了。分离势力即将到来，决心夺走战利品。四名突击队员在无尽的战争机器人舰队攻势之下，能否坚守阵线呢？共和国全指望德尔塔小队了。",
       "use_PS4_translation": true
     },
     "28": {
@@ -15334,7 +15334,7 @@
       "en": "THE SEPARATIST PRESENCE IS NOW UNDENIABLE. THEIR BASE AND SUPPLY OPERATIONS MUST BE DECIMATED BEFORE FURTHER ANTI-SEPARATIST ACTIVITY CAN BEGIN.  THE DELTAS ARE NOW HEADED AFTER THEIR NEXT HIGH-VALUE TARGET...",
       "jp": "もはや分離主義軍の介入は疑いようが無い。\n分離主義者を食い止めるため、基地と補給路を絶て。\nデルタは次の大きなターゲットに向かっていた。",
       "de": "DIE GEGENWART DER SEPARATISTEN IST NUN UNVERKENNBAR. IHRE BASIS UND IHRE NACHSCHUBWEGE MÜSSEN VERNICHTET WERDEN, BEVOR WEITERE ANTI-SEPARATISTISCHE AKTIVITÄTEN FOLGEN KÖNNEN. DIE DELTAS SIND NUN AUF DEM WEG ZU IHREM NÄCHSTEN WICHTIGEN ZIEL ...",
-      "zh_CN": "分离主义者的存在现已无可否认。在开始进一步的反分离主义者活动之前，必须先摧毁他们的基地和补给运作。如今，德尔塔小随正前往追踪他们的下一个重要目标……",
+      "zh_CN": "分离势力的存在现已无可否认。在开始进一步的反分离势力活动之前，必须先摧毁他们的基地和补给运作。如今，德尔塔小队正前往追踪他们的下一个重要目标……",
       "use_PS4_translation": true
     },
     "35": {
@@ -15342,7 +15342,7 @@
       "en": "THE TIDE OF BATTLE NOW TURNS ON ONE CRUCIAL LINK.  THE BRIDGE AT KACHIRHO IS THE ARTERY OF THE SEPARATIST SUPPLY LINE.  FIGHT TO THE MIDWAY POINT AND DESTROY IT TO CHOKE FURTHER SEPARATIST ADVANCE.",
       "jp": "戦いは決定的な動きを見せている。\nカチーロ橋は分離主義者の動脈、重要な補給路だ。\n橋の中央地点へと進み、分離主義者の進路を塞げ。",
       "de": "DIE SCHLACHT STEHT AN EINEM KRITISCHEN PUNKT. DIE BRÜCKE VON KACHIRHO IST DAS HERZ DES SEPARATISTISCHEN NACHSCHUBS. KÄMPFEN SIE SICH ZUR MITTE VOR UND ZERSTÖREN SIE DIE BRÜCKE, UM DEN WEITEREN VORMARSCH DER SEPARATISTEN ZU ERSTICKEN.",
-      "zh_CN": "战争之潮现在开启了一个关键环节。卡彻霍大桥可谓是分离主义者补给线上的大动脉。一路战斗到中间点并摧毁大桥，扼杀分离主义者进一步推进的野望。",
+      "zh_CN": "战争之潮现在开启了一个关键环节。卡彻霍大桥可谓是分离势力补给线上的大动脉。一路战斗到中间点并摧毁大桥，扼杀分离势力进一步推进的野望。",
       "use_PS4_translation": true
     },
     "40": {
@@ -15350,7 +15350,7 @@
       "en": "THE CONFLICT HAS ESCALATED.  IF THE WOOKIEES HAVE ANY HOPE OF REPELLING THE HOSTILE INVADERS, IT LIES WITH THE BRAVE WARRIOR TARFFUL.  DELTA SQUAD MUST ENSURE HE UNITES HIS FORCES AGAINST THE SEPARATIST THREAT.",
       "jp": "衝突が激化した。\n敵の侵入を食い止めるには、勇敢な戦士ターフルの力が必要だ。\nデルタ小隊は、彼の力を借りて分離主義軍に立ち向かえ。",
       "de": "DER KONFLIKT IST ESKALIERT. ALLE HOFFNUNG DER WOOKIEES, DIE FEINDLICHEN INVASOREN ZURÜCKZUSCHLAGEN, RUHEN AUF DEM TAPFEREN KRIEGER TARFFUL. DAS DELTA-TEAM MUSS SICHERGEHEN, DASS ER SEINE KRÄFTE GEGEN DIE BEDROHUNG DURCH DIE SEPARATISTEN VEREINT.",
-      "zh_CN": "冲突愈演愈烈。如果说伍基人还存有击退敌对入侵者的希望，那么仰仗的无疑就是无畏的战士塔弗尔。德尔塔小队必须确保他聚集起部队，抵抗分离主义者的威胁。",
+      "zh_CN": "冲突愈演愈烈。如果说伍基人还存有击退敌对入侵者的希望，那么仰仗的无疑就是无畏的战士塔弗尔。德尔塔小队必须确保他聚集起部队，抵抗分离势力的威胁。",
       "use_PS4_translation": true
     },
     "46": {
@@ -15358,7 +15358,7 @@
       "en": "A MAJOR CONFRONTATION WITH SEPARATIST FORCES IS NOW INEVITABLE.  THE TWO FACTIONS ARE ADVANCING ON ONE ANOTHER, PREPARING FOR AN ALL-OUT BATTLE.",
       "jp": "分離主義者との衝突は避けられない。\n2つの大きな勢力が、それぞれ前進している。間もなく全面衝突だ。",
       "de": "EINE GRÖSSERE AUSEINANDERSETZUNG MIT DEN STREITKRÄFTEN DER SEPARATISTEN IST NUN UNVERMEIDLICH. DIE BEIDEN SEITEN BEWEGEN SICH AUFEINANDER ZU UND BEREITEN SICH AUF EINE GEWALTIGE SCHLACHT VOR.",
-      "zh_CN": "与分离主义者的重大对抗如今已无可避免。两大阵营正在互相逼近，准备打响全面之战。",
+      "zh_CN": "与分离势力的重大对抗如今已无可避免。两大阵营正在互相逼近，准备打响全面之战。",
       "use_PS4_translation": true
     },
     "49": {
@@ -15366,7 +15366,7 @@
       "en": "A SEPARATIST DROP SHIP THREATENS ALL OF DELTA’S GAINS, DELIVERING WAVES OF TROOPS INTO THE WOOKIEE CITY.  IT’S UP TO FOUR BRAVE COMMANDOS TO REACH THE VESSEL -- AND SHOOT IT OUT OF THE SKY.",
       "jp": "分離主義者のドロップシップが、街に部隊を送り込んでいる。\nデルタ小隊への脅威は続くだろう。\nドロップシップを片付けなくてはならない。\nそれが可能なのは4人の勇敢なコマンドー達だけだ。",
       "de": "EIN LANDUNGSSCHIFF DER SEPARATISTEN BEDROHT ALLE ERFOLGE DES DELTA-TEAMS, WELLE AUF WELLE DRINGEN TRUPPEN IN DIE WOOKIEE-STADT VOR. ES LIEGT AN VIER TAPFEREN KOMMANDOS, DAS SCHIFF ZU ERREICHEN UND VOM HIMMEL ZU HOLEN.",
-      "zh_CN": "分离主义者的运输船威胁着德尔塔小队的所有收益，将成批的部队送入了伍基人的城市。为今之计，能够依靠的只有四名勇敢的突击队员前往舰艇，然后将它就地摧毁。",
+      "zh_CN": "分离势力的运输船威胁着德尔塔小队的所有收益，将成批的部队送入了伍基人的城市。为今之计，能够依靠的只有四名勇敢的突击队员前往舰艇，然后将它就地摧毁。",
       "use_PS4_translation": true
     },
     "56": {
@@ -16653,7 +16653,7 @@
       "en": "%k punched several holes through %o with a repeater gun.",
       "jp": "%k がリピーター・ガンで %o を蜂の巣にした。",
       "de": "%k hat %o mehrere Löcher mit einem Repetiergewehr verpasst.",
-      "zh_CN": "%k用ACP连发炮把%o打成了筛子。"
+      "zh_CN": "%k用连发炮把%o打成了筛子。"
     }
   },
   "properties.CTDamageBallisticShotgun": {
@@ -16857,7 +16857,7 @@
       "en": "Trandoshan Mercenary SMG",
       "jp": "トランドーシャン傭兵SMG",
       "de": "Trandoshanische Söldner-MP",
-      "zh_CN": "ACP连发炮"
+      "zh_CN": "特兰多佣兵冲锋枪"
     }
   },
   "properties.TrandoshanRifleMP": {
@@ -17494,7 +17494,7 @@
       "en": "ON THE OUTSKIRTS OF SEPARATIST SPACE, A MISSING REPUBLIC ASSAULT SHIP HAS REAPPEARED.",
       "jp": "分離主義者の勢力圏の外れで 連絡の途絶えていた\n共和国軍のアサルトシップが姿を現した",
       "de": "IM AUSSENBEREICH DES SEPARATISTENRAUMS IST EIN VERMISSTES ANGRIFFSSCHIFF WIEDERAUFGETAUCHT.",
-      "zh_CN": "在分离主义者太空的外围地带，一艘失踪的共和国突击舰再度出现。",
+      "zh_CN": "在分离势力太空的外围地带，一艘失踪的共和国突击舰再度出现。",
       "use_PS4_translation": true
     },
     "3": {
@@ -19525,7 +19525,7 @@
       "en": "Delta 07: Separatist down.",
       "jp": "Delta 07: 分離主義者をやった。",
       "de": "Delta 07: Separatist am Boden.",
-      "zh_CN": "德尔塔07：分裂份子倒下了。",
+      "zh_CN": "德尔塔07：分离势力单位倒下了。",
       "use_PS4_translation": true
     },
     "126": {
@@ -25133,7 +25133,7 @@
       "en": "Delta 38: Trandoshan shotgun… a primitive weapon for close encounters.",
       "jp": "Delta 38: トランドーシャンのショットガン… 接近戦用の原始兵器だ。",
       "de": "Delta 38: Ein trandoshanisches Gewehr ... Eine primitive Waffe für den Nahkampf.",
-      "zh_CN": "德尔塔38：特兰多沙人霰弹枪……简单粗暴的近距离遭遇战武器。",
+      "zh_CN": "德尔塔38：特兰多沙霰弹枪……简单粗暴的近距离遭遇战武器。",
       "use_PS4_translation": true
     },
     "881": {
@@ -29933,7 +29933,7 @@
       "en": "Delta 40: Separatist squashed.",
       "jp": "Delta 40: 分離主義者が撤退。",
       "de": "Delta 40: Separatist vernichtet.",
-      "zh_CN": "德尔塔40：分裂份子已摧毁。",
+      "zh_CN": "德尔塔40：分离势力单位已摧毁。",
       "use_PS4_translation": true
     },
     "1533": {
@@ -44680,7 +44680,7 @@
       "en": "Delta 40: Separatist turrets now targeting... Separatist craft.",
       "jp": "Delta 40: 砲塔は分離主義者の船に向けられている。",
       "de": "Delta 40: Geschütztürme der Separatisten nehmen jetzt ... separatistische Schiffe ins Visier.",
-      "zh_CN": "德尔塔40：分裂份子的炮塔现在瞄准……分裂份子的战机。",
+      "zh_CN": "德尔塔40：分离势力的炮塔现在瞄准……分离势力的战机。",
       "use_PS4_translation": true
     },
     "3128": {
@@ -44984,7 +44984,7 @@
       "en": "Delta 62: Delta Four-Oh has been slicing the Separatist networks.  He's got some intel on Sun Fac.  Let's go find him. ",
       "jp": "Delta 62: デルタ40が分離主義者のネットワークに侵入しています。 サン・ファークの情報を手に入れました。",
       "de": "Delta 62: Delta 4-0 hat sich in das Separatisten-Netzwerk gehackt. Er hat Informationen über Sun Fac gefunden. Gehen wir ihn suchen.",
-      "zh_CN": "德尔塔62：德尔塔40号一直忙于骇入分裂份子网络。他得到了一些关于桑·法克的情报。我们去找他吧。 ",
+      "zh_CN": "德尔塔62：德尔塔40号一直忙于骇入分离势力网络。他得到了一些关于桑·法克的情报。我们去找他吧。",
       "use_PS4_translation": true
     },
     "3166": {
@@ -45844,7 +45844,7 @@
       "en": "Clone Advisor 1: A few hours ago, the Separatists had a minor... confrontation with some Jedi at your drop zone.",
       "jp": "Clone Advisor 1: 数時間前、分離主義者が… 諸君の着陸地点でジェダイと小競り合いを起こした。",
       "de": "Klonberater 1: Vor ein paar Stunden hatten die Separatisten in Ihrer Landezone eine ... Auseinandersetzung mit einigen Jedi.",
-      "zh_CN": "克隆顾问1：几小时前，分离主义者们在你们的空降区，与几位绝地发生了一个小小的……冲突。",
+      "zh_CN": "克隆顾问1：几小时前，分离势力们在你们的空降区，与几位绝地发生了一个小小的……冲突。",
       "use_PS4_translation": true
     },
     "2939": {
@@ -47784,7 +47784,7 @@
       "en": "Clone Advisor 1: The Separatists are evacuating. We need to take out any Core ships we can before they take off.  ",
       "jp": "Clone Advisor 1: 分離主義者が撤退している。コアシップが逃げる前にすべて破壊するのだ。",
       "de": "Klonberater 1: Die Separatisten evakuieren. Wir müssen verhindern, dass die Kernschiffe abheben!",
-      "zh_CN": "克隆顾问1：分裂势力正在撤离。我们得趁他们起飞之前，尽可能消灭一切核心飞船。  ",
+      "zh_CN": "克隆顾问1：分离势力正在撤离。我们得趁他们起飞之前，尽可能消灭一切核心飞船。",
       "use_PS4_translation": true
     },
     "2929": {
@@ -48880,7 +48880,7 @@
       "en": "Clone Advisor 1: We need you to infiltrate the core ship and retrieve its launch codes, giving us the edge we need to halt the evacuation of the separatist fleet.",
       "jp": "Clone Advisor 1: コアシップに侵入し、発進コードを見つけろ。分離主義者の艦隊の脱出を食い止めるんだ。",
       "de": "Klonberater 1: Dringen Sie in das Schiff ein und besorgen Sie uns die Startcodes. Mit den Codes können wir die Evakuierung der Separatisten-Flotte stoppen.",
-      "zh_CN": "克隆顾问1：我们需要你们渗透到核心飞船上，取得它的启动代码，从而阻止分裂势力舰队的撤离，帮助我们占据优势。",
+      "zh_CN": "克隆顾问1：我们需要你们渗透到核心飞船上，取得它的启动代码，从而阻止分离势力舰队的撤离，帮助我们占据优势。",
       "use_PS4_translation": true
     },
     "3066": {
@@ -52010,7 +52010,7 @@
       "en": "Clone Advisor 1: THIS... is the Prosecutor, an Aclimator Class Republic Assault Ship under the command of Moff Longo.  When last contacted she was headed for the Corellia Sector, on a mission to supress a wave of Separatist activity",
       "jp": "Clone Advisor 1: これは… プロセキューター。モフ・ロンゴが指揮するアクリメーター・クラスのアサルトシップだ。分離主義者の制圧にコレリアセクターに向かう途中、消息をたった。",
       "de": "Klonberater 1: DAS ... ist die Prosecutor, ein republikanisches Angriffsschiff der Aclimator-Klasse unter dem Kommando von Moff Longo. Beim letzten Kontakt war sie auf dem Weg in den Corellia-Sektor, um dort gegen die Separatisten vorzugehen.",
-      "zh_CN": "克隆顾问1：这是……莫夫·隆戈指挥的欢呼者级共和国突击舰“检察官”号。上一次联络时，它正前往科雷利亚地区，执行一项阻止分离主义者活动的任务",
+      "zh_CN": "克隆顾问1：这是……莫夫·隆戈指挥的欢呼者级共和国突击舰“检察官”号。上一次联络时，它正前往科雷利亚地区，执行一项阻止分离势力活动的任务",
       "use_PS4_translation": true
     },
     "2929": {
@@ -52114,7 +52114,7 @@
       "en": "Clone Advisor 1: Her last patrol was the Corellia Sector, defending Republic trade routes against Separatist activity.  But we lost contact with her over two weeks ago.",
       "jp": "Clone Advisor 1: あれが最後に向かったのはコレリア・セクターだ。共和国の通商ルートを保護するためだ。だが、2週間前に連絡が途絶えた。",
       "de": "Klonberater 1: Zuletzt hat sie im Corellia-Sektor republikanische Handelswege gegen die Separatisten verteidigt ... wir haben vor über zwei Wochen den Kontakt mit ihr verloren.",
-      "zh_CN": "克隆顾问1：它最后一次巡逻是在科雷利亚地区，负责保卫共和国的贸易路线，防止分离主义者活动。但大约两周前，我们与它失去了联系。",
+      "zh_CN": "克隆顾问1：它最后一次巡逻是在科雷利亚地区，负责保卫共和国的贸易路线，防止分离势力活动。但大约两周前，我们与它失去了联系。",
       "use_PS4_translation": true
     },
     "2942": {
@@ -54358,7 +54358,7 @@
       "en": "Clone Advisor 1: Delta three-eight, be advised!  I've got a Separatist battleship on long-range sensors!",
       "jp": "Clone Advisor 1: デルタ38! 長距離センサーに分離主義者の船を探知した。",
       "de": "Klonberater 1: Achtung, Delta 3-8! Ich habe ein Schlachtschiff der Separatisten auf den Langstreckensensoren!",
-      "zh_CN": "克隆顾问1：德尔塔38号，请注意！我在远程传感器上发现了一艘分裂势力战舰！",
+      "zh_CN": "克隆顾问1：德尔塔38号，请注意！我在远程传感器上发现了一艘分离势力战舰！",
       "use_PS4_translation": true
     },
     "3030": {
@@ -54526,7 +54526,7 @@
       "en": "Delta 62: The Trandos have stolen this ship... to give to the Separatists… to buy battle droids?",
       "jp": "Delta 62: トランドーシャンが船を奪って。分離主義者に渡した。ドロイドを買うためか?",
       "de": "Delta 62: Die Trandos haben dieses Schiff gestohlen ... um es den Separatisten zu geben ... um Kampfdroiden zu kaufen?",
-      "zh_CN": "德尔塔62：特兰多人偷走这艘飞船……是为了将它交给分裂份子……换取战斗机器人？",
+      "zh_CN": "德尔塔62：特兰多人偷走这艘飞船……是为了将它交给分离主义者……换取战斗机器人？",
       "use_PS4_translation": true
     },
     "3051": {
@@ -54800,7 +54800,7 @@
       "en": "Clone Advisor 1: Delta, the Separatists could be here any minute--",
       "jp": "Clone Advisor 1: デルタ、分離主義者がじきにやって来るぞ…",
       "de": "Klonberater 1: Delta, die Separatisten können jeden Moment hier sein ...",
-      "zh_CN": "克隆顾问1：德尔塔小队，分裂势力随时可能出现——",
+      "zh_CN": "克隆顾问1：德尔塔小队，分离势力随时可能出现——",
       "use_PS4_translation": true
     },
     "2931": {
@@ -54872,7 +54872,7 @@
       "en": "Clone Advisor 1: This is Delta Squadron Advisor 01/425.  Separatist forces are attempting to capture our ship.",
       "jp": "Clone Advisor 1: こちらデルタ・アドバイザー01/425、分離主義者に船を制圧されてしまう。",
       "de": "Klonberater 1: Ich bin Berater 01/425 des Delta-Geschwaders. Separatisten wollen unser Schiff kapern!",
-      "zh_CN": "克隆顾问1：我是德尔塔小队顾问01/425。分裂势力的部队正试图侵占我们的飞船。",
+      "zh_CN": "克隆顾问1：我是德尔塔小队顾问01/425。分离势力的部队正试图侵占我们的飞船。",
       "use_PS4_translation": true
     },
     "2940": {
@@ -55448,7 +55448,7 @@
       "en": "Captain Talbot: Opening fire on the Separatists.  They appear willing to stand their ground.",
       "jp": "Captain Talbot: 攻撃開始、目標は分離主義者。奴ら、譲る気はないな。",
       "de": "Captain Talbot: Feuer auf die Separatisten eröffnen. Die haben nicht vor, aufzugeben.",
-      "zh_CN": "泰伯特船长：向分裂势力开火。他们似乎很乐意坚守阵地。",
+      "zh_CN": "泰伯特船长：向分离势力开火。他们似乎很乐意坚守阵地。",
       "use_PS4_translation": true
     },
     "3012": {
@@ -58814,7 +58814,7 @@
       "en": "Delta 38: Those look like Separatist supply crates.",
       "jp": "Delta 38: 分離主義者の弾薬のようだ。",
       "de": "Delta 38: Das sind Vorratskisten der Separatisten!",
-      "zh_CN": "德尔塔38：那些好像是分裂份子补给箱。",
+      "zh_CN": "德尔塔38：那些好像是分离势力补给箱。",
       "use_PS4_translation": true
     },
     "2960": {
@@ -58862,7 +58862,7 @@
       "en": "Delta 38: Hmmm.  More Separatist supplies.",
       "jp": "Delta 38: フム。分離主義者の物資がまだあるぞ。",
       "de": "Delta 38: Hmmm. Noch mehr Vorräte der Separatisten.",
-      "zh_CN": "德尔塔38：嗯。又有更多分裂份子补给。",
+      "zh_CN": "德尔塔38：嗯。又有更多分离势力补给。",
       "use_PS4_translation": true
     },
     "2966": {
@@ -58878,7 +58878,7 @@
       "en": "Delta 38: Sir, I think we've stumbled across a Separatist supply base.",
       "jp": "Delta 38: 分離主義者の補給基地に入り込んだようです。",
       "de": "Delta 38: Sir, ich glaube, wir sind hier auf ein Vorratslager der Separatisten gestoßen!",
-      "zh_CN": "德尔塔38：长官，我想我们偶然发现了一个分裂份子的补给基地。",
+      "zh_CN": "德尔塔38：长官，我想我们偶然发现了一个分离势力的补给基地。",
       "use_PS4_translation": true
     },
     "2968": {
@@ -59102,7 +59102,7 @@
       "en": "Clone Advisor 1: We're not going far, Delta!  The Separatists are planting their flag in Kashyyyk, and it's up to us to yank it out!",
       "jp": "Clone Advisor 1: 遠くないぞ、デルタ! 分離主義者がキャッシークにかかげた旗を倒せるかは我々にかかっている!",
       "de": "Klonberater 1: Wir fliegen nicht weit, Delta! Die Separatisten wollen sich auf Kashyyyk einnisten. Und genau das sollen wir verhindern!",
-      "zh_CN": "克隆顾问1：我们不会走太远，德尔塔！分离主义者打算将卡希克据为己有，要靠我们来阻止他们！",
+      "zh_CN": "克隆顾问1：我们不会走太远，德尔塔！分离势力打算将卡希克据为己有，要靠我们来阻止他们！",
       "use_PS4_translation": true
     },
     "2996": {
@@ -59270,7 +59270,7 @@
       "en": "Delta 38: Advisor:  I believe the Separatists are using this base as a staging area for their attack on the Wookiees.",
       "jp": "Delta 38: Advisor:  アドバイザー、分離主義者はこの基地を足がかりにウーキーを攻撃しているようだ。",
       "de": "Delta 38: Berater: Ich glaube, die Separatisten nehmen diese Basis als Ausgangspunkt für ihren Angriff auf die Wookiees.",
-      "zh_CN": "德尔塔38：顾问，我认为分裂份子把这个基地当作是一个集结待命地，准备对卡希克发动袭击。",
+      "zh_CN": "德尔塔38：顾问，我认为分离势力把这个基地当作是一个集结待命地，准备对卡希克发动袭击。",
       "use_PS4_translation": true
     },
     "3018": {
@@ -59294,7 +59294,7 @@
       "en": "Delta 38: The Separatists are definitely involved here.",
       "jp": "Delta 38: 間違いなく分離主義者が絡んでいるぞ。",
       "de": "Delta 38: Die Separatisten sind hier garantiert involviert.",
-      "zh_CN": "德尔塔38：分裂份子一定有所瓜葛。",
+      "zh_CN": "德尔塔38：分离势力一定有所瓜葛。",
       "use_PS4_translation": true
     },
     "3021": {
@@ -59426,7 +59426,7 @@
       "en": "Clone Advisor 1: The nature of this attack reveals that they are expecting reinforcements, and the communications disruption confirms this.  Expect Separatist landers heading down in large numbers.",
       "jp": "Clone Advisor 1: 現在、敵は援軍を待っているようだ。奴らの通信の混乱がそれを裏付けている。分離主義者の上陸部隊が大挙して来るぞ。",
       "de": "Klonberater 1: Ausgehend von der Art des Angriffs erwarten sie Verstärkung. Das erklärt auch die Störung der Kommunikationssysteme. Rechnen Sie mit mehreren Landefähren der Separatisten!",
-      "zh_CN": "克隆顾问1：从这次攻击的性质可以看出，他们正在等待增援到来，通讯中断也证实了这一点。预计将会有大量的分裂势力着陆器降下。",
+      "zh_CN": "克隆顾问1：从这次攻击的性质可以看出，他们正在等待增援到来，通讯中断也证实了这一点。预计将会有大量的分离势力着陆器降下。",
       "use_PS4_translation": true
     },
     "2930": {
@@ -59658,7 +59658,7 @@
       "en": "Clone Advisor 1: Be advised.  Separatist landers spotted about 20 klicks out.",
       "jp": "Clone Advisor 1: 敵の上陸部隊は20キロ外に位置している。",
       "de": "Klonberater 1: Zu Ihrer Information: 20 Klicks entfernt wurden Landefähren gesichtet.",
-      "zh_CN": "克隆顾问1：注意。约20公里外发现分裂势力着陆器。",
+      "zh_CN": "克隆顾问1：注意。约20公里外发现分离势力着陆器。",
       "use_PS4_translation": true
     },
     "2960": {
@@ -59682,7 +59682,7 @@
       "en": "Delta 38: We're not prepared to take on the whole Separatist army.",
       "jp": "Delta 38: 敵を丸ごと引き受ける準備はないぞ。",
       "de": "Delta 38: Wir haben nicht die Mittel, uns mit einer ganzen Armee anzulegen.",
-      "zh_CN": "德尔塔38：我们还没准备好对付一整支分裂势力军队。",
+      "zh_CN": "德尔塔38：我们还没准备好对付一整支分离势力军队。",
       "use_PS4_translation": true
     },
     "2963": {
@@ -59706,7 +59706,7 @@
       "en": "Clone Advisor 1: Alert!  Separatist troop ships spotted-",
       "jp": "Clone Advisor 1: 気をつけろ! 分離主義者の船だ。",
       "de": "Klonberater 1: Alarm! Truppentransporter gesichtet.",
-      "zh_CN": "克隆顾问1：警戒！发现分裂势力部队的飞船——",
+      "zh_CN": "克隆顾问1：警戒！发现分离势力部队的飞船——",
       "use_PS4_translation": true
     },
     "2966": {
@@ -59946,7 +59946,7 @@
       "en": "Delta 62: Won't this vector send us deeper into Separatist territory?",
       "jp": "Delta 62: この方向で分離主義者のナワバリにいけるのか?",
       "de": "Delta 62: Führt dieser Vektor nicht tiefer in das Territorium der Separatisten?",
-      "zh_CN": "德尔塔62：这个方向不会让我们深入分裂势力的地盘吗？",
+      "zh_CN": "德尔塔62：这个方向不会让我们深入分离势力的地盘吗？",
       "use_PS4_translation": true
     },
     "2996": {
@@ -60090,7 +60090,7 @@
       "en": "Clone Advisor 1: The Separatists have touched down and are starting to deploy.",
       "jp": "Clone Advisor 1: 分離主義者が到着した。展開を開始している。",
       "de": "Klonberater 1: Die Separatisten sind gelandet und schwärmen aus.",
-      "zh_CN": "克隆顾问1：分裂势力已经着陆并开始部署。",
+      "zh_CN": "克隆顾问1：分离势力已经着陆并开始部署。",
       "use_PS4_translation": true
     },
     "3015": {
@@ -60106,7 +60106,7 @@
       "en": "Clone Advisor 1: That will sever the link between Separatist and Wookiee territory.",
       "jp": "Clone Advisor 1: 分離主義者をウーキーに近づかせるな。",
       "de": "Klonberater 1: Damit wäre die einzige Verbindung zwischen Wookiees und Separatisten zerstört.",
-      "zh_CN": "克隆顾问1：那样就能切断分裂势力与伍基人领地之间的连接。",
+      "zh_CN": "克隆顾问1：那样就能切断分离势力与伍基人领地之间的连接。",
       "use_PS4_translation": true
     },
     "3017": {
@@ -60114,7 +60114,7 @@
       "en": "Clone Advisor 1: Move fast.  If the Separatists reach the span first, they'll make your job a lot harder.",
       "jp": "Clone Advisor 1: 急げ。分離主義者に先をこされたら、やっかいなことになるぞ。",
       "de": "Klonberater 1: Beeilen Sie sich. Wenn die Separatisten den Bogen zuerst erreichen, wird es schwierig.",
-      "zh_CN": "克隆顾问1：动作快点。如果分裂势力先到达跨距位置，就会使你们的任务困难得多。",
+      "zh_CN": "克隆顾问1：动作快点。如果分离势力先到达跨距位置，就会使你们的任务困难得多。",
       "use_PS4_translation": true
     },
     "3018": {
@@ -60482,7 +60482,7 @@
       "en": "Delta 38: HQ, the Separatists are down and are sending scout parties.  ",
       "jp": "Delta 38: 司令部、分離主義者が来た。偵察隊を繰り出している。  ",
       "de": "Delta 38: Sir, die Separatisten schicken Spähtrupps aus.",
-      "zh_CN": "德尔塔38：总部，分裂份子下来了，他们派出了侦察党。  ",
+      "zh_CN": "德尔塔38：总部，分离势力下来了，他们派出了侦察队。",
       "use_PS4_translation": true
     },
     "3065": {
@@ -60882,7 +60882,7 @@
       "en": "Clone Advisor 1: If the Separatists reach the Center Span before you do, the city will be lost.",
       "jp": "Clone Advisor 1: 分離主義者に先をこされれば、街を失ってしまう。",
       "de": "Klonberater 1: Wenn die Separatisten vor Ihnen den Brückenbogen erreichen, ist die Stadt verloren.",
-      "zh_CN": "克隆顾问1：如果分裂势力在你们之前到达跨距中心位置，整座城市就丢了。",
+      "zh_CN": "克隆顾问1：如果分离势力在你们之前到达跨距中心位置，整座城市就丢了。",
       "use_PS4_translation": true
     },
     "3116": {
@@ -60890,7 +60890,7 @@
       "en": "Clone Advisor 1: If the Separatists reach the Center Span before you do, Kachirho will be over-run.",
       "jp": "Clone Advisor 1: 分離主義者に先をこされれば、カチーロを制圧されてしまう。",
       "de": "Klonberater 1: Wenn die Separatisten vor Ihnen den Brückenbogen erreichen, wird Kachirho überlaufen.",
-      "zh_CN": "克隆顾问1：如果分裂势力在你们之前到达跨距中心位置，卡彻霍就会被迅速占领。",
+      "zh_CN": "克隆顾问1：如果分离势力在你们之前到达跨距中心位置，卡彻霍就会被迅速占领。",
       "use_PS4_translation": true
     },
     "3117": {
@@ -60898,7 +60898,7 @@
       "en": "Clone Advisor 1: This is it, Deltas.  This is your objective. If we can stop the Separatists here, we can hold Kachirho.",
       "jp": "Clone Advisor 1: そうだ、デルタ。それが任務だ。ここで分離主義者を食い止めれば、カチーロを押さえることができる。",
       "de": "Klonberater 1: Das ist Ihr Ziel, Delta-Team. Wenn wir die Separatisten hier aufhalten können, können wir Kachirho halten.",
-      "zh_CN": "克隆顾问1：时候到了，德尔塔小队。这是你们的目标。如果我们能在这里阻止分裂势力，就能守住卡彻霍。",
+      "zh_CN": "克隆顾问1：时候到了，德尔塔小队。这是你们的目标。如果我们能在这里阻止分离势力，就能守住卡彻霍。",
       "use_PS4_translation": true
     },
     "3118": {
@@ -61042,7 +61042,7 @@
       "en": "Clone Advisor 1: If we block access to the main routes, we can force the Separatists to engage us where we're more prepared for them.",
       "jp": "Clone Advisor 1: メインルートをふさげば、分離主義者はこっちに有利な方へ回らざるを得ない。",
       "de": "Klonberater 1: Wenn wir den Zugang zu den Hauptrouten blockieren, können wir die Separatisten zum Angriff zwingen, sobald wir besser vorbereitet sind.",
-      "zh_CN": "克隆顾问1：如果我们拦住了主路，就能迫使分裂势力在我们做好准备的地方与我们开战。",
+      "zh_CN": "克隆顾问1：如果我们拦住了主路，就能迫使分离势力在我们做好准备的地方与我们开战。",
       "use_PS4_translation": true
     },
     "3137": {
@@ -61226,7 +61226,7 @@
       "en": "Clone Advisor 1: Move on to the Central Span, and smother the Separatist advance.",
       "jp": "Clone Advisor 1: 橋の中央に行け。分離主義者の動きを止めるんだ。",
       "de": "Klonberater 1: Rücken Sie zum mittleren Bogen vor und stoppen Sie den Vormarsch der Separatisten.",
-      "zh_CN": "克隆顾问1：现在前往跨距中心，抑制分裂势力的推进。",
+      "zh_CN": "克隆顾问1：现在前往跨距中心，抑制分离势力的推进。",
       "use_PS4_translation": true
     },
     "3160": {
@@ -61234,7 +61234,7 @@
       "en": "Clone Advisor 1: This is it, Deltas.  If we can stop the Separatists here, we can keep them out of this half of Kachirho.",
       "jp": "Clone Advisor 1: そうだ、デルタ。ここで分離主義者を食い止めれば、カチーロの半分はこっちのものだ。",
       "de": "Klonberater 1: Okay, Deltas. Wenn wir die Separatisten hier aufhalten, ist die andere Seite von Kachirhos gerettet!",
-      "zh_CN": "克隆顾问1：是时候了，德尔塔小队。如果我们能在这里阻止分裂势力，就能将他们挡在这半个卡彻霍之外。",
+      "zh_CN": "克隆顾问1：是时候了，德尔塔小队。如果我们能在这里阻止分离势力，就能将他们挡在这半个卡彻霍之外。",
       "use_PS4_translation": true
     },
     "3161": {
@@ -61242,7 +61242,7 @@
       "en": "Clone Advisor 1: Expect massive resistance; this is the advance group of the main Separatist army.",
       "jp": "Clone Advisor 1: 抵抗が激しいぞ。これは分離主義者主要部隊の先発隊だ。",
       "de": "Klonberater 1: Rechnen Sie mit massivem Widerstand. Das ist die Vorhut der Separatistenarmee.",
-      "zh_CN": "克隆顾问1：预计会遇到巨大抵抗；这是分裂势力主力部队的先遣队。",
+      "zh_CN": "克隆顾问1：预计会遇到巨大抵抗；这是分离势力主力部队的先遣队。",
       "use_PS4_translation": true
     },
     "3162": {
@@ -61354,7 +61354,7 @@
       "en": "Clone Advisor 1: Nice work, Delta squad! Now the Separatists will never get their hands on Kachiro.",
       "jp": "Clone Advisor 1: よくやった、デルタ小隊! これで分離主義者はカチーロに手を出せない。",
       "de": "Klonberater 1: Gute Arbeit, Delta-Team. Sie haben Kachirho vor den Separatisten gerettet!",
-      "zh_CN": "克隆顾问1：干得漂亮，德尔塔小队！现在分裂势力再也无法染指卡彻霍了。",
+      "zh_CN": "克隆顾问1：干得漂亮，德尔塔小队！现在分离势力再也无法染指卡彻霍了。",
       "use_PS4_translation": true
     }
   },
@@ -61388,7 +61388,7 @@
       "en": "Clone Advisor 1: Separatist advance parties have already reached this side of the bridge and are attempting to clear a path for the main invasion force.",
       "jp": "Clone Advisor 1: 分離主義者の先発隊が橋のこちら側に来ているぞ。主力部隊の通り道を作ろうとしている。",
       "de": "Klonberater 1: Die Vorhut der Separatisten hat diese Seite der Brücke bereits erreicht und versucht, der eigentlichen Invasionsarmee den Weg zu ebnen.",
-      "zh_CN": "克隆顾问1：分裂势力的先头部队已经到达大桥的这一侧，试图为主力入侵部队扫清道路。",
+      "zh_CN": "克隆顾问1：分离势力的先头部队已经到达大桥的这一侧，试图为主力入侵部队扫清道路。",
       "use_PS4_translation": true
     },
     "2932": {
@@ -61396,7 +61396,7 @@
       "en": "Clone Advisor 1: You’ll need to clear out the advance parties and beat the main Separatist force to the center span. ",
       "jp": "Clone Advisor 1: 先発隊を排除して、分離主義者を中央で食い止めるんだ。 ",
       "de": "Klonberater 1: Sie müssen die Vorhut ausschalten und vor der Invasionsarmee der Separatisten den Brückenbogen erreichen.",
-      "zh_CN": "克隆顾问1：你们必须消灭先头部队，并抢先分裂势力主力部队到达跨距中心位置。 ",
+      "zh_CN": "克隆顾问1：你们必须消灭先头部队，并抢先分离势力主力部队到达跨距中心位置。",
       "use_PS4_translation": true
     },
     "2933": {
@@ -61404,7 +61404,7 @@
       "en": "Clone Advisor 1: Once you’ve reached the center span, you will place a demo charge at this point. It’s an expansion joint between the two sections. Destroy this bridge, and stop the Separatists in their tracks.",
       "jp": "Clone Advisor 1: 中央に着いたら、ここに爆薬をしかけろ。橋をつなぐジョイント部分だ。この橋を破壊すれば、分離主義者は足止めを食らう。",
       "de": "Klonberater 1: Dann platzieren Sie an diesem Punkt, an dem die beiden Teile der Brücke zusammengehalten werden, eine Sprengladung. Sie müssen diese Brücke zerstören, damit die Separatisten aufgehalten werden.",
-      "zh_CN": "克隆顾问1：你们到达跨距中心位置后，要将炸药埋设在这个点。这是两个部分之间的伸缩接头位置。摧毁这座大桥，就能阻止分裂势力前进的步伐了。",
+      "zh_CN": "克隆顾问1：你们到达跨距中心位置后，要将炸药埋设在这个点。这是两个部分之间的伸缩接头位置。摧毁这座大桥，就能阻止分离势力前进的步伐了。",
       "use_PS4_translation": true
     },
     "2934": {
@@ -61436,7 +61436,7 @@
       "en": "Delta 40: Those are Separatists! … they're out in the open…",
       "jp": "Delta 40: 分離主義者だ! …広地に展開している…",
       "de": "Delta 40: Das sind Separatisten! ... wieso zeigen die sich ...",
-      "zh_CN": "德尔塔40：那些是分裂份子！……他们完全公开露面了……",
+      "zh_CN": "德尔塔40：那些是分离主义者！……他们完全公开露面了……",
       "use_PS4_translation": true
     },
     "2938": {
@@ -61460,7 +61460,7 @@
       "en": "Clone Advisor 1: Listen up, Commandos. You can-NOT allow the Separatists to gain a foothold here!  The future of the Republic is at stake!",
       "jp": "Clone Advisor 1: コマンドー。分離主義者に足がかりを築かせてはならんぞ! 共和国の未来がかかっている!",
       "de": "Klonberater 1: Hören Sie, Kommandos! Wir dürfen NICHT zulassen, dass die Separatisten hier Fuß fassen. Die Zukunft der Republik steht auf dem Spiel!",
-      "zh_CN": "克隆顾问1：听着，突击队。你们绝不能让分离主义者在这里立足！共和国的未来危在旦夕！",
+      "zh_CN": "克隆顾问1：听着，突击队。你们绝不能让分离势力在这里立足！共和国的未来危在旦夕！",
       "use_PS4_translation": true
     },
     "2941": {
@@ -61718,7 +61718,7 @@
       "en": "Clone Advisor 1: Looks like the Separatists are more serious about this attack than we thought. They've got all hands on deck.",
       "jp": "Clone Advisor 1: 分離主義者は予想以上に警戒しているようだ。デッキに全員を集結させてるぞ。",
       "de": "Klonberater 1: Offenbar nahmen die Separatisten den Angriff ernster, als wir dachten. Sie haben jeden Mann mobilisiert.",
-      "zh_CN": "克隆顾问1：看来分裂势力对这次进攻比我们想像的还要重视。他们派出了所有人手。",
+      "zh_CN": "克隆顾问1：看来分离势力对这次进攻比我们想像的还要重视。他们派出了所有人手。",
       "use_PS4_translation": true
     },
     "2952": {
@@ -61894,7 +61894,7 @@
       "en": "Clone Advisor 1: Scans indicate that the Wookiees have secured this loading dock. Tarfful says the hangar is occupied. He also informs us that the Separatists control the shield jammer at the top of the hangar. Delta Squad, proceed to the hangar and help secure it for the Wookiees.",
       "jp": "Clone Advisor 1: ウーキーがこの積荷ドックを確保したようだ。ターフルによるとハンガーは占領されている。分離主義者はハンガーの上でシールドの妨害を制御しているらしい。デルタ小隊、ハンガーに進んで確保し、ウーキーたちを入れてやれ。",
       "de": "Klonberater 1: Die Wookiees haben die Verladerampe gesichert. Der Hangar ist laut Tarfful besetzt. Er sagt, dass die Separatisten den Störsender auf dem Dach des Hangars kontrollieren. Delta-Team, rücken Sie zum Hangar vor und helfen Sie den Wookiees, ihn zu sichern.",
-      "zh_CN": "克隆顾问1：扫描显示，伍基人已经占领了这个装载坞。塔弗尔说机库已被占领。他还告诉我们，分裂势力控制着机库顶部的防护罩干扰装置。德尔塔小队，前往机库，为伍基人占领那里。",
+      "zh_CN": "克隆顾问1：扫描显示，伍基人已经占领了这个装载坞。塔弗尔说机库已被占领。他还告诉我们，分离势力控制着机库顶部的防护罩干扰装置。德尔塔小队，前往机库，为伍基人占领那里。",
       "use_PS4_translation": true
     },
     "2974": {
@@ -61902,7 +61902,7 @@
       "en": "Clone Advisor 1: Alright Squad. Now that we have blown the center span and stopped the forward progress of the Separatists, we need to finish the job.",
       "jp": "Clone Advisor 1: よーし、小隊。中央部の爆破により、分離主義者は前進できない。任務を完了するんだ。",
       "de": "Klonberater 1: Gut, Team. Sie haben den Brückenbogen gesprengt und den Vormarsch der Separatisten gestoppt. Bringen Sie die Sache jetzt zu Ende.",
-      "zh_CN": "克隆顾问1：好了全队。我们已经炸毁跨距中心位置，阻止了分裂势力的进程，现在我们要善始善终。",
+      "zh_CN": "克隆顾问1：好了全队。我们已经炸毁跨距中心位置，阻止了分离势力的进程，现在我们要善始善终。",
       "use_PS4_translation": true
     },
     "2975": {
@@ -61910,7 +61910,7 @@
       "en": "Clone Advisor 1: We will likely encounter heavy resistance since the Separatists have had time to occupy this area of the bridge.",
       "jp": "Clone Advisor 1: 橋のこの部分は抵抗が激しいぞ。分離主義者が陣取っている。",
       "de": "Klonberater 1: Rechnen Sie mit heftigem Widerstand. Die Separatisten hatten genug Zeit, diesen Brückenabschnitt zu besetzen.",
-      "zh_CN": "克隆顾问1：由于分裂势力有时间占据桥梁的这一区域，我们可能会遇到强烈抵抗。",
+      "zh_CN": "克隆顾问1：由于分离势力有时间占据桥梁的这一区域，我们可能会遇到强烈抵抗。",
       "use_PS4_translation": true
     },
     "2976": {
@@ -62046,7 +62046,7 @@
       "en": "Delta 38: Looks like he’s holding back the whole Separatist army by himself!",
       "jp": "Delta 38: まるで分離主義者を一人で食い止めてるぞ!",
       "de": "Delta 38: Sieht aus, als würde er die ganze Separatistenarmee alleine aufhalten.",
-      "zh_CN": "德尔塔38：看来他是在凭着一己之力在阻挡整支分裂势力军队！",
+      "zh_CN": "德尔塔38：看来他是在凭着一己之力在阻挡整支分离势力军队！",
       "use_PS4_translation": true
     },
     "2994": {
@@ -62086,7 +62086,7 @@
       "en": "Clone Advisor 1: Delta Lead:  I’m reading Separatist demo-locks on those ammo crates. You’ll need to slice those locks to secure the ammo. ",
       "jp": "Clone Advisor 1: デルタリーダー、弾薬箱を分離主義者がロックしている。ロックを解除して弾薬を確保せよ。",
       "de": "Klonberater 1: Delta-Leader: Die Separatisten haben die Munitionskisten mit Sprengschlössern gesichert. Sie müssen sie erst hacken.",
-      "zh_CN": "克隆顾问1：德尔塔队长：我发现那些弹药箱上有分裂势力设置的炸药锁。你们得骇入那些锁才能获得弹药。 ",
+      "zh_CN": "克隆顾问1：德尔塔队长：我发现那些弹药箱上有分离势力设置的炸药锁。你们得骇入那些锁才能获得弹药。",
       "use_PS4_translation": true
     },
     "2999": {
@@ -62102,7 +62102,7 @@
       "en": "Delta 40: Hold on, sir.  Those are Separatist demo-locks on the ammo crates.  Be careful.",
       "jp": "Delta 40: 待ってください。弾薬箱に敵の爆薬がロックされています。",
       "de": "Delta 40: Passen Sie auf, Sir. Die Separatisten haben die Munitionskisten mit Sprengschlössern gesichert.",
-      "zh_CN": "德尔塔40：等一下，长官。那些是分裂势力在弹药箱上安装的炸药锁。小心点。",
+      "zh_CN": "德尔塔40：等一下，长官。那些是分离势力在弹药箱上安装的炸药锁。小心点。",
       "use_PS4_translation": true
     },
     "3001": {
@@ -62150,7 +62150,7 @@
       "en": "Delta 38: Damn Separatist tech!  Nearly took my finger off!",
       "jp": "Delta 38: 分離主義者め! 指を落とすところだ!",
       "de": "Delta 38: Verdammte Separatisten! Das Ding hätte mich beinahe den Finger gekostet!",
-      "zh_CN": "德尔塔38：可恶的分裂份子技术！差点把我的手指弄断！",
+      "zh_CN": "德尔塔38：可恶的分离势力技术！差点把我的手指弄断！",
       "use_PS4_translation": true
     },
     "3007": {
@@ -62302,7 +62302,7 @@
       "en": "Clone Advisor 1: Delta, this is the remnant of Tarfful’s personal guard. They’ll escort him to the War Room. You make your way to the upper levels of the Citadel and continue the assault on the Separatist forces. ",
       "jp": "Clone Advisor 1: デルタ、これはターフルの護衛の生き残りだ。指令室まで護衛してくれる。要塞の上のレベルまで行って、引き続き分離主義者を攻撃しろ。 ",
       "de": "Klonberater 1: Delta, das sind die Überreste von Tarffuls Leibgarde. Sie bringen ihn in den Kontrollraum. Setzen Sie in den oberen Ebenen der Zitadelle den Angriff auf die Separatisten fort.",
-      "zh_CN": "克隆顾问1：德尔塔，这是塔弗尔亲卫队的剩余力量。他们会护送他到作战室。你们要取道进入城塞上层，继续攻击分裂势力的部队。 ",
+      "zh_CN": "克隆顾问1：德尔塔，这是塔弗尔亲卫队的剩余力量。他们会护送他到作战室。你们要取道进入城塞上层，继续攻击分离势力的部队。",
       "use_PS4_translation": true
     },
     "3026": {
@@ -62318,7 +62318,7 @@
       "en": "Clone Advisor 1: Separatist forces are using the upper levels of the Citadel as a staging area for their assault on the city.  If we can take back this tree we can cut off their supply lines and stop them cold.",
       "jp": "Clone Advisor 1: 分離主義者は要塞の上レベルを足がかりに街を攻撃している。このツリーを取り戻せば、奴らの供給ラインをカットして燃料を止められる。",
       "de": "Klonberater 1: Die Separatisten verwenden die oberen Ebenen der Zitadelle als Ausgangsbasis für ihre Angriffe auf die Stadt. Wenn wir diesen Baum zurückerobern und ihre Versorgungslinien unterbrechen, haben wir gewonnen.",
-      "zh_CN": "克隆顾问1：分裂势力的部队正利用城塞上层作为他们袭击城市的集结待命地。如果我们能夺回这棵树，就能切断敌人的补给线，有力地阻止他们。",
+      "zh_CN": "克隆顾问1：分离势力的部队正利用城塞上层作为他们袭击城市的集结待命地。如果我们能夺回这棵树，就能切断敌人的补给线，有力地阻止他们。",
       "use_PS4_translation": true
     },
     "3028": {
@@ -62414,7 +62414,7 @@
       "en": "Clone Advisor 1: Tarfful indicates that separatists have overrun the ammo dumps on the nearby loading docks. We'll need to liberate that ammo if they're going to have any chance of beating back the separatists.",
       "jp": "Clone Advisor 1: ターフルによると分離主義者が近くの積荷ドックに弾薬を積み込んだそうだ。分離主義者に抵抗するには、その弾薬を手に入れる必要がある。",
       "de": "Klonberater 1: Laut Tarfful haben die Separatisten die Munitionslager der Verladerampen überrannt! Wenn wir die Separatisten zurückschlagen wollen, brauchen wir diese Munition!",
-      "zh_CN": "克隆顾问1：塔弗尔表示，分裂势力已经迅速占领了装载坞附近的弹药转储站。要想他们有机会击退分裂势力，我们必须夺回那些弹药。",
+      "zh_CN": "克隆顾问1：塔弗尔表示，分离势力已经迅速占领了装载坞附近的弹药转储站。要想他们有机会击退分离势力，我们必须夺回那些弹药。",
       "use_PS4_translation": true
     },
     "3040": {
@@ -62568,7 +62568,7 @@
       "en": "Clone Advisor 1: Deltas, a separatist ship has just touched down on the top of this tree.",
       "jp": "Clone Advisor 1: デルタ、分離主義者の船がツリー上部に達したぞ。",
       "de": "Klonberater 1: Deltas, ein Schiff der Separatisten ist auf der Krone dieses Baums gelandet!",
-      "zh_CN": "克隆顾问1：德尔塔小队，分裂势力的飞船刚刚在这棵树顶端降落。",
+      "zh_CN": "克隆顾问1：德尔塔小队，分离势力的飞船刚刚在这棵树顶端降落。",
       "use_PS4_translation": true
     },
     "2929": {
@@ -62792,7 +62792,7 @@
       "en": "Clone Advisor 1: The Separatist Cruiser has hooked into the tree's power grid.",
       "jp": "Clone Advisor 1: 分離主義者のクルーザーがツリーのパワーグリッドに係留したぞ。",
       "de": "Klonberater 1: Der Kreuzer der Separatisten hat sich ins Energienetz des Baums eingeklinkt.",
-      "zh_CN": "克隆顾问1：分裂势力的巡洋舰接入了大树的电网。",
+      "zh_CN": "克隆顾问1：分离势力的巡洋舰接入了大树的电网。",
       "use_PS4_translation": true
     },
     "2957": {
@@ -62816,7 +62816,7 @@
       "en": "Clone Advisor 1: The Separatists have locked them down so you'll have to slice in to activate them.",
       "jp": "Clone Advisor 1: 分離主義者がそいつをロックしている。侵入してアクティブにしろ。",
       "de": "Klonberater 1: Allerdings müssen Sie sie hacken, wenn Sie sie aktivieren wollen!",
-      "zh_CN": "克隆顾问1：分裂势力已经把它们锁定，所以你们得先骇入才能激活。",
+      "zh_CN": "克隆顾问1：分离势力已经把它们锁定，所以你们得先骇入才能激活。",
       "use_PS4_translation": true
     },
     "2960": {
@@ -63080,7 +63080,7 @@
       "en": "Delta 40: Separatist traitors!",
       "jp": "Delta 40: 分離主義者だ!",
       "de": "Delta 40: Separatisten-Verräter!",
-      "zh_CN": "德尔塔40：是分裂份子叛徒！",
+      "zh_CN": "德尔塔40：是分离主义叛徒！",
       "use_PS4_translation": true
     },
     "2993": {
@@ -63144,7 +63144,7 @@
       "en": "Clone Advisor 1: Well done, Deltas!  The Wookiee Defense systems are now online, and available to destroy the Separatist Cruiser.",
       "jp": "Clone Advisor 1: よくやった、デルタ! ウーキーの防御システムが回復した。分離主義者のクルーザーを破壊できる。",
       "de": "Klonberater 1: Gute Arbeit, Deltas! Die Abwehrsysteme der Wookiees sind online. Jetzt ist der Kreuzer der Separatisten fällig!",
-      "zh_CN": "克隆顾问1：干得漂亮，德尔塔小队！伍基人防御系统现已上线，可用于摧毁分裂势力的巡洋舰。",
+      "zh_CN": "克隆顾问1：干得漂亮，德尔塔小队！伍基人防御系统现已上线，可用于摧毁分离势力的巡洋舰。",
       "use_PS4_translation": true
     },
     "3001": {
@@ -63496,7 +63496,7 @@
       "en": "Clone Advisor 1: The Separatist presence is very heavy in the main citadel.",
       "jp": "Clone Advisor 1: 要塞には分離主義者がたんまりといるぞ。",
       "de": "Klonberater 1: In der Zitadelle befinden sich viele Separatisten.",
-      "zh_CN": "克隆顾问1：分裂势力在主城塞中布有重兵。",
+      "zh_CN": "克隆顾问1：分离势力在主城塞中布有重兵。",
       "use_PS4_translation": true
     },
     "3045": {
@@ -63872,7 +63872,7 @@
       "en": "Clone Advisor 1: The separatists have been using it to load this tree with droids.",
       "jp": "Clone Advisor 1: 分離主義者はこれを使ってツリーにドロイドを展開している。",
       "de": "Klonberater 1: Die Separatisten haben ihn dazu verwendet, Droiden auf den Baum zu schaffen.",
-      "zh_CN": "克隆顾问1：分裂势力一直使用它在这棵树上部署机器人。",
+      "zh_CN": "克隆顾问1：分离势力一直使用它在这棵树上部署机器人。",
       "use_PS4_translation": true
     },
     "3092": {
@@ -67985,7 +67985,7 @@
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
       "de": "AUTO-MANÖVER",
-      "zh_CN": "自动撤回行动"
+      "zh_CN": "自动撤退"
     },
     "7": {
       "note": "OptionLabels[7].Text",
@@ -68078,7 +68078,7 @@
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
       "de": "",
-      "zh_CN": "自动撤回行动"
+      "zh_CN": "自动撤退"
     },
     "25": {
       "note": "Options[5].Items[0]",
@@ -72150,7 +72150,7 @@
       "en": "DESTROY SEPARATIST CRUISER ",
       "jp": "分離主義者のクルーザーを破壊せよ",
       "de": "ZERSTÖREN SIE DEN KREUZER DER SEPARATISTEN",
-      "zh_CN": "摧毁分离主义者巡洋舰 ",
+      "zh_CN": "摧毁分离势力巡洋舰",
       "use_PS4_translation": true
     }
   },
@@ -72290,7 +72290,7 @@
       "en": "THE TRANDOSHANS HAVE INVADED THE PLANET AND LAUNCHED A CRUEL SLAVE TRADE, APPARENTLY USING SEPARATIST WEAPONRY.",
       "jp": "トランドーシャンが惑星を侵略し\n分離主義者と奴隷貿易を開始したらしい",
       "de": "DIE TRANDOSHANER HABEN DEN PLANETEN ANGEGRIFFEN UND ORGANISIEREN EINEN GRAUSAMEN SKLAVENHANDEL, ANSCHEINEND MIT WAFFEN DER SEPARATISTEN.",
-      "zh_CN": "特兰多沙人侵入了这个星球，并发动了残酷的奴隶贸易，他们所用的显然是分离主义者的武器。",
+      "zh_CN": "特兰多沙人侵入了这个星球，并发动了残酷的奴隶贸易，他们所用的显然是分离势力的武器。",
       "use_PS4_translation": true
     }
   },
@@ -72736,7 +72736,7 @@
       "en": "AUTO PULL MANEUVERS",
       "jp": "",
       "de": "AUTO-MANÖVER",
-      "zh_CN": "自动",
+      "zh_CN": "自动撤退",
       "use_PS4_translation": true
     },
     "25": {

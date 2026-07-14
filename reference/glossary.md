@@ -87,8 +87,10 @@
 
 | 原文变体 | 译文 | 说明 |
 | --- | --- | --- |
-| ACP Array Gun / Trandoshan Slaver Shotgun / Shotgun | ACP阵列炮 | 同一武器；别名不另译为不同武器 |
-| ACP Repeater Gun / Trandoshan Mercenary SMG / Mercenary SMG / SMG | ACP连发炮 | 同一武器；别名不另译为不同武器 |
+| ACP Array Gun | ACP阵列炮 | 普通装备名 |
+| ACP Repeater Gun | ACP连发炮 | 普通装备名 |
+| Trandoshan Slaver Shotgun / Shotgun | 特兰多奴隶贩子霰弹枪/霰弹枪 | 普通装备名 |
+| Trandoshan Mercenary SMG / Mercenary SMG / SMG | 特兰多佣兵冲锋枪/佣兵冲锋枪/冲锋枪 | 普通装备名 |
 | Anti-Aircraft Turret / anti-aircraft turret | 防空炮塔 | 普通装备名 |
 | AT-TE / ATTE | AT-TE | 仅型号；统一规范为 `AT-TE` |
 | AT-TE Walker / ATTE Walker / ATTEWalker | AT-TE步行机 | 型号保留，类别翻译 |
@@ -141,7 +143,7 @@
 
 - 星球、地点、组织、世界观术语使用官方或通用中文译名。
 - 舰名、行动名、战役名可保留识别码，名称语义部分翻译，并按中文习惯加"号"、"战役"、"行动"等。
-- `Confederacy` 与 `Separatists` 相关但不等同：前者译为 `邦联`，后者译为 `分离主义者` 或 `分离主义势力`。`Trade Federation` 译为 `贸易联盟`，其口语缩写 `Trade Fed` / `Fed` 译为 `贸易联盟` / `联盟`。
+- `Confederacy` 与 `Separatists` 相关但不等同：前者译为 `邦联`，后者译为 `分离主义（+者/势力）` 或 `分离势力（+目标/单位）`。`Trade Federation` 译为 `贸易联盟`，其口语缩写 `Trade Fed` / `Fed` 译为 `贸易联盟` / `联盟`。
 - `Republic` 单独出现时译为 `共和国`；明确指政权全称时可译为 `银河共和国`。
 
 | 原文变体 | 译文 | 说明 |
@@ -173,23 +175,9 @@
 | Mandalorian Supercommandos | 曼达洛超级突击队 | 组织/部队名 |
 | RC Batch Delta / RC BATCH DELTA | 德尔塔批次 | 批次名 |
 | Republic / the Republic | 共和国 | 明确指政权全称时可译为"银河共和国" |
-| Separatists / Separatist | 分离主义者 / 分裂势力 / 分裂份子 | 按语境分译，见下方规则 |
+| Separatists / Separatist | `分离主义（+者/势力）` 或 `分离势力（+目标/单位）` | 按语境分译 |
 | Trade Federation | 贸易联盟 | 组织名；口语缩写 `Trade Fed` / `Fed` 译为 `贸易联盟` / `联盟` |
 
-### Separatist 分译规则
-
-`Separatist` / `Separatists` 根据语境使用三种译名：
-
-| 译名 | 适用语境 | 判断标准 |
-| --- | --- | --- |
-| 分离主义者 | 政治背景、情报分析、历史叙述 | 讨论动机、政治关系、背景介绍；常见于任务简报开头 |
-| 分裂势力 | 军事实体、战术/战略描述 | 指代舰队、军队、部署、兵力、载具、阵地；常见于克隆顾问战术指令 |
-| 分裂份子 | 战斗口语、感叹、蔑称 | Delta 队员击杀报告、战场喊话、情绪化用语 |
-
-典型示例：
-- 分离主义者："与分离主义者没有任何已知联系"（情报分析）、"分离主义者可能正在幕后支持"（政治阴谋）
-- 分裂势力："分裂势力正在撤离"（战术通报）、"分裂势力主力部队的先遣队"（军事描述）
-- 分裂份子："分裂份子倒下了"（击杀报告）、"可恶的分裂份子技术！"（口语抱怨）
 
 ## 种族、阵营、单位
 
