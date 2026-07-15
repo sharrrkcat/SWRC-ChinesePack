@@ -113,7 +113,7 @@
 | EWHB-12 | EWHB-12 | 仅型号 |
 | EWHB-12 Mounted Gun | EWHB-12安装炮塔 | 型号保留，类别翻译 |
 | EWeb Turret / EWebTurret | EWeb炮塔 | 型号保留，类别翻译 |
-| Flash Detonator / Flash Detonators / Flashbang Detonator / Flashbang Detonators / Flashbang / Flashbangs / FlashBang | 闪光雷管 | 同一装备；别名不另译为不同装备 |
+| Flash Detonator / Flash Detonators / Flashbang Detonator / Flashbang Detonators / Flashbang / Flashbangs / FlashBang | 闪光弹雷管 | 同一装备；别名不另译为不同装备 |
 | Flight Recorder / flight recorder | 飞行记录仪 | 普通装备名 |
 | Force Pike / ForcePike | 原力矛 | 武器名 |
 | Geonosian Beam Weapon / Geo Beam Weapon / Elite Beam Weapon / Elite Beam | 精英光束武器 | 武器名 |
@@ -122,7 +122,8 @@
 | HUD | HUD | 界面缩写，保留 |
 | Katarn-Class Armor / Katarn-class armor / Katarn armor / Katarn-armor | 卡塔恩级盔甲 | 专名音译，类别翻译 |
 | LJ-50 Concussion Rifle / Concussion Rifle / ConcussionRifle | LJ-50震荡步枪 | 有型号时保留型号 |
-| LS-150 Heavy ACP Repeater Gun / LS-150 Heavy AP Repeater Gun / Trandoshan Heavy Machine Gun / Heavy Machine Gun | LS-150重型ACP连发炮 | 同一武器；别名不另译为不同武器 |
+| LS-150 Heavy ACP Repeater Gun / LS-150 Heavy AP Repeater Gun | LS-150重型ACP连发炮 | 同一武器；别名不另译为不同武器 |
+| Trandoshan Heavy Machine Gun / Heavy Machine Gun | 特兰多重型机枪/重型机枪 | 同一武器；别名不另译为不同武器 |
 | Proximity Charge / Proximity Charges / Prox Charge / ProxChargeInventory | 感应炸药 | 普通装备名 |
 | Remote Droid / remote droid | 遥控机器人 | 普通装备名 |
 | Republic Gunship | 共和国炮艇 | 特指共和国炮艇 |
@@ -236,7 +237,7 @@
 | heal / heals / healed / healing | 治疗 | 恢复生命值；区别于 `revive` |
 | incapacitated / incapacitation | 失去作战能力 | 倒地且无法行动的状态 |
 | maneuver / maneuvers | 行动 | 小队系统动作，如执行、取消、救援等 |
-| revive / revives / revived / reviving | 复活 | 使失能队友恢复行动；不译为普通治疗 |
+| revive / revives / revived / reviving | 急救| 使失能队友恢复行动；不译为普通治疗 |
 | slice / slices / sliced / slicing | 骇入 | 星战语境中的计算机/系统入侵 |
 | Squad Command / Squad Commands / squad command / squad commands | 小队命令 | 命令系统 |
 | Squad Leader / squad leader | 队长 | 职务称呼 |
@@ -250,7 +251,6 @@
 - 小队指令使用短、明确、适合 UI 按钮和字幕提示的译名。
 - 指令名出现在章节标题或普通任务描述中时，可保留同一核心译法，但句式可按中文自然表达调整。
 - `Recall` 在本作中用于取消当前行动并让队员回到玩家身边，译为"召回"。
-- `Revive` 需要根据最终成品决定是复活还是救起
 
 | 原文变体 | 译文 | 说明 |
 | --- | --- | --- |
@@ -259,13 +259,13 @@
 | Breach Door / breach door / Door Breach / door breach | 破门 | 小队破门指令 |
 | Cancel Maneuver / cancel maneuver | 取消行动 | 取消当前小队行动 |
 | Demolitions Maneuver / demolitions maneuver / Demolition Maneuver / demolition maneuver | 爆破行动 | 小队爆破指令 |
-| Engage Maneuver / engage maneuver | 执行行动 | 执行当前小队行动 |
-| Form Up / Form-Up / Form up / form up | 列队 | 队员回到编队并跟随 |
+| Engage Maneuver / engage maneuver | 展开行动 | 执行当前小队行动 |
+| Form Up / Form-Up / Form up / form up | 集合 | 队员回到编队并跟随 |
 | Grenade Position / grenade position | 手榴弹阵地 | 小队投掷/火力位置 |
 | Recall | 召回 | 取消当前行动并回到玩家身边 |
-| Recall and Revive | 召回和复活 | 组合指令；用于复活失能玩家或队友 |
-| Search and Destroy | 搜索并摧毁 | 小队进攻性战术指令；也可作章节标题 |
-| Secure Area / Secure the Area | 占领区域 | 小队防守性战术指令；普通任务描述可译为"确保区域安全" |
+| Recall and Revive | 召回并急救 | 组合指令；用于急救失能玩家或队友 |
+| Search and Destroy | 搜索并歼灭 | 小队进攻性战术指令；也可作章节标题 |
+| Secure Area / Secure the Area | 控制区域 | 小队防守性战术指令；普通任务描述可译为"确保区域安全" |
 | Slice Console / slice console | 骇入控制台 | 小队骇入控制台指令 |
 | Snipe | 狙击 | 小队狙击指令 |
 | Sniper Position / sniper position | 狙击手位置 | 小队狙击位置 |

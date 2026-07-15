@@ -721,7 +721,7 @@
       "en": "Stand near Squad mate and hold @ to revive",
       "jp": "小隊に近付き@を押し続ける:回復",
       "de": "NEBEN TEAMMITGLIED STELLEN UND @ ZUM WIEDERBELEBEN GEDRÜCKT HALTEN.",
-      "zh_CN": "站在队友旁边并按住 @ 即可复活",
+      "zh_CN": "靠近队友并按住 @ 即可急救",
       "use_PS4_translation": true
     },
     "100745": {
@@ -744,7 +744,7 @@
       "en": "You can revive a nearby squadmate by facing him and holding down Use.   If you have other squadmates available you can order a revive maneuver.",
       "jp": "小隊に近付き[使う]キーを押し続けると、彼らを回復することができます。 また他の仲間に倒れたコマンドーを回復するよう命令することもできます。",
       "de": "Sie können ein Teammitglied wiederbeleben, indem Sie sich in seine Nähe stellen, es ansehen und Benutzen gedrückt halten. Sind noch andere Teammitglieder anwesend, können Sie ein Wiederlebungsmanöver befehlen.",
-      "zh_CN": "要复活旁边的队友，你可以面朝队友并按住使用按钮。如果还有其他队友可以指挥，你可以下达复活行动的命令。",
+      "zh_CN": "要急救旁边的队友，你可以面朝队友并按住使用按钮。如果还有其他队友可以指挥，你可以下达急救行动的命令。",
       "use_PS4_translation": true
     },
     "100748": {
@@ -752,7 +752,7 @@
       "en": "You can order your squad to revive you by selecting Recall and Revive.  Your squad will try and eliminate any immediate threats and revive you.",
       "jp": "戦闘への復帰方法を[指令を続行]か[リコール＆回復]のどちらかで、小隊の仲間に命令することができます。 あらゆる状況でも、彼らはあなたの救助を試みることでしょう。",
       "de": "Sie können Ihrem Team befehlen, Sie wiederzubeleben, indem Sie Zurückrufen und Wiederbeleben auswählen. Ihr Team wird versuchen, jegliche akute Bedrohung auszuschalten und Sie wiederzubeleben.",
-      "zh_CN": "你可以选择“召回和复活”，命令小队复活你。你的小队会尽力消灭一切直接威胁并将你复活。",
+      "zh_CN": "你可以选择“召回并急救”，命令小队对你进行急救。你的小队会尽力消灭一切直接威胁并对救援你。",
       "use_PS4_translation": true
     },
     "100749": {
@@ -1072,7 +1072,7 @@
       "en": "SEARCH AND DESTROY",
       "jp": "サーチ・アンド・デストロイ",
       "de": "SUCHEN UND ZERSTÖREN",
-      "zh_CN": "搜索和摧毁",
+      "zh_CN": "搜索并歼灭",
       "use_PS4_translation": true
     },
     "100788": {
@@ -1685,7 +1685,7 @@
       "en": "Form up!",
       "jp": "フォーム・アップ!",
       "de": "",
-      "zh_CN": "列队！"
+      "zh_CN": "集合！"
     },
     "100242": {
       "note": "AckString[1] / 2 occurrences",
@@ -7102,7 +7102,7 @@
       "en": "PRESS @ TO ENGAGE REVIVE MANEUVER",
       "jp": "@を押す:回復を行う",
       "de": "@ ZUR WIEDERBELEBUNG DRÜCKEN",
-      "zh_CN": "按@展开复活行动",
+      "zh_CN": "按@展开急救行动",
       "use_PS4_translation": true
     },
     "2": {
@@ -7110,7 +7110,7 @@
       "en": "PRESS @ TO CANCEL REVIVE MANEUVER",
       "jp": "@を押す:回復を止める",
       "de": "@ ZUM ABBRUCH DER WIEDERBELEGUNG DRÜCKEN",
-      "zh_CN": "按@取消复活行动",
+      "zh_CN": "按@取消急救行动",
       "use_PS4_translation": true
     }
   },
@@ -7130,7 +7130,7 @@
       "en": "Form Up",
       "jp": "集合",
       "de": "Formieren",
-      "zh_CN": "列队",
+      "zh_CN": "集合",
       "use_PS4_translation": true
     }
   },
@@ -7150,7 +7150,7 @@
       "en": "Search and Destroy",
       "jp": "探索・破壊",
       "de": "Suchen/Zerstören",
-      "zh_CN": "搜索和摧毁",
+      "zh_CN": "搜索并歼灭",
       "use_PS4_translation": true
     }
   },
@@ -7160,7 +7160,7 @@
       "en": "Secure Area",
       "jp": "位置確保",
       "de": "Bereich sichern",
-      "zh_CN": "占领区域",
+      "zh_CN": "控制区域",
       "use_PS4_translation": true
     }
   },
@@ -12165,7 +12165,7 @@
       "en": "RECALL AND REVIVE",
       "jp": "リコール＆回復",
       "de": "ZURÜCKRUFEN/WIEDERBELEBEN",
-      "zh_CN": "召回和复活",
+      "zh_CN": "召回并急救",
       "use_PS4_translation": true
     },
     "10": {
@@ -12221,7 +12221,7 @@
       "en": "REVIVE SQUAD BEFORE ENGAGING MANEUVER",
       "jp": "作戦を開始する前に小隊を回復",
       "de": "TEAM VOR ANGRIFFSMANÖVER WIEDERBELEBEN",
-      "zh_CN": "实施行动之前复活小队",
+      "zh_CN": "实施行动之前对小队进行急救",
       "use_PS4_translation": true
     },
     "17": {
@@ -12229,7 +12229,7 @@
       "en": "PRESS AND HOLD @ TO REVIVE SQUADMATE",
       "jp": "@を押し続ける:小隊を回復",
       "de": "@ DRÜCKEN UND HALTEN ZUM WIEDERBELEBEN VON TEAMMITGLIEDERN",
-      "zh_CN": "按住@复活队友",
+      "zh_CN": "按住@急救队友",
       "use_PS4_translation": true
     },
     "18": {
@@ -12245,7 +12245,7 @@
       "en": "SEARCH AND DESTROY",
       "jp": "探索・破壊",
       "de": "SUCHEN & ZERST.",
-      "zh_CN": "搜索和摧毁",
+      "zh_CN": "搜索并歼灭",
       "use_PS4_translation": true
     },
     "20": {
@@ -12253,7 +12253,7 @@
       "en": "FORM UP",
       "jp": "集合",
       "de": "FORM.",
-      "zh_CN": "列队",
+      "zh_CN": "集合",
       "use_PS4_translation": true
     },
     "21": {
@@ -12261,7 +12261,7 @@
       "en": "SECURE AREA",
       "jp": "位置確保",
       "de": "BER. SICHERN",
-      "zh_CN": "占领区域",
+      "zh_CN": "控制区域",
       "use_PS4_translation": true
     },
     "22": {
@@ -12548,7 +12548,7 @@
       "en": "You can revive your squad mate by standing near them, point at them and hold down use.   If you have other squad mates available you can order a revive maneuver.",
       "jp": "小隊の仲間のそばに近付き[使う]キーを押し続けると、彼らを戦闘に復帰させることができます。 また他の仲間に倒れたコマンドーを回復するよう命令することもできます。",
       "de": "Sie können ein Teammitglied wiederbeleben, indem Sie sich in seine Nähe stellen, es ansehen und Benutzen gedrückt halten. Sind noch andere Teammitglieder anwesend, können Sie ein Wiederlebungsmanöver befehlen.",
-      "zh_CN": "要复活队友，你可以站在他们旁边，面朝队友按住“使用”按钮。如果还有其他队友可以指挥，你可以下达复活行动的命令。",
+      "zh_CN": "要急救队友，你可以站在他们旁边，面朝队友按住“使用”按钮。如果还有其他队友可以指挥，你可以下达急救行动的命令。",
       "use_PS4_translation": true
     }
   },
@@ -12578,7 +12578,7 @@
       "en": "You can order your squad to come revive you by selecting [Recall and Revive].  Your squad will try and eliminate any immediate threats and revive you.",
       "jp": "戦闘への復帰方法を[指令を続行]か[リコール＆回復]のどちらかで、小隊の仲間に命令することができます。 あらゆる状況でも、彼らはあなたの救助を試みることでしょう。",
       "de": "Sie können Ihrem Team befehlen, Sie wiederzubeleben, indem Sie Zurückrufen und Wiederbeleben auswählen. Ihr Team wird versuchen, jegliche akute Bedrohung auszuschalten und Sie wiederzubeleben.",
-      "zh_CN": "你可以选择[召回和复活]，命令小队前来复活你。你的小队会尽力消灭一切直接威胁并将你复活。",
+      "zh_CN": "你可以选择[召回并急救]，命令小队前来对你进行急救。你的小队会尽力消灭一切直接威胁并救援你。",
       "use_PS4_translation": true
     }
   },
@@ -12648,7 +12648,7 @@
       "en": "TEXT COMMUNICATION DISPLAY",
       "jp": "通信ディスプレイ",
       "de": "TEXTKOMMUNIKATIONS- ANZEIGE",
-      "zh_CN": "文本通讯显示",
+      "zh_CN": "通讯文本显示",
       "use_PS4_translation": true
     }
   },
@@ -12746,7 +12746,7 @@
       "en": "Secure area around crash",
       "jp": "残がい付近のエリアを確保せよ",
       "de": "SICHERN SIE DEN BEREICH UM DIE ABSTURZSTELLE",
-      "zh_CN": "占领坠机地点周围的区域",
+      "zh_CN": "控制坠机地点周围的区域",
       "use_PS4_translation": true
     },
     "10": {
@@ -12796,7 +12796,7 @@
       "en": "Use the squad commands to change the stance of your squad. Search and Destroy: advance aggressively. Secure Area: defend designated area. Form-Up: follow in formation. Recall: Cancels all maneuvers.",
       "jp": "次の小隊命令を使用し、小隊のフォーメーションを変更することができます。\n探索・破壊:前進し積極的に攻撃。\n位置確保:現在地を防衛。\n集合:リーダーのそばに寄る。\n指示中止:全ての命令指示をキャンセル。",
       "de": "Benutzen Sie die Teambefehle, um die Position Ihres Teams zu ändern. Suchen und Zerstören: aggressiv vorrücken. Bereich sichern: den angegebenen Bereich verteidigen.",
-      "zh_CN": "使用小队命令可以更改你的小队姿势。搜索并摧毁：主动推进。占领区域：保卫指定区域。列队：按阵型跟随。召回：取消所有行动。",
+      "zh_CN": "使用小队命令可以更改你的小队姿势。搜索并歼灭：主动推进。控制区域：保卫指定区域。集合：按阵型跟随。召回：取消所有行动。",
       "use_PS4_translation": true
     }
   },
@@ -13544,7 +13544,7 @@
       "en": "FAR ABOVE THE CARNAGE, THE ELITE COMMANDOS OF DELTA SQUAD PREPARE FOR THEIR FIRST MISSION...",
       "jp": "選りすぐりのコマンドーで構成されたデルタ小隊は\n彼らの初陣へと密かに準備を進めていた…",
       "de": "HOCH ÜBER DEM CHAOS BEREITET SICH DAS ELITE-KOMMANDO DES DELTA-TEAMS AUF SEINE ERSTE MISSION VOR ...",
-      "zh_CN": "远在大屠杀之上，德尔塔小队的精英突击队员准备执行他们的第一次任务……",
+      "zh_CN": "高悬于战火之上，德尔塔小队的精英突击队员正准备执行他们的首次任务……",
       "use_PS4_translation": true
     },
     "3": {
@@ -13552,7 +13552,7 @@
       "en": "ZERO HOUR - CLONE WARS - GEONOSIS",
       "jp": "クローン戦争勃発直後 - ジオノーシス",
       "de": "STUNDE NULL - KLONKRIEGE - GEONOSIS",
-      "zh_CN": "决战时刻，克隆人战争，吉奥诺西斯",
+      "zh_CN": "决战时刻 - 克隆人战争 - 吉奥诺西斯",
       "use_PS4_translation": true
     }
   },
@@ -13614,7 +13614,7 @@
       "en": "REMEMBER, WE ARE TRAINED TO ADVANCE INTO ENEMY TERRITORY.  IF YOU WISH A MORE CAUTIOUS FORMATION, ADVISE THE SQUAD TO \"FORM UP.\"",
       "jp": "覚えておいてください。\n我々は奥深くに進むように訓練されています。\n慎重な侵入をしたい場合は集合を命令してください",
       "de": "DENKEN SIE DRAN, WIR WURDEN DAFÜR AUSGEBILDET, IN FEINDLICHLES GEBIET EINZUDRINGEN. WENN SIE VORSICHTIGER VORGEHEN MÖCHTEN, WEISEN SIE DAS TEAM AN, SICH ZU FORMIEREN.",
-      "zh_CN": "记住，我们受过深入敌方领地的训练。如果希望采用更为谨慎的阵型，可以建议小队“列队”。",
+      "zh_CN": "记住，我们受过深入敌方领地的训练。如果希望采用更为谨慎的阵型，可以建议小队“集合”。",
       "use_PS4_translation": true
     },
     "1": {
@@ -13622,7 +13622,7 @@
       "en": "IF YOU WANT THE SQUAD TO REMAIN IN ONE SPOT, COMMAND THEM TO \"SECURE AREA.\"  SEV WON'T LIKE IT, BUT HE'LL FOLLOW YOUR ORDER TO THE LETTER.",
       "jp": "部隊をその場に留めたい場合には隊員に対して\n位置確保を命令してください。\n我々はその指示に従います。\nまあ、07にとっては不本意な命令でしょうが。",
       "de": "SOLL DAS TEAM AN ORT UND STELLE BLEIBEN, GEBEN SIE DEN BEFEHL BEREICH SICHERN. SIEBEN WIRD DAS NICHT GEFALLEN, ABER ER WIRD IHREN BEFEHL GENAU BEFOLGEN.",
-      "zh_CN": "如果想让小队停留在一个地点，可以命令他们“占领区域”。SEV虽然不喜欢这样，但还是会严格执行你的命令。",
+      "zh_CN": "如果想让小队停留在一个地点，可以命令他们“控制区域”。SEV虽然不喜欢这样，但还是会严格执行你的命令。",
       "use_PS4_translation": true
     },
     "2": {
@@ -13638,7 +13638,7 @@
       "en": "ALWAYS REMEMBER, THE SQUAD'S FAVORITE COMMAND IS \"SEARCH AND DESTROY.\"  WE LOVE DOING OUR JOB, BOSS.",
       "jp": "忘れないでいてください。ボス。\n我々の行動理念は探索破壊です。\n指令が無い場合はこれに則って行動しています。",
       "de": "DENKEN SIE IMMER DARAN, DER LIEBLINGSBEFEHL DES TEAMS IST SUCHEN UND ZERSTÖREN. WIR LIEBEN UNSEREN JOB, BOSS.",
-      "zh_CN": "务必记住，小队最喜欢的命令是“搜索并摧毁”。我们喜欢干我们的活儿，BOSS。",
+      "zh_CN": "务必记住，小队最喜欢的命令是“搜索并歼灭”。我们喜欢干我们的活儿，BOSS。",
       "use_PS4_translation": true
     },
     "4": {
@@ -13686,7 +13686,7 @@
       "en": "BOSS, IF YOU NEED TO HEAL THE SQUAD UP QUICKLY, USE YOUR \"SECURE AREA\" NEAR A BACTA STATION.  THE BOYS WILL GET THE MESSAGE.",
       "jp": "バクタディスペンサー付近で位置確保のコマンドを\n指示してみてください。\n我々はボスの心遣いに感謝するでしょう。",
       "de": "BOSS, WENN SIE DAS TEAM SCHNELL HEILEN MÜSSEN, BENUTZEN SIE DEN BEFEHL BEREICH SICHERN BEI EINER BACTA-STATION. DIE JUNGS KAPIEREN DAS SCHON.",
-      "zh_CN": "BOSS，如果需要快速治疗小队，你可以在巴克塔站附近使用“占领区域”命令，那些小子们会知道你的意思的。",
+      "zh_CN": "BOSS，如果需要快速治疗小队，你可以在巴克塔站附近使用“控制区域”命令，那些小子们会知道你的意思的。",
       "use_PS4_translation": true
     },
     "10": {
@@ -13950,7 +13950,7 @@
       "en": "\"THIS SQUAD IS READY FOR ANYTHING. ANY MISSION PROFILE, THEY CAN HANDLE IT.  ASSASSINATION, INFILTRATION, SEARCH AND DESTROY, YOU NAME IT.\"",
       "jp": "\"コマンドーは狙撃、爆破、侵入、\n全てにおいて高レベルの能力な特殊部隊です\"",
       "de": "RC GRUPPE DELTA: BERICHT: W VAU, AUSBILDUNGS-SERGEANT: ERBITTE ENTFERNUNG DES DATENTERMINALS AUS DEM DELTA-SCHLAFSAAL. 4-0 KÖNNTE UNBEAUFSICHTIGT IN DEN KAMINO-HAUPTRECHNER EINDRINGEN. EIN SEHR FÄHIGER HACKER.",
-      "zh_CN": "“这支小队已经做好一切准备。他们能应对任何任务剖面。暗杀、渗透、搜索并摧毁等等，没有干不了的。”",
+      "zh_CN": "“这支小队已经做好一切准备。他们能应对任何任务剖面。暗杀、渗透、搜索并歼灭等等，没有干不了的。”",
       "use_PS4_translation": true
     },
     "43": {
@@ -16435,7 +16435,7 @@
       "en": "Form up!",
       "jp": "フォーム・アップだ!",
       "de": "",
-      "zh_CN": "列队！"
+      "zh_CN": "集合！"
     }
   },
   "mpgame.MultiKillMessage": {
@@ -16866,7 +16866,7 @@
       "en": "Heavy Machine Gun",
       "jp": "ヘビーマシンガン",
       "de": "Schweres Maschinengwehr",
-      "zh_CN": "LS-150重型ACP连发炮"
+      "zh_CN": "重型机枪"
     },
     "2": {
       "note": "MessageNoAmmo",
@@ -17136,7 +17136,7 @@
       "en": "Flashbang Detonators",
       "jp": "フラッシュデ・トネーター",
       "de": "Blendgranaten",
-      "zh_CN": "闪光雷管"
+      "zh_CN": "闪光弹雷管"
     }
   },
   "RAS_02D.MissionObjectives2": {
@@ -17460,7 +17460,7 @@
       "en": "Secure Area",
       "jp": "このエリアを確保せよ",
       "de": "SICHERN SIE DEN BEREICH",
-      "zh_CN": "占领区域",
+      "zh_CN": "控制区域",
       "use_PS4_translation": true
     },
     "9": {
@@ -19301,7 +19301,7 @@
       "en": "Clone Advisor 1: Delta lead, revive your squad!",
       "jp": "Clone Advisor 1: 部隊を回復させろ!",
       "de": "Klonberater 1: Delta-Leader, bringen Sie Ihre Einheit auf Trab!",
-      "zh_CN": "克隆顾问1：德尔塔队长，复活你的小队！",
+      "zh_CN": "克隆顾问1：德尔塔队长，急救你的小队！",
       "use_PS4_translation": true
     },
     "98": {
@@ -23173,7 +23173,7 @@
       "en": "Delta 07: No revive given.",
       "jp": "Delta 07: 回復はまだです。",
       "de": "Delta 07: Nicht wiederbelebt!",
-      "zh_CN": "德尔塔07：未给予复活。",
+      "zh_CN": "德尔塔07：未给予急救。",
       "use_PS4_translation": true
     },
     "613": {
@@ -23181,7 +23181,7 @@
       "en": "Delta 07: Canceling revive order.",
       "jp": "Delta 07: 回復指示を取り消し。",
       "de": "Delta 07: Annulliere Wiederbelebungsbefehl.",
-      "zh_CN": "德尔塔07：正在取消复活命令。",
+      "zh_CN": "德尔塔07：正在取消急救命令。",
       "use_PS4_translation": true
     },
     "616": {
@@ -26053,7 +26053,7 @@
       "en": "Delta 38: Let's form up.",
       "jp": "Delta 38: フォームアップだ。",
       "de": "Delta 38: Formieren!",
-      "zh_CN": "德尔塔38：我们列队。",
+      "zh_CN": "德尔塔38：我们集合。",
       "use_PS4_translation": true
     },
     "999": {
@@ -26061,7 +26061,7 @@
       "en": "Delta 38: Delta squad forming up.",
       "jp": "Delta 38: デルタ、フォームアップだ。",
       "de": "Delta 38: Delta-Team formiert sich.",
-      "zh_CN": "德尔塔38：德尔塔小队正在列队。",
+      "zh_CN": "德尔塔38：德尔塔小队正在集合。",
       "use_PS4_translation": true
     },
     "1000": {
@@ -26205,7 +26205,7 @@
       "en": "Delta 38: Hold off on that revive.",
       "jp": "Delta 38: そいつには近づくな。",
       "de": "Delta 38: Wiederbelebung abbrechen!",
-      "zh_CN": "德尔塔38：先别复活。",
+      "zh_CN": "德尔塔38：先别进行急救。",
       "use_PS4_translation": true
     },
     "1020": {
@@ -26213,7 +26213,7 @@
       "en": "Delta 38: Negative on that revive",
       "jp": "Delta 38: そいつはやめろ。",
       "de": "Delta 38: Negativ. Keine Wiederbelebung.",
-      "zh_CN": "德尔塔38：不进行复活",
+      "zh_CN": "德尔塔38：不进行此急救",
       "use_PS4_translation": true
     },
     "1021": {
@@ -26221,7 +26221,7 @@
       "en": "Delta 38: Cancel that revive order.",
       "jp": "Delta 38: 指令をキャンセルだ。",
       "de": "Delta 38: Wiederbelebung beenden!",
-      "zh_CN": "德尔塔38：取消那道复活命令。",
+      "zh_CN": "德尔塔38：取消那道急救命令。",
       "use_PS4_translation": true
     },
     "1022": {
@@ -26245,7 +26245,7 @@
       "en": "Delta 38: Abort revive maneuver.",
       "jp": "Delta 38: 回復は中止だ。",
       "de": "Delta 38: Wiederbelebung abbrechen, Delta.",
-      "zh_CN": "德尔塔38：中止复活行动。",
+      "zh_CN": "德尔塔38：中止急救行动。",
       "use_PS4_translation": true
     },
     "1025": {
@@ -26261,7 +26261,7 @@
       "en": "Delta 38: Commence revivification, delta.",
       "jp": "Delta 38: 回復を行うぞ、デルタ。",
       "de": "Delta 38: Wiederbelebung initialisieren, Delta.",
-      "zh_CN": "德尔塔38：开始复活，德尔塔。",
+      "zh_CN": "德尔塔38：开始急救作业，德尔塔。",
       "use_PS4_translation": true
     },
     "1027": {
@@ -26269,7 +26269,7 @@
       "en": "Delta 38: Delta needs a revive, commando.",
       "jp": "Delta 38: デルタの回復だ、コマンドー。",
       "de": "Delta 38: Ein Delta muss wiederbelebt werden!",
-      "zh_CN": "德尔塔38：德尔塔队员需要复活，突击队。",
+      "zh_CN": "德尔塔38：德尔塔队员需要急救，突击队。",
       "use_PS4_translation": true
     },
     "1028": {
@@ -26277,7 +26277,7 @@
       "en": "Delta 38: Uh, delta, please revive your squadmate.",
       "jp": "Delta 38: 隊員を回復してくれ。",
       "de": "Delta 38: Delta, holen Sie Ihren Kameraden zurück!",
-      "zh_CN": "德尔塔38：啊，德尔塔队员，请复活你们的队友。",
+      "zh_CN": "德尔塔38：啊，德尔塔队员，请急救你们的队友。",
       "use_PS4_translation": true
     },
     "1029": {
@@ -26293,7 +26293,7 @@
       "en": "Delta 38: That delta needs a revive, now!",
       "jp": "Delta 38: そいつを回復させるんだ!",
       "de": "Delta 38: Der Delta muss wiederbelebt werden! Schnell!",
-      "zh_CN": "德尔塔38：那名德尔塔队员需要复活，马上！",
+      "zh_CN": "德尔塔38：那名德尔塔队员需要急救，马上！",
       "use_PS4_translation": true
     },
     "1031": {
@@ -26309,7 +26309,7 @@
       "en": "Delta 38: Looks like he needs a revive, delta.",
       "jp": "Delta 38: 回復させるんだ、デルタ。",
       "de": "Delta 38: Er muss wiederbelebt werden, Delta.",
-      "zh_CN": "德尔塔38：看来他需要复活，德尔塔。",
+      "zh_CN": "德尔塔38：看来他需要急救，德尔塔。",
       "use_PS4_translation": true
     },
     "1033": {
@@ -26317,7 +26317,7 @@
       "en": "Delta 38: Revive your squadmate, delta",
       "jp": "Delta 38: 隊員を回復せよ。",
       "de": "Delta 38: Reanimieren Sie Ihren Kameraden.",
-      "zh_CN": "德尔塔38：复活你们的队友，德尔塔",
+      "zh_CN": "德尔塔38：急救你们的队友，德尔塔",
       "use_PS4_translation": true
     },
     "1034": {
@@ -26565,7 +26565,7 @@
       "en": "Delta 38: Delta, form-up.",
       "jp": "Delta 38: フォームアップだ。",
       "de": "Delta 38: Delta, formieren Sie sich.",
-      "zh_CN": "德尔塔38：德尔塔，列队。",
+      "zh_CN": "德尔塔38：德尔塔，集合。",
       "use_PS4_translation": true
     },
     "1068": {
@@ -26749,7 +26749,7 @@
       "en": "Delta 38: Delta, form up.",
       "jp": "Delta 38: フォームアップだ。",
       "de": "Delta 38: Delta, formieren Sie sich.",
-      "zh_CN": "德尔塔38：德尔塔，列队。",
+      "zh_CN": "德尔塔38：德尔塔，集合。",
       "use_PS4_translation": true
     },
     "1092": {
@@ -26965,7 +26965,7 @@
       "en": "Delta 40: Secure area.",
       "jp": "Delta 40: エリアを確保。",
       "de": "Delta 40: Bereich sichern.",
-      "zh_CN": "德尔塔40：保护这个区域。",
+      "zh_CN": "德尔塔40：控制这个区域。",
       "use_PS4_translation": true
     },
     "1120": {
@@ -30821,7 +30821,7 @@
       "en": "Delta 40: Canceling revive.",
       "jp": "Delta 40: 回復を取り消し。",
       "de": "Delta 40: Breche Wiederbelebung ab.",
-      "zh_CN": "德尔塔40：正在取消复活。",
+      "zh_CN": "德尔塔40：正在取消急救。",
       "use_PS4_translation": true
     },
     "1646": {
@@ -30829,7 +30829,7 @@
       "en": "Delta 40: Confirmed, no revive.",
       "jp": "Delta 40: 了解、回復せず。",
       "de": "Delta 40: Roger. Keine Wiederbelebung.",
-      "zh_CN": "德尔塔40：已确认，不复活。",
+      "zh_CN": "德尔塔40：已确认，不进行急救。",
       "use_PS4_translation": true
     },
     "1647": {
@@ -30893,7 +30893,7 @@
       "en": "Delta 40: Revived, sir.",
       "jp": "Delta 40: 回復しました。",
       "de": "Delta 40: Wieder auf den Beinen.",
-      "zh_CN": "德尔塔40：已复活，长官。",
+      "zh_CN": "德尔塔40：已完成急救，长官。",
       "use_PS4_translation": true
     },
     "1656": {
@@ -41930,7 +41930,7 @@
       "en": "Trando Merc: Form up!",
       "jp": "Trando Merc: フォームアップ。",
       "de": "",
-      "zh_CN": "特兰多雇佣兵：列队！"
+      "zh_CN": "特兰多雇佣兵：集合！"
     },
     "3180": {
       "note": "SubtitleText[3180]",
@@ -42476,7 +42476,7 @@
       "en": "Trando Slaver: Form up!",
       "jp": "Trando Slaver: フォームアップ。",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子：列队！"
+      "zh_CN": "特兰多奴隶贩子：集合！"
     },
     "3258": {
       "note": "SubtitleText[3258]",
@@ -42770,7 +42770,7 @@
       "en": "Trando Slaver 2: Form up!",
       "jp": "Trando Slaver 2: フォームアップだ!",
       "de": "",
-      "zh_CN": "特兰多奴隶贩子2：列队！"
+      "zh_CN": "特兰多奴隶贩子2：集合！"
     },
     "3300": {
       "note": "SubtitleText[3300]",
@@ -43104,7 +43104,7 @@
       "en": "Clone Advisor 1: Search and Destroy is the standard procedure for moving quickly in a hostile area.",
       "jp": "Clone Advisor 1: 戦場で迅速に行動するには、サーチ・アンド・デストロイで行け。",
       "de": "Klonberater 1: Ihre Standardtaktik in feindlichem Gebiet ist Suchen und Zerstören.",
-      "zh_CN": "克隆顾问1：搜索并摧毁是快速进入敌方区域的标准程序。",
+      "zh_CN": "克隆顾问1：搜索并歼灭是快速进入敌方区域的标准程序。",
       "use_PS4_translation": true
     },
     "2931": {
@@ -43488,7 +43488,7 @@
       "en": "Clone Advisor 1: Resume Search and Destroy posture, Three-Eight.",
       "jp": "Clone Advisor 1: 38、サーチ・アンド・デストロイを再開しろ。",
       "de": "Klonberater 1: Gehen Sie wieder in Suchen und Zerstören-Formation, 3-8.",
-      "zh_CN": "克隆顾问1：恢复搜索并摧毁姿态，38号。",
+      "zh_CN": "克隆顾问1：恢复搜索并歼灭姿态，38号。",
       "use_PS4_translation": true
     },
     "2979": {
@@ -43496,7 +43496,7 @@
       "en": "Delta 38: Roger, proceeding in Search and Destroy configuration.",
       "jp": "Delta 38: 了解、サーチ&デストロイで進む。",
       "de": "Delta 38: Roger, Suchen und Zerstören.",
-      "zh_CN": "德尔塔38：收到，开始搜索并摧毁配置。",
+      "zh_CN": "德尔塔38：收到，开始搜索并歼灭配置。",
       "use_PS4_translation": true
     },
     "2980": {
@@ -43680,7 +43680,7 @@
       "en": "Clone Advisor 1: The Geonosians have not been fully alerted to your presence.  Try and maintain the element of surprise.  ",
       "jp": "Clone Advisor 1: ジオノージアンはまだこちらに完全に気づいていない。できるだけ不意をつけ。",
       "de": "Klonberater 1: Die Geonosianer wissen noch nichts von Ihrer Anwesenheit. Versuchen Sie, das Überraschungsmoment zu bewahren.",
-      "zh_CN": "克隆顾问1：吉奥诺西斯人还没有完全意识到你的存在。尽量保持惊喜吧。  ",
+      "zh_CN": "克隆顾问1：吉奥诺西斯人尚未完全察觉你们的行踪。尽量别打草惊蛇。  ",
       "use_PS4_translation": true
     },
     "3003": {
@@ -43688,7 +43688,7 @@
       "en": "Clone Advisor 1: Form up the squad and take point.",
       "jp": "Clone Advisor 1: フォームアップしてポイントを奪え。",
       "de": "Klonberater 1: Team formieren und Führung übernehmen.",
-      "zh_CN": "克隆顾问1：列队并打先锋。",
+      "zh_CN": "克隆顾问1：集合小队，带头前进。",
       "use_PS4_translation": true
     },
     "3004": {
@@ -44424,7 +44424,7 @@
       "en": "Clone Advisor 1: You're the Lead.  Order your squad to proceed in Search and Destroy formation.",
       "jp": "Clone Advisor 1: リーダーはお前だ。指示を出して、サーチ・アンド・デストロイで進め。",
       "de": "Klonberater 1: Sie sind der Anführer. Befehlen Sie Ihrem Team, in Suchen und Zerstören-Formation fortzufahren.",
-      "zh_CN": "克隆顾问1：你是队长。命令你的小队继续执行“搜索并摧毁”编队。",
+      "zh_CN": "克隆顾问1：你是队长。命令你的小队继续执行“搜索并歼灭”编队。",
       "use_PS4_translation": true
     },
     "3096": {
@@ -45424,7 +45424,7 @@
       "en": "Clone Advisor 1: \"Form Up\" keeps the squad close and observant.  Good for moving through dangerous territory.",
       "jp": "Clone Advisor 1: フォーム・アップをすれば小隊がまとまり指示に従うようになる。",
       "de": "Klonberater 1: Mit\"Neu formieren\" bewegt sich das Team vorsichtig als Gruppe fort. Das ist im Feindgebiet sehr nützlich.",
-      "zh_CN": "克隆顾问1：“列队”能使小队彼此靠近，保持密切观察。很适合用来穿越危险地带。",
+      "zh_CN": "克隆顾问1：“集合”能使小队彼此靠近，保持密切观察。很适合用来穿越危险地带。",
       "use_PS4_translation": true
     },
     "3221": {
@@ -45432,7 +45432,7 @@
       "en": "Clone Advisor 1: \"Search and Destroy\" will order your squad to advance and fire on all hostiles.",
       "jp": "Clone Advisor 1: サーチ・アンド・デストロイは前進と敵への攻撃を命令する。",
       "de": "Klonberater 1: Mit\"Suchen und Zerstören\" befehlen Sie Ihrem Team, auf jeden sichtbaren Feind zu feuern.",
-      "zh_CN": "克隆顾问1：“搜寻并摧毁”会命令全队推进，并向所有敌军开火。",
+      "zh_CN": "克隆顾问1：“搜寻并歼灭”会命令全队推进，并向所有敌军开火。",
       "use_PS4_translation": true
     },
     "3222": {
@@ -45440,7 +45440,7 @@
       "en": "Clone Advisor 1: If you want the squad to stop and defend a single spot, then tell them to \"Secure Position.\"",
       "jp": "Clone Advisor 1: 部隊を一箇所に留めるには、配置確保を命令する。",
       "de": "Klonberater 1: Wenn Ihr Team anhalten und eine bestimmte Stellung verteidigen soll, erteilen Sie den Befehl\"Stellung sichern\".",
-      "zh_CN": "克隆顾问1：如果你想让小队停下来保卫一个地方，那就告诉他们“守住位置”。",
+      "zh_CN": "克隆顾问1：如果你想让小队停下来保卫一个地方，那就告诉他们“守住阵地”。",
       "use_PS4_translation": true
     },
     "3223": {
@@ -50566,7 +50566,7 @@
       "en": "Taun We: …You have been born into dangerous times.  A sharp mind can be the key to survival…",
       "jp": "Taun We: …危険な時代に生まれたものです。研ぎ澄まされた心が生き残る鍵…",
       "de": "Taun We: ... Sie wurden in schwierigen Zeiten geboren. Ein scharfer Verstand kann der Schlüssel zum Überleben sein ...",
-      "zh_CN": "汤·韦：……你出生于危难之际，这种时候，敏锐的头脑是生存的关键……",
+      "zh_CN": "汤·韦：……你出生在一个危险的时代，这种时候，敏锐的头脑是生存的关键……",
       "use_PS4_translation": true
     },
     "2939": {
@@ -50598,7 +50598,7 @@
       "en": "Taun We: Your weapons, your armor, and most importantly, your brothers.",
       "jp": "Taun We: 与えられた武器、装備、そしてなにより兄弟たち。",
       "de": "Taun We: Ihre Waffen, Ihre Rüstung, und vor allem, Ihre Brüder.",
-      "zh_CN": "汤·韦：你的武器、你的战斗服，以及最重要的——你的兄弟们。",
+      "zh_CN": "汤·韦：你有自己的武器、战斗服，还有最重要的——你的兄弟们。",
       "use_PS4_translation": true
     },
     "2943": {
@@ -50606,7 +50606,7 @@
       "en": "Taun We: The aiwha of our world hunt in pods to bring down much larger prey.  So too shall you join with three brothers and become fierce hunters for the Republic.",
       "jp": "Taun We: ポッドの中のエイファーは、さらにわざわいをもたらす。あなたも3人の兄弟と合流し、共和国の恐るべき狩人となるのです。",
       "de": "Taun We: Die Aiwha unserer Welt jagen in Herden, um größere Beutetiere erlegen zu können. Auch Sie werden mit drei Brüdern zusammen zu Jägern im Dienst der Republik werden.",
-      "zh_CN": "汤·韦：我们世界的飞鲸结群出击，猎杀远比自身庞大的猎物。而你也将与三名兄弟一起，成为共和国最凶猛的猎手。",
+      "zh_CN": "汤·韦：在我们的世界，飞鲸结群出击，猎杀远比自身庞大的猎物。而你也将与三名兄弟一起，成为共和国最凶猛的猎手。",
       "use_PS4_translation": true
     },
     "2944": {
@@ -63448,7 +63448,7 @@
       "en": "Delta 38: We'll come back when there's time. Form up on my position…",
       "jp": "Delta 38: 時間があれば戻る。俺の位置を頼む…",
       "de": "Delta 38: Wir kommen zurück, wenn wir Zeit haben. Alle Mann zu mir ...",
-      "zh_CN": "德尔塔38：等有时间我们就会回来。到我的位置列队……",
+      "zh_CN": "德尔塔38：等有时机我们就会回来。到我的位置集合……",
       "use_PS4_translation": true
     },
     "3039": {
@@ -67766,21 +67766,21 @@
       "en": "SEARCH AND DESTROY",
       "jp": "スカッドコマンド: 探索・破壊",
       "de": "SUCHEN UND ZERSTÖREN",
-      "zh_CN": "搜索并摧毁"
+      "zh_CN": "搜索并歼灭"
     },
     "10": {
       "note": "OptionSet1Labels[10].Text",
       "en": "FORM UP",
       "jp": "スカッドコマンド: 集合",
       "de": "FORMIEREN",
-      "zh_CN": "列队"
+      "zh_CN": "集合"
     },
     "11": {
       "note": "OptionSet1Labels[11].Text",
       "en": "SECURE POSITION",
       "jp": "スカッドコマンド: 位置確保",
       "de": "POSITION HALTEN",
-      "zh_CN": "占领阵地"
+      "zh_CN": "守住阵地"
     },
     "12": {
       "note": "OptionSet1Labels[12].Text",
@@ -67907,7 +67907,7 @@
       "en": "VIEW CREDITS",
       "jp": "CREDITを見る",
       "de": "CREDITS ANSEHEN",
-      "zh_CN": "查看制作人员列表",
+      "zh_CN": "查看Credits · SharrrkCat汉化 v1.0",
       "use_PS4_translation": true
     }
   },
@@ -67981,11 +67981,11 @@
       "zh_CN": "难度"
     },
     "58": {
-      "note": "OptionLabels[6].Text；译法与PS4官方不同：官方译文仅\"自动\"疑似截断，本项目译为\"自动撤回行动\"",
+      "note": "OptionLabels[6].Text",
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
       "de": "AUTO-MANÖVER",
-      "zh_CN": "自动撤退"
+      "zh_CN": "自动召回队员"
     },
     "7": {
       "note": "OptionLabels[7].Text",
@@ -68074,11 +68074,11 @@
       "zh_CN": "难度"
     },
     "29": {
-      "note": "OptionLabels[6].Text；译法与PS4官方不同：官方译文仅\"自动\"疑似截断，本项目译为\"自动撤回行动\"",
+      "note": "OptionLabels[6].Text",
       "en": "AUTO PULL MANEUVERS",
       "jp": "自動撤退",
       "de": "",
-      "zh_CN": "自动撤退"
+      "zh_CN": "自动召回队员"
     },
     "25": {
       "note": "Options[5].Items[0]",
@@ -68797,7 +68797,7 @@
       "en": "QUIT PROGRAM",
       "jp": "WINDOWSに戻る",
       "de": "PROGRAMM BEENDEN",
-      "zh_CN": "退出程序"
+      "zh_CN": "退出至桌面"
     },
     "11": {
       "note": "EndMissionConfirm",
@@ -72736,7 +72736,7 @@
       "en": "AUTO PULL MANEUVERS",
       "jp": "",
       "de": "AUTO-MANÖVER",
-      "zh_CN": "自动撤退",
+      "zh_CN": "自动召回队友",
       "use_PS4_translation": true
     },
     "25": {
@@ -74182,7 +74182,7 @@
       "en": "QUIT PROGRAM",
       "jp": "",
       "de": "PROGRAMM BEENDEN",
-      "zh_CN": "退出程序"
+      "zh_CN": "退出至桌面"
     }
   },
   "XinterfaceCtmenus.CTMultiplayerPauseXboxMenu.MenuOptions": {
