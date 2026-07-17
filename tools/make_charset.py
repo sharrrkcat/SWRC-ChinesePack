@@ -6,13 +6,12 @@
 --slim (瘦身): ASCII 可打印 + GB2312 一级字 ∪ translation.json 用字 ∪ 常用中文标点 (~4200 字符)。
 
 用法:
-  py -X utf8 make_charset.py [charset.txt]
-  py -X utf8 make_charset.py --slim [charset.txt]
-  py -X utf8 make_charset.py --slim --translation path/to/translation.json [charset.txt]
+  py -X utf8 make_charset.py --out path/to/charset.txt
+  py -X utf8 make_charset.py --slim --translation path/to/translation.json --out path/to/charset.txt
 """
 import argparse
 import json
-import os
+from pathlib import Path
 
 COMMON_PUNCT = set('，。、！？：；（）《》“”‘’—…·【】「」〈〉～‖')
 
@@ -78,34 +77,38 @@ def _stats(s):
     return ascii_n, hanzi_n, sym_n
 
 
-if __name__ == '__main__':
+def main(argv=None):
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('output', nargs='?', default='charset.txt',
-                    help='输出文件 (默认 charset.txt)')
+    ap.add_argument('--out', type=Path, required=True, help='输出字符集文件')
     ap.add_argument('--slim', action='store_true',
                     help='瘦身模式: GB2312 一级字 ∪ translation.json 用字 ∪ 常用标点')
-    ap.add_argument('--translation', default=None,
-                    help='translation.json 路径 (--slim 默认自动定位上级目录)')
-    a = ap.parse_args()
+    ap.add_argument('--translation', type=Path,
+                    help='translation.json 路径；--slim 时必填')
+    a = ap.parse_args(argv)
 
     if a.slim:
-        tj = a.translation
-        if not tj:
-            default = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                   '..', 'translation.json')
-            if os.path.isfile(default):
-                tj = default
+        if a.translation is None:
+            ap.error('--translation is required with --slim')
+        tj = a.translation.resolve()
+        if not tj.is_file():
+            ap.error(f'translation file not found: {tj}')
         s = build_slim(tj)
         mode = '瘦身'
     else:
+        tj = None
         s = build_full()
         mode = '全集'
 
-    open(a.output, 'w', encoding='utf-8').write(s)
+    output = a.out.resolve()
+    if not output.parent.is_dir():
+        ap.error(f'output parent directory not found: {output.parent}')
+    output.write_text(s, encoding='utf-8')
     ascii_n, hanzi_n, sym_n = _stats(s)
-    print(f'{a.output}: {len(s)} 字符 ({mode}, ASCII {ascii_n}, 汉字 {hanzi_n}, 符号 {sym_n})')
+    print(f'{output}: {len(s)} 字符 ({mode}, ASCII {ascii_n}, 汉字 {hanzi_n}, 符号 {sym_n})')
     if a.slim and tj:
         print(f'  含 translation.json 用字: {tj}')
-    elif a.slim:
-        print(f'  未找到 translation.json, 仅 GB2312 一级字 + 常用标点')
+
+
+if __name__ == '__main__':
+    main()

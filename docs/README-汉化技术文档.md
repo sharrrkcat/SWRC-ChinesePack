@@ -1,6 +1,6 @@
 # 星球大战：共和国突击队（SWRC）中文本地化 — 技术文档
 
-> 最后更新：2026-07-11（文档审查后） ｜ 状态：**CJK 渲染、DXT5 贴图解码、中文字体生成器、中文字体局内实测均已完成**。代码在 fork `sharrrkcat/CT-cjk-text` 分支 `cjk-text`。当前重点：基于已生成的翻译 JSON/catalog 进入正式译文生产（§7.5、§8）
+> 最后更新：2026-07-17（发布前清理） ｜ 状态：**CJK 渲染、DXT5 贴图解码、中文字体生成器、中文字体局内实测和正式翻译表均已完成**。代码在 fork `sharrrkcat/CT-cjk-text` 分支 `cjk-text`。当前重点：发布前完整构建、游戏内回归与打包（§7.5、§8）
 > 工作目录：`.lang\`；本文档在汉化包仓库 `.lang\SWRC-ChinesePack\docs\`（github.com/sharrrkcat/SWRC-ChinesePack）；游戏数据：`GameData\`；完整原版备份：`.originalbackup\`
 
 ---
@@ -15,7 +15,8 @@
 - ✅ 官方日文版的实现方式已解剖（作为参照系）
 - ✅ **CJK 渲染全线打通**（2026-07-07）：根因=引擎 ANSI 构建逐字节查表；解法=自编译 Mod.dll detour 四个文本函数做 DBCS 配对（§6、§7）。菜单 + 标题卡/加载画面/提示/简报字幕/局内字幕五处场景全部实证显示汉字。代码：fork `sharrrkcat/CT-cjk-text`,分支 `cjk-text`
 - ✅ **中文字体生成器完成并局内实测通过**（2026-07-08）：`tools\font_gen.py` 生成 `orbitfonts-cn.utx`，GB2312 全集测试包菜单/局内字幕无缺字错位。`make_charset.py` 支持 `--slim` 瘦身模式（一级字 ∪ 译文用字 ∪ 常用标点，约 3900 字 / 约 10MB，发布推荐）
-- ⏳ 当前阶段：catalog 已生成并经过多轮工具修正，下一步是正式译文生产（§8）；剩余 skipped 项需在正式发布前继续归因或明确白名单化
+- ✅ 正式翻译表完成；当前 catalog 包含 148 个输出文件，正式构建不使用英文 fallback
+- ⏳ 当前阶段：发布前完整构建、游戏内回归与安装包整理（§8）
 
 ## 2. 事实速查卡
 
@@ -43,7 +44,7 @@
 | **菜单文字** | `System\XinterfaceCtmenus.int`（官方日文包已提供） | ~500 条键值 | **直接覆盖 .int**（已实测可替代 PropertyOverrides），无需改 .u |
 | 过场视频 | `Movies\*.bik` | — | 可选：RAD Video Tools 压制内嵌字幕版 |
 
-菜单类源码仍保留在仓库 `reference\export\XInterfaceCTMenus\*.uc`（53 个类），用于追溯英文 source、理解运行时结构和必要时生成 fallback。实际发布路线优先生成 `XinterfaceCtmenus.int`，例如：
+菜单类源码可由 `make_translation_json.py` 调用 UCC 按需导出，用于追溯英文 source、理解运行时结构和生成 fallback；这些 `.uc` 属于可再生成中间文件，不再提交仓库。实际发布路线优先生成 `XinterfaceCtmenus.int`，例如：
 
 ```ini
 [CTAcceptSettingsTimedMenu]
@@ -213,7 +214,7 @@ u8   mip 数（字体页均为 1）
 | `UCanvas::ClippedStrLen` | 单行量宽（菜单 MaxSizeX/省略号布局依赖） | 随 ClippedPrint 生效 |
 | `FCanvasUtil::DrawString` | 工具路径（居中量宽、`&` 快捷键下划线） | 已挂钩，暂未观察到调用方 |
 
-**局内验证（2026-07-07，SJIS"日本語"探针，五处全部显示 ✅）**：开场标题卡（geo_titlecard.int）、加载画面标题+正文（LevelLoadingInfo.int）、加载提示（hints.int）、简报字幕（subtitles_geo_01briefing.int）、局内字幕（subtitles_geo_01.int）。**菜单+局内文字全线打通，C++ 侧封版**（`WrappedIconPrint`/`UHelmet::DrawTextInfo` 未挂钩也未表现出需要,遇到具体场景缺字再补）。历史探针备份仍存放于仓库 `probe-backup\`，仅用于追溯实验，不作为当前测试区还原说明。
+**局内验证（2026-07-07，SJIS"日本語"探针，五处全部显示 ✅）**：开场标题卡（geo_titlecard.int）、加载画面标题+正文（LevelLoadingInfo.int）、加载提示（hints.int）、简报字幕（subtitles_geo_01briefing.int）、局内字幕（subtitles_geo_01.int）。**菜单+局内文字全线打通，C++ 侧封版**（`WrappedIconPrint`/`UHelmet::DrawTextInfo` 未挂钩也未表现出需要,遇到具体场景缺字再补）。实验备份已在发布前清理；需要追溯时使用 Git 历史或完整原版备份。
 
 字形发射：WrappedPrint/ClippedPrint 经 **UCanvas vtable[32]（DrawTile 虚函数）**；DrawString 经导出的原版 `FCanvasUtil::DrawTile`。
 
@@ -238,15 +239,15 @@ u8   mip 数（字体页均为 1）
 ## 7.5 字体与文本生成工具状态
 
 1. ~~解码贴图对象格式（§4.6）~~ ✅ 完成（DXT5，见 §4.6）
-2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（默认=ASCII+GB2312 全集 7573 字；`--slim` 瘦身模式=GB2312 一级字 ∪ translation.json 用字 ∪ 常用标点，约 3900 字，发布推荐）。生成的 `orbitfonts-cn.utx`（全集约 19.8MB / 瘦身约 10MB）已通过解析器全量往返校验；曾以 GBK"中文测试"探针完成菜单+局内验证。字体文件在 `.lang\fonts\SourceHanSansCN-Bold.otf`（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。2026-07-10 增加可选 `--latin-source <英文版 orbitfonts.utx>` 混合模式：仅复用英文版 `0x20-0x7E` ASCII glyph 的原始宽高和 RGBA 像素，中文/GBK 字符仍由 `--font` 渲染；未传该参数时默认纯 TTF/OTF 管线不变。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
-3. ~~翻译索引/catalog 生成工具~~ ✅ `tools\make_translation_json.py` 已建立当前翻译源：从日文 `JapanesePack\System\*.int` 取得覆盖索引，从英文运行时 `GameData\System\*.int`、`GameData\System\*.u`、`GameData\Properties\*.u`、`GameData\Maps\*.ctm` 追溯英文 source，可选读入 `TranslationPackFormOnline\German Files\*.det` 作为德语参照；输出 `translation.json`（schema 2）+ `reference\export\localization_catalog.json`（schema 1）+ audit/skipped 报告。重新生成默认按 `(group, note, en)` 保留已有 `zh_CN`，只有显式 `--reset-translations` 才清空译文；默认 strict skipped，若仍有 skipped 会失败，审查期才使用 `--allow-skipped`
-4. ~~语言包生成工具~~ ✅ `tools\build_langpack.py` 已切到 catalog 驱动：读取用户翻译 JSON（schema 2）+ 机器 catalog（schema 1）→ `build\GameData\System\*.int` + manifest；菜单也输出 `XinterfaceCtmenus.int`，不生成 `PropertyOverrides`。默认要求所有 `zh_CN` 非空且 GBK 可编码；`--allow-untranslated` 仅作开发期英文 fallback，并只对 fallback 英文做最小 GBK 兼容规范化
+2. ~~中文字体生成器~~ ✅ 完成（2026-07-08）：`tools\font_gen.py`（渲染思源黑体 → numpy 向量化 DXT5 编码 → 写 .utx；CharRemap 键=GBK 双字节、IsRemapped=1；字号→行高按日版实测 8→13/12→16/15→20/18→24/24→29，全角=行高×行高，基线锚 0.88em）。`tools\make_charset.py` 产字符集（全集=ASCII+GB2312 全集 7573 字；`--slim --translation <path>`=一级字 ∪ 指定译文用字 ∪ 常用标点，约 3900 字，发布推荐）。两者的输入和输出路径均由 CLI 参数显式指定。生成的 `orbitfonts-cn.utx`（全集约 19.8MB / 瘦身约 10MB）已通过解析器全量往返校验；曾以 GBK"中文测试"探针完成菜单+局内验证。字体文件采用思源黑体（OFL，从 adobe-fonts/source-han-sans release 下载）。✅ **局内实测通过（2026-07-08）：菜单两按钮（含全角标点、弯引号）+ 局内字幕全部正常，无缺字/错位，字号观感合适**。2026-07-10 增加可选 `--latin-source <英文版 orbitfonts.utx>` 混合模式：仅复用英文版 `0x20-0x7E` ASCII glyph 的原始宽高和 RGBA 像素，中文/GBK 字符仍由 `--font` 渲染；未传该参数时默认纯 TTF/OTF 管线不变。高级用户自定义字体/字号/译文见 `docs\高级用法.md`
+3. ~~翻译索引/catalog 生成工具~~ ✅ `tools\make_translation_json.py` 已建立当前翻译源：日文 System、英文 GameData、translation、export、临时目录及构建器均由 CLI 参数显式指定；原版 Maps、补充英文目录和德语参照目录为可选参数。重新生成默认按 `(group, note, en)` 保留已有 `zh_CN`，只有显式 `--reset-translations` 才清空译文；默认 strict skipped，若仍有 skipped 会失败，审查期才使用 `--allow-skipped`
+4. ~~语言包生成工具~~ ✅ `tools\build_langpack.py` 已切到 catalog 驱动：仓库根目录运行时，`--json` 默认 `translation.json`、`--catalog` 默认 `reference/export/localization_catalog.json`，`--out` 仍为必填；生成 `GameData\System\*.int` + manifest，菜单也输出 `XinterfaceCtmenus.int`，不生成 `PropertyOverrides`。默认要求所有 `zh_CN` 非空且 GBK 可编码；`--allow-untranslated` 仅作开发期英文 fallback，并只对 fallback 英文做最小 GBK 兼容规范化
 5. 进入汉化实施（§8）：译文输出一律 GBK 编码 ANSI 文件、无 BOM；翻译源数据采用 UTF-8 JSON
 
-## 8. 汉化实施路线图（当前阶段）
+## 8. 汉化实施与发布路线
 
 1. **翻译索引**：官方日文包 `JapanesePack\System\*.int` 作为覆盖索引；当前英文版 + Fix 的 `GameData` 作为英文 source 权威；可选的 `TranslationPackFormOnline\German Files\*.det` 提供德语参照（`de` 字段）。`voicepacks.int` 是真实缺失项，英文默认值来自 Steam `GameData\Properties\voicepacks.u` 的 `GenericClone` class default，发布时生成到 `GameData\System\voicepacks.int`；`Winddrv.int` 与已映射的 `WinDrv/windrv.int` 重复，不作为当前补入目标
-2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射、EN-only passthrough 等构建细节，用户 JSON 只保留分组、id、note、en、jp、de、zh_CN。当前审查版约 9,393 个翻译条目、147 个 catalog 输出文件；剩余 skipped 约 1,684 条，记录在 `reference\export\localization_jp_only_skipped.json`。用户 JSON 示例：
+2. **数据结构**：采用机器 catalog 与用户翻译 JSON 分离；catalog 保存 `.int` 路径、value 类型、locked/control 项、字幕编号重映射、EN-only passthrough 等构建细节，用户 JSON 只保留分组、id、note、en、jp、de、zh_CN。当前翻译表包含 9,456 个条目，catalog 包含 148 个输出文件。JP-only/skipped 明细由索引生成器按需输出，不作为正式构建输入，也不提交仓库。用户 JSON 示例：
 
 ```json
 {
@@ -268,9 +269,9 @@ u8   mip 数（字体页均为 1）
    - `SubtitleSound`、`CreditsLine` 控制行、`Object+=` / `Preferences+=`、EN-only passthrough 等非翻译控制项由 catalog 锁定，不要求用户翻译；`CreditsLine*` 中 `jp == en` 的人名/署名也按 literal 保留
    - `shared.enjp` 是按 `(en, jp, de)` 合并的共享译文组，同组只能有一个中文译文；后续若条目离开 shared，生成器会按 `(en, jp, de)` 回填旧译文
    - `XinterfaceCtmenus.int` 是菜单主输出，不再生成菜单 `PropertyOverrides` 作为发布默认路径
-4. **索引生成工具**：`tools\make_translation_json.py` 默认读取既有 `translation.json` 并保留同签名条目的 `zh_CN`，因此正式翻译开始后可重复跑生成器做 source 修正；若旧条目匹配但 `jp` 发生变化，保留 `zh_CN` 并在 audit 记录 `preserved_translation_with_jp_change`。默认 skipped 严格失败，防止漏项静默进入正式翻译；审查期需要保留当前漏项时显式加 `--allow-skipped`，从零重建才加 `--reset-translations`。默认构建验证写入临时目录，不会清理真实 `build\`
-5. **语言包生成工具**：`tools\build_langpack.py` 默认读取 `translation.json` 和 `reference\export\localization_catalog.json`；可用 `--json` / `--catalog` / `--out` 指定临时输入输出。默认要求所有 `zh_CN` 非空，且输出必须 GBK 可编码；`--allow-untranslated` 只用于开发期抽样，空译文会回退英文，并仅对 fallback 英文中的少量非 GBK 字符做兼容替换。JSON 重复 key 会直接报错；bare 样式遇到 `=`、引号、首尾空白、`(` 或 `"` 开头会自动升级 quoted 并写入 manifest 计数。工具只输出 `build\GameData\System\*.int` 和 manifest，不直接写入游戏目录
-6. **字符集与字体**：发布版使用 `make_charset.py --slim` 生成瘦身字符集（GB2312 一级字 ∪ translation.json 用字 ∪ 常用标点，约 3900 字），再重新生成 `orbitfonts.utx`（约 10MB）；开发期可不带 `--slim` 使用 GB2312 全集（7573 字，约 19.8MB）
+4. **索引生成工具**：`tools\make_translation_json.py` 通过必填的 `--game-data`、`--japanese-system`、`--translation`、`--export-dir`、`--temp-dir`、`--build-script` 取得全部核心路径；可选参照也各自使用独立参数。工具读取指定的既有翻译表并保留同签名 `zh_CN`；若 `jp` 变化则在 audit 记录 `preserved_translation_with_jp_change`。默认 skipped 严格失败；审查期才加 `--allow-skipped`，从零重建才加 `--reset-translations`。临时目录默认保留，显式 `--clean-temp` 才清理
+5. **语言包生成工具**：`tools\build_langpack.py` 要求显式提供 `--out`；在仓库根目录运行时可省略标准 `--json` 和 `--catalog`，从其他目录调用或使用非标准输入时再显式提供。默认要求所有 `zh_CN` 非空，且输出必须 GBK 可编码；`--allow-untranslated` 只用于开发期抽样，空译文会回退英文，并仅对 fallback 英文中的少量非 GBK 字符做兼容替换。JSON 重复 key 会直接报错；bare 样式遇到 `=`、引号、首尾空白、`(` 或 `"` 开头会自动升级 quoted 并写入 manifest 计数。工具只输出到指定目录中的 `GameData\System\*.int` 和 manifest，不直接写入游戏目录
+6. **字符集与字体**：发布版使用 `make_charset.py --slim --translation <translation.json> --out <charset.txt>` 生成瘦身字符集（GB2312 一级字 ∪ 指定译文用字 ∪ 常用标点，约 3900 字），再用显式 `--font`、`--charset`、`--out` 重新生成 `orbitfonts.utx`（约 10MB）；开发期可不带 `--slim` 使用 GB2312 全集（7573 字，约 19.8MB）
 7. **测试与发布**：至少覆盖新战役全流程、加载/标题卡/提示/字幕、全部菜单与设置页、存读档界面；发布包复制 `System\*.int + Textures\orbitfonts.utx + CJK Mod.dll/Mod.u`，标注 Fix / CJK 依赖
 
 ## 9. 文件与工具清单
@@ -283,16 +284,13 @@ u8   mip 数（字体页均为 1）
     tools\font_gen.py         ← 中文字体包生成器（TTF/OTF → orbitfonts.utx，DXT5 字体页）
     tools\make_charset.py     ← 字符集生成器（默认 GB2312 全集；--slim 瘦身=一级字 ∪ 译文用字 ∪ 常用标点）
     tools\make_translation_json.py ← 翻译索引/catalog 生成器（JP .int + 英文 GameData source → translation.json + localization_catalog/audit/skipped）
-    tools\build_langpack.py   ← catalog 驱动语言包生成器（translation.json + localization_catalog.json → build\GameData\System\*.int）
+    tools\import_ps4_translation.py ← PS4 简中参照导入器（所有输入/输出/备份路径均由参数指定）
+    tools\build_langpack.py   ← catalog 驱动语言包生成器（translation.json + localization_catalog.json → 指定输出目录）
     tools\localization_common.py ← 共享模块（FALLBACK_REPLACEMENTS / normalize_fallback_text，被 make_translation_json 和 build_langpack 导入）
     tools\test_localization_tools.py ← unittest 测试套件（字体/翻译 JSON/构建管线往返校验）
     translation.json           ← 用户翻译表（UTF-8 JSON；正式译文写入 zh_CN）
-    reference\export\XInterfaceCTMenus\ ← 53 个菜单类 .uc 源码（ucc batchexport 产物）
     reference\export\localization_catalog.json ← 机器 catalog（输出路径、键、类型、模板、控制行）
-    reference\export\localization_audit.json   ← 生成审计信息（source、导出、统计、build validation）
-    reference\export\localization_jp_only_skipped.json ← 未进入 catalog 的 JP-only/skipped 明细
-    reference\export\         ← catalog、审计报告、必要源码导出的归档位置；除已保留的菜单参照源外，后续批量导出的 `*.uc` 中间文件已按 gitignore 过滤噪音
-    probe-backup\             ← 探针实验替换掉的原版 .int 备份
+    reference\export\         ← 仅提交构建 catalog；audit、skipped 和 `*.uc` 导出均按需生成并由 gitignore 过滤
   JapanesePack\               ← 日版参照（System/Sounds/Textures；ModDB 下载物，不入库）
   fonts\SourceHanSansCN-Bold.otf ← 思源黑体（OFL，字体生成器输入）
   orbitfonts-cn.utx           ← 字体生成器产物（已实测可装入游戏）

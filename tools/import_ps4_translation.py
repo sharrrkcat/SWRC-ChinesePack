@@ -10,21 +10,12 @@ separate post-import step.
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
-import sys
+import shutil
 from collections import OrderedDict, Counter, defaultdict
 from pathlib import Path
-
-SCRIPT_DIR = Path(__file__).resolve().parent
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
-ROOT_DIR = SCRIPT_DIR.parent
-LANG_DIR = ROOT_DIR.parent
-
-PS4_DIR = LANG_DIR / "TranslationPackFormOnline" / "Chinese Files"
-CATALOG_JSON = ROOT_DIR / "reference" / "export" / "localization_catalog.json"
-TRANSLATION_JSON = ROOT_DIR / "translation.json"
 
 
 def unquote(value: str) -> str:
@@ -215,15 +206,54 @@ def resolve_template(info: dict, ps4_value: str, translation: dict,
                 fill_entry(translation, targets[i], text, stats)
 
 
-def main():
-    with open(CATALOG_JSON, "r", encoding="utf-8") as f:
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--ps4-dir", type=Path, required=True, help="PS4 .cht 输入目录")
+    parser.add_argument("--catalog", type=Path, required=True, help="localization_catalog.json 输入路径")
+    parser.add_argument("--translation", type=Path, required=True, help="translation.json 输入路径")
+    parser.add_argument("--out", type=Path, required=True, help="合并后的 translation.json 输出路径")
+    parser.add_argument("--backup", type=Path, help="覆盖输入文件时必须指定的备份路径")
+    parser.add_argument("--overwrite-backup", action="store_true", help="允许覆盖已存在的 --backup")
+    parser.add_argument("--dry-run", action="store_true", help="只统计映射结果，不写输出或备份")
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
+    ps4_dir = args.ps4_dir.resolve()
+    catalog_json = args.catalog.resolve()
+    translation_json = args.translation.resolve()
+    output_json = args.out.resolve()
+    backup_json = args.backup.resolve() if args.backup else None
+
+    for path, label in (
+        (ps4_dir, "PS4 input directory"),
+        (catalog_json, "catalog"),
+        (translation_json, "translation"),
+    ):
+        if not path.exists():
+            raise SystemExit(f"{label} not found: {path}")
+    if not output_json.parent.is_dir():
+        raise SystemExit(f"output parent directory not found: {output_json.parent}")
+    replacing_input = output_json == translation_json
+    if replacing_input and not args.dry_run and backup_json is None:
+        raise SystemExit("--backup is required when --out overwrites --translation")
+    if backup_json is not None:
+        if backup_json == translation_json or backup_json == output_json:
+            raise SystemExit("--backup must differ from --translation and --out")
+        if not backup_json.parent.is_dir():
+            raise SystemExit(f"backup parent directory not found: {backup_json.parent}")
+        if backup_json.exists() and not args.overwrite_backup:
+            raise SystemExit(f"backup already exists (use --overwrite-backup): {backup_json}")
+
+    with catalog_json.open("r", encoding="utf-8") as f:
         catalog = json.load(f)
-    with open(TRANSLATION_JSON, "r", encoding="utf-8") as f:
+    with translation_json.open("r", encoding="utf-8") as f:
         translation = json.load(f)
 
     strict_index, crossfile_index = build_catalog_index(catalog)
     stats = Counter()
-    ps4_files = sorted(PS4_DIR.glob("*.cht"))
+    ps4_files = sorted(ps4_dir.glob("*.cht"))
     print(f"PS4 files: {len(ps4_files)}")
 
     for ps4_file in ps4_files:
@@ -294,16 +324,18 @@ def main():
     print(f"zh_CN filled (total):    {filled_total}")
     print(f"Fill rate:               {filled_total/total_entries*100:.1f}%")
 
-    backup = TRANSLATION_JSON.with_name("translation.json.bak")
-    import shutil
-    shutil.copy2(TRANSLATION_JSON, backup)
-    print(f"\nBacked up to {backup.name}")
+    if args.dry_run:
+        print("\nDry run: no files written")
+        return
+    if backup_json is not None:
+        shutil.copy2(translation_json, backup_json)
+        print(f"\nBacked up to {backup_json}")
 
-    TRANSLATION_JSON.write_text(
+    output_json.write_text(
         json.dumps(translation, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"Wrote {TRANSLATION_JSON.name}")
+    print(f"Wrote {output_json}")
 
 
 if __name__ == "__main__":

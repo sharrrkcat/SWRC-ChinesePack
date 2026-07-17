@@ -462,7 +462,7 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--font', required=True, help='TTF/OTF 字体文件 (需含 GBK 覆盖的 CJK 字形)')
     ap.add_argument('--charset', required=True, help='字符集文件 (UTF-8, make_charset.py 产出或译文扫描子集)')
-    ap.add_argument('--out', default='orbitfonts.utx')
+    ap.add_argument('--out', required=True, help='输出 orbitfonts.utx 路径')
     ap.add_argument('--cells', default=None,
                     help='字号→行高覆盖, 如 "24=29,18=24,15=20,12=16,8=13" (默认=官方日版度量; '
                          '行高越大字越大, 但注意 UI 布局按行高排版, 偏离过多会挤压/溢出)')

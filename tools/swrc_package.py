@@ -6,11 +6,14 @@
 用法:
     py -X utf8 swrc_package.py <package>              # 概览: 头/名称/导入/导出表
     py -X utf8 swrc_package.py <package> font <名字>  # 解码 UFont 对象 (字形/贴图页/CharRemap)
-    py -X utf8 swrc_package.py <package> tex <名字> [输出.png]  # 解码贴图对象 (DXT5, 需 Pillow)
+    py -X utf8 swrc_package.py <package> tex <名字> --out <输出.png>  # 解码贴图对象 (DXT5, 需 Pillow)
 
 注意: 导出表为 RC 定制布局 (含 X 字节, Size/Offset 为定长 i32), 与标准 UE2 不同。
 """
-import struct, sys, collections
+import argparse
+import collections
+import struct
+from pathlib import Path
 
 SIG = 0x9E2A83C1
 
@@ -133,23 +136,42 @@ class Package:
         return props, out
 
 
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print(__doc__); sys.exit(1)
-    pkg = Package(sys.argv[1])
-    if len(sys.argv) >= 4 and sys.argv[2] == 'tex':
-        props, mips = pkg.decode_texture(sys.argv[3])
-        print(f'{sys.argv[3]}: {props} mips={len(mips)}')
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    parser.add_argument('package', type=Path, help='输入 Unreal 包路径')
+    subparsers = parser.add_subparsers(dest='command')
+    font_parser = subparsers.add_parser('font', help='解码 UFont 对象')
+    font_parser.add_argument('name', help='字体对象名')
+    tex_parser = subparsers.add_parser('tex', help='解码 DXT5 贴图对象')
+    tex_parser.add_argument('name', help='贴图对象名')
+    tex_parser.add_argument('--out', type=Path, help='可选 PNG 输出路径')
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
+    package_path = args.package.resolve()
+    if not package_path.is_file():
+        raise SystemExit(f'package not found: {package_path}')
+    pkg = Package(package_path)
+    if args.command == 'tex':
+        props, mips = pkg.decode_texture(args.name)
+        print(f'{args.name}: {props} mips={len(mips)}')
         for m in mips:
             print(f"  {m['usize']}x{m['vsize']} 数据 {len(m['data'])} 字节")
-        if len(sys.argv) >= 5:
+        if args.out is not None:
             from PIL import Image
+            output_path = args.out.resolve()
+            if not output_path.parent.is_dir():
+                raise SystemExit(f'output parent directory not found: {output_path.parent}')
             m = mips[0]
-            Image.frombytes('RGBA', (m['usize'], m['vsize']), m['data'], 'bcn', 3).save(sys.argv[4])
-            print('已写出', sys.argv[4])
-    elif len(sys.argv) >= 4 and sys.argv[2] == 'font':
-        f = pkg.decode_font(sys.argv[3])
-        print(f'{sys.argv[3]}: 字形={len(f["characters"])} 页={len(f["pages"])} '
+            Image.frombytes('RGBA', (m['usize'], m['vsize']), m['data'], 'bcn', 3).save(output_path)
+            print('已写出', output_path)
+    elif args.command == 'font':
+        f = pkg.decode_font(args.name)
+        print(f'{args.name}: 字形={len(f["characters"])} 页={len(f["pages"])} '
               f'kerning={f["kerning"]} 映射={len(f["remap"])} IsRemapped={f["is_remapped"]}')
         print('贴图页:', f['pages'])
         zones = collections.Counter()
@@ -161,3 +183,7 @@ if __name__ == '__main__':
         print('各页字形引用数:', dict(sorted(per_page.items())))
     else:
         pkg.dump()
+
+
+if __name__ == '__main__':
+    main()

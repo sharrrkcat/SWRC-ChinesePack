@@ -3,6 +3,7 @@
 
 import importlib.util
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -10,6 +11,7 @@ import tempfile
 import unittest
 from collections import Counter, OrderedDict
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 from PIL import Image
@@ -32,6 +34,7 @@ mtj = load_tool("make_translation_json")
 blp = load_tool("build_langpack")
 fg = load_tool("font_gen")
 swrc = load_tool("swrc_package")
+ips4 = load_tool("import_ps4_translation")
 
 
 def parse_int_semantics(path, encoding):
@@ -64,6 +67,63 @@ def canonical_value(value):
 
 
 class LocalizationToolTests(unittest.TestCase):
+    def test_generator_cli_paths_are_explicit(self):
+        build_args = blp.parse_args(
+            ["--json", "in.json", "--catalog", "catalog.json", "--out", "out"]
+        )
+        self.assertEqual(build_args.json, "in.json")
+        package_args = swrc.parse_args(
+            ["font.utx", "tex", "Page00", "--out", "page.png"]
+        )
+        self.assertEqual(package_args.out, Path("page.png"))
+        import_args = ips4.parse_args(
+            [
+                "--ps4-dir", "ps4",
+                "--catalog", "catalog.json",
+                "--translation", "translation.json",
+                "--out", "merged.json",
+            ]
+        )
+        self.assertEqual(import_args.out, Path("merged.json"))
+
+    def test_build_cli_uses_root_convenience_inputs(self):
+        args = blp.parse_args(["--out", "build"])
+        self.assertEqual(args.json, "translation.json")
+        self.assertEqual(args.catalog, "reference/export/localization_catalog.json")
+        self.assertEqual(args.out, "build")
+
+    def test_make_translation_configures_only_supplied_paths(self):
+        names = (
+            "GAME_ROOT", "GAME_DATA", "SYSTEM_DIR", "PROPERTIES_DIR", "MAPS_DIR",
+            "ORIGINAL_MAPS_DIR", "JP_SYSTEM_DIR", "EXPORT_DIR", "TRANSLATION_JSON",
+            "CATALOG_JSON", "AUDIT_JSON", "JP_ONLY_SKIPPED_JSON",
+            "SUPPLEMENTARY_EN_DIR", "DE_SYSTEM_DIR", "TEMP_EXPORT_ROOT", "BUILD_SCRIPT",
+        )
+        old_values = {name: getattr(mtj, name) for name in names}
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                root = Path(temp_dir)
+                args = SimpleNamespace(
+                    game_data=root / "game" / "GameData",
+                    original_maps=root / "original-maps",
+                    japanese_system=root / "jp-system",
+                    export_dir=root / "export",
+                    translation=root / "translation.json",
+                    english_supplement=root / "english",
+                    german_system=root / "german",
+                    temp_dir=root / "swrc-temp",
+                    build_script=root / "build_langpack.py",
+                )
+                mtj.configure_paths(args)
+                self.assertEqual(mtj.GAME_DATA, args.game_data.resolve())
+                self.assertEqual(mtj.JP_SYSTEM_DIR, args.japanese_system.resolve())
+                self.assertEqual(mtj.TRANSLATION_JSON, args.translation.resolve())
+                self.assertEqual(mtj.CATALOG_JSON, args.export_dir.resolve() / "localization_catalog.json")
+                self.assertEqual(mtj.TEMP_EXPORT_ROOT, args.temp_dir.resolve())
+        finally:
+            for name, value in old_values.items():
+                setattr(mtj, name, value)
+
     def font_fixture_paths(self):
         font_path = ROOT_DIR.parent / "fonts" / "SourceHanSansCN-Bold.otf"
         latin_source = ROOT_DIR.parent.parent / ".originalbackup" / "GameData" / "Textures" / "orbitfonts.utx"
@@ -663,6 +723,12 @@ defaultproperties
         catalog_path = ROOT_DIR / "reference" / "export" / "localization_catalog.json"
         if not translation_path.exists() or not catalog_path.exists():
             self.skipTest("generated translation/catalog files are missing")
+        game_data_text = os.environ.get("SWRC_TEST_GAME_DATA")
+        if not game_data_text:
+            self.skipTest("set SWRC_TEST_GAME_DATA to the matching source GameData directory")
+        game_data = Path(game_data_text).expanduser().resolve()
+        if not (game_data / "System").is_dir():
+            self.skipTest(f"SWRC_TEST_GAME_DATA has no System directory: {game_data}")
 
         translation = json.loads(translation_path.read_text(encoding="utf-8-sig"))
         for group, payload in translation.items():
@@ -698,7 +764,7 @@ defaultproperties
             )
             self.assertEqual(proc.returncode, 0, proc.stdout)
 
-            game_system = ROOT_DIR.parent.parent / "GameData" / "System"
+            game_system = game_data / "System"
             generated_system = out_dir / "GameData" / "System"
             compared = 0
             for generated_path in generated_system.glob("*.cht"):

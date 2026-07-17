@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 """从翻译 JSON + localization catalog 生成 SWRC 简中语言包文本产物。
 
-默认读取仓库根目录 translation.json 和 reference/export/localization_catalog.json，
-输出到 build/：
-    py -X utf8 tools/build_langpack.py
-    py -X utf8 tools/build_langpack.py --json translation.json --catalog reference/export/localization_catalog.json
-    py -X utf8 tools/build_langpack.py --out D:/tmp/swrc-build
+在仓库根目录运行时可省略默认输入路径：
+    py -X utf8 tools/build_langpack.py --out build
+
+也可显式指定全部路径：
+    py -X utf8 tools/build_langpack.py --json <translation.json> \
+        --catalog <localization_catalog.json> --out <output-dir>
 
 本工具只生成文件，不写入游戏目录，不做还原。
 """
@@ -24,14 +25,12 @@ from pathlib import Path
 TOOL_NAME = "build_langpack.py"
 TRANSLATION_SCHEMA = 2
 CATALOG_SCHEMA = 1
+DEFAULT_JSON = "translation.json"
+DEFAULT_CATALOG = "reference/export/localization_catalog.json"
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 ROOT_DIR = SCRIPT_DIR.parent
-DEFAULT_BUILD_DIR = ROOT_DIR / "build"
-DEFAULT_JSON = "translation.json"
-DEFAULT_CATALOG = "reference/export/localization_catalog.json"
-
 SAFE_GROUP_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
 SAFE_ID_RE = re.compile(r"^[0-9]+$")
 SAFE_INT_FILE_RE = re.compile(r"^[A-Za-z0-9_.-]+\.cht$", re.IGNORECASE)
@@ -530,9 +529,9 @@ def write_outputs(outputs, json_path, catalog_path, output_root, allow_untransla
 
 def parse_args(argv):
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--json", default=DEFAULT_JSON, help=f"翻译 JSON，默认 {DEFAULT_JSON}")
-    ap.add_argument("--catalog", default=DEFAULT_CATALOG, help=f"机器 catalog，默认 {DEFAULT_CATALOG}")
-    ap.add_argument("--out", default="build", help="输出目录，默认 build")
+    ap.add_argument("--json", default=DEFAULT_JSON, help=f"翻译 JSON 路径，默认 {DEFAULT_JSON}")
+    ap.add_argument("--catalog", default=DEFAULT_CATALOG, help=f"机器 catalog 路径，默认 {DEFAULT_CATALOG}")
+    ap.add_argument("--out", required=True, help="输出目录")
     ap.add_argument(
         "--allow-untranslated",
         action="store_true",
@@ -542,17 +541,11 @@ def parse_args(argv):
 
 
 def resolve_input_path(path_text):
-    path = Path(path_text)
-    if not path.is_absolute():
-        path = ROOT_DIR / path
-    return path.resolve()
+    return Path(path_text).expanduser().resolve()
 
 
 def resolve_output_path(path_text):
-    path = Path(path_text)
-    if not path.is_absolute():
-        path = ROOT_DIR / path
-    return path.resolve()
+    return Path(path_text).expanduser().resolve()
 
 
 def main(argv=None):

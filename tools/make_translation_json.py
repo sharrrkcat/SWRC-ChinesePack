@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """Generate translation.json and localization_catalog.json from JP/EN SWRC assets.
 
-The generated translation JSON intentionally contains no Chinese translation:
-every user-editable ``zh_CN`` field is left blank.
+Existing Chinese translations are preserved unless ``--reset-translations``
+is explicitly supplied.
 """
 
 from __future__ import annotations
@@ -33,23 +33,24 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 ROOT_DIR = SCRIPT_DIR.parent
-LANG_DIR = ROOT_DIR.parent
-GAME_ROOT = LANG_DIR.parent
-GAME_DATA = GAME_ROOT / "GameData"
-SYSTEM_DIR = GAME_DATA / "System"
-PROPERTIES_DIR = GAME_DATA / "Properties"
-MAPS_DIR = GAME_DATA / "Maps"
-ORIGINAL_MAPS_DIR = GAME_ROOT / ".originalbackup" / "GameData" / "Maps"
-JP_SYSTEM_DIR = LANG_DIR / "JapanesePack" / "System"
-EXPORT_DIR = ROOT_DIR / "reference" / "export"
-
-TRANSLATION_JSON = ROOT_DIR / "translation.json"
-CATALOG_JSON = EXPORT_DIR / "localization_catalog.json"
-AUDIT_JSON = EXPORT_DIR / "localization_audit.json"
-JP_ONLY_SKIPPED_JSON = EXPORT_DIR / "localization_jp_only_skipped.json"
-
-SUPPLEMENTARY_EN_DIR = LANG_DIR / "TranslationPackFormOnline" / "English Files"
-DE_SYSTEM_DIR = LANG_DIR / "TranslationPackFormOnline" / "German Files"
+# External inputs and outputs are intentionally unset until configure_paths()
+# receives explicit CLI values.  Keeping these names as module globals avoids a
+# disruptive rewrite of the established parser/generator helpers.
+GAME_ROOT = None
+GAME_DATA = None
+SYSTEM_DIR = None
+PROPERTIES_DIR = None
+MAPS_DIR = None
+ORIGINAL_MAPS_DIR = None
+JP_SYSTEM_DIR = None
+EXPORT_DIR = None
+TRANSLATION_JSON = None
+CATALOG_JSON = None
+AUDIT_JSON = None
+JP_ONLY_SKIPPED_JSON = None
+SUPPLEMENTARY_EN_DIR = None
+DE_SYSTEM_DIR = None
+BUILD_SCRIPT = None
 
 SUPPLEMENTARY_MENU_SECTIONS = {
     "CTControllerOptionsPSMenu",
@@ -67,7 +68,34 @@ SUPPLEMENTARY_MENU_SECTIONS = {
     "CT_PCDemo_Splash",
 }
 
-TEMP_EXPORT_ROOT = Path(os.environ.get("SWRC_EXPORT_TMP", "D:/swrc_localization_export_tmp"))
+TEMP_EXPORT_ROOT = None
+
+
+def configure_paths(args) -> None:
+    """Install CLI-supplied paths for the legacy helper functions below."""
+    global GAME_ROOT, GAME_DATA, SYSTEM_DIR, PROPERTIES_DIR, MAPS_DIR
+    global ORIGINAL_MAPS_DIR, JP_SYSTEM_DIR, EXPORT_DIR
+    global TRANSLATION_JSON, CATALOG_JSON, AUDIT_JSON, JP_ONLY_SKIPPED_JSON
+    global SUPPLEMENTARY_EN_DIR, DE_SYSTEM_DIR, TEMP_EXPORT_ROOT, BUILD_SCRIPT
+
+    GAME_DATA = args.game_data.resolve()
+    GAME_ROOT = GAME_DATA.parent
+    SYSTEM_DIR = GAME_DATA / "System"
+    PROPERTIES_DIR = GAME_DATA / "Properties"
+    MAPS_DIR = GAME_DATA / "Maps"
+    ORIGINAL_MAPS_DIR = args.original_maps.resolve() if args.original_maps else None
+    JP_SYSTEM_DIR = args.japanese_system.resolve()
+    EXPORT_DIR = args.export_dir.resolve()
+    TRANSLATION_JSON = args.translation.resolve()
+    CATALOG_JSON = EXPORT_DIR / "localization_catalog.json"
+    AUDIT_JSON = EXPORT_DIR / "localization_audit.json"
+    JP_ONLY_SKIPPED_JSON = EXPORT_DIR / "localization_jp_only_skipped.json"
+    SUPPLEMENTARY_EN_DIR = (
+        args.english_supplement.resolve() if args.english_supplement else None
+    )
+    DE_SYSTEM_DIR = args.german_system.resolve() if args.german_system else None
+    TEMP_EXPORT_ROOT = args.temp_dir.resolve()
+    BUILD_SCRIPT = args.build_script.resolve()
 
 PRINTF_RE = re.compile(
     r"%(?!%)(?:\d+\$)?[-+#0]*(?:\*|\d+)?(?:\.(?:\*|\d+))?"
@@ -245,7 +273,9 @@ def read_text(path: Path, encoding: str) -> str:
     return path.read_text(encoding=encoding, errors="strict")
 
 
-def public_rel_path(path: Path, start: Path = ROOT_DIR) -> str:
+def public_rel_path(path: Path, start: Path | None = None) -> str:
+    if start is None:
+        start = ROOT_DIR
     try:
         return Path(os.path.relpath(path, start)).as_posix()
     except ValueError:
@@ -547,12 +577,16 @@ def build_package_case() -> dict[str, Path]:
 
 def build_steam_map_case(
     audit: dict,
-    active_maps_dir: Path = MAPS_DIR,
-    original_maps_dir: Path = ORIGINAL_MAPS_DIR,
+    active_maps_dir: Path | None = None,
+    original_maps_dir: Path | None = None,
 ) -> dict[str, Path]:
     """Return active map paths restricted to the Steam retail map set."""
+    if active_maps_dir is None:
+        active_maps_dir = MAPS_DIR
+    if original_maps_dir is None:
+        original_maps_dir = ORIGINAL_MAPS_DIR
     active = {path.stem.casefold(): path for path in active_maps_dir.glob("*.ctm")}
-    if original_maps_dir.exists():
+    if original_maps_dir is not None and original_maps_dir.exists():
         original = {
             path.stem.casefold(): path for path in original_maps_dir.glob("*.ctm")
         }
@@ -753,7 +787,7 @@ def load_class_defaults(package_stems: set[str], audit: dict):
                 "defaults": defaults,
                 "localized_strings": parse_top_level_localized_strings(uc_path),
                 "package": package_stem,
-                "path": uc_path.relative_to(ROOT_DIR).as_posix(),
+                "path": public_rel_path(uc_path),
             }
     audit["loaded_class_packages"] = loaded_packages
     audit["loaded_class_count"] = len(classes)
@@ -2098,7 +2132,7 @@ def run_build_validation(temp_json: Path, temp_catalog: Path):
             sys.executable,
             "-X",
             "utf8",
-            str(ROOT_DIR / "tools" / "build_langpack.py"),
+            str(BUILD_SCRIPT),
             "--json",
             str(temp_json),
             "--catalog",
@@ -2136,9 +2170,13 @@ def run_build_validation(temp_json: Path, temp_catalog: Path):
     return summary
 
 
-def cleanup_temp_root() -> None:
-    if TEMP_EXPORT_ROOT.exists() and TEMP_EXPORT_ROOT.name.startswith("swrc_"):
-        shutil.rmtree(TEMP_EXPORT_ROOT)
+def cleanup_temp_root(enabled: bool) -> None:
+    if not enabled or not TEMP_EXPORT_ROOT.exists():
+        return
+    resolved = TEMP_EXPORT_ROOT.resolve()
+    if not resolved.name.casefold().startswith(("swrc_", "swrc-")):
+        fail("refusing to clean --temp-dir unless its name starts with swrc_ or swrc-")
+    shutil.rmtree(resolved)
 
 
 def process_supplementary_sources(
@@ -2152,7 +2190,7 @@ def process_supplementary_sources(
     audit,
 ):
     """Add supplementary EN sources beyond the JP index (forum language packs)."""
-    if not SUPPLEMENTARY_EN_DIR.exists():
+    if SUPPLEMENTARY_EN_DIR is None or not SUPPLEMENTARY_EN_DIR.exists():
         return
 
     def parse_supplementary_int(path):
@@ -2671,14 +2709,29 @@ def refresh_map_discovery_audit_refs(catalog_files, audit) -> None:
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--game-data", type=Path, required=True, help="Steam/Fix GameData 输入目录")
+    parser.add_argument("--japanese-system", type=Path, required=True, help="官方日文包 System 输入目录")
+    parser.add_argument("--translation", type=Path, required=True, help="translation.json 输入/输出路径")
+    parser.add_argument("--export-dir", type=Path, required=True, help="catalog、audit 与类导出的输出目录")
+    parser.add_argument("--temp-dir", type=Path, required=True, help="UCC 和构建验证使用的临时目录")
+    parser.add_argument("--build-script", type=Path, required=True, help="build_langpack.py 路径")
+    parser.add_argument("--original-maps", type=Path, help="可选：原版 Steam Maps 校验目录")
+    parser.add_argument("--english-supplement", type=Path, help="可选：补充英文 .int 目录")
+    parser.add_argument("--german-system", type=Path, help="可选：德文 .det 参照目录")
     parser.add_argument("--skip-build-validation", action="store_true", help="只生成 JSON，不运行 build_langpack.py 临时校验")
     parser.add_argument("--allow-skipped", action="store_true", help="允许生成包含 skipped 项的 JSON（过渡/审查用）")
     parser.add_argument("--reset-translations", action="store_true", help="重新生成时清空已有 zh_CN 译文")
+    parser.add_argument("--clean-temp", action="store_true", help="成功后删除 --temp-dir；默认保留以便审计")
     args = parser.parse_args(argv)
+    configure_paths(args)
 
     for required in (JP_SYSTEM_DIR, SYSTEM_DIR, PROPERTIES_DIR, MAPS_DIR):
         if not required.exists():
             fail(f"required path not found: {required}")
+    if not BUILD_SCRIPT.is_file():
+        fail(f"build script not found: {BUILD_SCRIPT}")
+    if not TRANSLATION_JSON.parent.is_dir():
+        fail(f"translation parent directory not found: {TRANSLATION_JSON.parent}")
 
     audit = OrderedDict(
         [
@@ -2704,7 +2757,7 @@ def main(argv=None):
     jp_ints, pseudo_comments, malformed_jp = parse_all_ints(JP_SYSTEM_DIR, "cp932")
     en_ints, _en_pseudo, malformed_en = parse_all_ints(SYSTEM_DIR, "cp1252")
     de_index = {}
-    if DE_SYSTEM_DIR.exists():
+    if DE_SYSTEM_DIR is not None and DE_SYSTEM_DIR.exists():
         for det_path in sorted(DE_SYSTEM_DIR.glob("*.det"), key=lambda p: p.name.casefold()):
             try:
                 rows, _, _ = parse_int_file(det_path, "utf-8")
@@ -2983,9 +3036,9 @@ def main(argv=None):
         audit["build_validation"] = run_build_validation(temp_json, temp_catalog)
 
     write_json(AUDIT_JSON, audit)
-    cleanup_temp_root()
-    print(f"wrote {TRANSLATION_JSON.relative_to(ROOT_DIR)}")
-    print(f"wrote {CATALOG_JSON.relative_to(ROOT_DIR)}")
+    cleanup_temp_root(args.clean_temp)
+    print(f"wrote {public_rel_path(TRANSLATION_JSON)}")
+    print(f"wrote {public_rel_path(CATALOG_JSON)}")
     print(f"translation entries: {audit['stats']['translation_entries']}")
     print(f"catalog files: {audit['stats']['catalog_files']}")
     print(f"skipped entries: {len(skipped)}")
