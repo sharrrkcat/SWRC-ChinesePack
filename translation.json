@@ -1461,7 +1461,7 @@
       "en": "Fire in the Hole!",
       "jp": "気をつけろ!",
       "de": "",
-      "zh_CN": "小心手雷！"
+      "zh_CN": "注意爆炸！"
     },
     "100210": {
       "note": "FFireString[5] / 2 occurrences",
@@ -2416,7 +2416,7 @@
       "en": "Delta 40: Fire in the hole!",
       "jp": "Delta 40: 穴を狙え!",
       "de": "Delta 40: Achtung, Granate!",
-      "zh_CN": "德尔塔40：小心手雷！",
+      "zh_CN": "德尔塔40：注意爆炸！",
       "use_PS4_translation": true
     },
     "100855": {
@@ -12568,7 +12568,7 @@
       "en": "Name: 62 Nickname: Scorch Status: Commando, Delta Squad. Scorch prefers an explosive solution above all others.  His preferred weapon is the DC-17 Anti-Armor attachment. ",
       "jp": "コードネーム: デルタ62　\nニックネーム: スコーチ\nステータス: デルタ小隊に所属するコマンドー、スコーチは、他のどんな武器よりも液化爆薬に興味があるようです。また主要武器としてDC-17m対装甲アタッチメントを使用します。",
       "de": "Name: 62 Spitzname: Scorch Status: Kommando, Delta-Team. Scorch zieht eine explosive Lösung allen anderen vor. Seine Lieblingswaffe ist der DC-17m Panzerbrechende Aufsatz.",
-      "zh_CN": "名字：62号 昵称：Scorch 身份：德尔塔小队突击队员。Scorch喜爱爆破胜过一切。他钟爱的武器是DC-17反装甲附件。",
+      "zh_CN": "名字：62号 \n昵称：Scorch \n身份：德尔塔小队突击队员\nScorch喜爱爆破胜过一切，他钟爱的武器是DC-17反装甲附件",
       "use_PS4_translation": true
     }
   },
@@ -12796,7 +12796,7 @@
       "en": "Use the squad commands to change the stance of your squad. Search and Destroy: advance aggressively. Secure Area: defend designated area. Form-Up: follow in formation. Recall: Cancels all maneuvers.",
       "jp": "次の小隊命令を使用し、小隊のフォーメーションを変更することができます。\n探索・破壊:前進し積極的に攻撃。\n位置確保:現在地を防衛。\n集合:リーダーのそばに寄る。\n指示中止:全ての命令指示をキャンセル。",
       "de": "Benutzen Sie die Teambefehle, um die Position Ihres Teams zu ändern. Suchen und Zerstören: aggressiv vorrücken. Bereich sichern: den angegebenen Bereich verteidigen.",
-      "zh_CN": "使用小队命令可以更改你的小队姿势。搜索并歼灭：主动推进。控制区域：保卫指定区域。集合：按阵型跟随。召回：取消所有行动。",
+      "zh_CN": "使用小队命令可以更改你的小队姿势。\n搜索并歼灭：主动推进。\n控制区域：保卫指定区域。\n集合：按阵型跟随。\n召回：取消所有行动。",
       "use_PS4_translation": true
     }
   },
@@ -12806,7 +12806,7 @@
       "en": "Name: 40 Nickname: Fixer Status: Commando, Delta Squad. 40 has a knack for slicing computer systems to bypass security. His preferred weapon is the Katarn-armor gauntlet vibroblade.  ",
       "jp": "コードネーム: デルタ40　\nニックネーム: フィクサー\nステータス: デルタ小隊に所属するコマンドー、40は、あらゆるコンピュータシステムに侵入しセキュリティを無効化する術に優れています。カターン・装甲ガントレットを駆使した接近戦闘を好みます。",
       "de": "Name: 40 Spitzname: Fixxer Status: Kommando, Delta-Team. 40 hat ein Talent dafür, Computersysteme zu hacken und so die Sicherheit zu umgehen. Seine Lieblingswaffe ist der Katarn-Rüstung- Vibroklingenhandschuh.",
-      "zh_CN": "名字：40号 昵称：Fixer 身份：德尔塔小队突击队员。40号能熟练骇入计算机系统，绕过安全设置。他最喜爱的武器是卡塔恩盔甲臂装超振动刃。",
+      "zh_CN": "名字：40号 \n昵称：Fixer \n身份：德尔塔小队突击队员\n40号能熟练骇入计算机系统，绕过安全设置。他最喜爱的武器是卡塔恩盔甲臂装超振动刃",
       "use_PS4_translation": true
     }
   },
@@ -13022,7 +13022,7 @@
       "en": "Name: 07 Nickname: Sev Status: Commando, Delta Squad. 07 has a thirst for the hunt. His preferred weapon is the DC-17 Sniper attachment.  ",
       "jp": "コードネーム: デルタ07　\nニックネーム: セブ\nステータス: デルタ小隊に所属するコマンドー、07は、狙撃に優れています。彼はDC-17m狙撃用アタッチメントを好んで使用します。",
       "de": "Name: 07 Spitzname: Sieben. Status: Kommando, Delta-Team. 0-7 dürstet nach der Jagd. Seine Lieblingswaffe ist der DC-17m Scharfschützenaufsatz.",
-      "zh_CN": "名字：07号 昵称：Sev 身份：德尔塔小队突击队员。07号充满狩猎的渴望。他最喜爱的武器是DC-17狙击附件。",
+      "zh_CN": "名字：07号 \n昵称：Sev \n身份：德尔塔小队突击队员\n07号充满狩猎的渴望，他最喜爱的武器是DC-17狙击附件",
       "use_PS4_translation": true
     }
   },
@@ -13552,7 +13552,7 @@
       "en": "ZERO HOUR - CLONE WARS - GEONOSIS",
       "jp": "クローン戦争勃発直後 - ジオノーシス",
       "de": "STUNDE NULL - KLONKRIEGE - GEONOSIS",
-      "zh_CN": "决战时刻 - 克隆人战争 - 吉奥诺西斯",
+      "zh_CN": "决战时刻 · 克隆人战争 · 吉奥诺西斯",
       "use_PS4_translation": true
     }
   },
@@ -13958,7 +13958,7 @@
       "en": "RC BATCH DELTA:  EFFICIENCY REPORT:  W VAU, TRAINING SERGEANT:  I FEEL GENUINELY SORRY FOR ANY HOSTILE WHO HAS THE MISFORTUNE TO FACE DELTA SQUAD IN COMBAT.  THAT IS ALL.",
       "jp": "RCデルタレポート:\nデルタと戦う敵は本当に不幸かと思われます。\n彼らの部隊は非常にバランスの良い部隊です。",
       "de": "\"DIESE NEUE GRUPPE DELTA-TEAM-KOMMANDOS SIND TÖDLICH, UNERBITTLICH, ASOZIAL UND AGGRESSIV --- GANZ WIE MEINE EIGENEN JUNGS.\"",
-      "zh_CN": "共和国突击队德尔塔批次：效率报告：训练中士W VAU：对于作战中不幸遇到德尔塔小队的敌人，我真心为他们感到难过，仅此而已。",
+      "zh_CN": "共和国突击队德尔塔批次：\n效率报告：\n训练中士W VAU：对于作战中不幸遇到德尔塔小队的敌人，我真心为他们感到难过，仅此而已。",
       "use_PS4_translation": true
     },
     "44": {
@@ -13966,7 +13966,7 @@
       "en": "RC BATCH DELTA:  REPORT:  W VAU, TRAINING SERGEANT:  MINOR BURNS AND INJURIES INCURRED TODAY DURING ANTI-ARMOR WEAPONS TRAINING WITH RC-1262.  NEW NICKNAME:  \"SCORCH.\"",
       "jp": "RCデルタレポート:\n本日の訓練でのやけどと負傷はRC-1262に\n新しいあだ名をもたらしました\n「SCORCH (焼き払う) 」",
       "de": "",
-      "zh_CN": "共和国突击队德尔塔批次：报告：训练中士W VAU：RC-1262在今天的反装甲武器训练中受到小幅烧伤和轻伤。新昵称：“SCORCH”。",
+      "zh_CN": "共和国突击队德尔塔批次：\n报告：\n训练中士W VAU：RC-1262在今天的反装甲武器训练中受到小幅烧伤和轻伤。\n新昵称：“SCORCH”。",
       "use_PS4_translation": true
     },
     "45": {
@@ -13974,7 +13974,7 @@
       "en": "RC BATCH DELTA:  REPORT:  W VAU, TRAINING SERGEANT:  RC-1207 CONTINUES TO EXCEL IN SNIPER AND AMBUSH TRAINING.  HOWEVER, PLEASE RE-CHECK DNA FOR POSSIBLE MENTAL ABERRATION.",
       "jp": "RCデルタレポート:\nRC-1207の戦闘能力は突出している。\nただ、あまりにも戦闘にこだわる傾向があります。\nDNAの再確認をしてください。",
       "de": "",
-      "zh_CN": "共和国突击队德尔塔批次：报告：训练中士W VAU：RC-1207在狙击和伏击训练中继续表现出色。但请重新检查DNA，确定是否存在精神异常。",
+      "zh_CN": "共和国突击队德尔塔批次：\n报告：\n训练中士W VAU：RC-1207在狙击和伏击训练中继续表现出色。\n但请重新检查DNA，确定是否存在精神异常。",
       "use_PS4_translation": true
     },
     "46": {
@@ -13982,7 +13982,7 @@
       "en": "RC BATCH DELTA:  REPORT:  W VAU, TRAINING SERGEANT:  REQUEST REMOVAL OF DATA TERMINAL IN DELTA DORMITORY.  40 MAY BREACH KAMINO MAINFRAME IF LEFT UNSUPERVISED.  STRONG PROFICIENCY IN DATA SLICING.",
       "jp": "RCデルタレポート:\n40のデータ端末への侵入能力には目を見張る。\nそしてアイツはどんな時も冷静だ。",
       "de": "",
-      "zh_CN": "共和国突击队德尔塔批次：报告：训练中士W VAU：要求移除德尔塔宿舍中的数据终端。如果不加监管，40号可能会攻破卡米诺的主计算机。他极其精通数据骇入。",
+      "zh_CN": "共和国突击队德尔塔批次：\n报告：\n训练中士W VAU：要求移除德尔塔宿舍中的数据终端。\n如果不加监管，40号可能会攻破卡米诺的主计算机。\n他极其精通数据骇入。",
       "use_PS4_translation": true
     },
     "47": {
@@ -13990,7 +13990,7 @@
       "en": "RC BATCH DELTA:  REPORT:  W VAU, TRAINING SERGEANT:  IDENTIFIED MY SQUAD LEADER TODAY.  RC-1138 REPEATEDLY TOPS SQUAD IN WEAPONS AND TACTICS TESTING… AND BROKE MY ARM IN MELEE TEST.",
       "jp": "RCデルタレポート:\n兵器と戦闘テストの結果、\n本日デルタのリーダーを決定した。\nリーダーシップ、全てにおける高い能力、適任だ。",
       "de": "",
-      "zh_CN": "共和国突击队德尔塔批次：报告：训练中士W VAU：今天确定了小队队长的人选。RC-1138在武器和战术测试中屡次排名第一，而且还在近战测试中弄断了我的手臂。",
+      "zh_CN": "共和国突击队德尔塔批次：\n报告：\n训练中士W VAU：今天确定了小队队长的人选。\nRC-1138在武器和战术测试中屡次排名第一，而且还在近战测试中弄断了我的手臂。",
       "use_PS4_translation": true
     },
     "48": {
@@ -13998,7 +13998,7 @@
       "en": "\"THIS NEW BATCH OF DELTA SQUAD COMMANDOS ARE DEADLY, RELENTLESS, ANTISOCIAL AND AGGRESSIVE---THEY'RE LIKE MY OWN BOYS.\"",
       "jp": "\"デルタ小隊の容赦のない、そして危険な香りは、\n私の少年時代を思い出させる。\"",
       "de": "",
-      "zh_CN": "“新一批的德尔塔突击小队成员集致命、无情、孤僻、凶狠于一体，他们就像是我自己的孩子。”",
+      "zh_CN": "“新一批的德尔塔突击小队成员集致命、无情、孤僻、凶狠于一体——他们就像是我自己的孩子。”",
       "use_PS4_translation": true
     },
     "49": {
@@ -16255,7 +16255,7 @@
       "en": "Fire in the Hole!",
       "jp": "注意しろ!",
       "de": "",
-      "zh_CN": "小心手雷！"
+      "zh_CN": "注意爆炸！"
     },
     "5": {
       "note": "FFireString[5]",
@@ -17510,7 +17510,7 @@
       "en": "DAY 367 – CLONE WARS - CHAYKIN CLUSTER",
       "jp": "クローン戦争367日目 - チェイキン・クラスター",
       "de": "TAG 367 – KLONKRIEGE - CHAYKIN-NEBEL",
-      "zh_CN": "第367天，克隆人战争，柴金星系",
+      "zh_CN": "第367天 · 克隆人战争 · 柴金星系",
       "use_PS4_translation": true
     }
   },
@@ -20125,7 +20125,7 @@
       "en": "Delta 07: Fire in the hole!",
       "jp": "Delta 07: 穴を狙え!",
       "de": "Delta 07: Achtung, Granate!",
-      "zh_CN": "德尔塔07：小心手雷！",
+      "zh_CN": "德尔塔07：注意爆炸！",
       "use_PS4_translation": true
     },
     "213": {
@@ -21509,7 +21509,7 @@
       "en": "Delta 07: Door is unlocked",
       "jp": "Delta 07: ドアが開いたぞ。",
       "de": "Delta 07: Tür ist offen.",
-      "zh_CN": "德尔塔07：大门已锁",
+      "zh_CN": "德尔塔07：大门已解锁",
       "use_PS4_translation": true
     },
     "393": {
@@ -24837,7 +24837,7 @@
       "en": "Delta 07: Fire in the hole!",
       "jp": "Delta 07: 気をつけろ!",
       "de": "Delta 07: Achtung, Granate!",
-      "zh_CN": "德尔塔07：小心手雷！",
+      "zh_CN": "德尔塔07：注意爆炸！",
       "use_PS4_translation": true
     },
     "843": {
@@ -24845,7 +24845,7 @@
       "en": "Delta 07: Fire in the hole.",
       "jp": "Delta 07: 気をつけろ!",
       "de": "Delta 07: Achtung, Granate!",
-      "zh_CN": "德尔塔07：小心手雷。",
+      "zh_CN": "德尔塔07：注意爆炸。",
       "use_PS4_translation": true
     },
     "844": {
@@ -25805,7 +25805,7 @@
       "en": "Delta 38: Fire in the hole.",
       "jp": "Delta 38: 気をつけろ!",
       "de": "Delta 38: Achtung, Granate!",
-      "zh_CN": "德尔塔38：小心手雷。",
+      "zh_CN": "德尔塔38：注意爆炸。",
       "use_PS4_translation": true
     },
     "965": {
@@ -26741,7 +26741,7 @@
       "en": "Delta 38: Fire in the hole!",
       "jp": "Delta 38: 注意しろ!",
       "de": "Delta 38: Achtung, Granate!",
-      "zh_CN": "德尔塔38：小心手雷！",
+      "zh_CN": "德尔塔38：注意爆炸！",
       "use_PS4_translation": true
     },
     "1091": {
@@ -32621,7 +32621,7 @@
       "en": "Delta 40: Fire in the hole!",
       "jp": "Delta 40: 注意しろ。",
       "de": "Delta 40: Achtung, Granate!",
-      "zh_CN": "德尔塔40：小心手雷！",
+      "zh_CN": "德尔塔40：注意爆炸！",
       "use_PS4_translation": true
     },
     "1895": {
@@ -32629,7 +32629,7 @@
       "en": "Delta 40: Fire in the hole.",
       "jp": "Delta 40: 気をつけろ。",
       "de": "Delta 40: Achtung, Granate!",
-      "zh_CN": "德尔塔40：小心手雷。",
+      "zh_CN": "德尔塔40：注意爆炸。",
       "use_PS4_translation": true
     },
     "1896": {
@@ -33269,7 +33269,7 @@
       "en": "Delta 62: On my way, boss.",
       "jp": "Delta 62: 向かっている、ボス。",
       "de": "Delta 62: Bin unterwegs, Boss.",
-      "zh_CN": "德尔塔62：正在前往，老大。",
+      "zh_CN": "德尔塔62：正在赶来，老大。",
       "use_PS4_translation": true
     },
     "1978": {
@@ -33517,7 +33517,7 @@
       "en": "Delta 62: Fire in the hole!",
       "jp": "Delta 62: 穴を狙え!",
       "de": "Delta 62: Achtung, Granate!",
-      "zh_CN": "德尔塔62：小心手雷！",
+      "zh_CN": "德尔塔62：注意爆炸！",
       "use_PS4_translation": true
     },
     "2011": {
@@ -35085,7 +35085,7 @@
       "en": "Delta 62: Door is unlocked",
       "jp": "Delta 62: ドアが開いたぞ。",
       "de": "Delta 62: Tür ist offen.",
-      "zh_CN": "德尔塔62：大门已锁",
+      "zh_CN": "德尔塔62：大门已解锁",
       "use_PS4_translation": true
     },
     "2211": {
@@ -38413,7 +38413,7 @@
       "en": "Delta 62: Fire in the hole!",
       "jp": "Delta 62: 気をつけろ。",
       "de": "Delta 62: Achtung, Granate!",
-      "zh_CN": "德尔塔62：小心手雷！",
+      "zh_CN": "德尔塔62：注意爆炸！",
       "use_PS4_translation": true
     },
     "2652": {
@@ -40866,7 +40866,7 @@
       "en": "Delta 07: Fire in the Hole!",
       "jp": "Delta 07: 気をつけろ!",
       "de": "",
-      "zh_CN": "德尔塔07：小心手雷！"
+      "zh_CN": "德尔塔07：注意爆炸！"
     },
     "2978": {
       "note": "SubtitleText[2978]",
@@ -40957,7 +40957,7 @@
       "en": "Delta 07: Fire in the Hole!",
       "jp": "Delta 07: 注意しろ!",
       "de": "",
-      "zh_CN": "德尔塔07：小心手雷！"
+      "zh_CN": "德尔塔07：注意爆炸！"
     },
     "3001": {
       "note": "SubtitleText[3001]",
@@ -41104,7 +41104,7 @@
       "en": "Delta 38: Fire in the Hole!",
       "jp": "Delta 38: 注意しろ。",
       "de": "",
-      "zh_CN": "德尔塔38：小心手雷！"
+      "zh_CN": "德尔塔38：注意爆炸！"
     },
     "3033": {
       "note": "SubtitleText[3033]",
@@ -41202,7 +41202,7 @@
       "en": "Delta 38: Fire in the Hole!",
       "jp": "Delta 38: 気をつけろ。",
       "de": "",
-      "zh_CN": "德尔塔38：小心手雷！"
+      "zh_CN": "德尔塔38：注意爆炸！"
     },
     "3056": {
       "note": "SubtitleText[3056]",
@@ -41349,7 +41349,7 @@
       "en": "Delta 40: Fire in the Hole!",
       "jp": "Delta 40: 注意しろ!",
       "de": "",
-      "zh_CN": "德尔塔40：小心手雷！"
+      "zh_CN": "德尔塔40：注意爆炸！"
     },
     "3088": {
       "note": "SubtitleText[3088]",
@@ -41447,7 +41447,7 @@
       "en": "Delta 40: Fire in the Hole!",
       "jp": "Delta 40: 気をつけろ。",
       "de": "",
-      "zh_CN": "德尔塔40：小心手雷！"
+      "zh_CN": "德尔塔40：注意爆炸！"
     },
     "3111": {
       "note": "SubtitleText[3111]",
@@ -41636,7 +41636,7 @@
       "en": "Delta 62: Fire in the Hole!",
       "jp": "Delta 62: 注意しろ。",
       "de": "",
-      "zh_CN": "德尔塔62：小心手雷！"
+      "zh_CN": "德尔塔62：注意爆炸！"
     },
     "3138": {
       "note": "SubtitleText[3138]",
@@ -44432,7 +44432,7 @@
       "en": "Trooper: Sir! You're heading into enemy territory.  It’s thick with droids and bugs.",
       "jp": "Trooper: 敵の領域に向かっています。 ドロイドと虫がうようよしています。",
       "de": "Truppe: Sir! Sie begeben sich in feindliches Gebiet. Da wimmelt es von Droiden und Bugs.",
-      "zh_CN": "士兵：长官！你正在前往敌人领地，那里到处是机器人和虫子。",
+      "zh_CN": "士兵：长官！你正在前往敌占区，那里到处是机器人和虫子。",
       "use_PS4_translation": true
     },
     "3097": {
@@ -65157,7 +65157,7 @@
       "en": "Fire in the hole!",
       "jp": "穴を狙え！",
       "de": "",
-      "zh_CN": "小心手雷！"
+      "zh_CN": "注意爆炸！"
     },
     "3": {
       "note": "FFireString[3]",
@@ -67907,7 +67907,7 @@
       "en": "VIEW CREDITS",
       "jp": "CREDITを見る",
       "de": "CREDITS ANSEHEN",
-      "zh_CN": "查看Credits · SharrrkCat汉化 v1.0",
+      "zh_CN": "查看Credits",
       "use_PS4_translation": true
     }
   },
@@ -72280,7 +72280,7 @@
       "en": "DAY 785 - CLONE WARS - KASHYYYK",
       "jp": "クローン戦争785日目 - キャッシーク",
       "de": "TAG 785 - KLONKRIEGE - KASHYYYK",
-      "zh_CN": "第785天，克隆人战争，卡希克",
+      "zh_CN": "第785天 · 克隆人战争 · 卡希克",
       "use_PS4_translation": true
     }
   },
@@ -73015,7 +73015,7 @@
       "en": "LucasArts, the LucasArts logo, STAR WARS, and related properties are trademarks in the United States and/or in other countries of Lucasfilm Ltd. and/or its affiliates.  STAR WARS Republic Commando is a trademark of Lucasfilm Entertainment Company Ltd. and/or its affiliates.  © 2005 Lucasfilm Entertainment Company Ltd. or Lucasfilm Ltd.  All rights reserved.",
       "jp": "",
       "de": "LucasArts, das LucasArts-Logo, STAR WARS und alle zugehörigen Marken sind Warenzeichen von Lucasfilm Ltd. und/oder den zugehörigen Unternehmen in den USA und/oder anderen Ländern. STAR WARS Republic Commando ist ein Warenzeichen von Lucasfilm Entertainment Company Ltd. und/oder den zugehörigen Unternehmen. © 2005, 2021 Lucasfilm Entertainment Company Ltd. oder Lucasfilm Ltd. Alle Rechte vorbehalten.",
-      "zh_CN": "LucasArts、LucasArts徽标、STAR WARS及相关财产是Lucasfilm Ltd.和/或其关联机构在美国和/或其他国家/地区的商标。STAR WARS Republic Commando是Lucasfilm Entertainment Company Ltd.和/或其关联机构的商标。(C) 2005 Lucasfilm Entertainment Company Ltd.或Lucasfilm Ltd.版权所有。"
+      "zh_CN": "LucasArts、LucasArts徽标、STAR WARS及相关财产是Lucasfilm Ltd.和/或其关联机构在美国和/或其他国家/地区的商标。STAR WARS Republic Commando是Lucasfilm Entertainment Company Ltd.和/或其关联机构的商标。(C) 2005 Lucasfilm Entertainment Company Ltd.或Lucasfilm Ltd.版权所有。\n 汉化 https://github.com/sharrrkcat/SWRC-ChinesePack 版本 v1.0"
     }
   },
   "XinterfaceCtmenus.CTStartPSMenu": {
