@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """SWRC (Star Wars Republic Commando) Unreal 包解析器
-包版本 159 / licensee 1 专用。格式细节见 ../README-汉化技术文档.md §4。
+包版本 159 / licensee 1 专用。格式细节见 ../docs/技术说明.md §4。
 
 用法:
     py -X utf8 swrc_package.py <package>              # 概览: 头/名称/导入/导出表

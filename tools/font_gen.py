@@ -6,7 +6,7 @@
      → 写 .utx (5 字号 UFont + 贴图页, CharRemap 键=GBK 双字节码, IsRemapped=1)
 可选: --latin-source 从英文版 orbitfonts.utx 复用 0x20-0x7E ASCII glyph。
 
-格式依据: docs/README-汉化技术文档.md §4 (导出表 RC 布局 / UFont / 贴图对象 DXT5)。
+格式依据: docs/技术说明.md §4 (导出表 RC 布局 / UFont / 贴图对象 DXT5)。
 字号→行高映射取自官方日文版实测 (局内验证过的度量)。
 
 用法:
