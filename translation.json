@@ -132,7 +132,7 @@
       "en": "EC Detonators",
       "jp": "ECデトネーター",
       "de": "",
-      "zh_CN": "EC雷管"
+      "zh_CN": "静电荷榴弹"
     },
     "100026": {
       "note": "Title / 4 occurrences",
@@ -167,7 +167,7 @@
       "en": "Thermal Detonators",
       "jp": "サーマル・デトネーター",
       "de": "",
-      "zh_CN": "热能雷管"
+      "zh_CN": "热能榴弹"
     },
     "100031": {
       "note": "PickupMessage / 16 occurrences",
@@ -237,7 +237,7 @@
       "en": "Sonic Detonators",
       "jp": "ソニック・デトネーター",
       "de": "",
-      "zh_CN": "声波雷管"
+      "zh_CN": "声波榴弹"
     },
     "100041": {
       "note": "Title / 4 occurrences",
@@ -379,7 +379,7 @@
       "en": "EMP Grenades",
       "jp": "ECデトネーター",
       "de": "EL-Detonatoren",
-      "zh_CN": "EMP手榴弹",
+      "zh_CN": "电磁脉冲榴弹",
       "use_PS4_translation": true
     },
     "100709": {
@@ -395,7 +395,7 @@
       "en": "Flashbang Detonators",
       "jp": "フラッシュ・デトネーター",
       "de": "Blendgranaten",
-      "zh_CN": "闪光弹雷管",
+      "zh_CN": "闪光手雷",
       "use_PS4_translation": true
     },
     "100711": {
@@ -419,7 +419,7 @@
       "en": "Sonic Detonators",
       "jp": "ソニック・デトネーター",
       "de": "Sonardetonatoren",
-      "zh_CN": "声波雷管",
+      "zh_CN": "声波榴弹",
       "use_PS4_translation": true
     },
     "100714": {
@@ -427,7 +427,7 @@
       "en": "Thermal Detonators",
       "jp": "サーマル・デトネーター",
       "de": "Thermaldetonatoren",
-      "zh_CN": "热能雷管",
+      "zh_CN": "热能榴弹",
       "use_PS4_translation": true
     },
     "100070": {
@@ -2136,7 +2136,7 @@
       "en": "Delta 07: Grenade!",
       "jp": "Delta 07: グレネード!",
       "de": "Delta 07: Granate!",
-      "zh_CN": "德尔塔07：手榴弹！",
+      "zh_CN": "德尔塔07：手雷！",
       "use_PS4_translation": true
     },
     "100820": {
@@ -2408,7 +2408,7 @@
       "en": "Delta 40: Grenade!",
       "jp": "Delta 40: グレネード!",
       "de": "Delta 40: Granate!",
-      "zh_CN": "德尔塔40：手榴弹！",
+      "zh_CN": "德尔塔40：手雷！",
       "use_PS4_translation": true
     },
     "100854": {
@@ -2576,7 +2576,7 @@
       "en": "Delta 62: Placing detonator.",
       "jp": "Delta 62: デトネーターを設置。",
       "de": "Delta 62: Platziere Detonator.",
-      "zh_CN": "德尔塔62：正在布置雷管。",
+      "zh_CN": "德尔塔62：正在布雷。",
       "use_PS4_translation": true
     },
     "100875": {
@@ -7560,7 +7560,7 @@
       "en": "EMP Grenade",
       "jp": "ECデトネーター",
       "de": "EL-Detonator",
-      "zh_CN": "EMP手榴弹",
+      "zh_CN": "电磁脉冲榴弹",
       "use_PS4_translation": true
     }
   },
@@ -7618,7 +7618,7 @@
       "en": "FlashBang",
       "jp": "フラッシュデトネーター",
       "de": "Flash-Detonator",
-      "zh_CN": "闪光弹",
+      "zh_CN": "闪光手雷",
       "use_PS4_translation": true
     }
   },
@@ -7748,7 +7748,7 @@
       "en": "FlashBang",
       "jp": "閃光弾",
       "de": "Flash-Bang",
-      "zh_CN": "闪光弹",
+      "zh_CN": "闪光手雷",
       "use_PS4_translation": true
     }
   },
@@ -7994,7 +7994,7 @@
       "en": "SonicDetonator",
       "jp": "ソニック・デトネーター",
       "de": "Sonardetonator",
-      "zh_CN": "声波雷管",
+      "zh_CN": "声波榴弹",
       "use_PS4_translation": true
     }
   },
@@ -8024,7 +8024,7 @@
       "en": "StickyGrenade",
       "jp": "スティッキー・グレネード",
       "de": "Haftgranate",
-      "zh_CN": "粘性炸弹",
+      "zh_CN": "粘性手雷",
       "use_PS4_translation": true
     }
   },
@@ -8034,7 +8034,7 @@
       "en": "Thermal Detonator",
       "jp": "サーマル・デトネーター",
       "de": "Thermaldetonator",
-      "zh_CN": "热能雷管",
+      "zh_CN": "热能榴弹",
       "use_PS4_translation": true
     }
   },
@@ -12588,7 +12588,7 @@
       "en": "Your grenade type and inventory is displayed in the lower right corner of your HUD.  After acquiring different types of grenades, this display will show the type currently selected grenade.",
       "jp": "HUDの右下にはグレネードの種類とその残弾を表示します。 異なる種類のグレネードを手に入れた場合には、現在構えているグレネードの種類とその弾数が表示されます。",
       "de": "Der Typ Ihrer Granaten und das Inventar werden unten rechts im HUD angezeigt. Haben Sie verschiedene Granatentypen aufgenommen, wird der aktuell ausgewählte Typ dargestellt.",
-      "zh_CN": "你的手榴弹类型和物品栏显示在HUD的右下角。获得不同类型的手榴弹后，则会显示当前选中的手榴弹类型。",
+      "zh_CN": "你的手雷类型和物品栏显示在HUD的右下角。获得不同类型的手雷后，则会显示当前选中的手雷类型。",
       "use_PS4_translation": true
     }
   },
@@ -12658,7 +12658,7 @@
       "en": "Use @ to throw grenades",
       "jp": "@を押す:グレネードを投げる",
       "de": "MIT @ KÖNNEN SIE GRANATEN WERFEN.",
-      "zh_CN": "使用 @ 可投掷手榴弹",
+      "zh_CN": "使用 @ 可投掷手雷",
       "use_PS4_translation": true
     }
   },
@@ -12678,7 +12678,7 @@
       "en": "Throw Grenades to destroy target",
       "jp": "グレネードを投げて目標を爆破する",
       "de": "WERFEN SIE GRANATEN, UM DAS ZIEL ZU ZERSTÖREN.",
-      "zh_CN": "投手榴弹摧毁目标",
+      "zh_CN": "投手雷摧毁目标",
       "use_PS4_translation": true
     }
   },
@@ -12754,7 +12754,7 @@
       "en": "Pick up grenades",
       "jp": "グレネードを入手せよ",
       "de": "NEHMEN SIE GRANATEN AUF",
-      "zh_CN": "拾取手榴弹",
+      "zh_CN": "拾取手雷",
       "use_PS4_translation": true
     },
     "11": {
@@ -12762,7 +12762,7 @@
       "en": "Destroy gun position with grenades",
       "jp": "グレネードで砲座を破壊せよ",
       "de": "ZERSTÖREN SIE DIE GESCHÜTZSTELLUNG MIT GRANATEN",
-      "zh_CN": "用手榴弹摧毁炮位",
+      "zh_CN": "用手雷摧毁炮位",
       "use_PS4_translation": true
     },
     "12": {
@@ -13670,7 +13670,7 @@
       "en": "FLASH-BANG DETONATORS ARE A GREAT WAY TO SOFTEN UP A ROOM BEFORE YOU GO IN.  HANDY LITTLE ITEMS.  JUST DON'T LOOK DIRECTLY AT THE EXPLOSION.",
       "jp": "フラッシュ・デトネーターは敵に触れた瞬間に\n爆発する優れたデトネーターです。\n我々の侵入作戦を大いに助けてくれる重要な武器です。",
       "de": "BLENDGRANATEN SIND GROSSARTIG, UM EINEN RAUM AUFZUMISCHEN, BEVOR SIE REINGEHEN. NETTE KLEINE DINGER. ABER GUCKEN SIE NICHT DIREKT IN DIE EXPLOSION.",
-      "zh_CN": "闪光弹雷管是进入房间之前，削弱室内防御的好办法。用起来很方便的小东西。小心不要直接盯着爆炸看。",
+      "zh_CN": "闪光手雷是进入房间之前，削弱室内防御的好办法。用起来很方便的小东西。小心不要直接盯着爆炸看。",
       "use_PS4_translation": true
     },
     "8": {
@@ -13702,7 +13702,7 @@
       "en": "JUST A FRIENDLY REMINDER, BOSS:  CHOOSE THE BEST TYPE OF GRENADE FOR THE JOB.  THERMALS AGAINST ORGANICS, ECDS AGAINST DROIDS.  YOU GET THE PICTURE.",
       "jp": "デトネーターには得手不得手があります。\n適したデトネーターを選択する事が最も効率よく\n生き延びる手段です。\nアンドロイドに対するECデトネーター。\n最高の組み合わせです。",
       "de": "NUR MAL SO ALS HINWEIS, BOSS: SUCHEN SIE FÜR DEN JOB DIE BESTE GRANATE AUS. THERMAL GEGEN ORGANISCHES, ESD GEGEN DROIDEN. SIE VERSTEHEN.",
-      "zh_CN": "BOSS，只是友情提醒一下：记得选择最适合任务的手榴弹类型。热能榴弹适合对付有机体，ECD适合对付机器人。你明白了吧。",
+      "zh_CN": "BOSS，只是友情提醒一下：记得选择最适合任务的手雷类型。热能榴弹适合对付有机体，静电荷榴弹适合对付机器人。你明白了吧。",
       "use_PS4_translation": true
     },
     "12": {
@@ -13750,7 +13750,7 @@
       "en": "DROIDEKAS.  MAN, I HATE THOSE GUYS.  LUCKY FOR US, THE ECD DETONATORS EAT RIGHT THROUGH THEIR SHIELDS.",
       "jp": "ドロイデカ、あまり好きな相手ではないな。\nECデトネーターでシールドを無力なモノにして\nさっさと片づけてしまうのが良いでしょう。",
       "de": "DROIDEKAS. MANN, ICH HASSE DIESE TYPEN. ZU UNSEREM GLÜCK DURCHDRINGEN DIE EL-DETONATOREN GLATT IHRE SCHUTZSCHILDE.",
-      "zh_CN": "是毁灭者机器人。老天，我讨厌这些傢伙。不过幸运的是，ECD雷管能破除它们的防护罩。",
+      "zh_CN": "是毁灭者机器人。老天，我讨厌这些家伙。不过幸运的是，静电荷榴弹能破除它们的防护罩。",
       "use_PS4_translation": true
     },
     "18": {
@@ -13846,7 +13846,7 @@
       "en": "I'M FOR UTILIZING ORDNANCE-OVERKILL, BUT IF YOU SEE AN EXPLOSIVE BARREL, SAVE YOUR GRENADES AND USE YOUR RIFLE TO MAKE IT GO BOOM.",
       "jp": "爆発物を見つけたら狙撃して誘爆させましょう。\nデトネーターは限りがあるんで有効に使わないと。\nOKですか?ボス。",
       "de": "ICH BEFÜRWORTE DEN EINSATZ ÜBERTRIEBENER FEUERKRAFT, ABER WENN SIE EIN HOCHENTZÜNDLICHES FASS SEHEN, SPAREN SIE SICH DIE GRANATEN UND BENUTZEN SIE IHR GEWEHR, DAMIT ES BUMM MACHT.",
-      "zh_CN": "我赞成多加利用军械的过量杀伤力，但如果你看到了炸药桶，就省着点手榴弹，用步枪打爆它就行。",
+      "zh_CN": "我赞成多加利用军械的过量杀伤力，但如果你看到了炸药桶，就省着点手雷，用步枪打爆它就行。",
       "use_PS4_translation": true
     },
     "30": {
@@ -13854,7 +13854,7 @@
       "en": "BOSS, THE LATEST INTEL SAYS THE NEW SONIC DETONATORS STICK TO WALLS AND ARE DETONATED BY PROXIMITY.  SET THE HOSTILES UP FOR A NASTY SURPRISE.",
       "jp": "ソニック・デトネーターは使いようによっては\nもの凄い便利な武器なんですよ。\nたとえ敵に当たらなくても敵が近づくと爆発する\n優れものなんですよ。知ってました?",
       "de": "DENKEN SIE DARAN, WAS SERGEANT VAU IMMER GESAGT HAT: ESSEN SIE IHRE GEMÜSEKAPSELN.",
-      "zh_CN": "BOSS，最新情报显示，新款声波雷管可以粘在墙上，目标一接近就会引爆。去给敌人准备一个讨厌的惊喜吧。",
+      "zh_CN": "BOSS，最新情报显示，新款声波榴弹可以粘在墙上，目标一接近就会引爆。去给敌人准备一个讨厌的惊喜吧。",
       "use_PS4_translation": true
     },
     "31": {
@@ -16761,7 +16761,7 @@
       "en": "%k rocked %o with a Sonic Detonator.",
       "jp": "%k が %o をソニック・デトネーターで眠らせた。",
       "de": "%k hat %o mit einem Sonardetonator umgepustet.",
-      "zh_CN": "%k用声波雷管震倒了%o。"
+      "zh_CN": "%k用声波榴弹震倒了%o。"
     }
   },
   "properties.CTDamageExplosionThermalDet": {
@@ -16770,7 +16770,7 @@
       "en": "%k blew up %o with a Thermal Detonator.",
       "jp": "%k がサーマル・デトネーターで %o をぶっ飛ばした。",
       "de": "%k hat %o mit einem Thermaldetonator hochgejagt.",
-      "zh_CN": "%k用热能雷管炸飞了%o。"
+      "zh_CN": "%k用热能榴弹炸飞了%o。"
     }
   },
   "properties.CTDamageMeleeWookieePaws": {
@@ -16841,7 +16841,7 @@
       "en": "EMP Grenade",
       "jp": "EMPグレネード",
       "de": "EL-Detonator",
-      "zh_CN": "EMP手榴弹"
+      "zh_CN": "电磁脉冲榴弹"
     },
     "2": {
       "note": "MessageNoAmmo",
@@ -17136,7 +17136,7 @@
       "en": "Flashbang Detonators",
       "jp": "フラッシュデ・トネーター",
       "de": "Blendgranaten",
-      "zh_CN": "闪光弹雷管"
+      "zh_CN": "闪光手雷"
     }
   },
   "RAS_02D.MissionObjectives2": {
@@ -18821,7 +18821,7 @@
       "en": "Battle Droid 1: Grenade inbound: activating defensive algorithms",
       "jp": "Battle Droid 1: グレネード被弾、防御アルゴリズム作動。",
       "de": "Kampfdroide 1: Granate nähert sich: Aktiviere Defensivalgorithmen.",
-      "zh_CN": "战斗机器人1：手榴弹正接近：激活防御算法",
+      "zh_CN": "战斗机器人1：手雷正接近：激活防御算法",
       "use_PS4_translation": true
     },
     "37": {
@@ -18829,7 +18829,7 @@
       "en": "Battle Droid 1: Grenade proximity alert.",
       "jp": "Battle Droid 1: グレネードに注意。",
       "de": "Kampfdroide 1: Alarm: Granate nähert sich.",
-      "zh_CN": "战斗机器人1：手榴弹靠近警报。",
+      "zh_CN": "战斗机器人1：手雷靠近警报。",
       "use_PS4_translation": true
     },
     "38": {
@@ -18853,7 +18853,7 @@
       "en": "Battle Droid 1: Visual scan confirmation: grenade.",
       "jp": "Battle Droid 1: スキャン確認、グレネード。",
       "de": "Kampfdroide 1: Optischer Scan bestätigt: Granate.",
-      "zh_CN": "战斗机器人1：视觉扫描确认：手榴弹。",
+      "zh_CN": "战斗机器人1：视觉扫描确认：手雷。",
       "use_PS4_translation": true
     },
     "41": {
@@ -20149,7 +20149,7 @@
       "en": "Delta 07: Detonator set.",
       "jp": "Delta 07: デトネーター設置。",
       "de": "Delta 07: Detonator ist scharf.",
-      "zh_CN": "德尔塔07：雷管已安好。",
+      "zh_CN": "德尔塔07：雷已布好。",
       "use_PS4_translation": true
     },
     "216": {
@@ -20157,7 +20157,7 @@
       "en": "Delta 07: Detonator placed.",
       "jp": "Delta 07: デトネーターを設置した。",
       "de": "Delta 07: Detonator platziert!",
-      "zh_CN": "德尔塔07：雷管已布妥。",
+      "zh_CN": "德尔塔07：布雷完毕。",
       "use_PS4_translation": true
     },
     "217": {
@@ -20757,7 +20757,7 @@
       "en": "Delta 07: I think it was a grenade!",
       "jp": "Delta 07: グレネードだな!",
       "de": "Delta 07: Das war wohl eine Granate!",
-      "zh_CN": "德尔塔07：我觉得那是颗手榴弹！",
+      "zh_CN": "德尔塔07：我觉得那是颗手雷！",
       "use_PS4_translation": true
     },
     "297": {
@@ -20765,7 +20765,7 @@
       "en": "Delta 07: Watch the thermals!",
       "jp": "Delta 07: サーマルを見ろ!",
       "de": "Delta 07: Achtung! Thermaldetonatoren!",
-      "zh_CN": "德尔塔07：小心炸弹！",
+      "zh_CN": "德尔塔07：小心热能榴弹！",
       "use_PS4_translation": true
     },
     "298": {
@@ -20797,7 +20797,7 @@
       "en": "Delta 07: Dodge those grenades!",
       "jp": "Delta 07: グレネードをかわせ!",
       "de": "Delta 07: Weicht den Granaten aus!",
-      "zh_CN": "德尔塔07：躲开那些手榴弹！",
+      "zh_CN": "德尔塔07：躲开那些手雷！",
       "use_PS4_translation": true
     },
     "302": {
@@ -20805,7 +20805,7 @@
       "en": "Delta 07: Watch those dets!",
       "jp": "Delta 07: デトネーターに注意!",
       "de": "Delta 07: Vorsicht! Detonatoren!",
-      "zh_CN": "德尔塔07：小心手榴弹！",
+      "zh_CN": "德尔塔07：小心榴弹！",
       "use_PS4_translation": true
     },
     "303": {
@@ -23453,7 +23453,7 @@
       "en": "Delta 07: Setting detonator.",
       "jp": "Delta 07: デトネーター設置。",
       "de": "Delta 07: Aktiviere Detonator.",
-      "zh_CN": "德尔塔07：正在埋设雷管。",
+      "zh_CN": "德尔塔07：正在布雷。",
       "use_PS4_translation": true
     },
     "651": {
@@ -25101,7 +25101,7 @@
       "en": "Delta 38: Good, a sonic detonator!  Can't wait to use this in the field!",
       "jp": "Delta 38: ソニック・デトネーターだ! 実戦で使ってみたいぜ!",
       "de": "Delta 38: Ah, ein Sonardetonator! Ich kann's kaum erwarten, ihn auszuprobieren!",
-      "zh_CN": "德尔塔38：很好，是声波雷管！都等不及上战场用一用了！",
+      "zh_CN": "德尔塔38：很好，是声波榴弹！都等不及上战场用一用了！",
       "use_PS4_translation": true
     },
     "877": {
@@ -25109,7 +25109,7 @@
       "en": "Delta 38: Yeah, sonic detonator!  These little bugs are sticky, and they've got a nasty proximity detector.  A nice present to leave for a hostile.",
       "jp": "Delta 38: ああ、ソニック・デトネーターだ! こいつらへばりつくから、検出装置を設けたのさ。敵にはいい贈り物だろう。",
       "de": "Delta 38: Haha, ein Sonardetonator! Diese kleinen Dinger kleben überall. Und der Bewegungssensor ist erstklassig. Ein prima Geschenk für Feinde.",
-      "zh_CN": "德尔塔38：好耶，是声波雷管！这些小虫子粘得很，而且带有难对付的感应探测器，是留给敌人的好礼物。",
+      "zh_CN": "德尔塔38：好耶，是声波榴弹！这些小虫子粘得很，而且带有难对付的感应探测器，是留给敌人的好礼物。",
       "use_PS4_translation": true
     },
     "878": {
@@ -25645,7 +25645,7 @@
       "en": "Delta 38: Flashbang in the breach!  Watch it!",
       "jp": "Delta 38: 突入時の閃光弾だ! 気をつけろ!",
       "de": "Delta 38: Blendgranate! Vorsicht!",
-      "zh_CN": "德尔塔38：用闪光弹突破！当心！",
+      "zh_CN": "德尔塔38：用闪光手雷突破！当心！",
       "use_PS4_translation": true
     },
     "945": {
@@ -25653,7 +25653,7 @@
       "en": "Delta 38: Flashbang!  !  Flashbang!  ",
       "jp": "Delta 38: 閃光弾! ! 閃光弾だ! ",
       "de": "Delta 38: Blendgranate! Blendgranate!",
-      "zh_CN": "德尔塔38：闪光弹！！闪光弹！  ",
+      "zh_CN": "德尔塔38：闪光手雷！！闪光手雷！  ",
       "use_PS4_translation": true
     },
     "946": {
@@ -25661,7 +25661,7 @@
       "en": "Delta 38: Deltas, set for door breach with flash detonators!",
       "jp": "Delta 38: デルタ、フラッシュ・デトネーターで突入準備!",
       "de": "Delta 38: Deltas, Blendgranaten bereit halten. Durch die Tür!",
-      "zh_CN": "德尔塔38：德尔塔们，用闪光雷管破门！",
+      "zh_CN": "德尔塔38：德尔塔们，用闪光手雷破门！",
       "use_PS4_translation": true
     },
     "947": {
@@ -25669,7 +25669,7 @@
       "en": "Delta 38: Deltas, put a flash detonator in there!",
       "jp": "Delta 38: フラッシュ・デトネーターをしかけろ!",
       "de": "Delta 38: Los, werfen Sie 'ne Blendgranate da rein!",
-      "zh_CN": "德尔塔38：德尔塔们，在那里布置闪光雷管！",
+      "zh_CN": "德尔塔38：德尔塔们，在那里布置闪光手雷！",
       "use_PS4_translation": true
     },
     "948": {
@@ -25965,7 +25965,7 @@
       "en": "Delta 38: Delta squad, watch for grenades!",
       "jp": "Delta 38: グレネードに気をつけろ!",
       "de": "Delta 38: Delta-Team, Vorsicht vor den Granaten!",
-      "zh_CN": "德尔塔38：德尔塔小队，小心手榴弹！",
+      "zh_CN": "德尔塔38：德尔塔小队，小心手雷！",
       "use_PS4_translation": true
     },
     "988": {
@@ -26693,7 +26693,7 @@
       "en": "Delta 38: Grenade live!",
       "jp": "Delta 38: グレネードだ!",
       "de": "Delta 38: Granate ist scharf!",
-      "zh_CN": "德尔塔38：手榴弹来了！",
+      "zh_CN": "德尔塔38：手雷来了！",
       "use_PS4_translation": true
     },
     "1084": {
@@ -26709,7 +26709,7 @@
       "en": "Delta 38: Detonator!",
       "jp": "Delta 38: デトネーターだ!",
       "de": "Delta 38: Detonator!",
-      "zh_CN": "德尔塔38：雷管！",
+      "zh_CN": "德尔塔38：榴弹！",
       "use_PS4_translation": true
     },
     "1086": {
@@ -26733,7 +26733,7 @@
       "en": "Delta 38: Grenade!",
       "jp": "Delta 38: グレネード!",
       "de": "Delta 38: Granate!",
-      "zh_CN": "德尔塔38：手榴弹！",
+      "zh_CN": "德尔塔38：手雷！",
       "use_PS4_translation": true
     },
     "1089": {
@@ -27789,7 +27789,7 @@
       "en": "Delta 40: Setting detonator",
       "jp": "Delta 40: デトネーターを設置。",
       "de": "Delta 40: Aktiviere Detonator.",
-      "zh_CN": "德尔塔40：正在埋设雷管",
+      "zh_CN": "德尔塔40：正在布雷",
       "use_PS4_translation": true
     },
     "1240": {
@@ -28421,7 +28421,7 @@
       "en": "Delta 40: Enemy grenades!",
       "jp": "Delta 40: 敵のグレネードだ!",
       "de": "Delta 40: Feindliche Granaten!",
-      "zh_CN": "德尔塔40：敌人投了手榴弹！",
+      "zh_CN": "德尔塔40：敌人投了手雷！",
       "use_PS4_translation": true
     },
     "1326": {
@@ -28437,7 +28437,7 @@
       "en": "Delta 40: They've got grenades.",
       "jp": "Delta 40: グレネードが来るぞ。",
       "de": "Delta 40: Sie haben Granaten.",
-      "zh_CN": "德尔塔40：他们有手榴弹。",
+      "zh_CN": "德尔塔40：他们有手雷。",
       "use_PS4_translation": true
     },
     "1328": {
@@ -29189,7 +29189,7 @@
       "en": "Delta 40: Confirmed grenade kill, Delta lead.",
       "jp": "Delta 40: グレネード、リーダー効果あり。",
       "de": "Delta 40: Tod durch Granate, Delta-Leader.",
-      "zh_CN": "德尔塔40：已确认手榴弹击杀，德尔塔队长。",
+      "zh_CN": "德尔塔40：已确认手雷击杀，德尔塔队长。",
       "use_PS4_translation": true
     },
     "1427": {
@@ -31045,7 +31045,7 @@
       "en": "Delta 40: Incoming detonator.",
       "jp": "Delta 40: デトネーターだ。",
       "de": "Delta 40: Deckung! Granate!",
-      "zh_CN": "德尔塔40：有雷管。",
+      "zh_CN": "德尔塔40：榴弹来袭。",
       "use_PS4_translation": true
     },
     "1678": {
@@ -31069,7 +31069,7 @@
       "en": "Delta 40: Watch that detonator!",
       "jp": "Delta 40: デトネーターに気をつけろ!",
       "de": "Delta 40: Vorsicht! Detonator!",
-      "zh_CN": "德尔塔40：注意那雷管！",
+      "zh_CN": "德尔塔40：注意那颗榴弹！",
       "use_PS4_translation": true
     },
     "1682": {
@@ -31085,7 +31085,7 @@
       "en": "Delta 40: Detonator incoming!",
       "jp": "Delta 40: デトネーターが来るぞ!",
       "de": "Delta 40: Achtung! Detonator!",
-      "zh_CN": "德尔塔40：雷管来了！",
+      "zh_CN": "德尔塔40：榴弹来了！",
       "use_PS4_translation": true
     },
     "1686": {
@@ -31125,7 +31125,7 @@
       "en": "Delta 40: Putting detonator in place.",
       "jp": "Delta 40: デトネーターを設置。",
       "de": "Delta 40: Platziere Detonator.",
-      "zh_CN": "德尔塔40：正在将雷管布置就位。",
+      "zh_CN": "德尔塔40：正在把雷布设到位。",
       "use_PS4_translation": true
     },
     "1691": {
@@ -31845,7 +31845,7 @@
       "en": "Delta 40: ECDs will disrupt their neural networks!",
       "jp": "Delta 40: ECD用意!",
       "de": "Delta 40: ELDs entsichern!",
-      "zh_CN": "德尔塔40：ECD会破坏它们的神经网络！",
+      "zh_CN": "德尔塔40：静电荷榴弹会破坏它们的神经网络！",
       "use_PS4_translation": true
     },
     "1790": {
@@ -31853,7 +31853,7 @@
       "en": "Delta 40: ECDs will disrupt their neural networks!",
       "jp": "Delta 40: ECDで奴らの神経を混乱させる!",
       "de": "Delta 40: ELDs stören ihre Leitungsbahnen!",
-      "zh_CN": "德尔塔40：ECD会破坏它们的神经网络！",
+      "zh_CN": "德尔塔40：静电荷榴弹会破坏它们的神经网络！",
       "use_PS4_translation": true
     },
     "1791": {
@@ -32573,7 +32573,7 @@
       "en": "Delta 40: Thermal away!",
       "jp": "Delta 40: サーマルをそっちに!",
       "de": "Delta 40: Thermaldetonator!",
-      "zh_CN": "德尔塔40：榴弹走起！",
+      "zh_CN": "德尔塔40：热能榴弹走起！",
       "use_PS4_translation": true
     },
     "1888": {
@@ -32605,7 +32605,7 @@
       "en": "Delta 40: Detonator live!",
       "jp": "Delta 40: デトネーター、起動!",
       "de": "Delta 40: Detonator ist scharf!",
-      "zh_CN": "德尔塔40：雷管激活！",
+      "zh_CN": "德尔塔40：榴弹激活！",
       "use_PS4_translation": true
     },
     "1893": {
@@ -34277,7 +34277,7 @@
       "en": "Delta 62: They got grenades!",
       "jp": "Delta 62: グレネードが来るぞ!",
       "de": "Delta 62: Sie haben Granaten!",
-      "zh_CN": "德尔塔62：他们有手榴弹！",
+      "zh_CN": "德尔塔62：他们有手雷！",
       "use_PS4_translation": true
     },
     "2110": {
@@ -34293,7 +34293,7 @@
       "en": "Delta 62: Watch for grenades, commandos!",
       "jp": "Delta 62: グレネードに気をつけろ!",
       "de": "Delta 62: Auf Granaten achten, Kommandos!",
-      "zh_CN": "德尔塔62：注意手榴弹，突击队！",
+      "zh_CN": "德尔塔62：注意手雷，突击队！",
       "use_PS4_translation": true
     },
     "2112": {
@@ -34301,7 +34301,7 @@
       "en": "Delta 62: Detonators!",
       "jp": "Delta 62: デトネーターだ!",
       "de": "Delta 62: Detonatoren!",
-      "zh_CN": "德尔塔62：有雷管！",
+      "zh_CN": "德尔塔62：有榴弹！",
       "use_PS4_translation": true
     },
     "2113": {
@@ -34325,7 +34325,7 @@
       "en": "Delta 62: Maybe we should kill the guy with the greandes!",
       "jp": "Delta 62: グレネードでやるんだよなぁ!",
       "de": "Delta 62: Wir sollten den Kerl mit den Granaten neutralisieren!",
-      "zh_CN": "德尔塔62：也许我们应该用手榴弹杀死那家伙！",
+      "zh_CN": "德尔塔62：也许我们该干掉那个扔手雷的家伙！",
       "use_PS4_translation": true
     },
     "2116": {
@@ -34525,7 +34525,7 @@
       "en": "Delta 62: Why don't we have a remote mine detonator?",
       "jp": "Delta 62: 地雷の遠隔装置はないのか?",
       "de": "Delta 62: Warum haben wir keine ferngezündeten Detonatoren?",
-      "zh_CN": "德尔塔62：为什么我们没有遥控地雷呢？",
+      "zh_CN": "德尔塔62：为什么我们没有遥控地雷起爆器呢？",
       "use_PS4_translation": true
     },
     "2141": {
@@ -38893,7 +38893,7 @@
       "en": "Super Battle Droid: Visual scan confirmation: grenade.",
       "jp": "Super Battle Droid: ビジュアルスキャン確認、 グレネードだ。",
       "de": "Superkampfdroide: Optische Abtastung: Granate geortet.",
-      "zh_CN": "超级战斗机器人：视觉扫描确认：手榴弹。",
+      "zh_CN": "超级战斗机器人：视觉扫描确认：手雷。",
       "use_PS4_translation": true
     },
     "2713": {
@@ -38909,7 +38909,7 @@
       "en": "Super Battle Droid: Grenade!",
       "jp": "Super Battle Droid: グレネード!",
       "de": "Superkampfdroide: Granate!",
-      "zh_CN": "超级战斗机器人：有手榴弹！",
+      "zh_CN": "超级战斗机器人：有手雷！",
       "use_PS4_translation": true
     },
     "2715": {
@@ -39301,7 +39301,7 @@
       "en": "Trando Merc: T'doshok don't fear grenades.",
       "jp": "Trando Merc: トドーショクにグレネードはきかないぞ。",
       "de": "Trando-Söldner: T'doshok haben keine Angst vor Granaten.",
-      "zh_CN": "特兰多雇佣兵：特多肖克人不怕手榴弹。",
+      "zh_CN": "特兰多雇佣兵：特多肖克人不怕手雷。",
       "use_PS4_translation": true
     },
     "2764": {
@@ -39325,7 +39325,7 @@
       "en": "Trando Merc: Grenades are for the weak!",
       "jp": "Trando Merc: グレネードとは臆病者が!",
       "de": "Trando-Söldner: Nur Schwächlinge verwenden Granaten!",
-      "zh_CN": "特兰多雇佣兵：手榴弹是给懦夫用的！",
+      "zh_CN": "特兰多雇佣兵：手雷是给懦夫用的！",
       "use_PS4_translation": true
     },
     "2767": {
@@ -39333,7 +39333,7 @@
       "en": "Trando Merc: Foolish to use grenades against us!",
       "jp": "Trando Merc: グレネードとはな!",
       "de": "Trando-Söldner: Wie töricht, Granaten gegen uns einzusetzen!",
-      "zh_CN": "特兰多雇佣兵：蠢材才用手榴弹对付我们！",
+      "zh_CN": "特兰多雇佣兵：蠢材才用手雷对付我们！",
       "use_PS4_translation": true
     },
     "2768": {
@@ -39653,7 +39653,7 @@
       "en": "Trando Merc: Grenade incoming!",
       "jp": "Trando Merc: グレネード来るぞ!",
       "de": "Trando-Söldner: Granate!",
-      "zh_CN": "特兰多雇佣兵：手榴弹来袭！",
+      "zh_CN": "特兰多雇佣兵：手雷来袭！",
       "use_PS4_translation": true
     },
     "2810": {
@@ -40045,7 +40045,7 @@
       "en": "Trando Merc: A grenade for you!",
       "jp": "Trando Merc: グレネードだ!",
       "de": "Trando-Söldner: Könnt ihr eine Granate gebrauchen?",
-      "zh_CN": "特兰多雇佣兵：给你们来个手榴弹！",
+      "zh_CN": "特兰多雇佣兵：给你们来个手雷！",
       "use_PS4_translation": true
     },
     "2859": {
@@ -40365,7 +40365,7 @@
       "en": "Trando Slaver: Grenade!",
       "jp": "Trando Slaver: グレネード!",
       "de": "Trando-Sklavenhändler: Granate!",
-      "zh_CN": "特兰多奴隶贩子：手榴弹！",
+      "zh_CN": "特兰多奴隶贩子：手雷！",
       "use_PS4_translation": true
     },
     "2899": {
@@ -40405,7 +40405,7 @@
       "en": "Trando Slaver: Enemy grenade!",
       "jp": "Trando Slaver: 敵のグレネードだ!",
       "de": "Trando-Sklavenhändler: Feindliche Granate!",
-      "zh_CN": "特兰多奴隶贩子：敌人的手榴弹！",
+      "zh_CN": "特兰多奴隶贩子：敌人的手雷！",
       "use_PS4_translation": true
     },
     "2904": {
@@ -43416,7 +43416,7 @@
       "en": "Delta 62: Activating detonator",
       "jp": "Delta 62: デトネーター、オン。",
       "de": "Delta 62: Aktiviere Detonator.",
-      "zh_CN": "德尔塔62：正在启动炸药",
+      "zh_CN": "德尔塔62：正在启动起爆器",
       "use_PS4_translation": true
     },
     "2970": {
@@ -43424,7 +43424,7 @@
       "en": "Delta 40: Activating detonator",
       "jp": "Delta 40: デトネーター、オン。",
       "de": "Delta 40: Aktiviere Detonator.",
-      "zh_CN": "德尔塔40：正在启动炸药",
+      "zh_CN": "德尔塔40：正在启动起爆器",
       "use_PS4_translation": true
     },
     "2971": {
@@ -43432,7 +43432,7 @@
       "en": "Delta 07: Activating detonator",
       "jp": "Delta 07: デトネーター作動。",
       "de": "Delta 07: Aktiviere Detonator.",
-      "zh_CN": "德尔塔07：正在启动炸药",
+      "zh_CN": "德尔塔07：正在启动起爆器",
       "use_PS4_translation": true
     },
     "2972": {
@@ -43904,7 +43904,7 @@
       "en": "Clone Advisor 1: Grenade type and inventory is displayed here.",
       "jp": "Clone Advisor 1: グレネードタイプと所持品がここに表示される。",
       "de": "Klonberater 1: Hier wird der Granatentyp und das Inventar angezeigt.",
-      "zh_CN": "克隆顾问1：手榴弹类型和物品栏会显示在此处。",
+      "zh_CN": "克隆顾问1：手雷类型和物品栏会显示在此处。",
       "use_PS4_translation": true
     },
     "3031": {
@@ -45288,7 +45288,7 @@
       "en": "Clone Advisor 1: Throw a couple thermal grenades to take them out.",
       "jp": "Clone Advisor 1: サーマルグレネードを投げて奴らを倒せ。",
       "de": "Klonberater 1: Schalten Sie sie mit ein paar Thermalgranaten aus.",
-      "zh_CN": "克隆顾问1：扔几颗热榴弹把它们消灭掉。",
+      "zh_CN": "克隆顾问1：扔几颗热能榴弹把它们消灭掉。",
       "use_PS4_translation": true
     },
     "3204": {
@@ -45296,7 +45296,7 @@
       "en": "Clone Advisor 1: Delta Lead, looks like you'll have to take them out with grenades",
       "jp": "Clone Advisor 1: デルタリーダー、グレネードを使う必要がありそうだ。",
       "de": "Klonberater 1: Delta-Leader. Sie müssen sie wohl mit Granaten vernichten.",
-      "zh_CN": "克隆顾问1：德尔塔队长，看来你必须用手榴弹干掉它们",
+      "zh_CN": "克隆顾问1：德尔塔队长，看来你必须用手雷干掉它们",
       "use_PS4_translation": true
     },
     "3205": {
@@ -45320,7 +45320,7 @@
       "en": "Clone Advisor 1: The only way to take that gun emplacement out is with grenades.",
       "jp": "Clone Advisor 1: 砲座を片付けるにはグレネードだ。",
       "de": "Klonberater 1: Sie können diese Geschützstellung nur mit Granaten ausschalten.",
-      "zh_CN": "克隆顾问1：唯一可以消灭那个炮塔的方法就是使用手榴弹。",
+      "zh_CN": "克隆顾问1：唯一可以消灭那个炮塔的方法就是使用手雷。",
       "use_PS4_translation": true
     },
     "3208": {
@@ -45328,7 +45328,7 @@
       "en": "Clone Advisor 1: Your grenade inventory is tracked here on your visor.",
       "jp": "Clone Advisor 1: グレネードの状況はバイザーに示されている。",
       "de": "Klonberater 1: Ihr Granatenvorrat wird auf Ihrem Visor angezeigt.",
-      "zh_CN": "克隆顾问1：手榴弹物品栏可以在面罩上的此处跟踪。",
+      "zh_CN": "克隆顾问1：手雷物品栏可以在面罩上的此处跟踪。",
       "use_PS4_translation": true
     },
     "3209": {
@@ -45336,7 +45336,7 @@
       "en": "Clone Advisor 1: Grenades have been added to your inventory.",
       "jp": "Clone Advisor 1: グレネードが所持品に追加された。",
       "de": "Klonberater 1: Granaten zum Inventar hinzugefügt.",
-      "zh_CN": "克隆顾问1：手榴弹已加入你的物品栏中。",
+      "zh_CN": "克隆顾问1：手雷已加入你的物品栏中。",
       "use_PS4_translation": true
     },
     "3210": {
@@ -45352,7 +45352,7 @@
       "en": "Clone Advisor 1: Excellent.  Now lob the grenades at that gun position.",
       "jp": "Clone Advisor 1: よーし。グレネードを砲座に放り込め。",
       "de": "Klonberater 1: Ausgezeichnet. Werfen Sie die Granaten jetzt auf die Geschützstellung.",
-      "zh_CN": "克隆顾问1：好极了。现在朝着炮塔扔出手榴弹。",
+      "zh_CN": "克隆顾问1：好极了。现在朝着炮塔扔出手雷。",
       "use_PS4_translation": true
     },
     "3212": {
@@ -48696,7 +48696,7 @@
       "en": "Delta 38: Set up a grenade position here, Delta.",
       "jp": "Delta 38: ここにグレネードをしかけるぞ。",
       "de": "Delta 38: Richten Sie hier eine Granatenposition ein, Delta.",
-      "zh_CN": "德尔塔38：在这里设置手榴弹阵地，德尔塔。",
+      "zh_CN": "德尔塔38：在这里设置手雷阵地，德尔塔。",
       "use_PS4_translation": true
     },
     "3043": {
@@ -48704,7 +48704,7 @@
       "en": "Delta 38: This looks like a good spot to set up a grenade position, Deltas!",
       "jp": "Delta 38: グレネードをしかけるにはちょうどいいぞ。",
       "de": "Delta 38: Das sieht doch mal nach einer guten Granatenposition aus, Deltas!",
-      "zh_CN": "德尔塔38：这看起来是个设置手榴弹阵地的好地方，德尔塔们！",
+      "zh_CN": "德尔塔38：这看起来是个设置手雷阵地的好地方，德尔塔们！",
       "use_PS4_translation": true
     },
     "3044": {
@@ -48832,7 +48832,7 @@
       "en": "Clone Advisor 1: Also be aware that while it is somewhat vulnerable to your EC Detonators, it will not be immobilized the way other targets will.",
       "jp": "Clone Advisor 1: ECデトネーターには弱いが、他の目標と違って動きを止めることはできないぞ。",
       "de": "Klonberater 1: Sie sollten ferner wissen, dass er Ihren Detonatoren gegenüber zwar anfällig ist, aber von diesen nicht, wie andere Ziele, deaktiviert wird.",
-      "zh_CN": "克隆顾问1：另外还要注意，尽管EC雷管能够在一定程度上对它造成伤害，但它却不会像其他目标一样被瘫痪。",
+      "zh_CN": "克隆顾问1：另外还要注意，尽管静电荷榴弹能够在一定程度上对它造成伤害，但它却不会像其他目标一样被瘫痪。",
       "use_PS4_translation": true
     },
     "3060": {
@@ -53734,7 +53734,7 @@
       "en": "Delta 38: They're below us!  Look out for grenades!",
       "jp": "Delta 38: 下だ! グレネードに気をつけろ!",
       "de": "Delta 38: Sie sind unter uns! Achtet auf Granaten!",
-      "zh_CN": "德尔塔38：他们在我们下面！小心手榴弹！",
+      "zh_CN": "德尔塔38：他们在我们下面！小心手雷！",
       "use_PS4_translation": true
     },
     "2951": {
@@ -54030,7 +54030,7 @@
       "en": "Delta 07: A few grenades might do the trick.",
       "jp": "Delta 07: グレネード数発でやれる。",
       "de": "Delta 07: Versuchen wir's mit Granaten.",
-      "zh_CN": "德尔塔07：扔几颗手榴弹或许能奏效。",
+      "zh_CN": "德尔塔07：扔几颗手雷或许能奏效。",
       "use_PS4_translation": true
     },
     "2989": {
@@ -56874,7 +56874,7 @@
       "en": "Delta 07: Hit 'em with your ECD's!",
       "jp": "Delta 07: ECDを使え!",
       "de": "Delta 07: ELDs! SCHNELL!",
-      "zh_CN": "德尔塔07：用你的ECD打它们！",
+      "zh_CN": "德尔塔07：用你的静电荷榴弹打它们！",
       "use_PS4_translation": true
     },
     "2997": {
@@ -57426,7 +57426,7 @@
       "en": "Delta 40: Take cover, squad!  Put some grenades on those targets!",
       "jp": "Delta 40: 援護しろ。 目標にグレネードをお見舞いしろ!",
       "de": "Delta 40: In Deckung! Versucht es mit Granaten!",
-      "zh_CN": "德尔塔40：大家找掩护！朝那些目标投手榴弹！",
+      "zh_CN": "德尔塔40：大家找掩护！朝那些目标投手雷！",
       "use_PS4_translation": true
     },
     "3066": {
@@ -58718,7 +58718,7 @@
       "en": "Delta 38: Grenades!  Take cover!",
       "jp": "Delta 38: グレネード! 援護を!",
       "de": "Delta 38: Granaten! Deckung!",
-      "zh_CN": "德尔塔38：手榴弹！找掩护！",
+      "zh_CN": "德尔塔38：手雷！找掩护！",
       "use_PS4_translation": true
     },
     "2948": {
@@ -60386,7 +60386,7 @@
       "en": "Delta 38: Grenades!",
       "jp": "Delta 38: グレネード!",
       "de": "Delta 38: Granaten!",
-      "zh_CN": "德尔塔38：手榴弹！",
+      "zh_CN": "德尔塔38：手雷！",
       "use_PS4_translation": true
     },
     "3053": {
@@ -60394,7 +60394,7 @@
       "en": "Delta 38: Slavers - watch for grenades.",
       "jp": "Delta 38: 敵だ、グレネードに気をつけろ。",
       "de": "Delta 38: Sklavenhändler! Auf Granaten achten.",
-      "zh_CN": "德尔塔38：奴隶贩子——小心手榴弹。",
+      "zh_CN": "德尔塔38：奴隶贩子——小心手雷。",
       "use_PS4_translation": true
     },
     "3054": {
@@ -60410,7 +60410,7 @@
       "en": "Delta 38: Mercenaries - watch for grenades.",
       "jp": "Delta 38: 傭兵だ、グレネードに気をつけろ。",
       "de": "Delta 38: Söldner! Auf Granaten achten.",
-      "zh_CN": "德尔塔38：是雇佣兵——小心手榴弹。",
+      "zh_CN": "德尔塔38：是雇佣兵——小心手雷。",
       "use_PS4_translation": true
     },
     "3056": {
@@ -60690,7 +60690,7 @@
       "en": "Clone Advisor 1: Lead, recommend you put a couple of thermals in that breach. The resulting debris should hold off any further incursions.",
       "jp": "Clone Advisor 1: リーダー、突破口にサーマルデトネータをしかけろ。残がいで侵入を食い止めるんだ。",
       "de": "Klonberater 1: Leader, werfen Sie ein paar Thermalgranaten durch das Loch. Der Schutt müsste die Typen aufhalten.",
-      "zh_CN": "克隆顾问1：队长，建议你们在那个突破点放上几个炸药。崩塌的碎屑应该能挡住进一步的进犯。",
+      "zh_CN": "克隆顾问1：队长，建议你们在那个突破点放上几颗热能榴弹。崩塌的碎屑应该能挡住进一步的进犯。",
       "use_PS4_translation": true
     },
     "3092": {
@@ -63736,7 +63736,7 @@
       "en": "Delta 40: We could drop a grenade right into the middle of their party, sir.",
       "jp": "Delta 40: ど真ん中にグレネードを落としてやります。",
       "de": "Delta 40: Wir könnten sie mit einer kleinen Granate begrüßen.",
-      "zh_CN": "德尔塔40：我们可以把一颗手榴弹投到他们中央，长官。",
+      "zh_CN": "德尔塔40：我们可以把一颗手雷投到他们中央，长官。",
       "use_PS4_translation": true
     },
     "3075": {
@@ -67434,7 +67434,7 @@
       "en": "CYCLE DETONATORS",
       "jp": "デトネーター切替",
       "de": "",
-      "zh_CN": "轮替雷管"
+      "zh_CN": "轮替榴弹"
     },
     "7": {
       "note": "OptionSet0Labels[7].Text",
@@ -67508,7 +67508,7 @@
       "en": "THROW DETONATOR",
       "jp": "デトネーターを投げる",
       "de": "",
-      "zh_CN": "投掷雷管"
+      "zh_CN": "投掷榴弹"
     },
     "1": {
       "note": "OptionSet1Labels[1].Text",
@@ -67666,7 +67666,7 @@
       "en": "THROW DETONATOR",
       "jp": "デトネーターを投げる",
       "de": "DETONATOR WERFEN",
-      "zh_CN": "投掷雷管"
+      "zh_CN": "投掷榴弹"
     },
     "12": {
       "note": "OptionSet0Labels[12].Text",
@@ -67759,7 +67759,7 @@
       "en": "CYCLE DETONATOR",
       "jp": "デトネーター切り替え",
       "de": "DETONATOR WECHSELN",
-      "zh_CN": "轮替雷管"
+      "zh_CN": "轮替榴弹"
     },
     "9": {
       "note": "OptionSet1Labels[9].Text",
@@ -72374,7 +72374,7 @@
       "en": "PRESS @ TO ENGAGE GRENADE MANEUVER",
       "jp": "",
       "de": "@ DRÜCKEN, UM GRANATEN-MANÖVER ZU STARTEN",
-      "zh_CN": "按@展开手榴弹行动",
+      "zh_CN": "按@展开手雷行动",
       "use_PS4_translation": true
     },
     "2": {
@@ -72382,7 +72382,7 @@
       "en": "PRESS @ TO CANCEL GRENADE MANEUVER",
       "jp": "",
       "de": "@ DRÜCKEN, UM GRANATEN-MANÖVER ABZUBRECHEN",
-      "zh_CN": "按@取消手榴弹行动",
+      "zh_CN": "按@取消手雷行动",
       "use_PS4_translation": true
     }
   },
@@ -72512,7 +72512,7 @@
       "en": "CYCLE DETONATORS",
       "jp": "",
       "de": "DETONATOREN WECHSELN",
-      "zh_CN": "轮替雷管",
+      "zh_CN": "轮替榴弹",
       "use_PS4_translation": true
     },
     "7": {
@@ -72604,7 +72604,7 @@
       "en": "THROW DETONATOR",
       "jp": "",
       "de": "DETONATOR WERFEN",
-      "zh_CN": "投掷雷管",
+      "zh_CN": "投掷榴弹",
       "use_PS4_translation": true
     },
     "1": {
@@ -73542,7 +73542,7 @@
       "en": "%k rocked %o with a Sonic Detonator.",
       "jp": "",
       "de": "",
-      "zh_CN": "%k用声波雷管震倒了%o。"
+      "zh_CN": "%k用声波榴弹震倒了%o。"
     }
   },
   "properties.DC15Pickup": {
@@ -73769,7 +73769,7 @@
       "en": "EC Detonators",
       "jp": "",
       "de": "",
-      "zh_CN": "EC雷管",
+      "zh_CN": "静电荷榴弹",
       "use_PS4_translation": true
     }
   },
@@ -73779,7 +73779,7 @@
       "en": "EC Detonator",
       "jp": "",
       "de": "",
-      "zh_CN": "EC雷管",
+      "zh_CN": "静电荷榴弹",
       "use_PS4_translation": true
     },
     "2": {
@@ -73797,7 +73797,7 @@
       "en": "EC Detonators",
       "jp": "",
       "de": "",
-      "zh_CN": "EC雷管"
+      "zh_CN": "静电荷榴弹"
     }
   },
   "properties.EWebTurretAmmo": {
@@ -73826,7 +73826,7 @@
       "en": "Flash Detonator",
       "jp": "",
       "de": "",
-      "zh_CN": "闪光雷管",
+      "zh_CN": "闪光手雷",
       "use_PS4_translation": true
     },
     "2": {
@@ -74069,7 +74069,7 @@
       "en": " out of charges.",
       "jp": "",
       "de": "",
-      "zh_CN": " 炸药不足。",
+      "zh_CN": " 榴弹不足。",
       "use_PS4_translation": true
     }
   },
