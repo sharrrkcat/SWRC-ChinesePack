@@ -118,7 +118,7 @@
       "en": "DC-17m Blaster",
       "jp": "DC-17mブラスター",
       "de": "",
-      "zh_CN": "DC-17m爆能枪"
+      "zh_CN": "DC-17m爆能枪弹匣"
     },
     "100024": {
       "note": "PickupMessage / 35 occurrences",
@@ -363,7 +363,7 @@
       "en": "DC-17m Sniper",
       "jp": "DC-17m狙撃用弾薬",
       "de": "DC-17m Scharfschützenpatronen",
-      "zh_CN": "DC-17m狙击枪",
+      "zh_CN": "DC-17m狙击弹",
       "use_PS4_translation": true
     },
     "100707": {
@@ -1237,7 +1237,7 @@
       "en": "Commando receiving assistance.",
       "jp": "コマンドーを支援する。",
       "de": "",
-      "zh_CN": "突击队员正在接受援助。"
+      "zh_CN": "突击队员正在接受支援。"
     },
     "100178": {
       "note": "AckString[5] / 3 occurrences",
@@ -7450,7 +7450,7 @@
       "en": "DC-17m AntiArmor ammo",
       "jp": "DC-17m対装甲チャージパック",
       "de": "DC-17m Panzerbrechende Ladungen",
-      "zh_CN": "DC-17m反装甲弹药",
+      "zh_CN": "DC-17m反装甲充能包",
       "use_PS4_translation": true
     }
   },
@@ -7480,7 +7480,7 @@
       "en": "DC-17m Blaster",
       "jp": "DC-17mブラスター・クリップ",
       "de": "DC-17m Blastermunition",
-      "zh_CN": "DC-17m爆能枪",
+      "zh_CN": "DC-17m爆能枪弹匣",
       "use_PS4_translation": true
     }
   },
@@ -7628,7 +7628,7 @@
       "en": "Force Pike",
       "jp": "フォース・パイク",
       "de": "Machtstab",
-      "zh_CN": "原力矛",
+      "zh_CN": "力矛",
       "use_PS4_translation": true
     }
   },
@@ -7638,7 +7638,7 @@
       "en": "ForcePike Cell",
       "jp": "フォース・パイクセル",
       "de": "Machtstab-Zelle",
-      "zh_CN": "原力矛",
+      "zh_CN": "力矛电池",
       "use_PS4_translation": true
     }
   },
@@ -7876,7 +7876,7 @@
       "en": "RocketLauncher",
       "jp": "ウーキー・ホーミング・ロケットランチャー",
       "de": "Wookiee- Lenkraketenwerfer",
-      "zh_CN": "火箭发射器",
+      "zh_CN": "伍基人制导导弹发射器",
       "use_PS4_translation": true
     }
   },
@@ -7886,7 +7886,7 @@
       "en": "Rocket Launcher",
       "jp": "ロケットランチャー",
       "de": "Wookiee- Lenkraketenwerfer",
-      "zh_CN": "火箭发射器",
+      "zh_CN": "伍基人制导导弹发射器",
       "use_PS4_translation": true
     }
   },
@@ -12778,7 +12778,7 @@
       "en": "Command demolition maneuver",
       "jp": "爆破作業を遂行せよ",
       "de": "BEFEHLIGEN SIE DAS SPRENGMANÖVER",
-      "zh_CN": "命令爆破行动",
+      "zh_CN": "下令执行爆破行动",
       "use_PS4_translation": true
     },
     "14": {
@@ -12796,7 +12796,7 @@
       "en": "Use the squad commands to change the stance of your squad. Search and Destroy: advance aggressively. Secure Area: defend designated area. Form-Up: follow in formation. Recall: Cancels all maneuvers.",
       "jp": "次の小隊命令を使用し、小隊のフォーメーションを変更することができます。\n探索・破壊:前進し積極的に攻撃。\n位置確保:現在地を防衛。\n集合:リーダーのそばに寄る。\n指示中止:全ての命令指示をキャンセル。",
       "de": "Benutzen Sie die Teambefehle, um die Position Ihres Teams zu ändern. Suchen und Zerstören: aggressiv vorrücken. Bereich sichern: den angegebenen Bereich verteidigen.",
-      "zh_CN": "使用小队命令可以更改你的小队姿势。\n搜索并歼灭：主动推进。\n控制区域：保卫指定区域。\n集合：按阵型跟随。\n召回：取消所有行动。",
+      "zh_CN": "使用小队命令可以更改你的小队阵型。\n搜索并歼灭：主动推进。\n控制区域：保卫指定区域。\n集合：按阵型跟随。\n召回：取消所有行动。",
       "use_PS4_translation": true
     }
   },
@@ -12942,7 +12942,7 @@
       "en": "Command demolition maneuver",
       "jp": "爆破作戦を遂行せよ",
       "de": "BEFEHLEN SIE EIN SPRENGMANÖVER",
-      "zh_CN": "命令爆破行动",
+      "zh_CN": "下令执行爆破行动",
       "use_PS4_translation": true
     },
     "12": {
@@ -12950,7 +12950,7 @@
       "en": "Command Slice maneuver",
       "jp": "小隊にスカッドコマンドを指示せよ",
       "de": "BEFEHLEN SIE EIN HACKMANÖVER",
-      "zh_CN": "命令骇入行动",
+      "zh_CN": "下令执行骇入行动",
       "use_PS4_translation": true
     },
     "13": {
@@ -13094,7 +13094,7 @@
       "en": "Command Door breach maneuver",
       "jp": "ドア突入行動を指令せよ",
       "de": "BEFEHLEN SIE DAS TÜRAUFBRUCH-MANÖVER",
-      "zh_CN": "命令破门行动",
+      "zh_CN": "下令执行破门行动",
       "use_PS4_translation": true
     },
     "13": {
@@ -13102,7 +13102,7 @@
       "en": "Command Snipe maneuver",
       "jp": "狙撃行動を指令せよ",
       "de": "BEFEHLEN SIE DAS SCHARFSCHÜTZEN- MANÖVER",
-      "zh_CN": "命令狙击行动",
+      "zh_CN": "下令执行狙击行动",
       "use_PS4_translation": true
     },
     "14": {
@@ -13838,7 +13838,7 @@
       "en": "IF YOU MANAGE TO GET YOUR HANDS ON A ROCKET LAUNCHER, HOLD THE TRIGGER TO ACTIVATE THE LOCK-ON FEATURE.  AIN'T TECHNOLOGY GREAT?",
       "jp": "ロケットランチャーはとんでもない威力ですよ。\nロックオンしたら即座にぶっ放してしまいましょうぜ。\nいやーオレはあんなの絶対食らいたくないですよ。",
       "de": "WENN SIE EINEN RAKETENWERFER IN DIE HÄNDE KRIEGEN, HALTEN SIE DEN ABZUG GEDRÜCKT, UM DIE AUTOMATISCHE ZIELVORRICHTUNG ZU AKTIVIEREN. IST TECHNIK NICHT WUNDERBAR?",
-      "zh_CN": "如果你弄到了火箭发射器，按住触发器来启动锁定功能。这技术难道不厉害吗？",
+      "zh_CN": "如果你弄到了伍基人制导导弹发射器，按住触发器来启动锁定功能。这技术难道不厉害吗？",
       "use_PS4_translation": true
     },
     "29": {
@@ -13926,7 +13926,7 @@
       "en": "DURING INITIAL COMBAT TRAINING, THE COMMANDO PROGRAM EXPERIENCED SIGNIFICANT FATALITIES.  DESPITE OUR RETICENCE TO LOSE PERFECTLY ACCEPTABLE CLONES, JANGO FETT INSISTED WE CONTINUE.  HE TERMED IT \"CULLING THE WEAK.\"",
       "jp": "初期戦闘トレーニングでコマンドープログラムは\n重要な成果をあげました。\nあなた達はその中でもさらに優秀な存在です。",
       "de": "DIESES TEAM IST ZU ALLEM BEREIT. EGAL WELCHE MISSION, SIE WERDEN DAMIT FERTIG. ANSCHLÄGE, INFILTRATION, SUCHEN UND ZERSTÖREN, WAS SIE WOLLEN ...",
-      "zh_CN": "在初始作战训练期间，突击队计划遭遇了严重的伤亡事件。尽管我们对失去完美的克隆人无言以对，但詹戈·费特却坚持认为我们应该继续。他把这个过程称作“弱肉强食”。",
+      "zh_CN": "在初始作战训练期间，突击队计划遭遇了严重的伤亡事件。尽管我们不愿失去完全合格的克隆人，但詹戈·费特却坚持认为我们应该继续。他把这个过程称作“淘汰弱者”。",
       "use_PS4_translation": true
     },
     "40": {
@@ -13934,7 +13934,7 @@
       "en": "\"YES, I REMEMBER JANGO FETT AND HIS SECRET PROJECT ON KAMINO.  FASCINATING AND LUCRATIVE FOR ALL OF US.  AND I TRAINED THE DEADLIEST SQUAD THIS SIDE OF THE MANDALORIAN SUPERCOMMANDOS.\"",
       "jp": "\"私はジャンゴ・フェットとカミーノの行いに関した\n秘密プロジェクトを覚えています。\n我々にとって極めて有効なプロジェクトです。\"",
       "de": "RC GRUPPE DELTA: EFFIZIENZBERICHT: W VAU, AUSBILDUNGS-SERGEANT: MIR TUT JEDER GEGNER, DER DAS UNGLÜCK HAT, IM KAMPF AN DAS DELTA-TEAM ZU GERATEN, AUFRICHTIG LEID. DAS IST ALLES.",
-      "zh_CN": "“是的，我记得詹戈·费特和他在卡米诺星球上的秘密项目，那对我们所有人来说都极具吸引力和诱惑力。而且，我训练出了曼达洛超级突击队中最致命的小队。”",
+      "zh_CN": "“是的，我记得詹戈·费特和他在卡米诺星球上的秘密项目，那对我们所有人来说都极具吸引力和诱惑力。而且，我训练出了仅次于曼达洛超级突击队的最致命小队。”",
       "use_PS4_translation": true
     },
     "41": {
@@ -19733,7 +19733,7 @@
       "en": "Delta 07: Expecting company, 38?",
       "jp": "Delta 07: 応答してくれ、38?",
       "de": "Delta 07: Erwarten Sie Gesellschaft, 38?",
-      "zh_CN": "德尔塔07：预期会有人出现吗，38号？",
+      "zh_CN": "德尔塔07：是在等客人上门吗，38号？",
       "use_PS4_translation": true
     },
     "157": {
@@ -19877,7 +19877,7 @@
       "en": "Delta 07: Commando receiving assistance.",
       "jp": "Delta 07: コマンドーを支援する。",
       "de": "Delta 07: Unterstütze Kommando!",
-      "zh_CN": "德尔塔07：突击队员正在接受援助。",
+      "zh_CN": "德尔塔07：突击队员正在接受支援。",
       "use_PS4_translation": true
     },
     "175": {
@@ -20597,7 +20597,7 @@
       "en": "Delta 07: Disarming trap.  No distractions now, eh?",
       "jp": "Delta 07: トラップ解除中。これで集中できる。",
       "de": "Delta 07: Ich entschärfe die Falle. Keine Störungen, okay?",
-      "zh_CN": "德尔塔07：正在解除陷阱。千万别分心啊？",
+      "zh_CN": "德尔塔07：正在解除陷阱。现在别分心，好吗？",
       "use_PS4_translation": true
     },
     "277": {
@@ -22093,7 +22093,7 @@
       "en": "Delta 07: Taken out!",
       "jp": "Delta 07: やったぞ!",
       "de": "Delta 07: Erledigt!",
-      "zh_CN": "德尔塔07：已拔除！",
+      "zh_CN": "德尔塔07：已消灭！",
       "use_PS4_translation": true
     },
     "474": {
@@ -22285,7 +22285,7 @@
       "en": "Delta 07: Hostile taken out.",
       "jp": "Delta 07: 敵を排除。",
       "de": "Delta 07: Gegner beseitigt.",
-      "zh_CN": "德尔塔07：敌人已拔除。",
+      "zh_CN": "德尔塔07：已消灭敌人。",
       "use_PS4_translation": true
     },
     "499": {
@@ -24565,7 +24565,7 @@
       "en": "Delta 07: Stance acknowledged.",
       "jp": "Delta 07: 位置を確認。",
       "de": "Delta 07: Position bestätigt!",
-      "zh_CN": "德尔塔07：位置已确认。",
+      "zh_CN": "德尔塔07：阵型已确认。",
       "use_PS4_translation": true
     },
     "805": {
@@ -24645,7 +24645,7 @@
       "en": "Delta 07: Taking new stance.",
       "jp": "Delta 07: 構え直せ。",
       "de": "Delta 07: Ändere Position!",
-      "zh_CN": "德尔塔07：换新位置。",
+      "zh_CN": "德尔塔07：变换阵型。",
       "use_PS4_translation": true
     },
     "815": {
@@ -25085,7 +25085,7 @@
       "en": "Delta 38: A Wookiee Rocket Launcher.  This thing is twice my size!  Best be careful where I point it.",
       "jp": "Delta 38: ウーキーのロケットランチャーだ。こっちの2倍は大きい! 慎重に狙うことだ。",
       "de": "Delta 38: Ein Wookiee-Raketenwerfer. Dieses Ding ist doppelt so groß wie ich! Damit muss ich vorsichtig sein.",
-      "zh_CN": "德尔塔38：一架伍基人火箭发射器。这玩意儿有我两个大！用起来最好是小心点。",
+      "zh_CN": "德尔塔38：一架伍基人制导导弹发射器。这玩意儿有我两个大！用起来最好是小心点。",
       "use_PS4_translation": true
     },
     "875": {
@@ -25261,7 +25261,7 @@
       "en": "Delta 38: Change Stance",
       "jp": "Delta 38: 位置を変えろ。",
       "de": "Delta 38: Position ändern!",
-      "zh_CN": "德尔塔38：改变姿势",
+      "zh_CN": "德尔塔38：改变阵型",
       "use_PS4_translation": true
     },
     "897": {
@@ -25269,7 +25269,7 @@
       "en": "Delta 38: Confirm new stance.",
       "jp": "Delta 38: 構え直せ。",
       "de": "Delta 38: Neue Position bestätigen.",
-      "zh_CN": "德尔塔38：确认姿势。",
+      "zh_CN": "德尔塔38：确认新阵型。",
       "use_PS4_translation": true
     },
     "898": {
@@ -25909,7 +25909,7 @@
       "en": "Delta 38: See if you can get that thing without killing us.",
       "jp": "Delta 38: どうだ、やれるか。こちらに危害を加えるなよ。",
       "de": "Delta 38: Holen Sie das Ding, ohne uns zu töten.",
-      "zh_CN": "德尔塔38：看你能不能让我们不死掉的情况下，得到那东西。",
+      "zh_CN": "德尔塔38：看你能不能在不害死我们的情况下拿到那东西。",
       "use_PS4_translation": true
     },
     "981": {
@@ -26477,7 +26477,7 @@
       "en": "Delta 38: Kill that trap, delta.",
       "jp": "Delta 38: トラップを潰せ。",
       "de": "Delta 38: Zerstören Sie die Falle, Delta.",
-      "zh_CN": "德尔塔38：消灭那个陷阱，德尔塔。",
+      "zh_CN": "德尔塔38：解除那个陷阱，德尔塔。",
       "use_PS4_translation": true
     },
     "1056": {
@@ -26669,7 +26669,7 @@
       "en": "Delta 38: Take Defensive Stance",
       "jp": "Delta 38: 防御姿勢だ。",
       "de": "Delta 38: Verteidigungslinie bilden!",
-      "zh_CN": "德尔塔38：占据防御位置",
+      "zh_CN": "德尔塔38：采用防御阵型",
       "use_PS4_translation": true
     },
     "1081": {
@@ -26677,7 +26677,7 @@
       "en": "Delta 38: Take Offensive Stance",
       "jp": "Delta 38: 攻撃姿勢だ。",
       "de": "Delta 38: Angriffslinie bilden!",
-      "zh_CN": "德尔塔38：占据进攻位置",
+      "zh_CN": "德尔塔38：采用进攻阵型",
       "use_PS4_translation": true
     },
     "1082": {
@@ -27477,7 +27477,7 @@
       "en": "Delta 40: Lending assistance to oh-seven.",
       "jp": "Delta 40: 07に手を貸すぞ。",
       "de": "Delta 40: 0-7 hat Probleme. Ich helfe ihm!",
-      "zh_CN": "德尔塔40：正要对07号伸出援手。",
+      "zh_CN": "德尔塔40：正在支援07号。",
       "use_PS4_translation": true
     },
     "1195": {
@@ -27517,7 +27517,7 @@
       "en": "Delta 40: Six-two's getting assistance.",
       "jp": "Delta 40: 62の応援をしている。",
       "de": "Delta 40: Ich kümmere mich um 6-2!",
-      "zh_CN": "德尔塔40：62号需要支援。",
+      "zh_CN": "德尔塔40：62号正在接受支援。",
       "use_PS4_translation": true
     },
     "1200": {
@@ -29893,7 +29893,7 @@
       "en": "Delta 40: Took out a native.",
       "jp": "Delta 40: 生物を片付けた。",
       "de": "Delta 40: Eingeborener terminiert.",
-      "zh_CN": "德尔塔40：拔除了一个本地人。",
+      "zh_CN": "德尔塔40：干掉了一个本地人。",
       "use_PS4_translation": true
     },
     "1527": {
@@ -30029,7 +30029,7 @@
       "en": "Delta 40: Trando mark taken out.",
       "jp": "Delta 40: トランドの目標をやったぞ。",
       "de": "Delta 40: Trando-Ziel erledigt.",
-      "zh_CN": "德尔塔40：特兰多目标已拔除。",
+      "zh_CN": "德尔塔40：特兰多目标已消灭。",
       "use_PS4_translation": true
     },
     "1545": {
@@ -30581,7 +30581,7 @@
       "en": "Delta 40: You can rest when you're dead.",
       "jp": "Delta 40: 休めるのはくたばったときだ。",
       "de": "Delta 40: Schlafen können wir, wenn wir tot sind!",
-      "zh_CN": "德尔塔40：你要休息等死了就大把时间。",
+      "zh_CN": "德尔塔40：等你死了，有的是时间休息。",
       "use_PS4_translation": true
     },
     "1616": {
@@ -32349,7 +32349,7 @@
       "en": "Delta 40: Forward stance initiated",
       "jp": "Delta 40: 前進態勢に入る。",
       "de": "Delta 40: Beginne mit Vormarsch!",
-      "zh_CN": "德尔塔40：已初始化前锋位置",
+      "zh_CN": "德尔塔40：前进阵型已就位",
       "use_PS4_translation": true
     },
     "1859": {
@@ -32381,7 +32381,7 @@
       "en": "Delta 40: Taking Defensive stance.",
       "jp": "Delta 40: 防御態勢をとれ。",
       "de": "Delta 40: Nehme Verteidigungsstellung ein.",
-      "zh_CN": "德尔塔40：正采用防御姿势。",
+      "zh_CN": "德尔塔40：正采用防御阵型。",
       "use_PS4_translation": true
     },
     "1864": {
@@ -32389,7 +32389,7 @@
       "en": "Delta 40: Stance acknowledged.",
       "jp": "Delta 40: 位置を確認。",
       "de": "Delta 40: Stellung bestätigt.",
-      "zh_CN": "德尔塔40：姿势已确认。",
+      "zh_CN": "德尔塔40：阵型已确认。",
       "use_PS4_translation": true
     },
     "1865": {
@@ -32405,7 +32405,7 @@
       "en": "Delta 40: Taking new stance.",
       "jp": "Delta 40: 構え直せ。",
       "de": "Delta 40: Ändere Position!",
-      "zh_CN": "德尔塔40：换新姿势。",
+      "zh_CN": "德尔塔40：变换阵型。",
       "use_PS4_translation": true
     },
     "1867": {
@@ -32413,7 +32413,7 @@
       "en": "Delta 40: Taking Offensive stance.",
       "jp": "Delta 40: 攻撃態勢をとれ。",
       "de": "Delta 40: Nehme Angriffsstellung ein.",
-      "zh_CN": "德尔塔40：采用进攻姿势。",
+      "zh_CN": "德尔塔40：采用进攻阵型。",
       "use_PS4_translation": true
     },
     "1868": {
@@ -32965,7 +32965,7 @@
       "en": "Delta 62: Dusted that one.",
       "jp": "Delta 62: 粉々だ。",
       "de": "Delta 62: Der ist Geschichte!",
-      "zh_CN": "德尔塔62：那家伙化为了灰尘。",
+      "zh_CN": "德尔塔62：干掉那家伙了。",
       "use_PS4_translation": true
     },
     "1939": {
@@ -35501,7 +35501,7 @@
       "en": "Delta 62: Target taken out.",
       "jp": "Delta 62: 目標、排除。",
       "de": "Delta 62: Ziel neutralisiert.",
-      "zh_CN": "德尔塔62：目标已拔除。",
+      "zh_CN": "德尔塔62：已消灭目标。",
       "use_PS4_translation": true
     },
     "2268": {
@@ -35973,7 +35973,7 @@
       "en": "Delta 62: Lizard taken out.",
       "jp": "Delta 62: トカゲを排除。",
       "de": "Delta 62: Echse erledigt.",
-      "zh_CN": "德尔塔62：蜥蜴已拔除。",
+      "zh_CN": "德尔塔62：已消灭蜥蜴。",
       "use_PS4_translation": true
     },
     "2327": {
@@ -38205,7 +38205,7 @@
       "en": "Delta 62: Taking new stance.",
       "jp": "Delta 62: 構え直せ。",
       "de": "Delta 62: Ändere Position!",
-      "zh_CN": "德尔塔62：换新姿势。",
+      "zh_CN": "德尔塔62：变换阵型。",
       "use_PS4_translation": true
     },
     "2626": {
@@ -38213,7 +38213,7 @@
       "en": "Delta 62: Stance acknowledged.",
       "jp": "Delta 62: 位置を確認。",
       "de": "Delta 62: Position bestätigt.",
-      "zh_CN": "德尔塔62：姿势已确认。",
+      "zh_CN": "德尔塔62：阵型已确认。",
       "use_PS4_translation": true
     },
     "2627": {
@@ -38733,7 +38733,7 @@
       "en": "Super Battle Droid: Took out mark.",
       "jp": "Super Battle Droid: マークを取った。",
       "de": "Superkampfdroide: Gegner beseitigt.",
-      "zh_CN": "超级战斗机器人：拔除了目标。",
+      "zh_CN": "超级战斗机器人：已消灭目标。",
       "use_PS4_translation": true
     },
     "2693": {
@@ -38877,7 +38877,7 @@
       "en": "Super Battle Droid: Blast imminent.",
       "jp": "Super Battle Droid: 敵が来る。",
       "de": "Superkampfdroide: Drohende Explosion.",
-      "zh_CN": "超级战斗机器人：炸弹迫近。",
+      "zh_CN": "超级战斗机器人：即将爆炸。",
       "use_PS4_translation": true
     },
     "2711": {
@@ -40887,7 +40887,7 @@
       "en": "Delta 07: Commando receiving assistance.",
       "jp": "Delta 07: コマンドーを支援する。",
       "de": "",
-      "zh_CN": "德尔塔07：突击队员正在接受援助。"
+      "zh_CN": "德尔塔07：突击队员正在接受支援。"
     },
     "2982": {
       "note": "SubtitleText[2982]",
@@ -41125,7 +41125,7 @@
       "en": "Delta 38: Commando receiving assistance.",
       "jp": "Delta 38: コマンドーを支援する。",
       "de": "",
-      "zh_CN": "德尔塔38：突击队员正在接受援助。"
+      "zh_CN": "德尔塔38：突击队员正在接受支援。"
     },
     "3037": {
       "note": "SubtitleText[3037]",
@@ -41370,7 +41370,7 @@
       "en": "Delta 40: Commando receiving assistance.",
       "jp": "Delta 40: コマンドーを支援する。",
       "de": "",
-      "zh_CN": "德尔塔40：突击队员正在接受援助。"
+      "zh_CN": "德尔塔40：突击队员正在接受支援。"
     },
     "3092": {
       "note": "SubtitleText[3092]",
@@ -45544,7 +45544,7 @@
       "en": "Clone Advisor 1: This shield has already been sliced.  Delta Four-Oh has been here already.",
       "jp": "Clone Advisor 1: このシールドはもう開いているぞ。デルタ40のおかげだな。",
       "de": "Klonberater 1: Der Schild wurde bereits gehackt. Delta 4-0 war schon hier.",
-      "zh_CN": "克隆顾问1：已成功骇入了这个防护罩。德尔塔40号已经到达这里。",
+      "zh_CN": "克隆顾问1：这个防护罩已经被骇入过了。德尔塔40号来过这里。",
       "use_PS4_translation": true
     },
     "3236": {
@@ -48376,7 +48376,7 @@
       "en": "Delta 62: No help for you, ya tin soldiers!",
       "jp": "Delta 62: 助けは来ないぞ、ブリキ野郎!",
       "de": "Delta 62: Euch hilft keiner, ihr Zinnsoldaten!",
-      "zh_CN": "德尔塔62：谁都帮不了你，你这铁罐子士兵！",
+      "zh_CN": "德尔塔62：谁都帮不了你们，你们这些铁皮兵！",
       "use_PS4_translation": true
     },
     "3003": {
@@ -50284,7 +50284,7 @@
       "en": "Delta 62: Boss, a demo charge should shut it down for good.",
       "jp": "Delta 62: ボス、爆薬で全部片付けましょう。",
       "de": "Delta 62: Boss, eine kleine Sprengladung müsste das Problem lösen.",
-      "zh_CN": "德尔塔62：Boss，一颗炸弹应该就能让它永久关闭。",
+      "zh_CN": "德尔塔62：Boss，一份炸药应该就能让它永久停机。",
       "use_PS4_translation": true
     },
     "3039": {
@@ -50774,7 +50774,7 @@
       "en": "Clone Trooper Sergeant: Push those cannons to the stern!  Load the ammo and ordnance!",
       "jp": "Clone Trooper Sergeant: さあ大砲を後ろに寄せろ! 弾薬装てんだ! さあ急げ急げ!",
       "de": "Klontruppen-Sergeant: Los geht's! Die Geschütze nach Achtern! Munition laden! Los, los, los!",
-      "zh_CN": "克隆中士：把那些炮推到船尾！装备好武器，装好弹药！",
+      "zh_CN": "克隆中士：把那些炮推到船尾！装好弹药和军械！",
       "use_PS4_translation": true
     },
     "2965": {
@@ -54070,7 +54070,7 @@
       "en": "Delta 38: Posion gas!. Squad, secure helmets!",
       "jp": "Delta 38: 毒ガスだ! ヘルメットはいいか!",
       "de": "Delta 38: Giftgas! Team, Helme versiegeln!",
-      "zh_CN": "德尔塔38：是毒气！全队注意，封锁好头盔！",
+      "zh_CN": "德尔塔38：是毒气！全队注意，密封头盔！",
       "use_PS4_translation": true
     },
     "2994": {
@@ -55704,7 +55704,7 @@
       "en": "Clone Advisor 1: Lift is en route.  Hold position until it arrives.",
       "jp": "Clone Advisor 1: リフトが向かっているぞ。着くまで動くなよ。",
       "de": "Klonberater 1: Aufzug ist unterwegs. Warten Sie, bis er da ist.",
-      "zh_CN": "克隆顾问1：电梯上去了。原地等待它抵达。",
+      "zh_CN": "克隆顾问1：电梯正在过来。抵达前原地坚守。",
       "use_PS4_translation": true
     },
     "3044": {
@@ -56128,7 +56128,7 @@
       "en": "Delta 07: Someone shot something important!",
       "jp": "Delta 07: 何者かによる攻撃です!",
       "de": "Delta 07: Irgendjemand hat genau die richtige Stelle getroffen!",
-      "zh_CN": "德尔塔07：快动手射击重要部分！",
+      "zh_CN": "德尔塔07：有人打中了什么重要的东西！",
       "use_PS4_translation": true
     },
     "3097": {
@@ -56682,7 +56682,7 @@
       "en": "Delta 07: Like shooting worrts in a barrel… ",
       "jp": "Delta 07: ケモノにぶち込むようなもんだ…",
       "de": "Delta 07: Das ist ja wie Tontauben schießen ...",
-      "zh_CN": "德尔塔07：就像在打卡在桶里的沃特…… ",
+      "zh_CN": "德尔塔07：就像打困在桶里的沃特一样容易…… ",
       "use_PS4_translation": true
     },
     "2972": {
@@ -58798,7 +58798,7 @@
       "en": "Delta 38: It LOOKS like a Trando compound, but they've got droids guarding it.",
       "jp": "Delta 38: トランドの建物のようだ。だが、ドロイドが守っているぞ。",
       "de": "Delta 38: Es SIEHT AUS wie ein Trando-Lager, aber es wird von Droiden bewacht.",
-      "zh_CN": "德尔塔38：看来像是个特兰多围场，但却有机器人把守。",
+      "zh_CN": "德尔塔38：看来像是个特兰多营区，但却有机器人把守。",
       "use_PS4_translation": true
     },
     "2958": {
@@ -58806,7 +58806,7 @@
       "en": "Clone Advisor 1: Continue your recon of the compound.",
       "jp": "Clone Advisor 1: 探索を続行してくれ。",
       "de": "Klonberater 1: Setzen Sie die Erkundung des Lagers fort.",
-      "zh_CN": "克隆顾问1：继续侦察围场。",
+      "zh_CN": "克隆顾问1：继续侦察营区。",
       "use_PS4_translation": true
     },
     "2959": {
@@ -58894,7 +58894,7 @@
       "en": "Clone Advisor 1: Understood, Three-Eight.  We'll start conducting more thorough scans of the compound.",
       "jp": "Clone Advisor 1: 分かった38 構内をもっと詳細に探索してみよう。",
       "de": "Klonberater 1: Verstanden, 3-8. Ich werde sofort genauere Scans des Gebiets veranlassen.",
-      "zh_CN": "克隆顾问1：了解，38号。我们会开始对这片围场执行全面扫描。",
+      "zh_CN": "克隆顾问1：了解，38号。我们会开始对这片营区执行全面扫描。",
       "use_PS4_translation": true
     },
     "2970": {
@@ -60226,7 +60226,7 @@
       "en": "Delta 38: They killed the lights.  ",
       "jp": "Delta 38: 奴ら、ライトを消したぞ。  ",
       "de": "Delta 38: Verdammt. Stockdunkel!",
-      "zh_CN": "德尔塔38：他们把灯毁掉了。  ",
+      "zh_CN": "德尔塔38：他们把灯全灭了。  ",
       "use_PS4_translation": true
     },
     "3033": {
@@ -60274,7 +60274,7 @@
       "en": "Delta 38: Too much resistance for the Gunship - take down those turrets!",
       "jp": "Delta 38: ガンシップへがあぶない。あの砲塔を破壊しろ!",
       "de": "Delta 38: Das ist zu viel für das Kampfschiff. Zerstört die verdammten Geschütze!",
-      "zh_CN": "德尔塔38：对炮艇的抵抗太激烈了……消灭那些炮塔！",
+      "zh_CN": "德尔塔38：敌人火力太强，炮艇进不来——消灭那些炮塔！",
       "use_PS4_translation": true
     },
     "3039": {
@@ -60282,7 +60282,7 @@
       "en": "Clone Advisor 1: Too much resistance for the Gunship - take down those turrets!",
       "jp": "Clone Advisor 1: ガンシップへの攻撃が激しい。あの砲塔を破壊しろ!",
       "de": "Klonberater 1: Zu starkes Abwehrfeuer für das Kampfschiff. Zerstören Sie die Geschütze!",
-      "zh_CN": "克隆顾问1：对炮艇的抵抗太激烈了……消灭那些炮塔！",
+      "zh_CN": "克隆顾问1：敌人火力太强，炮艇进不来——消灭那些炮塔！",
       "use_PS4_translation": true
     },
     "3040": {
@@ -60818,7 +60818,7 @@
       "en": "Clone Advisor 1: There should be a Rocket Launcher in that area. See if you can find it.",
       "jp": "Clone Advisor 1: あのエリアにはロケットランチャーがあるはずだ。探してみろ。",
       "de": "Klonberater 1: Hier muss irgendwo ein Raketenwerfer sein. Finden Sie ihn!",
-      "zh_CN": "克隆顾问1：那片区域应该有一个火箭发射器。看你们能不能找得到。",
+      "zh_CN": "克隆顾问1：那片区域应该有一个伍基人制导导弹发射器。看你们能不能找得到。",
       "use_PS4_translation": true
     },
     "3108": {
@@ -61114,7 +61114,7 @@
       "en": "Delta 38: On your toes, Deltas!  Let's ambush their ambush!",
       "jp": "Delta 38: 準備はいいか、デルタ! 待ち伏せを待ち伏せるぞ。",
       "de": "Delta 38: Aufpassen, Deltas! Locken wir sie in ihre eigene Falle.",
-      "zh_CN": "德尔塔38：保持警觉，德尔塔们！我们先行埋伏他们去！",
+      "zh_CN": "德尔塔38：保持警觉，德尔塔们！我们反过来伏击他们的伏兵！",
       "use_PS4_translation": true
     },
     "3146": {
@@ -61982,7 +61982,7 @@
       "en": "Delta 07: Detecting motion.  Rifles up.",
       "jp": "Delta 07: 動きを探知。銃を上げろ。",
       "de": "Delta 07: Da war eine Bewegung. Gewehre bereit halten.",
-      "zh_CN": "德尔塔07：发现动迹，戒备。",
+      "zh_CN": "德尔塔07：发现动静，举枪戒备。",
       "use_PS4_translation": true
     },
     "2986": {
@@ -63264,7 +63264,7 @@
       "en": "Clone Advisor 1: Scans indiccate her hull is weakening, delta squad.  ",
       "jp": "Clone Advisor 1: 船体が弱まっているぞ、デルタ小隊。  ",
       "de": "Klonberater 1: Die Außenhülle gibt nach, Delta-Team.",
-      "zh_CN": "克隆顾问1：扫描显示她的船体正在变弱，德尔塔小队。  ",
+      "zh_CN": "克隆顾问1：扫描显示她的船体快撑不住了，德尔塔小队。  ",
       "use_PS4_translation": true
     },
     "3016": {
@@ -63504,7 +63504,7 @@
       "en": "Clone Advisor 1: But there are a number of Wookiee resistance fighters in the area.",
       "jp": "Clone Advisor 1: だが、ウーキーの抵抗軍も多く残っている。",
       "de": "Klonberater 1: Aber es gibt auch eine Reihe von Wookiee-Widerstandskämpfern.",
-      "zh_CN": "克隆顾问1：但这片区域也不少伍基人战士在抵抗。",
+      "zh_CN": "克隆顾问1：但这片区域也有不少伍基人抵抗军战士。",
       "use_PS4_translation": true
     },
     "3046": {
@@ -63560,7 +63560,7 @@
       "en": "Delta 40: Must've shipped it in unassembled.",
       "jp": "Delta 40: 組み立てないで送ったんだな。",
       "de": "Delta 40: Muss wohl hier drin zusammengebaut worden sein.",
-      "zh_CN": "德尔塔40：一定是运到后装配起来的。",
+      "zh_CN": "德尔塔40：一定是拆散了运进来的。",
       "use_PS4_translation": true
     },
     "3053": {
@@ -63568,7 +63568,7 @@
       "en": "Delta 62: Yeah, but who must've shipped it in unassembled?",
       "jp": "Delta 62: だが、誰が組み立てずに送ったんだ?",
       "de": "Delta 62: Ja, fragt sich nur von wem!",
-      "zh_CN": "德尔塔62：是啊，可到底是谁运过来装配的呢？",
+      "zh_CN": "德尔塔62：是啊，可是谁会把它拆散运进来呢？",
       "use_PS4_translation": true
     },
     "3054": {
@@ -72169,7 +72169,7 @@
       "en": "Locate Trandoshan Compound",
       "jp": "トランドーシャンの施設を発見せよ",
       "de": "FINDEN SIE DAS TRANDOSHANISCHE LAGER",
-      "zh_CN": "找到特兰多沙围场",
+      "zh_CN": "找到特兰多沙营区",
       "use_PS4_translation": true
     },
     "6": {
@@ -72193,7 +72193,7 @@
       "en": "Infiltrate Trandoshan Compound",
       "jp": "トランドーシャンの施設に侵入せよ",
       "de": "INFILTRIEREN SIE DAS TRANDOSHANISCHE LAGER",
-      "zh_CN": "渗入特兰多沙围场",
+      "zh_CN": "渗入特兰多沙营区",
       "use_PS4_translation": true
     }
   },
