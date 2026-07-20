@@ -14,3 +14,5 @@ reference/export/localization_jp_only_skipped.json
 reference/glossary_candidates.json
 reference/glossary_candidates.csv
 reference/glossary_review.html
+# 临时文件
+.*.*
