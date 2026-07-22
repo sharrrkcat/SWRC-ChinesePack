@@ -104,7 +104,7 @@
       "en": "DC15s Side Arm Blaster",
       "jp": "DC-15sブラスターピストル",
       "de": "",
-      "zh_CN": "DC-15s佩枪爆能枪"
+      "zh_CN": "DC-15s爆能手枪"
     },
     "100022": {
       "note": "PickupMessage / 29 occurrences",
@@ -272,7 +272,7 @@
       "en": "DC15s Side Arm Blaster",
       "jp": "DC15sサイドアームブラスター",
       "de": "",
-      "zh_CN": "DC-15s佩枪爆能枪"
+      "zh_CN": "DC-15s爆能手枪"
     },
     "100046": {
       "note": "Title / 4 occurrences",
@@ -968,7 +968,7 @@
       "en": "EXTREME PREJUDICE",
       "jp": "極限の先入観",
       "de": "MIT ALLER HÄRTE",
-      "zh_CN": "毫不留情",
+      "zh_CN": "格杀勿论",
       "use_PS4_translation": true
     },
     "100775": {
@@ -4800,7 +4800,7 @@
       "en": "Advance to the Center Span",
       "jp": "橋中央に進め",
       "de": "BEGEBEN SIE SICH ZUM BRÜCKENBOGEN",
-      "zh_CN": "前往跨距中心位置",
+      "zh_CN": "前往中央跨段",
       "use_PS4_translation": true
     },
     "101025": {
@@ -13492,7 +13492,7 @@
       "en": "While the Jedi above ground take the glory, a small squad of soldiers leaves Geonosis, knowing that they accomplished their mission.  With courage, with precision, and with excellence.  And that is all they need.",
       "jp": "ジェダイが地上での戦闘に勝利をおさめる一方、初陣を完遂したデルタ小隊はジオノーシスを後にした。次々に下される任務を遂行し続けること。彼らに求められているものはそれだけだった…。",
       "de": "WÄHREND DIE JEDI MIT RUHM ÜBERSCHÜTTET WERDEN, VERLÄSST EINE KLEINE GRUPPE VON SOLDATEN GEONOSIS IN DEM WISSEN, DASS SIE DEREN MISSION ERFÜLLT HABEN - MIT MUT, PRÄZISION UND EXZELLENZ. UND DAS IST ALLES, WAS SIE BRAUCHEN.",
-      "zh_CN": "地面上的绝地在接受荣耀之际，一小队士兵离开了吉奥诺西斯，因为他们知道自己已经完成了任务，整个过程充满勇气、精准与不凡。他们需要的就只是这些而已。",
+      "zh_CN": "地面上的绝地尽享荣耀之际，一小队士兵离开了吉奥诺西斯，因为他们知道自己已经完成了任务，整个过程充满勇气、精准与不凡。他们需要的就只是这些而已。",
       "use_PS4_translation": true
     }
   },
@@ -13822,7 +13822,7 @@
       "en": "TAKE IT FROM ME: IF YOU HAVE TO APPROACH A LIVE MINE, BE SURE TO CROUCH.  IT'LL MAKE THE JOB LESS… PAINFUL.",
       "jp": "いいですかよく聞いてくださいボス。\n地雷に対処する時は絶対にしゃがんでください。\nでないと、即ドカン!。あの世行きですよ。",
       "de": "GLAUBEN SIE MIR: WENN SIE NAHE AN EINE SCHARFE MINE MÜSSEN, DUCKEN SIE SICH. DAS MACHT DIE AUFGABE WENIGER ... SCHMERZHAFT.",
-      "zh_CN": "听我的忠告：如果你必须接近一颗启用的地雷，一定要蹲下来，这样的话，就没那么痛苦了。",
+      "zh_CN": "听我的忠告：如果你必须接近一颗已激活的地雷，一定要蹲下来。这样干起活来会没那么……痛苦。",
       "use_PS4_translation": true
     },
     "27": {
@@ -13886,7 +13886,7 @@
       "en": "JANGO FETT, OUR DNA HOST, RECOMMENDED THE COMMANDO PROGRAM BE INTRODUCED AS A MEANS OF TRANSFORMING INFANTRY TROOPS INTO EFFECTIVE SQUADS.",
       "jp": "ジャンゴ・フェット\nこの名前があなた達のDNAのホストです。",
       "de": "UNSERE WISSENSCHAFTLER WAREN ANGENEHM ÜBERRASCHT, DASS DIE KOMMANDO-TEAMS BEI KAMPFSIMULATIONEN STETS BESSER ABSCHNITTEN ALS IHRE GEKLONTEN KOLLEGEN.",
-      "zh_CN": "詹戈·费特，亦即我们DNA的宿主，建议引入突击队计划，作为将步兵部队转变为高效小队的一种手段。",
+      "zh_CN": "詹戈·费特，亦即我们的DNA供体，建议引入突击队计划，作为将步兵部队转变为高效小队的一种手段。",
       "use_PS4_translation": true
     },
     "35": {
@@ -15108,7 +15108,7 @@
       "en": "THE GAUNTLET",
       "jp": "ガントレット",
       "de": "DER FEHDEHANDSCHUH",
-      "zh_CN": "对决",
+      "zh_CN": "枪林弹雨",
       "use_PS4_translation": true
     },
     "38": {
@@ -15254,7 +15254,7 @@
       "en": "GEONOSIAN CHIEF LIEUTENANT SUN FAC MUST BE ELIMINATED.  DELTA SQUAD HAS BEEN INSERTED SEPARATELY INTO THE WAR-TORN GLADIATORIAL ARENA AND POINTS BEYOND.  THEY MUST RENDEZVOUS AND EFFECT SUN FAC’S REMOVAL -- BY ANY MEANS NECESSARY.",
       "jp": "ジオノージアン大公補佐サン・ファークを抹殺せよ。\nデルタ小隊は荒れ果てた各ポイントに既に潜入している。\n合流し、サン・ファークにとどめをさせ。手段は問わない。",
       "de": "DER GEONOSIANISCHE CHIEF LIEUTENANT SUN FAC MUSS AUSGESCHALTET WERDEN. DAS DELTA-TEAM WURDE GETRENNT IN DIE VOM KRIEG GEBEUTELTE ARENA GESCHICKT UND SOLL WEITER VORRÜCKEN. ES MUSS SICH WIEDER VEREINEN UND FÜR SUN FACS ABLEBEN SORGEN -- KOSTE ES, WAS ES WOLLE.",
-      "zh_CN": "必须要干掉吉奥诺西斯中尉长桑·法克。德尔塔小队已被分别安插到：兵连祸结的角斗竞技场及其他各处。他们必须前往约定地点会合，然后不择一切手段完成抹杀桑·法克的使命。",
+      "zh_CN": "必须要干掉吉奥诺西斯中尉长桑·法克。德尔塔小队已被分别安插到：兵连祸结的角斗竞技场及其他各处。他们必须前往约定地点会合，然后不惜一切手段完成抹杀桑·法克的使命。",
       "use_PS4_translation": true
     },
     "3": {
@@ -17057,7 +17057,7 @@
       "en": "Find the exit to the Landing Gear",
       "jp": "ランディングギアの出口へ向かえ",
       "de": "FINDEN SIE DEN AUSGANG ZUM FAHRWERK",
-      "zh_CN": "找到起落装置的出口",
+      "zh_CN": "找到通往起落架区的出口",
       "use_PS4_translation": true
     }
   },
@@ -18765,7 +18765,7 @@
       "en": "Battle Droid 1: Refusing programming and running.",
       "jp": "Battle Droid 1: プログラムと実行を拒否。",
       "de": "Kampfdroide 1: Programmierung ignorieren und fliehen!",
-      "zh_CN": "战斗机器人1：拒绝编程和运行。",
+      "zh_CN": "战斗机器人1：正在拒绝执行程序，逃跑中。",
       "use_PS4_translation": true
     },
     "30": {
@@ -19221,7 +19221,7 @@
       "en": "Clone Advisor 1: Here are your orders.",
       "jp": "Clone Advisor 1: 指令を伝える。",
       "de": "Klonberater 1: Hier sind Ihre Befehle.",
-      "zh_CN": "克隆顾问1：有命令到。",
+      "zh_CN": "克隆顾问1：你们的命令如下。",
       "use_PS4_translation": true
     },
     "88": {
@@ -20261,7 +20261,7 @@
       "en": "Delta 07: Dead…good riddance.",
       "jp": "Delta 07: 死んでる… やれやれ。",
       "de": "Delta 07: Tot ... gut so.",
-      "zh_CN": "德尔塔07：死了……料理得不错。",
+      "zh_CN": "德尔塔07：死了……可算清净了。",
       "use_PS4_translation": true
     },
     "232": {
@@ -21101,7 +21101,7 @@
       "en": "Delta 07: Battle damage over here.",
       "jp": "Delta 07: 損害が出ている。",
       "de": "Delta 07: Ich bin angeschlagen!",
-      "zh_CN": "德尔塔07：这儿有伤员。",
+      "zh_CN": "德尔塔07：这边有战损。",
       "use_PS4_translation": true
     },
     "342": {
@@ -21109,7 +21109,7 @@
       "en": "Delta 07: Hit confirmed.",
       "jp": "Delta 07: 当たったぞ。",
       "de": "Delta 07: Treffer bestätigt.",
-      "zh_CN": "德尔塔07：已确认中弹。",
+      "zh_CN": "德尔塔07：确认命中。",
       "use_PS4_translation": true
     },
     "343": {
@@ -21125,7 +21125,7 @@
       "en": "Delta 07: Taken care of.",
       "jp": "Delta 07: 気をつけろ。",
       "de": "Delta 07: Erledigt.",
-      "zh_CN": "德尔塔07：已经料理了。",
+      "zh_CN": "德尔塔07：已经解决了。",
       "use_PS4_translation": true
     },
     "345": {
@@ -21285,7 +21285,7 @@
       "en": "Delta 07: Oww, watch out!",
       "jp": "Delta 07: オウ、気をつけろ!",
       "de": "Delta 07: Au! Vorsicht!",
-      "zh_CN": "德尔塔07：噢，小心点！",
+      "zh_CN": "德尔塔07：嗷，小心点！",
       "use_PS4_translation": true
     },
     "365": {
@@ -21437,7 +21437,7 @@
       "en": "Delta 07: You got one, Three-Eight.",
       "jp": "Delta 07: やったぞ、38。",
       "de": "Delta 07: Sie haben einen erwischt, 3-8.",
-      "zh_CN": "德尔塔07：你真有一手，38号。",
+      "zh_CN": "德尔塔07：炸中一个，38号。",
       "use_PS4_translation": true
     },
     "384": {
@@ -21453,7 +21453,7 @@
       "en": "Delta 07: That blasted 'em!",
       "jp": "Delta 07: 吹っ飛んだぞ。",
       "de": "Delta 07: Die sind erledigt!",
-      "zh_CN": "德尔塔07：那够炸飞他们的！",
+      "zh_CN": "德尔塔07：这下把他们炸飞了！",
       "use_PS4_translation": true
     },
     "386": {
@@ -21461,7 +21461,7 @@
       "en": "Delta 07: Eight, nice arm there.",
       "jp": "Delta 07: 8、いい具合だ。",
       "de": "Delta 07: Guter Wurf, 3-8.",
-      "zh_CN": "德尔塔07：8号，手臂真好用嘛。",
+      "zh_CN": "德尔塔07：38号，臂力不错嘛。",
       "use_PS4_translation": true
     },
     "387": {
@@ -21677,7 +21677,7 @@
       "en": "Delta 07: Just a few more seconds…",
       "jp": "Delta 07: あと少し…",
       "de": "Delta 07: Nur noch ein paar Sekunden ...",
-      "zh_CN": "德尔塔07：就多几秒种……",
+      "zh_CN": "德尔塔07：再多几秒钟……",
       "use_PS4_translation": true
     },
     "417": {
@@ -22549,7 +22549,7 @@
       "en": "Delta 07: They're just more meat for the grinder.",
       "jp": "Delta 07: ドンドンミンチにしてやる。",
       "de": "Delta 07: Ah, Frischfleisch.",
-      "zh_CN": "德尔塔07：他们不过是给研磨机添肉而已！",
+      "zh_CN": "德尔塔07：他们不过是往绞肉机里送的肉罢了。",
       "use_PS4_translation": true
     },
     "532": {
@@ -25157,7 +25157,7 @@
       "en": "Delta 38: Acquire turret.",
       "jp": "Delta 38: 砲塔をいただいた。",
       "de": "Delta 38: Geschütz einnehmen.",
-      "zh_CN": "德尔塔38：夺取炮塔。",
+      "zh_CN": "德尔塔38：去操纵炮塔。",
       "use_PS4_translation": true
     },
     "884": {
@@ -25853,7 +25853,7 @@
       "en": "Delta 38: Initiate radical restructuring, commando.",
       "jp": "Delta 38: どでかく形を変えてやるぞ。",
       "de": "Delta 38: Radikale Umstrukturierung initialisieren!",
-      "zh_CN": "德尔塔38：开始彻底重建，突击队员。",
+      "zh_CN": "德尔塔38：开始“彻底改建”吧，突击队员。",
       "use_PS4_translation": true
     },
     "971": {
@@ -26157,7 +26157,7 @@
       "en": "Delta 38: Break off slicing maneuver, delta.",
       "jp": "Delta 38: 侵入は中止だ、デルタ。",
       "de": "Delta 38: Hackvorgang abbrechen, Delta.",
-      "zh_CN": "德尔塔38：暂停骇入行动，德尔塔。",
+      "zh_CN": "德尔塔38：中止骇入行动，德尔塔。",
       "use_PS4_translation": true
     },
     "1014": {
@@ -26949,7 +26949,7 @@
       "en": "Delta 40: Eliminate opposition.",
       "jp": "Delta 40: 敵を片付けろ。",
       "de": "Delta 40: Gegner eliminieren.",
-      "zh_CN": "德尔塔40：消灭对手。",
+      "zh_CN": "德尔塔40：消灭抵抗势力。",
       "use_PS4_translation": true
     },
     "1118": {
@@ -26981,7 +26981,7 @@
       "en": "Delta 40: Acquire turret.",
       "jp": "Delta 40: 砲塔をいただいた。",
       "de": "Delta 40: Geschütz einnehmen.",
-      "zh_CN": "德尔塔40：夺取炮塔。",
+      "zh_CN": "德尔塔40：去操纵炮塔。",
       "use_PS4_translation": true
     },
     "1122": {
@@ -27405,7 +27405,7 @@
       "en": "Delta 40: You got one, commando.",
       "jp": "Delta 40: やった、コマンドー。",
       "de": "Delta 40: Einer weniger, Kommando!",
-      "zh_CN": "德尔塔40：你真有一手，突击队员。",
+      "zh_CN": "德尔塔40：干掉一个，突击队员。",
       "use_PS4_translation": true
     },
     "1180": {
@@ -27597,7 +27597,7 @@
       "en": "Delta 40: Four-Oh conserving bacta.",
       "jp": "Delta 40: 40、バクタを保存します。",
       "de": "Delta 40: 4-2 rationiert Bacta!",
-      "zh_CN": "德尔塔40：40号正省着巴克。",
+      "zh_CN": "德尔塔40：40号正省着巴克塔。",
       "use_PS4_translation": true
     },
     "1211": {
@@ -28221,7 +28221,7 @@
       "en": "Delta 40: Still working here.",
       "jp": "Delta 40: まだやっている。",
       "de": "Delta 40: Ich arbeite noch dran.",
-      "zh_CN": "德尔塔40：这儿还管用。",
+      "zh_CN": "德尔塔40：这边还在处理。",
       "use_PS4_translation": true
     },
     "1301": {
@@ -28973,7 +28973,7 @@
       "en": "Delta 40: Oww, watch out!",
       "jp": "Delta 40: オウ、気をつけろ!",
       "de": "Delta 40: Au! Vorsicht!",
-      "zh_CN": "德尔塔40：噢，小心点！",
+      "zh_CN": "德尔塔40：嗷，小心点！",
       "use_PS4_translation": true
     },
     "1399": {
@@ -29837,7 +29837,7 @@
       "en": "Delta 40: Took care of that one.",
       "jp": "Delta 40: あいつを頼む。",
       "de": "Delta 40: Dem hab ich's gezeigt.",
-      "zh_CN": "德尔塔40：料理了那一个。",
+      "zh_CN": "德尔塔40：解决了那一个。",
       "use_PS4_translation": true
     },
     "1520": {
@@ -30341,7 +30341,7 @@
       "en": "Delta 40: Watch your back squad, three-eight's hostile.",
       "jp": "Delta 40: 後ろに気をつけろ、38が裏切った。",
       "de": "Delta 40: Aufpassen, Team. 3-8 hat die Seiten gewechselt.",
-      "zh_CN": "德尔塔40：注意身后，全队，38号是敌人。",
+      "zh_CN": "德尔塔40：全队注意身后，38号已经敌对。",
       "use_PS4_translation": true
     },
     "1585": {
@@ -32125,7 +32125,7 @@
       "en": "Delta 40: Get it in gear, Delta.",
       "jp": "Delta 40: 準備だ、デルタ。",
       "de": "Delta 40: Kommen Sie in die Gänge, Delta.",
-      "zh_CN": "德尔塔40：准备家伙，德尔塔。",
+      "zh_CN": "德尔塔40：动作快点，德尔塔。",
       "use_PS4_translation": true
     },
     "1828": {
@@ -32181,7 +32181,7 @@
       "en": "Delta 40: Watch out for those pikes!",
       "jp": "Delta 40: ヤリに気をつけろ!",
       "de": "Delta 40: Vorsicht vor den Speeren!",
-      "zh_CN": "德尔塔40：小心那些尖矛！",
+      "zh_CN": "德尔塔40：小心那些力矛！",
       "use_PS4_translation": true
     },
     "1836": {
@@ -33829,7 +33829,7 @@
       "en": "Delta 62: Explosives set, three-eight.",
       "jp": "Delta 62: 爆薬設置、38。",
       "de": "Delta 62: Sprengsätze platziert, 3-8.",
-      "zh_CN": "德尔塔62：炸药已装好，38号。",
+      "zh_CN": "德尔塔62：炸药已安设好，38号。",
       "use_PS4_translation": true
     },
     "2054": {
@@ -34173,7 +34173,7 @@
       "en": "Delta 62: Stang you blasted insects.",
       "jp": "Delta 62: 害虫ども、串刺しだ。",
       "de": "Delta 62: Ihr verdammten Insekten!",
-      "zh_CN": "德尔塔62：弄死你这该死的虫类。",
+      "zh_CN": "德尔塔62：可恶！你们这些该死的虫子。",
       "use_PS4_translation": true
     },
     "2097": {
@@ -34229,7 +34229,7 @@
       "en": "Delta 62: These insects are getting annoying.",
       "jp": "Delta 62: 害虫どもめ、困ってるぜ。",
       "de": "Delta 62: Diese Insekten gehen mir auf den Geist.",
-      "zh_CN": "德尔塔62：这些虫类要气炸了。",
+      "zh_CN": "德尔塔62：这些虫子越来越烦人了。",
       "use_PS4_translation": true
     },
     "2104": {
@@ -34253,7 +34253,7 @@
       "en": "Delta 62: Damn insects!",
       "jp": "Delta 62: 害虫め!",
       "de": "Delta 62: Verfluchte Insekten!",
-      "zh_CN": "德尔塔62：可恶的虫类！",
+      "zh_CN": "德尔塔62：可恶的虫子！",
       "use_PS4_translation": true
     },
     "2107": {
@@ -34829,7 +34829,7 @@
       "en": "Delta 62: Oww, watch out!",
       "jp": "Delta 62: オウ、気をつけろ!",
       "de": "Delta 62: Au! Vorsicht!",
-      "zh_CN": "德尔塔62：噢，小心点！",
+      "zh_CN": "德尔塔62：嗷，小心点！",
       "use_PS4_translation": true
     },
     "2179": {
@@ -34845,7 +34845,7 @@
       "en": "Delta 62: Bah! Stop it!",
       "jp": "Delta 62: おい! 止めろ!",
       "de": "Delta 62: Bah! Aufhören!",
-      "zh_CN": "德尔塔62：呃！快停下！",
+      "zh_CN": "德尔塔62：呸！快停下！",
       "use_PS4_translation": true
     },
     "2181": {
@@ -35173,7 +35173,7 @@
       "en": "Delta 62: Just a few more seconds…",
       "jp": "Delta 62: あと少し…",
       "de": "Delta 62: Nur noch ein paar Sekunden ...",
-      "zh_CN": "德尔塔62：还要几秒种时间……",
+      "zh_CN": "德尔塔62：还要几秒钟……",
       "use_PS4_translation": true
     },
     "2223": {
@@ -35285,7 +35285,7 @@
       "en": "Delta 62: This'll take a few more seconds…",
       "jp": "Delta 62: あともう少しだ…",
       "de": "Delta 62: Ich brauche noch ein paar Sekunden ...",
-      "zh_CN": "德尔塔62：这还需要几秒种时间……",
+      "zh_CN": "德尔塔62：这还需要几秒钟……",
       "use_PS4_translation": true
     },
     "2237": {
@@ -36405,7 +36405,7 @@
       "en": "Delta 62: You make a better door than a window, sir.",
       "jp": "Delta 62: 窓よりもドアをやってください。",
       "de": "Delta 62: Müssen Sie immer im Weg stehen, Sir?",
-      "zh_CN": "德尔塔62：你当门比当窗户强，长官。",
+      "zh_CN": "德尔塔62：你挡着我视线了，长官。",
       "use_PS4_translation": true
     },
     "2382": {
@@ -36637,7 +36637,7 @@
       "en": "Delta 62: Order respectfully declined, sir.",
       "jp": "Delta 62: すみませんが辞退します。",
       "de": "Delta 62: Bei allem Respekt. Nein, Sir.",
-      "zh_CN": "德尔塔62：谢绝命令，长官。",
+      "zh_CN": "德尔塔62：恕难从命，长官。",
       "use_PS4_translation": true
     },
     "2412": {
@@ -38013,7 +38013,7 @@
       "en": "Delta 62: Watch the pikes!",
       "jp": "Delta 62: ヤリに気をつけろ!",
       "de": "Delta 62: Vorsicht vor den Speeren!",
-      "zh_CN": "德尔塔62：小心长矛！",
+      "zh_CN": "德尔塔62：小心力矛！",
       "use_PS4_translation": true
     },
     "2602": {
@@ -40037,7 +40037,7 @@
       "en": "Trando Merc: Eat this blast!",
       "jp": "Trando Merc: 食らえ!",
       "de": "Trando-Söldner: Mal sehen, wie euch das schmeckt!",
-      "zh_CN": "特兰多雇佣兵：吃这一招！",
+      "zh_CN": "特兰多雇佣兵：吃我这招！",
       "use_PS4_translation": true
     },
     "2858": {
@@ -43054,7 +43054,7 @@
       "en": "Yoda: Wookiee freedom must not be sacrificed.",
       "jp": "Yoda: ウーキーの自由を奪ってはならんのじゃ。",
       "de": "Yoda: Die Freiheit der Wookiees nicht geopfert werden darf.",
-      "zh_CN": "尤达：伍基人的自由一定不能被牺牲。",
+      "zh_CN": "尤达：伍基人的自由，决不可牺牲。",
       "use_PS4_translation": true
     },
     "2945": {
@@ -44216,7 +44216,7 @@
       "en": "Delta 38: Getting acquainted with the locals, eh, Sev?",
       "jp": "Delta 38: 住民には歓迎されたか、セブ?",
       "de": "Delta 38: Freundest du dich mit den Einheimischen an, Sieben?",
-      "zh_CN": "德尔塔38：想近距离接认识当地人是吧，Sev？",
+      "zh_CN": "德尔塔38：想近距离认识一下当地人是吧，Sev？",
       "use_PS4_translation": true
     },
     "3070": {
@@ -44296,7 +44296,7 @@
       "en": "Delta 07: Look at these poor sods.  They don't have a clue.",
       "jp": "Delta 07: こいつらまるで情けないな。さっぱりだ。",
       "de": "Delta 07: Schau dir die armen Kerle an. Die sind völlig ahnungslos.",
-      "zh_CN": "德尔塔07：瞧瞧这些可怜的士兵。他们毫无头绪。",
+      "zh_CN": "德尔塔07：瞧瞧这些可怜的家伙。他们完全没搞清状况。",
       "use_PS4_translation": true
     },
     "3080": {
@@ -44544,7 +44544,7 @@
       "en": "Delta 62: Anytime, Boss.  Go ahead and punch it.",
       "jp": "Delta 62: いつでもいいぞ! さあ、やってくれ。",
       "de": "Delta 62: Nur zu, Boss. Drücken Sie einfach aufs Knöpfchen.",
-      "zh_CN": "德尔塔62：随时都行，Boss。按就行了。",
+      "zh_CN": "德尔塔62：随时都行，Boss。直接按下去吧。",
       "use_PS4_translation": true
     },
     "3111": {
@@ -44656,7 +44656,7 @@
       "en": "Clone Advisor 1: Get those off line now.  Any means necessary.",
       "jp": "Clone Advisor 1: そいつを黙らせろ。手段は問わない。",
       "de": "Klonberater 1: Schalten Sie sie aus. Mit allen Mitteln.",
-      "zh_CN": "克隆顾问1：马上关闭它们，不论任何手段。",
+      "zh_CN": "克隆顾问1：马上关闭它们，不惜一切手段。",
       "use_PS4_translation": true
     },
     "3125": {
@@ -44856,7 +44856,7 @@
       "en": "Clone Advisor 1: Terminate with extreme prejudice.",
       "jp": "Clone Advisor 1: 極端な先入観は捨てろ。",
       "de": "Klonberater 1: Terminieren Sie ihn. Mit allen Mitteln.",
-      "zh_CN": "克隆顾问1：毫不留情地终结。",
+      "zh_CN": "克隆顾问1：格杀勿论。",
       "use_PS4_translation": true
     },
     "3150": {
@@ -45392,7 +45392,7 @@
       "en": "Clone Advisor 1: Place a charge and blow it.  I'll warn him to step back.",
       "jp": "Clone Advisor 1: 爆破しろ。奴には下がるように指示する。",
       "de": "Klonberater 1: Sprengen Sie die Tür. Ich sage ihm, er soll sich in Sicherheit bringen.",
-      "zh_CN": "克隆顾问1：埋好炸药然后引爆就行了。我会警告他退远一点。",
+      "zh_CN": "克隆顾问1：安设好炸药然后引爆就行了。我会警告他退远一点。",
       "use_PS4_translation": true
     },
     "3217": {
@@ -45600,7 +45600,7 @@
       "en": "Clone Advisor 1: You're behind enemy lines, now, Delta Lead.  You're on your own.",
       "jp": "Clone Advisor 1: 敵の背後に来た、デルタリーダー。お前一人だけだ。",
       "de": "Klonberater 1: Sie sind hinter den feindlichen Linien, Delta-Leader. Sie sind auf sich allein gestellt.",
-      "zh_CN": "克隆顾问1：现在你已抵达敌后战线，德尔塔队长。之后全靠你自己了。",
+      "zh_CN": "克隆顾问1：现在你已深入敌后，德尔塔队长。之后全靠你自己了。",
       "use_PS4_translation": true
     },
     "3243": {
@@ -45956,7 +45956,7 @@
       "en": "Clone Advisor 1: Do us proud.",
       "jp": "Clone Advisor 1: 期待する。",
       "de": "Klonberater 1: Enttäuschen Sie uns nicht.",
-      "zh_CN": "克隆顾问1：让我们为你们骄傲吧。",
+      "zh_CN": "克隆顾问1：给我们争光。",
       "use_PS4_translation": true
     }
   },
@@ -46102,7 +46102,7 @@
       "en": "Clone Advisor 1: Once the charge is set, get clear.",
       "jp": "Clone Advisor 1: 爆薬を設置したら離れろ。",
       "de": "Klonberater 1: Platzieren Sie den Sprengsatz und gehen Sie in Deckung.",
-      "zh_CN": "克隆顾问1：炸药设置好之后请撤开。",
+      "zh_CN": "克隆顾问1：炸药安设好之后请撤开。",
       "use_PS4_translation": true
     },
     "2946": {
@@ -46710,7 +46710,7 @@
       "en": "Delta 62: Transmitting link to advisor…like stealing molmar from a jugbat.",
       "jp": "Delta 62: アドバイザーにリンク転送… おやすい御用だ。",
       "de": "Delta 62: Sende Link an Berater.",
-      "zh_CN": "德尔塔62：正在传输链接给顾问……活像是在从小宝宝手里偷糖吃的感觉。",
+      "zh_CN": "德尔塔62：正在传输链接给顾问……简直像从小宝宝手里偷糖吃一样。",
       "use_PS4_translation": true
     },
     "3025": {
@@ -46870,7 +46870,7 @@
       "en": "Delta 38: Let's get a charge set on that crate!",
       "jp": "Delta 38: 弾薬箱に爆薬をしかけろ!",
       "de": "Delta 38: Platzieren wir da doch einen Sprengsatz!",
-      "zh_CN": "德尔塔38：我们给那箱子装上炸药吧！",
+      "zh_CN": "德尔塔38：我们在那箱子上安设炸药吧！",
       "use_PS4_translation": true
     },
     "3045": {
@@ -47318,7 +47318,7 @@
       "en": "Delta 38: Let's get that shield down so we can place the charge.",
       "jp": "Delta 38: シールドをダウンさせて、爆薬をしかける。",
       "de": "Delta 38: Wir müssen den Schild abschalten und den Sprengsatz platzieren.",
-      "zh_CN": "德尔塔38：我们去关闭防护罩，这样就能安装炸药了。",
+      "zh_CN": "德尔塔38：我们去关闭防护罩，这样就能安设炸药了。",
       "use_PS4_translation": true
     },
     "3101": {
@@ -47486,7 +47486,7 @@
       "en": "Delta 38: Planting a charge here should do the trick.",
       "jp": "Delta 38: ここに爆薬をしかけるんだ。",
       "de": "Delta 38: Ein kleiner Sprengsatz müsste reichen!",
-      "zh_CN": "德尔塔38：在这里装上炸药应该就能奏效。",
+      "zh_CN": "德尔塔38：在这里安设炸药应该就能奏效。",
       "use_PS4_translation": true
     },
     "3122": {
@@ -47960,7 +47960,7 @@
       "en": "Delta 40: I can plant a charge here.",
       "jp": "Delta 40: ここに爆薬を設置する。",
       "de": "Delta 40: Ich kann hier einen Sprengsatz anbringen.",
-      "zh_CN": "德尔塔40：我可以在这里放置炸药。",
+      "zh_CN": "德尔塔40：我可以在这里安设炸药。",
       "use_PS4_translation": true
     },
     "2951": {
@@ -47976,7 +47976,7 @@
       "en": "Delta 07: I can plant a charge here.",
       "jp": "Delta 07: ここに爆薬をしかける。",
       "de": "Delta 07: Ich kann hier einen Sprengsatz anbringen.",
-      "zh_CN": "德尔塔07：我可以在这里放置炸药。",
+      "zh_CN": "德尔塔07：我可以在这里安设炸药。",
       "use_PS4_translation": true
     },
     "2953": {
@@ -47992,7 +47992,7 @@
       "en": "Delta 62: I can plant a charge here.",
       "jp": "Delta 62: 爆薬をしかける。",
       "de": "Delta 62: Ich kann hier einen Sprengsatz anbringen.",
-      "zh_CN": "德尔塔62：我可以在这里放置炸药。",
+      "zh_CN": "德尔塔62：我可以在这里安设炸药。",
       "use_PS4_translation": true
     },
     "2955": {
@@ -48048,7 +48048,7 @@
       "en": "Delta 38: We've got to get up top to plant our charges.",
       "jp": "Delta 38: 上に上がって爆薬をしかけるぞ。",
       "de": "Delta 38: Wir müssen nach oben und die Sprengsätze platzieren.",
-      "zh_CN": "德尔塔38：我们得想办法到最上面去才能放置炸药。",
+      "zh_CN": "德尔塔38：我们得想办法到最上面去才能安设炸药。",
       "use_PS4_translation": true
     },
     "2962": {
@@ -48080,7 +48080,7 @@
       "en": "Delta 38: This is the spot, let's get those charges planted.",
       "jp": "Delta 38: ここだ。爆薬をしかけよう。",
       "de": "Delta 38: Hier ist der richtige Punkt, die Sprengsätze zu platzieren.",
-      "zh_CN": "德尔塔38：就是这里了，赶紧放置炸药。",
+      "zh_CN": "德尔塔38：就是这里了，赶紧安设炸药。",
       "use_PS4_translation": true
     },
     "2966": {
@@ -48408,7 +48408,7 @@
       "en": "Delta 62: Boss, that looks like a good spot to plant a charge.",
       "jp": "Delta 62: 爆薬をしかけるには都合がよさそうです。",
       "de": "Delta 62: Boss, das wäre ein guter Platz für eine Sprengladung.",
-      "zh_CN": "德尔塔62：Boss，那里看上去像个埋炸药的好地方。",
+      "zh_CN": "德尔塔62：Boss，那里看上去像个安设炸药的好地方。",
       "use_PS4_translation": true
     },
     "3007": {
@@ -48536,7 +48536,7 @@
       "en": "Clone Trooper: I thought we were nerf meat for sure.  Down to our last power cells.",
       "jp": "Clone Trooper: ナーフの肉にでもなったかと思ったよ。最後のパワーセルに向かおう。",
       "de": "Klontruppe: Ich war mir sicher, dass wir als Nerffutter enden. Wir hatten kaum noch Energiezellen.",
-      "zh_CN": "克隆士兵：我本来以为我们死定了。我们只剩下最后一个能量电池。",
+      "zh_CN": "克隆士兵：我本来以为我们死定了。能量电池也快耗尽了。",
       "use_PS4_translation": true
     },
     "3023": {
@@ -49112,7 +49112,7 @@
       "en": "Clone Advisor 1: Affirmative Delta.  See if you can find a weak spot to plant some charges.",
       "jp": "Clone Advisor 1: 了解、デルタ。爆薬をしかけるポイントを探せ。",
       "de": "Klonberater 1: Roger, Delta. Suchen Sie eine Schwachstelle und platzieren Sie ein paar Sprengsätze!",
-      "zh_CN": "克隆顾问1：明白，德尔塔。看看你能否找个薄弱点来放置炸药。",
+      "zh_CN": "克隆顾问1：明白，德尔塔。看看你能否找个薄弱点来安设炸药。",
       "use_PS4_translation": true
     },
     "3095": {
@@ -49120,7 +49120,7 @@
       "en": "Delta 07: There's the spot, let's set our charges and do some damage.",
       "jp": "Delta 07: あそこだ。爆薬をしかけて、破壊しよう。",
       "de": "Delta 07: Das ist die Schwachstelle. Okay, jagen wir was in die Luft!",
-      "zh_CN": "德尔塔07：就是那里了，我们来放置炸药，搞点破坏吧。",
+      "zh_CN": "德尔塔07：就是那里了，我们来安设炸药，搞点破坏吧。",
       "use_PS4_translation": true
     },
     "3096": {
@@ -50638,7 +50638,7 @@
       "en": "Taun We: Six-Two, the heart and soul of your team…",
       "jp": "Taun We: 62、チームの良心となりなさい…",
       "de": "Taun We: 6-2, Herz und Seele Ihres Teams ...",
-      "zh_CN": "汤·韦：62号，队伍的心脏和灵魂……",
+      "zh_CN": "汤·韦：62号，队里的核心与灵魂……",
       "use_PS4_translation": true
     },
     "2948": {
@@ -52138,7 +52138,7 @@
       "en": "Delta 40: Respectfully, sir, it could be a trap.",
       "jp": "Delta 40: トラップの可能性があります。",
       "de": "Delta 40: Bei allem Respekt, Sir. Das könnte eine Falle sein.",
-      "zh_CN": "德尔塔40：平心而论，长官，这有可能是个陷阱。",
+      "zh_CN": "德尔塔40：恕我直言，长官，这有可能是个陷阱。",
       "use_PS4_translation": true
     },
     "2945": {
@@ -52860,7 +52860,7 @@
       "en": "Delta 38: I'm in the starboard landing gear section.",
       "jp": "Delta 38: ランディングギアのセクションにいる。",
       "de": "Delta 38: Ich bin im Steuerbord-Fahrwerk.",
-      "zh_CN": "德尔塔38：我在右舷起落装置区域。",
+      "zh_CN": "德尔塔38：我在右舷起落架区域。",
       "use_PS4_translation": true
     },
     "3009": {
@@ -53052,7 +53052,7 @@
       "en": "Delta 38: I wish they'd stop doing that.",
       "jp": "Delta 38: いい加減にしてくれよ。",
       "de": "Delta 38: Wenn die das nur endlich lassen könnten.",
-      "zh_CN": "德尔塔38：我希望他们可以别那么干了。",
+      "zh_CN": "德尔塔38：真希望他们别再这么干了。",
       "use_PS4_translation": true
     },
     "3034": {
@@ -55560,7 +55560,7 @@
       "en": "Delta 38: Put a demo charge on that regulator.",
       "jp": "Delta 38: レギュレータに爆薬をしかけろ。",
       "de": "Delta 38: Wir müssen den Regler sprengen!",
-      "zh_CN": "德尔塔38：在那个调节器上装上炸药。",
+      "zh_CN": "德尔塔38：在那个调节器上安设炸药。",
       "use_PS4_translation": true
     },
     "3026": {
@@ -57442,7 +57442,7 @@
       "en": "Delta 40: He hasn't been dead long.  We better shift it or we're likely to find MORE dead Wookiees.",
       "jp": "Delta 40: やられて間もないぞ。動こう。またウーキーの死体に出くわしそうだ。",
       "de": "Delta 40: Er ist noch nicht lange tot. Wir müssen uns beeilen, sonst finden wir noch MEHR tote Wookiees.",
-      "zh_CN": "德尔塔40：他没死多久。我们最好加紧点，否则可能会发现更多死掉的伍基人。",
+      "zh_CN": "德尔塔40：他没死多久。我们最好抓紧点，否则可能会发现更多死掉的伍基人。",
       "use_PS4_translation": true
     },
     "3068": {
@@ -57706,7 +57706,7 @@
       "en": "Clone Advisor 1: Find a window or viewport!  We need verification!",
       "jp": "Clone Advisor 1: 窓かビューポートを見ろ! 確認するんだ!",
       "de": "Klonberater 1: Finden Sie ein Fenster oder eine Luke! Wir brauchen die Bestätigung!",
-      "zh_CN": "克隆顾问1：找个窗口或观察孔！我们需要核实！",
+      "zh_CN": "克隆顾问1：找扇窗户或观察孔！我们需要核实！",
       "use_PS4_translation": true
     },
     "3101": {
@@ -58436,7 +58436,7 @@
       "en": "Clone Advisor 1: I know you're all sick of space duty. Three tours aboard a Dropship is a long time. That's why I've arranged a little vacation for you on a Forest World.",
       "jp": "Clone Advisor 1: もう任務にはうんざりだろう。ドロップシップでの3連戦は長かったな。そこで森の国で休暇を楽しんでもらうことにした。",
       "de": "Klonberater 1: Ich weiß, dass Sie erschöpft sind. Immerhin haben Sie drei Einsätze hinter sich! Ich habe deshalb auf einem Waldplaneten ein paar Tage Urlaub für Sie arrangiert.",
-      "zh_CN": "克隆顾问1：我知道你们都厌倦了太空任务。在运输船上任过三期职的确是相当漫长。所以呢，我给大家安排了前往一个森林世界的小假期。",
+      "zh_CN": "克隆顾问1：我知道你们都厌倦了太空任务。在运输船上连驻三期，时间可不短。所以呢，我给大家安排了前往一个森林世界的小假期。",
       "use_PS4_translation": true
     },
     "2931": {
@@ -58524,7 +58524,7 @@
       "en": "Clone Advisor 1: However, we recently cracked a Trandoshan code, indicating Tarfful was captured.",
       "jp": "Clone Advisor 1: しかし、解析したトランドーシャンのコードによると、ターフルは捕らえられているという。",
       "de": "Klonberater 1: Wir haben aber eine Nachricht der Trandoshaner abgefangen - Tarfful wurde gefangen genommen.",
-      "zh_CN": "克隆顾问1：然而，我们最近破解了一个特兰多沙人的代码，得知塔弗尔已经被俘。",
+      "zh_CN": "克隆顾问1：然而，我们最近破译了一段特兰多沙人的密电，得知塔弗尔已经被俘。",
       "use_PS4_translation": true
     },
     "2942": {
@@ -59360,7 +59360,7 @@
       "en": "Clone Advisor 1: That's exactly why you're there...",
       "jp": "Clone Advisor 1: だから諸君はここにいる…",
       "de": "Klonberater 1: Genau deshalb sind Sie hier ...",
-      "zh_CN": "克隆顾问1：那恰恰就是原因所在……",
+      "zh_CN": "克隆顾问1：这正是派你们去的原因……",
       "use_PS4_translation": true
     },
     "2930": {
@@ -59962,7 +59962,7 @@
       "en": "Delta 38: First charge planted.",
       "jp": "Delta 38: 最初の爆薬を設置。",
       "de": "Delta 38: Erster Sprengsatz platziert!",
-      "zh_CN": "德尔塔38：第一个炸药已装好。",
+      "zh_CN": "德尔塔38：第一处炸药已安设。",
       "use_PS4_translation": true
     },
     "2998": {
@@ -59978,7 +59978,7 @@
       "en": "Delta 38: One more charge to go.",
       "jp": "Delta 38: もう1つ爆薬だ。",
       "de": "Delta 38: Nur noch einen Sprengsatz.",
-      "zh_CN": "德尔塔38：还有一个炸药要埋。",
+      "zh_CN": "德尔塔38：还有一处炸药要安设。",
       "use_PS4_translation": true
     },
     "3000": {
@@ -60098,7 +60098,7 @@
       "en": "Clone Advisor 1: Your squad must reach the weakest point on this bridge -- a narrow span in the center -- and destroy it.",
       "jp": "Clone Advisor 1: 小隊を橋の最も弱いところに送れ。中央の細い箇所だ。そこを破壊しろ。",
       "de": "Klonberater 1: Ihr Team muss den schwächsten Punkt der Brücke, einen schmalen Bogen in der Mitte, zerstören.",
-      "zh_CN": "克隆顾问1：你们小队必须到达大桥最薄弱的位置，也就是中央的窄跨位置，然后将它摧毁。",
+      "zh_CN": "克隆顾问1：你们小队必须到达大桥最薄弱的位置，也就是中央的狭窄跨段，然后将它摧毁。",
       "use_PS4_translation": true
     },
     "3016": {
@@ -60114,7 +60114,7 @@
       "en": "Clone Advisor 1: Move fast.  If the Separatists reach the span first, they'll make your job a lot harder.",
       "jp": "Clone Advisor 1: 急げ。分離主義者に先をこされたら、やっかいなことになるぞ。",
       "de": "Klonberater 1: Beeilen Sie sich. Wenn die Separatisten den Bogen zuerst erreichen, wird es schwierig.",
-      "zh_CN": "克隆顾问1：动作快点。如果分离势力先到达跨距位置，就会使你们的任务困难得多。",
+      "zh_CN": "克隆顾问1：动作快点。如果分离势力先到达中央跨段，就会使你们的任务困难得多。",
       "use_PS4_translation": true
     },
     "3018": {
@@ -60834,7 +60834,7 @@
       "en": "Clone Advisor 1: We need to push them back to the Center Span. ",
       "jp": "Clone Advisor 1: 奴らを橋の中央に押し戻すんだ。 ",
       "de": "Klonberater 1: Wir müssen sie zum Brückenbogen zurücktreiben.",
-      "zh_CN": "克隆顾问1：我们得把他们赶回跨距中心位置。 ",
+      "zh_CN": "克隆顾问1：我们得把他们赶回中央跨段。 ",
       "use_PS4_translation": true
     },
     "3110": {
@@ -60842,7 +60842,7 @@
       "en": "Delta 38: Come on, Squad. Let's push them back to that Center Span",
       "jp": "Delta 38: さあ、小隊。やつらを中央部まで押し戻せ。",
       "de": "Delta 38: Los Deltas, treiben wir sie zu dem Brückenbogen zurück.",
-      "zh_CN": "德尔塔38：上吧，全队。我们把他们赶回跨距中心。",
+      "zh_CN": "德尔塔38：上吧，全队。我们把他们赶回中央跨段。",
       "use_PS4_translation": true
     },
     "3111": {
@@ -60866,7 +60866,7 @@
       "en": "Clone Advisor 1: Good job.  Loading dock secure. Advance to Center Span.",
       "jp": "Clone Advisor 1: よくやった。積荷ドックを確保した。橋の中央に進め。",
       "de": "Klonberater 1: Gute Arbeit. Laderampe gesichert. Weiter zum Brückenbogen.",
-      "zh_CN": "克隆顾问1：干得好。装载坞已占领。现在前往跨距中心位置。",
+      "zh_CN": "克隆顾问1：干得好。装载坞已占领。现在前往中央跨段。",
       "use_PS4_translation": true
     },
     "3114": {
@@ -60874,7 +60874,7 @@
       "en": "Clone Advisor 1: Step on it, Delta.  We need to hold that span, or it's gonna be a nightmare for the infantry.",
       "jp": "Clone Advisor 1: 急げ、デルタ。橋を押さえるんだ。でないと歩兵に面倒をかけることになるぞ。",
       "de": "Klonberater 1: Tempo, Deltas. Wir müssen den Bogen halten, sonst hat die Infanterie keine Chance.",
-      "zh_CN": "克隆顾问1：加紧点，德尔塔小队。我们必须守住跨距，否则就会成为步兵的噩梦。",
+      "zh_CN": "克隆顾问1：抓紧点，德尔塔小队。我们必须守住中央跨段，否则就会成为步兵的噩梦。",
       "use_PS4_translation": true
     },
     "3115": {
@@ -60882,7 +60882,7 @@
       "en": "Clone Advisor 1: If the Separatists reach the Center Span before you do, the city will be lost.",
       "jp": "Clone Advisor 1: 分離主義者に先をこされれば、街を失ってしまう。",
       "de": "Klonberater 1: Wenn die Separatisten vor Ihnen den Brückenbogen erreichen, ist die Stadt verloren.",
-      "zh_CN": "克隆顾问1：如果分离势力在你们之前到达跨距中心位置，整座城市就丢了。",
+      "zh_CN": "克隆顾问1：如果分离势力在你们之前到达中央跨段，整座城市就丢了。",
       "use_PS4_translation": true
     },
     "3116": {
@@ -60890,7 +60890,7 @@
       "en": "Clone Advisor 1: If the Separatists reach the Center Span before you do, Kachirho will be over-run.",
       "jp": "Clone Advisor 1: 分離主義者に先をこされれば、カチーロを制圧されてしまう。",
       "de": "Klonberater 1: Wenn die Separatisten vor Ihnen den Brückenbogen erreichen, wird Kachirho überlaufen.",
-      "zh_CN": "克隆顾问1：如果分离势力在你们之前到达跨距中心位置，卡彻霍就会被迅速占领。",
+      "zh_CN": "克隆顾问1：如果分离势力在你们之前到达中央跨段，卡彻霍就会被迅速占领。",
       "use_PS4_translation": true
     },
     "3117": {
@@ -60914,7 +60914,7 @@
       "en": "Clone Advisor 1: You’ll need to place a charge on the center joint of the span.",
       "jp": "Clone Advisor 1: 橋の中央ジョイントに爆薬をしかけるんだ。",
       "de": "Klonberater 1: Sie müssen in der Mitte des Bogens einen Sprengsatz platzieren.",
-      "zh_CN": "克隆顾问1：你们必须在跨距的中央连接处放置炸药。",
+      "zh_CN": "克隆顾问1：你们必须在跨段的中央连接处安设炸药。",
       "use_PS4_translation": true
     },
     "3120": {
@@ -60922,7 +60922,7 @@
       "en": "Clone Advisor 1: And squad…Advise you evacuate the span before activating that charge.",
       "jp": "Clone Advisor 1: 小隊… 火がつく前に橋から逃げるんだぞ。",
       "de": "Klonberater 1: Ach, und ... Sie sollten den Bogen evakuieren, bevor Sie die Ladung zünden.",
-      "zh_CN": "克隆顾问1：而且……建议你们在引爆炸药之前先撤离那个跨距。",
+      "zh_CN": "克隆顾问1：而且……建议你们在引爆炸药之前先撤离中央跨段。",
       "use_PS4_translation": true
     },
     "3122": {
@@ -61146,7 +61146,7 @@
       "en": "Clone Advisor 1: We're pushing them back to the central span.",
       "jp": "Clone Advisor 1: 奴らを橋の中央に押し戻しているぞ。",
       "de": "Klonberater 1: Wir drängen sie zurück zum mittleren Bogen.",
-      "zh_CN": "克隆顾问1：我们要把他们赶回跨距中心位置。",
+      "zh_CN": "克隆顾问1：我们要把他们赶回中央跨段。",
       "use_PS4_translation": true
     },
     "3150": {
@@ -61226,7 +61226,7 @@
       "en": "Clone Advisor 1: Move on to the Central Span, and smother the Separatist advance.",
       "jp": "Clone Advisor 1: 橋の中央に行け。分離主義者の動きを止めるんだ。",
       "de": "Klonberater 1: Rücken Sie zum mittleren Bogen vor und stoppen Sie den Vormarsch der Separatisten.",
-      "zh_CN": "克隆顾问1：现在前往跨距中心，抑制分离势力的推进。",
+      "zh_CN": "克隆顾问1：现在前往中央跨段，抑制分离势力的推进。",
       "use_PS4_translation": true
     },
     "3160": {
@@ -61282,7 +61282,7 @@
       "en": "Delta 38: We need to plant charges on either side of the bridge.",
       "jp": "Delta 38: 橋のどちらかのたもとに爆薬をしかけるんだ。",
       "de": "Delta 38: Wir müssen Sprengsätze an beiden Seiten der Brücke anbringen.",
-      "zh_CN": "德尔塔38：我们必须在大桥两边都埋上炸药。",
+      "zh_CN": "德尔塔38：我们必须在大桥两边都安设炸药。",
       "use_PS4_translation": true
     },
     "3167": {
@@ -61290,7 +61290,7 @@
       "en": "Delta 38: We need to plant a charge on the center support column.",
       "jp": "Delta 38: 橋の中央支持部に爆薬をしかけるんだ。",
       "de": "Delta 38: Wir müssen am mittleren Bogen einen Sprengsatz anbringen.",
-      "zh_CN": "德尔塔38：我们必须在中央支撑柱上面安装炸药。",
+      "zh_CN": "德尔塔38：我们必须在中央支撑柱上面安设炸药。",
       "use_PS4_translation": true
     },
     "3168": {
@@ -61298,7 +61298,7 @@
       "en": "Delta 38:  It's going to take more than one charge to blow this thing.  Look for likely spots.",
       "jp": "Delta 38:   1度の爆発よりも威力は増す。適当な場所を探すんだ。",
       "de": "Delta 38: Wir brauchen mehrere Sprengsätze, um das Ding zu sprengen. Suchen Sie geeignete Stellen.",
-      "zh_CN": "德尔塔38：需要好几个炸药才能炸毁这东西。找一找能埋的位置。",
+      "zh_CN": "德尔塔38：光一处炸药炸不掉这东西。找找合适的安设点。",
       "use_PS4_translation": true
     },
     "3169": {
@@ -61306,7 +61306,7 @@
       "en": "Delta 38: We need to place explosives at every available spot to do the job.",
       "jp": "Delta 38: できるならあらゆる箇所に爆薬を設置するんだ。",
       "de": "Delta 38: Wir müssen mehrere Sprengsätze verteilen, um das Ding zu sprengen.",
-      "zh_CN": "德尔塔38：我们必须在每个可安设的位置装上炸药，才能一举成功。",
+      "zh_CN": "德尔塔38：我们必须在每个可用的位置都安设炸药，才能一举成功。",
       "use_PS4_translation": true
     },
     "3170": {
@@ -61314,7 +61314,7 @@
       "en": "Delta 38: OK, two more charges to place.",
       "jp": "Delta 38: OK、あと2か所だ。",
       "de": "Delta 38: Okay, noch zwei Sprengsätze.",
-      "zh_CN": "德尔塔38：好了，还有两个炸药要埋。",
+      "zh_CN": "德尔塔38：好了，还有两处炸药要安设。",
       "use_PS4_translation": true
     },
     "3171": {
@@ -61330,7 +61330,7 @@
       "en": "Delta 38: We don't have enough charges yet to destroy the central span.  I can't detonate it until we do.",
       "jp": "Delta 38: 中央部を破壊するにはまだ爆薬が足りない。それまでは爆破できない。",
       "de": "Delta 38: Wir brauchen mehr Sprengsätze, um den mittleren Bogen zu zerstören. Ich kann sie noch nicht zünden!",
-      "zh_CN": "德尔塔38：我们还没有足够的炸药来摧毁跨距中心。完全装好之前我不能引爆。",
+      "zh_CN": "德尔塔38：我们还没有足够的炸药来摧毁中央跨段。全部安设好之前我不能引爆。",
       "use_PS4_translation": true
     },
     "3173": {
@@ -61380,7 +61380,7 @@
       "en": "Clone Advisor 1: The Bridge itself is joined in the middle by a small center span.  It acts as a lynch pin between the two halves. ",
       "jp": "Clone Advisor 1: 橋は真ん中でジョイントされている。両側を支えるくさびになっている。",
       "de": "Klonberater 1: Ach, und noch etwas: Die Brücke selbst ist in der Mitte durch einen kleinen Brückenbogen verbunden, der die beiden Hälften verbindet.",
-      "zh_CN": "克隆顾问1：大桥本身在中间位置由一个小的跨距中心连接起来，它充当着两个部分之间的固定销。 ",
+      "zh_CN": "克隆顾问1：大桥本身在中间位置由一小段中央跨段连接起来，它充当着两个部分之间的固定销。 ",
       "use_PS4_translation": true
     },
     "2931": {
@@ -61396,7 +61396,7 @@
       "en": "Clone Advisor 1: You’ll need to clear out the advance parties and beat the main Separatist force to the center span. ",
       "jp": "Clone Advisor 1: 先発隊を排除して、分離主義者を中央で食い止めるんだ。 ",
       "de": "Klonberater 1: Sie müssen die Vorhut ausschalten und vor der Invasionsarmee der Separatisten den Brückenbogen erreichen.",
-      "zh_CN": "克隆顾问1：你们必须消灭先头部队，并抢先分离势力主力部队到达跨距中心位置。",
+      "zh_CN": "克隆顾问1：你们必须消灭先头部队，并抢先分离势力主力部队到达中央跨段。",
       "use_PS4_translation": true
     },
     "2933": {
@@ -61404,7 +61404,7 @@
       "en": "Clone Advisor 1: Once you’ve reached the center span, you will place a demo charge at this point. It’s an expansion joint between the two sections. Destroy this bridge, and stop the Separatists in their tracks.",
       "jp": "Clone Advisor 1: 中央に着いたら、ここに爆薬をしかけろ。橋をつなぐジョイント部分だ。この橋を破壊すれば、分離主義者は足止めを食らう。",
       "de": "Klonberater 1: Dann platzieren Sie an diesem Punkt, an dem die beiden Teile der Brücke zusammengehalten werden, eine Sprengladung. Sie müssen diese Brücke zerstören, damit die Separatisten aufgehalten werden.",
-      "zh_CN": "克隆顾问1：你们到达跨距中心位置后，要将炸药安设在这个点。这是两个部分之间的伸缩接头位置。摧毁这座大桥，就能阻止分离势力前进的步伐了。",
+      "zh_CN": "克隆顾问1：你们到达中央跨段后，要将炸药安设在这个点。这是两个部分之间的伸缩接头位置。摧毁这座大桥，就能阻止分离势力前进的步伐了。",
       "use_PS4_translation": true
     },
     "2934": {
@@ -61420,7 +61420,7 @@
       "en": "Clone Advisor 1: And by the way, you might want to make sure that you’re on the far side of the span before you detonate that charge.",
       "jp": "Clone Advisor 1: ところで、爆破する前に橋から離れることを忘れるなよ。",
       "de": "Klonberater 1: Ach, und übrigens: Achten Sie darauf, dass Sie auf der richtigen Seite der Brücke sind, bevor Sie die Ladung zünden.",
-      "zh_CN": "克隆顾问1：顺便说一句，在引爆炸药之前，你们最好是确保自己处于跨距的远端。",
+      "zh_CN": "克隆顾问1：顺便说一句，在引爆炸药之前，你们最好是确保自己处于跨段的远端。",
       "use_PS4_translation": true
     },
     "2936": {
@@ -61782,7 +61782,7 @@
       "en": "Clone Advisor 1: Tarfful is too important to lose. Find a way to get him out of there.",
       "jp": "Clone Advisor 1: ターフルをやられるわけにはいかん。何とかして連れ出すんだ。",
       "de": "Klonberater 1: Wir dürfen Tarfful nicht verlieren. Holen Sie ihn da irgendwie raus!",
-      "zh_CN": "克隆顾问1：塔弗尔非常重要，不容有失。想办法带他离开这里。",
+      "zh_CN": "克隆顾问1：塔弗尔非常重要，不容有失。想办法把他从那里救出来。",
       "use_PS4_translation": true
     },
     "2960": {
@@ -61902,7 +61902,7 @@
       "en": "Clone Advisor 1: Alright Squad. Now that we have blown the center span and stopped the forward progress of the Separatists, we need to finish the job.",
       "jp": "Clone Advisor 1: よーし、小隊。中央部の爆破により、分離主義者は前進できない。任務を完了するんだ。",
       "de": "Klonberater 1: Gut, Team. Sie haben den Brückenbogen gesprengt und den Vormarsch der Separatisten gestoppt. Bringen Sie die Sache jetzt zu Ende.",
-      "zh_CN": "克隆顾问1：好了全队。我们已经炸毁跨距中心位置，阻止了分离势力的进程，现在我们要善始善终。",
+      "zh_CN": "克隆顾问1：好了全队。我们已经炸毁中央跨段，阻止了分离势力的推进，接下来要把任务干完。",
       "use_PS4_translation": true
     },
     "2975": {
@@ -62438,7 +62438,7 @@
       "en": "Clone Advisor 1: We've lost the ammo. There's nothing more you can do here. Move on to second loading dock.",
       "jp": "Clone Advisor 1: 弾薬を失った。ここではもうどうしようもない。次の積荷ドックに向かえ。",
       "de": "Klonberater 1: Wir haben die Munition verloren. Rücken Sie zur zweiten Verladerampe vor. Schnell!",
-      "zh_CN": "克隆顾问1：我们失去了弹药。这里没什么能做的了。前往第二个装载坞吧。",
+      "zh_CN": "克隆顾问1：弹药已经没了。这里没什么能做的了。前往第二个装载坞吧。",
       "use_PS4_translation": true
     },
     "3043": {
@@ -62526,7 +62526,7 @@
       "en": "Clone Advisor 1: The loading dock is secure, but we've lost the ammo. Now get Tarfful to his troops!",
       "jp": "Clone Advisor 1: 積荷ドックは確保したが、弾薬を失ってしまった。ターフルを部隊に連れて行け!",
       "de": "Klonberater 1: Die Verladerampe ist gesichert, aber wir haben die Munition verloren. Bringen Sie jetzt Tarfful zu seinen Leuten.",
-      "zh_CN": "克隆顾问1：装载坞安全了，但我们失去了弹药。现在带塔弗尔去找他的部下！",
+      "zh_CN": "克隆顾问1：装载坞安全了，但弹药已经没了。现在带塔弗尔去找他的部下！",
       "use_PS4_translation": true
     },
     "3054": {
@@ -63008,7 +63008,7 @@
       "en": "Delta 40: Hey there's a wookiee down there - looks like he's calling us.",
       "jp": "Delta 40: 弾薬箱がロックされている。",
       "de": "Delta 40: Hey, da unten ist ein Wookiee. Er will uns anscheinend was sagen!",
-      "zh_CN": "德尔塔40：喂有个伍基人在下面——他好像在喊我们。",
+      "zh_CN": "德尔塔40：喂，下面有个伍基人——他好像在喊我们。",
       "use_PS4_translation": true
     },
     "2984": {
@@ -63016,7 +63016,7 @@
       "en": "Delta 62: Hey there's a wookiee down there - looks like he's calling us.",
       "jp": "Delta 62: そっちにウーキーだ。呼んでいるぞ。",
       "de": "Delta 62: Da unten. Ein Wookiee. Er will uns anscheinend was sagen!",
-      "zh_CN": "德尔塔62：喂有个伍基人在下面——他好像在喊我们。",
+      "zh_CN": "德尔塔62：喂，下面有个伍基人——他好像在喊我们。",
       "use_PS4_translation": true
     },
     "2985": {
@@ -63272,7 +63272,7 @@
       "en": "Clone Advisor 1: We're coming in for a strafing run!",
       "jp": "Clone Advisor 1: 掃射を食らうぞ!",
       "de": "Klonberater 1: Wir schicken Luftunterstützung!",
-      "zh_CN": "克隆顾问1：我们要进行空中扫射了！",
+      "zh_CN": "克隆顾问1：我们要进行低空扫射了！",
       "use_PS4_translation": true
     },
     "3017": {
@@ -71792,7 +71792,7 @@
       "en": "Advance to the center span",
       "jp": "橋中央に進め",
       "de": "BEGEBEN SIE SICH ZUM BRÜCKENBOGEN",
-      "zh_CN": "前往跨距中心位置",
+      "zh_CN": "前往中央跨段",
       "use_PS4_translation": true
     }
   },
@@ -71812,7 +71812,7 @@
       "en": " Advance to the center span",
       "jp": "橋中央に進め",
       "de": "BEGEBEN SIE SICH ZUM BRÜCKENBOGEN",
-      "zh_CN": " 前往跨距中心位置",
+      "zh_CN": " 前往中央跨段",
       "use_PS4_translation": true
     }
   },
@@ -71822,7 +71822,7 @@
       "en": " Advance to the Center Span",
       "jp": "橋中央に進め",
       "de": "BEGEBEN SIE SICH ZUM BRÜCKENBOGEN",
-      "zh_CN": " 前往跨距中心位置",
+      "zh_CN": " 前往中央跨段",
       "use_PS4_translation": true
     }
   },
@@ -71842,7 +71842,7 @@
       "en": "Secure Center Span",
       "jp": "橋の中央エリアを確保せよ",
       "de": "SICHERN SIE DEN BRÜCKENBOGEN",
-      "zh_CN": "占领跨距中心位置",
+      "zh_CN": "占领中央跨段",
       "use_PS4_translation": true
     },
     "6": {
@@ -71850,7 +71850,7 @@
       "en": "Place Demo Charge on Center Span",
       "jp": "橋の中央部に爆薬を設置せよ",
       "de": "PLATZIEREN SIE EINEN SPRENGSATZ AUF DEM BRÜCKENBOGEN",
-      "zh_CN": "在跨距中心位置安设炸药",
+      "zh_CN": "在中央跨段安设炸药",
       "use_PS4_translation": true
     },
     "7": {
@@ -73015,7 +73015,7 @@
       "en": "LucasArts, the LucasArts logo, STAR WARS, and related properties are trademarks in the United States and/or in other countries of Lucasfilm Ltd. and/or its affiliates.  STAR WARS Republic Commando is a trademark of Lucasfilm Entertainment Company Ltd. and/or its affiliates.  © 2005 Lucasfilm Entertainment Company Ltd. or Lucasfilm Ltd.  All rights reserved.",
       "jp": "",
       "de": "LucasArts, das LucasArts-Logo, STAR WARS und alle zugehörigen Marken sind Warenzeichen von Lucasfilm Ltd. und/oder den zugehörigen Unternehmen in den USA und/oder anderen Ländern. STAR WARS Republic Commando ist ein Warenzeichen von Lucasfilm Entertainment Company Ltd. und/oder den zugehörigen Unternehmen. © 2005, 2021 Lucasfilm Entertainment Company Ltd. oder Lucasfilm Ltd. Alle Rechte vorbehalten.",
-      "zh_CN": "LucasArts、LucasArts徽标、STAR WARS及相关财产是Lucasfilm Ltd.和/或其关联机构在美国和/或其他国家/地区的商标。STAR WARS Republic Commando是Lucasfilm Entertainment Company Ltd.和/或其关联机构的商标。(C) 2005 Lucasfilm Entertainment Company Ltd.或Lucasfilm Ltd.版权所有。\n 汉化 https://github.com/sharrrkcat/SWRC-ChinesePack 版本 v1.1"
+      "zh_CN": "LucasArts、LucasArts徽标、STAR WARS及相关财产是Lucasfilm Ltd.和/或其关联机构在美国和/或其他国家/地区的商标。STAR WARS Republic Commando是Lucasfilm Entertainment Company Ltd.和/或其关联机构的商标。(C) 2005 Lucasfilm Entertainment Company Ltd.或Lucasfilm Ltd.版权所有。\n 汉化 https://github.com/sharrrkcat/SWRC-ChinesePack 版本 v1.2"
     }
   },
   "XinterfaceCtmenus.CTStartPSMenu": {
@@ -73551,7 +73551,7 @@
       "en": "DC15s Side Arm Blaster",
       "jp": "",
       "de": "",
-      "zh_CN": "DC-15s佩枪爆能枪",
+      "zh_CN": "DC-15s爆能手枪",
       "use_PS4_translation": true
     }
   },
@@ -73561,7 +73561,7 @@
       "en": "DC15s Side Arm Blaster",
       "jp": "",
       "de": "",
-      "zh_CN": "DC-15s佩枪爆能枪"
+      "zh_CN": "DC-15s爆能手枪"
     }
   },
   "properties.DC17mAntiArmorBox": {
